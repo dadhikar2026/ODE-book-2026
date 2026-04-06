@@ -5,14 +5,19 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Elementary Ordinary Differential Equations</title>
+    <subtitle>Methods and Applications</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+    <xi:include href="./ch-1.ptx" />
+    <xi:include href="./ch-2.ptx" />
+    <xi:include href="./ch-3.ptx" />
+    <xi:include href="./ch-4.ptx" />  
+    <xi:include href="./ch-5.ptx" />  
+    <xi:include href="./ch-7.ptx" /> 
 
 
     <!-- Include backmatter -->

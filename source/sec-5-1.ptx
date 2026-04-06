@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-5-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Laplace Transform</title>
+
+  <introduction>
+    <p>
+				Consider a forced oscillator, as discussed in Section
+        <xref ref="sec-3-5" /> of 
+        <xref ref="ch-3" />, 
+        described by the equation 
+        <men xml:id="eq-5-1-1">
+    y''(t) + \omega^2 y(t) = f(t); \quad  y(0) = 0,\; y'(0)= 0,
+</men> where <m>f(t)</m> is an impulsive force. At <m>t =0,</m> the mass is at rest at its equilibrium position. At time <m>t = a</m>, the mass experiences a sharp, brief downward impact, such as a hammer strike, modeled by an the impulsive force <m>f(t) .</m> An impulsive force of this nature is commonly modeled by using an idealized mathematical object, called the <term><em>Dirac delta</em></term> <q>function</q> denoted by <m>\delta (t-a),</m> which is characterized by the following properties:
+			</p>
+
+		<p><ol>
+				<li>
+							<p>
+								<m>\delta(t - a) = 0</m> for all <m>t \ne a</m>; and
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<m>\int_{-\infty}^\infty \delta(t - a)\, g(t)\, dt = g(a)</m> for any function <m>g</m> continuous on an open interval containing <m>a</m>.
+							</p>
+				</li>
+
+			</ol></p>
+      
+      <p>
+				We note that when <m>g(t) =1</m> in (ii), 
+        we obtain <m>\int_{-\infty}^\infty \delta(t - a)\, dt = 1</m>. 
+        Based on the properties (i) and (ii) characterizing <m>\delta(t - a)</m>, 
+        it is important to recognize that <m>\delta(t - a)</m> 
+        is not a function in the usual sense; 
+        rather it is a typical example of <em>generalized functions</em> or 
+        <em>distributions</em> which were first developed rigorously 
+        by Sergei Sobolev in 1936 and later in 1950s by Laurent Schwartz 
+        who is known to have given the most definitive and systematic 
+        development of the theory of distributions. For an elegant 
+        introduction to distribution theory with application, 
+        the reader is referred to Zemanian<fn><p>
+				A.H. Zemanian, <em>Distribution theory and transform analysis</em>, second edition, Dover, New York, 1987; MR0918977
+			</p></fn>.
+			</p>
+
+    <p>
+				The Dirac delta function is particularly useful for modeling phenomena involving instantaneous or localized effects, such as a lightning strike, a point heat explosion, or the sudden burst of dye at a specific location. Because of the properties (i) and (ii), the Dirac delta function <m>\delta(t - a)</m> is said to be concentrated at <m>t=a.</m>
+			</p>
+
+      <p>
+				Mathematically, <m>\delta(t - a)</m> can be interpreted as the limit of a sequence of approximating impulse functions. One such approximation is given by <me>d_{a, \varepsilon}(t) = \begin{cases}
+     \dfrac{1}{\varepsilon} &amp;\text{if } a \le t \le a + \varepsilon \\
+    0 &amp;\text{otherwise},
+     \end{cases}</me> which represents a pulse of height <m>1/\varepsilon</m> and width <m>\varepsilon&gt;0</m>, 
+     centered at <m>t = a</m>.
+			</p>
+  <p>
+ <figure xml:id="fig-5-1-1">
+  <caption>The graph of <m>d_{a, \varepsilon}(t)</m>.</caption>
+  <image>
+    <latex-image>
+   	\begin{tikzpicture}[scale=2]
+ 		% Axes
+ 		\draw[->] (-0.5,0) -- (4,0) node[right] {$t$};
+ 		\draw[->] (0,-0.2) -- (0,2) node[above] {$d_{a,\varepsilon}(t)$};
+ 		% Parameters
+ 		\def\a{1}
+ 		\def\eps{0.5}
+ 		\def\height{1.5} % 1 / eps
+ 		% Rectangle function
+ 		\draw[thick, blue] (0,0) -- (\a,0)
+ 		-- (\a,\height) -- ({\a+\eps},\height)
+ 		-- ({\a+\eps},0) -- (4,0);
+ 		% Labels
+ 		\draw[dashed] (\a,0) -- (\a,\height);
+ 		\draw[dashed] ({\a+\eps},0) -- ({\a+\eps},\height);
+ 		\node[below] at (\a,0) {$a$};
+ 		\node[below] at ({\a+\eps},0) {$a+\varepsilon$};
+ 		\node[left] at (0,\height) {$\frac{1}{\varepsilon}$};
+ 	\end{tikzpicture}
+    </latex-image>
+  </image>
+</figure> 
+</p>
+
+<p>
+				As <m>\varepsilon \to 0</m>, this pulse becomes increasingly narrow and tall, 
+        concentrating its effect at <m>t = a</m>, i.e., 
+        <men xml:id="eq-5-1-2">
+    \lim\limits_{\varepsilon\to 0} d_{a, \varepsilon}(t) = \begin{cases}
+    \infty &amp;\mbox{if } t=a\\
+    0&amp;\text{otherwise},
+ \end{cases}
+</men> while maintaining a total area of 1—mirroring the property (ii) of <m>\delta(t - a)</m>, i.e., <me>\int_{-\infty}^\infty d_{a, \varepsilon}(t) \, dt = \frac{1}{\varepsilon} \varepsilon=1,</me> so that 
+<men xml:id="eq-5-1-3">
+    \lim\limits_{\varepsilon\to 0} \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, dt =1.
+</men> Furthermore, if <m>g</m> is continuous from right at <m>t=a</m>, 
+then <men xml:id="eq-5-1-4">
+    \lim\limits_{\varepsilon\to 0} \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, g(t) =    \lim\limits_{\varepsilon\to 0}\frac{1}{\varepsilon} \int_a^{a+\varepsilon}  g(t) \, dt = \lim\limits_{\varepsilon\to 0} g(a+\varepsilon) = g(a)
+</men> 
+by using the l’Höpital’s rule and the continuity of <m>g</m> at <m>t=a</m> from right.
+			</p>
+
+      <p>
+				By formally interchanging the limit and the integral in both 
+        <xref ref="eq-5-1-3" /> and <xref ref="eq-5-1-4" />, 
+        an operation which needs justification in integration theories, we obtain 
+        <men xml:id="eq-5-1-5">
+    \int_{-\infty}^\infty\lim\limits_{\varepsilon\to 0} d_{a, \varepsilon}(t)\, dt = 1
+</men> and <men xml:id="eq-5-1-6">
+     \int_{-\infty}^\infty \lim\limits_{\varepsilon\to 0} d_{a, \varepsilon}(t) \, g(t)\, dt  = g(a).
+</men> 
+Thus, we observe in <xref ref="eq-5-1-2" /> and <xref ref="eq-5-1-4" /> 
+that <m>\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)</m> exhibits 
+the  properties (i) and (ii) that characterize <m>\delta(t - a)</m>, 
+and therefore <m>\delta(t - a)</m> can be interpreted as the limit of 
+a sequence of functions that approximate an impulsive behavior. 
+We recognize that <m>\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)</m> 
+also does not define a function on <m>(-\infty, \infty)</m> 
+in the classical sense because its value at <m>t=a</m> is <m>\infty.</m> 
+Instead, the limit is understood as a generalized function, or a distribution, 
+because of the way it operates primarily through its action on other functions 
+within integrals, as described by the property (ii) which is motivated by 
+<xref ref="eq-5-1-6" />.
+			</p>
+
+      <p>
+				By using the property (ii), we find that for all 
+        <m>s</m> in <m>(-\infty,  \infty),</m> we have 
+        <men xml:id="eq-5-1-7">
+    \int_{-\infty}^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
+</men> for all real numbers <m>s.</m> From this point onward, we will focus on the case
+ where <m>a \ge 0</m> and <m>t \ge 0</m>. Under this assumption, <xref ref="eq-5-1-7" />
+ reduces to <men xml:id="eq-5-1-8">
+     \int_0^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
+</men> for all real values of <m>s</m>. This integral is known as 
+the <em>Laplace transform</em> (see <xref ref="def-5-1" />)
+of the Dirac delta function <m>\delta(t - a)</m>, denoted by 
+<me>\mathscr{L}\{\delta(t - a)\} = e^{-as}.</me> In particular, 
+when <m>a=0</m> we have <me>\mathscr{L}\{\delta(t)\} = 1.</me>
+			</p>
+
+
+<p>
+				The main objective of this chapter is to develop a method for solving 
+        initial value problems such as <xref ref="eq-5-1-1" />
+         in which <m>f(t)</m> is either discontinuous or involves the Dirac delta 
+         functions.The methods of undetermined coefficients and 
+         variation of parameters are not relevant to <xref ref="eq-5-1-1" />
+         with <m>f(t) = \delta (t-a)</m> because the calculus of distributions 
+         is beyond the scope of this book. In particular, 
+         we do not have a meaning of <m>y''</m> in this case.
+			</p>
+
+			<p>
+				Being motivated from <xref ref="eq-5-1-8" />
+        with the Dirac delta function <m>\delta(t - a)</m> in the integrand, 
+        we first define the <em>Laplace transform</em> of classical functions defined on 
+        <m>[0, \infty).</m>
+			</p>
+</introduction>
+
+
+
+ <definition xml:id="def-5-1" alt="Definition of the Laplace transform">
+  <title>(Laplace transform)</title>
+  <statement>
+   <p>
+				 Let <m>f:[0, \infty)\to\mathbb R</m> be a function. The <term>Laplace transform</term> of <m>f</m> is a function <m>F(s)</m>, denoted commonly by <m>\mathscr{L}\{f(t)\}</m>, defined by <me>F(s):=\int_0^\infty f(t)\, e^{-st} \, dt</me> for those <m>s</m> for which the integral converges.
+			</p>
+  </statement>
+ </definition>
+
+
+
+			<p>
+				The symbol <m>\mathscr{L}</m> represents a transformation that maps 
+        an input function <m>f</m> of the variable <m>t</m> (usually time) 
+        to an output function <m>F</m> of the variable <m>s</m> 
+        (usually involving frequency when <m>s</m> is a complex number). 
+        This action of the transformation is depicted in the figure below.
+		
+    <figure xml:id="fig-laplace-operator">
+  <caption>The Laplace transform <m>\mathscr{L}</m> as an operator mapping <m>f(t)</m> to <m>F(s)</m>.</caption>
+  <image width="60%">
+    <prefigure xmlns="https://prefigure.org" label="laplace-operator">
+     <diagram dimensions="(320,120)" margins="8">
+  <coordinates bbox="(0,0,8,3)">
+    <rectangle center="(4,1.5)" dimensions="(2,1)" stroke ="black" fill="none"/>
+    <label anchor="(4,1.5)" alignment="c">
+      <m>\mathscr{L}</m>
+    </label>
+    <label anchor="(1.9,1.5)" alignment="s" offset="(0,25)">
+      <m>f(t)</m>
+    </label>
+    <label anchor="(6.1,1.5)" alignment="s" offset="(0,25)">
+      <m>F(s)</m>
+    </label>
+    <line endpoints="((0.8,1.5),(2.9,1.5))" arrows="1" />
+    <line endpoints="((5,1.5),(7.2,1.5))" arrows="1" />
+  </coordinates>
+</diagram>
+    </prefigure>
+  </image>
+</figure>
+ </p>
+
+
+
+<p>
+				The variable <m>s</m> in the definition of the Laplace transform can, in general, be a complex variable; however, in the current chapter, we will restrict <m>s</m> to a real variable.
+			</p>
+
+
+
+      <p>
+        The Laplace transform is a powerful tool for solving initial value problems 
+        for ordinary differential equations, especially those with nonhomogeneous terms 
+        that are piecewise continuous or involve the Dirac delta function. 
+        The key idea is to apply the Laplace transform to both sides of the differential equation, 
+        which converts the problem from the time domain (involving <m>t</m>) to the complex frequency domain (involving <m>s</m>). 
+        This transformation turns differentiation into algebraic manipulation, making it easier to solve for the transformed function <m>F(s)</m>. 
+        Once we have <m>F(s)</m>, we can then find the original function <m>f(t)</m> by applying the inverse Laplace transform <m>\mathscr{L}^{-1}</m> to <m>F(s)</m>.
+        
+        Before we begin using Laplace transforms to solve initial value problems, 
+        we compute the Laplace transforms of several common functions that appeared
+        in the previous chapters, such as polynomial functions, exponential functions, 
+          trigonometric functions, and some combinations of these functions.
+          The Laplace transform of the Dirac delta function is encountered in <xref ref="eq-5-1-8" /> and will be used in solving initial value problems with impulsive forcing.
+      </p>
+
+
+  <p>
+    By using <xref ref="def-5-1" />, we compute the Laplace transforms of some common functions in the examples below.
+  </p>
+  
+
+<example xml:id="ex-5-1-1">
+ <p> 
+ Compute <m>\mathscr{L}\{e^{at}\}</m> for <m>a\ne 0.</m>
+		</p>
+ 
+<solution> 
+  <p>
+   We have
+           <!-- <m>\mathscr{L}\{e^{at}\} = \int_0^\infty e^{at} e^{-st} dt = \int_0^\infty e^{(a-s)t} dt.</m>  -->
+          <md>
+            <mrow>  \mathscr{L} \{e^{at}\} =\int_0^\infty e^{at} \,e^{-st}  \, dt\amp = \lim_{h\to\infty}\int_0^h e^{(a-s)t} \, dt</mrow>
+         <mrow>\amp =\lim_{h\to\infty}\left[ \frac{e^{(a-s)t}}{a-s} \right]_0^h</mrow>
+        <mrow>\amp =\lim_{h\to\infty}\frac{e^{(a-s)h}}{a-s}- \frac{1}{a-s}</mrow>
+        <mrow>\amp = \frac{1}{s-a}</mrow>
+      </md>
+        for <m>s > a.</m> Thus, we have 
+          <md>\boxed{\mathscr{L} \{e^{at}\} = \frac{1}{s-a} \text{ for } s > a.}</md> 
+           </p>
+  </solution>
+  </example>
+
+
+<example xml:id="ex-5-1-2"> 
+  <p>
+    Compute <m>\mathscr{L}\{1\}</m>.
+  </p>
+
+<solution>
+  <p>
+  We have 
+       <md><mrow>  \mathscr{L} \{1\} \amp = \int_0^\infty e^{-st} \, dt</mrow>
+        <mrow> \amp =\lim_{h\to\infty} \left[ \frac{e^{-st}}{-s} \right]_0^h </mrow>
+        <mrow> \amp =\lim_{h\to\infty}\left( \frac{e^{-sh}}{-s} - \frac{1}{-s} \right)</mrow> 
+         <mrow> \amp= \frac{1}{s}</mrow>
+      </md>
+      for <m>s > 0.</m> Thus, we have 
+      <md>\boxed{\mathscr{L} \{1\} = \frac{1}{s} \text{ for } s > 0.}</md>
+      </p>
+</solution>
+</example>
+
+
+<example xml:id="ex-5-1-3">
+  <p>
+    Compute <m>\mathscr{L}\{t\}.</m>
+  </p>
+
+<solution>
+  <p>
+  We have
+      <md>
+          <mrow> \mathscr{L}\{t\}\amp = \int_0^\infty t e^{-st} dt</mrow>
+          <mrow> \amp = \lim_{h\to\infty}\int_0^h t e^{-st} dt</mrow>
+          <mrow> \amp = \lim_{h\to\infty}\left[ -\frac{t e^{-st}}{s} + \frac{1}{s}\int_0^h e^{-st} dt \right]</mrow>
+          <mrow> \amp = \frac{1}{s^2} </mrow> 
+      </md>  
+          for <m> s > 0.</m> Thus, we have
+          <md>\boxed{\mathscr{L} \{t\} = \frac{1}{s^2} \text{ for } s > 0.}</md> 
+          </p>
+</solution>
+</example>
+
+<example xml:id="ex-5-1-4">
+  <p> 
+    Compute <m>\mathscr{L}\{t^n\}</m> for a nonnegative integer <m>n.</m>
+  </p>
+
+<solution>
+  <p>
+  We have <md>
+      <mrow> \mathscr{L} \{t^n\} \amp = \int_0^\infty t^n e^{-st} dt</mrow>
+      <mrow>\amp =\lim_{h\to\infty}\int_0^h t^n e^{-st} dt</mrow>
+      <mrow>\amp =\lim_{h\to\infty}\left[ -\frac{t^n e^{-st}}{s} + \frac{n}{s}\int_0^h t^{n-1} e^{-st} dt \right] </mrow>
+      <mrow>\amp =\frac{n}{s}\lim_{h\to\infty}\int_0^h t^{n-1} e^{-st} dt</mrow>
+      <mrow> \amp =\frac{n}{s} \mathscr{L} \{t^{n-1}\}.</mrow>
+    </md>
+    Using this recursive relation, we obtain 
+    <md>
+      <mrow> \mathscr{L} \{t^n\} &amp;= \frac{n}{s}\left(\frac{n-1}{s}\right){\mathscr{L} \{t^{n-2}\}}</mrow>
+        <mrow>&amp;= \frac{n}{s}\left(\frac{n-1}{s}\right)\left(\frac{n-2}{s}\right){\mathscr{L} \{t^{n-3}\}}</mrow>
+        <mrow>&amp;\quad \vdots</mrow>
+        <mrow> &amp;= \frac{n}{s}\left(\frac{n-1}{s}\right)\left(\frac{n-2}{s}\right)\cdots \frac{3}{s}\; \frac{2}{s}{\mathscr{L} \{t\}}</mrow>
+           <mrow> &amp;=\frac{n}{s}\left(\frac{n-1}{s}\right)\left(\frac{n-2}{s}\right)\cdots \frac{3}{s}\; \frac{2}{s}\;\frac{1}{s^2}</mrow>
+            <mrow>&amp;=\frac{n!}{s^{n+1}}</mrow>
+      </md>
+ for <m>s&gt;0</m>. Thus, we have <md>\boxed{\mathscr{L} \{t^n\} = \frac{n!}{s^{n+1}}\quad \text{ for all } s&gt;0.}</md>
+</p>
+</solution>
+</example>
+
+
+<example xml:id="ex-5-1-5">
+  <p>
+    Compute <m>\mathscr{L}\{\sin(\omega t)\}</m> for a positive real number <m>\omega.</m>
+  </p>
+<solution>
+  <p>
+  By using integration by parts, we have
+<md><mrow>\int e^{-st} \sin(\omega t) \, dt = -\frac{e^{-st}}{s^2 + \omega^2}\left[s \sin(\omega t) + \omega \cos(\omega t)\right]   + C,</mrow></md> 
+where <m>C</m> is an arbitrary constant. Then
+			<md><mrow>\int_0^\infty e^{-st} \sin(\omega t) \, dt 
+        =-\left[\frac{e^{-st}}{s^2 + \omega^2}\left(s \sin(\omega t) + \omega \cos(\omega t)\right) \right]_0^\infty.</mrow></md>
+Since <m>e^{-st} \to 0</m> as <m>t\to\infty</m> and <m>s \sin(\omega t) + \omega \cos(\omega t)</m> is bounded, 
+we have <me>\lim_{t \to \infty} e^{-st}\left( s \sin(\omega t) + \omega \cos(\omega t) \right)  = 0</me> for <m>s&gt;0.</m> 
+The improper integral converges only for <m>s&gt;0</m> when <m>\omega\ne 0.</m>
+ Therefore, we have <me>\boxed{\mathscr{L}\{\sin(\omega t)\} = \frac{\omega}{s^2 + \omega^2} \quad \text{ for all } s&gt;0.}</me>
+ </p>
+</solution>
+</example>
+
+ <example xml:id="ex-5-1-6">
+ <p>
+    Compute <m>\mathscr{L}\{\cos(\omega t)\}</m> for a positive real number <m>\omega.</m>
+  </p>
+
+<solution>  
+  <p>
+  By using integration by parts, we have
+<md><mrow>\int e^{-st} \cos(\omega t) \, dt = -\frac{e^{-st}}{s^2 + \omega^2}\left[s \cos(\omega t) - \omega \sin(\omega t)\right]   + C,</mrow></md>
+where <m>C</m> is an arbitrary constant. Then
+      <md><mrow>\int_0^\infty e^{-st} \cos(\omega t) \, dt 
+        =-\left[\frac{e^{-st}}{s^2 + \omega^2}\left(s \cos(\omega t) - \omega \sin(\omega t)\right) \right]_0^\infty.</mrow></md>
+Since <m>e^{-st} \to 0</m> as <m>t\to\infty</m> and <m>s \cos(\omega t) - \omega \sin(\omega t)</m> is bounded, 
+we have <me>\lim_{t \to \infty} e^{-st}\left( s \cos(\omega t) - \omega \sin(\omega t) \right)  = 0</me> for <m>s&gt;0.</m> 
+The improper integral converges only for <m>s&gt;0</m> when <m>\omega\ne 0.</m>   
+Therefore, we have <me>\boxed{\mathscr{L}\{\cos(\omega t)\} = \frac{s}{s^2 + \omega^2} \quad \text{ for all } s&gt;0.}</me>
+
+</p> 
+
+</solution>
+</example>
+<p>
+			A simple but useful example of a discontinuous function is the 
+      <term><em>unit step function</em></term> <m>\mathcal{U}</m>, 
+      also known as the <term><em>Heaviside</em></term> function (named in honor of the English mathematician, engineer, and physicist Oliver Heaviside (1850–1925)). It is defined on <m>(-\infty, \infty)</m> by <me>\mathcal{U}(t) =
+\begin{cases}
+    0 &amp; \text{if } t &lt; 0, \\
+    1 &amp; \text{if } t \ge 0.
+\end{cases}</me>
+			The unit step function with the jump discontinuity at <m>t= a</m> is given by <me>\mathcal{U}(t-a) =
+\begin{cases}
+    0 &amp; \text{if } t &lt; a, \\
+    1 &amp; \text{if } t \ge a,
+\end{cases}</me> and its graph is shown below.
+  </p>
+
+
+<p>
+  
+      The unit step function is used to model situations where a quantity changes 
+      abruptly at a certain point in time, such as a switch being turned on or off, 
+      or a force being applied suddenly. 
+</p>
+<example xml:id="ex-5-1-7">
+  <p>
+    Compute <m>\mathscr{L}\{\mathcal{U}(t-a)\}</m> for a nonnegative real number <m>a.</m>
+  </p>
+  <solution>
+    <p>
+    By <xref ref="def-5-1" />, we have <md>
+      <mrow> 
+        \mathscr{L} \bigl\{ \mathcal{U}(t-a) \bigr\}
+        \amp  =
+        \int_0^{\infty} e^{-st} \mathcal{U}(t-a) \, dt</mrow>
+        <mrow> \amp =
+        \int_a^{\infty} e^{-st} \, dt</mrow>
+        <mrow> \amp    =
+        \left[ \frac{e^{-st}}{-s} \right]_a^\infty </mrow>  
+        <mrow>= \frac{e^{-as}}{s}</mrow>  
+</md> for <m>s&gt;0.</m> Note that the improper integral defining 
+<m>\mathscr{L}\{\mathcal{U}(t-a)\}</m> converges only for <m>s&gt;0.</m> 
+Thus, <me>\boxed{\mathscr{L} \{\mathcal{U}(t-a)\} = \frac{e^{-as}}{s} \quad 
+  \text{ for all } s&gt;0.}</me>
+			</p>
+  </solution>
+</example>
+
+
+<p>
+				To model situations in applications where an external force or 
+        source begins acting only after time <m>t = a</m>, 
+        we analyze the effect of shifting the source function along the <m>t</m>-axis.
+			</p>
+
+<p>
+				Suppose the function <m>g(t)</m> is effective only at and after the time 
+        <m>t = a</m>. In that case, we can write <me>g(t) =\begin{cases}
+    f(t-a) \amp \text{if } t \ge a,\\
+    0 \amp \text{if } t &lt; a,
+\end{cases},</me> which is obtained by shifting the graph of <m>f(t)</m> 
+to the right by <m>a</m> units and taking the zero function to the left of <m>t = a</m>.
+This function can be expressed in terms of the unit step function as <me>g(t) = \mathcal{U}(t-a) f(t-a).</me>
+</p>
+
+
+<example>
+  <title>Shifting on the <m>t-</m>axis</title>
+  <p>
+    Compute <m>\mathscr{L}\{\mathcal{U}(t-a) f(t-a)\}</m> for a nonnegative real number <m>a.</m>
+  </p>
+  <solution>
+    <p>
+    By <xref ref="def-5-1" />, we have <md>
+      <mrow> 
+        \mathscr{L} \bigl\{ \mathcal{U}(t-a) f(t-a) \bigr\}
+        \amp  =
+        \int_0^{\infty} e^{-st} \mathcal{U}(t-a) f(t-a) \, dt</mrow>
+        <mrow> \amp =
+        \int_a^{\infty} e^{-st} f(t-a) \, dt</mrow>
+        <mrow> \amp    =
+        e^{-as}\int_0^\infty e^{-s\tau} f(\tau) d\tau\qquad (\text{letting } \tau = t-a) </mrow>  
+        <mrow>\amp = e^{-as} \mathscr{L}\{f(t)\}.</mrow>
+</md> Thus, we have <me>\boxed{\mathscr{L} \{\mathcal{U}(t-a) f(t-a)\} 
+  = e^{-as} \mathscr{L}\{f(t)\}.}</me>
+    </p>
+  </solution>
+</example>
+  <p>
+			The linearity of the Riemann integration yields 
+      the linearity of the Laplace transform operator <m>\mathscr{L}</m>, 
+      as stated in the following theorem.
+			</p>
+
+  <theorem xml:id="thm-5-1-1">
+    <title>Linearity of the Laplace transform</title>
+    <statement>
+      <p>
+        Let <m>f</m> and <m>g</m> be functions defined on <m>[0, \infty)</m> 
+        such that their Laplace transforms exist for   <m>s \ge s_0</m> 
+        for some real number <m>s_0.</m> 
+        Then, for any real numbers <m>\alpha</m> and <m>\beta,</m> we have 
+        <me>\mathscr{L}\{\alpha f(t) + \beta g(t)\} = \alpha \mathscr{L}\{f(t)\} + \beta \mathscr{L}\{g(t)\}.</me>
+      </p>
+    </statement>
+  </theorem>  
+  <proof>
+    <p>
+      By using the definition of the Laplace transform, we have <md>
+        <mrow> \mathscr{L}\{\alpha f(t) + \beta g(t)\} \amp 
+          = \int_0^\infty e^{-st} (\alpha f(t) + \beta g(t)) dt</mrow>
+        <mrow> \amp 
+          = \alpha \int_0^\infty e^{-st} f(t) dt + \beta \int_0^\infty e^{-st} g(t) dt</mrow>
+        <mrow> \amp = \alpha \mathscr{L}\{f(t)\} + \beta \mathscr{L}\{g(t)\}.</mrow>
+      </md>
+    </p>
+  </proof>
+
+<subsection xml:id="subsec-5-1-4">
+  <title>When does the Laplace transform exist?</title>
+<p>
+			An immediate question one might ask is: what sort of functions <m>f(t)</m>
+       actually have Laplace transforms according to <xref ref="def-5-1" />?
+        To answer this in the context of the Riemann integration, we note that 
+        <m>F(s) =\mathscr{L}\{f(t)\}</m> is the limit of the definite integrals 
+        <me>\int_0^b  e^{-st} f(t)\, dt</me> as <m>b\to\infty</m> whenever it exists, 
+        and therefore <m>f(t)</m> cannot have a vertical asymptote at any point 
+        <m>t =b</m>. To avoid any chances for vertical asymptotes, we take 
+        <m>f(t)</m> to be <term><em>piecewise continuous</em></term> on 
+        <m>[0, \infty).</m> A piecewise continuous function on <m>[0,\infty)</m> 
+        is one which can have at most a finite number of jump discontinuities 
+        on each closed subinterval <m>[a, b]</m> of <m>[0,\infty)</m>. 
+        An example of a piecewise continuous function is depicted in the figure below.
+				</p>
+
+        <p>
+					However, the condition that <m>f</m> be piecewise continuous 
+          on <m>[0, \infty)</m> would not be sufficient for the existence of 
+          its Laplace transform. For instance, the function <m>f(t)= e^{t^2}</m>
+           does not have its Laplace transform. In fact, for each fixed number <m>c</m>, 
+           there exists <m>t_0</m> such that <m>t^2&gt; ct</m> for all <m>t\ge t_0,</m>
+            and this implies that 
+            <me>\int_{t_0}^b  e^{-st} e^{t^2}  \, dt = \int_{t_0}^b  e^{t^2-st}  \, dt &gt;  \int_{t_0}^b  e^{(c-s)t}  \, dt.</me> 
+            This results in <me>\int_0^\infty  e^{-st} e^{t^2}  \, dt\ge \int_{t_0}^\infty  e^{-st} e^{t^2}  \, dt \ge  \int_{t_0}^\infty  e^{(c-s)t}  \, dt = \infty</me> for all <m>s\le c.</m> 
+            This holds for every number <m>c</m>, and therefore <m>f(t) = e^{t^2}</m>
+             does have its Laplace transform. From this example, we observe that <m>e^{-st}</m> 
+             must control the growth property of <m>f(t)</m> as <m>t\to\infty</m>
+              for the existence its Laplace transform. In particular, in addition to 
+              the piecewise continuity, if <m>f(t)</m> is of an <term><em>exponential order</em></term> as <m>t\to\infty,</m> i.e., 
+              if there exist constants <m>\alpha</m>, <m>M&gt;0,</m> and <m>t_0&gt;0</m> 
+              such that <me>\left|f(t)\right| \le M e^{\alpha t} \quad \mbox{ for all } t\ge t_0,</me> 
+              then, for all <m>b\ge t_0</m>, we find
+					<me>\left|\int_0^b  e^{-st} f(t) \, dt\right| \le 
+            \int_0^b  e^{-st} \left|f(t)\right| \, dt\le \int_0^b  e^{-st} Me^{\alpha t} \, dt =M\int_0^b e^{-(s-\alpha)t}\, dt.</me> Consequently, <me>F(s) =\int_0^\infty  e^{-st} f(t) \, dt</me> exists for <m>s&gt;\alpha.</m> We formalize all these ideas together in the following existence theorem.
+					</p>
+  <theorem xml:id="thm-5-1-4">
+    <statement>
+      <p>
+        Let <m>f</m> be a piecewise continuous function on <m>[0,\infty)</m> and of an exponential order as <m>t\to\infty</m>. 
+        Then <m>F(s)=\mathscr{L}\{f(t)\}</m> exists.
+      </p>
+    </statement>
+  </theorem>
+  <proof>
+    <p>
+      By the piecewise continuity of <m>f</m> on <m>[0,\infty)</m>, we have 
+      <me>\int_0^b  e^{-st} f(t) \, dt = \sum_{i=1}^n \int_{t_{i-1}}^{t_i}  e^{-st} f(t) \, dt</me> 
+      for some finite number of points <m>0 = t_0 &lt; t_1 &lt; \cdots &lt; t_n = s_0.</m> 
+      By the exponential order of <m>f</m>, 
+      we have <md>\left|\int_{s_0}^b  e^{-st} f(t) \, dt\right| \le M\int_{s_0}^b e^{-(s-\alpha)t}\, dt</md> for all <m>b\ge s_0.</m> Thus, the limit 
+      <md>\lim_{b\to\infty} \int_{s_0}^b  e^{-st} f(t) \, dt</md> exists for all <m>s&gt;\alpha.</m>
+      This implies that <md>
+        <mrow> \mathcal{L}\{f(t)\} \amp= \lim_{b\to\infty} \int_0^b  e^{-st} f(t) \, dt\</mrow>
+        <mrow>  \amp= \sum_{i=1}^n \int_{t_{i-1}}^{t_i}  e^{-st} f(t) \, dt + \lim_{b\to\infty} \int_{s_0}^b  e^{-st} f(t) \, dt </mrow>
+        </md> 
+      exists for all <m>s&gt;\alpha.</m>
+    </p>
+  </proof>
+
+<p>
+		We are also interested in whether two different functions can have the same Laplace transform. Trivial examples of functions that have the same Laplace transform are <m>g(t) =\mathcal U(t-a)</m> with <m>a&gt;0</m> and <m>h(t)</m> defined by <me>h(t) =\begin{cases}
+    1&amp; \text{if } t &gt; a,\\
+    0 &amp; \text{if } t \le a.
+ \end{cases}</me> 
+ Note that <m>g(a) = 1</m> and <m>h(a)= 0,</m> and <m>g(t) = h(t)</m> for all 
+ <m>t\ne a.</m> Since <m>g</m> and <m>h</m> 
+ differ only at one single point in <m>[0, \infty),</m> 
+ it follows, by the definition of the Laplace transform, that 
+ <me> G(s) = H(s) = \frac{e^{-s}}{s}</me> for <m>s&gt;0.</m> 
+ This implies that <m>\mathscr{L}</m> is not a one-to-one function from functions <m>f(t)</m> of the variable <m>t</m> to functions <m>F(s)</m> of the variable <m>s</m>.
+				</p>
+</subsection>
+
+<subsection xml:id="subsec-5-1-5">
+  <title>Inverse Laplace transform</title>
+  <p>
+					As mentioned at the end of Section <xref ref="sec-5-1" />, 
+          the forced oscillator (<xref ref="eq-5-1-1" />) cannot be 
+          solved using the methods from previous chapters when <m>f</m> 
+          is a Dirac delta function. Even if <m>f</m> is only piecewise continuous, 
+          the earlier methods can become quite tedious to apply. 
+          The Laplace transform method provides a more efficient approach, 
+          and this method involves taking the Laplace transform of a linear differential 
+          equation and converting it into an algebraic equation. 
+          After solving the algebraic equation in the <m>s</m>-domain 
+          for the Laplace transform of the solution function, 
+          we then apply the one-to-one property of the Laplace 
+          transform to return to the solution in the <m>t-</m>domain. 
+          Evidently, for the method to work, we need to know when <m>\mathscr{L}</m> 
+          is one-to-one, so that the inverse <m>\mathscr{L}^{-1}</m> makes sense.
+				</p>
+
+				<p>
+					For continuous functions, the following theorem establishes the invertibility 
+          of the Laplace transform.
+				</p>
+
+  <theorem xml:id="thm-5-1-2">
+    <title>Invertibility of the Laplace transform</title>
+    <statement>
+      <p>
+        Let <m>f</m> and <m>g</m> be two piecewise continuous functions defined on <m>[0, \infty)</m> 
+        such that their Laplace transforms exist for <m>s &gt; s_0</m> 
+        for some real number <m>s_0.</m> 
+        If <me>\mathscr{L}\{f(t)\} = \mathscr{L}\{g(t)\},</me> 
+        then <m>f(t) = g(t)</m> for all <m>t\ge 0</m> at which both <m>f</m> and <m>g</m> are continuous.  
+      </p>
+    </statement>
+  </theorem>
+  <proof>
+    <p>
+      By the definition of the Laplace transform, we have 
+      <me> \int_0^\infty e^{-st} (f(t) - g(t)) dt=\int_0^\infty e^{-st} f(t) dt-\int_0^\infty e^{-st} g(t) dt =0 </me>
+       for all <m>s &gt; s_0.</m> Let <m> t_0 \ge 0</m> be a point at which both <m>f</m> and <m>g</m> are continuous. 
+       <!-- Since <m>f</m> and <m>g</m> are continuous on 
+      <m>[0, \infty),</m> the function <m>f(t) - g(t)</m> 
+      is also continuous on <m>[0, \infty).</m>
+       By the uniqueness of the Laplace transform, 
+       we conclude that <m>f(t) - g(t) = 0</m> for all <m>t\ge 0,</m> 
+       which implies that <m>f(t) = g(t)</m> for all <m>t\ge 0.</m> -->
+    </p>
+  </proof>  
+
+  <p>
+					By <xref ref="thm-5-1-2" />, for continuous functions
+           <m>f</m> and <m>g</m> satisfying <m>F(s) = G(s)</m> for all <m>s&gt;s_0</m>, 
+           where <m>s_0</m> is a positive number, we have <m>f(t) = g(t)</m> 
+           for all <m>t</m> in <m>[0, \infty).</m> Consequently, <m>\mathscr{L}</m> 
+           is <term><em>one-to-one on the class of continuous functions whose Laplace transforms exist</em></term>. Thus, for every continuous function <m>f</m> on <m>[0, \infty)</m> with the Laplace transform of <m>F(s),</m> we have <me>f(t) =\mathscr{L}^{-1}\left\{F(s)\right\}</me> for all <m>t\ge 0.</m> Here, <m>\mathscr{L}^{-1}\{F(s)\}</m> is called the <term><em>inverse Laplace transform</em></term> <m>F(s).</m>
+				</p>
+
+				<p>
+					We recall from <xref ref="ex-5-1-7" /> that <me>\mathscr{L}\{ \mathcal{U}(t-a)\}= \frac{e^{-as}}{s}</me> for <m>a\ge 0.</m> Therefore, when we speak of <me>\mathscr{L}^{-1}\left\{\frac{e^{-as}}{s}\right\},</me> we mean a function of <m>t</m> that agrees with <m>\mathcal{U}(t-a)</m> for <m>t\ne a</m>, and it can have any arbitrary value at <m>t=a.</m> In practice, we choose the function that best fits the problem at hand, but in this book, we will use <me>\mathscr{L}^{-1}\left\{\frac{e^{-as}}{s}\right\} = \mathcal{U}(t - a)</me> unless this choice is clearly inappropriate. It is understood that any other function that differs from <m>\mathcal{U}(t - a)</m> only at <m>t = a</m> may also be used. These considerations will also be made at the points of jump discontinuity when we take the inverse Laplace transform of the Laplace transform of a piecewise continuous functions of exponential order as <m>t\to\infty.</m>
+				</p>
+
+				<p>
+					In view of <xref ref="thm-5-1-2" />, <m>\mathscr{L}^{-1}\{F(s)\}</m> may represent multiple functions when <m>f(t)</m> has jump discontinuities on <m>[0,\infty)</m>. For most functions discussed in this chapter, it won’t be much of an issue since we will be working with either continuous functions or, at worse, functions that have finite number of discontinuity, with the exception of a Dirac delta distributions which has its Laplace transform encoded in the definition itself as <me>\mathscr{L}\{\delta(t - a\} =e^{-as}.</me> Since <m>\delta(t-a)</m> is discontinuous only at <m>t=a,</m> we will adopt <me>\mathscr{L}^{-1}\{e^{-as}\} =\delta(t - a).</me> More rigorous arguments about such ideas pertaining to Dirac delta functions exist in an area called <q>distribution theory,</q> which is beyond the scope of this book.
+				</p>
+
+				<p>
+					It follows that the inverse Laplace transform operator
+           <m>\mathscr{L}^{-1}</m> is linear, and we 
+           formalize this linearity property of <m>\mathscr{L}^{-1}</m> 
+           in the following theorem.
+				</p>
+
+        <theorem xml:id="thm-5-1-3">
+          <statement>
+           <p>
+					The inverse Laplace transform operator <m>\mathscr{L}^{-1}</m> is linear, that is, <me>\mathscr{L}^{-1}\{c_1F_1(s)+ c_2 F_2(s)\}= c_1\mathscr{L}^{-1}\{F_1(s)\} +c_2 \mathscr{L}^{-1}\{F_2(s)\},</me> where <m>c_1</m> and <m>c_2</m> are constants and <m>F_1</m> and <m>F_2</m> are Laplace transforms of functions that are either piecewise continuous and of exponential order at infinity or delta functions.
+				</p>
+          </statement>
+        </theorem>
+        <proof>
+          <p>
+            By the linearity of the Laplace transform operator <m>\mathscr{L}</m>, we have <md>
+              <mrow> \amp \mathscr{L}\{c_1\mathscr{L}^{-1}\{F_1(s)\} +c_2 \mathscr{L}^{-1}\{F_2(s)\}\} </mrow> 
+              <mrow> \amp = c_1\mathscr{L}\{\mathscr{L}^{-1}\{F_1(s)\}\} + c_2 \mathscr{L}\{\mathscr{L}^{-1}\{F_2(s)\}\} </mrow>
+              <mrow> \amp = c_1 F_1(s) + c_2 F_2(s).</mrow>
+            </md> By the one-to-one property of the Laplace transform, we conclude that <me>\mathscr{L}^{-1}\{c_1F_1(s)+ c_2 F_2(s)\}= c_1\mathscr{L}^{-1}\{F_1(s)\} +c_2 \mathscr{L}^{-1}\{F_2(s)\}.</me>
+          </p>
+        </proof>
+        		
+</subsection>
+
+
+
+<exercises xml:id="exercises-5-1">
+  <idx>Exercises</idx>
+  <exercise>
+    <statement>
+      <p>
+        Find the Laplace transforms of the following functions on
+         <m>[0, \infty)</m> by using formulas derived in <xref ref="sec-5-1" />.
+      </p>
+          <ol marker ="i.">
+            <li>
+              <p>
+                <m>f(t) = 4+t^5+\sin(5t)-7\cos(3t)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(t) = e^{-11t}+ e^t\sin(3t)+ e^{t-3}\;\mathcal{U}(t-3)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(t) = e^{\alpha t} \big(A\cos(\beta t)+B\sin(\beta t)\big)</m> (<m>A</m>, <m>B</m>, <m>\alpha</m> and <m>\beta</m> are fixed real numbers.)
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(t) = e^{7t}\delta(t-3)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(t) = e^{21}\delta(t-3)</m>
+              </p>
+            </li>
+            <li>
+              <p>   <m>f(t) = \sum_{k=0}^\infty \delta(t-7k)</m> (Assume that the integration and summation can be interchanged.)
+              </p>
+            </li>   
+          </ol>
+	</statement>
+  </exercise>
+
+  <exercise>
+    <p>
+      Find the Laplace transforms of the following piecewise continuous functions either by using the definition or by first expressing the functions as a linear combination of unit step functions 
+    and then using formulas derived in <xref ref="sec-5-1" />.
+
+    <ol cols="2" marker ="i.">
+      <li>
+        <p>
+          <m>f(t) = \begin{cases}
+    3 &amp; \text{if } 0\le t &lt; 2\\
+    0 &amp; \text{if }t \ge 2
+\end{cases}</m> 
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>f(t) = \begin{cases}
+    0 &amp; \text{if } 0\le t &lt; 2\\
+    3 &amp; \text{if }t \ge 2
+\end{cases}</m> 
+        </p>
+      </li>
+
+
+      <li>
+        <p>
+          <m>f(t) = \begin{cases}
+                e^{2t} \amp \text{if } 0\le t &lt; 2\\
+                0 \amp \text{if }t \ge 2
+              \end{cases}
+            </m>
+        </p>
+      </li>
+       <li>
+        <p>
+          <m>f(t) = \begin{cases}
+              e^{2t}\sin t \amp \text{if } 0\le t &lt; \pi\\
+              0 &amp; \text{if }t \ge \pi
+              \end{cases} 
+            </m>
+        </p>
+      </li>
+        <li>
+          <p>
+            <m>f(t) = \begin{cases}
+                0\amp \text{if } 0\le t &lt; 2\\
+                2\amp \text{if } 2\le t &lt; 4\\
+                0 &amp; \text{if }t \ge 4 &lt; 6\\
+                4 \amp \text{if } 6\le t \\
+                \end{cases} 
+              </m>
+          </p>    
+          </li>
+      <li>
+        <p>
+           <m>f(t) = \begin{cases}
+              e^{t} \amp \text{if } 0\le t &lt; \pi\\
+              \sin t&amp; \text{if }t \ge \pi
+              \end{cases} 
+            </m>
+        </p>
+      </li>
+    </ol>
+    </p>
+    
+  </exercise>
+
+
+  <exercise>
+    <p>
+    	Find the Laplace transform of each of the following functions 
+      by using formulas derived in <xref ref="sec-5-1" />.
+    </p>
+    <p>
+			<ol  cols="2" marker ="i.">
+        <li> <m>(t-4)^2</m>  </li>
+        <li><m>e^{3t-7}</m></li>
+          <li><m>\sin^2(2t)</m>   </li>
+         <li> <m>\cosh(t)</m> </li>
+       <li><m>\sinh(t)</m></li>
+     </ol>
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Find the inverse Laplace transform of each of the following Laplace transforms.
+        </p>
+        <p>
+      
+            <ol cols="2" marker ="i.">
+            <li><m>\frac{1}{s(s+1)}</m> </li>         
+            <li><m>\frac{s}{(s-1)^3}</m></li>
+            <li><m>\frac{1}{(s+2)(s-1)}</m> </li>
+            <li><m>\frac{2s}{(s-1)^2 (s+1)}</m> </li>   
+            <li><m>\frac{4}{s^2-2s+5}</m>  </li>
+            <li><m>\frac{e^{-s}}{s+1}</m> </li>
+            <li><m>\frac{2}{(s^2+4)(s^2-4)}</m> </li>
+            <li><m>5</m></li>
+            <li><m>e^{-7s}</m></li>
+          </ol>
+        </p>  
+
+  </exercise>
+  </exercises>
+
+
+</section>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Second and Higher Order Linear Differential Equations and Applications</title>
+
+  <!--<introduction>
+    <p> Intro goes here. </p>
+  </introduction>
+-->
+
+  <!-- include sections -->
+  <xi:include href="sec-3-1.ptx" />
+  <!-- <xi:include href="sec-3-2.ptx" />
+  <xi:include href="sec-3-3.ptx" />
+  <xi:include href="sec-3-4.ptx" />-->
+  <xi:include href="sec-3-5.ptx" />  
+
+</chapter>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-7" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Appendix</title>
+
+  <introduction>
+    <p> Intro goes here yes. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-7-1.ptx" /> 
+<xi:include href="sec-7-2.ptx" />
+  <!--<xi:include href="sec-7-3.ptx" />
+  <xi:include href="sec-7-4.ptx" /> -->
+
+</chapter>

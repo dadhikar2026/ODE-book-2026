@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>First Order Differential Equations</title>
+
+  <introduction>
+    <p> Intro goes here. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <!-- <xi:include href="sec-2-1.ptx" /> -->
+
+</chapter>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-5-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+ <title>Applications to Initial Value Problems</title>
+
+<p>
+	As point out earlier in <xref ref="sec-5-1" />, 
+    we will need to convert a linear initial value problem into an 
+    algebraic equation using the Laplace transform. After solving 
+    the equation in the <m>s-</m>domain for the Laplace transform of
+     the solution function, we then apply the inverse Laplace transform
+      operator <m>\mathscr{L}^{-1}</m> to return to the 
+      <m>t-</m>domain and obtain the solution of the initial value problem. 
+      For these steps, we will need the Laplace transform of derivatives.
+	</p>
+<p>
+Suppose that <m>y(t)</m> is continuous on <m>[0,\infty)</m> 
+and of exponential order as <m>t\to\infty.</m> 
+Then there exists constants <m>\alpha</m>, <m>M&gt;0</m> and <m>t_0&gt;0</m> such that 
+<me>|y(t)| \le M e^{\alpha t}\quad \text{for all } t\ge t_0.</me> The number 
+<m>\alpha</m> is referred to as an <em><term>exponential order</term></em> of <m>y</m>. 
+Then, for <m>s&gt; \alpha,</m> we have 
+<me>|y(t) e^{-st}|\le M e^{-(s-\alpha)t} \quad \text{for all }t\ge t_0,</me> 
+and consequently, 
+<me>\lim\limits_{t\to\infty}y(t) e^{-st} =0\quad \text{for }s&gt;\alpha.</me> 
+Suppose, further, that <m>y'</m> is piecewise continuous on <m>[0,\infty).</m> 
+Then, using integration by parts, we have 
+<md>
+<mrow> \mathscr{L}\{y'(t)\} \amp = \int_0^{\infty} e^{-st} y'(t) \, dt </mrow>
+<mrow> \amp = \left[ e^{-st} y(t) \right]_0^{\infty} + s \int_0^{\infty} e^{-st} y(t) \, dt</mrow>
+<mrow> \amp =  -y(0) + s\mathscr{L}\{y(t)\}</mrow>
+<mrow> \amp = sY(s) - y(0)</mrow>
+</md> 
+for <m>s&gt;\alpha.</m> 
+Thus, <men xml:id="eq-5-2-1">
+    \boxed{
+\mathscr{L}\{y'(t)\} = sY(s) - y(0).}
+</men>
+</p>
+
+<p>
+	We extend the above idea to higher order derivatives. For instance, 
+    suppose that <m>y(t)</m> and <m>y'(t)</m> are continuous and of exponential order. 
+    If <m>y''(t)</m> exists and is piecewise continuous on <m>[0, \infty),</m> 
+    then applying the formula (<xref ref="eq-5-2-1" />) 
+    first to <m>z'(t)</m> with <m>z(t) = y'(t)</m> and then to <m>y'(t)</m>, 
+    we obtain 
+    <md>
+        <mrow>\mathscr{L}\{y''(t)\}\amp =\mathscr{L}\{z'(t)\} </mrow>
+        <mrow> \amp = sZ(s) - z(0) </mrow>
+         <mrow> \amp= s\mathscr{L}\{y'(t)\}- y'(0)  </mrow>
+         <mrow> \amp = s(sY(s) - y(0)) - y'(0) </mrow>
+         <mrow> \amp   =s^2Y(s) - sy(0)-y'(0),</mrow>
+         </md> 
+          i.e., <men xml:id="eq-5-2-2">
+                \boxed{\mathscr{L}\{y''(t)\} = s^2Y(s) - sy(0)-y'(0).}
+        </men>
+</p>
+
+            
+<p>
+Applying these ideas repeatedly to higher order derivatives, 
+                we obtain the following theorem whose proof is omitted.     
+</p>	
+
+<theorem xml:id="thm-5-2-1" alt="Laplace transform of derivatives">
+    <title>(Laplace transform of derivatives)</title>
+   <p>	 Let <m>n\ge 1</m> be a positive integer. 
+    If <m>y, y', \ldots, y^{(n-1)}</m> are continuous on <m>[0, \infty)</m> 
+    and of exponential order as <m>t\to\infty</m> and 
+    if <m>y^{(n)}(t)</m> is piecewise continuous on <m>[0, \infty)</m> 
+    and of exponential order as <m>t\to\infty,</m>    
+    then <me>\mathscr{L}\{y^{(n)}(t)\} = s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0),</me> 
+    where <m>Y(s) = \mathscr{L}\{y(t)\}</m>.
+   </p>
+</theorem>
+
+<p>
+				<xref ref="thm-5-2-1" /> presents how <m>y(0),y'(0), \dots, y^{(n-1)}(0)</m> naturally arise,
+                 reflecting the initial conditions of an <m>n</m>-th order 
+                 linear initial value problem and indicating 
+                 the potential use of the Laplace transform to covert a linear differential 
+                 equation with constant coefficients to an algebraic equation with
+                  no derivatives of the Laplace transform of the solution variable. 
+                  Specifically, consider the linear initial value problem of the form: 
+<men xml:id="eq-5-2-3">
+    \begin{cases}
+    &amp;a_n y^{(n)} + a_{n-1}y^{(n-1)}+ \cdots+a_1y'+a_0 y = f(t),\\
+    &amp;y(0) = y_0, \dots, y^{(n-1)}(0)= y_{n-1}.
+\end{cases}
+</men> 
+Applying <xref ref="thm-5-2-1" /> in conjunction with the linearity 
+of <m>\mathscr{L}</m>,
+ the initial value problem in <xref ref="eq-5-2-3" /> gives rise to the following algebraic equation in the <m>s-</m>domain:
+	<men xml:id="eq-5-2-4">
+    <mrow>&amp;a_n\big(s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0)\big)</mrow>
+    <mrow>&amp;+a_{n-1}\big(s^{n-1} Y(s) - s^{n-2}y(0) - s^{n-3}y'(0) - \cdots - y^{(n-2)}(0)\big)</mrow>
+    <mrow>&amp;\vdots</mrow>
+    <mrow>&amp;+a_1\big(sY(s)- y(0)\big) + a_0Y(s)= F(s),</mrow>
+</men> which takes the form 
+<men xml:id="eq-5-2-5">
+    p(s)Y(s)= q(s) +F(s),
+</men> where <m>p(s) = a_ns^n+a_{n-1}s^{n-1} + \cdots+ a_1s+a_0</m> and <m>q(s)</m> 
+is a polynomial in <m>s</m> obtained from all the remaining terms on the left side of 
+the equation <xref ref="eq-5-2-5" />. It then follows that 
+<men xml:id="eq-5-2-6"> 
+Y(s)= \frac{q(s)}{p(s)} +\frac{F(s)}{p(s)}.
+</men> The solution <m>y(t)</m> to the initial value problem (<xref ref="eq-5-2-3" />) 
+is given by 
+<men xml:id="eq-5-2-7">
+    y(t) = \mathscr{L}^{-1}\{Y(s)\} 
+    =\mathscr{L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} +\mathscr{L}^{-1}\left\{\frac{F(s)}{p(s)}\right\}.
+</men> 
+To find <md>\mathscr{L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} \quad\text{and}\quad\mathscr{L}^{-1}\left\{\frac{F(s)}{p(s)}\right\},</md> 
+we typically use partial fraction decomposition of <m>{q(s)}/{p(s)}</m> and <m>{F(s)}/{p(s)}</m> 
+and then use appropriate inverse Laplace transforms term by term. 
+For more details on the techniques of partial fraction decomposition, 
+see Appendix <xref ref="partial-fraction-decomposition" />.
+</p>
+
+<p>
+In principle, one should verify that the equation <xref ref="eq-5-2-7" />
+satisfies the initial value problem <xref ref="eq-5-2-3" />
+ by verifying that <m>y(t)</m> solves the differential equation and 
+ satisfies the initial conditions, especially important 
+ when the differential equation is defined also for <m>t &lt; 0</m> 
+ since the Laplace transform only makes sense to functions on <m>[0, \infty)</m>. 
+ However, this verification is unnecessary when <m>f(t)</m> 
+ is continuous on an open interval containing <m>t = 0</m>, 
+ as the initial value problem <xref ref="eq-5-2-3" /> 
+ is guaranteed to have a unique local solution.
+	</p>
+<p> In the following examples, we apply the Laplace transform method to solve initial value problems.
+			</p>
+
+
+
+
+<example xml:id="ex-5-2-1">
+    Solve the 
+    initial value problem using the Laplace transform: 
+    <md>y'-y= 2\cos(3t), \quad y(0) = 1.</md>
+
+
+<answer>
+    <p><m>y(t)=\frac{6}{5}e^t-\frac{1}{5}\cos(3t)+\frac{3}{5}\sin(3t)</m> on <m>(-\infty, \infty)</m>.</p>
+  </answer> 
+    <solution>
+        <p>
+Applying the Laplace transform to both sides of the equation, we have
+<md>
+\begin{aligned}
+\mathscr{L}\{y'\} - \mathscr{L}\{y\} &amp;= 2\mathscr{L}\{\cos(3t)\} \\
+(sY(s) - y(0)) - Y(s) &amp;= 2\cdot \frac{s}{s^2 + 9} \\
+(s-1)Y(s) &amp;= 1 + \frac{2s}{s^2 + 9} \\
+Y(s) &amp;= \frac{1}{s-1} + \frac{2s}{(s-1)(s^2 + 9)}.
+\end{aligned}
+</md>
+To find the inverse Laplace transform of <m>{2s}/{((s-1)(s^2 + 9))}</m>, we use partial fraction decomposition to write 
+<md>
+\frac{2s}{(s-1)(s^2 + 9)} = \frac{A}{s-1} + \frac{Bs + C}{s^2 + 9}.
+</md> Solving for <m>A, B, C</m>, we have <m>A = 1/5, B = -1/5, C = 9/5.</m> Thus, 
+<md>
+\begin{aligned}
+Y(s) &amp;= \frac{1}{s-1} + \frac{1/5}{s-1} + \frac{-1/5 s + 9  /5}{s^2 + 9} \\
+&amp;= \frac{6/5}{s-1} + \frac{-1/5 s + 9/5}{s^2 + 9}.
+\end{aligned}
+</md> Applying the inverse Laplace transform term by term, we have
+<md>
+\begin{aligned}y(t) &amp;= \mathscr{L}^{-1}\left\{\frac{6/5}{s-1}\right\} + \mathscr{L}^{-1}\left\{\frac{-1/5 s + 9/5}{s^2 + 9}\right\} \\
+&amp;= \frac{6}{5}e^t - \frac{1}{5}\cos(3t) + \frac{3}{5}\sin(3t).
+\end{aligned}
+</md>       
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex-5-2-2">
+    <p>
+Solve the initial value problem using the Laplace transform: <me>y''-5y'+4y= t, \quad y(0) = 1, y'(0) = 0.</me>
+</p>
+
+
+<answer>
+    <p><m>y(t)=e^t-\dfrac{5}{16}e^{4t}+\dfrac14 t+\dfrac{5}{16}</m> 
+        on <m>(-\infty, \infty)</m>.</p>
+  </answer>
+
+  
+
+
+  <solution>
+    Applying the Laplace transform to both sides of the equation, we have
+<md>
+\begin{aligned}&amp;\mathscr{L}\{y''\} - 5\mathscr{L}\{y'\} + 4\mathscr{L}\{y\} = \mathscr{L}\{t\} \\
+&amp;(s^2 Y(s) - sy(0)-y'(0)) - 5(sY(s) - y(0)) + 4Y(s) = \frac{1}{s^2} \\
+&amp;(s^2 - 5s + 4)Y(s) = \frac{1}{s^2} + s - 5 \\
+&amp;Y(s) = \frac{1}{s^2(s-1)(s-4)} + \frac{s-5}{(s-1)(s-4)}=\frac{s^3-5s^2+1}{s^2(s-1)(s-4)}.
+\end{aligned}
+</md>   
+
+     
+    <p>Decompose into partial fractions:</p>
+
+    <md>
+        \frac{s^3-5s^2+1}{s^2(s-1)(s-4)}
+        =\frac{A}{s}+\frac{B}{s^2}+\frac{C}{s-1}+\frac{D}{s-4}.
+    </md>
+
+    <p>Solving for the constants gives</p>
+
+    <md>
+        A=\frac{5}{16},\qquad B=\frac{1}{4},\qquad C=1,\qquad D=-\frac{5}{16}.
+    </md>
+
+    <p>Hence</p>
+
+    <md>
+        Y(s)=\frac{5}{16s}+\frac{1}{4s^2}+\frac{1}{s-1}-\frac{5}{16(s-4)}.
+    </md>
+
+    <p>Now apply the inverse Laplace transform:</p>
+
+   
+    <p>Therefore,  
+
+    <md>
+      \begin{aligned}
+        y(t)\amp =\mathscr{L}^{-1}\left\{\frac{5}{16s}\right\}+
+        \mathscr{L}^{-1}\left\{\frac{1}{4s^2}\right\}\\
+        \amp +\mathscr{L}^{-1}\left\{\frac{1}{s-1}\right\}
+        -\mathscr{L}^{-1}\left\{\frac{5}{16(s-4)}\right\}\\
+        \amp =\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t}.
+      \end{aligned}
+    </md>
+    We can show that <md>y(t)=\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t} 
+        \quad \text{ on } (-\infty, \infty)  
+          </md> 
+    is the solution of  the initial value problem on 
+    by verifying that it satisfies the differential equation and the initial conditions. 
+</p>
+  </solution>
+
+</example>
+
+
+
+
+<example xml:id="ex-5-2-3">
+     <title>Move this to a later section</title> 
+    Solve the initial value problem using the Laplace transform: 
+    <me>y'' + 4y' + 5y = e^{-t}, \quad y(0) = 0, \; y'(0) = 2.</me>
+    <solution>
+        <p>
+Applying the Laplace transform to both sides of the equation, we have
+<me>
+\begin{aligned}
+&amp;\mathscr{L}\{y''\} + 4\mathscr{L}\{y'\} + 5\mathscr{L}\{y\}     = \mathscr{L}\{e^{-t}\} \\
+&amp;(s^2 Y(s) - sy(0) - y'(0)) + 4          (sY(s) - y(0)) + 5Y(s) = \frac{1}{s+1} \\
+&amp;(s^2 + 4s + 5)Y(s) = \frac{1}{s+1} + 2 \\
+&amp;Y(s) = \frac{1}{(s+1)(s^2 + 4s + 5)} + \frac{2}{s^2 + 4s + 5}.
+\end{aligned}
+</me> To find the inverse Laplace transform of <m>{1}/{((s+1)(s^2 + 4s + 5))}</m>, we use partial fraction decomposition to write 
+<me>
+\frac{1}{(s+1)(s^2 + 4s + 5)} = \frac{A}{s+1} + \frac{Bs + C}{s^2 + 4s + 5}.
+</me> Solving for <m>A, B, C</m>, we have <m>A = 1/5, B = -1/5, C = 1/5.</m> Thus, 
+<me>
+\begin{aligned}Y(s) &amp;= \frac{1/5}{s+1} + \frac{-1/5 s + 1/5}{s^2 + 4s + 5} + \frac{2}{s^2 + 4s + 5} \\
+&amp;= \frac{1/5}{s+1} + \frac{-1/5 s + 11/5}{s^2 + 4s + 5}.
+\end{aligned}
+</me> Applying the inverse Laplace transform term by term, we have
+<me>
+\begin{aligned}y(t) &amp;= \mathscr{L}^{-1}\left\{\frac{1/5}{s+1}\right\} + \mathscr{L}^{-1}\left\{\frac{-1/5 s + 11/5}{s^2 + 4s + 5}\right\} \\
+&amp;= \frac{1}{5}e^{-t} - \frac{1}{5}e^{-2t}\cos(t) + \frac{9}{5}e^{-2t}\sin(t).
+\end{aligned}
+</me>
+</p>
+    </solution> 
+</example>
+
+<p>
+    The general principle for solving initial value problems by 
+    the Laplace transform method remains the same as demonstrated 
+    in the previous examples. 
+    The major effort to make is in computing the Laplace transforms of 
+    more complicated functions and finding inverse transforms of 
+    more complicated expressions. In the followings sections, 
+    we continue exploring additional methods for computing 
+    Laplace transforms and solve initial value problems that 
+    involve more complicated functions.
+</p>
+
+
+  
+
+<exercises xml:id="exercises-5-2">
+ 
+    <exercise>
+        <p>
+            Solve the following initial value problems using the Laplace transform method:
+        </p>        
+       
+        <p>
+        <ol marker ="i.">
+            <li><m>y' - y =1, \quad y(0) = 0</m></li>
+            <li><m>y'-6y = e^{2t}, \quad y(0) = 1</m></li>
+            <li><m>y'' +5y+6y = e^{2t}, \quad y(0) = 0, \; y'(0) = 0</m></li>
+            <li><m>y'' -5y' + 6y = e^{2t}, \quad y(0) = 1, \; y'(0) = 0</m></li>
+            <li><m>y'' + 9y = e^{2t}, \quad y(0) = 0, \; y'(0) = 1</m></li>
+             </ol>   
+            </p>
+    </exercise>
+
+   
+</exercises>
+
+<!-- <exercises>
+  <exercise xml:id="ex-first">
+    <statement>
+      <p>Solve <m>x^2-5x+6=0</m>.</p>
+    </statement>
+    <answer>
+      <p><m>x=2</m> or <m>x=3</m>.</p>
+    </answer>
+    <solution>
+      <p>Factor:
+      <me>(x-2)(x-3)=0</me>
+      so the solutions are <m>x=2</m> and <m>x=3</m>.</p>
+    </solution>
+  </exercise>
+</exercises> -->
+
+</section>
+
+
+
+
+    

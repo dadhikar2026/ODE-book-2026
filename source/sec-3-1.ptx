@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-3-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Introduction</title>
+
+  <introduction>
+    <p>
+      The <m>n^{\text{th}}</m>
+      order linear differential equations are of the form
+    <men xml:id="eq-nonhomogeneous-0">
+  \phi^{(n)}(x) + a_{n-1}(x)\phi^{(n-1)}(x) + \cdots + a_1(x)\phi'(x) + a_0(x)\phi(x) = f(x)
+    </men>
+        </p>
+<p>
+  where the functions 
+  <m>a_0(x), \dots, a_{n-1}(x), a_n(x)</m> 
+  and 
+  <m>f(x)</m> 
+  are continuous on some interval <m>I</m>.
+</p>
+    
+
+
+
+</introduction>
+</section>
