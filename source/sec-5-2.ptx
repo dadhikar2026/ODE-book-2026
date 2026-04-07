@@ -344,7 +344,27 @@ Applying the Laplace transform to both sides of the equation, we have
             </p>
     </exercise>
 
-
+<exercise>
+        <p>
+            Solve the following initial value problems using the Laplace transform method:
+        </p>        
+       
+        <p>
+        <ol marker ="i.">
+            <li><m>y'+4y = f(t), \quad y(0) = 0,</m> where <m>f(t) =\begin{cases}
+            1 &amp;\text{ if } 0\le t &lt;1\\
+            -1&amp;\text{ if } t \ge 1
+            \end{cases}</m></li>
+            <li><m>y'+4y = f(t), \quad y(0) = 0,</m> where <m>f(t) =\begin{cases}
+            \sin t&amp;\text{ if } 0\le t &lt;1\\
+            0&amp;\text{ if } t\ge 1
+        \end{cases}</m></li>
+            <li><m>y''-y'= \cos t\; \mathscr{U}(t-2\pi)\quad y(0) =1,\; y'(0) =1</m> </li>
+            <li> <m>y''+5y'+6y = \mathscr{U}(t-2\pi), \quad y(0)= 0,\; y'(0)= 1</m></li>
+            <li><m>y''+4y'+3y = 1- \mathscr{U}(t-2) - \mathscr{U}(t-4) +\mathscr{U}(t-6), \quad y(0) = 0,\; y'(0) = 0</m></li>
+          </ol>   
+            </p>
+    </exercise>
 
 </exercises>
 

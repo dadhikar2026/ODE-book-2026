@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-5-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Derivatives and Integrals of Laplace Transforms</title>
+
+  <p>
+    The evaluation of Laplace transforms and inverse Laplace transforms can often be carried out efficiently by applying differentiation or integration techniques to certain Laplace transforms.
+  </p>
+
+  <p>
+    Let <m>f</m> be a piecewise continuous function on <m>[0, \infty)</m> and of exponential order as <m>t\to\infty</m>.
+    Using the Leibniz rule  from <xref ref="thm-Leibnitz-Rule-Improper-Integrals" /> in <xref ref="sec-7-1" /> for differentiating under the integral sign, we have
+    <me>
+      \begin{split} F'(s) &amp;= \frac{d}{ds}\int_0^\infty e^{-st} f(t)\, dt\\ &amp;= \int_0^\infty (-t) e^{-st} f(t)\, dt\\ &amp;= -\int_0^\infty  e^{-st} \big[tf(t)\big]\, dt\\ &amp;=-\mathscr{L}\{tf(t)\}.
+      \end{split}
+    </me>
+    Thus, we have
+    <me>
+      \mathscr{L}\{tf(t)\} =- F'(s).
+    </me>
+    In a similar fashion, we obtain
+  </p>
+
+  <p>
+    <me>
+      \mathscr{L}\{t^2f(t)\}= (-1)^2F''(s).
+    </me>
+    Repeating this procedure inductively we obtain
+  </p>
+
+  <p>
+    <men xml:id="laplace-derivative">
+      \boxed{ \mathscr{L}\{t^nf(t)\} =(-1)^nF^{(n)}(s)}
+    </men>
+    for all positive integers <m>n</m>.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Find the Laplace transform <m>\mathscr{L}\{t\sin(\omega t)\}</m>.
+      </p>
+    </statement>
+
+    <solution>
+      We have
+      <me>
+        \begin{split} \mathscr{L}\{t\sin(\omega t)\} &amp;= -\frac{d}{ds}\mathscr{L}\{\sin(\omega t)\}\\ &amp;= -\frac{d}{ds}\left(\frac{\omega}{s^2+\omega^2}\right)\\ &amp;= \frac{2\omega s}{(s^2+\omega^2)^2}.
+        \end{split}
+      </me>
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Find the Laplace transform <m>\mathscr{L}\{t^2\sin(\omega t)\}</m>.
+      </p>
+    </statement>
+
+    <solution>
+      We have
+      <me>
+        \begin{split} \mathscr{L}\{t^2\sin(\omega t)\} &amp;= \frac{d^2}{ds^2}\mathscr{L}\{\sin(\omega t)\}\\ &amp;= \frac{d^2}{ds^2}\left(\frac{\omega}{s^2+\omega^2}\right)\\ &amp;= \frac{2\omega(3s^2-\omega^2)}{(s^2+\omega^2)^3}.
+        \end{split}
+      </me>
+    </solution>
+  </example>
+
+  <p>
+    Let us discuss about what happens when you integrate a Laplace transform.
+    Let <m>f</m> be a piecewise continuous function of exponential order as <m>t\to\infty</m>.
+    Suppose <m>s_0</m> is a real number such that <m>F(s)</m> exists for all
+     <m>s&gt;s_0.</m> To compute <m>\mathscr{L}\{f(t)/t\}</m>, 
+     let <m>g(t) = f(t)/t</m> so that <m>t g(t) =f(t).</m> 
+     Then, in view of (<xref ref="laplace-derivative" />), we obtain
+    <me>
+      G'(s) = -F(s).
+    </me>
+    Consequently, we have
+    <me>
+      G(s) = -\int_s^{\infty}  G'(p)\; dp = \int_s^\infty F(p)\, dp.
+    </me>
+    Here, we have considered only those <m>f</m> for which the Laplace transform <m>G(s)</m> of <m>g</m> 
+    satisfies the limiting property that <m>G(s) \to 0</m> as <m>s\to \infty.</m> Thus, we have
+    <men xml:id="laplace-integral">
+      \boxed{\mathscr{L}\left\{\frac{f(t)}{t}\right\}(s) =    \int_s^\infty F(p)\, dp.} 
+    </men>
+    Moreover, we can use <xref ref="laplace-integral" /> 
+    to determine the existence of the Laplace transform of <m>f(t).</m> 
+        For instance, if the integral on the right-hand side of <xref ref="laplace-integral" />
+         diverges for all <m>s&gt;s_0,</m> then the Laplace transform of <m>f(t)/t</m> 
+         does not exist for any <m>s&gt;s_0.</m>
+  </p>
+</section>

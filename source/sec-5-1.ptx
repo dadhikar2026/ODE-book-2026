@@ -9,9 +9,9 @@
         <xref ref="sec-3-5" /> of 
         <xref ref="ch-3" />, 
         described by the equation 
-        <me xml:id="eq-5-1-1">
+        <men xml:id="eq-5-1-1">
     y''(t) + \omega^2 y(t) = f(t); \quad  y(0) = 0,\; y'(0)= 0,
-</me> where <m>f(t)</m> is an impulsive force. At <m>t =0,</m> the mass is at rest at its equilibrium position. At time <m>t = a</m>, the mass experiences a sharp, brief downward impact, such as a hammer strike, modeled by an the impulsive force <m>f(t) .</m> An impulsive force of this nature is commonly modeled by using an idealized mathematical object, called the <term><em>Dirac delta</em></term> <q>function</q> denoted by <m>\delta (t-a),</m> which is characterized by the following properties:
+</men> where <m>f(t)</m> is an impulsive force. At <m>t =0,</m> the mass is at rest at its equilibrium position. At time <m>t = a</m>, the mass experiences a sharp, brief downward impact, such as a hammer strike, modeled by an the impulsive force <m>f(t) .</m> An impulsive force of this nature is commonly modeled by using an idealized mathematical object, called the <term><em>Dirac delta</em></term> <q>function</q> denoted by <m>\delta (t-a),</m> which is characterized by the following properties:
 			</p>
 
 		<p><ol>
