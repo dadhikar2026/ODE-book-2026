@@ -41,9 +41,9 @@
         who is known to have given the most definitive and systematic 
         development of the theory of distributions. For an elegant 
         introduction to distribution theory with application, 
-        the reader is referred to Zemanian<fn><p>
+        the reader is referred to Zemanian<fn>
 				A.H. Zemanian, <em>Distribution theory and transform analysis</em>, second edition, Dover, New York, 1987; MR0918977
-			</p></fn>.
+			</fn>.
 			</p>
 
     <p>
@@ -57,7 +57,7 @@
      \end{cases}</me> which represents a pulse of height <m>1/\varepsilon</m> and width <m>\varepsilon&gt;0</m>, 
      centered at <m>t = a</m>.
 			</p>
-  <p>
+
  <figure xml:id="fig-5-1-1">
   <caption>The graph of <m>d_{a, \varepsilon}(t)</m>.</caption>
   <image>
@@ -84,7 +84,7 @@
     </latex-image>
   </image>
 </figure> 
-</p>
+
 
 <p>
 				As <m>\varepsilon \to 0</m>, this pulse becomes increasingly narrow and tall, 
@@ -366,23 +366,64 @@ The improper integral converges only for <m>s&gt;0</m> when <m>\omega\ne 0.</m>
 Therefore, we have <me>\boxed{\mathscr{L}\{\cos(\omega t)\} = \frac{s}{s^2 + \omega^2} \quad \text{ for all } s&gt;0.}</me>
 
 </p> 
-
 </solution>
+</example>
+
+
+<example>
+  <title>Shifting on the <m>s</m>-axis</title>
+  <p>
+    Compute <m>\mathscr{L}\{e^{at} f(t)\}</m> for real numbers <m>a</m>.
+  </p>
+  <solution>
+    <p>
+    By using <xref ref="def-5-1" />, we have
+<md><mrow>\mathscr{L}\{e^{at} f(t)\} = \int_0^\infty e^{at} f(t) e^{-st} dt 
+  = \int_0^\infty f(t) e^{-(s-a)t} dt = F(s-a).</mrow></md> 
+  Therefore, we have <md>\boxed{\mathscr{L}\{e^{at} f(t)\} = F(s-a).}</md>
+    </p>
+  </solution>
 </example>
 <p>
 			A simple but useful example of a discontinuous function is the 
-      <term><em>unit step function</em></term> <m>\mathcal{U}</m>, 
-      also known as the <term><em>Heaviside</em></term> function (named in honor of the English mathematician, engineer, and physicist Oliver Heaviside (1850–1925)). It is defined on <m>(-\infty, \infty)</m> by <me>\mathcal{U}(t) =
+      <term><em>unit step function</em></term> <m>\mathscr{U}</m>, 
+      also known as the <term><em>Heaviside</em></term> function (named in honor of the English mathematician, engineer, and physicist Oliver Heaviside (1850–1925)). It is defined on <m>(-\infty, \infty)</m> by <me>\mathscr{U}(t) =
 \begin{cases}
     0 &amp; \text{if } t &lt; 0, \\
     1 &amp; \text{if } t \ge 0.
 \end{cases}</me>
-			The unit step function with the jump discontinuity at <m>t= a</m> is given by <me>\mathcal{U}(t-a) =
+			The unit step function with the jump discontinuity at <m>t= a</m> is given by <me>\mathscr{U}(t-a) =
 \begin{cases}
     0 &amp; \text{if } t &lt; a, \\
     1 &amp; \text{if } t \ge a,
 \end{cases}</me> and its graph is shown below.
   </p>
+
+  <!-- <figure xml:id="fig-unit-step-prefigure">
+  <caption>The unit step function <m>\mathscr{U}(t)</m>.</caption>
+  <image>
+    <prefigure>
+      <coordinates xmin="-2" xmax="4" ymin="-0.5" ymax="1.5"/> -->
+
+      <!-- axes -->
+      <!-- <axes x="0" y="0"/> -->
+
+      <!-- horizontal segments -->
+      <!-- <line from="(-2,0)" to="(0,0)" stroke="blue" thickness="2"/>
+      <line from="(0,1)" to="(4,1)" stroke="blue" thickness="2"/> -->
+
+      <!-- open circle at (0,0) -->
+      <!-- <circle center="(0,0)" radius="0.06" stroke="blue" fill="white"/> -->
+
+      <!-- closed circle at (0,1) -->
+      <!-- <point p="(0,1)" size="4" fill="blue"/> -->
+
+      <!-- labels -->
+      <!-- <label p="(3.5,1.1)">$\mathscr{U}(t)$</label>
+      <label p="(4.2,-0.1)">$t$</label>
+    </prefigure>
+  </image>
+</figure> -->
 
  <!-- <figure xml:id="fig-sage-cubic">
   <caption>A cubic plotted by SageMath on
@@ -409,23 +450,23 @@ plot(f, (x, -3, 2), color='blue', thickness=3)
 </p>
 <example xml:id="ex-5-1-7">
   <p>
-    Compute <m>\mathscr{L}\{\mathcal{U}(t-a)\}</m> for a nonnegative real number <m>a.</m>
+    Compute <m>\mathscr{L}\{\mathscr{U}(t-a)\}</m> for a nonnegative real number <m>a.</m>
   </p>
   <solution>
     <p>
     By <xref ref="def-5-1" />, we have <md>
       <mrow> 
-        \mathscr{L} \bigl\{ \mathcal{U}(t-a) \bigr\}
+        \mathscr{L} \bigl\{ \mathscr{U}(t-a) \bigr\}
         \amp  =
-        \int_0^{\infty} e^{-st} \mathcal{U}(t-a) \, dt</mrow>
+        \int_0^{\infty} e^{-st} \mathscr{U}(t-a) \, dt</mrow>
         <mrow> \amp =
         \int_a^{\infty} e^{-st} \, dt</mrow>
         <mrow> \amp    =
         \left[ \frac{e^{-st}}{-s} \right]_a^\infty </mrow>  
         <mrow>= \frac{e^{-as}}{s}</mrow>  
 </md> for <m>s&gt;0.</m> Note that the improper integral defining 
-<m>\mathscr{L}\{\mathcal{U}(t-a)\}</m> converges only for <m>s&gt;0.</m> 
-Thus, <me>\boxed{\mathscr{L} \{\mathcal{U}(t-a)\} = \frac{e^{-as}}{s} \quad 
+<m>\mathscr{L}\{\mathscr{U}(t-a)\}</m> converges only for <m>s&gt;0.</m> 
+Thus, <me>\boxed{\mathscr{L} \{\mathscr{U}(t-a)\} = \frac{e^{-as}}{s} \quad 
   \text{ for all } s&gt;0.}</me>
 			</p>
   </solution>
@@ -445,28 +486,28 @@ Thus, <me>\boxed{\mathscr{L} \{\mathcal{U}(t-a)\} = \frac{e^{-as}}{s} \quad
     0 \amp \text{if } t &lt; a,
 \end{cases},</me> which is obtained by shifting the graph of <m>f(t)</m> 
 to the right by <m>a</m> units and taking the zero function to the left of <m>t = a</m>.
-This function can be expressed in terms of the unit step function as <me>g(t) = \mathcal{U}(t-a) f(t-a).</me>
+This function can be expressed in terms of the unit step function as <me>g(t) = \mathscr{U}(t-a) f(t-a).</me>
 </p>
 
 
 <example>
   <title>Shifting on the <m>t-</m>axis</title>
   <p>
-    Compute <m>\mathscr{L}\{\mathcal{U}(t-a) f(t-a)\}</m> for a nonnegative real number <m>a.</m>
+    Compute <m>\mathscr{L}\{\mathscr{U}(t-a) f(t-a)\}</m> for a nonnegative real number <m>a.</m>
   </p>
   <solution>
     <p>
     By <xref ref="def-5-1" />, we have <md>
       <mrow> 
-        \mathscr{L} \bigl\{ \mathcal{U}(t-a) f(t-a) \bigr\}
+        \mathscr{L} \bigl\{ \mathscr{U}(t-a) f(t-a) \bigr\}
         \amp  =
-        \int_0^{\infty} e^{-st} \mathcal{U}(t-a) f(t-a) \, dt</mrow>
+        \int_0^{\infty} e^{-st} \mathscr{U}(t-a) f(t-a) \, dt</mrow>
         <mrow> \amp =
         \int_a^{\infty} e^{-st} f(t-a) \, dt</mrow>
         <mrow> \amp    =
         e^{-as}\int_0^\infty e^{-s\tau} f(\tau) d\tau\qquad (\text{letting } \tau = t-a) </mrow>  
         <mrow>\amp = e^{-as} \mathscr{L}\{f(t)\}.</mrow>
-</md> Thus, we have <me>\boxed{\mathscr{L} \{\mathcal{U}(t-a) f(t-a)\} 
+</md> Thus, we have <me>\boxed{\mathscr{L} \{\mathscr{U}(t-a) f(t-a)\} 
   = e^{-as} \mathscr{L}\{f(t)\}.}</me>
     </p>
   </solution>
@@ -691,7 +732,7 @@ This function can be expressed in terms of the unit step function as <me>g(t) = 
             </li>
             <li>
               <p>
-                <m>f(t) = e^{\alpha t} \big(A\cos(\beta t)+B\sin(\beta t)\big)</m> (<m>A</m>, <m>B</m>, <m>\alpha</m> and <m>\beta</m> are fixed real numbers.)
+                <m>f(t) = e^{\alpha t} \big(A\cos(\beta t)+B\sin(\beta t)\big)</m> <nbsp/> (<m>A</m>, <m>B</m>, <m>\alpha</m> and <m>\beta</m> are fixed real numbers.)
               </p>
             </li>
             <li>
@@ -705,7 +746,7 @@ This function can be expressed in terms of the unit step function as <me>g(t) = 
               </p>
             </li>
             <li>
-              <p>   <m>f(t) = \sum_{k=0}^\infty \delta(t-7k)</m> (Assume that the integration and summation can be interchanged.)
+              <p>   <m>f(t) = \sum_{k=0}^\infty \delta(t-7k)</m> <nbsp/>(Assume that the integration and summation can be interchanged.)
               </p>
             </li>   
           </ol>

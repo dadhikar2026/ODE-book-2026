@@ -311,8 +311,6 @@ Applying the Laplace transform to both sides of the equation, we have
             </p>
     </exercise>
 
-   
-</exercises>
 
 <!-- <exercises>
   <exercise xml:id="ex-first">
@@ -329,6 +327,26 @@ Applying the Laplace transform to both sides of the equation, we have
     </solution>
   </exercise>
 </exercises> -->
+
+
+  <exercise>
+        <p>
+            Solve the following initial value problems using the Laplace transform method:
+        </p>        
+       
+        <p>
+        <ol marker ="i.">
+            <li><m>y'+y = e^{3t}\sin(2t), \quad y(0) = 0</m></li>
+            <li><m>y''-4y'+5y = 0, \quad y(0) = 0,\; y'(0) =1</m></li>
+            <li><m>y''-y'= e^t \sin t\quad y(0) =0,\; y'(0) =0</m></li>
+            <li><m>y'''+2y''-y'-2y = \sin t, \quad y(0)= 0,\; y'(0)= 0,\; y''(0) =1</m></li>
+          </ol>   
+            </p>
+    </exercise>
+
+
+
+</exercises>
 
 </section>
 
