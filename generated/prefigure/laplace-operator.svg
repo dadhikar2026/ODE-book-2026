@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="laplace-operator-figure" width="336" height="136" viewBox="0 0 336 136">
+  <defs>
+    <clipPath id="laplace-operator-clipPath-0">
+      <rect x="8.0" y="8.0" width="320.0" height="120.0"/>
+    </clipPath>
+    <clipPath id="laplace-operator-clipPath-1">
+      <rect x="8.0" y="8.0" width="320.0" height="120.0"/>
+    </clipPath>
+    <marker id="laplace-operator-arrow-head-end-2_None_24_60-black" markerWidth="9.0" markerHeight="8.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="6.5" refY="4.0">
+      <path d="M 9.0 4.0L 0.0 8.0L 1.7 5.0L 1.7 3.0L 0.0 0.0Z" fill="black" stroke="none"/>
+    </marker>
+    <marker id="laplace-operator-arrow-head-end-2_None_24_60-black-outline" markerWidth="13.0" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="8.5" refY="6.0">
+      <path d="M 11.8 7.8 L 2.8 11.8 A 2 2 0 0 1 0.0 10.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 11.8 4.2 A 2 2 0 0 1 11.8 7.8 Z" fill="white" stroke="none"/>
+    </marker>
+  </defs>
+  <path id="laplace-operator-path-0" d="M 128.0 88.0 L 208.0 88.0 L 208.0 48.0 L 128.0 48.0 Z" stroke="black" stroke-width="2" fill="none"/>
+  <g id="laplace-operator-label-0" transform="translate(168.0,68.0) translate(-9.4,-6.6)">
+    <g id="laplace-operator-g-0">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.304px" width="18.736px" height="13.288px" role="img" focusable="false" viewBox="0 -717 1035 734" x="0.0" y="0.0">
+        <defs>
+          <path id="laplace-operator-MJX-2-TEX-S-2112" d="M572 704Q607 704 607 693Q607 681 590 664H588Q586 664 584 664T578 663Q504 658 434 592T363 457Q363 426 386 401Q417 371 481 361Q490 360 527 360H562Q565 363 595 404T666 494T755 596T854 682T945 717Q986 717 1010 696T1035 637Q1035 593 996 531T873 414Q809 378 753 360T674 338T651 333Q650 333 633 308T588 245T544 185Q498 126 426 78L413 68H414Q498 47 575 47Q626 47 676 74T755 139L762 148H779H783Q802 148 802 142Q802 137 795 129Q760 81 691 33T544 -16Q470 -16 366 20L341 29L331 24Q239 -17 155 -17H141Q90 -17 61 -12T23 1T14 22Q14 44 39 65T103 95Q126 101 180 101Q224 101 258 98T309 90T330 86Q332 86 353 103T389 135Q401 146 412 158T431 179T450 203T466 225T485 252T505 280L535 322H509Q391 322 340 362T289 452Q289 495 321 547T396 630Q438 665 486 684T572 704ZM978 635Q978 644 977 650T973 661T968 668T961 673T954 676T946 678T938 680Q929 680 925 677Q893 659 795 531T682 377Q683 377 711 385T755 401T801 421T856 453T906 495Q927 516 952 557T978 635ZM274 50Q274 51 258 54T216 61T166 65Q160 65 151 65T140 64Q115 58 102 48T88 31Q88 20 159 20Q191 20 219 27T261 42L274 50Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="TeXAtom" data-mjx-texclass="ORD">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="script" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-attributes="texclass:ORD" data-semantic-speech="script upper L">
+                <use data-c="2112" xlink:href="#laplace-operator-MJX-2-TEX-S-2112"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <g id="laplace-operator-label-1" transform="translate(84.0,47.0) translate(-15.3,-0.0)">
+    <g id="laplace-operator-g-1">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -4.528px" width="30.568px" height="18.096px" role="img" focusable="false" viewBox="0 -750 1689 1000" x="0.0" y="0.0">
+        <defs>
+          <path id="laplace-operator-MJX-3-TEX-I-1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"/>
+          <path id="laplace-operator-MJX-3-TEX-N-2061" d=""/>
+          <path id="laplace-operator-MJX-3-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"/>
+          <path id="laplace-operator-MJX-3-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/>
+          <path id="laplace-operator-MJX-3-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math" data-semantic-type="appl" data-semantic-role="simple function" data-semantic-annotation="clearspeak:simple" data-semantic-id="6" data-semantic-children="0,4" data-semantic-content="5,0" data-semantic-speech="f left parenthesis t right parenthesis">
+            <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="simple function" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="6" data-semantic-operator="appl" data-semantic-speech="f">
+              <use data-c="1D453" xlink:href="#laplace-operator-MJX-3-TEX-I-1D453"/>
+            </g>
+            <g data-mml-node="mo" data-semantic-type="punctuation" data-semantic-role="application" data-semantic-id="5" data-semantic-parent="6" data-semantic-added="true" data-semantic-operator="appl" data-semantic-speech="of" transform="translate(550,0)">
+              <use data-c="2061" xlink:href="#laplace-operator-MJX-3-TEX-N-2061"/>
+            </g>
+            <g data-mml-node="mrow" data-semantic-type="fenced" data-semantic-role="leftright" data-semantic-id="4" data-semantic-children="2" data-semantic-content="1,3" data-semantic-parent="6" data-semantic-speech="left parenthesis t right parenthesis" transform="translate(550,0)">
+              <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="open" data-semantic-id="1" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="left parenthesis">
+                <use data-c="28" xlink:href="#laplace-operator-MJX-3-TEX-N-28"/>
+              </g>
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="2" data-semantic-parent="4" data-semantic-speech="t" transform="translate(389,0)">
+                <use data-c="1D461" xlink:href="#laplace-operator-MJX-3-TEX-I-1D461"/>
+              </g>
+              <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="close" data-semantic-id="3" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="right parenthesis" transform="translate(750,0)">
+                <use data-c="29" xlink:href="#laplace-operator-MJX-3-TEX-N-29"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <g id="laplace-operator-label-2" transform="translate(252.0,47.0) translate(-18.1,-0.0)">
+    <g id="laplace-operator-g-2">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -4.528px" width="36.128px" height="18.096px" role="img" focusable="false" viewBox="0 -750 1996 1000" x="0.0" y="0.0">
+        <defs>
+          <path id="laplace-operator-MJX-4-TEX-I-1D439" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"/>
+          <path id="laplace-operator-MJX-4-TEX-N-2061" d=""/>
+          <path id="laplace-operator-MJX-4-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"/>
+          <path id="laplace-operator-MJX-4-TEX-I-1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"/>
+          <path id="laplace-operator-MJX-4-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math" data-semantic-type="appl" data-semantic-role="simple function" data-semantic-annotation="clearspeak:simple" data-semantic-id="6" data-semantic-children="0,4" data-semantic-content="5,0" data-semantic-speech="upper F left parenthesis s right parenthesis">
+            <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="simple function" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="6" data-semantic-operator="appl" data-semantic-speech="upper F">
+              <use data-c="1D439" xlink:href="#laplace-operator-MJX-4-TEX-I-1D439"/>
+            </g>
+            <g data-mml-node="mo" data-semantic-type="punctuation" data-semantic-role="application" data-semantic-id="5" data-semantic-parent="6" data-semantic-added="true" data-semantic-operator="appl" data-semantic-speech="of" transform="translate(749,0)">
+              <use data-c="2061" xlink:href="#laplace-operator-MJX-4-TEX-N-2061"/>
+            </g>
+            <g data-mml-node="mrow" data-semantic-type="fenced" data-semantic-role="leftright" data-semantic-id="4" data-semantic-children="2" data-semantic-content="1,3" data-semantic-parent="6" data-semantic-speech="left parenthesis s right parenthesis" transform="translate(749,0)">
+              <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="open" data-semantic-id="1" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="left parenthesis">
+                <use data-c="28" xlink:href="#laplace-operator-MJX-4-TEX-N-28"/>
+              </g>
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="2" data-semantic-parent="4" data-semantic-speech="s" transform="translate(389,0)">
+                <use data-c="1D460" xlink:href="#laplace-operator-MJX-4-TEX-I-1D460"/>
+              </g>
+              <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="close" data-semantic-id="3" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="right parenthesis" transform="translate(858,0)">
+                <use data-c="29" xlink:href="#laplace-operator-MJX-4-TEX-N-29"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <line id="laplace-operator-line-0" x1="40.0" y1="68.0" x2="121.6" y2="68.0" stroke="black" stroke-width="2" fill="none" marker-end="url(#laplace-operator-arrow-head-end-2_None_24_60-black)"/>
+  <line id="laplace-operator-line-1" x1="208.0" y1="68.0" x2="293.6" y2="68.0" stroke="black" stroke-width="2" fill="none" marker-end="url(#laplace-operator-arrow-head-end-2_None_24_60-black)"/>
+</svg>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Applications to Initial Value Problems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Elementary Ordinary Differential Equations">
+<meta property="book:author" content="Dhruba R. Adhikari">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Elementary Ordinary Differential Equations</span> <span class="subtitle">Methods and Applications</span></a></h1>
+<p class="byline">Dhruba R. Adhikari</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-5-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction and Preliminaries</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-2.html" class="internal"><span class="codenumber">2</span> <span class="title">First Order Differential Equations</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Second and Higher Order Linear Differential Equations and Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-3-5.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Forced Oscillations and Resonance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Method of Series Solutions</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-5.html" class="internal"><span class="codenumber">5</span> <span class="title">The Laplace Transform and Applications</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-1.html#subsec-5-1-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">When does the Laplace transform exist?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-1.html#subsec-5-1-5" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Inverse Laplace transform</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-1.html#exercises-5-1" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Applications to Initial Value Problems</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-2.html#exercises-5-2" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-7.html" class="internal"><span class="codenumber">6</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-7-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Differentiation Under the Integral</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="partial-fraction-decomposition.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Partial Fraction Decomposition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-5-2">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applications to Initial Value Problems</span>
+</h2>
+<div class="para" id="sec-5-2-2">As point out earlier in <a href="sec-5-1.html" class="internal" title="Section 5.1: The Laplace Transform">Section 5.1</a>, we will need to convert a linear initial value problem into an algebraic equation using the Laplace transform. After solving the equation in the <span class="process-math">\(s-\)</span>domain for the Laplace transform of the solution function, we then apply the inverse Laplace transform operator <span class="process-math">\(\mathscr{L}^{-1}\)</span> to return to the <span class="process-math">\(t-\)</span>domain and obtain the solution of the initial value problem. For these steps, we will need the Laplace transform of derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-5-2-3">
+<div class="para">Suppose that <span class="process-math">\(y(t)\)</span> is continuous on <span class="process-math">\([0,\infty)\)</span> and of exponential order as <span class="process-math">\(t\to\infty.\)</span> Then there exists constants <span class="process-math">\(\alpha\text{,}\)</span> <span class="process-math">\(M&gt;0\)</span> and <span class="process-math">\(t_0&gt;0\)</span> such that</div>
+<div class="displaymath process-math" id="sec-5-2-3-7">
+\begin{equation*}
+|y(t)| \le M e^{\alpha t}\quad \text{for all } t\ge t_0.
+\end{equation*}
+</div>
+<div class="para">The number <span class="process-math">\(\alpha\)</span> is referred to as an <em class="emphasis"><dfn class="terminology">exponential order</dfn></em> of <span class="process-math">\(y\text{.}\)</span> Then, for <span class="process-math">\(s&gt; \alpha,\)</span> we have</div>
+<div class="displaymath process-math" id="sec-5-2-3-12">
+\begin{equation*}
+|y(t) e^{-st}|\le M e^{-(s-\alpha)t} \quad \text{for all }t\ge t_0,
+\end{equation*}
+</div>
+<div class="para">and consequently,</div>
+<div class="displaymath process-math" id="sec-5-2-3-13">
+\begin{equation*}
+\lim\limits_{t\to\infty}y(t) e^{-st} =0\quad \text{for }s&gt;\alpha.
+\end{equation*}
+</div>
+<div class="para">Suppose, further, that <span class="process-math">\(y'\)</span> is piecewise continuous on <span class="process-math">\([0,\infty).\)</span> Then, using integration by parts, we have</div>
+<div class="displaymath process-math" id="sec-5-2-3-16">
+\begin{align*}
+\mathscr{L}\{y'(t)\} \amp = \int_0^{\infty} e^{-st} y'(t) \, dt \\
+\amp = \left[ e^{-st} y(t) \right]_0^{\infty} + s \int_0^{\infty} e^{-st} y(t) \, dt\\
+\amp =  -y(0) + s\mathscr{L}\{y(t)\}\\
+\amp = sY(s) - y(0)
+\end{align*}
+</div>
+<div class="para">for <span class="process-math">\(s&gt;\alpha.\)</span> Thus,</div>
+<div class="displaymath process-math" id="eq-5-2-1">
+\begin{equation}
+\boxed{
+\mathscr{L}\{y'(t)\} = sY(s) - y(0).}\tag{5.2.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-5-2-4">
+<div class="para">We extend the above idea to higher order derivatives. For instance, suppose that <span class="process-math">\(y(t)\)</span> and <span class="process-math">\(y'(t)\)</span> are continuous and of exponential order. If <span class="process-math">\(y''(t)\)</span> exists and is piecewise continuous on <span class="process-math">\([0, \infty),\)</span> then applying the formula (<a href="sec-5-2.html#eq-5-2-1" class="xref" data-knowl="./knowl/xref/eq-5-2-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.1">(5.2.1)</a>) first to <span class="process-math">\(z'(t)\)</span> with <span class="process-math">\(z(t) = y'(t)\)</span> and then to <span class="process-math">\(y'(t)\text{,}\)</span> we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-5-2-1.html" id="sec-5-2-4-9">
+\begin{align*}
+\mathscr{L}\{y''(t)\}\amp =\mathscr{L}\{z'(t)\} \\
+\amp = sZ(s) - z(0) \\
+\amp= s\mathscr{L}\{y'(t)\}- y'(0)  \\
+\amp = s(sY(s) - y(0)) - y'(0) \\
+\amp   =s^2Y(s) - sy(0)-y'(0),
+\end{align*}
+</div>
+<div class="para">i.e.,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-5-2-1.html" id="eq-5-2-2">
+\begin{equation}
+\boxed{\mathscr{L}\{y''(t)\} = s^2Y(s) - sy(0)-y'(0).}\tag{5.2.2}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-5-2-5">Applying these ideas repeatedly to higher order derivatives, we obtain the following theorem whose proof is omitted.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-5-2-1"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(Laplace transform of derivatives).</span>
+</h3>
+<div class="para logical" id="thm-5-2-1-2">
+<div class="para">Let <span class="process-math">\(n\ge 1\)</span> be a positive integer. If <span class="process-math">\(y, y', \ldots, y^{(n-1)}\)</span> are continuous on <span class="process-math">\([0, \infty)\)</span> and of exponential order as <span class="process-math">\(t\to\infty\)</span> and if <span class="process-math">\(y^{(n)}(t)\)</span> is piecewise continuous on <span class="process-math">\([0, \infty)\)</span> and of exponential order as <span class="process-math">\(t\to\infty,\)</span> then</div>
+<div class="displaymath process-math" id="thm-5-2-1-2-8">
+\begin{equation*}
+\mathscr{L}\{y^{(n)}(t)\} = s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(Y(s) = \mathscr{L}\{y(t)\}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-5-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.2.1: (Laplace transform of derivatives)"><a href="#thm-5-2-1" title="Copy heading and permalink for Theorem 5.2.1: (Laplace transform of derivatives)" aria-label="Copy heading and permalink for Theorem 5.2.1: (Laplace transform of derivatives)">🔗</a></div>
+</article>
+<div class="para logical" id="sec-5-2-7">
+<div class="para">
+<a href="sec-5-2.html#thm-5-2-1" class="xref" data-knowl="./knowl/xref/thm-5-2-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.2.1: (Laplace transform of derivatives)">Theorem 5.2.1</a> presents how <span class="process-math">\(y(0),y'(0), \dots, y^{(n-1)}(0)\)</span> naturally arise, reflecting the initial conditions of an <span class="process-math">\(n\)</span>-th order linear initial value problem and indicating the potential use of the Laplace transform to covert a linear differential equation with constant coefficients to an algebraic equation with no derivatives of the Laplace transform of the solution variable. Specifically, consider the linear initial value problem of the form:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/partial-fraction-decomposition.html" id="eq-5-2-3">
+\begin{equation}
+\begin{cases}
+&amp;a_n y^{(n)} + a_{n-1}y^{(n-1)}+ \cdots+a_1y'+a_0 y = f(t),\\
+&amp;y(0) = y_0, \dots, y^{(n-1)}(0)= y_{n-1}.
+\end{cases}\tag{5.2.3}
+\end{equation}
+</div>
+<div class="para">Applying <a href="sec-5-2.html#thm-5-2-1" class="xref" data-knowl="./knowl/xref/thm-5-2-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.2.1: (Laplace transform of derivatives)">Theorem 5.2.1</a> in conjunction with the linearity of <span class="process-math">\(\mathscr{L}\text{,}\)</span> the initial value problem in <a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a> gives rise to the following algebraic equation in the <span class="process-math">\(s-\)</span>domain:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/partial-fraction-decomposition.html" id="eq-5-2-4">
+\begin{equation}
+\tag{5.2.4}
+\end{equation}
+</div>
+<div class="para">which takes the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/partial-fraction-decomposition.html" id="eq-5-2-5">
+\begin{equation}
+p(s)Y(s)= q(s) +F(s),\tag{5.2.5}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(p(s) = a_ns^n+a_{n-1}s^{n-1} + \cdots+ a_1s+a_0\)</span> and <span class="process-math">\(q(s)\)</span> is a polynomial in <span class="process-math">\(s\)</span> obtained from all the remaining terms on the left side of the equation <a href="sec-5-2.html#eq-5-2-5" class="xref" data-knowl="./knowl/xref/eq-5-2-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.5">(5.2.5)</a>. It then follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/partial-fraction-decomposition.html" id="eq-5-2-6">
+\begin{equation}
+Y(s)= \frac{q(s)}{p(s)} +\frac{F(s)}{p(s)}.\tag{5.2.6}
+\end{equation}
+</div>
+<div class="para">The solution <span class="process-math">\(y(t)\)</span> to the initial value problem (<a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a>) is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/partial-fraction-decomposition.html" id="eq-5-2-7">
+\begin{equation}
+y(t) = \mathscr{L}^{-1}\{Y(s)\} 
+=\mathscr{L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} +\mathscr{L}^{-1}\left\{\frac{F(s)}{p(s)}\right\}.\tag{5.2.7}
+\end{equation}
+</div>
+<div class="para">To find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/partial-fraction-decomposition.html" id="sec-5-2-7-19">
+\begin{equation*}
+\mathscr{L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} \quad\text{and}\quad\mathscr{L}^{-1}\left\{\frac{F(s)}{p(s)}\right\},
+\end{equation*}
+</div>
+<div class="para">we typically use partial fraction decomposition of <span class="process-math">\({q(s)}/{p(s)}\)</span> and <span class="process-math">\({F(s)}/{p(s)}\)</span> and then use appropriate inverse Laplace transforms term by term. For more details on the techniques of partial fraction decomposition, see Appendix <a href="partial-fraction-decomposition.html" class="internal" title="Section 6.2: Partial Fraction Decomposition">Section 6.2</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-5-2-8">In principle, one should verify that the equation <a href="sec-5-2.html#eq-5-2-7" class="xref" data-knowl="./knowl/xref/eq-5-2-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.7">(5.2.7)</a> satisfies the initial value problem <a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a> by verifying that <span class="process-math">\(y(t)\)</span> solves the differential equation and satisfies the initial conditions, especially important when the differential equation is defined also for <span class="process-math">\(t &lt; 0\)</span> since the Laplace transform only makes sense to functions on <span class="process-math">\([0, \infty)\text{.}\)</span> However, this verification is unnecessary when <span class="process-math">\(f(t)\)</span> is continuous on an open interval containing <span class="process-math">\(t = 0\text{,}\)</span> as the initial value problem <a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a> is guaranteed to have a unique local solution.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-5-2-9">In the following examples, we apply the Laplace transform method to solve initial value problems.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-5-2-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="example example-like knowl__content"><div class="displaymath process-math" id="ex-5-2-1-1">
+\begin{equation*}
+y'-y= 2\cos(3t), \quad y(0) = 1.
+\end{equation*}
+</div>
+<details id="ex-5-2-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="ex-5-2-1-2-1">
+<span class="process-math">\(y(t)=\frac{6}{5}e^t-\frac{1}{5}\cos(3t)+\frac{3}{5}\sin(3t)\)</span> on <span class="process-math">\((-\infty, \infty)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 5.2.2.1"><a href="#ex-5-2-1-2" title="Copy heading and permalink for Answer 5.2.2.1" aria-label="Copy heading and permalink for Answer 5.2.2.1">🔗</a></div>
+</div></details>
+<details id="ex-5-2-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-5-2-1-3-1">
+<div class="para">Applying the Laplace transform to both sides of the equation, we have</div>
+<div class="displaymath process-math" id="ex-5-2-1-3-1-1">
+\begin{equation*}
+\begin{aligned}
+\mathscr{L}\{y'\} - \mathscr{L}\{y\} &amp;= 2\mathscr{L}\{\cos(3t)\} \\
+(sY(s) - y(0)) - Y(s) &amp;= 2\cdot \frac{s}{s^2 + 9} \\
+(s-1)Y(s) &amp;= 1 + \frac{2s}{s^2 + 9} \\
+Y(s) &amp;= \frac{1}{s-1} + \frac{2s}{(s-1)(s^2 + 9)}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">To find the inverse Laplace transform of <span class="process-math">\({2s}/{((s-1)(s^2 + 9))}\text{,}\)</span> we use partial fraction decomposition to write</div>
+<div class="displaymath process-math" id="ex-5-2-1-3-1-3">
+\begin{equation*}
+\frac{2s}{(s-1)(s^2 + 9)} = \frac{A}{s-1} + \frac{Bs + C}{s^2 + 9}.
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(A, B, C\text{,}\)</span> we have <span class="process-math">\(A = 1/5, B = -1/5, C = 9/5.\)</span> Thus,</div>
+<div class="displaymath process-math" id="ex-5-2-1-3-1-6">
+\begin{equation*}
+\begin{aligned}
+Y(s) &amp;= \frac{1}{s-1} + \frac{1/5}{s-1} + \frac{-1/5 s + 9  /5}{s^2 + 9} \\
+&amp;= \frac{6/5}{s-1} + \frac{-1/5 s + 9/5}{s^2 + 9}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Applying the inverse Laplace transform term by term, we have</div>
+<div class="displaymath process-math" id="ex-5-2-1-3-1-7">
+\begin{equation*}
+\begin{aligned}y(t) &amp;= \mathscr{L}^{-1}\left\{\frac{6/5}{s-1}\right\} + \mathscr{L}^{-1}\left\{\frac{-1/5 s + 9/5}{s^2 + 9}\right\} \\
+&amp;= \frac{6}{5}e^t - \frac{1}{5}\cos(3t) + \frac{3}{5}\sin(3t).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.2.2.1"><a href="#ex-5-2-1-3" title="Copy heading and permalink for Solution 5.2.2.1" aria-label="Copy heading and permalink for Solution 5.2.2.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.2.2"><a href="#ex-5-2-1" title="Copy heading and permalink for Example 5.2.2" aria-label="Copy heading and permalink for Example 5.2.2">🔗</a></div>
+</article></details>
+<details id="ex-5-2-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="ex-5-2-2-1">
+<div class="para">Solve the initial value problem using the Laplace transform:</div>
+<div class="displaymath process-math" id="ex-5-2-2-1-1">
+\begin{equation*}
+y''-5y'+4y= t, \quad y(0) = 1, y'(0) = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-5-2-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="ex-5-2-2-2-1">
+<span class="process-math">\(y(t)=e^t-\dfrac{5}{16}e^{4t}+\dfrac14 t+\dfrac{5}{16}\)</span> on <span class="process-math">\((-\infty, \infty)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 5.2.3.1"><a href="#ex-5-2-2-2" title="Copy heading and permalink for Answer 5.2.3.1" aria-label="Copy heading and permalink for Answer 5.2.3.1">🔗</a></div>
+</div></details>
+<details id="ex-5-2-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="displaymath process-math" id="ex-5-2-2-3-1">
+\begin{equation*}
+\begin{aligned}&amp;\mathscr{L}\{y''\} - 5\mathscr{L}\{y'\} + 4\mathscr{L}\{y\} = \mathscr{L}\{t\} \\
+&amp;(s^2 Y(s) - sy(0)-y'(0)) - 5(sY(s) - y(0)) + 4Y(s) = \frac{1}{s^2} \\
+&amp;(s^2 - 5s + 4)Y(s) = \frac{1}{s^2} + s - 5 \\
+&amp;Y(s) = \frac{1}{s^2(s-1)(s-4)} + \frac{s-5}{(s-1)(s-4)}=\frac{s^3-5s^2+1}{s^2(s-1)(s-4)}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para" id="ex-5-2-2-3-2">Decompose into partial fractions:<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-5-2-2-3-3">
+\begin{equation*}
+\frac{s^3-5s^2+1}{s^2(s-1)(s-4)}
+=\frac{A}{s}+\frac{B}{s^2}+\frac{C}{s-1}+\frac{D}{s-4}.
+\end{equation*}
+</div>
+<div class="para" id="ex-5-2-2-3-4">Solving for the constants gives<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-5-2-2-3-5">
+\begin{equation*}
+A=\frac{5}{16},\qquad B=\frac{1}{4},\qquad C=1,\qquad D=-\frac{5}{16}.
+\end{equation*}
+</div>
+<div class="para" id="ex-5-2-2-3-6">Hence<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-5-2-2-3-7">
+\begin{equation*}
+Y(s)=\frac{5}{16s}+\frac{1}{4s^2}+\frac{1}{s-1}-\frac{5}{16(s-4)}.
+\end{equation*}
+</div>
+<div class="para" id="ex-5-2-2-3-8">Now apply the inverse Laplace transform:<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-5-2-2-3-9">
+<div class="para">Therefore,</div>
+<div class="displaymath process-math" id="ex-5-2-2-3-9-1">
+\begin{equation*}
+\begin{aligned}
+y(t)\amp =\mathscr{L}^{-1}\left\{\frac{5}{16s}\right\}+
+\mathscr{L}^{-1}\left\{\frac{1}{4s^2}\right\}\\
+\amp +\mathscr{L}^{-1}\left\{\frac{1}{s-1}\right\}
+-\mathscr{L}^{-1}\left\{\frac{5}{16(s-4)}\right\}\\
+\amp =\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">We can show that</div>
+<div class="displaymath process-math" id="ex-5-2-2-3-9-2">
+\begin{equation*}
+y(t)=\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t} 
+\quad \text{ on } (-\infty, \infty)  
+\end{equation*}
+</div>
+<div class="para">is the solution of  the initial value problem on by verifying that it satisfies the differential equation and the initial conditions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.2.3.1"><a href="#ex-5-2-2-3" title="Copy heading and permalink for Solution 5.2.3.1" aria-label="Copy heading and permalink for Solution 5.2.3.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.2.3"><a href="#ex-5-2-2" title="Copy heading and permalink for Example 5.2.3" aria-label="Copy heading and permalink for Example 5.2.3">🔗</a></div>
+</article></details>
+<details id="ex-5-2-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Move this to a later section.</span>
+</h3></summary>
+<article class="example example-like knowl__content"><div class="displaymath process-math" id="ex-5-2-3-2">
+\begin{equation*}
+y'' + 4y' + 5y = e^{-t}, \quad y(0) = 0, \; y'(0) = 2.
+\end{equation*}
+</div>
+<details id="ex-5-2-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-5-2-3-3-1">
+<div class="para">Applying the Laplace transform to both sides of the equation, we have</div>
+<div class="displaymath process-math" id="ex-5-2-3-3-1-1">
+\begin{equation*}
+\begin{aligned}
+&amp;\mathscr{L}\{y''\} + 4\mathscr{L}\{y'\} + 5\mathscr{L}\{y\}     = \mathscr{L}\{e^{-t}\} \\
+&amp;(s^2 Y(s) - sy(0) - y'(0)) + 4          (sY(s) - y(0)) + 5Y(s) = \frac{1}{s+1} \\
+&amp;(s^2 + 4s + 5)Y(s) = \frac{1}{s+1} + 2 \\
+&amp;Y(s) = \frac{1}{(s+1)(s^2 + 4s + 5)} + \frac{2}{s^2 + 4s + 5}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">To find the inverse Laplace transform of <span class="process-math">\({1}/{((s+1)(s^2 + 4s + 5))}\text{,}\)</span> we use partial fraction decomposition to write</div>
+<div class="displaymath process-math" id="ex-5-2-3-3-1-3">
+\begin{equation*}
+\frac{1}{(s+1)(s^2 + 4s + 5)} = \frac{A}{s+1} + \frac{Bs + C}{s^2 + 4s + 5}.
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(A, B, C\text{,}\)</span> we have <span class="process-math">\(A = 1/5, B = -1/5, C = 1/5.\)</span> Thus,</div>
+<div class="displaymath process-math" id="ex-5-2-3-3-1-6">
+\begin{equation*}
+\begin{aligned}Y(s) &amp;= \frac{1/5}{s+1} + \frac{-1/5 s + 1/5}{s^2 + 4s + 5} + \frac{2}{s^2 + 4s + 5} \\
+&amp;= \frac{1/5}{s+1} + \frac{-1/5 s + 11/5}{s^2 + 4s + 5}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Applying the inverse Laplace transform term by term, we have</div>
+<div class="displaymath process-math" id="ex-5-2-3-3-1-7">
+\begin{equation*}
+\begin{aligned}y(t) &amp;= \mathscr{L}^{-1}\left\{\frac{1/5}{s+1}\right\} + \mathscr{L}^{-1}\left\{\frac{-1/5 s + 11/5}{s^2 + 4s + 5}\right\} \\
+&amp;= \frac{1}{5}e^{-t} - \frac{1}{5}e^{-2t}\cos(t) + \frac{9}{5}e^{-2t}\sin(t).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.2.4.1"><a href="#ex-5-2-3-3" title="Copy heading and permalink for Solution 5.2.4.1" aria-label="Copy heading and permalink for Solution 5.2.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.2.4: Move this to a later section"><a href="#ex-5-2-3" title="Copy heading and permalink for Example 5.2.4: Move this to a later section" aria-label="Copy heading and permalink for Example 5.2.4: Move this to a later section">🔗</a></div>
+</article></details>
+<div class="para" id="sec-5-2-13">The general principle for solving initial value problems by the Laplace transform method remains the same as demonstrated in the previous examples. The major effort to make is in computing the Laplace transforms of more complicated functions and finding inverse transforms of more complicated expressions. In the followings sections, we continue exploring additional methods for computing Laplace transforms and solve initial value problems that involve more complicated functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="exercises" id="exercises-5-2">
+<h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercises-5-2-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-5-2-1-1">Solve the following initial value problems using the Laplace transform method:<div class="autopermalink" data-description="Paragraph"><a href="#exercises-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-5-2-1-2">
+<ol class="lower-roman ol-marker-1" id="exercises-5-2-1-2-1">
+<li id="exercises-5-2-1-2-1-1">
+<div class="para" id="p-derived-exercises-5-2-1-2-1-1"><span class="process-math">\(\displaystyle y' - y =1, \quad y(0) = 0\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.1.i"><a href="#exercises-5-2-1-2-1-1" title="Copy heading and permalink for Item 5.2.1.i" aria-label="Copy heading and permalink for Item 5.2.1.i">🔗</a></div>
+</li>
+<li id="exercises-5-2-1-2-1-2">
+<div class="para" id="p-derived-exercises-5-2-1-2-1-2"><span class="process-math">\(\displaystyle y'-6y = e^{2t}, \quad y(0) = 1\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.1.ii"><a href="#exercises-5-2-1-2-1-2" title="Copy heading and permalink for Item 5.2.1.ii" aria-label="Copy heading and permalink for Item 5.2.1.ii">🔗</a></div>
+</li>
+<li id="exercises-5-2-1-2-1-3">
+<div class="para" id="p-derived-exercises-5-2-1-2-1-3"><span class="process-math">\(\displaystyle y'' +5y+6y = e^{2t}, \quad y(0) = 0, \; y'(0) = 0\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.1.iii"><a href="#exercises-5-2-1-2-1-3" title="Copy heading and permalink for Item 5.2.1.iii" aria-label="Copy heading and permalink for Item 5.2.1.iii">🔗</a></div>
+</li>
+<li id="exercises-5-2-1-2-1-4">
+<div class="para" id="p-derived-exercises-5-2-1-2-1-4"><span class="process-math">\(\displaystyle y'' -5y' + 6y = e^{2t}, \quad y(0) = 1, \; y'(0) = 0\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.1.iv"><a href="#exercises-5-2-1-2-1-4" title="Copy heading and permalink for Item 5.2.1.iv" aria-label="Copy heading and permalink for Item 5.2.1.iv">🔗</a></div>
+</li>
+<li id="exercises-5-2-1-2-1-5">
+<div class="para" id="p-derived-exercises-5-2-1-2-1-5"><span class="process-math">\(\displaystyle y'' + 9y = e^{2t}, \quad y(0) = 0, \; y'(0) = 1\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.1.v"><a href="#exercises-5-2-1-2-1-5" title="Copy heading and permalink for Item 5.2.1.v" aria-label="Copy heading and permalink for Item 5.2.1.v">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-5-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.2.1"><a href="#exercises-5-2-1" title="Copy heading and permalink for Exercise 5.2.1" aria-label="Copy heading and permalink for Exercise 5.2.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-5-2-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-5-2-2-1">Solve the following initial value problems using the Laplace transform method:<div class="autopermalink" data-description="Paragraph"><a href="#exercises-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-5-2-2-2">
+<ol class="lower-roman ol-marker-1" id="exercises-5-2-2-2-1">
+<li id="exercises-5-2-2-2-1-1">
+<div class="para" id="p-derived-exercises-5-2-2-2-1-1"><span class="process-math">\(\displaystyle y'+y = e^{3t}\sin(2t), \quad y(0) = 0\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.2.i"><a href="#exercises-5-2-2-2-1-1" title="Copy heading and permalink for Item 5.2.2.i" aria-label="Copy heading and permalink for Item 5.2.2.i">🔗</a></div>
+</li>
+<li id="exercises-5-2-2-2-1-2">
+<div class="para" id="p-derived-exercises-5-2-2-2-1-2"><span class="process-math">\(\displaystyle y''-4y'+5y = 0, \quad y(0) = 0,\; y'(0) =1\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.2.ii"><a href="#exercises-5-2-2-2-1-2" title="Copy heading and permalink for Item 5.2.2.ii" aria-label="Copy heading and permalink for Item 5.2.2.ii">🔗</a></div>
+</li>
+<li id="exercises-5-2-2-2-1-3">
+<div class="para" id="p-derived-exercises-5-2-2-2-1-3"><span class="process-math">\(\displaystyle y''-y'= e^t \sin t\quad y(0) =0,\; y'(0) =0\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.2.iii"><a href="#exercises-5-2-2-2-1-3" title="Copy heading and permalink for Item 5.2.2.iii" aria-label="Copy heading and permalink for Item 5.2.2.iii">🔗</a></div>
+</li>
+<li id="exercises-5-2-2-2-1-4">
+<div class="para" id="p-derived-exercises-5-2-2-2-1-4"><span class="process-math">\(\displaystyle y'''+2y''-y'-2y = \sin t, \quad y(0)= 0,\; y'(0)= 0,\; y''(0) =1\)</span></div>
+<div class="autopermalink" data-description="Item 5.2.2.iv"><a href="#exercises-5-2-2-2-1-4" title="Copy heading and permalink for Item 5.2.2.iv" aria-label="Copy heading and permalink for Item 5.2.2.iv">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-5-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.2.2"><a href="#exercises-5-2-2" title="Copy heading and permalink for Exercise 5.2.2" aria-label="Copy heading and permalink for Exercise 5.2.2">🔗</a></div>
+</article><div class="autopermalink" data-description="Exercises 5.2"><a href="#exercises-5-2" title="Copy heading and permalink for Exercises 5.2" aria-label="Copy heading and permalink for Exercises 5.2">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 5.2: Applications to Initial Value Problems"><a href="#sec-5-2" title="Copy heading and permalink for Section 5.2: Applications to Initial Value Problems" aria-label="Copy heading and permalink for Section 5.2: Applications to Initial Value Problems">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-5-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
