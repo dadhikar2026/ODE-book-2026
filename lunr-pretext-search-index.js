@@ -331,7 +331,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Applications to Initial Value Problems",
-  "body": " Applications to Initial Value Problems  As point out earlier in , we will need to convert a linear initial value problem into an algebraic equation using the Laplace transform. After solving the equation in the domain for the Laplace transform of the solution function, we then apply the inverse Laplace transform operator to return to the domain and obtain the solution of the initial value problem. For these steps, we will need the Laplace transform of derivatives.  Suppose that is continuous on and of exponential order as Then there exists constants , and such that The number is referred to as an exponential order of . Then, for we have and consequently, Suppose, further, that is piecewise continuous on Then, using integration by parts, we have for Thus,   We extend the above idea to higher order derivatives. For instance, suppose that and are continuous and of exponential order. If exists and is piecewise continuous on then applying the formula ( ) first to with and then to , we obtain i.e.,   Applying these ideas repeatedly to higher order derivatives, we obtain the following theorem whose proof is omitted.   (Laplace transform of derivatives)  Let be a positive integer. If are continuous on and of exponential order as and if is piecewise continuous on and of exponential order as then where .    presents how naturally arise, reflecting the initial conditions of an -th order linear initial value problem and indicating the potential use of the Laplace transform to covert a linear differential equation with constant coefficients to an algebraic equation with no derivatives of the Laplace transform of the solution variable. Specifically, consider the linear initial value problem of the form: Applying in conjunction with the linearity of , the initial value problem in gives rise to the following algebraic equation in the domain: which takes the form where and is a polynomial in obtained from all the remaining terms on the left side of the equation . It then follows that The solution to the initial value problem ( ) is given by To find we typically use partial fraction decomposition of and and then use appropriate inverse Laplace transforms term by term. For more details on the techniques of partial fraction decomposition, see Appendix .  In principle, one should verify that the equation satisfies the initial value problem  by verifying that solves the differential equation and satisfies the initial conditions, especially important when the differential equation is defined also for since the Laplace transform only makes sense to functions on . However, this verification is unnecessary when is continuous on an open interval containing , as the initial value problem is guaranteed to have a unique local solution.  In the following examples, we apply the Laplace transform method to solve initial value problems.  Solve the initial value problem using the Laplace transform:   on .    Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have      Solve the initial value problem using the Laplace transform:    on .   Applying the Laplace transform to both sides of the equation, we have  Decompose into partial fractions:   Solving for the constants gives   Hence   Now apply the inverse Laplace transform:  Therefore, We can show that is the solution of the initial value problem on by verifying that it satisfies the differential equation and the initial conditions.     Move this to a later section Solve the initial value problem using the Laplace transform:   Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have     The general principle for solving initial value problems by the Laplace transform method remains the same as demonstrated in the previous examples. The major effort to make is in computing the Laplace transforms of more complicated functions and finding inverse transforms of more complicated expressions. In the followings sections, we continue exploring additional methods for computing Laplace transforms and solve initial value problems that involve more complicated functions.    Solve the following initial value problems using the Laplace transform method:              Solve the following initial value problems using the Laplace transform method:            "
+  "body": " Applications to Initial Value Problems  As point out earlier in , we will need to convert a linear initial value problem into an algebraic equation using the Laplace transform. After solving the equation in the domain for the Laplace transform of the solution function, we then apply the inverse Laplace transform operator to return to the domain and obtain the solution of the initial value problem. For these steps, we will need the Laplace transform of derivatives.  Suppose that is continuous on and of exponential order as Then there exists constants , and such that The number is referred to as an exponential order of . Then, for we have and consequently, Suppose, further, that is piecewise continuous on Then, using integration by parts, we have for Thus,   We extend the above idea to higher order derivatives. For instance, suppose that and are continuous and of exponential order. If exists and is piecewise continuous on then applying the formula ( ) first to with and then to , we obtain i.e.,   Applying these ideas repeatedly to higher order derivatives, we obtain the following theorem whose proof is omitted.   (Laplace transform of derivatives)  Let be a positive integer. If are continuous on and of exponential order as and if is piecewise continuous on and of exponential order as then where .    presents how naturally arise, reflecting the initial conditions of an -th order linear initial value problem and indicating the potential use of the Laplace transform to covert a linear differential equation with constant coefficients to an algebraic equation with no derivatives of the Laplace transform of the solution variable. Specifically, consider the linear initial value problem of the form: Applying in conjunction with the linearity of , the initial value problem in gives rise to the following algebraic equation in the domain: which takes the form where and is a polynomial in obtained from all the remaining terms on the left side of the equation . It then follows that The solution to the initial value problem ( ) is given by To find we typically use partial fraction decomposition of and and then use appropriate inverse Laplace transforms term by term. For more details on the techniques of partial fraction decomposition, see Appendix .  In principle, one should verify that the equation satisfies the initial value problem  by verifying that solves the differential equation and satisfies the initial conditions, especially important when the differential equation is defined also for since the Laplace transform only makes sense to functions on . However, this verification is unnecessary when is continuous on an open interval containing , as the initial value problem is guaranteed to have a unique local solution.  In the following examples, we apply the Laplace transform method to solve initial value problems.  Solve the initial value problem using the Laplace transform:   on .    Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have      Solve the initial value problem using the Laplace transform:    on .   Applying the Laplace transform to both sides of the equation, we have  Decompose into partial fractions:   Solving for the constants gives   Hence   Now apply the inverse Laplace transform:  Therefore, We can show that is the solution of the initial value problem on by verifying that it satisfies the differential equation and the initial conditions.     Move this to a later section Solve the initial value problem using the Laplace transform:   Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have     The general principle for solving initial value problems by the Laplace transform method remains the same as demonstrated in the previous examples. The major effort to make is in computing the Laplace transforms of more complicated functions and finding inverse transforms of more complicated expressions. In the followings sections, we continue exploring additional methods for computing Laplace transforms and solve initial value problems that involve more complicated functions.    Solve the following initial value problems using the Laplace transform method:              Solve the following initial value problems using the Laplace transform method:            Solve the following initial value problems using the Laplace transform method:    where  where           "
 },
 {
   "id": "sec-5-2-3",
@@ -397,13 +397,67 @@ var ptx_lunr_docs = [
   "body": " Solve the following initial value problems using the Laplace transform method:          "
 },
 {
+  "id": "exercises-5-2-3",
+  "level": "2",
+  "url": "sec-5-2.html#exercises-5-2-3",
+  "type": "Exercise",
+  "number": "5.2.3",
+  "title": "",
+  "body": " Solve the following initial value problems using the Laplace transform method:    where  where         "
+},
+{
+  "id": "sec-5-3",
+  "level": "1",
+  "url": "sec-5-3.html",
+  "type": "Section",
+  "number": "5.3",
+  "title": "Derivatives and Integrals of Laplace Transforms",
+  "body": " Derivatives and Integrals of Laplace Transforms  The evaluation of Laplace transforms and inverse Laplace transforms can often be carried out efficiently by applying differentiation or integration techniques to certain Laplace transforms.  Let be a piecewise continuous function on and of exponential order as . Using the Leibniz rule from in for differentiating under the integral sign, we have Thus, we have In a similar fashion, we obtain   Repeating this procedure inductively we obtain   for all positive integers .    Find the Laplace transform .   We have      Find the Laplace transform .   We have    Let us discuss about what happens when you integrate a Laplace transform. Let be a piecewise continuous function of exponential order as . Suppose is a real number such that exists for all To compute , let so that Then, in view of ( ), we obtain Consequently, we have Here, we have considered only those for which the Laplace transform of satisfies the limiting property that as Thus, we have Moreover, we can use to determine the existence of the Laplace transform of For instance, if the integral on the right-hand side of diverges for all then the Laplace transform of does not exist for any   "
+},
+{
+  "id": "sec-5-3-6",
+  "level": "2",
+  "url": "sec-5-3.html#sec-5-3-6",
+  "type": "Example",
+  "number": "5.3.1",
+  "title": "",
+  "body": "  Find the Laplace transform .   We have   "
+},
+{
+  "id": "sec-5-3-7",
+  "level": "2",
+  "url": "sec-5-3.html#sec-5-3-7",
+  "type": "Example",
+  "number": "5.3.2",
+  "title": "",
+  "body": "  Find the Laplace transform .   We have   "
+},
+{
   "id": "sec-7-1",
   "level": "1",
   "url": "sec-7-1.html",
   "type": "Section",
   "number": "6.1",
   "title": "Differentiation Under the Integral",
-  "body": " Differentiation Under the Integral   Something about differentiating under the integral goes here yes. Testing   "
+  "body": " Differentiation Under the Integral   Something about differentiating under the integral goes here yes. Testing   Leibniz Rule   Let be a function on a rectangle such that both and are continuous on Then       Leibniz Rule for Improper Integrals   Let be a function on a rectangle such that, for each in both and have improper integrals on and such that, for each in  is differentiable in for each in Suppose, further, that there exists a function on such that for all and for all in and such that is convergent. Then      "
+},
+{
+  "id": "thm-Leibnitz-for-Integrals",
+  "level": "2",
+  "url": "sec-7-1.html#thm-Leibnitz-for-Integrals",
+  "type": "Theorem",
+  "number": "6.1.1",
+  "title": "Leibniz Rule.",
+  "body": " Leibniz Rule   Let be a function on a rectangle such that both and are continuous on Then     "
+},
+{
+  "id": "thm-Leibnitz-Rule-Improper-Integrals",
+  "level": "2",
+  "url": "sec-7-1.html#thm-Leibnitz-Rule-Improper-Integrals",
+  "type": "Theorem",
+  "number": "6.1.2",
+  "title": "Leibniz Rule for Improper Integrals.",
+  "body": " Leibniz Rule for Improper Integrals   Let be a function on a rectangle such that, for each in both and have improper integrals on and such that, for each in  is differentiable in for each in Suppose, further, that there exists a function on such that for all and for all in and such that is convergent. Then    "
 },
 {
   "id": "partial-fraction-decomposition",
