@@ -101,7 +101,7 @@
 then <men xml:id="eq-5-1-4">
     \lim\limits_{\varepsilon\to 0} \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, g(t) =    \lim\limits_{\varepsilon\to 0}\frac{1}{\varepsilon} \int_a^{a+\varepsilon}  g(t) \, dt = \lim\limits_{\varepsilon\to 0} g(a+\varepsilon) = g(a)
 </men> 
-by using the l’Höpital’s rule and the continuity of <m>g</m> at <m>t=a</m> from right.
+by using the l'Höpital's rule and the continuity of <m>g</m> at <m>t=a</m> from right.
 			</p>
 
       <p>
@@ -164,17 +164,16 @@ when <m>a=0</m> we have <me>\mathscr{L}\{\delta(t)\} = 1.</me>
 </introduction>
 
 
-
  <definition xml:id="def-5-1" alt="Definition of the Laplace transform">
   <title>(Laplace transform)</title>
   <statement>
-   <p>
-				 Let <m>f:[0, \infty)\to\mathbb R</m> be a function. The <term>Laplace transform</term> of <m>f</m> is a function <m>F(s)</m>, denoted commonly by <m>\mathscr{L}\{f(t)\}</m>, defined by <me>F(s):=\int_0^\infty f(t)\, e^{-st} \, dt</me> for those <m>s</m> for which the integral converges.
-			</p>
+    <p>
+		Let <m>f:[0, \infty)\to\mathbb R</m> be a function. The <term>Laplace transform</term> of <m>f</m> is a function <m>F(s)</m>, 
+    denoted commonly by <m>\mathscr{L}\{f(t)\}</m>, defined by <me>F(s):=\int_0^\infty f(t)\, e^{-st} \, dt</me> for those <m>s</m> 
+    for which the integral converges.
+		</p>
   </statement>
  </definition>
-
-
 
 			<p>
 				The symbol <m>\mathscr{L}</m> represents a transformation that maps 
@@ -182,6 +181,7 @@ when <m>a=0</m> we have <me>\mathscr{L}\{\delta(t)\} = 1.</me>
         to an output function <m>F</m> of the variable <m>s</m> 
         (usually involving frequency when <m>s</m> is a complex number). 
         This action of the transformation is depicted in the figure below.
+        </p>
 		
     <figure xml:id="fig-laplace-operator">
   <caption>The Laplace transform <m>\mathscr{L}</m> as an operator mapping <m>f(t)</m> to <m>F(s)</m>.</caption>
@@ -206,15 +206,11 @@ when <m>a=0</m> we have <me>\mathscr{L}\{\delta(t)\} = 1.</me>
     </prefigure>
   </image>
 </figure>
- </p>
-
 
 
 <p>
 				The variable <m>s</m> in the definition of the Laplace transform can, in general, be a complex variable; however, in the current chapter, we will restrict <m>s</m> to a real variable.
 			</p>
-
-
 
       <p>
         The Laplace transform is a powerful tool for solving initial value problems 
@@ -471,7 +467,6 @@ Thus, <me>\boxed{\mathscr{L} \{\mathscr{U}(t-a)\} = \frac{e^{-as}}{s} \quad
 			</p>
   </solution>
 </example>
-
 
 <p>
 				To model situations in applications where an external force or 
