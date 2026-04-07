@@ -73,7 +73,7 @@
     Suppose <m>s_0</m> is a real number such that <m>F(s)</m> exists for all
      <m>s&gt;s_0.</m> To compute <m>\mathscr{L}\{f(t)/t\}</m>, 
      let <m>g(t) = f(t)/t</m> so that <m>t g(t) =f(t).</m> 
-     Then, in view of (<xref ref="laplace-derivative" />), we obtain
+     Then, in view of <xref ref="laplace-derivative" />, we obtain
     <me>
       G'(s) = -F(s).
     </me>
