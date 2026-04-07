@@ -9,9 +9,9 @@
         <xref ref="sec-3-5" /> of 
         <xref ref="ch-3" />, 
         described by the equation 
-        <men xml:id="eq-5-1-1">
+        <me xml:id="eq-5-1-1">
     y''(t) + \omega^2 y(t) = f(t); \quad  y(0) = 0,\; y'(0)= 0,
-</men> where <m>f(t)</m> is an impulsive force. At <m>t =0,</m> the mass is at rest at its equilibrium position. At time <m>t = a</m>, the mass experiences a sharp, brief downward impact, such as a hammer strike, modeled by an the impulsive force <m>f(t) .</m> An impulsive force of this nature is commonly modeled by using an idealized mathematical object, called the <term><em>Dirac delta</em></term> <q>function</q> denoted by <m>\delta (t-a),</m> which is characterized by the following properties:
+</me> where <m>f(t)</m> is an impulsive force. At <m>t =0,</m> the mass is at rest at its equilibrium position. At time <m>t = a</m>, the mass experiences a sharp, brief downward impact, such as a hammer strike, modeled by an the impulsive force <m>f(t) .</m> An impulsive force of this nature is commonly modeled by using an idealized mathematical object, called the <term><em>Dirac delta</em></term> <q>function</q> denoted by <m>\delta (t-a),</m> which is characterized by the following properties:
 			</p>
 
 		<p><ol>
@@ -130,14 +130,14 @@ within integrals, as described by the property (ii) which is motivated by
       <p>
 				By using the property (ii), we find that for all 
         <m>s</m> in <m>(-\infty,  \infty),</m> we have 
-        <men xml:id="eq-5-1-7">
+        <me xml:id="eq-5-1-7">
     \int_{-\infty}^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
-</men> for all real numbers <m>s.</m> From this point onward, we will focus on the case
- where <m>a \ge 0</m> and <m>t \ge 0</m>. Under this assumption, <xref ref="eq-5-1-7" />
- reduces to <men xml:id="eq-5-1-8">
+</me> for all real numbers <m>s.</m> From this point onward, we will focus on the case
+ where <m>a \ge 0</m> and <m>t \ge 0</m>. Under this assumption, <xref ref="eq-5-1-7"/>
+ reduces to <me xml:id="eq-5-1-8">
      \int_0^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
-</men> for all real values of <m>s</m>. This integral is known as 
-the <em>Laplace transform</em> (see <xref ref="def-5-1" />)
+</me> for all real values of <m>s</m>. This integral is known as 
+the <em>Laplace transform</em> (see <xref ref="def-5-1"/>)
 of the Dirac delta function <m>\delta(t - a)</m>, denoted by 
 <me>\mathscr{L}\{\delta(t - a)\} = e^{-as}.</me> In particular, 
 when <m>a=0</m> we have <me>\mathscr{L}\{\delta(t)\} = 1.</me>
@@ -149,19 +149,19 @@ when <m>a=0</m> we have <me>\mathscr{L}\{\delta(t)\} = 1.</me>
         initial value problems such as <xref ref="eq-5-1-1" />
          in which <m>f(t)</m> is either discontinuous or involves the Dirac delta 
          functions.The methods of undetermined coefficients and 
-         variation of parameters are not relevant to <xref ref="eq-5-1-1" />
+         variation of parameters are not relevant to <xref ref="eq-5-1-1"/>
          with <m>f(t) = \delta (t-a)</m> because the calculus of distributions 
          is beyond the scope of this book. In particular, 
          we do not have a meaning of <m>y''</m> in this case.
 			</p>
 
 			<p>
-				Being motivated from <xref ref="eq-5-1-8" />
+				Being motivated from <xref ref="eq-5-1-8"/>
         with the Dirac delta function <m>\delta(t - a)</m> in the integrand, 
         we first define the <em>Laplace transform</em> of classical functions defined on 
         <m>[0, \infty).</m>
 			</p>
-</introduction>
+
 
 
  <definition xml:id="def-5-1" alt="Definition of the Laplace transform">
@@ -536,7 +536,7 @@ This function can be expressed in terms of the unit step function as <me>g(t) = 
       </md>
     </p>
   </proof>
-
+</introduction>
 <subsection xml:id="subsec-5-1-4">
   <title>When does the Laplace transform exist?</title>
 <p>
