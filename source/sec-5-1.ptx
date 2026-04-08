@@ -15,14 +15,14 @@
     </p>
 
     <p>
-      <ol>
+      <ol marker="i.">
         <li>
           <p>
             <m>\delta(t - a) = 0</m> for all <m>t \ne a</m>; and
           </p>
         </li>
 
-        <li>
+        <li xml:id="item-5-1-2">
           <p>
             <m>\int_{-\infty}^\infty \delta(t - a)\, g(t)\, dt = g(a)</m> for any function <m>g</m> continuous on an open interval containing <m>a</m>.
           </p>
@@ -123,7 +123,7 @@
       Instead, the limit is understood as a generalized function, 
       or a distribution, because of the way it operates primarily 
       through its action on other functions within integrals, 
-      as described by the property (ii) which is motivated by 
+      as described by the property ii. which is motivated by 
       <xref ref="eq-5-1-6" />.
     </p>
 
@@ -219,11 +219,11 @@
 
     <example xml:id="ex-5-1-1">
       <p>
-        Compute <m>\mathscr{L}\{e^{at}\}</m> for <m>a\ne 0.</m>
+        Compute <m>\mathscr{L}\{e^{at}\}</m> for a fixed real number <m>a.</m>
       </p>
 
       <solution>
-        <p>
+        <statement>
           We have <!-- <m>\mathscr{L}\{e^{at}\} = \int_0^\infty e^{at} e^{-st} dt = \int_0^\infty e^{(a-s)t} dt.</m>  -->
           <md>
             <mrow>  \mathscr{L} \{e^{at}\} =\int_0^\infty e^{at} \,e^{-st}  \, dt\amp = \lim_{h\to\infty}\int_0^h e^{(a-s)t} \, dt</mrow>
@@ -235,7 +235,7 @@
           <md>
             \boxed{\mathscr{L} \{e^{at}\} = \frac{1}{s-a} \text{ for } s > a.}
           </md>
-        </p>
+        </statement>
       </solution>
     </example>
 
@@ -245,7 +245,7 @@
       </p>
 
       <solution>
-        <p>
+        <statement>
           We have
           <md>
             <mrow>  \mathscr{L} \{1\} \amp = \int_0^\infty e^{-st} \, dt</mrow>
@@ -257,7 +257,7 @@
           <md>
             \boxed{\mathscr{L} \{1\} = \frac{1}{s} \text{ for } s > 0.}
           </md>
-        </p>
+        </statement>
       </solution>
     </example>
 
@@ -376,7 +376,7 @@
       <title>Shifting on the <m>s</m>-axis</title>
 
       <p>
-        Compute <m>\mathscr{L}\{e^{at} f(t)\}</m> for real numbers <m>a</m>.
+        Compute <m>\mathscr{L}\{e^{at} f(t)\}</m> for each fixed real number <m>a</m>.
       </p>
 
       <solution>
@@ -402,54 +402,24 @@
       </me>
       The unit step function with the jump discontinuity at <m>t= a</m> is given by
       <me>
-        \mathscr{U}(t-a) = \begin{cases} 0 &amp; \text{if } t &lt; a, \\ 1 &amp; \text{if } t \ge a, \end{cases}
-      </me>
-      and its graph is shown below.
+        \mathscr{U}(t-a) = \begin{cases} 0 &amp; \text{if } t &lt; a, \\ 1 &amp; \text{if } t \ge a, \end{cases}.
+    </me>
+     The graph of  the unit step function <m>\mathscr{U}(t-2)</m> is shown in the figure below.
     </p>
 
-    <alert color="red">INSERT A FIGURE HERE</alert> <image source="images/step" width="20%">
-    <description>
-      A graph on five vertices.
-      One of the vertices is isolated, while the other four form a path on four vertices.
-    </description>
-  </image>
-  <alert color="red">INSERT A FIGURE HERE</alert> <!--
-  <figure xml:id="fig-unit-step-prefigure">
-    <caption>The unit step function <m>\mathscr{U}(t)</m>.</caption>
-    <image>
-      <prefigure>
-      <coordinates xmin="-2" xmax="4" ymin="-0.5" ymax="1.5"/> -->
-      <!-- axes -->
-      <!-- <axes x="0" y="0"/> -->
-      <!-- horizontal segments -->
-      <!--
-      <line from="(-2,0)" to="(0,0)" stroke="blue" thickness="2"/>
-      <line from="(0,1)" to="(4,1)" stroke="blue" thickness="2"/>
- -->
-      <!-- open circle at (0,0) -->
-      <!-- <circle center="(0,0)" radius="0.06" stroke="blue" fill="white"/> -->
-      <!-- closed circle at (0,1) -->
-      <!-- <point p="(0,1)" size="4" fill="blue"/> -->
-      <!-- labels -->
-      <!-- <label p="(3.5,1.1)">$\mathscr{U}(t)$</label>
-      <label p="(4.2,-0.1)">$t$</label>
-      </prefigure>
-    </image>
-  </figure>
-  --> <!--
   <figure xml:id="fig-sage-cubic">
-    <caption>A cubic plotted by SageMath on <m>[-3,2]</m></caption>
+    <caption>The unit step function <m>\mathscr{U}(t-2)</m> plotted by SageMath on <m>[-1,3]</m></caption>
     <image xml:id="sageplot-cubic" width="50%">
       <description>
-        A cubic function on the interval [-3,2]
+       The unit step function <m>\mathscr{U}(t-2)</m>.
       </description>
       <sageplot>
-f(x) = (x-1)*(x+1)*(x-2)
-plot(f, (x, -3, 2), color='blue', thickness=3)
+    f(x) = heaviside(x-2)
+        plot(f, (x, -1, 5), color='blue', thickness=2)
       </sageplot>
     </image>
   </figure>
-  -->
+  
   <p>
     The unit step function is used to model situations where a quantity changes abruptly at a certain point in time, such as a switch being turned on or off, or a force being applied suddenly.
   </p>
@@ -493,7 +463,12 @@ plot(f, (x, -3, 2), color='blue', thickness=3)
     </me>
   </p>
 
+
+  
+  
   <example>
+
+
     <title>Shifting on the <m>t-</m>axis</title>
 
     <p>
@@ -516,6 +491,9 @@ plot(f, (x, -3, 2), color='blue', thickness=3)
       </p>
     </solution>
   </example>
+
+
+
 
   <p>
     The linearity of the Riemann integration yields the linearity of the Laplace transform operator <m>\mathscr{L}</m>, as stated in the following theorem.
