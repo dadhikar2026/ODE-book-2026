@@ -129,23 +129,23 @@
 
     <p>
       By using the property (ii), we find that for all <m>s</m> in <m>(-\infty,  \infty),</m> we have
-      <me xml:id="eq-5-1-7">
+      <men xml:id="eq-5-1-7">
         \int_{-\infty}^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
-      </me>
+      </men>
       for all real numbers <m>s.</m> From this point onward, we will focus on the case where <m>a \ge 0</m> and <m>t \ge 0</m>.
       Under this assumption, <xref ref="eq-5-1-7"/> reduces to
-      <me xml:id="eq-5-1-8">
+      <men xml:id="eq-5-1-8">
         \int_0^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
-      </me>
+      </men>
       for all real values of <m>s</m>.
       This integral is known as the <em>Laplace transform</em> (see <xref ref="def-5-1"/>) of the Dirac delta function <m>\delta(t - a)</m>, denoted by
-      <me>
+      <men xml:id="eq-5-1-9">
         \mathscr{L}\{\delta(t - a)\} = e^{-as}.
-      </me>
+      </men>
       In particular, when <m>a=0</m> we have
-      <me>
+      <men xml:id="eq-5-1-10">
         \mathscr{L}\{\delta(t)\} = 1.
-      </me>
+      </men>
     </p>
 
     <p>
@@ -157,7 +157,7 @@
       Being motivated from <xref ref="eq-5-1-8"/> with the Dirac delta function <m>\delta(t - a)</m> in the integrand, we first define the <em>Laplace transform</em> of classical functions defined on <m>[0, \infty).</m>
     </p>
 
-    <definition xml:id="def-5-1" alt="Definition of the Laplace transform">
+    <definition xml:id="def-5-1">
       <title>(Laplace transform)</title>
 
       <statement>
@@ -177,30 +177,28 @@
       This action of the transformation is depicted in the figure below.
     </p>
 
-    <figure xml:id="fig-laplace-operator">
-      <caption>The Laplace transform <m>\mathscr{L}</m> as an operator mapping <m>f(t)</m> to <m>F(s)</m>.</caption>
-      <image width="60%">
+    <image width="60%">
+      <!-- <caption>The Laplace transform <m>\mathscr{L}</m> as an operator mapping <m>f(t)</m> to <m>F(s)</m>.</caption> -->
         <prefigure xmlns="https://prefigure.org" label="laplace-operator">
-        <diagram dimensions="(320,120)" margins="8">
-        <coordinates bbox="(0,0,8,3)">
-        <rectangle center="(4,1.5)" dimensions="(2,1)" stroke ="black" fill="none"/>
-        <label anchor="(4,1.5)" alignment="c">
-        <m>\mathscr{L}</m>
-        </label>
-        <label anchor="(1.9,1.5)" alignment="s" offset="(0,25)">
-        <m>f(t)</m>
-        </label>
-        <label anchor="(6.1,1.5)" alignment="s" offset="(0,25)">
-        <m>F(s)</m>
-        </label>
-
-        <line endpoints="((0.8,1.5),(2.9,1.5))" arrows="1" />
-        <line endpoints="((5,1.5),(7.2,1.5))" arrows="1" />
-        </coordinates>
-        </diagram>
+          <diagram dimensions="(320,120)" margins="8">
+            <coordinates bbox="(0,0,8,3)">
+              <rectangle center="(4,1.5)" dimensions="(2,1)" stroke ="black" fill="none"/>
+              <label anchor="(4,1.5)" alignment="c">
+                <m>\mathscr{L}</m>
+              </label>
+              <label anchor="(1.9,1.5)" alignment="s" offset="(0,25)">
+                <m>f(t)</m>
+              </label>
+              <label anchor="(6.1,1.5)" alignment="s" offset="(0,25)">
+                <m>F(s)</m>
+              </label>
+              <line endpoints="((0.8,1.5),(2.9,1.5))" arrows="1" />
+              <line endpoints="((5,1.5),(7.2,1.5))" arrows="1" />
+            </coordinates>
+          </diagram>
         </prefigure>
-      </image>
-    </figure>
+    </image>
+  
 
     <p>
       The variable <m>s</m> in the definition of the Laplace transform can, in general, be a complex variable; however, in the current chapter, we will restrict <m>s</m> to a real variable.

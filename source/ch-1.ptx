@@ -3,7 +3,9 @@
 <chapter xml:id="ch-1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Introduction and Preliminaries</title>
 
- Something goes here
+ <p>
+  Something goes here
+ </p>
 
   <!-- include sections -->
   <!-- <xi:include href="sec-1-1.ptx" /> 
