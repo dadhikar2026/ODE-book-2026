@@ -420,6 +420,11 @@
     </image>
   </figure>
   
+<figure xml:id="F_10_6_preview_1" >
+  <caption>A contour plot of <m>f(x,y) = 30-x^2-\frac12 y^2</m>.</caption>
+  <image width="50%" source="images/step" />
+</figure>
+
   <p>
     The unit step function is used to model situations where a quantity changes abruptly at a certain point in time, such as a switch being turned on or off, or a force being applied suddenly.
   </p>
