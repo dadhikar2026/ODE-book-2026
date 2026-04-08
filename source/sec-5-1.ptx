@@ -128,7 +128,7 @@
     </p>
 
     <p>
-      By using the property (ii), we find that for all <m>s</m> in <m>(-\infty,  \infty),</m> we have
+      By using the property ii., we find that for all <m>s</m> in <m>(-\infty,  \infty),</m> we have
       <men xml:id="eq-5-1-7">
         \int_{-\infty}^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
       </men>
@@ -408,7 +408,7 @@
     </p>
 
   <figure xml:id="fig-sage-cubic">
-    <caption>The unit step function <m>\mathscr{U}(t-2)</m> plotted by SageMath on <m>[-1,3]</m></caption>
+    <caption>The unit step function <m>\mathscr{U}(t-2).</m></caption>
     <image xml:id="sageplot-cubic" width="50%">
       <description>
        The unit step function <m>\mathscr{U}(t-2)</m>.
