@@ -3,7 +3,6 @@
 <section xml:id="sec-5-4" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Laplace Transforms of Periodic Functions</title>
 
-  <introduction>
     <p>
       In  <xref ref="sec-5-1" />, we computed the Laplace transforms of the periodic functions <m>\sin(\omega t)</m> and <m>\cos(\omega t)</m> that are continuous.
       In applications, we also have to address periodic functions that are periodic but piecewise continuous on <m>[0, \infty).</m> A function <m>f</m> is said to be <em>periodic</em> on <m>(-\infty, \infty)</m> if there exists a number <m>T&gt;0,</m> called a <em>period</em> of <m>f,</m> such that
@@ -18,8 +17,10 @@
       <me>
         f(t) = f(t+T)  = f(t+2T) = \cdots = f(t+nT)
       </me>
-      for all positive integers <m>n.</m> This property is visualized in <xref ref="fig-piecewise-periodic" />.
-      <figure xml:id="fig-piecewise-periodic">
+      for all positive integers <m>n.</m> This property is visualized in 
+      <xref ref="fig-piecewise-periodic-1" /> below.
+
+      <figure xml:id="fig-piecewise-periodic-1">
         <caption>The graph of <m>f(t)</m>.</caption>
         <image>
           <latex-image>
@@ -70,8 +71,7 @@
         \boxed{\mathscr{L}\{f(t)\} = \frac{1}{1- e^{-sT}}\int_0^T f(t) e^{-st}\, dt.}
       </men>
     </p>
-  </introduction>
-
+  
   <example>
     <p>
       Let us revisit <m>\mathscr{L}\{\sin(\omega t)\}.</m> 
@@ -113,7 +113,7 @@
     </example>
     <p>
       The graph of <m>f</m> on <m>[0, \infty)</m> is shown below.
-      <figure xml:id="fig-piecewise-periodic">
+      <figure xml:id="fig-piecewise-periodic-2">
         <caption>The graph of <m>f(t)</m>.</caption>
         <image>
           <latex-image>
@@ -182,10 +182,11 @@
     <me>
       y(t)  =  \sum_{n=0}^{\infty}(-1)^n \mathscr{U}(t-n)\; (1- e^{-(t-n)}).
     </me>
-    The graph of this solution is in <xref ref="fig-piecewise-periodic-1" /> below. 
+    The graph of this solution is in <xref ref="fig-piecewise-periodic-3" /> below. 
     The solution <m>y(t)</m> is a piecewise continuous periodic function with period 2,
      and it converges to the periodic function <m>f(t)</m> as <m>t\to\infty.</m>
-    <figure xml:id="fig-piecewise-periodic-1">
+    
+     <figure xml:id="fig-piecewise-periodic">
       <caption>The graph of <m>y(t)</m>.</caption>
       <image>
         <latex-image>

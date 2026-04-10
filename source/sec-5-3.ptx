@@ -2,10 +2,15 @@
 
 <section xml:id="sec-5-3" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Derivatives and Integrals of Laplace Transforms</title>
-  <p>
+  <introduction>
+    <p>
     The evaluation of Laplace transforms and inverse Laplace transforms can often be carried out efficiently by applying differentiation or integration techniques to certain Laplace transforms.
   </p>
+  </introduction>
+ 
   <!-- SUBSECTION: Derivatives of Laplace Transforms -->
+  
+  
   <subsection xml:id="subsec-Derivatives-Laplace-Transforms">
     <title>Derivatives of Laplace Transforms</title>
     <p>
@@ -164,10 +169,9 @@
           </p>
         </solution>
       </example>
-
-
-
   </subsection>
+
+
 
     <!-- EXERCISES --> <exercises xml:id="exercises-">
     <exercise>
