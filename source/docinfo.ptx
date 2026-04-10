@@ -23,7 +23,16 @@
 
   <!-- If you put any latex-image elements you can include preambles -->
   <!-- for those in the next element. -->
-  <latex-image-preamble> \usepackage{tikz, pgfplots,amsmath}  \usetikzlibrary{positioning,matrix,arrows} \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} \usetikzlibrary{decorations.markings} </latex-image-preamble>
+  <latex-image-preamble> 
+    \usepackage{tikz,tkz-fct,pgfplots,amsmath} 
+     \usetikzlibrary{positioning,matrix,arrows} 
+     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} 
+     \usetikzlibrary{decorations.markings} 
+     \pgfplotsset{compat=1.18}
+     \usepackage{xparse}
+     \usetikzlibrary{calc}
+     \usetikzlibrary{matrix}
+    </latex-image-preamble>
 
   <!-- It is possible to rename elements: -->
   <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
