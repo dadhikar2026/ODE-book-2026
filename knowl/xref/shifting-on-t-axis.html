@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Shifting on the <span class="process-math">\(t-\)</span>axis.</span>
+</h3>
+<div class="para">Compute <span class="process-math">\(\mathscr{L}\{\mathscr{U}(t-a) f(t-a)\}\)</span> for a nonnegative real number <span class="process-math">\(a.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#shifting-on-t-axis-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">By <a href="sec-5-1.html#def-5-1" class="xref" data-knowl="./knowl/xref/def-5-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.2: (Laplace transform)">Definition 5.1.2</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-5-1.html">
+\begin{align*}
+\mathscr{L} \bigl\{ \mathscr{U}(t-a) f(t-a) \bigr\} \amp  = \int_0^{\infty} e^{-st} \mathscr{U}(t-a) f(t-a) \, dt\\
+\amp = \int_a^{\infty} e^{-st} f(t-a) \, dt\\
+\amp    = e^{-as}\int_0^\infty e^{-s\tau} f(\tau) d\tau\qquad (\text{letting } \tau = t-a) \\
+\amp = e^{-as} \mathscr{L}\{f(t)\}.
+\end{align*}
+</div>
+<div class="para">Thus, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-5-1.html">
+\begin{equation*}
+\boxed{\mathscr{L} \{\mathscr{U}(t-a) f(t-a)\} = e^{-as} \mathscr{L}\{f(t)\}.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shifting-on-t-axis-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1.12.1"><a href="#shifting-on-t-axis-3" title="Copy heading and permalink for Solution 5.1.12.1" aria-label="Copy heading and permalink for Solution 5.1.12.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.12: Shifting on the t-axis"><a href="#shifting-on-t-axis" title="Copy heading and permalink for Example 5.1.12: Shifting on the t-axis" aria-label="Copy heading and permalink for Example 5.1.12: Shifting on the t-axis">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-5-1.html#shifting-on-t-axis">in-context</a></span>
+</body>
+</html>
