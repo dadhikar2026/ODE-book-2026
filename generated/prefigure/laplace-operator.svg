@@ -14,17 +14,17 @@
     </marker>
   </defs>
   <path id="laplace-operator-path-0" d="M 128.0 88.0 L 208.0 88.0 L 208.0 48.0 L 128.0 48.0 Z" stroke="black" stroke-width="2" fill="none"/>
-  <g id="laplace-operator-label-0" transform="translate(168.0,68.0) translate(-9.4,-6.6)">
+  <g id="laplace-operator-label-0" transform="translate(168.0,68.0) translate(-6.2,-6.6)">
     <g id="laplace-operator-g-0">
-      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.304px" width="18.736px" height="13.288px" role="img" focusable="false" viewBox="0 -717 1035 734" x="0.0" y="0.0">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="12.488px" height="13.160px" role="img" focusable="false" viewBox="0 -705 690 727" x="0.0" y="0.0">
         <defs>
-          <path id="laplace-operator-MJX-2-TEX-S-2112" d="M572 704Q607 704 607 693Q607 681 590 664H588Q586 664 584 664T578 663Q504 658 434 592T363 457Q363 426 386 401Q417 371 481 361Q490 360 527 360H562Q565 363 595 404T666 494T755 596T854 682T945 717Q986 717 1010 696T1035 637Q1035 593 996 531T873 414Q809 378 753 360T674 338T651 333Q650 333 633 308T588 245T544 185Q498 126 426 78L413 68H414Q498 47 575 47Q626 47 676 74T755 139L762 148H779H783Q802 148 802 142Q802 137 795 129Q760 81 691 33T544 -16Q470 -16 366 20L341 29L331 24Q239 -17 155 -17H141Q90 -17 61 -12T23 1T14 22Q14 44 39 65T103 95Q126 101 180 101Q224 101 258 98T309 90T330 86Q332 86 353 103T389 135Q401 146 412 158T431 179T450 203T466 225T485 252T505 280L535 322H509Q391 322 340 362T289 452Q289 495 321 547T396 630Q438 665 486 684T572 704ZM978 635Q978 644 977 650T973 661T968 668T961 673T954 676T946 678T938 680Q929 680 925 677Q893 659 795 531T682 377Q683 377 711 385T755 401T801 421T856 453T906 495Q927 516 952 557T978 635ZM274 50Q274 51 258 54T216 61T166 65Q160 65 151 65T140 64Q115 58 102 48T88 31Q88 20 159 20Q191 20 219 27T261 42L274 50Z"/>
+          <path id="laplace-operator-MJX-2-TEX-C-4C" d="M62 -22T47 -22T32 -11Q32 -1 56 24T83 55Q113 96 138 172T180 320T234 473T323 609Q364 649 419 677T531 705Q559 705 578 696T604 671T615 645T618 623V611Q618 582 615 571T598 548Q581 531 558 520T518 509Q503 509 503 520Q503 523 505 536T507 560Q507 590 494 610T452 630Q423 630 410 617Q367 578 333 492T271 301T233 170Q211 123 204 112L198 103L224 102Q281 102 369 79T509 52H523Q535 64 544 87T579 128Q616 152 641 152Q656 152 656 142Q656 101 588 40T433 -22Q381 -22 289 1T156 28L141 29L131 20Q111 0 87 -11Z"/>
         </defs>
         <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
           <g data-mml-node="math">
             <g data-mml-node="TeXAtom" data-mjx-texclass="ORD">
               <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="script" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-attributes="texclass:ORD" data-semantic-speech="script upper L">
-                <use data-c="2112" xlink:href="#laplace-operator-MJX-2-TEX-S-2112"/>
+                <use data-c="4C" xlink:href="#laplace-operator-MJX-2-TEX-C-4C"/>
               </g>
             </g>
           </g>

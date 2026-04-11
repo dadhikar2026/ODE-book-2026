@@ -208,30 +208,30 @@ f(t) = f(t+T)  = f(t+2T) = \cdots = f(t+nT)
 \end{equation*}
 </div>
 <div class="para">for all positive integers <span class="process-math">\(n.\)</span> This property is visualized in <a href="sec-5-4.html#fig-piecewise-periodic-1" class="xref" data-knowl="./knowl/xref/fig-piecewise-periodic-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.4.1">Figure 5.4.1</a> below. <figure class="figure figure-like" id="fig-piecewise-periodic-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/fig-piecewise-periodic-1-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 5.4.1"><a href="#fig-piecewise-periodic-1" title="Copy heading and permalink for Figure 5.4.1" aria-label="Copy heading and permalink for Figure 5.4.1">🔗</a></div></figcaption></figure> To compute <span class="process-math">\(\mathscr{L}\{f(t)\},\)</span> we express it as an infinite series of integrals as follows:</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 5.4.1"><a href="#fig-piecewise-periodic-1" title="Copy heading and permalink for Figure 5.4.1" aria-label="Copy heading and permalink for Figure 5.4.1">🔗</a></div></figcaption></figure> To compute <span class="process-math">\(\\mathcal{L}\{f(t)\},\)</span> we express it as an infinite series of integrals as follows:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-piecewise-periodic-1.html" id="sec-5-4-3-8">
 \begin{equation*}
-\begin{split} \mathscr{L}\{f(t)\}&amp; =\int_0^\infty f(t) e^{-st}\, dt\\ &amp;= \int_0^T f(t) e^{-st}\, dt+ \int_T^{2T} f(t) e^{-st}\, dt+ \int_{2T}^{3T} f(t) e^{-st}\, dt +\dots\\ &amp;=\int_0^T f(t) e^{-st}\, dt + \int_0^T f(t+T) e^{-s(t+T)}\, dt\\ &amp; \quad + \int_0^T f(t+2T) e^{-s(t+2T)}\, dt+ \dots+ \int_0^T f(t+nT) e^{-s(t+nT)}\, dt+\cdots\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\Big(1+e^{-sT}+ e^{-2sT} + \dots+ e^{-nsT}+\cdots \Big)\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\; \sum_{n=0}^\infty e^{-nsT}.
+\begin{split} \\mathcal{L}\{f(t)\}&amp; =\int_0^\infty f(t) e^{-st}\, dt\\ &amp;= \int_0^T f(t) e^{-st}\, dt+ \int_T^{2T} f(t) e^{-st}\, dt+ \int_{2T}^{3T} f(t) e^{-st}\, dt +\dots\\ &amp;=\int_0^T f(t) e^{-st}\, dt + \int_0^T f(t+T) e^{-s(t+T)}\, dt\\ &amp; \quad + \int_0^T f(t+2T) e^{-s(t+2T)}\, dt+ \dots+ \int_0^T f(t+nT) e^{-s(t+nT)}\, dt+\cdots\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\Big(1+e^{-sT}+ e^{-2sT} + \dots+ e^{-nsT}+\cdots \Big)\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\; \sum_{n=0}^\infty e^{-nsT}.
 \end{split}
 \end{equation*}
 </div>
 <div class="para">Since the geometric series <span class="process-math">\(\displaystyle \sum_{n=0}^\infty e^{-nsT}\)</span> converges for <span class="process-math">\(s&gt;0\)</span> to <span class="process-math">\(\displaystyle \frac{1}{1- e^{-sT}},\)</span> we obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-piecewise-periodic-1.html" id="Laplace-periodic-function">
 \begin{equation}
-\boxed{\mathscr{L}\{f(t)\} = \frac{1}{1- e^{-sT}}\int_0^T f(t) e^{-st}\, dt.}\tag{5.4.1}
+\boxed{\\mathcal{L}\{f(t)\} = \frac{1}{1- e^{-sT}}\int_0^T f(t) e^{-st}\, dt.}\tag{5.4.1}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-5-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="sec-5-4-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="sec-5-4-4-1">Let us revisit <span class="process-math">\(\mathscr{L}\{\sin(\omega t)\}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-5-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="sec-5-4-4-1">Let us revisit <span class="process-math">\(\\mathcal{L}\{\sin(\omega t)\}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-5-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 5.4.2"><a href="#sec-5-4-4" title="Copy heading and permalink for Example 5.4.2" aria-label="Copy heading and permalink for Example 5.4.2">🔗</a></div></article></details><div class="para logical" id="sec-5-4-5">
 <div class="para">Using <a href="sec-5-4.html#Laplace-periodic-function" class="xref" data-knowl="./knowl/xref/Laplace-periodic-function.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.4.1">(5.4.1)</a> with <span class="process-math">\(T= 2\pi/\omega\text{,}\)</span> we obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Laplace-periodic-function.html" id="sec-5-4-5-3">
 \begin{equation*}
-\mathscr{L}\{\sin(\omega t)\} = \frac{1}{1- e^{-2\pi s/\omega}}\int_0^{2\pi/\omega} \sin(\omega t) e^{-st}\, dt.
+\\mathcal{L}\{\sin(\omega t)\} = \frac{1}{1- e^{-2\pi s/\omega}}\int_0^{2\pi/\omega} \sin(\omega t) e^{-st}\, dt.
 \end{equation*}
 </div>
 <div class="para">We compute</div>
@@ -243,7 +243,7 @@ f(t) = f(t+T)  = f(t+2T) = \cdots = f(t+nT)
 <div class="para">Hence</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Laplace-periodic-function.html" id="sec-5-4-5-5">
 \begin{equation*}
-\mathscr{L}\{\sin(\omega t)\} =\frac{\omega}{s^2+\omega^2},
+\\mathcal{L}\{\sin(\omega t)\} =\frac{\omega}{s^2+\omega^2},
 \end{equation*}
 </div>
 <div class="para">as expected.</div>
@@ -310,7 +310,7 @@ Y(s) = \left(\frac{1}{s}- \frac{1}{s+1}\right)\sum_{n=0}^\infty (-1)^ne^{-ns}.
 <div class="para">In view of the shifting on the <span class="process-math">\(t-\)</span>axis property discussed in <a href="sec-5-1.html#shifting-on-t-axis" class="xref" data-knowl="./knowl/xref/shifting-on-t-axis.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.12: Shifting on the t-axis">Example 5.1.12</a>, the solution <span class="process-math">\(y(t)\)</span> of the initial value problem is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-11">
 \begin{equation*}
-y(t)  =  \sum_{n=0}^{\infty}(-1)^n \mathscr{U}(t-n)\; (1- e^{-(t-n)}).
+y(t)  =  \sum_{n=0}^{\infty}(-1)^n \\mathcal{U}(t-n)\; (1- e^{-(t-n)}).
 \end{equation*}
 </div>
 <div class="para">The graph of this solution is in <a href="sec-5-4.html#fig-piecewise-periodic-3" class="xref" data-knowl="./knowl/xref/fig-piecewise-periodic-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.4.5">Figure 5.4.5</a> below. The solution <span class="process-math">\(y(t)\)</span> is a piecewise continuous periodic function with period 2, and it converges to the periodic function <span class="process-math">\(f(t)\)</span> as <span class="process-math">\(t\to\infty.\)</span>  <figure class="figure figure-like" id="fig-piecewise-periodic-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/fig-piecewise-periodic-3-2.svg" role="img" class="contained"></div>
