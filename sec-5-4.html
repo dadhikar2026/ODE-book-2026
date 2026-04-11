@@ -271,44 +271,44 @@ f(t) = \begin{cases} 1 &amp;\text{if } 0\le  t\le 1,\\ 0 &amp;\text{if } 1&lt; t
 </div>
 <div class="para logical" id="sec-5-4-10">
 <div class="para">Then</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-1">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-1">
 \begin{equation*}
 \begin{split} F(s) &amp;= \frac{1}{1-e^{-2s}}\int_0^2 f(t) e^{-st}\, dt\\ &amp;= \frac{1}{1-e^{-2s}}\int_0^1 e^{-st}\, dt\\ &amp;  = \frac{1}{1-e^{-2s}}\left(\frac{e^{-s}-1}{-s}\right)\\ &amp;= \frac{1}{s(1+e^{-s})}.
 \end{split}
 \end{equation*}
 </div>
 <div class="para">Taking the Laplace transform of the differential equation, we get</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-2">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-2">
 \begin{equation*}
 sY(s) - y(0) + Y(s) = F(s).
 \end{equation*}
 </div>
 <div class="para">With <span class="process-math">\(y(0) = 0,\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-4">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-4">
 \begin{equation*}
 Y(s) = \frac{1}{s(s+1)(1+e^{-s})}.
 \end{equation*}
 </div>
 <div class="para">Since</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-5">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-5">
 \begin{equation*}
 \displaystyle \frac{1}{s(s+1)} = \frac{1}{s}- \frac{1}{s+1}
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-6">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-6">
 \begin{equation*}
 \displaystyle\frac{1}{1+e^{-s}} = \sum_{n=0}^\infty (-1)^ne^{-ns},
 \end{equation*}
 </div>
 <div class="para">it follows that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-7">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-7">
 \begin{equation*}
 Y(s) = \left(\frac{1}{s}- \frac{1}{s+1}\right)\sum_{n=0}^\infty (-1)^ne^{-ns}.
 \end{equation*}
 </div>
-<div class="para">In view of the shifting on the <span class="process-math">\(t-\)</span>axis property discussed in <a href="sec-5-1.html#shifting-on-t-axis" class="xref" data-knowl="./knowl/xref/shifting-on-t-axis.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.12: Shifting on the t-axis">Example 5.1.12</a>, the solution <span class="process-math">\(y(t)\)</span> of the initial value problem is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-11">
+<div class="para">In view of the shifting on the <span class="process-math">\(t-\)</span>axis property discussed in <a href="sec-5-1.html#ex-shifting-on-t-axis" class="xref" data-knowl="./knowl/xref/ex-shifting-on-t-axis.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.13: Laplace transform of a shifted function">Example 5.1.13</a>, the solution <span class="process-math">\(y(t)\)</span> of the initial value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-shifting-on-t-axis.html ./knowl/xref/fig-piecewise-periodic-3.html" id="sec-5-4-10-11">
 \begin{equation*}
 y(t)  =  \sum_{n=0}^{\infty}(-1)^n \\mathcal{U}(t-n)\; (1- e^{-(t-n)}).
 \end{equation*}

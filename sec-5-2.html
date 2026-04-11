@@ -295,7 +295,7 @@ Y(s)= \frac{q(s)}{p(s)} +\frac{F(s)}{p(s)}.\tag{5.2.6}
 <div class="para">The solution <span class="process-math">\(y(t)\)</span> to the initial value problem (<a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a>) is given by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/partial-fraction-decomposition.html" id="eq-5-2-7">
 \begin{equation}
-y(t) = \mathcal  {L}^{-1}\{Y(s)\} 
+y(t) = \mathcal  {L}^{-1}\{Y(s)\}
 =\mathcal  {L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} +\mathcal  {L}^{-1}\left\{\frac{F(s)}{p(s)}\right\}.\tag{5.2.7}
 \end{equation}
 </div>
@@ -308,16 +308,20 @@ y(t) = \mathcal  {L}^{-1}\{Y(s)\}
 <div class="para">we typically use partial fraction decomposition of <span class="process-math">\({q(s)}/{p(s)}\)</span> and <span class="process-math">\({F(s)}/{p(s)}\)</span> and then use appropriate inverse Laplace transforms term by term. For more details on the techniques of partial fraction decomposition, see Appendix <a href="partial-fraction-decomposition.html" class="internal" title="Section 6.2: Partial Fraction Decomposition">Section 6.2</a>.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-5-2-8">In principle, one should verify that the equation <a href="sec-5-2.html#eq-5-2-7" class="xref" data-knowl="./knowl/xref/eq-5-2-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.7">(5.2.7)</a> satisfies the initial value problem <a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a> by verifying that <span class="process-math">\(y(t)\)</span> solves the differential equation and satisfies the initial conditions, especially important when the differential equation is defined also for <span class="process-math">\(t &lt; 0\)</span> since the Laplace transform only makes sense to functions on <span class="process-math">\([0, \infty)\text{.}\)</span> However, this verification is unnecessary when <span class="process-math">\(f(t)\)</span> is continuous on an open interval containing <span class="process-math">\(t = 0\text{,}\)</span> as the initial value problem <a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a> is guaranteed to have a unique local solution.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-2-8">In principle, one should verify that the equation <a href="sec-5-2.html#eq-5-2-7" class="xref" data-knowl="./knowl/xref/eq-5-2-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.7">(5.2.7)</a> satisfies the initial value problem <a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a> by verifying that <span class="process-math">\(y(t)\)</span> solves the differential equation and satisfies the initial conditions, especially important when the differential equation is defined also for <span class="process-math">\(t &lt; 0\)</span> since the Laplace transform only makes sense to functions on <span class="process-math">\([0, \infty)\text{.}\)</span> However, this verification is unnecessary when <span class="process-math">\(f(t)\)</span> is continuous on an open interval containing <span class="process-math">\(t = 0\text{,}\)</span> as the initial value problem <a href="sec-5-2.html#eq-5-2-3" class="xref" data-knowl="./knowl/xref/eq-5-2-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.3">(5.2.3)</a> is guaranteed to have a unique local solution.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-5-2-9">In the following examples, we apply the Laplace transform method to solve initial value problems.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-5-2-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="displaymath process-math" id="ex-5-2-1-1">
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-5-2-1-1">
+<div class="para">Solve the initial value problem using the Laplace transform:</div>
+<div class="displaymath process-math" id="ex-5-2-1-1-1">
 \begin{equation*}
 y'-y= 2\cos(3t), \quad y(0) = 1.
 \end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-5-2-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
 <div class="para" id="ex-5-2-1-2-1">
@@ -429,8 +433,8 @@ y(t)\amp =\mathcal  {L}^{-1}\left\{\frac{5}{16s}\right\}+
 <div class="para">We can show that</div>
 <div class="displaymath process-math" id="ex-5-2-2-3-9-2">
 \begin{equation*}
-y(t)=\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t} 
-\quad \text{ on } (-\infty, \infty)  
+y(t)=\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t}
+\quad \text{ on } (-\infty, \infty)
 \end{equation*}
 </div>
 <div class="para">is the solution of  the initial value problem on by verifying that it satisfies the differential equation and the initial conditions.</div>
