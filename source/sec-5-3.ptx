@@ -17,36 +17,36 @@
       Let <m>f</m> be a piecewise continuous function on <m>[0, \infty)</m> and of exponential order as <m>t\to\infty</m>.
       Using the Leibniz rule  from <xref ref="thm-Leibnitz-Rule-Improper-Integrals" /> in <xref ref="sec-7-1" /> for differentiating under the integral sign, we have
       <me>
-        \begin{split} F'(s) &amp;= \frac{d}{ds}\int_0^\infty e^{-st} f(t)\, dt\\ &amp;= \int_0^\infty (-t) e^{-st} f(t)\, dt\\ &amp;= -\int_0^\infty  e^{-st} \big[tf(t)\big]\, dt\\ &amp;=-\mathscr{L}\{tf(t)\}.
+        \begin{split} F'(s) &amp;= \frac{d}{ds}\int_0^\infty e^{-st} f(t)\, dt\\ &amp;= \int_0^\infty (-t) e^{-st} f(t)\, dt\\ &amp;= -\int_0^\infty  e^{-st} \big[tf(t)\big]\, dt\\ &amp;=-\mathcal  {L}\{tf(t)\}.
         \end{split}
       </me>
       Thus, we have
       <me>
-        \mathscr{L}\{tf(t)\} =- F'(s).
+        \mathcal  {L}\{tf(t)\} =- F'(s).
       </me>
       In a similar fashion, we obtain
       <me>
-        \mathscr{L}\{t^2f(t)\}= (-1)^2F''(s).
+        \mathcal  {L}\{t^2f(t)\}= (-1)^2F''(s).
       </me>
       Repeating this procedure inductively we obtain
     </p>
 
     <p>
       <men xml:id="laplace-derivative">
-        \boxed{ \mathscr{L}\{t^nf(t)\} =(-1)^nF^{(n)}(s)}
+        \boxed{ \mathcal  {L}\{t^nf(t)\} =(-1)^nF^{(n)}(s)}
       </men>
       for all positive integers <m>n</m>.
     </p>
 
     <example>
       <p>
-        Find the Laplace transform <m>\mathscr{L}\{t\sin(\omega t)\}</m>.
+        Find the Laplace transform <m>\mathcal  {L}\{t\sin(\omega t)\}</m>.
       </p>
       <solution>
         <p>
           We have
           <me>
-            \begin{split} \mathscr{L}\{t\sin(\omega t)\} &amp;= -\frac{d}{ds}\mathscr{L}\{\sin(\omega t)\}\\ &amp;= -\frac{d}{ds}\left(\frac{\omega}{s^2+\omega^2}\right)\\ &amp;= \frac{2\omega s}{(s^2+\omega^2)^2}.
+            \begin{split} \mathcal  {L}\{t\sin(\omega t)\} &amp;= -\frac{d}{ds}\mathcal  {L}\{\sin(\omega t)\}\\ &amp;= -\frac{d}{ds}\left(\frac{\omega}{s^2+\omega^2}\right)\\ &amp;= \frac{2\omega s}{(s^2+\omega^2)^2}.
             \end{split}
           </me>
         </p>
@@ -55,13 +55,13 @@
 
     <example>
       <p>
-        Find the Laplace transform <m>\mathscr{L}\{t^2\sin(\omega t)\}</m>.
+        Find the Laplace transform <m>\mathcal  {L}\{t^2\sin(\omega t)\}</m>.
       </p>
       <solution>
         <p>
           We have
           <me>
-            \begin{split} \mathscr{L}\{t^2\sin(\omega t)\} &amp;= \frac{d^2}{ds^2}\mathscr{L}\{\sin(\omega t)\}\\ &amp;= \frac{d^2}{ds^2}\left(\frac{\omega}{s^2+\omega^2}\right)\\ &amp;= \frac{2\omega(3s^2-\omega^2)}{(s^2+\omega^2)^3}.
+            \begin{split} \mathcal  {L}\{t^2\sin(\omega t)\} &amp;= \frac{d^2}{ds^2}\mathcal  {L}\{\sin(\omega t)\}\\ &amp;= \frac{d^2}{ds^2}\left(\frac{\omega}{s^2+\omega^2}\right)\\ &amp;= \frac{2\omega(3s^2-\omega^2)}{(s^2+\omega^2)^3}.
             \end{split}
           </me>
         </p>
@@ -75,7 +75,7 @@
     <p>
       Let us discuss about what happens when you integrate a Laplace transform.
       Let <m>f</m> be a piecewise continuous function of exponential order as <m>t\to\infty</m>.
-      Suppose <m>s_0</m> is a real number such that <m>F(s)</m> exists for all <m>s&gt;s_0.</m> To compute <m>\mathscr{L}\{f(t)/t\}</m>, let <m>g(t) = f(t)/t</m> so that <m>t g(t) =f(t).</m> Then, in view of <xref ref="laplace-derivative" />, we obtain
+      Suppose <m>s_0</m> is a real number such that <m>F(s)</m> exists for all <m>s&gt;s_0.</m> To compute <m>\mathcal  {L}\{f(t)/t\}</m>, let <m>g(t) = f(t)/t</m> so that <m>t g(t) =f(t).</m> Then, in view of <xref ref="laplace-derivative" />, we obtain
       <me>
         G'(s) = -F(s).
       </me>
@@ -88,7 +88,7 @@
       <p>
         Here, we have considered only those <m>f</m> for which the Laplace transform <m>G(s)</m> of <m>g</m> satisfies the limiting property that <m>G(s) \to 0</m> as <m>s\to \infty.</m> Thus, we have
         <men xml:id="laplace-integral">
-          \boxed{\mathscr{L}\left\{\frac{f(t)}{t}\right\}(s) =    \int_s^\infty F(p)\, dp.}
+          \boxed{\mathcal  {L}\left\{\frac{f(t)}{t}\right\}(s) =    \int_s^\infty F(p)\, dp.}
         </men>
         Moreover, we can use <xref ref="laplace-integral" /> to determine the existence of the Laplace transform of <m>f(t)/t.</m> For instance, if the integral on the right-hand side of <xref ref="laplace-integral" /> diverges for all <m>s&gt;s_0,</m> then the Laplace transform of <m>f(t)/t</m> does not exist for any <m>s&gt;s_0.</m>
       </p>
@@ -103,13 +103,13 @@
 
       <example>
         <p>
-          Compute <m>\mathscr{L}\{\sin(\omega t)/t\}</m> for positive values of <m>\omega</m> .
+          Compute <m>\mathcal  {L}\{\sin(\omega t)/t\}</m> for positive values of <m>\omega</m> .
         </p>
 
         <solution>
           We have
           <me>
-            \begin{split} \mathscr{L}\left\{\frac{\sin(\omega t)}{t}\right\}(s) &amp;= \int_s^\infty \frac{\omega}{p^2+\omega^2} dp\\ &amp;= \left[\tan^{-1}\left(\frac{p}{\omega}\right)\right]_s^\infty\\ &amp;= \frac{\pi}{2}-\tan^{-1}\left(\frac{s}{\omega}\right).
+            \begin{split} \mathcal  {L}\left\{\frac{\sin(\omega t)}{t}\right\}(s) &amp;= \int_s^\infty \frac{\omega}{p^2+\omega^2} dp\\ &amp;= \left[\tan^{-1}\left(\frac{p}{\omega}\right)\right]_s^\infty\\ &amp;= \frac{\pi}{2}-\tan^{-1}\left(\frac{s}{\omega}\right).
             \end{split}
           </me>
 
@@ -126,7 +126,7 @@
       <example>
         <statement>
           <p>
-            Compute <m>\mathscr{L}\{\cos(\omega t)/t\}</m> for positive values of <m>\omega</m>.
+            Compute <m>\mathcal  {L}\{\cos(\omega t)/t\}</m> for positive values of <m>\omega</m>.
           </p>
         </statement>
 
@@ -134,7 +134,7 @@
           <p>
             We have
             <md>
-              \mathscr{L}\left\{\cos(\omega t) \right\}(p) = \frac{p}{p^2+\omega^2}.
+              \mathcal  {L}\left\{\cos(\omega t) \right\}(p) = \frac{p}{p^2+\omega^2}.
             </md>
             Since
             <me>
@@ -151,18 +151,18 @@
 
       <example>
         <p>
-          Compute <m>\mathscr{L}\left\{\frac{e^t-1}{t}\right\}.</m>
+          Compute <m>\mathcal  {L}\left\{\frac{e^t-1}{t}\right\}.</m>
         </p>
 
         <solution>
           <p>
             Since
             <me>
-              \mathscr{L}\left\{e^t-1\right\}(p) = \frac{1}{p-1} - \frac{1}{p},
+              \mathcal  {L}\left\{e^t-1\right\}(p) = \frac{1}{p-1} - \frac{1}{p},
             </me>
             we have
             <me>
-              \begin{split} \mathscr{L}\left\{\frac{e^t-1}{t}\right\}(s) &amp;= \int_s^\infty \left(\frac{1}{p-1} - \frac{1}{p}\right) dp\\ &amp;= \left[\ln\left(\frac{p-1}{p}\right)\right]_s^\infty\\ &amp;= \ln\left(\frac{s}{s-1}\right).
+              \begin{split} \mathcal  {L}\left\{\frac{e^t-1}{t}\right\}(s) &amp;= \int_s^\infty \left(\frac{1}{p-1} - \frac{1}{p}\right) dp\\ &amp;= \left[\ln\left(\frac{p-1}{p}\right)\right]_s^\infty\\ &amp;= \ln\left(\frac{s}{s-1}\right).
               \end{split}
             </me>
             for <m> s&gt;1.</m>
@@ -214,7 +214,7 @@
 
     <exercise>
       <p>
-        Compute <m>\mathscr{L}\left\{\frac{e^{-t}-1}{t}\right\}</m>
+        Compute <m>\mathcal  {L}\left\{\frac{e^{-t}-1}{t}\right\}</m>
       </p>
     </exercise>
 

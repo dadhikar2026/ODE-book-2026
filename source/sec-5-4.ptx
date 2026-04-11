@@ -61,26 +61,26 @@
           </latex-image>
         </image>
       </figure>
-      To compute <m>\mathscr{L}\{f(t)\},</m> we express it as an infinite series of integrals as follows:
+      To compute <m>\\mathcal{L}\{f(t)\},</m> we express it as an infinite series of integrals as follows:
       <me>
-        \begin{split} \mathscr{L}\{f(t)\}&amp; =\int_0^\infty f(t) e^{-st}\, dt\\ &amp;= \int_0^T f(t) e^{-st}\, dt+ \int_T^{2T} f(t) e^{-st}\, dt+ \int_{2T}^{3T} f(t) e^{-st}\, dt +\dots\\ &amp;=\int_0^T f(t) e^{-st}\, dt + \int_0^T f(t+T) e^{-s(t+T)}\, dt\\ &amp; \quad + \int_0^T f(t+2T) e^{-s(t+2T)}\, dt+ \dots+ \int_0^T f(t+nT) e^{-s(t+nT)}\, dt+\cdots\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\Big(1+e^{-sT}+ e^{-2sT} + \dots+ e^{-nsT}+\cdots \Big)\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\; \sum_{n=0}^\infty e^{-nsT}.
+        \begin{split} \\mathcal{L}\{f(t)\}&amp; =\int_0^\infty f(t) e^{-st}\, dt\\ &amp;= \int_0^T f(t) e^{-st}\, dt+ \int_T^{2T} f(t) e^{-st}\, dt+ \int_{2T}^{3T} f(t) e^{-st}\, dt +\dots\\ &amp;=\int_0^T f(t) e^{-st}\, dt + \int_0^T f(t+T) e^{-s(t+T)}\, dt\\ &amp; \quad + \int_0^T f(t+2T) e^{-s(t+2T)}\, dt+ \dots+ \int_0^T f(t+nT) e^{-s(t+nT)}\, dt+\cdots\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\Big(1+e^{-sT}+ e^{-2sT} + \dots+ e^{-nsT}+\cdots \Big)\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\; \sum_{n=0}^\infty e^{-nsT}.
         \end{split}
       </me>
       Since the geometric series <m>\displaystyle \sum_{n=0}^\infty e^{-nsT}</m> converges for <m>s&gt;0</m> to <m>\displaystyle \frac{1}{1- e^{-sT}},</m> we obtain
       <men xml:id="Laplace-periodic-function">
-        \boxed{\mathscr{L}\{f(t)\} = \frac{1}{1- e^{-sT}}\int_0^T f(t) e^{-st}\, dt.}
+        \boxed{\\mathcal{L}\{f(t)\} = \frac{1}{1- e^{-sT}}\int_0^T f(t) e^{-st}\, dt.}
       </men>
     </p>
   
   <example>
     <p>
-      Let us revisit <m>\mathscr{L}\{\sin(\omega t)\}.</m> 
+      Let us revisit <m>\\mathcal{L}\{\sin(\omega t)\}.</m> 
     </p>
      </example> 
      <p>
       Using <xref ref="Laplace-periodic-function" /> with <m>T= 2\pi/\omega</m>, we obtain
       <me>
-        \mathscr{L}\{\sin(\omega t)\} = \frac{1}{1- e^{-2\pi s/\omega}}\int_0^{2\pi/\omega} \sin(\omega t) e^{-st}\, dt.
+        \\mathcal{L}\{\sin(\omega t)\} = \frac{1}{1- e^{-2\pi s/\omega}}\int_0^{2\pi/\omega} \sin(\omega t) e^{-st}\, dt.
       </me>
       We compute
       <me>
@@ -88,7 +88,7 @@
       </me>
       Hence
       <me>
-        \mathscr{L}\{\sin(\omega t)\} =\frac{\omega}{s^2+\omega^2},
+        \\mathcal{L}\{\sin(\omega t)\} =\frac{\omega}{s^2+\omega^2},
       </me>
       as expected.
     </p>
@@ -180,7 +180,7 @@
     In view of the shifting on the <m>t-</m>axis property discussed in 
      <xref ref="shifting-on-t-axis" />, the solution <m>y(t)</m> of the initial value problem is
     <me>
-      y(t)  =  \sum_{n=0}^{\infty}(-1)^n \mathscr{U}(t-n)\; (1- e^{-(t-n)}).
+      y(t)  =  \sum_{n=0}^{\infty}(-1)^n \\mathcal{U}(t-n)\; (1- e^{-(t-n)}).
     </me>
     The graph of this solution is in <xref ref="fig-piecewise-periodic-3" /> below. 
     The solution <m>y(t)</m> is a piecewise continuous periodic function with period 2,

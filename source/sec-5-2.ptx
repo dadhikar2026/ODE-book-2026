@@ -9,7 +9,7 @@
     algebraic equation using the Laplace transform. After solving 
     the equation in the <m>s-</m>domain for the Laplace transform of
      the solution function, we then apply the inverse Laplace transform
-      operator <m>\mathscr{L}^{-1}</m> to return to the 
+      operator <m>\mathcal  {L}^{-1}</m> to return to the 
       <m>t-</m>domain and obtain the solution of the initial value problem. 
       For these steps, we will need the Laplace transform of derivatives.
 	</p>
@@ -26,15 +26,15 @@ and consequently,
 Suppose, further, that <m>y'</m> is piecewise continuous on <m>[0,\infty).</m> 
 Then, using integration by parts, we have 
 <md>
-<mrow> \mathscr{L}\{y'(t)\} \amp = \int_0^{\infty} e^{-st} y'(t) \, dt </mrow>
+<mrow> \mathcal  {L}\{y'(t)\} \amp = \int_0^{\infty} e^{-st} y'(t) \, dt </mrow>
 <mrow> \amp = \left[ e^{-st} y(t) \right]_0^{\infty} + s \int_0^{\infty} e^{-st} y(t) \, dt</mrow>
-<mrow> \amp =  -y(0) + s\mathscr{L}\{y(t)\}</mrow>
+<mrow> \amp =  -y(0) + s\mathcal  {L}\{y(t)\}</mrow>
 <mrow> \amp = sY(s) - y(0)</mrow>
 </md> 
 for <m>s&gt;\alpha.</m> 
 Thus, <men xml:id="eq-5-2-1">
     \boxed{
-\mathscr{L}\{y'(t)\} = sY(s) - y(0).}
+\mathcal  {L}\{y'(t)\} = sY(s) - y(0).}
 </men>
 </p>
 
@@ -46,14 +46,14 @@ Thus, <men xml:id="eq-5-2-1">
     first to <m>z'(t)</m> with <m>z(t) = y'(t)</m> and then to <m>y'(t)</m>, 
     we obtain 
     <md>
-        <mrow>\mathscr{L}\{y''(t)\}\amp =\mathscr{L}\{z'(t)\} </mrow>
+        <mrow>\mathcal  {L}\{y''(t)\}\amp =\mathcal  {L}\{z'(t)\} </mrow>
         <mrow> \amp = sZ(s) - z(0) </mrow>
-         <mrow> \amp= s\mathscr{L}\{y'(t)\}- y'(0)  </mrow>
+         <mrow> \amp= s\mathcal  {L}\{y'(t)\}- y'(0)  </mrow>
          <mrow> \amp = s(sY(s) - y(0)) - y'(0) </mrow>
          <mrow> \amp   =s^2Y(s) - sy(0)-y'(0),</mrow>
          </md> 
           i.e., <men xml:id="eq-5-2-2">
-                \boxed{\mathscr{L}\{y''(t)\} = s^2Y(s) - sy(0)-y'(0).}
+                \boxed{\mathcal  {L}\{y''(t)\} = s^2Y(s) - sy(0)-y'(0).}
         </men>
 </p>
 
@@ -70,8 +70,8 @@ Applying these ideas repeatedly to higher order derivatives,
     and of exponential order as <m>t\to\infty</m> and 
     if <m>y^{(n)}(t)</m> is piecewise continuous on <m>[0, \infty)</m> 
     and of exponential order as <m>t\to\infty,</m>    
-    then <me>\mathscr{L}\{y^{(n)}(t)\} = s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0),</me> 
-    where <m>Y(s) = \mathscr{L}\{y(t)\}</m>.
+    then <me>\mathcal  {L}\{y^{(n)}(t)\} = s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0),</me> 
+    where <m>Y(s) = \mathcal  {L}\{y(t)\}</m>.
    </p>
 </theorem>
 
@@ -90,7 +90,7 @@ Applying these ideas repeatedly to higher order derivatives,
 \end{cases}
 </men> 
 Applying <xref ref="thm-5-2-1" /> in conjunction with the linearity 
-of <m>\mathscr{L}</m>,
+of <m>\mathcal  {L}</m>,
  the initial value problem in <xref ref="eq-5-2-3" /> gives rise to the following algebraic equation in the <m>s-</m>domain:
 	<men xml:id="eq-5-2-4">
     <mrow>&amp;a_n\big(s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0)\big)</mrow>
@@ -108,10 +108,10 @@ Y(s)= \frac{q(s)}{p(s)} +\frac{F(s)}{p(s)}.
 </men> The solution <m>y(t)</m> to the initial value problem (<xref ref="eq-5-2-3" />) 
 is given by 
 <men xml:id="eq-5-2-7">
-    y(t) = \mathscr{L}^{-1}\{Y(s)\} 
-    =\mathscr{L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} +\mathscr{L}^{-1}\left\{\frac{F(s)}{p(s)}\right\}.
+    y(t) = \mathcal  {L}^{-1}\{Y(s)\} 
+    =\mathcal  {L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} +\mathcal  {L}^{-1}\left\{\frac{F(s)}{p(s)}\right\}.
 </men> 
-To find <md>\mathscr{L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} \quad\text{and}\quad\mathscr{L}^{-1}\left\{\frac{F(s)}{p(s)}\right\},</md> 
+To find <md>\mathcal  {L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} \quad\text{and}\quad\mathcal  {L}^{-1}\left\{\frac{F(s)}{p(s)}\right\},</md> 
 we typically use partial fraction decomposition of <m>{q(s)}/{p(s)}</m> and <m>{F(s)}/{p(s)}</m> 
 and then use appropriate inverse Laplace transforms term by term. 
 For more details on the techniques of partial fraction decomposition, 
@@ -150,7 +150,7 @@ satisfies the initial value problem <xref ref="eq-5-2-3" />
 Applying the Laplace transform to both sides of the equation, we have
 <md>
 \begin{aligned}
-\mathscr{L}\{y'\} - \mathscr{L}\{y\} &amp;= 2\mathscr{L}\{\cos(3t)\} \\
+\mathcal  {L}\{y'\} - \mathcal  {L}\{y\} &amp;= 2\mathcal  {L}\{\cos(3t)\} \\
 (sY(s) - y(0)) - Y(s) &amp;= 2\cdot \frac{s}{s^2 + 9} \\
 (s-1)Y(s) &amp;= 1 + \frac{2s}{s^2 + 9} \\
 Y(s) &amp;= \frac{1}{s-1} + \frac{2s}{(s-1)(s^2 + 9)}.
@@ -167,7 +167,7 @@ Y(s) &amp;= \frac{1}{s-1} + \frac{1/5}{s-1} + \frac{-1/5 s + 9  /5}{s^2 + 9} \\
 \end{aligned}
 </md> Applying the inverse Laplace transform term by term, we have
 <md>
-\begin{aligned}y(t) &amp;= \mathscr{L}^{-1}\left\{\frac{6/5}{s-1}\right\} + \mathscr{L}^{-1}\left\{\frac{-1/5 s + 9/5}{s^2 + 9}\right\} \\
+\begin{aligned}y(t) &amp;= \mathcal  {L}^{-1}\left\{\frac{6/5}{s-1}\right\} + \mathcal  {L}^{-1}\left\{\frac{-1/5 s + 9/5}{s^2 + 9}\right\} \\
 &amp;= \frac{6}{5}e^t - \frac{1}{5}\cos(3t) + \frac{3}{5}\sin(3t).
 \end{aligned}
 </md>       
@@ -192,7 +192,7 @@ Solve the initial value problem using the Laplace transform: <me>y''-5y'+4y= t, 
   <solution>
     Applying the Laplace transform to both sides of the equation, we have
 <md>
-\begin{aligned}&amp;\mathscr{L}\{y''\} - 5\mathscr{L}\{y'\} + 4\mathscr{L}\{y\} = \mathscr{L}\{t\} \\
+\begin{aligned}&amp;\mathcal  {L}\{y''\} - 5\mathcal  {L}\{y'\} + 4\mathcal  {L}\{y\} = \mathcal  {L}\{t\} \\
 &amp;(s^2 Y(s) - sy(0)-y'(0)) - 5(sY(s) - y(0)) + 4Y(s) = \frac{1}{s^2} \\
 &amp;(s^2 - 5s + 4)Y(s) = \frac{1}{s^2} + s - 5 \\
 &amp;Y(s) = \frac{1}{s^2(s-1)(s-4)} + \frac{s-5}{(s-1)(s-4)}=\frac{s^3-5s^2+1}{s^2(s-1)(s-4)}.
@@ -226,10 +226,10 @@ Solve the initial value problem using the Laplace transform: <me>y''-5y'+4y= t, 
 
     <md>
       \begin{aligned}
-        y(t)\amp =\mathscr{L}^{-1}\left\{\frac{5}{16s}\right\}+
-        \mathscr{L}^{-1}\left\{\frac{1}{4s^2}\right\}\\
-        \amp +\mathscr{L}^{-1}\left\{\frac{1}{s-1}\right\}
-        -\mathscr{L}^{-1}\left\{\frac{5}{16(s-4)}\right\}\\
+        y(t)\amp =\mathcal  {L}^{-1}\left\{\frac{5}{16s}\right\}+
+        \mathcal  {L}^{-1}\left\{\frac{1}{4s^2}\right\}\\
+        \amp +\mathcal  {L}^{-1}\left\{\frac{1}{s-1}\right\}
+        -\mathcal  {L}^{-1}\left\{\frac{5}{16(s-4)}\right\}\\
         \amp =\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t}.
       \end{aligned}
     </md>
@@ -255,7 +255,7 @@ Solve the initial value problem using the Laplace transform: <me>y''-5y'+4y= t, 
 Applying the Laplace transform to both sides of the equation, we have
 <me>
 \begin{aligned}
-&amp;\mathscr{L}\{y''\} + 4\mathscr{L}\{y'\} + 5\mathscr{L}\{y\}     = \mathscr{L}\{e^{-t}\} \\
+&amp;\mathcal  {L}\{y''\} + 4\mathcal  {L}\{y'\} + 5\mathcal  {L}\{y\}     = \mathcal  {L}\{e^{-t}\} \\
 &amp;(s^2 Y(s) - sy(0) - y'(0)) + 4          (sY(s) - y(0)) + 5Y(s) = \frac{1}{s+1} \\
 &amp;(s^2 + 4s + 5)Y(s) = \frac{1}{s+1} + 2 \\
 &amp;Y(s) = \frac{1}{(s+1)(s^2 + 4s + 5)} + \frac{2}{s^2 + 4s + 5}.
@@ -270,7 +270,7 @@ Applying the Laplace transform to both sides of the equation, we have
 \end{aligned}
 </me> Applying the inverse Laplace transform term by term, we have
 <me>
-\begin{aligned}y(t) &amp;= \mathscr{L}^{-1}\left\{\frac{1/5}{s+1}\right\} + \mathscr{L}^{-1}\left\{\frac{-1/5 s + 11/5}{s^2 + 4s + 5}\right\} \\
+\begin{aligned}y(t) &amp;= \mathcal  {L}^{-1}\left\{\frac{1/5}{s+1}\right\} + \mathcal  {L}^{-1}\left\{\frac{-1/5 s + 11/5}{s^2 + 4s + 5}\right\} \\
 &amp;= \frac{1}{5}e^{-t} - \frac{1}{5}e^{-2t}\cos(t) + \frac{9}{5}e^{-2t}\sin(t).
 \end{aligned}
 </me>
@@ -359,9 +359,9 @@ Applying the Laplace transform to both sides of the equation, we have
             \sin t&amp;\text{ if } 0\le t &lt;1\\
             0&amp;\text{ if } t\ge 1
         \end{cases}</m></li>
-            <li><m>y''-y'= \cos t\; \mathscr{U}(t-2\pi)\quad y(0) =1,\; y'(0) =1</m> </li>
-            <li> <m>y''+5y'+6y = \mathscr{U}(t-2\pi), \quad y(0)= 0,\; y'(0)= 1</m></li>
-            <li><m> y''+4y'+3y = 1- \mathscr{U}(t-2) - \mathscr{U}(t-4),\; y(0) = 0,\; y'(0) = 0</m></li>
+            <li><m>y''-y'= \cos t\; \mathcal  {U}(t-2\pi)\quad y(0) =1,\; y'(0) =1</m> </li>
+            <li> <m>y''+5y'+6y = \mathcal  {U}(t-2\pi), \quad y(0)= 0,\; y'(0)= 1</m></li>
+            <li><m> y''+4y'+3y = 1- \mathcal  {U}(t-2) - \mathcal  {U}(t-4),\; y(0) = 0,\; y'(0) = 0</m></li>
           </ol>   
             </p>
     </exercise>
