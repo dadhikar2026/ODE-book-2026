@@ -17,7 +17,7 @@
       <me>
         f(t) = f(t+T)  = f(t+2T) = \cdots = f(t+nT)
       </me>
-      for all positive integers <m>n.</m> This property is visualized in 
+      for all positive integers <m>n.</m> This property is visualized in
       <xref ref="fig-piecewise-periodic-1" /> below.
 
       <figure xml:id="fig-piecewise-periodic-1">
@@ -71,12 +71,12 @@
         \boxed{\\mathcal{L}\{f(t)\} = \frac{1}{1- e^{-sT}}\int_0^T f(t) e^{-st}\, dt.}
       </men>
     </p>
-  
+
   <example>
     <p>
-      Let us revisit <m>\\mathcal{L}\{\sin(\omega t)\}.</m> 
+      Let us revisit <m>\\mathcal{L}\{\sin(\omega t)\}.</m>
     </p>
-     </example> 
+     </example>
      <p>
       Using <xref ref="Laplace-periodic-function" /> with <m>T= 2\pi/\omega</m>, we obtain
       <me>
@@ -92,7 +92,7 @@
       </me>
       as expected.
     </p>
-  
+
 
   <p>
     The example above suggests that the direct computation of the Laplace transform of a periodic function may be more convenient.
@@ -108,7 +108,7 @@
       <me>
         f(t) = \begin{cases} 1 &amp;\text{if } 0\le  t\le 1,\\ 0 &amp;\text{if } 1&lt; t &lt; 2, \end{cases}
       </me>
-      and <m>f(t) = f(t+2)</m> for all <m>t</m> in <m>(-\infty, \infty).</m> 
+      and <m>f(t) = f(t+2)</m> for all <m>t</m> in <m>(-\infty, \infty).</m>
     </p>
     </example>
     <p>
@@ -177,15 +177,15 @@
     <me>
       Y(s) = \left(\frac{1}{s}- \frac{1}{s+1}\right)\sum_{n=0}^\infty (-1)^ne^{-ns}.
     </me>
-    In view of the shifting on the <m>t-</m>axis property discussed in 
-     <xref ref="shifting-on-t-axis" />, the solution <m>y(t)</m> of the initial value problem is
+    In view of the shifting on the <m>t-</m>axis property discussed in
+     <xref ref="ex-shifting-on-t-axis" />, the solution <m>y(t)</m> of the initial value problem is
     <me>
       y(t)  =  \sum_{n=0}^{\infty}(-1)^n \\mathcal{U}(t-n)\; (1- e^{-(t-n)}).
     </me>
-    The graph of this solution is in <xref ref="fig-piecewise-periodic-3" /> below. 
+    The graph of this solution is in <xref ref="fig-piecewise-periodic-3" /> below.
     The solution <m>y(t)</m> is a piecewise continuous periodic function with period 2,
      and it converges to the periodic function <m>f(t)</m> as <m>t\to\infty.</m>
-    
+
      <!-- <figure xml:id="fig-piecewise-periodic-3">
       <caption>The graph of <m>y(t)</m>.</caption>
       <image>
@@ -206,18 +206,18 @@
               domain=0:10,
             ]
               % Plot the solution y(t) = sum_{n=0}^\infty (-1)^n U(t-n) (1 - e^{-(t-n)})
-              \addplot[blue, thick, domain=0:10] { (1 - exp(-x)) - (1 - exp(-(x-1))) * (x >= 1) + 
-                (1 - exp(-(x-2))) * (x >= 2) - (1 - exp(-(x-3))) * (x >= 3) 
+              \addplot[blue, thick, domain=0:10] { (1 - exp(-x)) - (1 - exp(-(x-1))) * (x >= 1) +
+                (1 - exp(-(x-2))) * (x >= 2) - (1 - exp(-(x-3))) * (x >= 3)
                 + (1 - exp(-(x-4))) * (x >= 4) - (1 - exp(-(x-5))) * (x >= 5)
-                 + (1 - exp(-(x-6))) * (x >= 6) - (1 - exp(-(x-7))) * (x >= 7) 
-                 + (1 - exp(-(x-8))) * (x >= 8) - (1 - exp(-(x-9))) * (x >= 9) 
+                 + (1 - exp(-(x-6))) * (x >= 6) - (1 - exp(-(x-7))) * (x >= 7)
+                 + (1 - exp(-(x-8))) * (x >= 8) - (1 - exp(-(x-9))) * (x >= 9)
                  + (1 - exp(-(x-10))) * (x >= 10)};
             \end{axis}
           \end{tikzpicture}
         </latex-image>
       </image>
     </figure> -->
-    
+
 <figure xml:id="fig-piecewise-periodic-3">
       <caption>The graph of <m>y(t)</m>.</caption>
       <image>
@@ -235,7 +235,7 @@
 			xlabel={$t$},
 			ylabel={$y(t)$}
 			]
-			
+
 		 \addplot[blue, domain=0:1]     {1 - exp(-x)};
 		 \addplot[blue, domain=1:2]     {1 - exp(-x) - (1 - exp(-(x - 1)))};
 		 \addplot[blue, domain=2:3]     {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2)))};
@@ -253,7 +253,7 @@
     </figure>
 
   </p>
-   
-    
-  
+
+
+
 </section>

@@ -30,9 +30,9 @@
      \usetikzlibrary{decorations.markings}
     </latex-image-preamble>
 
-<latex-preamble>
+<!-- <latex-preamble>
     \usepackage{mathrsfs}
-  </latex-preamble>
+  </latex-preamble> -->
 
 
   <!-- It is possible to rename elements: -->
@@ -41,7 +41,7 @@
   <!-- Specify the default type of cross reference: -->
   <!-- <cross-references text="type-global" /> -->
 <!--prefigure macros-->
-  
+
   <macros>
     \newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
     \newcommand{\real}{\Bbb R}

@@ -14,7 +14,7 @@
   <p>
     Consider a forced oscillator, as discussed in Section <xref ref="sec-3-5" /> of <xref ref="ch-3" />, described by the equation
     <men xml:id="eq-5-1">
-      y''(t) + \omega^2 y(t) = f(t); \quad  y(0) = 0,\; y'(0)= 0,
+      y''(t) + \omega^2 y(t) = f(t), \quad  y(0) = 0,\; y'(0)= 0,
     </men>
     where <m>f(t)</m> is an impulsive force.
     At <m>t =0,</m> the mass is at rest at its equilibrium position.
@@ -427,22 +427,22 @@
       <p>
         Compute <m>\mathcal {L}\{\mathcal {U}(t-a)\}</m> for a nonnegative real number <m>a.</m>
       </p>
+<solution>
+  <p>       By using <xref ref="def-5-1" />, we have
+        <md>
+          <mrow> \mathcal {L}\{\mathcal {U}(t-a)\} \amp = \int_0^\infty e^{-st} \mathcal {U}(t-a) dt</mrow>
+            <mrow>\amp = \int_a^\infty e^{-st} dt</mrow>
+              <mrow>\amp = \left[ \frac{e^{-st}}{-s} \right]_a^\infty</mrow>
+              <mrow>\amp = \frac{e^{-as}}{s} </mrow>
+        </md>
+        for <m>s &gt;0.</m> Thus, we have
+        <md>
+          \boxed{\mathcal {L}\{\mathcal {U}(t-a)\} = \frac{e^{-as}}{s} \text{ for } s\gt;0.}
+        </md>
 
-      <solution>
-        <p>
-          By <xref ref="def-5-1" />, we have
-          <md>
-            <mrow> \mathcal {L} \bigl\{ \mathcal {U}(t-a) \bigr\} \amp  = \int_0^{\infty} e^{-st} \mathcal {U}(t-a) \, dt</mrow>
-            <mrow> \amp = \int_a^{\infty} e^{-st} \, dt</mrow>
-            <mrow> \amp    = \left[ \frac{e^{-st}}{-s} \right]_a^\infty </mrow>
-            <mrow>= \frac{e^{-as}}{s}</mrow>
-          </md>
-          for <m>s&gt;0.</m> Note that the improper integral defining <m>\mathcal {L}\{\mathcal {U}(t-a)\}</m> converges only for <m>s&gt;0.</m> Thus,
-          <me>
-            \boxed{\mathcal {L} \{\mathcal {U}(t-a)\} = \frac{e^{-as}}{s} \quad \text{ for all } s&gt;0.}
-          </me>
-        </p>
-      </solution>
+  </p>
+</solution>
+
     </example>
 
     <p>
@@ -458,47 +458,52 @@
       which is obtained by shifting the graph of <m>f(t)</m> to the right by <m>a</m> units and taking the zero function to the left of <m>t = a</m>.
       This function can be expressed in terms of the unit step function as
       <me>
-        g(t) = \mathcal {U}(t-a) f(t-a).
+        g(t) = \mathcal {U}(t-a) f(t-a),
       </me>
+      whose graph is shown in the figure below,
+      where the blue curve represents <m>f(t)</m> and the red curve represents <m>g(t).</m>
     </p>
 
-    <figure xml:id="fig-shifting-on-t-axis">
-      <caption>Shifting on the <m>t</m>-axis </caption>
-      <image width="70%">
-        <latex-image>
-        \begin{tikzpicture}[scale=1]
-          \begin{axis}[
-            axis lines = middle,
-            axis line style = {->},
-            axis label style={font=\small},
-            xlabel = $t$, ylabel = $y$,
-            xmin = -1, xmax = 15,
-            ymin = -0.5, ymax = 6,
-            samples = 200,
-            xtick = \empty,
-            ytick = \empty,
-            %legend style={at={(0.5,-0.15)}, anchor=north},
-            grid = both
-            ]
-            \addplot[blue, thick, domain=0:10] {1+sin(deg(x))+0.25*x};
-            \filldraw[red,thick] (30,50) circle (2pt);
-            \filldraw[white] (30,50) circle (1.5pt);
-            \filldraw[blue,thick] (10,150) circle (2pt);
-            \filldraw[red,thick] (30,150) circle (2pt);
-            \addplot[red, thick, domain=0:1.7] {0};
-            \addplot[red, thick, domain=2:10] {1+sin(deg(x - 2))+0.25*(x-2)};
-            <!-- \node[above right] at (10,300) {\(f(t)\)};
-            \node[above right] at (20,100) {\(g(t) =\mathcal {U}(t-a)\,f(t-a)\)}; -->
-            \node[above right] at (25,4) {\(a\)};
-            \addlegendentry{\(\flushleft f(t)\)\\ok}
-            \addlegendentry{\(g(t) =\mathcal {U}(t-a)\,f(t-a)\)}
-          \end{axis}
-	      \end{tikzpicture}
-        </latex-image>
-      </image>
-    </figure>
 
-    <example xml:id="shifting-on-t-axis">
+    <figure xml:id="fig-shifting-on-t-axis">
+  <caption>Shifting on the <m>t</m>-axis</caption>
+  <image width="70%">
+    <latex-image>
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle,
+  axis line style={->},
+  xlabel={$t$},
+  ylabel={$y$},
+  xmin=-1, xmax=15,
+  ymin=-0.5, ymax=6,
+  samples=200,
+  xtick=\empty,
+  ytick=\empty,
+  grid=both,
+  legend style={at={(0.5,-0.15)}, anchor=north}
+]
+
+\addplot[blue, thick, domain=0:10] {1 + sin(deg(x)) + 0.25*x};
+\addlegendentry{$f(t)$}
+
+\addplot[red, thick, domain=0:1.8] {0};
+\addplot[red, thick, domain=2:12] {1 + sin(deg(x-2)) + 0.25*(x-2)};
+\addlegendentry{$g(t)=\mathcal{U}(t-a)\,f(t-a)$}
+
+\addplot[only marks, mark=*, red] coordinates {(2,1)};
+\addplot[only marks, mark=*, blue] coordinates {(0.01,1)};
+\addplot[only marks, mark=o, fill=white, red] coordinates {(2,0)};
+
+\node[below] at (axis cs:2,0) {$a$};
+
+\end{axis}
+\end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+    <example  xml:id="ex-shifting-on-t-axis">
       <title>Laplace transform of a shifted function</title>
       <p>
         Compute <m>\mathcal {L}\{\mathcal {U}(t-a) f(t-a)\}</m> for a nonnegative real number <m>a.</m>
@@ -510,15 +515,19 @@
           <md>
             <mrow> \mathcal {L} \bigl\{ \mathcal {U}(t-a) f(t-a) \bigr\} \amp  = \int_0^{\infty} e^{-st} \mathcal {U}(t-a) f(t-a) \, dt</mrow>
             <mrow> \amp = \int_a^{\infty} e^{-st} f(t-a) \, dt</mrow>
-            <mrow> \amp = e^{-as}\int_0^\infty e^{-s\tau} f(\tau) d\tau\qquad (\text{letting } \tau = t-a) </mrow>
+            <mrow> \amp    = e^{-as}\int_0^\infty e^{-s\tau} f(\tau) d\tau\qquad (\text{letting } \tau = t-a) </mrow>
             <mrow> \amp = e^{-as} \mathcal {L}\{f(t)\}</mrow>
-            <mrow> \amp =  e^{-as} F(s).</mrow>
+            <mrow> \amp = e^{-as} F(s).</mrow>
           </md>
           Thus, we have
           <me>
-          \boxed{\mathcal {L} \{\mathcal {U}(t-a) f(t-a)\}  = e^{-as} F(s)}.
+            \boxed{\mathcal {L} \{\mathcal {U}(t-a) f(t-a)\} = e^{-as} F(s).}
           </me>
-         </p>
+        </p>
+      </solution>
+    </example>
+
+
         <!-- <figure xml:id="shifting-on-t-axis-2">
       <caption>Shifting on the <m>t</m>-axis </caption>
       <image xml:id="shifting-on-t-axis-figure" width="50%">
@@ -560,6 +569,7 @@
         </md>
       </p>
     </proof>
+
   </introduction>
 
     <subsection xml:id="subsec-5-1-4">
