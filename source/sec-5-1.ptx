@@ -461,10 +461,10 @@
         g(t) = \mathcal {U}(t-a) f(t-a).
       </me>
     </p>
-    <!--
+    
     <figure xml:id="fig-shifting-on-t-axis">
       <caption>Shifting on the <m>t</m>-axis </caption>
-      <image>
+      <image width="60%">
         <latex-image>
       \begin{tikzpicture}[scale=1]
 		  \begin{axis}[
@@ -486,7 +486,7 @@
 			\addplot[red, thick, domain=0:2] {0};
 			\addplot[red, thick, domain=2:10] {1+sin(deg(x - 2))+0.25*(x-2)};
 			\node[above right] at (4.7,3) {\(f(t)\)};
-			\node[above right] at (6.4,.8) {\(g(t) =\mathcal {U}(t-a)\,f(t-a)\)};
+			\node[above right] at (6.4,8) {\(g(t) =\mathcal {U}(t-a)\,f(t-a)\)};
 			\node[above right] at (1.7,-0.6) {\(a\)};
 			%\addlegendentry{$g(t) = f(t - a)$ for $t \ge a$}
 		\end{axis}
@@ -494,7 +494,7 @@
         </latex-image>
       </image>
     </figure>
-    -->
+   
     <example xml:id="shifting-on-t-axis">
       <title>Shifting on the <m>t-</m>axis</title>
 
@@ -518,7 +518,7 @@
         </p>
       </solution>
     </example>
-    <!--
+    
     <figure xml:id="shifting-on-t-axis-2">
       <caption>Shifting on the <m>t</m>-axis </caption>
       <image xml:id="shifting-on-t-axis-figure" width="50%">
@@ -531,7 +531,7 @@
         </sageplot>
       </image>
     </figure>
-    -->
+   
     <p>
       The linearity of the Riemann integration yields the linearity of the Laplace transform operator <m>\mathcal {L}</m>, as stated in the following theorem.
     </p>
