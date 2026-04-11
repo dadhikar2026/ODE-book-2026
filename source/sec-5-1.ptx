@@ -148,8 +148,6 @@
 
     <definition xml:id="def-5-1">
       <title>(Laplace transform)</title>
-
-      <statement>
         <p>
           Let <m>f:[0, \infty)\to\mathbb R</m> be a function.
           The <term>Laplace transform</term> of <m>f</m> is a function <m>F(s)</m>, denoted commonly by <m>\mathscr{L}\{f(t)\}</m>, defined by
@@ -158,7 +156,6 @@
           </me>
           for those <m>s</m> for which the integral converges.
         </p>
-      </statement>
     </definition>
 
     <p>
