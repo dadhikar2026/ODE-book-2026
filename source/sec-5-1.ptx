@@ -8,7 +8,7 @@
       In the previous chapters, we have developed methods for solving initial
        value problems for ordinary differential equations with continuous forcing functions.
       In this chapter, we will extend our methods to solve initial value
-       problems with discontinuous forcing functions and impulsive forcing 
+       problems with discontinuous forcing functions and impulsive forcing
        functions modeled by the Dirac delta function.
     </p>
   <p>
@@ -100,7 +100,7 @@
   </p>
 
   <p>
-    By formally interchanging the limit and the integral in both <xref ref= "eq-5-3" /> and 
+    By formally interchanging the limit and the integral in both <xref ref= "eq-5-3" /> and
     <xref ref= "eq-5-4" />, an operation which needs justification in integration theories, we obtain
     <men xml:id="eq-5-5">
       \int_{-\infty}^\infty\lim\limits_{\varepsilon\to 0} d_{a, \varepsilon}(t)\, dt = 1
@@ -110,12 +110,12 @@
       \int_{-\infty}^\infty \lim\limits_{\varepsilon\to 0} d_{a, \varepsilon}(t) \, g(t)\, dt  = g(a).
     </men>
     We observe in <xref ref="eq-5-2"/> and <xref ref="eq-5-4"/> that <m>\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)</m> exhibits the  properties (i) and (ii) that characterize <m>\delta(t - a)</m>, and therefore <m>\delta(t - a)</m> can be interpreted as the limit of a sequence of functions that approximate an impulsive behavior.
-    We recognize that <m>\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)</m> 
-    also does not define a function on <m>(-\infty, \infty)</m> 
-    in the classical sense because its value at <m>t=a</m> is <m>\infty.</m> 
-    Instead, the limit is understood as a generalized function, or a distribution, 
-    because of the way it operates primarily through its action on other functions 
-    within integrals, as described by the property ii., 
+    We recognize that <m>\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)</m>
+    also does not define a function on <m>(-\infty, \infty)</m>
+    in the classical sense because its value at <m>t=a</m> is <m>\infty.</m>
+    Instead, the limit is understood as a generalized function, or a distribution,
+    because of the way it operates primarily through its action on other functions
+    within integrals, as described by the property ii.,
     which is motivated by <xref ref="eq-5-6"/>.
   </p>
 
@@ -130,7 +130,7 @@
       \int_0^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
     </men>
     for all real values of <m>s</m>.
-    This integral is known as the <em>Laplace transform</em> 
+    This integral is known as the <em>Laplace transform</em>
     (see <xref ref="def-5-1"/>) of the Dirac delta function <m>\delta(t - a)</m>, denoted by
     <men>
     \mathcal {L}\{\delta(t - a)\} = e^{-as}.
@@ -461,42 +461,45 @@
         g(t) = \mathcal {U}(t-a) f(t-a).
       </me>
     </p>
-    
+
     <figure xml:id="fig-shifting-on-t-axis">
       <caption>Shifting on the <m>t</m>-axis </caption>
-      <image width="90%">
+      <image width="70%">
         <latex-image>
-      \begin{tikzpicture}[scale=2]
-		  \begin{axis}[
-			axis lines = middle,
-			xlabel = $t$, ylabel = $y$,
-			xmin = -1, xmax = 17,
-			ymin = -0.5, ymax = 5,
-			samples = 200,
-			xtick = \empty,
-			ytick = \empty,
-			%legend style={at={(0.5,-0.15)}, anchor=north},
-			grid = both
-			]
-			\addplot[blue, thick, domain=0:10] {1+sin(deg(x))+0.25*x};
-		 	\filldraw[red,thick] (2,0) circle (2pt); 
-			\filldraw[white] (2,0) circle (1.5pt);
-			\filldraw[blue,thick] (0,1) circle (2pt); 
-			\filldraw[red,thick] (2,1) circle (2pt); 
-			\addplot[red, thick, domain=0:2] {0};
-			\addplot[red, thick, domain=2:10] {1+sin(deg(x - 2))+0.25*(x-2)};
-			\node[above right] at (40.7,30) {\(f(t)\)};
-			\node[above right] at (60.4,80) {\(g(t) =\mathcal {U}(t-a)\,f(t-a)\)};
-			\node[above right] at (1.7,-0.6) {\(a\)};
-			%\addlegendentry{$g(t) = f(t - a)$ for $t \ge a$}
-		\end{axis}
-	\end{tikzpicture}
+        \begin{tikzpicture}[scale=1]
+          \begin{axis}[
+            axis lines = middle,
+            axis line style = {->},
+            axis label style={font=\small},
+            xlabel = $t$, ylabel = $y$,
+            xmin = -1, xmax = 15,
+            ymin = -0.5, ymax = 6,
+            samples = 200,
+            xtick = \empty,
+            ytick = \empty,
+            %legend style={at={(0.5,-0.15)}, anchor=north},
+            grid = both
+            ]
+            \addplot[blue, thick, domain=0:10] {1+sin(deg(x))+0.25*x};
+            \filldraw[red,thick] (30,50) circle (2pt);
+            \filldraw[white] (30,50) circle (1.5pt);
+            \filldraw[blue,thick] (10,150) circle (2pt);
+            \filldraw[red,thick] (30,150) circle (2pt);
+            \addplot[red, thick, domain=0:1.7] {0};
+            \addplot[red, thick, domain=2:10] {1+sin(deg(x - 2))+0.25*(x-2)};
+            <!-- \node[above right] at (10,300) {\(f(t)\)};
+            \node[above right] at (20,100) {\(g(t) =\mathcal {U}(t-a)\,f(t-a)\)}; -->
+            \node[above right] at (25,4) {\(a\)};
+            \addlegendentry{\(\flushleft f(t)\)\\ok}
+            \addlegendentry{\(g(t) =\mathcal {U}(t-a)\,f(t-a)\)}
+          \end{axis}
+	      \end{tikzpicture}
         </latex-image>
       </image>
     </figure>
-   
+
     <example xml:id="shifting-on-t-axis">
-      <title>Shifting on the <m>t-</m>axis</title>
+      <title>Laplace transform of a shifted function</title>
       <p>
         Compute <m>\mathcal {L}\{\mathcal {U}(t-a) f(t-a)\}</m> for a nonnegative real number <m>a.</m>
       </p>
@@ -507,18 +510,16 @@
           <md>
             <mrow> \mathcal {L} \bigl\{ \mathcal {U}(t-a) f(t-a) \bigr\} \amp  = \int_0^{\infty} e^{-st} \mathcal {U}(t-a) f(t-a) \, dt</mrow>
             <mrow> \amp = \int_a^{\infty} e^{-st} f(t-a) \, dt</mrow>
-            <mrow> \amp    = e^{-as}\int_0^\infty e^{-s\tau} f(\tau) d\tau\qquad (\text{letting } \tau = t-a) </mrow>
-            <mrow>\amp = e^{-as} \mathcal {L}\{f(t)\}.</mrow>
+            <mrow> \amp = e^{-as}\int_0^\infty e^{-s\tau} f(\tau) d\tau\qquad (\text{letting } \tau = t-a) </mrow>
+            <mrow> \amp = e^{-as} \mathcal {L}\{f(t)\}</mrow>
+            <mrow> \amp =  e^{-as} F(s).</mrow>
           </md>
           Thus, we have
           <me>
-            \boxed{\mathcal {L} \{\mathcal {U}(t-a) f(t-a)\} = e^{-as} \mathcal {L}\{f(t)\}.}
+          \boxed{\mathcal {L} \{\mathcal {U}(t-a) f(t-a)\}  = e^{-as} F(s)}.
           </me>
-        </p>
-      </solution>
-    </example>
-    
-    <!-- <figure xml:id="shifting-on-t-axis-2">
+         </p>
+        <!-- <figure xml:id="shifting-on-t-axis-2">
       <caption>Shifting on the <m>t</m>-axis </caption>
       <image xml:id="shifting-on-t-axis-figure" width="50%">
         <description>
@@ -530,7 +531,7 @@
         </sageplot>
       </image>
     </figure> -->
-   
+
     <p>
       The linearity of the Riemann integration yields the linearity of the Laplace transform operator <m>\mathcal {L}</m>, as stated in the following theorem.
     </p>
@@ -743,17 +744,17 @@
         <me>
           {\mathcal {L}}^{-1}\left\{\frac{e^{-as}}{s}\right\},
         </me>
-        we mean a function of <m>t</m> that agrees with <m>\mathcal {U}(t-a)</m> for <m>t\ne a</m>, 
-        and it can have any arbitrary value at <m>t=a.</m> In practice, 
+        we mean a function of <m>t</m> that agrees with <m>\mathcal {U}(t-a)</m> for <m>t\ne a</m>,
+        and it can have any arbitrary value at <m>t=a.</m> In practice,
         we choose the function that best fits the problem at hand, but in this book, we will use
         <me>
           \mathcal {L}^{-1}\left\{\frac{e^{-as}}{s}\right\} = \mathcal {U}(t - a)
         </me>
         unless this choice is clearly inappropriate.
-        It is understood that any other function that differs from 
+        It is understood that any other function that differs from
         <m>\mathcal {U}(t - a)</m> only at <m>t = a</m> may also be used.
-        These considerations will also be made at the points of 
-        jump discontinuity when we take the inverse Laplace transform of 
+        These considerations will also be made at the points of
+        jump discontinuity when we take the inverse Laplace transform of
         the Laplace transform of a piecewise continuous functions of exponential
          order as <m>t\to\infty.</m>
       </p>
@@ -761,10 +762,10 @@
       <p>
         In view of <xref ref="thm-5-2" />, <m>\mathcal {L}^{-1}\{F(s)\}</m>
          may represent multiple functions when <m>f(t)</m> has jump discontinuities on <m>[0,\infty)</m>.
-        For most functions discussed in this chapter, 
-        it won't be much of an issue since we will be working with either continuous functions or, 
+        For most functions discussed in this chapter,
+        it won't be much of an issue since we will be working with either continuous functions or,
         at worse, functions that have finite number of discontinuity,
-         with the exception of a Dirac delta distributions 
+         with the exception of a Dirac delta distributions
          which has its Laplace transform encoded in the definition itself as
         <me>
           \mathcal {L}\{\delta(t - a)\} =e^{-as}.

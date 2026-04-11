@@ -23,13 +23,13 @@
 
   <!-- If you put any latex-image elements you can include preambles -->
   <!-- for those in the next element. -->
-  <latex-image-preamble> 
-    \usepackage{tikz,pgfplots} 
-     \usetikzlibrary{positioning,matrix,arrows} 
-     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} 
-     \usetikzlibrary{decorations.markings} 
+  <latex-image-preamble>
+    \usepackage{tikz,pgfplots}
+     \usetikzlibrary{positioning,matrix,arrows}
+     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+     \usetikzlibrary{decorations.markings}
     </latex-image-preamble>
-   
+
 <latex-preamble>
     \usepackage{mathrsfs}
   </latex-preamble>
@@ -41,7 +41,7 @@
   <!-- Specify the default type of cross reference: -->
   <!-- <cross-references text="type-global" /> -->
 <!--prefigure macros-->
-  <docinfo>
+  
   <macros>
     \newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
     \newcommand{\real}{\Bbb R}
@@ -56,4 +56,4 @@
 </docinfo>
 
 
-</docinfo>
+
