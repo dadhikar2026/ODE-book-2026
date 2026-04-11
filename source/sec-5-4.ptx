@@ -186,7 +186,7 @@
     The solution <m>y(t)</m> is a piecewise continuous periodic function with period 2,
      and it converges to the periodic function <m>f(t)</m> as <m>t\to\infty.</m>
     
-     <figure xml:id="fig-piecewise-periodic">
+     <!-- <figure xml:id="fig-piecewise-periodic-3">
       <caption>The graph of <m>y(t)</m>.</caption>
       <image>
         <latex-image>
@@ -216,9 +216,9 @@
           \end{tikzpicture}
         </latex-image>
       </image>
-    </figure>
+    </figure> -->
     
-<!-- <figure xml:id="fig-piecewise-periodic-2">
+<figure xml:id="fig-piecewise-periodic-3">
       <caption>The graph of <m>y(t)</m>.</caption>
       <image>
         <latex-image>
@@ -250,7 +250,7 @@
 \end{tikzpicture}
  </latex-image>
       </image>
-    </figure> -->
+    </figure>
 
   </p>
    

@@ -3,10 +3,10 @@
 <section xml:id="sec-5-1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Laplace Transform</title>
 
-  <introduction>
+  
     <p>
       Consider a forced oscillator, as discussed in Section <xref ref="sec-3-5" /> of <xref ref="ch-3" />, described by the equation
-      <men xml:id="eq-5-1-1">
+      <men xml:id="eq-5-1">
         y''(t) + \omega^2 y(t) = f(t); \quad  y(0) = 0,\; y'(0)= 0,
       </men>
       where <m>f(t)</m> is an impulsive force.
@@ -51,12 +51,12 @@
       which represents a pulse of height <m>1/\varepsilon</m> and width <m>\varepsilon&gt;0</m>, centered at <m>t = a</m>.
     </p>
 
-    <figure xml:id="fig-5-1-1">
+  <figure xml:id="fig-5-1">
       <caption>The graph of <m>d_{a, \varepsilon}(t)</m>.</caption>
       <image>
         <latex-image>
    	      \begin{tikzpicture}[scale=2]
- 		      \draw[->] (-0.5,0) -- (4,0) node[right] {$t$};
+ 		      \draw[->] (-0.5,0) --(4,0) node[right] {$t$};
  		        \draw[->] (0,-0.2) -- (0,2) node[above] {$d_{a,\varepsilon}(t)$};
  		      \def\a{1}
  		      \def\eps{0.5}
@@ -70,11 +70,12 @@
  	        \end{tikzpicture}
         </latex-image>
       </image>
-    </figure>
+    </figure> 
+
 
     <p>
       As <m>\varepsilon \to 0</m>, this pulse becomes increasingly narrow and tall, concentrating its effect at <m>t = a</m>, i.e.,
-      <men xml:id="eq-5-1-2">
+      <men xml:id="eq-5-2">
         \lim\limits_{\varepsilon\to 0} d_{a, \varepsilon}(t) = \begin{cases} \infty &amp;\mbox{if } t=a\\ 0&amp;\text{otherwise}, \end{cases}
       </men>
       while maintaining a total area of 1—mirroring the property (ii) of <m>\delta(t - a)</m>, i.e.,
@@ -82,58 +83,67 @@
         \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, dt = \frac{1}{\varepsilon} \varepsilon=1,
       </me>
       so that
-      <men xml:id="eq-5-1-3">
+      <men xml:id="eq-5-3">
         \lim\limits_{\varepsilon\to 0} \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, dt =1.
       </men>
       Furthermore, if <m>g</m> is continuous from right at <m>t=a</m>, then
-      <men xml:id="eq-5-1-4">
+      <men xml:id="eq-5-4">
         \lim\limits_{\varepsilon\to 0} \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, g(t) =    \lim\limits_{\varepsilon\to 0}\frac{1}{\varepsilon} \int_a^{a+\varepsilon}  g(t) \, dt = \lim\limits_{\varepsilon\to 0} g(a+\varepsilon) = g(a)
       </men>
       by using l'Hôpital's rule and the continuity of <m>g</m> at <m>t=a</m> from right.
     </p>
 
     <p>
-      By formally interchanging the limit and the integral in both <xref ref="eq-5-1-3" /> and <xref ref="eq-5-1-4" />, an operation which needs justification in integration theories, we obtain
-      <men xml:id="eq-5-1-5">
+      By formally interchanging the limit and the integral in both 
+      <xref ref="eq-5-3" /> and <xref ref="eq-5-4" />, 
+      an operation which needs justification in integration theories, we obtain
+      <men xml:id="eq-5-5">
         \int_{-\infty}^\infty\lim\limits_{\varepsilon\to 0} d_{a, \varepsilon}(t)\, dt = 1
       </men>
       and
-      <men xml:id="eq-5-1-6">
+      <men xml:id="eq-5-6">
         \int_{-\infty}^\infty \lim\limits_{\varepsilon\to 0} d_{a, \varepsilon}(t) \, g(t)\, dt  = g(a).
       </men>
-      Thus, we observe in <xref ref="eq-5-1-2" /> and <xref ref="eq-5-1-4" /> that <m>\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)</m> exhibits the  properties (i) and (ii) that characterize <m>\delta(t - a)</m>, and therefore <m>\delta(t - a)</m> can be interpreted as the limit of a sequence of functions that approximate an impulsive behavior.
+      Thus, we observe in <xref ref="eq-5-2"/> and <xref ref="eq-5-4" /> that <m>\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)</m> exhibits the  properties (i) and (ii) that characterize <m>\delta(t - a)</m>, and therefore <m>\delta(t - a)</m> can be interpreted as the limit of a sequence of functions that approximate an impulsive behavior.
       We recognize that <m>\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)</m> also does not define a function on <m>(-\infty, \infty)</m> in the classical sense because its value at <m>t=a</m> is <m>\infty.</m> Instead, the limit is understood as a generalized function, or a distribution, because of the way it operates primarily through its action on other functions within integrals, as described by the property ii.
-      which is motivated by <xref ref="eq-5-1-6" />.
+      which is motivated by <xref ref="eq-5-6" />.
     </p>
 
     <p>
       By using the property ii., we find that for all <m>s</m> in <m>(-\infty,  \infty),</m> we have
-      <men xml:id="eq-5-1-7">
+      <men xml:id="eq-5-7">
         \int_{-\infty}^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
       </men>
       for all real numbers <m>s.</m> From this point onward, we will focus on the case where <m>a \ge 0</m> and <m>t \ge 0</m>.
-      Under this assumption, <xref ref="eq-5-1-7"/> reduces to
-      <men xml:id="eq-5-1-8">
+      Under this assumption, <xref ref="eq-5-7"/> reduces to
+      <men xml:id="eq-5-8">
         \int_0^\infty \delta(t - a)\, e^{-st}\, dt = e^{-as}
       </men>
       for all real values of <m>s</m>.
-      This integral is known as the <em>Laplace transform</em> (see <xref ref="def-5-1"/>) of the Dirac delta function <m>\delta(t - a)</m>, denoted by
-      <men xml:id="eq-5-1-9">
+      This integral is known as the <em>Laplace transform</em> (see <xref ref="def-5-1"/>) 
+      of the Dirac delta function <m>\delta(t - a)</m>, denoted by
+      <men xml:id="eq-5-9">
         \mathscr{L}\{\delta(t - a)\} = e^{-as}.
       </men>
       In particular, when <m>a=0</m> we have
-      <men xml:id="eq-5-1-10">
+      <men xml:id="eq-5-10">
         \mathscr{L}\{\delta(t)\} = 1.
       </men>
     </p>
 
     <p>
-      The main objective of this chapter is to develop a method for solving initial value problems such as <xref ref="eq-5-1-1" /> in which <m>f(t)</m> is either discontinuous or involves the Dirac delta functions.The methods of undetermined coefficients and variation of parameters are not relevant to <xref ref="eq-5-1-1"/> with <m>f(t) = \delta (t-a)</m> because the calculus of distributions is beyond the scope of this book.
+      The main objective of this chapter is to develop a method for solving initial value problems 
+      such as <xref ref="eq-5-1" /> in which <m>f(t)</m> 
+      is either discontinuous or involves the Dirac delta functions.
+      The methods of undetermined coefficients and variation of parameters are not relevant 
+      to <xref ref="eq-5-1"/> with <m>f(t) = \delta (t-a)</m> because the calculus 
+      of distributions is beyond the scope of this book.
       In particular, we do not have a meaning of <m>y''</m> in this case.
     </p>
 
     <p>
-      Being motivated from <xref ref="eq-5-1-8"/> with the Dirac delta function <m>\delta(t - a)</m> in the integrand, we first define the <em>Laplace transform</em> of classical functions defined on <m>[0, \infty).</m>
+      Being motivated from <xref ref="eq-5-8"/> with the Dirac delta function
+       <m>\delta(t - a)</m> in the integrand, we first define the <em>Laplace transform</em> of classical functions defined on <m>[0, \infty).</m>
     </p>
 
     <definition xml:id="def-5-1">
@@ -189,20 +199,20 @@
       This transformation turns differentiation into algebraic manipulation, making it easier to solve for the transformed function <m>F(s)</m>.
       Once we have <m>F(s)</m>, we can then find the original function <m>f(t)</m> by applying the inverse Laplace transform <m>\mathscr{L}^{-1}</m> to <m>F(s)</m>.
       Before we begin using Laplace transforms to solve initial value problems, we compute the Laplace transforms of several common functions that appeared in the previous chapters, such as polynomial functions, exponential functions, trigonometric functions, and some combinations of these functions.
-      The Laplace transform of the Dirac delta function is encountered in <xref ref="eq-5-1-8" /> and will be used in solving initial value problems with impulsive forcing.
+      The Laplace transform of the Dirac delta function is encountered in <xref ref="eq-5-8" /> and will be used in solving initial value problems with impulsive forcing.
     </p>
 
     <p>
       By using <xref ref="def-5-1" />, we compute the Laplace transforms of some common functions in the examples below.
     </p>
 
-    <example xml:id="ex-5-1-1">
+    <example xml:id="ex-5-1">
       <p>
         Compute <m>\mathscr{L}\{e^{at}\}</m> for a fixed real number <m>a.</m>
       </p>
 
       <solution>
-        <statement>
+        <p>
           We have <!-- <m>\mathscr{L}\{e^{at}\} = \int_0^\infty e^{at} e^{-st} dt = \int_0^\infty e^{(a-s)t} dt.</m>  -->
           <md>
             <mrow>  \mathscr{L} \{e^{at}\} =\int_0^\infty e^{at} \,e^{-st}  \, dt\amp = \lim_{h\to\infty}\int_0^h e^{(a-s)t} \, dt</mrow>
@@ -214,17 +224,17 @@
           <md>
             \boxed{\mathscr{L} \{e^{at}\} = \frac{1}{s-a} \text{ for } s > a.}
           </md>
-        </statement>
+        </p>
       </solution>
     </example>
 
-    <example xml:id="ex-5-1-2">
+    <example xml:id="ex-5-2">
       <p>
         Compute <m>\mathscr{L}\{1\}</m>.
       </p>
 
       <solution>
-        <statement>
+        <p>
           We have
           <md>
             <mrow>  \mathscr{L} \{1\} \amp = \int_0^\infty e^{-st} \, dt</mrow>
@@ -236,11 +246,11 @@
           <md>
             \boxed{\mathscr{L} \{1\} = \frac{1}{s} \text{ for } s > 0.}
           </md>
-        </statement>
+        </p>
       </solution>
     </example>
 
-    <example xml:id="ex-5-1-3">
+    <example xml:id="ex-5-3">
       <p>
         Compute <m>\mathscr{L}\{t\}.</m>
       </p>
@@ -262,7 +272,7 @@
       </solution>
     </example>
 
-    <example xml:id="ex-5-1-4">
+    <example xml:id="ex-5-4">
       <p>
         Compute <m>\mathscr{L}\{t^n\}</m> for a nonnegative integer <m>n.</m>
       </p>
@@ -295,7 +305,7 @@
       </solution>
     </example>
 
-    <example xml:id="ex-5-1-5">
+    <example xml:id="ex-5-5">
       <p>
         Compute <m>\mathscr{L}\{\sin(\omega t)\}</m> for a positive real number <m>\omega.</m>
       </p>
@@ -323,7 +333,7 @@
       </solution>
     </example>
 
-    <example xml:id="ex-5-1-6">
+    <example xml:id="ex-5-6">
       <p>
         Compute <m>\mathscr{L}\{\cos(\omega t)\}</m> for a positive real number <m>\omega.</m>
       </p>
@@ -408,7 +418,7 @@
         The unit step function is used to model situations where a quantity changes abruptly at a certain point in time, such as a switch being turned on or off, or a force being applied suddenly.
       </p>
 
-      <example xml:id="ex-5-1-7">
+      <example xml:id="ex-5-7">
         <p>
           Compute <m>\mathscr{L}\{\mathscr{U}(t-a)\}</m> for a nonnegative real number <m>a.</m>
         </p>
@@ -521,7 +531,7 @@
         The linearity of the Riemann integration yields the linearity of the Laplace transform operator <m>\mathscr{L}</m>, as stated in the following theorem.
       </p>
 
-      <theorem xml:id="thm-5-1-1">
+      <theorem xml:id="thm-5-1">
         <title>Linearity of the Laplace transform</title>
 
         <statement>
@@ -545,7 +555,7 @@
           </md>
         </p>
       </proof>
-    </introduction>
+   
 
 
     <subsection xml:id="subsec-5-1-4">
@@ -622,7 +632,7 @@
         exists for <m>s&gt;\alpha.</m> We formalize all these ideas together in the following existence theorem.
       </p>
 
-      <theorem xml:id="thm-5-1-4">
+      <theorem xml:id="thm-5-4">
         <statement>
           <p>
             Let <m>f</m> be a piecewise continuous function on <m>[0,\infty)</m> and of an exponential order as <m>t\to\infty</m>.
@@ -675,7 +685,7 @@
       <title>Inverse Laplace transform</title>
 
       <p>
-        As mentioned at the end of Section <xref ref="sec-5-1" />, the forced oscillator (<xref ref="eq-5-1-1" />) cannot be solved using the methods from previous chapters when <m>f</m> is a Dirac delta function.
+        As mentioned at the end of Section <xref ref="sec-5-1" />, the forced oscillator (<xref ref="eq-5-1" />) cannot be solved using the methods from previous chapters when <m>f</m> is a Dirac delta function.
         Even if <m>f</m> is only piecewise continuous, the earlier methods can become quite tedious to apply.
         The Laplace transform method provides a more efficient approach, and this method involves taking the Laplace transform of a linear differential equation and converting it into an algebraic equation.
         After solving the algebraic equation in the <m>s</m>-domain for the Laplace transform of the solution function, we then apply the one-to-one property of the Laplace transform to return to the solution in the <m>t-</m>domain.
@@ -686,7 +696,7 @@
         For continuous functions, the following theorem establishes the invertibility of the Laplace transform.
       </p>
 
-      <theorem xml:id="thm-5-1-2">
+      <theorem xml:id="thm-5-2">
         <title>Invertibility of the Laplace transform</title>
 
         <statement>
@@ -713,8 +723,13 @@
       </proof>
 
       <p>
-        By <xref ref="thm-5-1-2" />, for continuous functions <m>f</m> and <m>g</m> satisfying <m>F(s) = G(s)</m> for all <m>s&gt;s_0</m>, where <m>s_0</m> is a positive number, we have <m>f(t) = g(t)</m> for all <m>t</m> in <m>[0, \infty).</m> Consequently, <m>\mathscr{L}</m> is <term><em>one-to-one on the class of continuous functions whose Laplace transforms exist</em></term>.
-        Thus, for every continuous function <m>f</m> on <m>[0, \infty)</m> with the Laplace transform of <m>F(s),</m> we have
+        By <xref ref="thm-5-2" />, for continuous functions <m>f</m> and <m>g</m> 
+        satisfying <m>F(s) = G(s)</m> for all <m>s&gt;s_0</m>, where <m>s_0</m> 
+        is a positive number, we have <m>f(t) = g(t)</m> for all <m>t</m> 
+        in <m>[0, \infty).</m> Consequently, <m>\mathscr{L}</m> 
+        is <term><em>one-to-one on the class of continuous functions whose Laplace transforms exist</em></term>.
+        Thus, for every continuous function <m>f</m> on <m>[0, \infty)</m>
+         with the Laplace transform of <m>F(s),</m> we have
         <me>
           f(t) =\mathscr{L}^{-1}\left\{F(s)\right\}
         </me>
@@ -722,13 +737,13 @@
       </p>
 
       <p>
-        We recall from <xref ref="ex-5-1-7" /> that
+        We recall from <xref ref="ex-5-7" /> that
         <me>
-          \mathscr{L}\{ \mathcal{U}(t-a)\}= \frac{e^{-as}}{s}
+          \mathscr{L}\{\mathscr{U}(t-a)\}= \frac{e^{-as}}{s}
         </me>
         for <m>a\ge 0.</m> Therefore, when we speak of
         <me>
-          \mathscr{L}^{-1}\left\{\frac{e^{-as}}{s}\right\},
+          {\mathscr{L}}^{-1}\left\{\frac{e^{-as}}{s}\right\},
         </me>
         we mean a function of <m>t</m> that agrees with <m>\mathcal{U}(t-a)</m> for <m>t\ne a</m>, and it can have any arbitrary value at <m>t=a.</m> In practice, we choose the function that best fits the problem at hand, but in this book, we will use
         <me>
@@ -740,7 +755,7 @@
       </p>
 
       <p>
-        In view of <xref ref="thm-5-1-2" />, <m>\mathscr{L}^{-1}\{F(s)\}</m> may represent multiple functions when <m>f(t)</m> has jump discontinuities on <m>[0,\infty)</m>.
+        In view of <xref ref="thm-5-2" />, <m>\mathscr{L}^{-1}\{F(s)\}</m> may represent multiple functions when <m>f(t)</m> has jump discontinuities on <m>[0,\infty)</m>.
         For most functions discussed in this chapter, it won’t be much of an issue since we will be working with either continuous functions or, at worse, functions that have finite number of discontinuity, with the exception of a Dirac delta distributions which has its Laplace transform encoded in the definition itself as
         <me>
           \mathscr{L}\{\delta(t - a\} =e^{-as}.
@@ -756,7 +771,7 @@
         It follows that the inverse Laplace transform operator <m>\mathscr{L}^{-1}</m> is linear, and we formalize this linearity property of <m>\mathscr{L}^{-1}</m> in the following theorem.
       </p>
 
-      <theorem xml:id="thm-5-1-3">
+      <theorem xml:id="thm-5-3">
         <statement>
           <p>
             The inverse Laplace transform operator <m>\mathscr{L}^{-1}</m> is linear, that is,
