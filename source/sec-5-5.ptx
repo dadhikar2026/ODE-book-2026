@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-5-5" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>A Convolution Theorem and its Applications</title>
+    <introduction>
+        <p> A crucial step in solving a linear initial value problem using Laplace transforms is
+            determining the inverse Laplace transform of the solution’s Laplace transform. This step
+            can become challenging when the expression, whose inverse Laplace transform is desired,
+            is complicated. In this section, we discuss a procedure with which we can determine the
+            inverse Laplace transform of an expression that is a product of known Laplace
+            transforms. For example, we recall that <me>\mathscr{L}^{-1}\left\{\ds\frac{1}{s^2}\right\}
+            = t \quad \text{ and }\quad \mathscr{L}^{-1}\left\{\ds\frac{2}{s^3}\right\} = t^2.</me>
+            However, if we were to compute <me>\mathscr{L}^{-1}\left\{\ds\left(\frac{1}{s^2}\right)
+            \left(\frac{2}{s^3}\right)\right\},</me> a direct way is to see this problem as <me>\mathscr{L}^{-1}\left\{\frac{2}{s^5}\right\}
+            = \frac{2}{4!}\; t^4 = \frac{t^4}{12}.</me> This leads to a natural question: in what
+            way can we combine <m>t</m> and <m>t^2</m> to produce <m>t^4/12</m>? The operation for
+            combining inverse Laplace transforms—specifically, to determine the inverse of a
+            product—is known as <em>
+                convolution</em>, which is formalized in the following definition. </p>
+
+        <definition xml:id="def-convolution">
+            <statement>
+                <p> Let <m>f</m> and <m>g</m> be functions on <m>[0, \infty).</m> The <term>
+                        <em>convolution</em>
+                    </term> of <m>f</m> and <m>g</m>,
+                    denoted by <m>f\ast
+                        g</m>, is the function defined by <me>(f\ast g)(t) = \int_0^t f(u) g(t-u)\,
+                    du</me> whenever the integral exists for a given <m>t</m> in <m>[0, \infty).</m>
+                </p>
+            </statement>
+        </definition>
+
+        <p> For computational purposes, <m>(f * g)(t)</m> may also be written as <m>f(t) * g(t)</m>.
+            It can be proved that <m>f\ast g = g\ast f;</m> see, for example, <xref ref="7-5-2" /><xref
+                ref="7-5-2(i)" /> in <term>Exercises <xref ref="EX75" /></term>. The convolution <m>1\ast
+            f</m> is particularly useful, and it is given by <me>\begin{equation}
+            \label{special-convolution}
+                (1\ast f)(t) = \int_0^t f(u) \, du.
+                \end{equation}</me> See, also, <xref ref="7-5-2" /><xref ref="7-5-2(v)" /> in <term>
+            Exercises <xref ref="EX75" /></term>.
+         </p>
+
+         
+    </introduction>
+
+
+</section>
