@@ -11,44 +11,76 @@
 
     <theorem xml:id="thm-Leibnitz-for-Integrals">
       <title>Leibniz Rule</title>
-      
-      
+
+
       <statement>
-        <p>
-          Let <m>f(x, y)</m> be a  function on a rectangle <m>R=\{(x, y): a\le x \le b, \; c\le  y\le d\}</m> such that both <m>f</m> and <m>\frac{\partial f}{\partial y}</m> are continuous on <m>R.</m> Then
-          <md>
-            \frac{d}{dy}\int_a^b  f(x, y)\, dx =  \int_a^b \frac{\partial f}{\partial y}(x, y) \,  dx.
+        <p> Let <m>f(x, y)</m> be a function on a rectangle <m>R=\{(x, y): a\le x \le b, \; c\le
+            y\le d\}</m> such that both <m>f</m> and <m>\frac{\partial f}{\partial y}</m> are
+          continuous on <m>R.</m> Then <md>
+            \frac{d}{dy}\int_a^b f(x, y)\, dx = \int_a^b \frac{\partial f}{\partial y}(x, y) \, dx.
           </md>
-          <!-- Moreover, if the integral on the right-hand side of the above equation converges uniformly for $y\in [c, d],$ then the above equation holds even if $f$ and $\frac{\partial f}{\partial y}$ are not continuous on $R.$ -->
+          <!-- Moreover, if the integral on the right-hand side of the above equation converges
+          uniformly for $y\in [c, d],$ then the above equation holds even if $f$ and $\frac{\partial
+          f}{\partial y}$ are not continuous on $R.$ -->
         </p>
       </statement>
     </theorem>
 
     <theorem xml:id="thm-Leibnitz-Rule-Improper-Integrals">
       <title>Leibniz Rule for Improper Integrals</title>
-      
-      
+
       <statement>
-        <p>
-          Let <m>f(x, y)</m> be a  function on a rectangle <m>R=\{(x, y): a\le x &lt; \infty, \; c\le  y\le d\}</m> 
-          such that, for each <m>y</m> in <m>I,</m> both <m>f</m> and <m>\frac{\partial f}{\partial y}</m> 
-          have  improper integrals on <m>[a, \infty)</m> and such that, for each <m>x</m> in <m>[a, \infty),</m> <m>f(x, y)</m> is differentiable in <m>y</m> for each <m>y</m> in <m>I.</m> 
-          Suppose, further, that there exists a function <m>g</m> on <m>[a, \infty)</m> such that
-          <md>
+        <p> Let <m>f(x, y)</m> be a function on a rectangle <m>R=\{(x, y): a\le x &lt; \infty, \;
+          c\le y\le d\}</m> such that, for each <m>y</m> in <m>I,</m> both <m>f</m> and <m>\frac{\partial
+          f}{\partial y}</m> have improper integrals on <m>[a, \infty)</m> and such that, for each <m>
+          x</m> in <m>[a, \infty),</m> <m>f(x, y)</m> is differentiable in <m>y</m> for each <m>y</m>
+          in <m>I.</m> Suppose, further, that there exists a function <m>g</m> on <m>[a, \infty)</m>
+          such that <md>
             \left|\frac{\partial f}{\partial y}(x, y)\right|\le g(x)
-          </md>
-          for all <m>x\in [a, \infty)</m> and for all <m>y</m> in <m>I</m> and such that
-          <md>
-            \int_a^\infty g(x) \,dx
-          </md>
-          is convergent.
-          Then
-          <md>
-            \frac{d}{dy}\int_a^\infty  
-            f(x, y)\, dx =  \int_a^\infty \frac{\partial f}{\partial y}(x, y) \,  dx.
+          </md> for
+          all <m>x\in [a, \infty)</m> and for all <m>y</m> in <m>I</m> and such that <md>
+          \int_a^\infty g(x) \,dx
+          </md> is convergent. Then <md>
+          \frac{d}{dy}\int_a^\infty
+            f(x, y)\, dx = \int_a^\infty \frac{\partial f}{\partial y}(x, y) \, dx.
           </md>
         </p>
       </statement>
     </theorem>
+
+    <theorem xml:id="thm-DUI-v2">
+      <statement>
+        <p> Let <m>f(x, y)</m> be a function on a rectangle <m>R=\{(x, y): a\le x \le b, \; c\le
+            y\le d\}</m> such that both <m>f</m> and <m>\frac{\partial f}{\partial y}</m> are
+          continuous on <m>R.</m> Let <m>a</m> and <m>b</m> be differentiable functions on <m>[c, d]</m>
+          such that <m>a\le a(y), b(y) \le b</m> for all <m>y</m> in <m>[c, d].</m> Then <me>
+          \frac{d}{dy}\int_{a(y)}^{b(y)} f(x, y)\, dx = b'(y)\, f(b(y), y) - a'(y) \,f(a(y),
+          y)+\int_{a(y)}^{b(y)} \frac{\partial f}{\partial y}(x, y) \, dx.</me>
+        </p>
+      </statement>
+    </theorem>
+
+    <!-- <theorem xml:id="thm-DU-improper-integral">
+      <title>Leibniz Rule for Improper Integrals</title>
+      <statement>
+        <p> Let <m>f(x, y)</m> be a function on a rectangle <m>R=\{(x, y): a\le x &lt; \infty, \; c\le y\le d\}</m>
+          such that, for each <m>y</m> in <m>I,</m> both <m>f</m> and <m>\frac{\partial f}{\partial y}</m> have improper integrals on
+          <m>[a, \infty)</m> and such that, for each <m>x</m> in <m>[a, \infty),</m> <m>f(x, y)</m> is differentiable in
+          <m>y</m> for each <m>y</m> in <m>I.</m> Suppose, further, that there exists a function <m>g</m> on <m>[a,
+          \infty)</m> such that <md>
+          \left|\frac{\partial f}{\partial y}(x, y)\right|\le g(x)
+          </md> for all <m>x\in [a,
+          \infty)</m> and for all <m>y</m> in <m>I</m> and such that <md>
+          \int_a^\infty g(x) \,dx
+          </md> is convergent.
+          Then <md>
+          \frac{d}{dy}\int_a^\infty f(x, y)\, dx = \int_a^\infty \frac{\partial f}{\partial
+          y}(x, y) \, dx.
+          </md>
+        </p>
+      </statement>
+    </theorem> -->
+
+
   </introduction>
 </section>
