@@ -297,6 +297,7 @@
 			%\draw[spring, aspect=0.7] (0,0) -- (0,-2.2);
 			\draw[&lt;-&gt;] (0.4,0) -- (0.4,-2.2);
 			\node[right,labeltext] at (0.41,-1) {$\ell_1$};
+            \node[left,labeltext] at (-0.2,-1) {$k_1$};
 			% Dashed reference line
 			\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
 
@@ -305,6 +306,7 @@
 			%\draw[spring, aspect=0.7] (0,-2,2) -- (0,-4.4);
 			\draw[&lt;-&gt;](0.4,-2.2) -- (0.4,-4.4);
 			\node[right,labeltext] at (0.41,-3) {$\ell_2$};
+            \node[left,labeltext] at (-0.2,-3) {$k_2$};
 			% Dashed reference line
 			\draw[dashedline] (-0.8,-4.4) -- (0.8,-4.4);
 
