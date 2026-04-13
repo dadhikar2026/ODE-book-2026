@@ -2,12 +2,14 @@
 
 <section xml:id="sec-5-4" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Laplace Transforms of Periodic Functions</title>
-
-    <p>
+<introduction>
+  <p>
       In  <xref ref="sec-5-1" />, we computed the Laplace transforms of the periodic
       functions <m>\sin(\omega t)</m> and <m>\cos(\omega t)</m> that are continuous. In applications, we also have to address periodic functions that are periodic
          but piecewise continuous on <m>[0, \infty).</m>
        </p>
+</introduction>
+
 <subsection xml:id="subsec-5-4-1">
   <title>Periodic Functions</title>
 

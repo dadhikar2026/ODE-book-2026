@@ -147,7 +147,7 @@
         <!-- linebreak -->
         <p>
 
-            <term>Step 1: Laplace Transforms.</term><!-- linebreak --><br /> Since <me>\mathcal{L}\left\{\frac{dx}{dt}\right\}
+            <term>Step 1: Laplace Transforms.</term><!-- linebreak --> Since <me>\mathcal{L}\left\{\frac{dx}{dt}\right\}
             =-a \mathcal{L}\{x(t)\},</me> we have <me>s X(s) - x_0 = -a X(s),</me> and therefore <me>X(s)
             =\frac{x_0}{s + a}.</me> Similarly, </p>
         <p>
