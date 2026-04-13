@@ -405,7 +405,7 @@
 			\node[right,labeltext] at (0.7,-1.5) {$\ell_1 + s_1$};
 
 			\draw[&lt;-&gt;] (0.7,-3.4)--(0.7,-4.4);
-			\node[right,labeltext] at (0.7,-3.6) {$y_1(t)$};
+			\node[right,labeltext] at (0.7,-3.6) {$x_1(t)$};
 			% Dashed lines
 			%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
 			%\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
@@ -437,7 +437,7 @@
 			\node[right,labeltext] at (0.7,-5.5) {$\ell_2 + s_2$};
 
 			\draw[&lt;-&gt;]  (0.7,-7.8)--(0.7,-9.2);
-			\node[right,labeltext] at (0.7,-8.5) {$y_2(t)$};
+			\node[right,labeltext] at (0.7,-8.5) {$x_2(t)$};
 			\draw[dashedline] (0.2,-9.2) -- (0.8,-9.2);
 
 			% Optional arrow to indicate external force
@@ -460,14 +460,14 @@
 			\node[right,labeltext] at (3.1,-1.9) {$y_1&lt;0$};
 
 			\filldraw[black] (3,-3.4) circle (2pt);
-			\node[right,labeltext] at (3.1,-3.4) {$y_1=0$\;(origin)};
-			\node[right,labeltext] at (3.1,-4.5) {$y_1&gt;0$};
+			\node[right,labeltext] at (3.1,-3.4) {$x_1=0$\;(origin)};
+			\node[right,labeltext] at (3.1,-4.5) {$x_1&gt;0$};
 
-			\node[right,labeltext] at (3.1,-5.9) {$y_2&lt;0$};
+			\node[right,labeltext] at (3.1,-5.9) {$x_2&lt;0$};
 
 			\filldraw[black] (3,-7.2) circle (2pt);
-			\node[right,labeltext] at (3.1,-7.2) {$y_2=0$\;(origin)};
-			\node[right,labeltext] at (3.1,-8.3) {$y_2>0$};
+			\node[right,labeltext] at (3.1,-7.2) {$x_2=0$\;(origin)};
+			\node[right,labeltext] at (3.1,-8.3) {$x_2>0$};
 
 			% Dashed lines
 			%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
@@ -650,7 +650,7 @@
             q_1'(t)</m>, becomes <me>
                 q'_1(t) + i_2(t) -i(t) =0.
             </me> Thus, a linear system in <m>i(t),
-            q_1(t)</m> and <m> i_2(t)</m> is </p>
+            q_1(t)</m> and <m> i_2(t)</m> is
         <men xml:id="LRC-system">
             \begin{cases}
             \ds R\, i(t)+\frac{1}{C} q_1(t) = e(t) &amp; \qquad\text{(for Loop 1)}\\
@@ -658,6 +658,7 @@
             \ds q'_1(t) + i_2(t) -i(t) =0 &amp; \qquad \text{(the current split at the junction A)}
             \end{cases}
         </men>
+        </p>
 
         <p> We now proceed to solve the system <xref ref="LRC-system" />. Differentiating the third
             equation in <xref ref="LRC-system" /> with respect to <m>t</m> yields <men
@@ -669,10 +670,11 @@
                 i'(t) = q''_1(t) + \frac{1}{LC}q_1(t).
             </me> Substituting
             this expression for <m>i'(t)</m> into the equation obtained by differentiating the first
-            equation in <xref ref="LRC-system" /> with respect to <m>t</m>, we get <me
-                xml:id="LRC-system-2">
+            equation in <xref ref="LRC-system" /> with respect to
+            <m>t</m>, we get
+            <men xml:id="LRC-system-2">
                 LRC q''_1(t) +Lq'_1(t)+ Rq_1(t) = LCe'(t),
-            </me> which can
+            </men> which can
             be solved for <m>q_1(t).</m> Once <m>q_1(t)</m> is determined, we find <m>i_1(t)</m> by
             using <m>i_1(t)= q_1'(t).</m> We then find <m>i(t)</m> from the first equation in <xref
                 ref="LRC-system" /> by using <m>q_1(t)</m> there. Finally, we find <m>i_2(t)
