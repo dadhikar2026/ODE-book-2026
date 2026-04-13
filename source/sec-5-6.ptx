@@ -457,7 +457,7 @@
 			\draw[-&gt;,very thick] (3,0.25) -- (3,-9.2); % the coordinate axis line
 
 
-			\node[right,labeltext] at (3.1,-1.9) {$y_1&lt;0$};
+			\node[right,labeltext] at (3.1,-1.9) {$x_1&lt;0$};
 
 			\filldraw[black] (3,-3.4) circle (2pt);
 			\node[right,labeltext] at (3.1,-3.4) {$x_1=0$\;(origin)};
@@ -507,7 +507,7 @@
                 \end{cases}
             </men>
             which, together with the initial conditions <m>x_1(t_0) = a,
-                x'_1(t_0) = b</m>, <m>y_1(t_0) = c, y'_1(t_0) = d,</m> forms an initial value
+                x'_1(t_0) = b</m>, <m>x_2(t_0) = c, x'_2(t_0) = d,</m> forms an initial value
             problem. </p>
 
         <p> In the next example, we solve the initial value problem <xref ref="spring-mass-1" /> for <m>m_1=m_2=1,
