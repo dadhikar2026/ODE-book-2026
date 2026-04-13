@@ -520,7 +520,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.4",
   "title": "Laplace Transforms of Periodic Functions",
-  "body": " Laplace Transforms of Periodic Functions   In , we computed the Laplace transforms of the periodic functions and that are continuous. In applications, we also have to address periodic functions that are periodic but piecewise continuous on     Periodic Functions     A function is said to be periodic on if there exists a number called a period of such that     Graphically, a periodic function repeats the portion of its graph restricted to across subsequent intervals of the same length .  A piecewise continuous periodic function with a period has the following property: for all positive integers This property is visualized in below.  The graph of .     To compute we express it as an infinite series of integrals as follows: Since the geometric series converges for to we obtain    Let us revisit    Using with , we obtain We compute Hence as expected.  The example above suggests that the direct computation of the Laplace transform of a periodic function may be more convenient.  The example below concerns a periodic function acting as the source term of an initial value problem.   Consider the initial value problem where is given by and for all in    The graph of on is shown below.  The graph of .       Then Taking the Laplace transform of the differential equation , we get With we have Since and it follows that In view of the shifting on the axis property discussed in , the solution of the initial value problem is The graph of this solution is in below. The solution is a piecewise continuous periodic function with period 2, and it converges to the periodic function as   The graph of .          Sketch the graph of three periods of each function below and compute its Laplace transform. The interval for the first period is provided.                                    Solve the following initial value problems using the Laplace transform method. You will need and when      where and for all in      where is the periodic function in of .     where is the periodic function in of .     where is the periodic function in of .      "
+  "body": " Laplace Transforms of Periodic Functions   In , we computed the Laplace transforms of the periodic functions and that are continuous. In applications, we also have to address periodic functions that are periodic but piecewise continuous on     Periodic Functions    A function is said to be periodic on if there exists a number called a period of such that     Graphically, a periodic function repeats the portion of its graph restricted to across subsequent intervals of the same length .  A piecewise continuous periodic function with a period has the following property: for all positive integers This property is visualized in below.  The graph of .     To compute we express it as an infinite series of integrals as follows: Since the geometric series converges for to we obtain    Let us revisit    Using with , we obtain We compute Hence as expected.  The example above suggests that the direct computation of the Laplace transform of a periodic function may be more convenient.  The example below concerns a periodic function acting as the source term of an initial value problem.   Consider the initial value problem where is given by and for all in    The graph of on is shown below.  The graph of .       Then Taking the Laplace transform of the differential equation , we get With we have Since and it follows that In view of the shifting on the axis property discussed in , the solution of the initial value problem is The graph of this solution is in below. The solution is a piecewise continuous periodic function with period 2, and it converges to the periodic function as   The graph of .           Sketch the graph of three periods of each function below and compute its Laplace transform. The interval for the first period is provided.                                    Solve the following initial value problems using the Laplace transform method. You will need and when      where and for all in      where is the periodic function in of .     where is the periodic function in of .     where is the periodic function in of .      "
 },
 {
   "id": "def-",
@@ -541,18 +541,18 @@ var ptx_lunr_docs = [
   "body": " The graph of .     "
 },
 {
-  "id": "sec-5-4-7",
+  "id": "subsec-5-4-1-5",
   "level": "2",
-  "url": "sec-5-4.html#sec-5-4-7",
+  "url": "sec-5-4.html#subsec-5-4-1-5",
   "type": "Example",
   "number": "5.4.3",
   "title": "",
   "body": " Let us revisit   "
 },
 {
-  "id": "sec-5-4-11",
+  "id": "subsec-5-4-1-9",
   "level": "2",
-  "url": "sec-5-4.html#sec-5-4-11",
+  "url": "sec-5-4.html#subsec-5-4-1-9",
   "type": "Example",
   "number": "5.4.4",
   "title": "",
