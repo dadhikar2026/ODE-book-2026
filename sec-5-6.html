@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Systems of Linear Differential Equations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Elementary Ordinary Differential Equations">
+<meta property="book:author" content="Dhruba R. Adhikari">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Elementary Ordinary Differential Equations</span> <span class="subtitle">Methods and Applications</span></a></h1>
+<p class="byline">Dhruba R. Adhikari</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-5-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle} \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction and Preliminaries</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-2.html" class="internal"><span class="codenumber">2</span> <span class="title">First Order Differential Equations</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Second and Higher Order Linear Differential Equations and Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-3-5.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Forced Oscillations and Resonance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Method of Series Solutions</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-5.html" class="internal"><span class="codenumber">5</span> <span class="title">The Laplace Transform and Applications</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-1.html#subsec-5-1-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">When does the Laplace transform exist?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-1.html#subsec-5-1-5" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Inverse Laplace transform</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-1.html#exercises-5-1" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Applications to Initial Value Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-2.html#subsec-Laplace-Transform-of-Derivatives" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Laplace Transforms of Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-2.html#exercises-5-2" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-3.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Derivatives and Integrals of Laplace Transforms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-3.html#subsec-Derivatives-Laplace-Transforms" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Derivatives of Laplace Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-3.html#subsec-Integrals-Laplace-Transforms" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Integrals of Laplace Transforms</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-3.html#exercises-" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-4.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Laplace Transforms of Periodic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-4.html#subsec-5-4-1" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Periodic Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-4.html#exercises-sec-5-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-5.html" class="internal"><span class="codenumber">5.5</span> <span class="title">A Convolution Theorem and its Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-5.html#theorem-convolution" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Convolution Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-5.html#subsec-application-convolution" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Application of the Convolution Theorem to Initial Value Problems</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-5.html#exercises-convolution-theorem" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-5-6.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Systems of Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-laplace-transform-method" class="internal"><span class="codenumber">5.6.1</span> <span class="title">The Laplace Transform Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-radioactive" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Radioactive Decay Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-Mixing-Tanks" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Mixing Tanks</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-Coupled-Spring-Mass-Systems" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Coupled Spring-Mass Systems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-7.html" class="internal"><span class="codenumber">6</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-7-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Differentiation Under the Integral</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="partial-fraction-decomposition.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Partial Fraction Decomposition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-5-6"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Systems of Linear Differential Equations</span>
+</h2>
+<section class="introduction" id="sec-5-6-2"><div class="para" id="sec-5-6-2-1">This chapter focuses on the applications of the Laplace transform to solve systems of linear ordinary differential equations. Using the Laplace transform, we convert a system of differential equations into a system of algebraic equations involving Laplace transforms of the unknown functions (dependent variables), solve this algebraic system for the Laplace transforms , and then apply the inverse Laplace transform to recover the functions from their Laplace transforms. These functions then become solutions of the differential equations in the system.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-5-6-2-2">
+<div class="para">To fix the ideas, we consider below a first-order linear system of ordinary differential equations in the three variables <span class="process-math">\(x(t), y(t), z(t)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="linear-system">
+\begin{equation}
+\begin{cases}
+\ds \frac{dx}{dt}\amp= a_{11}x + a_{12}y + a_{13}z + f_1(t),\\
+\ds \frac{dy}{dt} \amp= a_{21}x + a_{22}y + a_{23}z + f_2(t),\\
+\ds \frac{dz}{dt} \amp= a_{31}x + a_{32}y + a_{33}z + f_3(t),
+\end{cases}\tag{5.6.1}
+\end{equation}
+</div>
+<div class="para">where</div>
+<ul class="disc" id="sec-5-6-2-2-3">
+<li id="sec-5-6-2-2-3-1">
+<div class="para" id="sec-5-6-2-2-3-1-1">
+<span class="process-math">\(x(t), y(t), z(t)\)</span> are unknown functions of time <span class="process-math">\(t\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-5-6-2-2-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-5-6-2-2-3-2">
+<div class="para" id="sec-5-6-2-2-3-2-1">the coefficients <span class="process-math">\(a_{ij}\)</span> are fixed real numbers, and<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-5-6-2-2-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-5-6-2-2-3-3">
+<div class="para" id="sec-5-6-2-2-3-3-1">
+<span class="process-math">\(f_i(t)\)</span> are given functions of <span class="process-math">\(t\text{,}\)</span> possibly zero.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-5-6-2-2-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-5-6-2-3">The system <a href="sec-5-6.html#linear-system" class="internal" title="Equation 5.6.1">(5.6.1)</a> is said to be <dfn class="terminology"><em class="emphasis">decoupled</em></dfn> if <span class="process-math">\(a_{ij}= 0\)</span> for all <span class="process-math">\(i, j\)</span> with <span class="process-math">\(i\ne
+j\)</span> and <dfn class="terminology"><em class="emphasis">coupled</em></dfn> if for each <span class="process-math">\(i = 1, 2, 3\)</span> there is <span class="process-math">\(j =
+1, 2,3\)</span> with <span class="process-math">\(i\ne j\)</span> and <span class="process-math">\(a_{ij}\ne 0.\)</span> The linear system <a href="sec-5-6.html#linear-system" class="internal" title="Equation 5.6.1">(5.6.1)</a> is said to be <dfn class="terminology"><em class="emphasis">partially decoupled</em></dfn> if it has a structure that allows solving one or more of the equations in isolation, and then using those solutions to simplify or solve the remaining equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-laplace-transform-method"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Laplace Transform Method</span>
+</h3>
+<div class="para logical" id="subsec-laplace-transform-method-2">
+<div class="para">To solve the linear system <a href="sec-5-6.html#linear-system" class="internal" title="Equation 5.6.1">(5.6.1)</a> with the initial conditions</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linear-system.html" id="subsec-laplace-transform-method-2-2">
+\begin{equation*}
+x(0)
+= x_0, \quad y(0) = y_0, \quad
+z(0) = z_0,
+\end{equation*}
+</div>
+<div class="para">we apply the Laplace transform <span class="process-math">\(\mathcal{L}\)</span> to each equation. The system is then transformed into</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laplace-transform-method-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-laplace-transform-method-3">
+<div class="displaymath process-math" id="subsec-laplace-transform-method-3-1">
+\begin{equation*}
+\begin{cases}
+sX(s) - x_0 = a_{11}X(s) + a_{12}Y(s) + a_{13}Z(s) + F_1(s), \\
+sY(s) - y_0 = a_{21}X(s) + a_{22}Y(s) + a_{23}Z(s) + F_2(s), \\
+sZ(s) - z_0 = a_{31}X(s) + a_{32}Y(s) + a_{33}Z(s) + F_3(s),
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(X(s), Y(s), Z(s)\)</span> are the Laplace transforms of <span class="process-math">\(x(t), y(t), z(t)\text{,}\)</span> and <span class="process-math">\(F_i(s)
+= \mathcal{L}\{f_i(t)\}, i =1, 2, 3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laplace-transform-method-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-laplace-transform-method-4">We solve the above system for <span class="process-math">\(X(s), Y(s), Z(s)\)</span> using algebraic techniques, such as Cramer’s rule, Gaussian elimination, etc. and then apply the inverse Laplace transform to obtain solutions <span class="process-math">\(x(t), y(t), z(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-laplace-transform-method-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-laplace-transform-method-5">We proceed to discuss four main examples; namely, radioactive decay series, mixing solutions, coupled spring-mass systems, and electrical circuits.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laplace-transform-method-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 5.6.1: The Laplace Transform Method"><a href="#subsec-laplace-transform-method" title="Copy heading and permalink for Subsection 5.6.1: The Laplace Transform Method" aria-label="Copy heading and permalink for Subsection 5.6.1: The Laplace Transform Method">🔗</a></div></section><section class="subsection" id="subsec-radioactive"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radioactive Decay Series</span>
+</h3>
+<div class="para logical" id="subsec-radioactive-2">
+<div class="para">Consider a three-stage radioactive decay series of a radioactive element represented in a schematic diagram below:</div>
+<div class="displaymath process-math" id="subsec-radioactive-2-1">
+\begin{equation*}
+X \longrightarrow Y \longrightarrow Z
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-radioactive-3">
+<ul class="disc" id="subsec-radioactive-3-1">
+<li id="subsec-radioactive-3-1-1">
+<div class="para" id="subsec-radioactive-3-1-1-1">
+<span class="process-math">\(X\)</span> is a parent radioactive isotope,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-radioactive-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-radioactive-3-1-2">
+<div class="para" id="subsec-radioactive-3-1-2-1">
+<span class="process-math">\(Y\)</span> is a radioactive daughter element, and<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-radioactive-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-radioactive-3-1-3">
+<div class="para" id="subsec-radioactive-3-1-3-1">
+<span class="process-math">\(Z\)</span> is a stable (non-decaying) end element.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-radioactive-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-radioactive-4">
+<div class="para">Let</div>
+<div class="displaymath process-math" id="subsec-radioactive-4-1">
+\begin{equation*}
+\begin{split}
+x(t) &amp;=\ \text{the amount of isotope } X \text{ at time } t, \\
+y(t) &amp;=\ \text{the amount of isotope } Y \text{ at time } t, \\
+z(t) &amp;=\ \text{the amount of isotope } Z \text{ at time } t, \\
+a &amp;=\ \text{the decay constant of } X, \text{ and} \\
+b &amp;=\ \text{the decay constant of } Y.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">We assume that the disintegration rate of <span class="process-math">\(X\)</span> at time <span class="process-math">\(t\)</span> is proportional to its amount at that time, and the same holds true for <span class="process-math">\(Y\text{.}\)</span> Then the system of differential equations modeling the decay series is</div>
+<div class="displaymath process-math" id="decay-system">
+\begin{equation}
+\begin{cases}
+\ds\frac{dx}{dt} &amp;= -a x\\[1ex]
+\ds\frac{dy}{dt} &amp;= ax - by\\[1ex]
+\ds\frac{dz}{dt} &amp;= by
+\end{cases}\tag{5.6.2}
+\end{equation}
+</div>
+<div class="para">subject to the initial conditions:</div>
+<div class="displaymath process-math" id="subsec-radioactive-4-6">
+\begin{equation*}
+x(0) = x_0, \quad y(0) = 0, \quad z(0) = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-radioactive-5">
+<div class="para">The linear system <a href="sec-5-6.html#decay-system" class="internal" title="Equation 5.6.2">(5.6.2)</a> describes how the parent isotope <span class="process-math">\(X\)</span> decays into <span class="process-math">\(Y\text{,}\)</span> which in turn decays into a stable isotope <span class="process-math">\(Z\text{.}\)</span> We can adopt this scheme to model real-world decay chains such as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/decay-system.html ./knowl/xref/decay-system.html ./knowl/xref/decay-system.html" id="subsec-radioactive-5-5">
+\begin{equation*}
+\text{Uranium-238} \rightarrow
+\text{Thorium-234}\rightarrow\cdots \rightarrow \text{Lead-206}.
+\end{equation*}
+</div>
+<div class="para">The linear system <a href="sec-5-6.html#decay-system" class="internal" title="Equation 5.6.2">(5.6.2)</a> is an example of a <dfn class="terminology"><em class="emphasis">partially decoupled</em></dfn> system. We observe that the solutions of the differential equation in the system <a href="sec-5-6.html#decay-system" class="internal" title="Equation 5.6.2">(5.6.2)</a> can be obtained in a sequence of steps: first solve the first equation for <span class="process-math">\(x(t)\text{,}\)</span> substitute this <span class="process-math">\(x(t)\)</span> into the second equation to find <span class="process-math">\(y(t)\)</span> using the integrating factor method, and then substitute <span class="process-math">\(y(t)\)</span> into the third equation to solve for <span class="process-math">\(z(t)\text{.}\)</span> Details are omitted, but the solutions can be found to be</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/decay-system.html ./knowl/xref/decay-system.html ./knowl/xref/decay-system.html" id="subsec-radioactive-5-14">
+\begin{equation*}
+\begin{cases}
+x(t) &amp;= x_0 e^{-a t}, \\[6pt]
+y(t) &amp;= \frac{a x_0}{b - a} \left( e^{-a t} - e^{-b t} \right), \\[6pt]
+z(t) &amp;= x_0 \left[ 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right].
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Let us obtain these solutions by using the Laplace transform method.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-radioactive-6">
+<div class="para">
+<dfn class="terminology">Step 1: Laplace Transforms.</dfn> Since</div>
+<div class="displaymath process-math" id="subsec-radioactive-6-3">
+\begin{equation*}
+\mathcal{L}\left\{\frac{dx}{dt}\right\}
+=-a \mathcal{L}\{x(t)\},
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math" id="subsec-radioactive-6-4">
+\begin{equation*}
+s X(s) - x_0 = -a X(s),
+\end{equation*}
+</div>
+<div class="para">and therefore</div>
+<div class="displaymath process-math" id="subsec-radioactive-6-5">
+\begin{equation*}
+X(s)
+=\frac{x_0}{s + a}.
+\end{equation*}
+</div>
+<div class="para">Similarly,</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-radioactive-7">
+<div class="displaymath process-math" id="subsec-radioactive-7-1">
+\begin{equation*}
+\mathcal{L}\left\{\frac{dy}{dt}\right\} = a X(s) - b Y(s),
+\end{equation*}
+</div>
+<div class="para">which yields</div>
+<div class="displaymath process-math" id="subsec-radioactive-7-2">
+\begin{equation*}
+s
+Y(s) = a X(s) - b Y(s),
+\end{equation*}
+</div>
+<div class="para">and therefore</div>
+<div class="displaymath process-math" id="subsec-radioactive-7-3">
+\begin{equation*}
+Y(s) = \frac{a X(s)}{s + b} = \frac{a
+x_0}{(s + a)(s + b)}.
+\end{equation*}
+</div>
+<div class="para">Also,</div>
+<div class="displaymath process-math" id="subsec-radioactive-7-4">
+\begin{equation*}
+\mathcal{L}\left\{\frac{dz}{dt}\right\} = b Y(s)
+\end{equation*}
+</div>
+<div class="para">gives</div>
+<div class="displaymath process-math" id="subsec-radioactive-7-5">
+\begin{equation*}
+Z(s) = \frac{b}{s} Y(s) = \frac{a b x_0}{s(s + a)(s + b)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-radioactive-8">
+<div class="para">
+<dfn class="terminology">Step 2: Inverse Laplace Transforms.</dfn>We have</div>
+<div class="displaymath process-math" id="subsec-radioactive-8-2">
+\begin{equation*}
+x(t) =
+{\mathcal L}^{-1}\left\{\frac{x_0}{s + a}\right\} = x_0 e^{-a t}.
+\end{equation*}
+</div>
+<div class="para">Since</div>
+<div class="displaymath process-math" id="subsec-radioactive-8-3">
+\begin{equation*}
+Y(s)
+= \frac{a
+x_0}{(s + a)(s + b)}
+= \frac{a x_0}{b - a} \left( \frac{1}{s + a} - \frac{1}{s + b} \right),
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math" id="subsec-radioactive-8-4">
+\begin{equation*}
+y(t)
+= \frac{a x_0}{b - a} \left( e^{-a t} - e^{-b t} \right).
+\end{equation*}
+</div>
+<div class="para">Finally, since</div>
+<div class="displaymath process-math" id="subsec-radioactive-8-5">
+\begin{equation*}
+Z(s) =
+\frac{a b x_0}{s(s + a)(s + b)},
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math" id="subsec-radioactive-8-6">
+\begin{equation*}
+\begin{split}
+z(t) \amp= \int_0^t b y(\tau) \, d\tau\\
+\amp= \frac{a b x_0}{b - a} \left( \frac{1 - e^{-a t}}{a} - \frac{1 - e^{-b t}}{b}
+\right)\\
+\amp= x_0 \left[ 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right]
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Thus, the solutions are given by</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-radioactive-9">
+<div class="displaymath process-math" id="subsec-radioactive-9-1">
+\begin{equation*}
+\begin{cases}
+x(t) &amp;= x_0 e^{-a t}, \\[6pt]
+y(t) &amp;= \frac{a x_0}{b - a} \left( e^{-a t} - e^{-b t} \right), \\[6pt]
+z(t) &amp;= x_0 \left[\ds 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right],
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">as expected.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 5.6.2: Radioactive Decay Series"><a href="#subsec-radioactive" title="Copy heading and permalink for Subsection 5.6.2: Radioactive Decay Series" aria-label="Copy heading and permalink for Subsection 5.6.2: Radioactive Decay Series">🔗</a></div></section><section class="subsection" id="subsec-Mixing-Tanks"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mixing Tanks</span>
+</h3>
+<div class="para" id="subsec-Mixing-Tanks-2">Consider two connected mixing tanks as shown in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Mixing-Tanks-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="mixing-tanks"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/mixing-tanks-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Two connected mixing tanks.<div class="autopermalink" data-description="Figure 5.6.1"><a href="#mixing-tanks" title="Copy heading and permalink for Figure 5.6.1" aria-label="Copy heading and permalink for Figure 5.6.1">🔗</a></div></figcaption></figure><div class="para logical" id="subsec-Mixing-Tanks-4">
+<div class="displaymath process-math" id="subsec-Mixing-Tanks-4-1">
+\begin{equation*}
+\displaystyle\begin{cases}
+\displaystyle x'(t) = r_{\text{in}}\;
+c+\frac{k_2y(t)}{V_2+t(k_1-k_2-r_{\text{out}})}-\frac{k_1x(t)}{V_1
++t(r_{\text{in}}+k_2-k_1)},\\[2ex]
+\displaystyle y'(t) = \frac{k_1x(t)}{V_1
++t(r_{\text{in}}+k_2-k_1)}-\frac{(k_2+r_{\text{out}})y(t)}{V_2+t(k_1-k_2-r_{\text{out}})}.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">When <span class="process-math">\(r_{\text{in}} = k_1-k_2 = r_{\text{out}},\)</span> the system becomes</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Mixing-Tanks-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Mixing-Tanks-5">
+<div class="displaymath process-math" id="subsec-Mixing-Tanks-5-1">
+\begin{equation*}
+\displaystyle\begin{cases}
+\displaystyle x'(t) = r_{\text{in}}\; c+\frac{k_2y(t)}{V_2} - \frac{k_1x(t)}{V_1
+},\\[2ex]
+\displaystyle y'(t) = \frac{k_1x(t)}{V_1}-\frac{(k_2+r_{\text{out}})y(t)}{V_2}.
+\end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Mixing-Tanks-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 5.6.3: Mixing Tanks"><a href="#subsec-Mixing-Tanks" title="Copy heading and permalink for Subsection 5.6.3: Mixing Tanks" aria-label="Copy heading and permalink for Subsection 5.6.3: Mixing Tanks">🔗</a></div></section><section class="subsection" id="subsec-Coupled-Spring-Mass-Systems"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Coupled Spring-Mass Systems</span>
+</h3>
+<div class="para" id="subsec-Coupled-Spring-Mass-Systems-2">Suppose that two masses <span class="process-math">\(m_1\)</span> and <span class="process-math">\(m_2\)</span> are connected to two springs <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> hanging vertically from a rigid support to form a coupled spring-mass system as shown in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-Coupled-Spring-Mass-Systems-3">Let <span class="process-math">\(x_1(t)\)</span> and <span class="process-math">\(x_2(t)\)</span> denote the vertical displacements of the masses from their equilibrium positions. We take the positive direction of the displacements to be vertically downward. When the masses are in motion, the spring <span class="process-math">\(B\)</span> is subject to both a stretch and a compression, so that its net stretch of the spring <span class="process-math">\(B\)</span> is given by <span class="process-math">\(x_2-x_1\)</span> when the stretch of the spring <span class="process-math">\(A\)</span> is <span class="process-math">\(x_1\text{.}\)</span> Let <span class="process-math">\(k_1\)</span> and <span class="process-math">\(k_2\)</span> be the constants of proportionality in Hooke’s law for the springs <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> respectively. We assume that there is no damping or external force acting on the masses and that weights of the springs are negligible compared to weights of the masses.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-4">
+<div class="para">The restoring force of the spring <span class="process-math">\(A\)</span> acting on the mass <span class="process-math">\(m_1\)</span> at time <span class="process-math">\(t\)</span> is <span class="process-math">\(-k_1 x_1(t),\)</span> and the restoring force of the spring <span class="process-math">\(B\)</span> acting on the mass <span class="process-math">\(m_2\)</span> at time <span class="process-math">\(t\)</span> is <span class="process-math">\(-k_2(x_2(t)- x_1(t)).\)</span> In addition to the restoring force of the spring <span class="process-math">\(A\text{,}\)</span> the mass <span class="process-math">\(m_1\)</span> also experiences the force of <span class="process-math">\(k_2(x_2(t)-
+x_1(t))\)</span> at time <span class="process-math">\(t\text{.}\)</span> Suppressing <span class="process-math">\(t\)</span> in <span class="process-math">\(x_1(t)\)</span> and <span class="process-math">\(x_2(t)\)</span> and using Newton’s law, we see that the motion of the two masses in the spring-mass system is described by the coupled linear system</div>
+<div class="displaymath process-math" id="spring-mass-1">
+\begin{equation}
+\begin{cases}
+m_1x''_1 &amp;= -k_1 x_1 + k_2 (x_2 - x_1) = -(k_1+k_2) x_1 +k_2 x_2,\\
+m_2 x''_2 &amp;= -k_2 (x_2 - x_1)= k_2 x_1-k_2 x_2,
+\end{cases}\tag{5.6.3}
+\end{equation}
+</div>
+<div class="para">which, together with the initial conditions <span class="process-math">\(x_1(t_0) = a,
+x'_1(t_0) = b\text{,}\)</span> <span class="process-math">\(y_1(t_0) = c, y'_1(t_0) = d,\)</span> forms an initial value problem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-Coupled-Spring-Mass-Systems-5">In the next example, we solve the initial value problem <a href="sec-5-6.html#spring-mass-1" class="internal" title="Equation 5.6.3">(5.6.3)</a> for <span class="process-math">\(m_1=m_2=1,
+k_1=3, k_2=2,\)</span> and <span class="process-math">\(x_1(0)=0, x'_1(0)=-1, x_2(0)=0, x'_2(0)=1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-Coupled-Spring-Mass-Systems-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-6-1">
+<div class="para">Solve the second-order coupled system of linear differential equations with initial conditions</div>
+<div class="displaymath process-math" id="spring-mass-2">
+\begin{equation}
+\begin{cases}
+x_1'' = -5 x_1 + 2 x_2 , \\
+x_2'' = 2 x_1 - 2 x_2, \\
+x_1(0) = 0, \quad x_1'(0) = -1, \\
+x_2(0) = 0, \quad x_2'(0) = 1.
+\end{cases}\tag{5.6.4}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-Coupled-Spring-Mass-Systems-6-2">Taking the Laplace transform yields<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-6-3">
+<div class="displaymath process-math" id="subsec-Coupled-Spring-Mass-Systems-6-3-1">
+\begin{equation*}
+\begin{cases}
+s^2 X_1(s) - s x_1(0) - x_1'(0) = -5 X_1(s) + 2 X_2(s), \\
+s^2 X_2(s) - s x_2(0) - x_2'(0) = 2 X_1(s) - 2 X_2(s).
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Using the given initial conditions yields</div>
+<div class="displaymath process-math" id="subsec-Coupled-Spring-Mass-Systems-6-3-2">
+\begin{equation*}
+\begin{cases}
+(s^2+5) X_1(s) + 1 = 2 X_2(s), \\
+(s^2+2) X_2(s) - 1 = 2 X_1(s).
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(X_1(s)\)</span> and <span class="process-math">\(X_2(s)\)</span> gives</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-6-4">
+<div class="displaymath process-math" id="subsec-Coupled-Spring-Mass-Systems-6-4-1">
+\begin{equation*}
+X_1(s) = \frac{-s^2}{(s^2 + 1)(s^2 + 6)} \quad \text{and}\quad
+X_2(s) = \frac{s^2 + 3}{(s^2 + 1)(s^2 + 6)}.
+\end{equation*}
+</div>
+<div class="para">Partial fraction decomposition of <span class="process-math">\(X_1(s)\)</span> and <span class="process-math">\(X_2(s)\)</span> are</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-6-5">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spring-mass-2.html" id="subsec-Coupled-Spring-Mass-Systems-6-5-1">
+\begin{equation*}
+X_1(s) = \frac{1/5}{s^2 + 1} - \frac{6/5}{s^2 + 6}\quad \text{and}\quad
+X_2(s) = \frac{2/5}{s^2 + 1} + \frac{3/5}{s^2 + 6}.
+\end{equation*}
+</div>
+<div class="para">Taking the inverse Laplace transform yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spring-mass-2.html" id="subsec-Coupled-Spring-Mass-Systems-6-5-2">
+\begin{equation*}
+\begin{cases}
+x_1(t) &amp;= \frac{1}{5} \sin t - \frac{6}{5 \sqrt{6}} \sin(\sqrt{6} t), \\
+x_2(t) &amp;= \frac{2}{5} \sin t + \frac{3}{5 \sqrt{6}} \sin(\sqrt{6} t),
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">which render the solutions of the given initial value problem <a href="sec-5-6.html#spring-mass-2" class="internal" title="Equation 5.6.4">(5.6.4)</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-coupled-spring-mass"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/spring_mass.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of the solutions <span class="process-math">\(x_1(t)\)</span> and <span class="process-math">\(x_2(t)\)</span><div class="autopermalink" data-description="Figure 5.6.3"><a href="#fig-coupled-spring-mass" title="Copy heading and permalink for Figure 5.6.3" aria-label="Copy heading and permalink for Figure 5.6.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 5.6.2"><a href="#subsec-Coupled-Spring-Mass-Systems-6" title="Copy heading and permalink for Example 5.6.2" aria-label="Copy heading and permalink for Example 5.6.2">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 5.6.4: Coupled Spring-Mass Systems"><a href="#subsec-Coupled-Spring-Mass-Systems" title="Copy heading and permalink for Subsection 5.6.4: Coupled Spring-Mass Systems" aria-label="Copy heading and permalink for Subsection 5.6.4: Coupled Spring-Mass Systems">🔗</a></div></section><div class="autopermalink" data-description="Section 5.6: Systems of Linear Differential Equations"><a href="#sec-5-6" title="Copy heading and permalink for Section 5.6: Systems of Linear Differential Equations" aria-label="Copy heading and permalink for Section 5.6: Systems of Linear Differential Equations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-5-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

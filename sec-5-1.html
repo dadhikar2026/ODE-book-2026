@@ -184,7 +184,23 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-4.html#exercises-sec-5-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-5-5.html" class="internal"><span class="codenumber">5.5</span> <span class="title">A Convolution Theorem and its Applications</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-5.html" class="internal"><span class="codenumber">5.5</span> <span class="title">A Convolution Theorem and its Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-5.html#theorem-convolution" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Convolution Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-5.html#subsec-application-convolution" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Application of the Convolution Theorem to Initial Value Problems</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-5.html#exercises-convolution-theorem" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-6.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Systems of Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-laplace-transform-method" class="internal"><span class="codenumber">5.6.1</span> <span class="title">The Laplace Transform Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-radioactive" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Radioactive Decay Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-Mixing-Tanks" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Mixing Tanks</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-Coupled-Spring-Mass-Systems" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Coupled Spring-Mass Systems</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -199,9 +215,7 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-5-1"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Laplace Transform</span>
 </h2>
-<section class="introduction" id="sec-5-1-2"><div class="para" id="sec-5-1-2-1">In the previous chapters, we have developed methods for solving initial value problems for ordinary differential equations with continuous forcing functions. In this chapter, we will extend our methods to solve initial value problems with discontinuous forcing functions and impulsive forcing functions modeled by the Dirac delta function.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="sec-5-1-2-2">
+<section class="introduction" id="sec-5-1-2"><div class="para logical" id="sec-5-1-2-1">
 <div class="para">Consider a forced oscillator, as discussed in Section <a href="sec-3-5.html" class="internal" title="Section 3.2: Forced Oscillations and Resonance">Section 3.2</a> of <a href="ch-3.html" class="internal" title="Chapter 3: Second and Higher Order Linear Differential Equations and Applications">Chapter 3</a>, described by the equation</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-3-5.html ./knowl/xref/ch-3.html" id="eq-5-1">
 \begin{equation}
@@ -209,15 +223,15 @@ y''(t) + \omega^2 y(t) = f(t), \quad  y(0) = 0,\; y'(0)= 0,\tag{5.1.1}
 \end{equation}
 </div>
 <div class="para">where <span class="process-math">\(f(t)\)</span> is an impulsive force. At <span class="process-math">\(t =0,\)</span> the mass is at rest at its equilibrium position. At time <span class="process-math">\(t = a\text{,}\)</span> the mass experiences a sharp, brief downward impact, such as a hammer strike, modeled by an the impulsive force <span class="process-math">\(f(t) .\)</span> An impulsive force of this nature is commonly modeled by using an idealized mathematical object, called the <dfn class="terminology"><em class="emphasis">Dirac delta</em></dfn> “function” denoted by <span class="process-math">\(\delta (t-a),\)</span> which is characterized by the following properties:</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="sec-5-1-2-3">
-<ol class="lower-roman ol-marker-1" id="sec-5-1-2-3-1">
-<li id="sec-5-1-2-3-1-1">
-<div class="para" id="sec-5-1-2-3-1-1-1">
-<span class="process-math">\(\delta(t - a) = 0\)</span> for all <span class="process-math">\(t \ne a\text{;}\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sec-5-1-2-2">
+<ol class="lower-roman ol-marker-1" id="sec-5-1-2-2-1">
+<li id="sec-5-1-2-2-1-1">
+<div class="para" id="sec-5-1-2-2-1-1-1">
+<span class="process-math">\(\delta(t - a) = 0\)</span> for all <span class="process-math">\(t \ne a\text{;}\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item i"><a href="#sec-5-1-2-3-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+<div class="autopermalink" data-description="Item i"><a href="#sec-5-1-2-2-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
 </li>
 <li id="item-5-1-2">
 <div class="para" id="item-5-1-2-1">
@@ -226,25 +240,25 @@ y''(t) + \omega^2 y(t) = f(t), \quad  y(0) = 0,\; y'(0)= 0,\tag{5.1.1}
 <div class="autopermalink" data-description="Item ii"><a href="#item-5-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-5-1-2-4">We note that when <span class="process-math">\(g(t) =1\)</span> in (ii), we obtain <span class="process-math">\(\int_{-\infty}^\infty \delta(t - a)\, dt = 1\text{.}\)</span> Based on the properties (i) and (ii) characterizing <span class="process-math">\(\delta(t - a)\text{,}\)</span> it is important to recognize that <span class="process-math">\(\delta(t - a)\)</span> is not a function in the usual sense; rather it is a typical example of <em class="emphasis">generalized functions</em> or <em class="emphasis">distributions</em> which were first developed rigorously by Sergei Sobolev in 1936 and later in 1950s by Laurent Schwartz who is known to have given the most definitive and systematic development of the theory of distributions. For an elegant introduction to distribution theory with application, the reader is referred to Zemanian<details class="ptx-footnote" aria-live="polite" id="sec-5-1-2-4-7"><summary class="ptx-footnote__number" title="Footnote 5.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-5-1-2-4-7">A.H. Zemanian, <em class="emphasis">Distribution theory and transform analysis</em>, second edition, Dover, New York, 1987; MR0918977</div></details>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-1-2-3">We note that when <span class="process-math">\(g(t) =1\)</span> in (ii), we obtain <span class="process-math">\(\int_{-\infty}^\infty \delta(t - a)\, dt = 1\text{.}\)</span> Based on the properties (i) and (ii) characterizing <span class="process-math">\(\delta(t - a)\text{,}\)</span> it is important to recognize that <span class="process-math">\(\delta(t - a)\)</span> is not a function in the usual sense; rather it is a typical example of <em class="emphasis">generalized functions</em> or <em class="emphasis">distributions</em> which were first developed rigorously by Sergei Sobolev in 1936 and later in 1950s by Laurent Schwartz who is known to have given the most definitive and systematic development of the theory of distributions. For an elegant introduction to distribution theory with application, the reader is referred to Zemanian<details class="ptx-footnote" aria-live="polite" id="sec-5-1-2-3-7"><summary class="ptx-footnote__number" title="Footnote 5.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-5-1-2-3-7">A.H. Zemanian, <em class="emphasis">Distribution theory and transform analysis</em>, second edition, Dover, New York, 1987; MR0918977</div></details>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-5-1-2-5">The Dirac delta function is particularly useful for modeling phenomena involving instantaneous or localized effects, such as a lightning strike, a point heat explosion, or the sudden burst of dye at a specific location. Because of the properties (i) and (ii), the Dirac delta function <span class="process-math">\(\delta(t - a)\)</span> is said to be concentrated at <span class="process-math">\(t=a.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-1-2-4">The Dirac delta function is particularly useful for modeling phenomena involving instantaneous or localized effects, such as a lightning strike, a point heat explosion, or the sudden burst of dye at a specific location. Because of the properties (i) and (ii), the Dirac delta function <span class="process-math">\(\delta(t - a)\)</span> is said to be concentrated at <span class="process-math">\(t=a.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="sec-5-1-2-6">
+<div class="para logical" id="sec-5-1-2-5">
 <div class="para">Mathematically, <span class="process-math">\(\delta(t - a)\)</span> can be interpreted as the limit of a sequence of approximating impulse functions. One such approximation is given by</div>
-<div class="displaymath process-math" id="sec-5-1-2-6-2">
+<div class="displaymath process-math" id="sec-5-1-2-5-2">
 \begin{equation*}
 d_{a, \varepsilon}(t) = \begin{cases} \dfrac{1}{\varepsilon} &amp;\text{if } a \le t \le a + \varepsilon \\ 0 &amp;\text{otherwise}, \end{cases}
 \end{equation*}
 </div>
 <div class="para">which represents a pulse of height <span class="process-math">\(1/\varepsilon\)</span> and width <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> centered at <span class="process-math">\(t = a\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-5-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-5-1-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(d_{a, \varepsilon}(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 5.1.1"><a href="#fig-5-1" title="Copy heading and permalink for Figure 5.1.1" aria-label="Copy heading and permalink for Figure 5.1.1">🔗</a></div></figcaption></figure><div class="para logical" id="sec-5-1-2-8">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(d_{a, \varepsilon}(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 5.1.1"><a href="#fig-5-1" title="Copy heading and permalink for Figure 5.1.1" aria-label="Copy heading and permalink for Figure 5.1.1">🔗</a></div></figcaption></figure><div class="para logical" id="sec-5-1-2-7">
 <div class="para">As <span class="process-math">\(\varepsilon \to 0\text{,}\)</span> this pulse becomes increasingly narrow and tall, concentrating its effect at <span class="process-math">\(t = a\text{,}\)</span> i.e.,</div>
 <div class="displaymath process-math" id="eq-5-2">
 \begin{equation}
@@ -252,7 +266,7 @@ d_{a, \varepsilon}(t) = \begin{cases} \dfrac{1}{\varepsilon} &amp;\text{if } a \
 \end{equation}
 </div>
 <div class="para">while maintaining a total area of 1—mirroring the property (ii) of <span class="process-math">\(\delta(t - a)\text{,}\)</span> i.e.,</div>
-<div class="displaymath process-math" id="sec-5-1-2-8-5">
+<div class="displaymath process-math" id="sec-5-1-2-7-5">
 \begin{equation*}
 \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, dt = \frac{1}{\varepsilon} \varepsilon=1,
 \end{equation*}
@@ -270,9 +284,9 @@ d_{a, \varepsilon}(t) = \begin{cases} \dfrac{1}{\varepsilon} &amp;\text{if } a \
 \end{equation}
 </div>
 <div class="para">by using l’Hôpital’s rule and the continuity of <span class="process-math">\(g\)</span> at <span class="process-math">\(t=a\)</span> from right.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="sec-5-1-2-9">
+<div class="para logical" id="sec-5-1-2-8">
 <div class="para">By formally interchanging the limit and the integral in both <a href="sec-5-1.html#eq-5-3" class="xref" data-knowl="./knowl/xref/eq-5-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.3">(5.1.3)</a> and <a href="sec-5-1.html#eq-5-4" class="xref" data-knowl="./knowl/xref/eq-5-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.4">(5.1.4)</a>, an operation which needs justification in integration theories, we obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-5-3.html ./knowl/xref/eq-5-4.html ./knowl/xref/eq-5-2.html ./knowl/xref/eq-5-4.html ./knowl/xref/eq-5-6.html" id="eq-5-5">
 \begin{equation}
@@ -286,9 +300,9 @@ d_{a, \varepsilon}(t) = \begin{cases} \dfrac{1}{\varepsilon} &amp;\text{if } a \
 \end{equation}
 </div>
 <div class="para">We observe in <a href="sec-5-1.html#eq-5-2" class="xref" data-knowl="./knowl/xref/eq-5-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.2">(5.1.2)</a> and <a href="sec-5-1.html#eq-5-4" class="xref" data-knowl="./knowl/xref/eq-5-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.4">(5.1.4)</a> that <span class="process-math">\(\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)\)</span> exhibits the  properties (i) and (ii) that characterize <span class="process-math">\(\delta(t - a)\text{,}\)</span> and therefore <span class="process-math">\(\delta(t - a)\)</span> can be interpreted as the limit of a sequence of functions that approximate an impulsive behavior. We recognize that <span class="process-math">\(\lim\limits_{\varepsilon \to 0} d_{a, \varepsilon}(t)\)</span> also does not define a function on <span class="process-math">\((-\infty, \infty)\)</span> in the classical sense because its value at <span class="process-math">\(t=a\)</span> is <span class="process-math">\(\infty.\)</span> Instead, the limit is understood as a generalized function, or a distribution, because of the way it operates primarily through its action on other functions within integrals, as described by the property ii., which is motivated by <a href="sec-5-1.html#eq-5-6" class="xref" data-knowl="./knowl/xref/eq-5-6.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.6">(5.1.6)</a>.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="sec-5-1-2-10">
+<div class="para logical" id="sec-5-1-2-9">
 <div class="para">By using the property ii., we find that for all <span class="process-math">\(s\)</span> in <span class="process-math">\((-\infty,  \infty),\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-5-7.html ./knowl/xref/def-5-1.html" id="eq-5-7">
 \begin{equation}
@@ -302,7 +316,7 @@ d_{a, \varepsilon}(t) = \begin{cases} \dfrac{1}{\varepsilon} &amp;\text{if } a \
 \end{equation}
 </div>
 <div class="para">for all real values of <span class="process-math">\(s\text{.}\)</span> This integral is known as the <em class="emphasis">Laplace transform</em> (see <a href="sec-5-1.html#def-5-1" class="xref" data-knowl="./knowl/xref/def-5-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.2: (Laplace transform)">Definition 5.1.2</a>) of the Dirac delta function <span class="process-math">\(\delta(t - a)\text{,}\)</span> denoted by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-5-7.html ./knowl/xref/def-5-1.html" id="sec-5-1-2-10-13">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-5-7.html ./knowl/xref/def-5-1.html" id="sec-5-1-2-9-13">
 \begin{equation}
 \mathcal {L}\{\delta(t - a)\} = e^{-as}.\tag{5.1.9}
 \end{equation}
@@ -313,11 +327,11 @@ d_{a, \varepsilon}(t) = \begin{cases} \dfrac{1}{\varepsilon} &amp;\text{if } a \
 \mathcal {L}\{\delta(t)\} = 1.\tag{5.1.10}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-5-1-2-11">The main objective of this chapter is to develop a method for solving initial value problems such as <a href="sec-5-1.html#eq-5-1" class="xref" data-knowl="./knowl/xref/eq-5-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.1">(5.1.1)</a> in which <span class="process-math">\(f(t)\)</span> is either discontinuous or involves the Dirac delta functions. The methods of undetermined coefficients and variation of parameters are not relevant to <a href="sec-5-1.html#eq-5-1" class="xref" data-knowl="./knowl/xref/eq-5-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.1">(5.1.1)</a> with <span class="process-math">\(f(t) = \delta (t-a)\)</span> because the calculus of distributions is beyond the scope of this book. In particular, we do not have a meaning of <span class="process-math">\(y''\)</span> in this case.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-1-2-10">The main objective of this chapter is to develop a method for solving initial value problems such as <a href="sec-5-1.html#eq-5-1" class="xref" data-knowl="./knowl/xref/eq-5-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.1">(5.1.1)</a> in which <span class="process-math">\(f(t)\)</span> is either discontinuous or involves the Dirac delta functions. The methods of undetermined coefficients and variation of parameters are not relevant to <a href="sec-5-1.html#eq-5-1" class="xref" data-knowl="./knowl/xref/eq-5-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.1">(5.1.1)</a> with <span class="process-math">\(f(t) = \delta (t-a)\)</span> because the calculus of distributions is beyond the scope of this book. In particular, we do not have a meaning of <span class="process-math">\(y''\)</span> in this case.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-5-1-2-12">Being motivated from <a href="sec-5-1.html#eq-5-8" class="xref" data-knowl="./knowl/xref/eq-5-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.8">(5.1.8)</a> with the Dirac delta function <span class="process-math">\(\delta(t - a)\)</span> in the integrand, we first define the <em class="emphasis">Laplace transform</em> of classical functions defined on <span class="process-math">\([0, \infty).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-1-2-11">Being motivated from <a href="sec-5-1.html#eq-5-8" class="xref" data-knowl="./knowl/xref/eq-5-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.8">(5.1.8)</a> with the Dirac delta function <span class="process-math">\(\delta(t - a)\)</span> in the integrand, we first define the <em class="emphasis">Laplace transform</em> of classical functions defined on <span class="process-math">\([0, \infty).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-5-1"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(Laplace transform).</span>
@@ -332,14 +346,14 @@ F(s):=\int_0^\infty f(t)\, e^{-st} \, dt
 <div class="para">for those <span class="process-math">\(s\)</span> for which the integral converges.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 5.1.2: (Laplace transform)"><a href="#def-5-1" title="Copy heading and permalink for Definition 5.1.2: (Laplace transform)" aria-label="Copy heading and permalink for Definition 5.1.2: (Laplace transform)">🔗</a></div></article><div class="para" id="sec-5-1-2-14">The symbol <span class="process-math">\(\mathcal {L}\)</span> represents a transformation that maps an input function <span class="process-math">\(f\)</span> of the variable <span class="process-math">\(t\)</span> (usually time) to an output function <span class="process-math">\(F\)</span> of the variable <span class="process-math">\(s\)</span> (usually involving frequency when <span class="process-math">\(s\)</span> is a complex number). This action of the transformation is depicted in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 5.1.2: (Laplace transform)"><a href="#def-5-1" title="Copy heading and permalink for Definition 5.1.2: (Laplace transform)" aria-label="Copy heading and permalink for Definition 5.1.2: (Laplace transform)">🔗</a></div></article><div class="para" id="sec-5-1-2-13">The symbol <span class="process-math">\(\mathcal {L}\)</span> represents a transformation that maps an input function <span class="process-math">\(f\)</span> of the variable <span class="process-math">\(t\)</span> (usually time) to an output function <span class="process-math">\(F\)</span> of the variable <span class="process-math">\(s\)</span> (usually involving frequency when <span class="process-math">\(s\)</span> is a complex number). This action of the transformation is depicted in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/laplace-operator.svg" role="img" class="contained"></div>
-<div class="para" id="sec-5-1-2-16">The variable <span class="process-math">\(s\)</span> in the definition of the Laplace transform can, in general, be a complex variable; however, in the current chapter, we will restrict <span class="process-math">\(s\)</span> to a real variable.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-1-2-15">The variable <span class="process-math">\(s\)</span> in the definition of the Laplace transform can, in general, be a complex variable; however, in the current chapter, we will restrict <span class="process-math">\(s\)</span> to a real variable.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-5-1-2-17">The Laplace transform is a powerful tool for solving initial value problems for ordinary differential equations, especially those with nonhomogeneous terms that are piecewise continuous or involve the Dirac delta function. The key idea is to apply the Laplace transform to both sides of the differential equation, which converts the problem from the time domain (involving <span class="process-math">\(t\)</span>) to the complex frequency domain (involving <span class="process-math">\(s\)</span>). This transformation turns differentiation into algebraic manipulation, making it easier to solve for the transformed function <span class="process-math">\(F(s)\text{.}\)</span> Once we have <span class="process-math">\(F(s)\text{,}\)</span> we can then find the original function <span class="process-math">\(f(t)\)</span> by applying the inverse Laplace transform <span class="process-math">\(\mathcal {L}^{-1}\)</span> to <span class="process-math">\(F(s)\text{.}\)</span> Before we begin using Laplace transforms to solve initial value problems, we compute the Laplace transforms of several common functions that appeared in the previous chapters, such as polynomial functions, exponential functions, trigonometric functions, and some combinations of these functions. The Laplace transform of the Dirac delta function is encountered in <a href="sec-5-1.html#eq-5-8" class="xref" data-knowl="./knowl/xref/eq-5-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.8">(5.1.8)</a> and will be used in solving initial value problems with impulsive forcing.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-1-2-16">The Laplace transform is a powerful tool for solving initial value problems for ordinary differential equations, especially those with nonhomogeneous terms that are piecewise continuous or involve the Dirac delta function. The key idea is to apply the Laplace transform to both sides of the differential equation, which converts the problem from the time domain (involving <span class="process-math">\(t\)</span>) to the complex frequency domain (involving <span class="process-math">\(s\)</span>). This transformation turns differentiation into algebraic manipulation, making it easier to solve for the transformed function <span class="process-math">\(F(s)\text{.}\)</span> Once we have <span class="process-math">\(F(s)\text{,}\)</span> we can then find the original function <span class="process-math">\(f(t)\)</span> by applying the inverse Laplace transform <span class="process-math">\(\mathcal {L}^{-1}\)</span> to <span class="process-math">\(F(s)\text{.}\)</span> Before we begin using Laplace transforms to solve initial value problems, we compute the Laplace transforms of several common functions that appeared in the previous chapters, such as polynomial functions, exponential functions, trigonometric functions, and some combinations of these functions. The Laplace transform of the Dirac delta function is encountered in <a href="sec-5-1.html#eq-5-8" class="xref" data-knowl="./knowl/xref/eq-5-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.8">(5.1.8)</a> and will be used in solving initial value problems with impulsive forcing.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-5-1-2-18">By using <a href="sec-5-1.html#def-5-1" class="xref" data-knowl="./knowl/xref/def-5-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.2: (Laplace transform)">Definition 5.1.2</a>, we compute the Laplace transforms of some common functions in the examples below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-1-2-17">By using <a href="sec-5-1.html#def-5-1" class="xref" data-knowl="./knowl/xref/def-5-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.2: (Laplace transform)">Definition 5.1.2</a>, we compute the Laplace transforms of some common functions in the examples below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-5-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -536,25 +550,25 @@ F(s):=\int_0^\infty f(t)\, e^{-st} \, dt
 <div class="autopermalink" data-description="Paragraph"><a href="#shifting-on-s-axis-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 5.1.9.1"><a href="#shifting-on-s-axis-3" title="Copy heading and permalink for Solution 5.1.9.1" aria-label="Copy heading and permalink for Solution 5.1.9.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.9: Shifting on the s-axis"><a href="#shifting-on-s-axis" title="Copy heading and permalink for Example 5.1.9: Shifting on the s-axis" aria-label="Copy heading and permalink for Example 5.1.9: Shifting on the s-axis">🔗</a></div></article></details><div class="para logical" id="sec-5-1-2-26">
+</div></details><div class="autopermalink" data-description="Example 5.1.9: Shifting on the s-axis"><a href="#shifting-on-s-axis" title="Copy heading and permalink for Example 5.1.9: Shifting on the s-axis" aria-label="Copy heading and permalink for Example 5.1.9: Shifting on the s-axis">🔗</a></div></article></details><div class="para logical" id="sec-5-1-2-25">
 <div class="para">A simple but useful example of a discontinuous function is the <dfn class="terminology"><em class="emphasis">unit step function</em></dfn> <span class="process-math">\(\mathcal {U}\text{,}\)</span> also known as the <dfn class="terminology"><em class="emphasis">Heaviside</em></dfn> function (named in honor of the English mathematician, engineer, and physicist Oliver Heaviside (1850–1925)). It is defined on <span class="process-math">\((-\infty, \infty)\)</span> by</div>
-<div class="displaymath process-math" id="sec-5-1-2-26-5">
+<div class="displaymath process-math" id="sec-5-1-2-25-5">
 \begin{equation*}
 \mathcal {U}(t) = \begin{cases} 0 &amp; \text{if } t &lt; 0, \\ 1 &amp; \text{if } t \ge 0.
 \end{cases}
 \end{equation*}
 </div>
 <div class="para">The unit step function with the jump discontinuity at <span class="process-math">\(t= a\)</span> is given by</div>
-<div class="displaymath process-math" id="sec-5-1-2-26-7">
+<div class="displaymath process-math" id="sec-5-1-2-25-7">
 \begin{equation*}
 \mathcal {U}(t-a) = \begin{cases} 0 &amp; \text{if } t &lt; a, \\ 1 &amp; \text{if } t \ge a, \end{cases}.
 \end{equation*}
 </div>
 <div class="para">The graph of  the unit step function <span class="process-math">\(\mathcal {U}(t-2)\)</span> is shown in the figure below.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="unit-step-function"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/unit-step-function-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(\mathcal {U}(t-2)\)</span><div class="autopermalink" data-description="Figure 5.1.10"><a href="#unit-step-function" title="Copy heading and permalink for Figure 5.1.10" aria-label="Copy heading and permalink for Figure 5.1.10">🔗</a></div></figcaption></figure><div class="para" id="sec-5-1-2-28">The unit step function is used to model situations where a quantity changes abruptly at a certain point in time, such as a switch being turned on or off, or a force being applied suddenly.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(\mathcal {U}(t-2)\)</span><div class="autopermalink" data-description="Figure 5.1.10"><a href="#unit-step-function" title="Copy heading and permalink for Figure 5.1.10" aria-label="Copy heading and permalink for Figure 5.1.10">🔗</a></div></figcaption></figure><div class="para" id="sec-5-1-2-27">The unit step function is used to model situations where a quantity changes abruptly at a certain point in time, such as a switch being turned on or off, or a force being applied suddenly.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-5-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -580,24 +594,24 @@ F(s):=\int_0^\infty f(t)\, e^{-st} \, dt
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-5-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 5.1.11.1"><a href="#ex-5-7-2" title="Copy heading and permalink for Solution 5.1.11.1" aria-label="Copy heading and permalink for Solution 5.1.11.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.11"><a href="#ex-5-7" title="Copy heading and permalink for Example 5.1.11" aria-label="Copy heading and permalink for Example 5.1.11">🔗</a></div></article></details><div class="para" id="sec-5-1-2-30">To model situations in applications where an external force or source begins acting only after time <span class="process-math">\(t = a\text{,}\)</span> we analyze the effect of shifting the source function along the <span class="process-math">\(t\)</span>-axis.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.11"><a href="#ex-5-7" title="Copy heading and permalink for Example 5.1.11" aria-label="Copy heading and permalink for Example 5.1.11">🔗</a></div></article></details><div class="para" id="sec-5-1-2-29">To model situations in applications where an external force or source begins acting only after time <span class="process-math">\(t = a\text{,}\)</span> we analyze the effect of shifting the source function along the <span class="process-math">\(t\)</span>-axis.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="sec-5-1-2-31">
+<div class="para logical" id="sec-5-1-2-30">
 <div class="para">Suppose the function <span class="process-math">\(g(t)\)</span> is effective only at and after the time <span class="process-math">\(t = a\text{.}\)</span> In that case, we can write</div>
-<div class="displaymath process-math" id="sec-5-1-2-31-3">
+<div class="displaymath process-math" id="sec-5-1-2-30-3">
 \begin{equation*}
 g(t) =\begin{cases} f(t-a) \amp \text{if } t \ge a,\\ 0 \amp \text{if } t &lt; a, \end{cases},
 \end{equation*}
 </div>
 <div class="para">which is obtained by shifting the graph of <span class="process-math">\(f(t)\)</span> to the right by <span class="process-math">\(a\)</span> units and taking the zero function to the left of <span class="process-math">\(t = a\text{.}\)</span> This function can be expressed in terms of the unit step function as</div>
-<div class="displaymath process-math" id="sec-5-1-2-31-7">
+<div class="displaymath process-math" id="sec-5-1-2-30-7">
 \begin{equation*}
 g(t) = \mathcal {U}(t-a) f(t-a),
 \end{equation*}
 </div>
 <div class="para">whose graph is shown in the figure below, where the blue curve represents <span class="process-math">\(f(t)\)</span> and the red curve represents <span class="process-math">\(g(t).\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-shifting-on-t-axis"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig-shifting-on-t-axis-2.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Shifting on the <span class="process-math">\(t\)</span>-axis<div class="autopermalink" data-description="Figure 5.1.12"><a href="#fig-shifting-on-t-axis" title="Copy heading and permalink for Figure 5.1.12" aria-label="Copy heading and permalink for Figure 5.1.12">🔗</a></div></figcaption></figure><details id="ex-shifting-on-t-axis" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
@@ -625,7 +639,7 @@ g(t) = \mathcal {U}(t-a) f(t-a),
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-shifting-on-t-axis-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 5.1.13.1"><a href="#ex-shifting-on-t-axis-3" title="Copy heading and permalink for Solution 5.1.13.1" aria-label="Copy heading and permalink for Solution 5.1.13.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.13: Laplace transform of a shifted function"><a href="#ex-shifting-on-t-axis" title="Copy heading and permalink for Example 5.1.13: Laplace transform of a shifted function" aria-label="Copy heading and permalink for Example 5.1.13: Laplace transform of a shifted function">🔗</a></div></article></details><div class="para" id="sec-5-1-2-34">The linearity of the Riemann integration yields the linearity of the Laplace transform operator <span class="process-math">\(\mathcal {L}\text{,}\)</span> as stated in the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.13: Laplace transform of a shifted function"><a href="#ex-shifting-on-t-axis" title="Copy heading and permalink for Example 5.1.13: Laplace transform of a shifted function" aria-label="Copy heading and permalink for Example 5.1.13: Laplace transform of a shifted function">🔗</a></div></article></details><div class="para" id="sec-5-1-2-33">The linearity of the Riemann integration yields the linearity of the Laplace transform operator <span class="process-math">\(\mathcal {L}\text{,}\)</span> as stated in the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-5-1"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linearity of the Laplace transform.</span>
@@ -639,18 +653,18 @@ g(t) = \mathcal {U}(t-a) f(t-a),
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 5.1.14: Linearity of the Laplace transform"><a href="#thm-5-1" title="Copy heading and permalink for Theorem 5.1.14: Linearity of the Laplace transform" aria-label="Copy heading and permalink for Theorem 5.1.14: Linearity of the Laplace transform">🔗</a></div></article><details id="sec-5-1-2-36" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-5-1-2-36-1">
+<div class="autopermalink" data-description="Theorem 5.1.14: Linearity of the Laplace transform"><a href="#thm-5-1" title="Copy heading and permalink for Theorem 5.1.14: Linearity of the Laplace transform" aria-label="Copy heading and permalink for Theorem 5.1.14: Linearity of the Laplace transform">🔗</a></div></article><details id="sec-5-1-2-35" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-5-1-2-35-1">
 <div class="para">By using the definition of the Laplace transform, we have</div>
-<div class="displaymath process-math" id="sec-5-1-2-36-1-1">
+<div class="displaymath process-math" id="sec-5-1-2-35-1-1">
 \begin{align*}
 \mathcal {L}\{\alpha f(t) + \beta g(t)\} \amp = \int_0^\infty e^{-st} (\alpha f(t) + \beta g(t)) dt\\
 \amp = \alpha \int_0^\infty e^{-st} f(t) dt + \beta \int_0^\infty e^{-st} g(t) dt\\
 \amp = \alpha \mathcal {L}\{f(t)\} + \beta \mathcal {L}\{g(t)\}.
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-36-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-1-2-35-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1"><a href="#sec-5-1-2-36" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details></section><section class="subsection" id="subsec-5-1-4"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 1"><a href="#sec-5-1-2-35" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details></section><section class="subsection" id="subsec-5-1-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">When does the Laplace transform exist?</span>
 </h3>
 <div class="para logical" id="subsec-5-1-4-2">
