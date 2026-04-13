@@ -188,7 +188,7 @@
 
         <figure xml:id="mixing-tanks">
             <caption>Two connected mixing tanks.</caption>
-            <image width="80%">
+            <image width="70%">
                 <latex-image>
                     \begin{tikzpicture}[thick, scale=1.2, every node/.style={scale=1}]
 
@@ -271,6 +271,217 @@
             and <m>B</m> hanging vertically from a rigid support to form a coupled spring-mass
             system as shown in the figure below. </p>
 
+        <figure xml:id="fig-coupled-mass-spring">
+            <caption>A coupled mass-spring system showing unstretched, equilibrium, motion, and
+                coordinate-axis configurations.</caption>
+            <image width="90%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.1, &gt;=stealth]
+                    \tikzset{
+                    spring/.style={thick,decorate,decoration={coil,aspect=0.4,segment
+                    length=4pt,amplitude=3pt}},
+                    mass/.style={draw,fill=pink!60,minimum width=1cm,minimum height=0.7cm},
+                    dashedline/.style={dashed,gray},
+                    labeltext/.style={font=\small}
+                    }
+                    %--------------------------------
+		% (a) Unstretched spring
+		%--------------------------------
+		\begin{scope}[xshift=0cm]
+			\node[below] at (0,-4.7) {(a)};
+			% Ceiling
+			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+			\node[above] at (0,0.2) {\small Rigid Support};
+			% Spring (natural length l_1)
+			\draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-2.2);
+			%\draw[spring, aspect=0.7] (0,0) -- (0,-2.2);
+			\draw[&lt;-&gt;] (0.4,0) -- (0.4,-2.2);
+			\node[right,labeltext] at (0.41,-1) {$\ell_1$};
+			% Dashed reference line
+			\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+
+			%Spring (natural length l_2)
+			\draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate] (0,-2.2) -- (0,-4.4);
+			%\draw[spring, aspect=0.7] (0,-2,2) -- (0,-4.4);
+			\draw[&lt;-&gt;](0.4,-2.2) -- (0.4,-4.4);
+			\node[right,labeltext] at (0.41,-3) {$\ell_2$};
+			% Dashed reference line
+			\draw[dashedline] (-0.8,-4.4) -- (0.8,-4.4);
+
+			\node[below,labeltext] at (0,-4.4) {unstretched springs};
+
+		\end{scope}
+        %--------------------------------
+		% (b) Equilibrium position
+		%--------------------------------
+		\begin{scope}[xshift=1.75cm]
+			\node[below] at (0,-7.8) {(b)};
+			% Ceiling
+			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+			%\node[above] at (0,0.2) {\small Rigid Support};
+			%first spring
+			\draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-3.1);
+			%\draw[spring] (0,0) -- (0,-3.1);
+			\node[mass] (m1) at (0,-3.4) {$m_1$};
+			% Labels
+			\draw[&lt;-&gt;] (0.45,0) -- (0.45,-2.2);
+			\node[right,labeltext] at (0.45,-1) {$\ell_1$};
+			\draw[dashedline] (0.45,-3.4) -- (5,-3.4); %the line corresponding to the origin
+			%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+			% Bracket for s
+			\draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.4);
+			\node[right,labeltext] at (0.45,-2.7) {$s_1$};
+			%%\node[below,labeltext] at (0,-3.8) {mass in equilibrium};
+			%second spring
+			\draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate] (0,-3.7) -- (0,-7);
+			%\draw[spring] (0,0) -- (0,-3.1);
+			\node[mass] (m2) at (0,-7.2) {$m_2$};
+			% Labels
+			\draw[&lt;-&gt;] (0.45,-3.4) -- (0.45,-5.6);
+			\node[right,labeltext] at (0.45,-4.8) {$\ell_2$};
+			%\node[right,labeltext] at (0,-2.4) {$s$};
+			\draw[dashedline] (0.45,-7.2) -- (5,-7.2); %the line corresponding to the origin for y2
+			% Bracket for s
+			\draw[&lt;-&gt;] (0.45,-5.6) -- (0.45,-7.1);
+			\node[right,labeltext] at (0.45,-6) {$s_2$};
+			\node[below,labeltext] at (0,-7.5) {masses in equilibrium};
+		\end{scope}
+    %--------------------------------
+		% (b) Equilibrium position
+		%--------------------------------
+		\begin{scope}[xshift=1.75cm]
+			\node[below] at (0,-7.8) {(b)};
+			% Ceiling
+			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+			%\node[above] at (0,0.2) {\small Rigid Support};
+			%first spring
+			\draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-3.1);
+			%\draw[spring] (0,0) -- (0,-3.1);
+			\node[mass] (m1) at (0,-3.4) {$m_1$};
+			% Labels
+			\draw[&lt;-&gt;](0.45,0) -- (0.45,-2.2);
+			\node[right,labeltext] at (0.45,-1) {$\ell_1$};
+			\draw[dashedline] (0.45,-3.4) -- (5,-3.4); %the line corresponding to the origin
+			%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+			% Bracket for s
+			\draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.4);
+			\node[right,labeltext] at (0.45,-2.7) {$s_1$};
+			%%\node[below,labeltext] at (0,-3.8) {mass in equilibrium};
+			%second spring
+			\draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate] (0,-3.7) -- (0,-7);
+			%\draw[spring] (0,0) -- (0,-3.1);
+			\node[mass] (m2) at (0,-7.2) {$m_2$};
+			% Labels
+			\draw[&lt;-&gt;] (0.45,-3.4) -- (0.45,-5.6);
+			\node[right,labeltext] at (0.45,-4.8) {$\ell_2$};
+			%\node[right,labeltext] at (0,-2.4) {$s$};
+			\draw[dashedline] (0.45,-7.2) -- (5,-7.2); %the line corresponding to the origin for y2
+			% Bracket for s
+			\draw[&lt;-&gt;] (0.45,-5.6) -- (0.45,-7.1);
+			\node[right,labeltext] at (0.45,-6) {$s_2$};
+			\node[below,labeltext] at (0,-7.5) {masses in equilibrium};
+		\end{scope}
+        %--------------------------------
+		% (c) Motion (displacement y_1 nd y_2)
+		%--------------------------------
+		\begin{scope}[xshift=4.25cm]
+
+			% Ceiling
+			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+			%\node[above] at (0,0.2) {\small Rigid Support};
+			% Spring
+			\draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-4.1);
+			%\draw[spring] (0,0) -- (0,-3);
+			\node[mass] (m2) at (0,-4.4) {$m_1$};
+			\draw[dashedline] (0.2,-4.4) -- (0.8,-4.4);
+			% Labels
+			%			\node[right,labeltext] at (0,-1.3) {$\ell$};
+			%			\node[right,labeltext] at (0,-2.7) {$s$};
+
+			% Bracket for total extension
+			\draw[&lt;-&gt;] (0.7,0) -- (0.7,-3.4);
+			\node[right,labeltext] at (0.7,-1.5) {$\ell_1 + s_1$};
+
+			\draw[&lt;-&gt;] (0.7,-3.4)--(0.7,-4.4);
+			\node[right,labeltext] at (0.7,-3.6) {$y_1(t)$};
+			% Dashed lines
+			%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+			%\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
+
+
+			% Thick vertical wall
+			\draw[thick] (-0.4,-10) -- (-0.4,0);
+			% Friction hatch marks (diagonal lines)
+			\foreach \y in {-10,-9.8,...,-0.2}
+			\draw[thick] (-0.4,\y) -- (-0.45,\y+0.2);
+
+
+			% Optional label
+			\node[rotate=90,left] at (-0.8,-1) {\text{wall/friction}};
+
+			%			% Example mass block next to wall
+			%			\draw[fill=gray!30] (0.5,1) rectangle (1.5,2);
+
+			% Optional arrow to indicate external force
+			\draw[-&gt;,blue,very thick] (-0.3,-4.1) -- (-0.3,-3.9) node[left] {};
+			\draw[-&gt;,blue,very thick] (-0.3,-4.7) -- (-0.3,-4.9) node[left] {$F_1(t)$};
+
+			%second spring-mass
+			\draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate] (0,-4.7) -- (0,-9);
+			%\draw[spring] (0,0) -- (0,-3);
+			\node[mass] (m2) at (0,-9.2) {$m_2$};
+			% Bracket for total extension
+			\draw[&lt;-&gt;] (0.7,-4.4) -- (0.7,-7.8);
+			\node[right,labeltext] at (0.7,-5.5) {$\ell_2 + s_2$};
+
+			\draw[&lt;-&gt;]  (0.7,-7.8)--(0.7,-9.2);
+			\node[right,labeltext] at (0.7,-8.5) {$y_2(t)$};
+			\draw[dashedline] (0.2,-9.2) -- (0.8,-9.2);
+
+			% Optional arrow to indicate external force
+			\draw[-&gt;,blue,very thick] (-0.3,-8.9) -- (-0.3,-8.7) node[left] {};
+			\draw[-&gt;,blue,very thick] (-0.3,-9.5) -- (-0.3,-9.7) node[left] {$F_2(t)$};
+
+			\node[below,labeltext] at (0,-9.9) {masses in motion};
+			\node[below] at (0,-10.2) {(c)};
+		\end{scope}
+
+        %--------------------------------
+		% (d) Coordinate system
+		%--------------------------------
+		\begin{scope}[xshift=3.8cm]
+
+			% Bracket for total extension
+			\draw[-&gt;,very thick] (3,0.25) -- (3,-9.2); % the coordinate axis line
+
+
+			\node[right,labeltext] at (3.1,-1.9) {$y_1&lt;0$};
+
+			\filldraw[black] (3,-3.4) circle (2pt);
+			\node[right,labeltext] at (3.1,-3.4) {$y_1=0$\;(origin)};
+			\node[right,labeltext] at (3.1,-4.5) {$y_1&gt;0$};
+
+			\node[right,labeltext] at (3.1,-5.9) {$y_2&lt;0$};
+
+			\filldraw[black] (3,-7.2) circle (2pt);
+			\node[right,labeltext] at (3.1,-7.2) {$y_2=0$\;(origin)};
+			\node[right,labeltext] at (3.1,-8.3) {$y_2>0$};
+
+			% Dashed lines
+			%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+			%			\draw[dashedline] (-0.8,-4.3) -- (0.8,-4.3);
+			%			\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
+			\node[below,labeltext] at (3.1,-9.9) {the coordinate axis};
+			\node[below] at (3.1,-10.2) {(d)};
+			%\node[below,labeltext] at (3.1,-5.1)  {positive downward};
+		\end{scope}
+
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+
+
         <p> Let <m>x_1(t)</m> and <m>x_2(t)</m> denote the vertical displacements of the masses from
             their equilibrium positions. We take the positive direction of the displacements to be
             vertically downward. When the masses are in motion, the spring <m>B</m> is subject to
@@ -338,11 +549,11 @@
                     ref="spring-mass-2" />.</p>
 
             <figure xml:id="fig-coupled-spring-mass">
-            <caption>Graphs of the solutions <m>x_1(t)</m> and <m> x_2(t)</m>
-            </caption>
-            <image source="images/spring_mass">
-            </image>
-        </figure>
+                <caption>Graphs of the solutions <m>x_1(t)</m> and <m> x_2(t)</m>
+                </caption>
+                <image source="images/spring_mass">
+                </image>
+            </figure>
 
 
         </example>
@@ -433,8 +644,8 @@
 
         <p> Furthermore, by Kirchhoff’s second law, the current split at the junction A is given by <me>
             i(t) = i_1(t) + i_2(t),
-            </me> which, in view of <m>i_1(t)= q_1'(t)</m>,
-            becomes <me>
+            </me> which, in view of <m>i_1(t)=
+            q_1'(t)</m>, becomes <me>
                 q'_1(t) + i_2(t) -i(t) =0.
             </me> Thus, a linear system in <m>i(t),
             q_1(t)</m> and <m> i_2(t)</m> is </p>
@@ -446,38 +657,35 @@
             \end{cases}
         </men>
 
-        <p> We now proceed to solve the system <xref ref="LRC-system" />. Differentiating  the third equation
-            in <xref ref="LRC-system" /> with
-            respect to <m>t</m> yields
-            <men xml:id="LRC-system-1">
-            i'(t) = q''_1(t) + i'_2(t).
-               </men>
-               Solving for <m>i'_2(t)</m> from the second equation in <xref ref="LRC-system" />
-            and substituting it into <xref ref="LRC-system-1" /> gives
-            <me>
+        <p> We now proceed to solve the system <xref ref="LRC-system" />. Differentiating the third
+            equation in <xref ref="LRC-system" /> with respect to <m>t</m> yields <men
+                xml:id="LRC-system-1">
+                i'(t) = q''_1(t) + i'_2(t).
+            </men> Solving for <m>i'_2(t)</m>
+            from the second equation in <xref ref="LRC-system" /> and substituting it into <xref
+                ref="LRC-system-1" /> gives <me>
                 i'(t) = q''_1(t) + \frac{1}{LC}q_1(t).
-            </me>
-            Substituting this expression for <m>i'(t)</m> into the equation
-            obtained by differentiating the first equation in <xref ref="LRC-system" /> with respect to <m>t</m>, we
-            get <me xml:id="LRC-system-2">
+            </me> Substituting
+            this expression for <m>i'(t)</m> into the equation obtained by differentiating the first
+            equation in <xref ref="LRC-system" /> with respect to <m>t</m>, we get <me
+                xml:id="LRC-system-2">
                 LRC q''_1(t) +Lq'_1(t)+ Rq_1(t) = LCe'(t),
-            </me> which can be solved for <m>q_1(t).</m> Once <m>q_1(t)</m> is
-            determined, we find <m>i_1(t)</m> by using <m>i_1(t)= q_1'(t).</m> We then find <m>i(t)</m>
-            from the first equation in <xref ref="LRC-system" /> by using <m>q_1(t)</m> there. Finally, we find <m>i_2(t)
-            = i(t) - i_1(t).</m>
+            </me> which can
+            be solved for <m>q_1(t).</m> Once <m>q_1(t)</m> is determined, we find <m>i_1(t)</m> by
+            using <m>i_1(t)= q_1'(t).</m> We then find <m>i(t)</m> from the first equation in <xref
+                ref="LRC-system" /> by using <m>q_1(t)</m> there. Finally, we find <m>i_2(t)
+                = i(t) - i_1(t).</m>
         </p>
     </subsection>
 
     <exercises xml:id="exercises-linear-systems">
         <exercise>
-            <p>
-                Solve the initial value problem <me>\begin{cases}
-                x_1'' = -5 x_1 + 2 x_2 , \\
-                x_2'' = 2 x_1 - 2 x_2, \\
-                x_1(0) = 0, \quad x_1'(0) = -1, \\
-                x_2(0) = 0, \quad x_2'(0) = 1.
-                \end{cases}</me> by using the Laplace transform.
-            </p>
+            <p> Solve the initial value problem <me>\begin{cases}
+                    x_1'' = -5 x_1 + 2 x_2 , \\
+                    x_2'' = 2 x_1 - 2 x_2, \\
+                    x_1(0) = 0, \quad x_1'(0) = -1, \\
+                    x_2(0) = 0, \quad x_2'(0) = 1.
+                    \end{cases}</me> by using the Laplace transform. </p>
         </exercise>
 
     </exercises>

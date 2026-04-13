@@ -19,8 +19,19 @@
   <!-- macros for defining latex math shortcuts. It is good practice -->
   <!-- to define these semantically, so that the macro relates to what-->
   <!-- it defines. -->
-  <macros> \newcommand{\ds}{\displaystyle} \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} </macros>
 
+<macros>
+  \newcommand{\ds}{\displaystyle}
+  \newcommand{\N}{\mathbb N}
+  \newcommand{\Z}{\mathbb Z}
+  \newcommand{\Q}{\mathbb Q}
+  \newcommand{\R}{\mathbb R}
+  \newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
+  \newcommand{\real}{\Bbb R}
+  <!-- \newcommand{\lt}{&lt;}
+  \newcommand{\gt}{&gt;}
+  \newcommand{\amp}{&amp;} -->
+</macros>
   <!-- If you put any latex-image elements you can include preambles -->
   <!-- for those in the next element. -->
   <latex-image-preamble>
@@ -29,6 +40,7 @@
      \usetikzlibrary{positioning,matrix,arrows}
      \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
      \usetikzlibrary{decorations.markings}
+     \usetikzlibrary{decorations.pathmorphing}
     </latex-image-preamble>
 
 <!-- <latex-preamble>
@@ -43,13 +55,10 @@
   <!-- <cross-references text="type-global" /> -->
 <!--prefigure macros-->
 
-  <macros>
-    \newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
-    \newcommand{\real}{\Bbb R}
-    \newcommand{\lt}{&lt;}
-    \newcommand{\gt}{&gt;}
-    \newcommand{\amp}{&amp;}
-  </macros>
+
+
+
+
   <prefigure-preamble xmlns="https://prefigure.org">
     <graph stroke="green"/>
     <point style="diamond" size="5" fill="blue" outline="yes"/>
