@@ -176,8 +176,7 @@
                 x(t) &amp;= x_0 e^{-a t}, \\[6pt]
                 y(t) &amp;= \frac{a x_0}{b - a} \left( e^{-a t} - e^{-b t} \right), \\[6pt]
                 z(t) &amp;= x_0 \left[\ds 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right],
-            \end{cases}</me> as expected.
-        </p>
+            \end{cases}</me> as expected. </p>
     </subsection>
 
     <subsection xml:id="subsec-Mixing-Tanks">
@@ -185,7 +184,7 @@
         <p>
             Consider two connected mixing tanks as shown
             in the figure below.
-         </p>
+        </p>
 
         <figure xml:id="mixing-tanks">
             <caption>Two connected mixing tanks.</caption>
@@ -313,54 +312,176 @@
                 </men>
             </p>
 
+            <p>
+                Taking the Laplace transform yields
+            </p>
 
-                <p>
-                    Taking the Laplace transform yields
-                </p>
-
-                <p>
-                    <me>\begin{cases}
-                        s^2 X_1(s) - s x_1(0) - x_1'(0) = -5 X_1(s) + 2 X_2(s), \\
-                        s^2 X_2(s) - s x_2(0) - x_2'(0) = 2 X_1(s) - 2 X_2(s).
-                        \end{cases}</me> Using the given initial conditions yields <me>\begin{cases}
-                    (s^2+5) X_1(s) + 1 = 2 X_2(s), \\
-                        (s^2+2) X_2(s) - 1 = 2 X_1(s).
-                        \end{cases}</me> Solving for <m>X_1(s)</m> and <m>X_2(s)</m> gives </p>
-
-                <p>
-                    <me>X_1(s) = \frac{-s^2}{(s^2 + 1)(s^2 + 6)} \quad \text{and}\quad
-                        X_2(s) = \frac{s^2 + 3}{(s^2 + 1)(s^2 + 6)}.</me> Partial fraction
-                    decomposition of <m>X_1(s)</m> and <m>X_2(s)</m> are </p>
-
-                <p>
-                    <me>X_1(s) = \frac{1/5}{s^2 + 1} - \frac{6/5}{s^2 + 6}\quad \text{and}\quad
+            <p>
+                <me>\begin{cases}
+                    s^2 X_1(s) - s x_1(0) - x_1'(0) = -5 X_1(s) + 2 X_2(s), \\
+                    s^2 X_2(s) - s x_2(0) - x_2'(0) = 2 X_1(s) - 2 X_2(s).
+                    \end{cases}</me> Using the given initial conditions yields <me>\begin{cases}
+                (s^2+5) X_1(s) + 1 = 2 X_2(s), \\
+                    (s^2+2) X_2(s) - 1 = 2 X_1(s).
+                    \end{cases}</me> Solving for <m>X_1(s)</m> and <m>X_2(s)</m> gives </p>
+            <p>
+                <me>X_1(s) = \frac{-s^2}{(s^2 + 1)(s^2 + 6)} \quad \text{and}\quad
+                    X_2(s) = \frac{s^2 + 3}{(s^2 + 1)(s^2 + 6)}.</me> Partial fraction decomposition
+                of <m>X_1(s)</m> and <m>X_2(s)</m> are </p>
+            <p>
+                <me>X_1(s) = \frac{1/5}{s^2 + 1} - \frac{6/5}{s^2 + 6}\quad \text{and}\quad
                     X_2(s) = \frac{2/5}{s^2 + 1} + \frac{3/5}{s^2 + 6}.</me> Taking the inverse
-                    Laplace transform yields <me>\begin{cases}
-                        x_1(t) &amp;= \frac{1}{5} \sin t - \frac{6}{5 \sqrt{6}} \sin(\sqrt{6} t), \\
-                    x_2(t) &amp;= \frac{2}{5} \sin t + \frac{3}{5 \sqrt{6}} \sin(\sqrt{6} t),
-                    \end{cases}</me> which render the solutions of the given
-                    initial value problem <xref ref="spring-mass-2" />.
-                 </p>
+                Laplace transform yields <me>\begin{cases}
+                    x_1(t) &amp;= \frac{1}{5} \sin t - \frac{6}{5 \sqrt{6}} \sin(\sqrt{6} t), \\
+                x_2(t) &amp;= \frac{2}{5} \sin t + \frac{3}{5 \sqrt{6}} \sin(\sqrt{6} t),
+                    \end{cases}</me> which render the solutions of the given initial value problem <xref
+                    ref="spring-mass-2" />.</p>
 
             <figure xml:id="fig-coupled-spring-mass">
-                <caption>Graphs of the solutions <m>x_1(t)</m>
-                    and <m> x_2(t)</m>
-                </caption>
-                <image source="images/spring_mass">
-                 </image>
-            </figure>
+            <caption>Graphs of the solutions <m>x_1(t)</m> and <m> x_2(t)</m>
+            </caption>
+            <image source="images/spring_mass">
+            </image>
+        </figure>
 
-<!-- <figure xml:id="fig-coupled-spring-mass-2">
-    <caption>Graphs of the solutions <m>x_1(t)</m>
-        and <m> x_2(t)</m>
-    </caption>
-    <image source="source/images/step" width = "70%">
-     </image>
-</figure> -->
 
-       </example>
+        </example>
 
     </subsection>
+
+    <subsection xml:id="subsec-Electrical-Network-Systems">
+        <title>Electrical Network Systems</title>
+        <p> We discussed series and parallel <m>LRC</m> circuits in <xref ref="ch-3" />. In <xref
+                ref="fig-lrc-circuit" /> below, we have an <m>
+                LRC</m> circuit with a voltage source <m>e(t)</m>. We develop a system of linear
+            differential equations to find the charge <m>q_1(t)</m> on the capacitor and currents <m>
+            i(t)</m> and <m>i_2(t)</m> flowing through the resistor and inductor, respectively. Let <m>
+            i_1(t)</m> be the current flowing through the capacitor. </p>
+
+
+        <figure
+            xml:id="fig-lrc-circuit">
+            <caption>An LRC circuit with a voltage source.</caption>
+            <image width="70%">
+                <latex-image>
+                    \begin{circuitikz}[american]
+                    % Current source from bottom to top
+                    \draw
+                    (0,0) to[sV, invert, v_>={}, i_>=${i(t)}$] (0,4)
+                    to[american resistor, i_=${}$, l=$R$] (2,4)
+                    to[short] (2.5,4); % top horizontal wire
+                    \node[circle, fill=white, inner sep=1pt, label=above left: Voltage source
+                    \(e(t)\)]
+                    at (-0.4,1.75) {};
+                    % Split point at (2,4), three parallel branches
+
+                    \node[circle, fill=black, inner sep=1pt, label=above right: A] at (2.5,4) {};
+                    % Resistor branch (left)
+                    \draw
+                    (2.5,4)
+                    to[C=$C$, i>_=${i_1(t)}$ ] (2.5,.2)
+                    -- (2.5,0); % back to bottom of source
+
+                    % Inductor branch (right)
+                    \draw
+                    (2.5,4) -- (4.5,4)
+                    to[cute inductor, l=$L$, i>_=${i_2(t)}$] (4.5,0)
+                    -- (4.5,0);
+                    % Merge point at (0,4), three parallel branches
+                    \node[circle, fill=black, inner sep=1pt, label=above right:] at (2.5,0) {};
+                    \draw
+                    (4.5,0) -- (0,0); % central node
+                    \end{circuitikz}
+                </latex-image>
+            </image>
+        </figure>
+
+        <p>
+            We observe that the circuit contains three distinct closed loops:
+        </p>
+
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <term>Loop 1</term>: consisting of the battery, resistor, and capacitor; </p>
+                </li>
+
+                <li>
+                    <p>
+                        <term>Loop 2</term>: consisting of the battery, resistor, and inductor; and </p>
+                </li>
+
+                <li>
+                    <p>
+                        <term>Loop 3</term>: formed by the capacitor and inductor alone. </p>
+                </li>
+
+            </ul>
+        </p>
+
+        <p> The system of corresponding equations for the loops are: <me>
+                \begin{cases}
+                \ds R\, i(t)+\frac{1}{C} q_1(t) = e(t) &amp; \qquad\text{(for Loop 1)}\\
+                \ds L\, i_2'(t) + R\, i(t) = e(t) &amp; \qquad \text{(for Loop 2)} \\
+                \ds L\, i_2'(t) - \frac{1}{C} q_1(t) = 0&amp; \qquad \text{(for Loop 3)}
+                \end{cases}
+            </me>
+            We observe that each equation in the system can be obtained from the remaining two. For
+            example, the equation for Loop 2 can be obtained by adding the equations for Loop 1 and
+            Loop 3. For the discussion that follows, we omit the equation for Loop 2. </p>
+
+        <p> Furthermore, by Kirchhoff’s second law, the current split at the junction A is given by <me>
+            i(t) = i_1(t) + i_2(t),
+            </me> which, in view of <m>i_1(t)= q_1'(t)</m>,
+            becomes <me>
+                q'_1(t) + i_2(t) -i(t) =0.
+            </me> Thus, a linear system in <m>i(t),
+            q_1(t)</m> and <m> i_2(t)</m> is </p>
+        <men xml:id="LRC-system">
+            \begin{cases}
+            \ds R\, i(t)+\frac{1}{C} q_1(t) = e(t) &amp; \qquad\text{(for Loop 1)}\\
+            \ds L\, i_2'(t) - \frac{1}{C} q_1(t) = 0&amp; \qquad \text{(for Loop 3)}\\
+            \ds q'_1(t) + i_2(t) -i(t) =0 &amp; \qquad \text{(the current split at the junction A)}
+            \end{cases}
+        </men>
+
+        <p> We now proceed to solve the system <xref ref="LRC-system" />. Differentiating  the third equation
+            in <xref ref="LRC-system" /> with
+            respect to <m>t</m> yields
+            <men xml:id="LRC-system-1">
+            i'(t) = q''_1(t) + i'_2(t).
+               </men>
+               Solving for <m>i'_2(t)</m> from the second equation in <xref ref="LRC-system" />
+            and substituting it into <xref ref="LRC-system-1" /> gives
+            <me>
+                i'(t) = q''_1(t) + \frac{1}{LC}q_1(t).
+            </me>
+            Substituting this expression for <m>i'(t)</m> into the equation
+            obtained by differentiating the first equation in <xref ref="LRC-system" /> with respect to <m>t</m>, we
+            get <me xml:id="LRC-system-2">
+                LRC q''_1(t) +Lq'_1(t)+ Rq_1(t) = LCe'(t),
+            </me> which can be solved for <m>q_1(t).</m> Once <m>q_1(t)</m> is
+            determined, we find <m>i_1(t)</m> by using <m>i_1(t)= q_1'(t).</m> We then find <m>i(t)</m>
+            from the first equation in <xref ref="LRC-system" /> by using <m>q_1(t)</m> there. Finally, we find <m>i_2(t)
+            = i(t) - i_1(t).</m>
+        </p>
+    </subsection>
+
+    <exercises xml:id="exercises-linear-systems">
+        <exercise>
+            <p>
+                Solve the initial value problem <me>\begin{cases}
+                x_1'' = -5 x_1 + 2 x_2 , \\
+                x_2'' = 2 x_1 - 2 x_2, \\
+                x_1(0) = 0, \quad x_1'(0) = -1, \\
+                x_2(0) = 0, \quad x_2'(0) = 1.
+                \end{cases}</me> by using the Laplace transform.
+            </p>
+        </exercise>
+
+    </exercises>
+
 </section>
 
 
