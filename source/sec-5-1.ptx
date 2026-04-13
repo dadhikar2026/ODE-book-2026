@@ -5,11 +5,6 @@
 
   <introduction>
     <p>
-      In the previous chapters, we have developed methods for solving initial value problems for ordinary differential equations with continuous forcing functions.
-      In this chapter, we will extend our methods to solve initial value problems with discontinuous forcing functions and impulsive forcing functions modeled by the Dirac delta function.
-    </p>
-
-    <p>
       Consider a forced oscillator, as discussed in Section <xref ref="sec-3-5" /> of <xref ref="ch-3" />, described by the equation
       <men xml:id="eq-5-1">
         y''(t) + \omega^2 y(t) = f(t), \quad  y(0) = 0,\; y'(0)= 0,

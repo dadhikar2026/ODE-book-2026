@@ -4,7 +4,10 @@
   <title>The Laplace Transform and Applications</title>
 
   <introduction>
-    <p> Intro goes here yes. </p>
+    <p>
+      In the previous chapters, we  developed methods for solving initial value problems for ordinary differential equations with continuous forcing functions.
+      In this chapter, we will extend our methods to solve initial value problems with discontinuous forcing functions and impulsive forcing functions modeled by the Dirac delta function.
+    </p>
   </introduction>
 
   <!-- include sections -->
