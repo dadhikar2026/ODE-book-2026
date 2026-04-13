@@ -12,8 +12,6 @@
 
 <subsection xml:id="subsec-5-4-1">
   <title>Periodic Functions</title>
-
-</subsection>
 <definition xml:id="def-">
   <statement>
       <p>  A function <m>f</m> is said to be <em>periodic</em> on <m>(-\infty, \infty)</m> if there exists a number <m>T&gt;0,</m> called a <em>period</em> of <m>f,</m> such that
@@ -266,8 +264,8 @@
  </latex-image>
       </image>
     </figure> -->
-
   </p>
+  </subsection>
 
 <exercises xml:id="exercises-sec-5-4">
   <exercise xml:id="exercise-5-4-1">
