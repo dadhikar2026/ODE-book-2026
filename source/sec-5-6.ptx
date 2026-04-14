@@ -488,7 +488,7 @@
                     %\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
                     % \draw[dashedline] (-0.8,-4.3) -- (0.8,-4.3);
                     % \draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
-                    \node[below,labeltext] at (3.1,-9.9) {the coordinate axis};
+                    \node[below,labeltext] at (3.1,-9.9) {the coordinate axes};
                     \node[below] at (3.1,-10.2) {(d)};
                     %\node[below,labeltext] at (3.1,-5.1) {positive downward};
                     \end{scope}
