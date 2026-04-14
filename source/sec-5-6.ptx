@@ -543,7 +543,7 @@
             </me>
             and <me>\begin{split}
                 m_2 x''_2 &amp;= m_2g-k_2 (s_2+x_2-x_1)-b_2x'_2+F_2(t)\\
-                &amp;= m_2g - k_2 s_2 + k_2 x_1 - k_2 x_2.
+                &amp;= m_2g - k_2 s_2 + k_2 x_1 - k_2 x_2-b_2x'_2+F_2(t).
                 \end{split}
             </me>
             Using <xref ref="spring-mass-0" />, we obtain
