@@ -133,7 +133,11 @@
         <proof>
             <title>Proof of <xref ref="thm-application-convolution" /></title>
             <p> We first find the solution of the initial value problem <xref
-                    ref="IVP-delta1" />. Applying the Laplace transform <m>\mathcal{L}</m> to the initial
+                    ref="IVP-delta1" />. Applying the Laplace transform <m>
+
+
+
+                        athcal{L}</m> to the initial
                 value problem <xref ref="IVP-delta1" /> and using <m>y(0)= y'(0)=0</m> yields <me>(as^2+bs
                 +c)Y_\delta(s)= 1,</me>that is, <me>Y_\delta(s)= \frac{1}{as^2+bs +c}.</me> Then, by
                 taking the inverse Laplace transform, we have <me>y_\delta(t)
