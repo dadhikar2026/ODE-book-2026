@@ -219,17 +219,21 @@
   <preamble file="preamble.tex"/>
 </latex> -->
 <!-- css -->
+ <publisher>
   <html>
     <css>
       <file>source/styles/custom.css</file>
     </css>
   </html>
+  </publisher>
 
+<publisher>
   <html>
     <js>
       <file>scripts/print.js</file>
     </js>
   </html>
+</publisher>
 
 
   </publication>
