@@ -523,14 +523,7 @@
                     <m>\dfrac{e^{-a\sqrt{s}}}{\sqrt{s}}</m>
                 </cell>
             </row>
-        </tabular>
-
-        <p />
-
-        <tabular>
-            <col halign="center" />
-            <col />
-            <col />
+        
             <row>
                 <cell> 47. </cell>
                 <cell>
