@@ -633,7 +633,7 @@
                     \begin{circuitikz}[american]
                     % Current source from bottom to top
                     \draw
-                    (0,0) to[sV, invert, v_>={}, i_>=${i(t)}$] (0,4)
+                    (0,0) to[sV, invert, v_&gt;={}, i_&gt;=${i(t)}$] (0,4)
                     to[american resistor, i_=${}$, l=$R$] (2,4)
                     to[short] (2.5,4); % top horizontal wire
                     \node[circle, fill=white, inner sep=1pt, label=above left: Voltage source
@@ -645,13 +645,13 @@
                     % Resistor branch (left)
                     \draw
                     (2.5,4)
-                    to[C=$C$, i>_=${i_1(t)}$ ] (2.5,.2)
+                    to[C=$C$, i&gt;_=${i_1(t)}$ ] (2.5,.2)
                     -- (2.5,0); % back to bottom of source
 
                     % Inductor branch (right)
                     \draw
                     (2.5,4) -- (4.5,4)
-                    to[cute inductor, l=$L$, i>_=${i_2(t)}$] (4.5,0)
+                    to[cute inductor, l=$L$, i&gt;_=${i_2(t)}$] (4.5,0)
                     -- (4.5,0);
                     % Merge point at (0,4), three parallel branches
                     \node[circle, fill=black, inner sep=1pt, label=above right:] at (2.5,0) {};
