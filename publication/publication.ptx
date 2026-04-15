@@ -222,15 +222,10 @@
  <publisher>
   <html>
     <css>
-      <file>source/styles/custom.css</file>
+      <file>assets/custom.css</file>
     </css>
-  </html>
-  </publisher>
-
-<publisher>
-  <html>
     <js>
-      <file>scripts/print.js</file>
+      <file>assets/print.js</file>
     </js>
   </html>
 </publisher>
