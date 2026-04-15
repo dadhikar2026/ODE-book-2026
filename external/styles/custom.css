@@ -1,0 +1,4 @@
+/* Zebra striping for tables */
+#laplace-table tbody tr:nth-child(even) {
+  background-color:#f2f2f2;
+}

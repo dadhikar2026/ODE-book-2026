@@ -34,7 +34,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Introduction",
-  "body": " Introduction   The order linear differential equations are of the form   where the functions and are continuous on some interval .   "
+  "body": " Introduction    The order linear differential equations are of the form   where the functions and are continuous on some interval .   "
 },
 {
   "id": "sec-3-5",
@@ -349,7 +349,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Applications to Initial Value Problems",
-  "body": " Applications to Initial Value Problems   As point out earlier in , we will need to convert a linear initial value problem into an algebraic equation using the Laplace transform. After solving the equation in the domain for the Laplace transform of the solution function, we then apply the inverse Laplace transform operator to return to the domain and obtain the solution of the initial value problem. For these steps, we will need the Laplace transform of derivatives.    A function defined on is said to be of an exponential order as if there exists constants , and such that The number is referred to as an exponential order of .    Then, for we have and consequently,     Laplace Transforms of Derivatives  Suppose that is piecewise continuous on and of an exponential order as . Assume that exists. Then, using integration by parts, we have for Thus,   We extend the above idea to higher order derivatives. For instance, suppose that and are continuous and of exponential order. If exists and is piecewise continuous on then applying the formula first to with and then to , we obtain i.e.,   Applying these ideas repeatedly to higher order derivatives, we obtain the following theorem whose proof is omitted.   (Laplace transform of derivatives)  Let be a positive integer. If are continuous on and of exponential order as and if is piecewise continuous on and of exponential order as then where .    presents how naturally arise, reflecting the initial conditions of an -th order linear initial value problem and indicating the potential use of the Laplace transform to covert a linear differential equation with constant coefficients to an algebraic equation with no derivatives of the Laplace transform of the solution variable. Specifically, consider the linear initial value problem of the form: Applying in conjunction with the linearity of , the initial value problem in gives rise to the following algebraic equation in the domain: which takes the form where and is a polynomial in obtained from all the remaining terms on the left side of the equation . It then follows that The solution to the initial value problem ( ) is given by To find we typically use partial fraction decomposition of and and then use appropriate inverse Laplace transforms term by term. For more details on the techniques of partial fraction decomposition, see Appendix .  In principle, one should verify that the equation satisfies the initial value problem by verifying that solves the differential equation and satisfies the initial conditions, especially important when the differential equation is defined also for since the Laplace transform only makes sense to functions on . However, this verification is unnecessary when is continuous on an open interval containing , as the initial value problem is guaranteed to have a unique local solution.  In the following examples, we apply the Laplace transform method to solve initial value problems.   Solve the initial value problem using the Laplace transform:     on .    Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have      Solve the initial value problem using the Laplace transform:     on .   Applying the Laplace transform to both sides of the equation, we have  Decompose into partial fractions:   Solving for the constants gives   Hence   Now apply the inverse Laplace transform:  Therefore, We can show that is the solution of the initial value problem on by verifying that it satisfies the differential equation and the initial conditions.     Move this to a later section Solve the initial value problem using the Laplace transform:   Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have       The general principle for solving initial value problems by the Laplace transform method remains the same as demonstrated in the previous examples. The major effort to make is in computing the Laplace transforms of more complicated functions and finding inverse transforms of more complicated expressions. In the followings sections, we continue exploring additional methods for computing Laplace transforms and solve initial value problems that involve more complicated functions.     Solve the following initial value problems using the Laplace transform method:                        Solve the following initial value problems using the Laplace transform method:                    Solve the following initial value problems using the Laplace transform method:     where    where                "
+  "body": " Applications to Initial Value Problems   As point out earlier in , we will need to convert a linear initial value problem into an algebraic equation using the Laplace transform. After solving the equation in the domain for the Laplace transform of the solution function, we then apply the inverse Laplace transform operator to return to the domain and obtain the solution of the initial value problem. For these steps, we will need the Laplace transform of derivatives.    A function defined on is said to be of an exponential order as if there exists constants , and such that The number is referred to as an  exponential order  of .    Then, for we have and consequently,     Laplace Transforms of Derivatives  Suppose that is piecewise continuous on and of an exponential order as . Assume that exists. Then, using integration by parts, we have for Thus,   We extend the above idea to higher order derivatives. For instance, suppose that and are continuous and of exponential order. If exists and is piecewise continuous on then applying the formula first to with and then to , we obtain i.e.,   Applying these ideas repeatedly to higher order derivatives, we obtain the following theorem whose proof is omitted.   (Laplace transform of derivatives)  Let be a positive integer. If are continuous on and of exponential order as and if is piecewise continuous on and of exponential order as then where .    presents how naturally arise, reflecting the initial conditions of an -th order linear initial value problem and indicating the potential use of the Laplace transform to covert a linear differential equation with constant coefficients to an algebraic equation with no derivatives of the Laplace transform of the solution variable. Specifically, consider the linear initial value problem of the form: Applying in conjunction with the linearity of , the initial value problem in gives rise to the following algebraic equation in the domain: which takes the form where and is a polynomial in obtained from all the remaining terms on the left side of the equation . It then follows that The solution to the initial value problem ( ) is given by To find we typically use partial fraction decomposition of and and then use appropriate inverse Laplace transforms term by term. For more details on the techniques of partial fraction decomposition, see Appendix .  In principle, one should verify that the equation satisfies the initial value problem by verifying that solves the differential equation and satisfies the initial conditions, especially important when the differential equation is defined also for since the Laplace transform only makes sense to functions on . However, this verification is unnecessary when is continuous on an open interval containing , as the initial value problem is guaranteed to have a unique local solution.  In the following examples, we apply the Laplace transform method to solve initial value problems.   Solve the initial value problem using the Laplace transform:     on     Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have      Solve the initial value problem using the Laplace transform:     on .    Applying the Laplace transform to both sides of the equation, we have   Decompose into partial fractions:   Solving for the constants gives   Hence   Now apply the inverse Laplace transform:  Therefore, We can show that is the solution of the initial value problem on by verifying that it satisfies the differential equation and the initial conditions.     Move this to a later section  Solve the initial value problem using the Laplace transform:    Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have       The general principle for solving initial value problems by the Laplace transform method remains the same as demonstrated in the previous examples. The major effort to make is in computing the Laplace transforms of more complicated functions and finding inverse transforms of more complicated expressions. In the followings sections, we continue exploring additional methods for computing Laplace transforms and solve initial value problems that involve more complicated functions.     Solve the following initial value problems using the Laplace transform method:                        Solve the following initial value problems using the Laplace transform method:                    Solve the following initial value problems using the Laplace transform method:     where    where                "
 },
 {
   "id": "def-exponential-order-function",
@@ -358,7 +358,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "5.2.1",
   "title": "",
-  "body": "  A function defined on is said to be of an exponential order as if there exists constants , and such that The number is referred to as an exponential order of .   "
+  "body": "  A function defined on is said to be of an exponential order as if there exists constants , and such that The number is referred to as an  exponential order  of .   "
 },
 {
   "id": "thm-5-2-1",
@@ -376,7 +376,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.2.3",
   "title": "",
-  "body": " Solve the initial value problem using the Laplace transform:     on .    Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have    "
+  "body": " Solve the initial value problem using the Laplace transform:     on     Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have    "
 },
 {
   "id": "ex-5-2-2",
@@ -385,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.2.4",
   "title": "",
-  "body": " Solve the initial value problem using the Laplace transform:     on .   Applying the Laplace transform to both sides of the equation, we have  Decompose into partial fractions:   Solving for the constants gives   Hence   Now apply the inverse Laplace transform:  Therefore, We can show that is the solution of the initial value problem on by verifying that it satisfies the differential equation and the initial conditions.   "
+  "body": " Solve the initial value problem using the Laplace transform:     on .    Applying the Laplace transform to both sides of the equation, we have   Decompose into partial fractions:   Solving for the constants gives   Hence   Now apply the inverse Laplace transform:  Therefore, We can show that is the solution of the initial value problem on by verifying that it satisfies the differential equation and the initial conditions.   "
 },
 {
   "id": "ex-5-2-3",
@@ -394,7 +394,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.2.5",
   "title": "Move this to a later section.",
-  "body": " Move this to a later section Solve the initial value problem using the Laplace transform:   Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have    "
+  "body": " Move this to a later section  Solve the initial value problem using the Laplace transform:    Applying the Laplace transform to both sides of the equation, we have To find the inverse Laplace transform of , we use partial fraction decomposition to write Solving for , we have Thus, Applying the inverse Laplace transform term by term, we have    "
 },
 {
   "id": "exercises-5-2-1",
@@ -520,7 +520,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.4",
   "title": "Laplace Transforms of Periodic Functions",
-  "body": " Laplace Transforms of Periodic Functions   In , we computed the Laplace transforms of the periodic functions and that are continuous. In applications, we also have to address periodic functions that are periodic but piecewise continuous on     Periodic Functions    A function is said to be periodic on if there exists a number called a period of such that     Graphically, a periodic function repeats the portion of its graph restricted to across subsequent intervals of the same length .  A piecewise continuous periodic function with a period has the following property: for all positive integers This property is visualized in below.  The graph of .     To compute we express it as an infinite series of integrals as follows: Since the geometric series converges for to we obtain    Let us revisit    Using with , we obtain We compute Hence as expected.  The example above suggests that the direct computation of the Laplace transform of a periodic function may be more convenient.  The example below concerns a periodic function acting as the source term of an initial value problem.   Consider the initial value problem where is given by and for all in    The graph of on is shown below.  The graph of .       Then Taking the Laplace transform of the differential equation , we get With we have Since and it follows that In view of the shifting on the axis property discussed in , the solution of the initial value problem is The graph of this solution is in below. The solution is a piecewise continuous periodic function with period 2, and it converges to the periodic function as   The graph of .           Sketch the graph of three periods of each function below and compute its Laplace transform. The interval for the first period is provided.                                    Solve the following initial value problems using the Laplace transform method. You will need and when      where and for all in      where is the periodic function in of .     where is the periodic function in of .     where is the periodic function in of .      "
+  "body": " Laplace Transforms of Periodic Functions   In , we computed the Laplace transforms of the periodic functions and that are continuous. In applications, we also have to address periodic functions that are periodic but piecewise continuous on     Periodic Functions    A function is said to be periodic on if there exists a number called a period of such that     Graphically, a periodic function repeats the portion of its graph restricted to across subsequent intervals of the same length .  A piecewise continuous periodic function with a period has the following property: for all positive integers This property is visualized in below.    The graph of .       To compute we express it as an infinite series of integrals as follows: Since the geometric series converges for to we obtain    Let us revisit    Using with , we obtain We compute Hence as expected.  The example above suggests that the direct computation of the Laplace transform of a periodic function may be more convenient.  The example below concerns a periodic function acting as the source term of an initial value problem.   Consider the initial value problem where is given by and for all in    The graph of on is shown below.  The graph of .       Then Taking the Laplace transform of the differential equation , we get With we have Since and it follows that In view of the shifting on the axis property discussed in , the solution of the initial value problem is The graph of this solution is in below. The solution is a piecewise continuous periodic function with period 2, and it converges to the periodic function as   The graph of .           Sketch the graph of three periods of each function below and compute its Laplace transform. The interval for the first period is provided.                                    Solve the following initial value problems using the Laplace transform method. You will need and when      where and for all in      where is the periodic function in of .     where is the periodic function in of .     where is the periodic function in of .      "
 },
 {
   "id": "def-",
@@ -541,18 +541,18 @@ var ptx_lunr_docs = [
   "body": " The graph of .     "
 },
 {
-  "id": "subsec-5-4-1-5",
+  "id": "subsec-5-4-1-7",
   "level": "2",
-  "url": "sec-5-4.html#subsec-5-4-1-5",
+  "url": "sec-5-4.html#subsec-5-4-1-7",
   "type": "Example",
   "number": "5.4.3",
   "title": "",
   "body": " Let us revisit   "
 },
 {
-  "id": "subsec-5-4-1-9",
+  "id": "subsec-5-4-1-11",
   "level": "2",
-  "url": "sec-5-4.html#subsec-5-4-1-9",
+  "url": "sec-5-4.html#subsec-5-4-1-11",
   "type": "Example",
   "number": "5.4.4",
   "title": "",
@@ -901,13 +901,76 @@ var ptx_lunr_docs = [
   "body": "  Let be a function on a rectangle such that both and are continuous on Let and be differentiable functions on such that for all in Then    "
 },
 {
-  "id": "partial-fraction-decomposition",
+  "id": "sec-7-2",
   "level": "1",
-  "url": "partial-fraction-decomposition.html",
+  "url": "sec-7-2.html",
   "type": "Section",
   "number": "6.2",
   "title": "Partial Fraction Decomposition",
-  "body": " Partial Fraction Decomposition   Something about partial fraction decomposition goes here yes.   "
+  "body": " Partial Fraction Decomposition   Let and be general polynomials in and let and be the degrees of and , respectively. Then the  rational  function is said to be  proper  if and  improper  if When is improper, we perform polynomial division to obtain where is the  quotient  polynomial of degree and is called the  remainder  polynomial and it is of degree less than For example, if then so that and   After performing polynomial division, the term is already a polynomial and requires no decomposition. The term is a proper rational function and the only part of that is usually decomposed into partial fractions. Therefore, in what follows, we assume that itself is proper. The method of partial fraction decomposition then depends entirely on the factorization of the denominator . We now examine all possible cases that may occur.    Linear Factors  If the denominator contains distinct linear factors, then the decomposition has the form where are constants to be determined. Let us illustrate this with an example below.   Perform partial fraction decomposition of Suppose there are constants and such that Multiplying through by gives which must be an identity in For convenience, we do allow or in this identity. We find , , so      Repeated Linear Factors  If then the decomposition includes every power of the linear factor:  are constants to be determined.   Perform the partial fraction decomposition of Suppose there exist constants and such that Multiplying through by gives We find and Then      Irreducible Quadratic Factors  Suppose that contains a factor that is irreducible over the real numbers. The partial fraction decomposition of contains a term of the form where and are constants to be determined. We illustrate this in the next an example.   To perform the partial fraction decomposition of we find , and such that Notice the term corresponding to the linear factor of the denominator. Multiplying through by yields Comparing coefficients gives so      Repeated Irreducible Quadratic Factors  If where the quadratic is irreducible and repeated with multiplicity then the decomposition is of the form with the constants and are to be determined. We illustrate this in the next example.   To perform the partial fraction decomposition of we find constants such that Multiplying both sides by gives Expanding and matching coefficients yields and hence      Mixed Factors  If the denominator factors as The symbol denotes product .  then the full partial fraction decomposition of contains terms      , , etc., and     , , etc.   Let us illustrate this in the next example   To perform the partial fraction decomposition of we find constants such that Multiplying both sides by gives Expanding and comparing coefficients yields so       Decompose each rational function into partial fractions.                                            Answers                          (determine )         Divide first: and then decompose to get            "
+},
+{
+  "id": "sec-7-2-3-3",
+  "level": "2",
+  "url": "sec-7-2.html#sec-7-2-3-3",
+  "type": "Example",
+  "number": "6.2.1",
+  "title": "",
+  "body": " Perform partial fraction decomposition of Suppose there are constants and such that Multiplying through by gives which must be an identity in For convenience, we do allow or in this identity. We find , , so   "
+},
+{
+  "id": "sec-7-2-4-3",
+  "level": "2",
+  "url": "sec-7-2.html#sec-7-2-4-3",
+  "type": "Example",
+  "number": "6.2.2",
+  "title": "",
+  "body": " Perform the partial fraction decomposition of Suppose there exist constants and such that Multiplying through by gives We find and Then   "
+},
+{
+  "id": "sec-7-2-5-3",
+  "level": "2",
+  "url": "sec-7-2.html#sec-7-2-5-3",
+  "type": "Example",
+  "number": "6.2.3",
+  "title": "",
+  "body": " To perform the partial fraction decomposition of we find , and such that Notice the term corresponding to the linear factor of the denominator. Multiplying through by yields Comparing coefficients gives so   "
+},
+{
+  "id": "sec-7-2-6-3",
+  "level": "2",
+  "url": "sec-7-2.html#sec-7-2-6-3",
+  "type": "Example",
+  "number": "6.2.4",
+  "title": "",
+  "body": " To perform the partial fraction decomposition of we find constants such that Multiplying both sides by gives Expanding and matching coefficients yields and hence   "
+},
+{
+  "id": "sec-7-2-7-4",
+  "level": "2",
+  "url": "sec-7-2.html#sec-7-2-7-4",
+  "type": "Example",
+  "number": "6.2.5",
+  "title": "",
+  "body": " To perform the partial fraction decomposition of we find constants such that Multiplying both sides by gives Expanding and comparing coefficients yields so   "
+},
+{
+  "id": "sec-7-2-8-1",
+  "level": "2",
+  "url": "sec-7-2.html#sec-7-2-8-1",
+  "type": "Exercise",
+  "number": "6.2.6.1",
+  "title": "",
+  "body": " Decompose each rational function into partial fractions.                                         "
+},
+{
+  "id": "sec-7-3",
+  "level": "1",
+  "url": "sec-7-3.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "Formulas",
+  "body": " Formulas   Some Laplace Transforms         1.       2.       2.       3.       4.       5.       6.       7.       8.       9.           10.      11.       12.       13.       14.       15.       16.       17.       18.       19.       20.       21.       22.       23.       24.       25.       26.       27.       28.           29.      30.       31.       32.       33.       34.       35.      36.      37.      38.      39.      40.      41.      42.      43.      44.      45.      46.          47.      48.      49.      50.      51.      52.      53.      54.      55.      56.      57.      58.        Derivatives  We use notations and to synonymously denote the derivative of with respect to    Differentiation Rules     Constant:    Constant Multiple:    Sum:    Product:    Quotient:    Chain:    Power:    Power:                                           "
 },
 {
   "id": "backmatter-2",
