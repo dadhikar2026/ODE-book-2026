@@ -75,7 +75,7 @@
       <!--<projects level="2" />-->
       <!--<equations level="2" />-->
       <!--<footnotes level="2" />-->
-     
+
 
 
   </numbering>
@@ -218,6 +218,14 @@
 <latex>
   <preamble file="preamble.tex"/>
 </latex> -->
+<!-- css -->
 
+<publisher>
+  <html>
+    <css>
+      <file>source/styles/custom.css</file>
+    </css>
+  </html>
+</publisher>
 
   </publication>

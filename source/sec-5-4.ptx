@@ -32,7 +32,8 @@
       </me>
       for all positive integers <m>n.</m> This property is visualized in
       <xref ref="fig-piecewise-periodic-1" /> below.
-
+ </p>
+ <p>
       <figure xml:id="fig-piecewise-periodic-1">
         <caption>The graph of <m>f(t)</m>.</caption>
         <image>
@@ -74,6 +75,8 @@
           </latex-image>
         </image>
       </figure>
+    </p>
+    <p>
       To compute <m>\mathcal{L}\{f(t)\},</m> we express it as an infinite series of integrals as follows:
       <me>
         \begin{split} \mathcal{L}\{f(t)\}&amp; =\int_0^\infty f(t) e^{-st}\, dt\\ &amp;= \int_0^T f(t) e^{-st}\, dt+ \int_T^{2T} f(t) e^{-st}\, dt+ \int_{2T}^{3T} f(t) e^{-st}\, dt +\dots\\ &amp;=\int_0^T f(t) e^{-st}\, dt + \int_0^T f(t+T) e^{-s(t+T)}\, dt\\ &amp; \quad + \int_0^T f(t+2T) e^{-s(t+2T)}\, dt+ \dots+ \int_0^T f(t+nT) e^{-s(t+nT)}\, dt+\cdots\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\Big(1+e^{-sT}+ e^{-2sT} + \dots+ e^{-nsT}+\cdots \Big)\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\; \sum_{n=0}^\infty e^{-nsT}.
