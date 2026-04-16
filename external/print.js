@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.createElement("button");
-  btn.innerText = "Print";
-  btn.style.position = "fixed";
-  btn.style.top = "10px";
-  btn.style.right = "10px";
-  btn.style.zIndex = "1000";
+  const link = document.createElement("a");
+  link.href = "#";
+  link.className = "ptx-print-button";
+  link.setAttribute("aria-label", "Print this page");
+  link.textContent = "🖨";
 
-  btn.onclick = function () {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
     window.print();
-  };
+  });
 
-  document.body.appendChild(btn);
+  document.body.appendChild(link);
 });
