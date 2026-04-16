@@ -4,6 +4,11 @@
 
     <title>Formulas</title>
 
+    <raw format="html">
+  <button onclick="window.print()" style="position:fixed;top:16px;right:16px;z-index:99999;">
+    🖨 Print
+  </button>
+</raw>
     <subsection>
         <title>Some Laplace Transforms</title>
         <tabular xml:id="laplace-table">
