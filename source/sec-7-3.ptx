@@ -523,7 +523,7 @@
                     <m>\dfrac{e^{-a\sqrt{s}}}{\sqrt{s}}</m>
                 </cell>
             </row>
-        
+
             <row>
                 <cell> 47. </cell>
                 <cell>
@@ -624,23 +624,23 @@
                 </cell>
             </row>
 
-            <row>
-                <cell> 57. </cell>
-                <cell>
-                    <m>\delta(t)</m>
-                </cell>
-                <cell>
-                    <m>1</m>
-                </cell>
-            </row>
 
             <row>
-                <cell> 58. </cell>
+                <cell> 57. </cell>
                 <cell>
                     <m>\delta(t-a)</m>
                 </cell>
                 <cell>
                     <m>e^{-as}</m>
+                </cell>
+            </row>
+            <row>
+                <cell> 58. </cell>
+                <cell>
+                    <m>\delta(t-a)\ast f(t)</m>
+                </cell>
+                <cell>
+                    <m>e^{-as}F(s)</m>
                 </cell>
             </row>
         </tabular>
