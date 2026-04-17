@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-7-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-7-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-3-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle}
 \newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
@@ -229,24 +229,32 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-7-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Formulas</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-3.html#sec-7-3-3" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Some Laplace Transforms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-3.html#sec-7-3-4" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-3.html#laplace-formulas" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Common Laplace Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-3.html#sec-7-3-3" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Derivatives</span></a></div></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ws-3-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Worksheets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">WS-1</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">WS-2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-7-3"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Formulas</span>
-</h2>🖨 Print<section class="subsection" id="sec-7-3-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Laplace Transforms</span>
+</h2>
+<section class="subsection" id="laplace-formulas"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Common Laplace Transforms</span>
 </h3>
 <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f(t)\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\mathscr{L}\{f(t)\}=F(s)\)</span></td>
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines"></th>
+<th scope="col" class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\boldsymbol{f(t)}\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\mathcal{L}\boldsymbol{\{f(t)\}=F(s)}\)</span></th>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">1.   </td>
@@ -263,65 +271,60 @@ eBookConfig.enable_chatcodes =  false;
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">2.</td>
+<td class="l m b0 r0 l0 t0 lines">3.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(t^{n},\; n\mbox{ being a natural number}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{n!}{s^{\,n+1}},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">3.</td>
+<td class="l m b0 r0 l0 t0 lines">4.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(t^{-1/2}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{\sqrt{\pi}}{\sqrt{s}},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">4.</td>
+<td class="l m b0 r0 l0 t0 lines">5.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(t^{1/2}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{\sqrt{\pi}}{2\,s^{3/2}},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">5.</td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(t^{\alpha},\ \alpha&gt;-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">6.</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(t^{\alpha},\ \alpha &gt;-1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{\Gamma(\alpha+1)}{s^{\alpha+1}},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">6.</td>
+<td class="l m b0 r0 l0 t0 lines">7.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sin(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{k}{s^{2}+k^{2}},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">7.</td>
+<td class="l m b0 r0 l0 t0 lines">8.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cos(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{s}{s^{2}+k^{2}},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">8.</td>
+<td class="l m b0 r0 l0 t0 lines">9.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sin^{2}(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{2k^{2}}{s(s^{2}+4k^{2})},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">9.</td>
+<td class="l m b0 r0 l0 t0 lines">10.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cos^{2}(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{s^{2}+2k^{2}}{s(s^{2}+4k^{2})},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">10.</td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f(t)\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\mathscr{L}\{f(t)\}=F(s)\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">11.</td>
@@ -332,7 +335,7 @@ eBookConfig.enable_chatcodes =  false;
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">12.</td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sinh(kt)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sinh(k t)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{k}{s^{2}-k^{2}},\)</span> <span class="process-math">\(s&gt;\lvert k\rvert\)</span>
 </td>
@@ -451,173 +454,163 @@ eBookConfig.enable_chatcodes =  false;
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">29.</td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f(t)\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\mathscr{L}\{f(t)\}=F(s)\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">30.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{ae^{at}-be^{bt}}{a-b}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{s}{(s-a)(s-b)},\)</span> <span class="process-math">\(s&gt;\max\{a, b\}\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">31.</td>
+<td class="l m b0 r0 l0 t0 lines">30.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1-\cos(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{k^{2}}{s(s^{2}+k^{2})},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">32.</td>
+<td class="l m b0 r0 l0 t0 lines">31.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(kt-\sin(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{k^{3}}{s^{2}(s^{2}+k^{2})},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">33.</td>
+<td class="l m b0 r0 l0 t0 lines">32.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{a\sin(bt)-b\sin(at)}{ab(a^{2}-b^{2})}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{1}{(s^{2}+a^{2})(s^{2}+b^{2})},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">34.</td>
+<td class="l m b0 r0 l0 t0 lines">33.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\cos(bt)-\cos(at)}{a^{2}-b^{2}}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines">
 <span class="process-math">\(\dfrac{s}{(s^{2}+a^{2})(s^{2}+b^{2})},\)</span> <span class="process-math">\(s&gt;0\)</span>
 </td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">35.</td>
+<td class="l m b0 r0 l0 t0 lines">34.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sin(kt)\sinh(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{2k^{2}s}{s^{4}-4k^{4}}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">36.</td>
+<td class="l m b0 r0 l0 t0 lines">35.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sin(kt)\cosh(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{k(s^{2}+2k^{2})}{s^{4}-4k^{4}}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">37.</td>
+<td class="l m b0 r0 l0 t0 lines">36.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cos(kt)\sinh(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{k(s^{2}-2k^{2})}{s^{4}-4k^{4}}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">38.</td>
+<td class="l m b0 r0 l0 t0 lines">37.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cos(kt)\cosh(kt)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{s^{3}}{s^{4}-4k^{4}}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">39.</td>
+<td class="l m b0 r0 l0 t0 lines">38.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{e^{bt}-e^{at}}{t}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ln\!\left(\dfrac{s-a}{s-b}\right)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">40.</td>
+<td class="l m b0 r0 l0 t0 lines">39.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{2(1-\cos(kt))}{t}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ln\!\left(\dfrac{s^{2}+k^{2}}{s^{2}}\right)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">41.</td>
+<td class="l m b0 r0 l0 t0 lines">40.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{2(1-\cosh(kt))}{t}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ln\!\left(\dfrac{s^{2}}{s^{2}-k^{2}}\right)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">42.</td>
+<td class="l m b0 r0 l0 t0 lines">41.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\sin(at)}{t}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\arctan\!\left(\dfrac{a}{s}\right)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">43.</td>
+<td class="l m b0 r0 l0 t0 lines">42.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\sin(at)\cos(bt)}{t}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac12\!\left[ \arctan\!\left(\dfrac{a+b}{s}\right)
 +\arctan\!\left(\dfrac{a-b}{s}\right) \right]\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">44.</td>
+<td class="l m b0 r0 l0 t0 lines">43.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ds \operatorname{erf}\!\left(\frac{a}{2\sqrt{t}}\right)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{1 - e^{-a\sqrt{s}}}{s}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">45.</td>
+<td class="l m b0 r0 l0 t0 lines">44.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ds \operatorname{erfc}\!\left(\frac{a}{2\sqrt{t}}\right)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{e^{-a\sqrt{s}}}{s}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">46.</td>
+<td class="l m b0 r0 l0 t0 lines">45.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ds \frac{1}{\sqrt{\pi t}}\, \exp\!\left(-\frac{a^{2}}{4t}\right)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{e^{-a\sqrt{s}}}{\sqrt{s}}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">47.</td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f(t)\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\mathscr{L}\{f(t)\}=F(s)\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">48.</td>
+<td class="l m b0 r0 l0 t0 lines">46.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(e^{at}f(t)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(F(s-a)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">49.</td>
+<td class="l m b0 r0 l0 t0 lines">47.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\mathcal{U}(t-a)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{e^{-as}}{s}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">50.</td>
+<td class="l m b0 r0 l0 t0 lines">48.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f(t-a)\,\mathcal{U}(t-a)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(e^{-as}F(s)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">51.</td>
+<td class="l m b0 r0 l0 t0 lines">49.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(g(t)\,\mathcal{U}(t-a)\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(e^{-as}\,\mathscr{L}\{g(t+a)\}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(e^{-as}\,\mathcal{L}\{g(t+a)\}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">52.</td>
+<td class="l m b0 r0 l0 t0 lines">50.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(y^{(n)}(t)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(s^{n}Y(s)-s^{n-1}y(0)-\cdots-y^{(n-1)}(0)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">53.</td>
+<td class="l m b0 r0 l0 t0 lines">51.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(t^{n}f(t)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((-1)^{n}F^{(n)}(s)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">54.</td>
+<td class="l m b0 r0 l0 t0 lines">52.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ds \frac{f(t)}{t}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ds \int_{s}^{\infty} F(p)\,dp\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">55.</td>
+<td class="l m b0 r0 l0 t0 lines">53.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((f*g)(t)=\ds \int_{0}^{t}f(\tau)g(t-\tau)\,d\tau\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(F(s)G(s)\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">56.</td>
+<td class="l m b0 r0 l0 t0 lines">54.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f\left({t + T}\right) = f\left( t \right)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ds \frac{1}{1- e^{-sT}}\int_{0}^{T} f(t) e^{-st}\, dt\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">57.</td>
+<td class="l m b0 r0 l0 t0 lines">55.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\delta(t-a)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(e^{-as}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines">58.</td>
+<td class="l m b0 r0 l0 t0 lines">56.</td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\delta(t-a)\ast f(t)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(e^{-as}F(s)\)</span></td>
 </tr>
 </table></div>
-<div class="autopermalink" data-description="Subsection 6.3.1: Some Laplace Transforms"><a href="#sec-7-3-3" title="Copy heading and permalink for Subsection 6.3.1: Some Laplace Transforms" aria-label="Copy heading and permalink for Subsection 6.3.1: Some Laplace Transforms">🔗</a></div></section><section class="subsection" id="sec-7-3-4"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Subsection 6.3.1: Common Laplace Transforms"><a href="#laplace-formulas" title="Copy heading and permalink for Subsection 6.3.1: Common Laplace Transforms" aria-label="Copy heading and permalink for Subsection 6.3.1: Common Laplace Transforms">🔗</a></div></section><section class="subsection" id="sec-7-3-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives</span>
 </h3>
-<div class="para" id="sec-7-3-4-2">We use notations <span class="process-math">\(\dfrac{d}{dx}f(x)\)</span> and <span class="process-math">\(f'(x)\)</span> to synonymously denote the derivative of <span class="process-math">\(f(x)\)</span> with respect to <span class="process-math">\(x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-7-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-7-3-3-2">We use notations <span class="process-math">\(\dfrac{d}{dx}f(x)\)</span> and <span class="process-math">\(f'(x)\)</span> to synonymously denote the derivative of <span class="process-math">\(f(x)\)</span> with respect to <span class="process-math">\(x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-7-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-7-3-4-3">
-<em class="alert">Differentiation Rules</em><div class="autopermalink" data-description="Paragraph"><a href="#sec-7-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-7-3-3-3">
+<em class="alert">Differentiation Rules</em><div class="autopermalink" data-description="Paragraph"><a href="#sec-7-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">Constant: <span class="process-math">\(\ds \frac{d}{dx}c = 0\)</span>
@@ -650,9 +643,9 @@ eBookConfig.enable_chatcodes =  false;
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ds \frac{d}{dx}\sec^{-1}x = \frac{1}{|x|\sqrt{x^{2}-1}}\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ds \frac{d}{dx}\csc^{-1}x = -\frac{1}{|x|\sqrt{x^{2}-1}}\)</span></td></tr>
 </table></div>
-<div class="autopermalink" data-description="Subsection 6.3.2: Derivatives"><a href="#sec-7-3-4" title="Copy heading and permalink for Subsection 6.3.2: Derivatives" aria-label="Copy heading and permalink for Subsection 6.3.2: Derivatives">🔗</a></div></section><div class="autopermalink" data-description="Section 6.3: Formulas"><a href="#sec-7-3" title="Copy heading and permalink for Section 6.3: Formulas" aria-label="Copy heading and permalink for Section 6.3: Formulas">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Subsection 6.3.2: Derivatives"><a href="#sec-7-3-3" title="Copy heading and permalink for Subsection 6.3.2: Derivatives" aria-label="Copy heading and permalink for Subsection 6.3.2: Derivatives">🔗</a></div></section><div class="autopermalink" data-description="Section 6.3: Formulas"><a href="#sec-7-3" title="Copy heading and permalink for Section 6.3: Formulas" aria-label="Copy heading and permalink for Section 6.3: Formulas">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-7-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-7-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-3-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

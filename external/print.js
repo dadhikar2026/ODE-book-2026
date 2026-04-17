@@ -5,10 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   link.setAttribute("aria-label", "Print this page");
   link.textContent = "🖨";
 
-  link.addEventListener("click", function (event) {
+  link.onclick = function (event) {
     event.preventDefault();
-    window.print();
-  });
+    event.stopPropagation();
+    setTimeout(() => window.print(), 0);
+  };
 
   document.body.appendChild(link);
 });
