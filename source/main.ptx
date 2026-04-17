@@ -10,7 +10,7 @@
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
-    
+
     <!-- Include chapters -->
     <xi:include href="./ch-1.ptx" />
     <xi:include href="./ch-2.ptx" />
@@ -19,7 +19,8 @@
     <xi:include href="./ch-5.ptx" />
     <xi:include href="./ch-7.ptx" />
 
-
+<!--include worksheets-->
+    <xi:include href="./worksheets/ws-1.ptx" />
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
 
