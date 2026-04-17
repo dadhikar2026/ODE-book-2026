@@ -4,24 +4,19 @@
 
     <title>Formulas</title>
 
-    <raw format="html">
-  <button onclick="window.print()" style="position:fixed;top:16px;right:16px;z-index:99999;">
-    🖨 Print
-  </button>
-</raw>
-    <subsection>
-        <title>Some Laplace Transforms</title>
+    <subsection xml:id="laplace-formulas">
+        <title>Common Laplace Transforms</title>
         <tabular xml:id="laplace-table">
             <col />
             <col />
             <col halign="center" />
-            <row>
+            <row header="yes" bottom="minor">
                 <cell></cell>
                 <cell>
-                    <m>f(t)</m>
+                    <m>\boldsymbol{f(t)}</m>
                 </cell>
                 <cell>
-                    <m>\mathscr{L}\{f(t)\}=F(s)</m>
+                    <m>\mathcal{L}\boldsymbol{\{f(t)\}=F(s)}</m>
                 </cell>
             </row>
 
@@ -32,7 +27,7 @@
                 </cell>
                 <cell>
                     <m>\dfrac{1}{s},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
@@ -43,7 +38,7 @@
                 </cell>
                 <cell>
                     <m>\dfrac{1}{s^{2}},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
@@ -54,7 +49,7 @@
                 </cell>
                 <cell>
                     <m>\dfrac{n!}{s^{\,n+1}},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
@@ -65,7 +60,7 @@
                 </cell>
                 <cell>
                     <m>\dfrac{\sqrt{\pi}}{\sqrt{s}},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
@@ -76,18 +71,18 @@
                 </cell>
                 <cell>
                     <m>\dfrac{\sqrt{\pi}}{2\,s^{3/2}},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell>5.</cell>
                 <cell>
-                    <m>t^{\alpha},\ \alpha>-1</m>
+                    <m>t^{\alpha},\ \alpha &gt;-1</m>
                 </cell>
                 <cell>
                     <m>\dfrac{\Gamma(\alpha+1)}{s^{\alpha+1}},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
@@ -98,7 +93,7 @@
                 </cell>
                 <cell>
                     <m>\dfrac{k}{s^{2}+k^{2}},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
@@ -109,7 +104,7 @@
                 </cell>
                 <cell>
                     <m>\dfrac{s}{s^{2}+k^{2}},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
@@ -120,7 +115,7 @@
                 </cell>
                 <cell>
                     <m>\dfrac{2k^{2}}{s(s^{2}+4k^{2})},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
@@ -131,285 +126,267 @@
                 </cell>
                 <cell>
                     <m>\dfrac{s^{2}+2k^{2}}{s(s^{2}+4k^{2})},</m>
-                    <m>s>0</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
+
             <row>
-                <cell>10.</cell>
+                <cell> 10. </cell>
                 <cell>
-                    <m>f(t)</m>
+                    <m>e^{at}</m>
                 </cell>
                 <cell>
-                    <m>\mathscr{L}\{f(t)\}=F(s)</m>
+                    <m>\dfrac{1}{s-a},</m>
+                    <m>s&gt;a</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 11. </cell>
                 <cell>
-                    <m>e^{at}</m>
+                    <m>\sinh(k t)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{1}{s-a},</m>
-                    <m>s>a</m>
+                    <m>\dfrac{k}{s^{2}-k^{2}},</m>
+                    <m>s&gt;\lvert k\rvert</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 12. </cell>
                 <cell>
-                    <m>\sinh(kt)</m>
+                    <m>\cosh(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{k}{s^{2}-k^{2}},</m>
-                    <m>s>\lvert k\rvert</m>
+                    <m>\dfrac{s}{s^{2}-k^{2}},</m>
+                    <m>s&gt;\lvert k\rvert</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 13. </cell>
                 <cell>
-                    <m>\cosh(kt)</m>
+                    <m>\sinh^{2}(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{s}{s^{2}-k^{2}},</m>
-                    <m>s>\lvert k\rvert</m>
+                    <m>\dfrac{2k^{2}}{s(s^{2}-4k^{2})},</m>
+                    <m>s&gt;\lvert k\rvert</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 14. </cell>
                 <cell>
-                    <m>\sinh^{2}(kt)</m>
+                    <m>\cosh^{2}(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{2k^{2}}{s(s^{2}-4k^{2})},</m>
-                    <m>s>\lvert k\rvert</m>
+                    <m>\dfrac{s^{2}-2k^{2}}{s(s^{2}-4k^{2})},</m>
+                    <m>s&gt;\lvert k\rvert</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 15. </cell>
                 <cell>
-                    <m>\cosh^{2}(kt)</m>
+                    <m>t e^{at}</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{s^{2}-2k^{2}}{s(s^{2}-4k^{2})},</m>
-                    <m>s>\lvert k\rvert</m>
+                    <m>\dfrac{1}{(s-a)^{2}},</m>
+                    <m>s&gt;a</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 16. </cell>
                 <cell>
-                    <m>t e^{at}</m>
+                    <m>t^{n}e^{at},\; n\mbox{ being a natural number}</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{1}{(s-a)^{2}},</m>
-                    <m>s>a</m>
+                    <m>\dfrac{n!}{(s-a)^{n+1}},</m>
+                    <m>s&gt;a</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 17. </cell>
                 <cell>
-                    <m>t^{n}e^{at},\; n\mbox{ being a natural number}</m>
+                    <m>e^{at}\sin(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{n!}{(s-a)^{n+1}},</m>
-                    <m>s>a</m>
+                    <m>\dfrac{k}{(s-a)^{2}+k^{2}},</m>
+                    <m>s&gt;a</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 18. </cell>
                 <cell>
-                    <m>e^{at}\sin(kt)</m>
+                    <m>e^{at}\cos(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{k}{(s-a)^{2}+k^{2}},</m>
-                    <m>s>a</m>
+                    <m>\dfrac{s-a}{(s-a)^{2}+k^{2}},</m>
+                    <m>s&gt;a</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 19. </cell>
                 <cell>
-                    <m>e^{at}\cos(kt)</m>
+                    <m>e^{at}\sinh(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{s-a}{(s-a)^{2}+k^{2}},</m>
-                    <m>s>a</m>
+                    <m>\dfrac{k}{(s-a)^{2}-k^{2}},</m>
+                    <m>s&gt;a+\lvert k\rvert</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 20. </cell>
                 <cell>
-                    <m>e^{at}\sinh(kt)</m>
+                    <m>e^{at}\cosh(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{k}{(s-a)^{2}-k^{2}},</m>
-                    <m>s>a+\lvert k\rvert</m>
+                    <m>\dfrac{s-a}{(s-a)^{2}-k^{2}},</m>
+                    <m>s&gt;a+\lvert k\rvert</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 21. </cell>
                 <cell>
-                    <m>e^{at}\cosh(kt)</m>
+                    <m>t\sin(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{s-a}{(s-a)^{2}-k^{2}},</m>
-                    <m>s>a+\lvert k\rvert</m>
+                    <m>\dfrac{2ks}{(s^{2}+k^{2})^{2}},</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 22. </cell>
                 <cell>
-                    <m>t\sin(kt)</m>
+                    <m>t\cos(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{2ks}{(s^{2}+k^{2})^{2}},</m>
-                    <m>s>0</m>
+                    <m>\dfrac{s^{2}-k^{2}}{(s^{2}+k^{2})^{2}},</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 23. </cell>
                 <cell>
-                    <m>t\cos(kt)</m>
+                    <m>\sin(kt)+kt\cos(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{s^{2}-k^{2}}{(s^{2}+k^{2})^{2}},</m>
-                    <m>s>0</m>
+                    <m>\dfrac{2k s^{2}}{(s^{2}+k^{2})^{2}},</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 24. </cell>
                 <cell>
-                    <m>\sin(kt)+kt\cos(kt)</m>
+                    <m>\sin(kt)-kt\cos(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{2k s^{2}}{(s^{2}+k^{2})^{2}},</m>
-                    <m>s>0</m>
+                    <m>\dfrac{2k^{3}}{(s^{2}+k^{2})^{2}},</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 25. </cell>
                 <cell>
-                    <m>\sin(kt)-kt\cos(kt)</m>
+                    <m>t\sinh(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{2k^{3}}{(s^{2}+k^{2})^{2}},</m>
-                    <m>s>0</m>
+                    <m>\dfrac{2ks}{(s^{2}-k^{2})^{2}},</m>
+                    <m>s&gt;\lvert k\rvert</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 26. </cell>
                 <cell>
-                    <m>t\sinh(kt)</m>
+                    <m>t\cosh(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{2ks}{(s^{2}-k^{2})^{2}},</m>
-                    <m>s>\lvert k\rvert</m>
+                    <m>\dfrac{s^{2}+k^{2}}{(s^{2}-k^{2})^{2}},</m>
+                    <m>s&gt;\lvert k\rvert</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 27. </cell>
                 <cell>
-                    <m>t\cosh(kt)</m>
-                </cell>
-                <cell>
-                    <m>\dfrac{s^{2}+k^{2}}{(s^{2}-k^{2})^{2}},</m>
-                    <m>s>\lvert k\rvert</m>
-                </cell>
-            </row>
-
-            <row>
-                <cell> 28. </cell>
-                <cell>
                     <m>\dfrac{e^{at}-e^{bt}}{a-b}</m>
                 </cell>
                 <cell>
                     <m>\dfrac{1}{(s-a)(s-b)},</m>
-                    <m>s>\max\{a, b\}</m>
+                    <m>s&gt;\max\{a, b\}</m>
+                </cell>
+            </row>
+
+
+            <row>
+                <cell> 28. </cell>
+                <cell>
+                    <m>\dfrac{ae^{at}-be^{bt}}{a-b}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s}{(s-a)(s-b)},</m>
+                    <m>s&gt;\max\{a, b\}</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 29. </cell>
                 <cell>
-                    <m>f(t)</m>
+                    <m>1-\cos(kt)</m>
                 </cell>
                 <cell>
-                    <m>\mathscr{L}\{f(t)\}=F(s)</m>
+                    <m>\dfrac{k^{2}}{s(s^{2}+k^{2})},</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 30. </cell>
                 <cell>
-                    <m>\dfrac{ae^{at}-be^{bt}}{a-b}</m>
+                    <m>kt-\sin(kt)</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{s}{(s-a)(s-b)},</m>
-                    <m>s>\max\{a, b\}</m>
+                    <m>\dfrac{k^{3}}{s^{2}(s^{2}+k^{2})},</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 31. </cell>
                 <cell>
-                    <m>1-\cos(kt)</m>
+                    <m>\dfrac{a\sin(bt)-b\sin(at)}{ab(a^{2}-b^{2})}</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{k^{2}}{s(s^{2}+k^{2})},</m>
-                    <m>s>0</m>
+                    <m>\dfrac{1}{(s^{2}+a^{2})(s^{2}+b^{2})},</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 32. </cell>
                 <cell>
-                    <m>kt-\sin(kt)</m>
+                    <m>\dfrac{\cos(bt)-\cos(at)}{a^{2}-b^{2}}</m>
                 </cell>
                 <cell>
-                    <m>\dfrac{k^{3}}{s^{2}(s^{2}+k^{2})},</m>
-                    <m>s>0</m>
+                    <m>\dfrac{s}{(s^{2}+a^{2})(s^{2}+b^{2})},</m>
+                    <m>s&gt;0</m>
                 </cell>
             </row>
 
             <row>
                 <cell> 33. </cell>
-                <cell>
-                    <m>\dfrac{a\sin(bt)-b\sin(at)}{ab(a^{2}-b^{2})}</m>
-                </cell>
-                <cell>
-                    <m>\dfrac{1}{(s^{2}+a^{2})(s^{2}+b^{2})},</m>
-                    <m>s>0</m>
-                </cell>
-            </row>
-
-            <row>
-                <cell> 34. </cell>
-                <cell>
-                    <m>\dfrac{\cos(bt)-\cos(at)}{a^{2}-b^{2}}</m>
-                </cell>
-                <cell>
-                    <m>\dfrac{s}{(s^{2}+a^{2})(s^{2}+b^{2})},</m>
-                    <m>s>0</m>
-                </cell>
-            </row>
-
-            <row>
-                <cell> 35. </cell>
                 <cell>
                     <m>\sin(kt)\sinh(kt)</m>
                 </cell>
@@ -419,7 +396,7 @@
             </row>
 
             <row>
-                <cell> 36. </cell>
+                <cell> 34. </cell>
                 <cell>
                     <m>\sin(kt)\cosh(kt)</m>
                 </cell>
@@ -429,7 +406,7 @@
             </row>
 
             <row>
-                <cell> 37. </cell>
+                <cell> 35. </cell>
                 <cell>
                     <m>\cos(kt)\sinh(kt)</m>
                 </cell>
@@ -439,7 +416,7 @@
             </row>
 
             <row>
-                <cell> 38. </cell>
+                <cell> 36. </cell>
                 <cell>
                     <m>\cos(kt)\cosh(kt)</m>
                 </cell>
@@ -449,7 +426,7 @@
             </row>
 
             <row>
-                <cell> 39. </cell>
+                <cell> 37. </cell>
                 <cell>
                     <m>\dfrac{e^{bt}-e^{at}}{t}</m>
                 </cell>
@@ -459,7 +436,7 @@
             </row>
 
             <row>
-                <cell> 40. </cell>
+                <cell> 38. </cell>
                 <cell>
                     <m>\dfrac{2(1-\cos(kt))}{t}</m>
                 </cell>
@@ -469,7 +446,7 @@
             </row>
 
             <row>
-                <cell> 41. </cell>
+                <cell> 39. </cell>
                 <cell>
                     <m>\dfrac{2(1-\cosh(kt))}{t}</m>
                 </cell>
@@ -479,7 +456,7 @@
             </row>
 
             <row>
-                <cell> 42. </cell>
+                <cell> 40. </cell>
                 <cell>
                     <m>\dfrac{\sin(at)}{t}</m>
                 </cell>
@@ -489,7 +466,7 @@
             </row>
 
             <row>
-                <cell> 43. </cell>
+                <cell> 41. </cell>
                 <cell>
                     <m>\dfrac{\sin(at)\cos(bt)}{t}</m>
                 </cell>
@@ -500,7 +477,7 @@
             </row>
 
             <row>
-                <cell> 44. </cell>
+                <cell> 42. </cell>
                 <cell>
                     <m>\ds \operatorname{erf}\!\left(\frac{a}{2\sqrt{t}}\right)</m>
                 </cell>
@@ -510,7 +487,7 @@
             </row>
 
             <row>
-                <cell> 45. </cell>
+                <cell> 43. </cell>
                 <cell>
                     <m>\ds \operatorname{erfc}\!\left(\frac{a}{2\sqrt{t}}\right)</m>
                 </cell>
@@ -520,7 +497,7 @@
             </row>
 
             <row>
-                <cell> 46. </cell>
+                <cell> 44. </cell>
                 <cell>
                     <m>\ds \frac{1}{\sqrt{\pi t}}\, \exp\!\left(-\frac{a^{2}}{4t}\right)</m>
                 </cell>
@@ -529,18 +506,9 @@
                 </cell>
             </row>
 
-            <row>
-                <cell> 47. </cell>
-                <cell>
-                    <m>f(t)</m>
-                </cell>
-                <cell>
-                    <m>\mathscr{L}\{f(t)\}=F(s)</m>
-                </cell>
-            </row>
 
             <row>
-                <cell> 48. </cell>
+                <cell> 45. </cell>
                 <cell>
                     <m>e^{at}f(t)</m>
                 </cell>
@@ -550,7 +518,7 @@
             </row>
 
             <row>
-                <cell> 49. </cell>
+                <cell> 46. </cell>
                 <cell>
                     <m>\mathcal{U}(t-a)</m>
                 </cell>
@@ -560,7 +528,7 @@
             </row>
 
             <row>
-                <cell> 50. </cell>
+                <cell> 47. </cell>
                 <cell>
                     <m>f(t-a)\,\mathcal{U}(t-a)</m>
                 </cell>
@@ -570,17 +538,17 @@
             </row>
 
             <row>
-                <cell> 51. </cell>
+                <cell> 48. </cell>
                 <cell>
                     <m>g(t)\,\mathcal{U}(t-a)</m>
                 </cell>
                 <cell>
-                    <m>e^{-as}\,\mathscr{L}\{g(t+a)\}</m>
+                    <m>e^{-as}\,\mathcal{L}\{g(t+a)\}</m>
                 </cell>
             </row>
 
             <row>
-                <cell> 52. </cell>
+                <cell> 49. </cell>
                 <cell>
                     <m>y^{(n)}(t)</m>
                 </cell>
@@ -590,7 +558,7 @@
             </row>
 
             <row>
-                <cell> 53. </cell>
+                <cell> 50. </cell>
                 <cell>
                     <m>t^{n}f(t)</m>
                 </cell>
@@ -600,7 +568,7 @@
             </row>
 
             <row>
-                <cell> 54. </cell>
+                <cell> 51. </cell>
                 <cell>
                     <m>\ds \frac{f(t)}{t}</m>
                 </cell>
@@ -610,7 +578,7 @@
             </row>
 
             <row>
-                <cell> 55. </cell>
+                <cell> 52. </cell>
                 <cell>
                     <m>(f*g)(t)=\ds \int_{0}^{t}f(\tau)g(t-\tau)\,d\tau</m>
                 </cell>
@@ -620,7 +588,7 @@
             </row>
 
             <row>
-                <cell> 56. </cell>
+                <cell> 53. </cell>
                 <cell>
                     <m>f\left({t + T}\right) = f\left( t \right)</m>
                 </cell>
@@ -631,7 +599,7 @@
 
 
             <row>
-                <cell> 57. </cell>
+                <cell> 54. </cell>
                 <cell>
                     <m>\delta(t-a)</m>
                 </cell>
@@ -640,7 +608,7 @@
                 </cell>
             </row>
             <row>
-                <cell> 58. </cell>
+                <cell> 55. </cell>
                 <cell>
                     <m>\delta(t-a)\ast f(t)</m>
                 </cell>
@@ -764,5 +732,11 @@
         </tabular>
 
     </subsection>
+
+    <!-- <worksheet xml:id="ws-1">
+        <exercise>
+            Solve the following problem.
+        </exercise>
+    </worksheet> -->
 
 </section>
