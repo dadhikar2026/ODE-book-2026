@@ -6,7 +6,7 @@
 
     <subsection xml:id="laplace-formulas">
         <title>Common Laplace Transforms</title>
-        <tabular xml:id="laplace-table">
+        <tabular>
             <col />
             <col />
             <col halign="center" />
