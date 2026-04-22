@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-3-5" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Forced Oscillations and Resonance</title>
+  <title>Applications</title>
+  <objectives>
+    <ul>
+      <li>
+        <p>
+          Be able to apply methods of solutions from previous sections to some basic problems in
+          applications.
+        </p>
+      </li>
+    </ul>
+  </objectives>
 
   <introduction>
     <p>
-      Something about forced oscillations and resonance goes here yes.
+      In this section we will study two commons examples of applications where the solution methods
+      from previous sections can be effectively used.
 </p>
-    
+  </introduction>
+  <subsection xml:id="spring-mass-system">
+    <title>Spring-Mass System</title>
+    <p>
+      A spring-mass system is a common physical application of second-order linear differential
+      equations.
+    </p>
 
+  </subsection>
+  <subsection xml:id="RLC-circuit">
+    <title>Electrical Circuits</title>
+    <p>
+      An RLC circuit is another common physical application of second-order linear differential
+      equations.
+    </p>
 
-
-</introduction>
+  </subsection>
 </section>

@@ -3,25 +3,570 @@
 <section xml:id="sec-3-1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Introduction</title>
 
-  <!-- <objectives>
+  <objectives>
     <ul>
-      <li>Understand nth order linear differential equations</li>
+      <li> Understand basics of <m>n^\text{th}</m> order linear differential equations </li>
     </ul>
-  </objectives> -->
-
+  </objectives>
 
   <introduction>
-    <p> The <m>n^{\text{th}}</m> order linear differential
-      equations are of the form
-      <me
+    <p> The <m>n^\text{th}</m> order linear differential equations are of the form <men
         xml:id="eq-nonhomogeneous-0">
-        \phi^{(n)}(x) + a_{n-1}(x)\phi^{(n-1)}(x) + \cdots + a_1(x)\phi'(x) + a_0(x)\phi(x) = f(x)
+        a_n(x)y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_1(x)y' + a_0(x)y = f(x)
+      </men>
+      where the functions <m>a_0(x), \dots, a_{n-1}(x), a_n(x)</m> and <m>f(x)</m> are continuous on
+      some interval <m>I .</m> We say that <xref ref="eq-nonhomogeneous-0" /> is <term>
+        <em>homogeneous</em>
+      </term> on <m>I</m> if <m>f(x) = 0</m> for all <m>x</m> in <m>I</m>
+      and <term>
+        <em>nonhomogeneous</em>
+      </term> on <m>I</m> if <m>f(x)\ne 0</m> for some <m>x</m> in <m>
+      I.</m> We will usually have <m>a_n(x) \ne 0</m> on <m>I.</m> If <m>a_n(x)=0</m> for some point <m>
+      x</m> of <m>I,</m> we will simply restrict our attention to a smaller interval, denoted again
+      by <m> I</m>, on which <m>a_n(x) \ne 0.</m> With these consideration, <xref
+        ref="eq-nonhomogeneous-0" /> can be rewritten in the form <men xml:id="eq-nonhomogeneous0">
+      y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_1(x)y' + a_0(x)y = f(x),
+      </men>
+      <m>a_0(x),
+      \dots, a_{n-1}(x)</m> and <m>f(x)</m> are continuous on some interval <m>I .</m> This is
+      achieved by dividing both sides of <xref ref="eq-nonhomogeneous-0" /> by <m>a_n(x)</m> to
+      obtain <me>
+        y^{(n)}+\frac{a_{n-1}(x)}{a_n(x)}y^{(n-1)}+
+      \cdots+\frac{a_1(x)}{a_n(x)}y'+\frac{a_0(x)}{a_n(x)}y= \frac{f(x)}{a_n(x)}
       </me>
-    </p>
-    <p> where the functions <m>a_0(x), \dots, a_{n-1}(x), a_n(x)</m> and <m>f(x)</m> are continuous
-      on some interval <m>I</m>. </p>
+      and redefining the functions <me>
+        \frac{a_{n-1}(x)}{a_n(x)}, \dots,\frac{a_1(x)}{a_n(x)}, \frac{a_0(x)}{a_n(x)},
+      \frac{f(x)}{a_n(x)}
+      </me>
+      as <me>
+        a_{n-1}(x), \dots,a_1(x), a_0(x), f(x),
+      </me> respectively. </p>
 
+    <definition xml:id="def-3-1">
+      <statement>
+        <p> A function <m>y = \phi(x)</m> defined on <m>I</m> is said to be a <term>
+            <em>solution</em>
+          </term> of <xref ref="eq-nonhomogeneous0" /> if <me>\phi^{(n)}(x)
+          + a_{n-1}(x)\phi^{(n-1)}(x) + \cdots + a_1(x)\phi'(x) + a_0(x)\phi(x) = f(x)</me> for all <m>
+          x</m> in <m>I,</m> that is, if <xref ref="eq-nonhomogeneous0" /> is satisfied for all <m>x</m>
+          in <m>I</m> when we substitute <m>\phi(x)</m> for <m>y.</m>
+        </p>
+      </statement>
+    </definition>
+    <p> In <xref ref="def-3-1" />, we note the following. </p>
+
+    <p>
+      <ol marker="i.">
+        <li>
+          <p> Derivatives of <m>\phi(x)</m> at the endpoints (if any) of <m>I</m> are understood as
+            one-sided. </p>
+        </li>
+        <li>
+          <p> Solutions <m>y = \phi(x)</m> may be complex-valued, though real solutions are
+            preferred in applications. For <m>\phi(x) = \phi_1(x) + i \phi_2(x)</m> with real <m>
+            \phi_1</m> and <m>\phi_2</m>, <me>\phi'(x) = \phi_1'(x) + i \phi_2'(x),</me> where <m>i
+              = \sqrt{-1}</m>, and higher derivatives are computed similarly. </p>
+        </li>
+      </ol>
+    </p>
+
+    <definition xml:id="def-3-2">
+      <statement>
+        <p> Let <m>a_0(x), \dots, a_{n-1}(x), f(x)</m> be functions defined on some interval <m>I</m>
+          , <m>x_0</m> be a point in <m>I</m>, and <m>y_1,\dots, y_{n-1}</m> be fixed numbers. The <m>
+          n^\text{th}</m> order linear differential equation <me>y^{(n)} + a_{n-1}(x)y^{(n-1)} +
+          \cdots + a_1(x)y' + a_0(x)y = f(x)</me> subject to the conditions (called initial
+          conditions) <me>\\ y(x_0) = y_0,\; y'(x_0) = y_1, \dots, y^{(n-1)}(x_0) = y_{n-1},</me> is
+          called an <term><em>initial value problem</em> (IVP)</term>. </p>
+      </statement>
+    </definition>
+    <p> It is essential to know when an initial value problem has a solution if <m>a_0(x), \dots,
+      a_{n-1}(x), f(x)</m> are continuous on some interval <m>I</m> containing <m>x_0</m>. This is
+      addressed by the existence and uniqueness theorem stated below, whose proof requires advanced
+      calculus and is beyond the scope of this book. </p>
+
+    <theorem xml:id="existence-uniqueness-theorem">
+      <title>(Existence and Uniqueness)</title>
+      <statement>
+        <p> Let <m>a_0(x), \dots, a_{n-1}(x), f(x)</m> be continuous functions on some interval <m>I</m>
+          , <m>x_0</m> be a point in <m>I</m>, and <m>y_1,\dots, y_{n-1}</m> be fixed numbers. Then
+          the IVP <me>\begin{cases}
+            y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_1(x)y' + a_0(x)y = f(x)\\ y(x_0) = y_0,\;
+          y'(x_0) = y_1, \dots, y^{(n-1)}(x_0) = y_{n-1},
+            \end{cases}</me> has a unique solution <m>y = \phi(x)</m> defined on <m>I.</m>
+        </p>
+      </statement>
+    </theorem>
+
+    <remark xml:id="rem-3-1">
+      <p> When <m>f(x)=0</m> for all <m>x</m> in <m>I</m> and <m>y_1=y_2 =\cdots = y_{n-1} = 0</m>,
+        it follows from <xref ref="existence-uniqueness-theorem" /> that the function <m>\phi(x) =0</m>
+        for all <m>
+          x</m> in <m>I</m> is the unique solution of the IVP. By the uniqueness, if at least one of <m>y_1,
+        \dots, y_{n-1}</m> is nonzero, then the unique solution of the IVP in <xref
+          ref="existence-uniqueness-theorem" /> must be a nonzero function. </p>
+    </remark>
+    <p>
+      The superposition principle discussed below provides a general procedure for constructing new
+      solutions from known solutions.
+</p>
+
+
+    <theorem xml:id="superposition-principle-theorem">
+      <title>(Superposition Principle)</title>
+      <statement>
+        <p> Suppose that <m>y_1, \dots, y_k</m> are solutions of the homogeneous linear equation <me>y^{(n)}
+          + a_{n-1}(x)y^{(n-1)} + \cdots + a_1(x)y' + a_0(x)y = 0,</me> where <m>a_0(x), \dots,
+          a_{n-1}(x)</m> are continuous on some interval <m>I .</m> Then, for any constants <m>c_1,
+          \dots, c_k</m> (possibly complex), the function <me>y(x) = c_1y_1(x) + \cdots+c_k y_k(x) =
+          \sum_{j=1}^k c_j y_j(x)</me> is a solution on <m>I.</m> The expression <m>\sum_{j=1}^k c_j
+          y_j(x)</m> is called a <term>
+            <em>linear combination</em>
+          </term> (or <term>
+            <em>superposition</em>
+          </term>) of <m>y_1, \dots, y_k,</m> with <term>
+            <em>weights</em>
+          </term> <m>c_1, \dots, c_k.</m>
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p> We treat the special case <m>n=2</m> here for clarity of this proof and leave the general
+        case as an exercise. Let <m>y_1</m> and <m>y_2</m> be solutions on <m>I</m> of <men
+          xml:id="eq-homogeneous-little">
+          y'' + a_1(x)y' + a_0(x)y = 0,
+        </men> and let <m>y = c_1 y_1 + c_2y_2</m>
+        for constants <m>c_1</m> and <m>c_2.</m> Then <me>y' = c_1 y'_1 +
+          c_2y'_2\quad\mbox{and}\quad y'' = c_1 y''_1 + c_2y''_2</me> on <m>I.</m> We note that the
+        differentiation rules also apply when <m>c_1</m> and <m>c_2</m> are complex. Substituting
+        these into the left side of the differential equation gives <me>\begin{split}
+          &amp;y'' + a_1(x)y' + a_0(x)y\\
+          &amp;=c_1\big(y''_1 + a_1(x)y'_1 + a_0(x)y_1\big)+c_2\big(y''_2 + a_1(x)y'_2 +
+        a_0(x)y_2\big)\\
+          \end{split}</me> on <m>I.</m> Since <m>y_j</m> satisfies <me>y''_j + a_1(x)y'_j +
+          a_0(x)y_j = 0</me> on <m>I</m> for <m>j = 1, 2,</m> we obtain <me>y'' + a_1(x)y' +
+        a_0(x)y=0.</me> Thus, <m>y= c_1y_1 +c_2y_2</m> is a solution of <xref
+          ref="eq-homogeneous-little" /> on <m>I.</m>
+      </p>
+    </proof>
+
+    <remark xml:id="rem-3-2">
+      <p>
+        The superposition principle provides the following basic operations for constructing new
+        solutions from known solutions.
+      </p>
+      <p>
+        <ol marker="i.">
+          <li>
+            <p> If <m>y_1</m> is a solution, then <m>cy_1</m> is also a solution for any constant <m>
+              c</m>. </p>
+          </li>
+
+          <li>
+            <p> If <m>y_1</m> and <m>y_2</m> are solutions, then so is <m>y_1 +y_2.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </remark>
+
+    <example>
+      <p> We can verify that <m>y_1 = \cos x</m> and <m>y_2 = \sin x</m> are solutions of <m>y''+y =
+        0,</m> which is a homogeneous linear equation. Moreover, <m>y= 7 \cos x</m> and <m>y = 2\cos
+        x -3 \sin x</m> are also solutions. In fact, <m>y = c_1 \cos x</m> and <m>y = c_1 \cos x+c_2
+        \sin x</m> are solutions for any constants <m>c_1</m> and <m>c_2.</m>
+      </p>
+    </example>
+    <p>
+      When building new solutions of a homogeneous linear differential equation from a collection of
+      known solutions, it is desirable to use a minimal set of solutions as building blocks. Even if
+      several solutions are available, we may not actually need many of them, and some solutions can
+      be discarded based on how they are related to the remaining solutions. This important
+      technique is addressed in the next subsection.
+    </p>
   </introduction>
+
+  <subsection xml:id="linear-independence">
+    <title>Linear Independence</title>
+    <p> Two functions <m>y_1</m> and <m>y_2</m> defined on an interval <m>I</m> are said to be
+      linearly independent on <m>I</m> if neither function is a constant multiple of the other. For
+      instance, the functions <m>e^x</m> and <m>e^{-x}</m> are linearly independent on <m>(-\infty,
+      \infty)</m>, as are <m>\sin x</m> and <m>\cos x</m> on <m>(-\infty, \infty)</m>. The concept
+      of linear independence of functions extends naturally to any finite collection of functions,
+      as formalized in the following definition. </p>
+
+    <definition xml:id="def-3-3">
+      <statement>
+        <p> The functions <m>y_1, \dots, y_k</m> defined on an interval <m>I</m>, where <m>k</m> is
+          a positive integer, are said to be <term>
+            <em>linearly independent on <m>I</m></em>
+          </term> if the relation <me>c_1
+            y_1(x) + \cdots + c_k y_k(x) = 0</me> holds for all <m>x</m> in <m>I</m> <em>only when</em>
+          the constants <m>c_1, \dots, c_k</m> satisfy <m>c_1 = \cdots = c_k = 0</m>. If this
+          condition does not hold, that is, if there exist constants <m>c_1, \dots, c_k</m>, <em>not
+          all zero</em>, satisfying the above relation for all <m>x</m> in <m>I</m>, then the
+          functions <m>y_1, \dots, y_k</m> are said to be <term>
+            <em>linearly dependent on <m>I</m></em>
+          </term>. </p>
+      </statement>
+    </definition>
+    <p> We say that the set <m>\{y_1, \dots, y_k\}</m> is linearly independent on <m>I</m> if the
+      functions <m>y_1, \dots, y_k</m> are linearly independent on <m>I.</m> Similarly, we say that
+      the set <m>\{y_1, \dots, y_k\}</m> is linearly dependent on <m>I</m> if the functions <m>y_1,
+      \dots, y_k</m> are linearly dependent on <m>I.</m>
+    </p>
+
+    <p> The linear dependence or independence of a set of functions on an interval may change when
+      the interval is changed or when functions are added or removed. It follows directly from the
+      definition that if the set <m>\{y_1, \dots, y_k\}</m> is linearly independent on <m>I,</m>
+      then it remains linearly independent on any larger interval <m>J</m> containing <m>I,</m>
+      provided the functions are defined on <m>J.</m> Similarly, if the set <m>\{y_1, \dots, y_k\}</m>
+      is linearly dependent on <m>I,</m> it will also be linearly dependent on every subinterval <m>
+      J</m> of <m>I.</m>
+    </p>
+    <p>
+      Moreover, using the definition above, any subset of a linearly independent set of functions is
+      itself linearly independent, whereas a set that contains a linearly independent set can be
+      linearly dependent. Similarly, a set containing a linearly dependent set of functions is
+      necessarily linearly dependent, whereas a subset of a linearly dependent set can be linearly
+      independent.
+    </p>
+
+    <p> Suppose the functions <m>y_1, \dots, y_k</m> are linearly dependent on an interval <m>I</m>.
+      Then there exist constants <m>c_1, \dots, c_k</m>, not all zero, such that <men
+        xml:id="eq-linear-dependence">
+        c_1 y_1(x) + \cdots + c_k y_k(x) = 0
+</men> for all <m>x</m> in <m>I.</m> Since the
+      constants are not all zero, at least one of them must be nonzero. Suppose, for instance, that <m>c_1\ne
+      0.</m> Then, from <xref ref="eq-linear-dependence" />, we can express <me>y_1(x) =
+      \left(-\frac{c_2}{c_1}\right) y_2(x)
+        + \left(-\frac{c_3}{c_1}\right) y_3(x)
+        + \cdots
+        + \left(-\frac{c_k}{c_1}\right) y_k(x)</me> on <m>I</m>. This shows that <m>y_1</m> is a
+      linear combination of the remaining functions. Similarly, if <m>c_2 \ne 0,</m> then <me>y_2(x)
+      = \left(-\frac{c_1}{c_2}\right) y_1(x)
+        + \left(-\frac{c_3}{c_2}\right) y_3(x)
+        + \cdots
+        + \left(-\frac{c_k}{c_2}\right) y_k(x)</me> on <m>I</m>, and so <m>y_2</m> is a linear
+      combination of the remaining functions. In general, for any integer <m>k_0</m> with <m>2 \le
+      k_0 \le k</m> and <m>c_{k_0} \ne 0,</m> <xref ref="eq-linear-dependence" /> implies that <m>
+      y_{k_0}</m> is a linear combination of the remaining functions. Thus, if <m>\{y_1, \dots,
+        y_k\}</m> is a linearly dependent set of functions <m>y_1, \dots, y_k</m> defined on <m>I,</m>
+      then at least one of the functions can be expressed as a linear combination of the others. In
+      particular, this means that any set <m>\{y_1, \dots, y_k\}</m> containing the zero function is
+      necessarily linearly dependent. </p>
+
+    <p>
+      From a linearly dependent set, it is often desirable to remove any function that can be
+      expressed as a linear combination of the remaning functions. By repeatedly removing such
+      functions, we eventually obtain a linearly independent set. The functions in this linearly
+      independent set can then be used to construct new functions by forming linear combinations.
+    </p>
+
+    <example xml:id="ex-test-for-indepedence-1">
+      <statement>
+        <p> Determine whether <m>1, \cos^2x,</m> and <m>\sin^2x</m> are linearly independent on <m>(-\infty,
+          \infty).</m>
+        </p>
+      </statement>
+
+      <solution>
+        <p> Suppose there are constants <m>c_1, c_2,</m> and <m>c_3</m> that satisfy <me>c_1 +
+          c_2\cos^2x + c_3\sin^2x=0</me> for all <m>x</m> in <m>(-\infty, \infty).</m> The main
+          question here is: can we have at least one of <m>c_1, c_2, c_3</m> nonzero? In view of <m>\cos^2
+          x+ \sin^2 x=1</m>, we can take <m>c_1 = -1, c_2=c_3 =1.</m> Therefore <m>1, \cos^2x,</m>
+          and <m>\sin^2x</m> are linearly dependent on <m>(-\infty, \infty).</m>
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-test-for-independence-2">
+      <statement>
+        <p> Determine whether <m>1, e^{x}</m> and <m>x e^{x}</m> are linearly independent on <m>(-\infty,
+          \infty).</m>
+        </p>
+      </statement>
+
+      <solution>
+        <p> Suppose there are constants <m>c_1, c_2,</m> and <m>c_3</m> that satisfy <men
+            xml:id="eq-linear-indepedence-example-1">
+            c_1 + c_2e^x + c_3 xe^x=0</men> for all <m>x</m> in <m>(-\infty, \infty).</m> Again, can
+          we have at least one of <m>c_1, c_2, c_3</m> nonzero? Differentiating <xref
+            ref="eq-linear-indepedence-example-1" /> both sides with respect to <m>x</m> gives <me>c_2e^x
+          + c_3 e^x+ c_2 x e^x=0</me> for all <m>x</m> in <m>(-\infty, \infty).</m> Since <m>e^x</m>
+          is never zero, we have <men xml:id="eq-linear-indepedence-example-2">
+            c_2 + c_3 + c_3 x =0
+</men> for all <m>x</m> in <m>(-\infty, \infty).</m>
+          Differentiating <xref
+            ref="eq-linear-indepedence-example-2" /> both sides with respect to <m>x</m> yields <m>
+          c_3=0.
+</m> Using <m>c_3=0</m> in <xref ref="eq-linear-indepedence-example-2" />
+          yields <m>c_2
+            = 0.</m> Using <m>c_2=c_3=0</m> in <xref ref="eq-linear-indepedence-example-1" />, we
+          get <m>
+            c_1=0.</m> Therefore <m>1, e^{x}</m> and <m>x e^{x}</m>are linearly independent on <m>(-\infty,
+          \infty).</m>
+        </p>
+      </solution>
+    </example>
+
+  </subsection>
+
+  <subsection xml:id="Wronskian">
+    <title>The Wronskian</title>
+    <p> The methods used in <xref ref="ex-test-for-indepedence-1" /> and <xref
+        ref="ex-test-for-independence-2" /> to test the linear independence of functions can become
+      cumbersome, especially when the functions involved are more complicated than those in the
+      examples. In this book, we will typically need to determine whether a set of solutions of
+      homogeneous linear differential equations is linearly independent. For such sets of solutions,
+      the linear independence of solutions can be determined by using the <term>Wronskian</term>, a
+      determinant involving solutions and their derivatives, introduced in 1812 by the Polish
+      mathematician Józef Wroński. </p>
+
+
+    <definition xml:id="def-3-2-1">
+      <title>(Wronskian)</title>
+      <statement>
+        <p> Let <m>y_1, y_2, \dots, y_n</m> be functions that are <m>n-1</m> times differentiable on
+          an interval <m>I.</m> Their <term>
+            <em>Wronskian</em>
+          </term>, denoted by <m>W(y_1, \dots, y_{n-1})(x)</m> (or
+          simply by <m>W(x)</m>), is a function on <m>I</m> defined by <me>W(y_1,\dots,y_n)(x)
+            =
+            \begin{vmatrix}
+            y_1(x) &amp; y_2(x) &amp; \cdots &amp; y_n(x)\\
+            y_1'(x) &amp; y_2'(x) &amp; \cdots &amp; y_n'(x)\\
+            \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+            y_1^{(n-1)}(x) &amp; y_2^{(n-1)}(x) &amp; \cdots &amp; y_n^{(n-1)}(x)
+            \end{vmatrix}</me> on <m>I.</m>
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="wronskian-calculation">
+      <statement>
+        <p> Compute the Wronskian of <m>y_1=e^x</m> and <m>y_2=xe^{-x}</m> on <m>(-\infty, \infty).</m>
+        </p>
+      </statement>
+
+
+      <solution>
+        <p> The Wronskian <m>W(y_1,y_2)(x)</m> of <m>y_1=e^x</m> and <m>y_2=xe^{-x}</m> is <me>W(e^x,xe^{-x})
+          =
+            \begin{vmatrix}
+            y_1(x) &amp; y_2(x) \\
+            y_1'(x) &amp; y_2'(x) \\
+            \end{vmatrix}
+            = \begin{vmatrix}
+            e^x &amp; xe^{-x} \\
+            e^x &amp; e^{-x}-xe^{-x} \\
+            \end{vmatrix}
+            = 1-2x</me> on <m>(-\infty, \infty).</m>
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      The next theorem provides a Wronskian test for linear independence of differentiable
+      functions.
+    </p>
+
+    <theorem xml:id="wronskian-theorem">
+      <title>(Wronskian Test for Linear Independence)</title>
+      <statement>
+        <p> Let <m>y_1, \dots, y_k</m> be <m>k-1</m> times differentiable functions on an interval <m>
+          I</m> with <me>W(y_1, \dots, y_k)(x)\ne 0 \mbox{ on } I.</me> Then <m>y_1, \dots, y_k</m>
+          are linearly independent on <m>I.</m>
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p> For simplicity, we treat the case <m>k=2;</m> the general case is analogous. Suppose that <m>
+        y_1</m> and <m>y_2</m> are differentiable functions on an interval <m>I</m> such that <m>W(y_1,
+        y_2)(x)\ne 0</m> on <m>I.</m> Let <m>c_1</m> and <m>c_2</m> be constants such that <men
+          xml:id="eq-wronskian-zero-1">
+          c_1 y_1(x) + c_2 y_2(x) = 0
+        </men> for all <m>x</m> in <m>I.</m>
+        Differentiating gives <men xml:id="eq-wronskian-zero-2">
+          c_1 y_1'(x) + c_2 y_2'(x) = 0
+        </men> for all <m>x</m> in <m>I.</m> Since <m>W(y_1,y_2)(x)\neq
+        0</m> for every <m>x</m> in <m>I,</m> the linear system consisting of the <xref
+          ref="eq-wronskian-zero-1" /> and <xref ref="eq-wronskian-zero-2" /> has the unique
+        solution <m>c_1=c_2=0</m> for every <m>x</m> in <m>I.</m> Hence <m>y_1</m> and <m>y_2</m>
+        are linearly independent on <m>I</m>. </p>
+    </proof>
+
+    <remark>
+      <p>
+        <ol>
+          <li>
+            <p> The conclusion of <xref ref="wronskian-theorem" /> holds even if <m>W(y_1,\dots,y_k)(x_0)\neq
+              0</m> at just one point <m>x_0</m> in <m>I</m>. The case <m>k=2</m> appears as
+              Problem 2(i) in Exercises. </p>
+          </li>
+
+          <li>
+            <p> The converse of <xref ref="wronskian-theorem" /> is not true. For example, take the
+              differentiable functions <m>y_1= x^2</m> and <m>y_2 = x\lvert x\rvert</m> on <m>(-\infty,
+              \infty).</m> We know from Example that <m>y_1, y_2</m> are linearly independent on <m>(-\infty,
+              \infty);</m> however, their Wronskian <me>W(x^2, x\lvert{x}\rvert) = \begin{vmatrix}
+              x^2&amp;x\lvert{x}\rvert\\
+                2x &amp;2\lvert{x}\rvert
+                \end{vmatrix} =0</me> on <m>(-\infty, \infty).</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <term> there are items missing here and these will be added later </term>
+            </p>
+          </li>
+          <!-- <li>
+            <p>
+              We will see in Theorem <xref ref="thm-wronskian-nonzero-2" /> for the case <m>k=2</m> and in
+          Theorem <xref ref="thm-wronskian-nonzero-3" /> for the general case that the converse of
+          Theorem <xref ref="thm-wronskian-nonzero-1" /> also holds if <m>y_1, \dots, y_k</m> are
+          solutions of a <m>k^\text{th}</m> order homogeneous linear differential equation.
+            </p>
+    </li> -->
+
+          <li>
+            <p> A useful formula for the Wronskian of two solutions of a second order linear
+              homogeneous equation is derived in <xref ref="sec-3-2" />. Problem <xref
+                ref="ex-sec-second-order-homogeneous-7"
+              /> in Exercises <xref
+                ref="exercises-second-order" /> shows how the Wronskian can be used to determine a
+              second linearly independent solution when one solution is known. </p>
+          </li>
+
+        </ol>
+      </p>
+
+    </remark>
+
+  </subsection>
+
+
+  <exercises xml:id="exercises-3-1">
+
+    <exercise>
+      <p> Determine whether each set of functions below is linearly independent on the specified
+        interval using <xref ref="def-3-3" /> or the discussion that follows it. </p>
+
+      <p>
+        <ol marker="i." cols="2">
+          <li>
+            <p>
+              <m>\{1, x, x^2\}, \qquad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{1, x-1, 2x\}, \qquad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{x, \lvert{x}\rvert\}, \qquad (0, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{x, \lvert{x}\rvert\}, \qquad (-\infty,0)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{x, \lvert{x}\rvert\}, \qquad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{e^{2x}, e^{-2x}\}, \qquad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{e^{2x}, xe^{2x}\}, \qquad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{\sin x, \cos x\}, \qquad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{1, \sin x, \cos x\}, \quad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{0, \sin x, \cos x\}, \quad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{\sin^2 x, \cos^2 x\}, \quad (-\infty, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{1, \sin^2 x, \cos^2 x\}, \quad (-\infty, \infty)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\{\cos(\ln x), \sin(\ln x)\}, \; (0, \infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\left\{\frac{1}{x}, x^3\right\}, \qquad (0, \infty)</m>
+            </p>
+          </li>
+
+
+        </ol>
+      </p>
+    </exercise>
+
+    <exercise>
+      <p> Suppose that <m>y_1,y_2</m> are differentiable functions on an interval <m>I.</m>
+      </p>
+      <ol marker="i.">
+        <li>
+          <p> Let <m>x_0</m> be point in <m>I</m> such that <m>W(y_1, y_2)(x_0)\ne 0.</m> Show that <m>y_1,
+            y_2</m> are linearly independent on <m>I.</m>
+          </p>
+        </li>
+        <li>
+          <p> Determine whether the functions <m>y_1 = e^x</m> and <m>y_2 = xe^{-x}</m> considered
+            in <xref ref="wronskian-calculation" /> are linearly independent on <m>(-\infty,
+              \infty).</m>
+          </p>
+        </li>
+        <li>
+          <p> Find examples of <m>y_1, y_2</m> that are linearly independent on <m>I</m> and satisfy <m>W(y_1,
+            y_2)(x)= 0</m> for all <m>x</m> in <m>I.</m>
+          </p>
+        </li>
+      </ol>
+    </exercise>
+
+
+  </exercises>
 
 
 </section>

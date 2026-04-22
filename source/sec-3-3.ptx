@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-3-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Second Order Nonhomogeneous Linear Differential Equations</title>
+    <objectives>
+        <ul>
+            <li>
+                <p>
+                    Be able to work out methods for solving second order nonhomogeneous linear
+                    differential equations.
+                </p>
+            </li>
+        </ul>
+    </objectives>
+
+    <introduction>
+        <p>
+            Something about forced oscillations and resonance goes here yes.
+</p>
+    </introduction>
+    <subsection xml:id="subsec-something-something-2">
+        <title>something</title>
+        <p>
+            soemthing
+        </p>
+
+    </subsection>
+</section>
