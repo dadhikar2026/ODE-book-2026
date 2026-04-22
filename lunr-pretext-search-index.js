@@ -511,7 +511,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Second Order Nonhomogeneous Linear Differential Equations",
-  "body": " Second Order Nonhomogeneous Linear Differential Equations     Be able to work out methods for solving second order nonhomogeneous linear differential equations.      Something about forced oscillations and resonance goes here yes.    something  soemthing   "
+  "body": " Second Order Nonhomogeneous Linear Differential Equations     Learn common methods for solving second order nonhomogeneous linear differential equations.      In this section, we discuss methods for solving second order nonhomogeneous linear differential equations. The same ideas extend naturally to higher order equation (see ). The following is concerning how the general solutions of nonhomogeneous linear differential equations must be formatted.   (General Solution)   Consider the nonhomogeneous equation where , and are continuous functions on an interval and the associated homogeneous equation on . Let be the general solution of and be a particular solution of the nonhomogeneous equation on Then the general solution of is of the form on      Let be a particular solution of . Let be any other solution of . Then the difference is a solution of the homogeneous equation . In fact, for all in , we have Therefore, takes the form of on It follows from that is the general solution of . ◻     provides the fundamental structure for the general solution of nonhomogeneous linear differential equations. The function in is called the  complementary function  of the general solution, and it is given by where and form a fundamental set of solutions for and and are arbitrary constants.   In practice, solving a nonhomogeneous equation begins with finding the complementary function by determining a fundamental set of solutions to the associated homogeneous equation. We then find a particular solution of the nonhomogeneous equation, and the sum of the two provides the general solution. Finding a particular solution is typically the more difficult step; we outline two procedures for finding it in this section.    Variation of Parameters  The  variation of parameters  is a systematic method for constructing a particular solution of a nonhomogeneous linear differential equation of the form where the forcing term and coefficient functions and are assumed to be continuous on an interval with on We will be working with scenarios in which is either only positive or only negative on .  To formulate the method, we first divide both sides of by to rewrite it in standard form where and each of these functions remains to be continuous on .  Assume that is a fundamental set of solutions on for the homogeneous equation associated to the nonhomogeneous equation . Then the general solution to is for all in , where and are arbitrary constants.  To find a particular solution of the nonhomogeneous equation , the method of variation of parameters assumes a solution of the form for all in , where and are functions to be determined. The choice of reflects the name of the method: variation of parameters. The constants and in the solution of the homogeneous equation are replaced by the functions and , thereby varying the parameters in order to obtain a particular solution to . For the remainder of the discussion of the method, we suppress in all functions to minimize distractions.  Differentiating , we have and We impose the condition which is trivially satisfied when and are constant functions. The condition simplifies the expressions for and as follows: Substituting , , and for and , respectively, into gives which can be rewritten as Since and satisfy the homogeneous equation , we obtain the system This system can be solved for and : where is the Wronskian of and By integrating, we obtain Therefore, is given by Consequently, the general solution of is    The main advantage of the method of variation of parameters over the method of undetermined coefficients is that it is applicable to all non homogeneous linear differential equations, including the equations with variable coefficients. However, the evaluation of the integrals in can become quite cumbersome even when involves only elementary functions, such as the ones treated with the method of undetermined coefficients discussed .   We illustrate the method of variation of parameters with the following initial value problem which can be readily solved using the method of undetermined coefficients.    Solve the initial value problem by variation of parameters.    The auxiliary equation for the associated homogeneous equation is which gives and so the functions form a fundamental set solutions to The Wronskian of and is We note that the given nonhomogeneous equation is in the standard form with and therefore a particular solution by the method of variation of parameters is given by Then the integration by parts with the Kronecker method gives   Kronecker method for integration by parts     In a similar manner, we also evaluate Then becomes The general solution of the nonhomogeneous differential equation is where and are arbitrary constants. Since we get We find Since we have Using , we get , so that Hence the solution to the given initial value problem is on       Derivative  Integral     4x^2    8x    8    0    e^{4x}    \\frac{1}{4}e^{4x}    \\frac{1}{16}e^{4x}    e^x             +    -    +           Method of Undetermined Coefficients   "
 },
 {
   "id": "sec-3-3-2",
@@ -520,7 +520,61 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "3.3",
   "title": "",
-  "body": "   Be able to work out methods for solving second order nonhomogeneous linear differential equations.    "
+  "body": "   Learn common methods for solving second order nonhomogeneous linear differential equations.    "
+},
+{
+  "id": "thm-second-order-nonhomogeneous-general-solution",
+  "level": "2",
+  "url": "sec-3-3.html#thm-second-order-nonhomogeneous-general-solution",
+  "type": "Theorem",
+  "number": "3.3.1",
+  "title": "(General Solution).",
+  "body": " (General Solution)   Consider the nonhomogeneous equation where , and are continuous functions on an interval and the associated homogeneous equation on . Let be the general solution of and be a particular solution of the nonhomogeneous equation on Then the general solution of is of the form on    "
+},
+{
+  "id": "sec-3-3-3-3",
+  "level": "2",
+  "url": "sec-3-3.html#sec-3-3-3-3",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Let be a particular solution of . Let be any other solution of . Then the difference is a solution of the homogeneous equation . In fact, for all in , we have Therefore, takes the form of on It follows from that is the general solution of . ◻  "
+},
+{
+  "id": "sec-3-3-3-4",
+  "level": "2",
+  "url": "sec-3-3.html#sec-3-3-3-4",
+  "type": "Remark",
+  "number": "3.3.2",
+  "title": "",
+  "body": "  provides the fundamental structure for the general solution of nonhomogeneous linear differential equations. The function in is called the  complementary function  of the general solution, and it is given by where and form a fundamental set of solutions for and and are arbitrary constants.  "
+},
+{
+  "id": "subsec-variation-parameters-2",
+  "level": "2",
+  "url": "sec-3-3.html#subsec-variation-parameters-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": " variation of parameters  "
+},
+{
+  "id": "subsec-variation-parameters-7",
+  "level": "2",
+  "url": "sec-3-3.html#subsec-variation-parameters-7",
+  "type": "Remark",
+  "number": "3.3.3",
+  "title": "",
+  "body": " The main advantage of the method of variation of parameters over the method of undetermined coefficients is that it is applicable to all non homogeneous linear differential equations, including the equations with variable coefficients. However, the evaluation of the integrals in can become quite cumbersome even when involves only elementary functions, such as the ones treated with the method of undetermined coefficients discussed .  "
+},
+{
+  "id": "eg-variation-parameters",
+  "level": "2",
+  "url": "sec-3-3.html#eg-variation-parameters",
+  "type": "Example",
+  "number": "3.3.4",
+  "title": "",
+  "body": "  Solve the initial value problem by variation of parameters.    The auxiliary equation for the associated homogeneous equation is which gives and so the functions form a fundamental set solutions to The Wronskian of and is We note that the given nonhomogeneous equation is in the standard form with and therefore a particular solution by the method of variation of parameters is given by Then the integration by parts with the Kronecker method gives   Kronecker method for integration by parts     In a similar manner, we also evaluate Then becomes The general solution of the nonhomogeneous differential equation is where and are arbitrary constants. Since we get We find Since we have Using , we get , so that Hence the solution to the given initial value problem is on       Derivative  Integral     4x^2    8x    8    0    e^{4x}    \\frac{1}{4}e^{4x}    \\frac{1}{16}e^{4x}    e^x             +    -    +        "
 },
 {
   "id": "sec-3-4",

@@ -170,7 +170,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Second Order Nonhomogeneous Linear Differential Equations</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-something-something-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">something</span></a></div></li></ul>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-variation-parameters" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Variation of Parameters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-3-3-2" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Method of Undetermined Coefficients</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Higher Order Linear Differential Equations</span></a></div>
@@ -282,17 +285,388 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <article class="objectives goal-like" id="sec-3-3-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ul class="disc" id="sec-3-3-2-1"><li id="sec-3-3-2-1-1">
-<div class="para" id="sec-3-3-2-1-1-1">Be able to work out methods for solving second order nonhomogeneous linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-3-3-2-1-1-1">Learn common methods for solving second order nonhomogeneous linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-3-3-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li></ul>
-<div class="autopermalink" data-description="Objectives 3.3"><a href="#sec-3-3-2" title="Copy heading and permalink for Objectives 3.3" aria-label="Copy heading and permalink for Objectives 3.3">🔗</a></div></article><section class="introduction" id="sec-3-3-3"><div class="para" id="sec-3-3-3-1">Something about forced oscillations and resonance goes here yes.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="subsec-something-something-2"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">something</span>
-</h3>
-<div class="para" id="subsec-something-something-2-2">soemthing<div class="autopermalink" data-description="Paragraph"><a href="#subsec-something-something-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Objectives 3.3"><a href="#sec-3-3-2" title="Copy heading and permalink for Objectives 3.3" aria-label="Copy heading and permalink for Objectives 3.3">🔗</a></div></article><section class="introduction" id="sec-3-3-3"><div class="para" id="sec-3-3-3-1">In this section, we discuss methods for solving second order nonhomogeneous linear differential equations. The same ideas extend naturally to higher order equation (see <a href="sec-3-4.html" class="internal" title="Section 3.4: Higher Order Linear Differential Equations">Section 3.4</a>). The following is concerning how the general solutions of nonhomogeneous linear differential equations must be formatted.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.3.1: something"><a href="#subsec-something-something-2" title="Copy heading and permalink for Subsection 3.3.1: something" aria-label="Copy heading and permalink for Subsection 3.3.1: something">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Second Order Nonhomogeneous Linear Differential Equations"><a href="#sec-3-3" title="Copy heading and permalink for Section 3.3: Second Order Nonhomogeneous Linear Differential Equations" aria-label="Copy heading and permalink for Section 3.3: Second Order Nonhomogeneous Linear Differential Equations">🔗</a></div></section></div>
+<article class="theorem theorem-like" id="thm-second-order-nonhomogeneous-general-solution"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(General Solution).</span>
+</h3>
+<div class="para logical" id="thm-second-order-nonhomogeneous-general-solution-2-1">
+<div class="para">Consider the nonhomogeneous equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-homogeneous-associated-to-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html" id="eq-second-order-nonhomogeneous">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = f(x),\tag{3.3.1}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_1\text{,}\)</span> <span class="process-math">\(a_0\)</span> and <span class="process-math">\(f\)</span> are continuous functions on an interval <span class="process-math">\(I\)</span> and the associated homogeneous equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-homogeneous-associated-to-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html" id="eq-second-order-homogeneous-associated-to-nonhomogeneous">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = 0\tag{3.3.2}
+\end{equation}
+</div>
+<div class="para">on <span class="process-math">\(I\text{.}\)</span> Let <span class="process-math">\(y_h\)</span> be the general solution of <a href="sec-3-3.html#eq-second-order-homogeneous-associated-to-nonhomogeneous" class="internal" title="Equation 3.3.2">(3.3.2)</a> and <span class="process-math">\(y_p\)</span> be a particular solution of the nonhomogeneous equation <a href="sec-3-3.html#eq-second-order-nonhomogeneous" class="internal" title="Equation 3.3.1">(3.3.1)</a> on <span class="process-math">\(I.\)</span> Then the general solution of <a href="sec-3-3.html#eq-second-order-nonhomogeneous" class="internal" title="Equation 3.3.1">(3.3.1)</a> is of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-homogeneous-associated-to-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html" id="eq-second-order-nonhomogeneous-general-solution">
+\begin{equation}
+\boxed{y = y_h(x) +y_p(x)}\tag{3.3.3}
+\end{equation}
+</div>
+<div class="para">on <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-second-order-nonhomogeneous-general-solution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.3.1: (General Solution)"><a href="#thm-second-order-nonhomogeneous-general-solution" title="Copy heading and permalink for Theorem 3.3.1: (General Solution)" aria-label="Copy heading and permalink for Theorem 3.3.1: (General Solution)">🔗</a></div></article><details id="sec-3-3-3-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-3-3-3-3-1">
+<div class="para">Let <span class="process-math">\(y_p\)</span> be a particular solution of <a href="sec-3-3.html#eq-second-order-nonhomogeneous" class="internal" title="Equation 3.3.1">(3.3.1)</a>. Let <span class="process-math">\(y\)</span> be any other solution of <a href="sec-3-3.html#eq-second-order-nonhomogeneous" class="internal" title="Equation 3.3.1">(3.3.1)</a>. Then the difference</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-homogeneous-associated-to-nonhomogeneous.html ./knowl/xref/eq-general-solution-form.html ./knowl/xref/eq-second-order-nonhomogeneous.html" id="eq-general-solution-form">
+\begin{equation}
+\phi(x)=y(x) -y_p(x)\tag{3.3.4}
+\end{equation}
+</div>
+<div class="para">is a solution of the homogeneous equation <a href="sec-3-3.html#eq-second-order-homogeneous-associated-to-nonhomogeneous" class="internal" title="Equation 3.3.2">(3.3.2)</a>. In fact, for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-homogeneous-associated-to-nonhomogeneous.html ./knowl/xref/eq-general-solution-form.html ./knowl/xref/eq-second-order-nonhomogeneous.html" id="sec-3-3-3-3-1-9">
+\begin{equation*}
+\begin{split} &amp;\phi''(x) + a_1(x)\phi'(x) + a_0(x)\phi(x)\\ &amp;= \left(y''(x)
+-y_p''(x)\right)+a_1(x)\left(y'(x) -y_p'(x)\right)+a_0(x)\left(y(x) -y_p(x)\right)\\ &amp;=
+\left(y''(x) + a_1(x)y'(x) + a_0(x)y(x)\right)\\ &amp; \quad - \left(y_p''(x) +
+a_1(x)y_p'(x) + a_0(x)y_p(x)\right)\\ &amp;=f(x)-f(x)\\ &amp;=0.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Therefore, <span class="process-math">\(\phi(x)\)</span> takes the form of <span class="process-math">\(y_h(x)\)</span> on <span class="process-math">\(I.\)</span> It follows from <a href="sec-3-3.html#eq-general-solution-form" class="internal" title="Equation 3.3.4">(3.3.4)</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-nonhomogeneous.html ./knowl/xref/eq-second-order-homogeneous-associated-to-nonhomogeneous.html ./knowl/xref/eq-general-solution-form.html ./knowl/xref/eq-second-order-nonhomogeneous.html" id="sec-3-3-3-3-1-14">
+\begin{equation*}
+y= y_h(x) + y_p(x)\quad \mbox{ on } I
+\end{equation*}
+</div>
+<div class="para">is the general solution of <a href="sec-3-3.html#eq-second-order-nonhomogeneous" class="internal" title="Equation 3.3.1">(3.3.1)</a>. ◻</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1"><a href="#sec-3-3-3-3" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><article class="remark remark-like" id="sec-3-3-3-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="sec-3-3-3-4-1">
+<div class="para">
+<a href="sec-3-3.html#thm-second-order-nonhomogeneous-general-solution" class="internal" title="Theorem 3.3.1: (General Solution)">Theorem 3.3.1</a> provides the fundamental structure for the general solution of nonhomogeneous linear differential equations. The function <span class="process-math">\(y_h\)</span> in <a href="sec-3-3.html#eq-second-order-nonhomogeneous-general-solution" class="internal" title="Equation 3.3.3">(3.3.3)</a> is called the <dfn class="terminology"><em class="emphasis">complementary function</em></dfn> of the general solution, and it is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-second-order-nonhomogeneous-general-solution.html ./knowl/xref/eq-second-order-nonhomogeneous-general-solution.html ./knowl/xref/eq-second-order-homogeneous-associated-to-nonhomogeneous.html" id="sec-3-3-3-4-1-5">
+\begin{equation*}
+y_h(x)=c_1 y_1(x) + c_2 y_2(x),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> form a fundamental set of solutions for <a href="sec-3-3.html#eq-second-order-homogeneous-associated-to-nonhomogeneous" class="internal" title="Equation 3.3.2">(3.3.2)</a> and <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.3.2"><a href="#sec-3-3-3-4" title="Copy heading and permalink for Remark 3.3.2" aria-label="Copy heading and permalink for Remark 3.3.2">🔗</a></div></article><div class="para" id="sec-3-3-3-5">In practice, solving a nonhomogeneous equation begins with finding the complementary function by determining a fundamental set of solutions to the associated homogeneous equation. We then find a particular solution of the nonhomogeneous equation, and the sum of the two provides the general solution. Finding a particular solution is typically the more difficult step; we outline two procedures for finding it in this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-variation-parameters"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Variation of Parameters</span>
+</h3>
+<div class="para logical" id="subsec-variation-parameters-2">
+<div class="para">The <dfn class="terminology"><em class="emphasis">variation of parameters</em></dfn> is a systematic method for constructing a particular solution of a nonhomogeneous linear differential equation of the form</div>
+<div class="displaymath process-math" id="eq-general-from">
+\begin{equation}
+a_2(x) y'' + a_1(x) y' + a_0(x) y = g(x),\tag{3.3.5}
+\end{equation}
+</div>
+<div class="para">where the forcing term <span class="process-math">\(g\)</span> and coefficient functions <span class="process-math">\(a_0, a_1,\)</span> and <span class="process-math">\(a_2\)</span> are assumed to be continuous on an interval <span class="process-math">\(I\)</span> with <span class="process-math">\(a_2(x)\ne 0\)</span> on <span class="process-math">\(I.\)</span> We will be working with scenarios in which <span class="process-math">\(a_2(x)\)</span> is either only positive or only negative on <span class="process-math">\(I\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-variation-parameters-3">
+<div class="para">To formulate the method, we first divide both sides of <a href="sec-3-3.html#eq-general-from" class="internal" title="Equation 3.3.5">(3.3.5)</a> by <span class="process-math">\(a_2(x)\)</span> to rewrite it in standard form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-general-from.html" id="eq-standard-form">
+\begin{equation}
+y'' + P(x) y' + Q(x) y = f(x),\tag{3.3.6}
+\end{equation}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-general-from.html" id="subsec-variation-parameters-3-4">
+\begin{equation*}
+P(x) = \frac{a_1(x)}{a_2(x)}, \quad Q(x) = \frac{a_0(x)}{a_2(x)}, \quad f(x) =
+\frac{g(x)}{a_2(x)},
+\end{equation*}
+</div>
+<div class="para">and each of these functions remains to be continuous on <span class="process-math">\(I\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-variation-parameters-4">
+<div class="para">Assume that <span class="process-math">\(\{ y_1, y_2 \}\)</span> is a fundamental set of solutions on <span class="process-math">\(I\)</span> for the homogeneous equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-standard-form.html" id="eq-homogeneous1">
+\begin{equation}
+y'' + P(x) y' + Q(x) y = 0\tag{3.3.7}
+\end{equation}
+</div>
+<div class="para">associated to the nonhomogeneous equation <a href="sec-3-3.html#eq-standard-form" class="internal" title="Equation 3.3.6">(3.3.6)</a>. Then the general solution to <a href="sec-3-3.html#eq-standard-form" class="internal" title="Equation 3.3.6">(3.3.6)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-standard-form.html" id="VOP-4">
+\begin{equation}
+y_h(x) = c_1 y_1(x) + c_2 y_2(x),\tag{3.3.8}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{,}\)</span> where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-variation-parameters-5">
+<div class="para">To find a particular solution of the nonhomogeneous equation <a href="sec-3-3.html#eq-standard-form" class="internal" title="Equation 3.3.6">(3.3.6)</a>, the method of variation of parameters assumes a solution of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-5-2">
+\begin{equation*}
+y_p(x) = u_1(x) y_1(x) + u_2(x) y_2(x),
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{,}\)</span> where <span class="process-math">\(u_1\)</span> and <span class="process-math">\(u_2\)</span> are functions to be determined. <em class="emphasis">The choice of <span class="process-math">\(y_p\)</span> reflects the name of the method: variation of parameters. The constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> in the solution <span class="process-math">\(y_h\)</span> of the homogeneous equation <a href="sec-3-3.html#eq-homogeneous1" class="internal" title="Equation 3.3.7">(3.3.7)</a> are replaced by the functions <span class="process-math">\(u_1(x)\)</span> and <span class="process-math">\(u_2(x)\text{,}\)</span> thereby <em class="emphasis">varying</em> the parameters in order to obtain a particular solution to <a href="sec-3-3.html#eq-standard-form" class="internal" title="Equation 3.3.6">(3.3.6)</a></em>. For the remainder of the discussion of the method, we suppress <span class="process-math">\(x\)</span> in all functions to minimize distractions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-variation-parameters-6">
+<div class="para">Differentiating <span class="process-math">\(y_p = u_1y_1 +u_2y_2\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-2">
+\begin{equation*}
+y_p' = u_1 y_1' +u_1' y_1 + u_2 y_2'+ u_2' y_2 = u_1 y_1' + u_2 y_2'+(u_1' y_1 + u_2' y_2)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-3">
+\begin{equation*}
+\begin{aligned} y_p'' &amp;= u_1 y_1'' +u_1' y_1' +u_2 y_2''+ u_2' y_2' + \big( u_1' y_1 +
+u_2' y_2 \big)'\\[4pt] &amp;= u_1 y_1''+u_2 y_2'' +u_1' y_1' + u_2' y_2' + \big( u_1' y_1 +
+u_2' y_2 \big)' \end{aligned}
+\end{equation*}
+</div>
+<div class="para">We impose the condition</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-4">
+\begin{equation*}
+u_1' y_1 + u_2' y_2 = 0,
+\end{equation*}
+</div>
+<div class="para">which is trivially satisfied when <span class="process-math">\(u_1\)</span> and <span class="process-math">\(u_2\)</span> are constant functions. The condition simplifies the expressions for <span class="process-math">\(y_p'\)</span> and <span class="process-math">\(y_p''\)</span> as follows:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-9">
+\begin{equation*}
+\begin{aligned} y_p' &amp;= u_1 y_1' + u_2 y_2', \text{ and }\\ y_p'' &amp;= u_1 y_1''+u_2
+y_2'' +u_1' y_1' + u_2' y_2'.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Substituting <span class="process-math">\(y_p\text{,}\)</span> <span class="process-math">\(y_p'\text{,}\)</span> and <span class="process-math">\(y_p''\)</span> for <span class="process-math">\(y, y',\)</span> and <span class="process-math">\(y''\text{,}\)</span> respectively, into <a href="sec-3-3.html#eq-standard-form" class="internal" title="Equation 3.3.6">(3.3.6)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-16">
+\begin{equation*}
+u_1' y_1' + u_1 y_1'' + u_2' y_2' + u_2 y_2''+Pu_1 y_1' + Pu_2 y_2' +Qu_1 y_1 + Qu_2 y_2 =
+f,
+\end{equation*}
+</div>
+<div class="para">which can be rewritten as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-17">
+\begin{equation*}
+u_1 (y_1''+P y_1'+Q y_1)+ u_2 (y_2''+P y_2'+Q y_2) +u_1' y_1' + u_2' y_2' = f.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> satisfy the homogeneous equation <a href="sec-3-3.html#eq-homogeneous1" class="internal" title="Equation 3.3.7">(3.3.7)</a>, we obtain the system</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-21">
+\begin{equation*}
+\begin{cases} y_1 u_1' + y_2 u_2' = 0,\\ y_1' u_1' + y_2' u_2' = f.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">This system can be solved for <span class="process-math">\(u_1'\)</span> and <span class="process-math">\(u_2'\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-24">
+\begin{equation*}
+u_1' = -\frac{y_2 f}{W}, \quad u_2' = \phantom{-}\frac{y_1 f}{W},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(W
+= y_1 y_2' - y_2 y_1'\)</span> is the Wronskian of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2.\)</span> By integrating, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="eq-VOP-integrals">
+\begin{equation}
+u_1 = -\int \frac{y_2 f}{W} \, dx, \quad u_2 = \int \frac{y_1 f}{W} \, dx.\tag{3.3.9}
+\end{equation}
+</div>
+<div class="para">Therefore, <span class="process-math">\(y_p\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="eq-particular-final-form">
+\begin{equation}
+y_p = -y_1 \int \frac{y_2 f}{W} \, dx + y_2 \int \frac{y_1 f}{W} \, dx.\tag{3.3.10}
+\end{equation}
+</div>
+<div class="para">Consequently, the general solution of <a href="sec-3-3.html#eq-standard-form" class="internal" title="Equation 3.3.6">(3.3.6)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html ./knowl/xref/eq-homogeneous1.html ./knowl/xref/eq-standard-form.html" id="subsec-variation-parameters-6-32">
+\begin{equation*}
+y = y_h + y_p = c_1 y_1 + c_2 y_2 - y_1 \int \frac{y_2 f}{W} \, dx + y_2 \int \frac{y_1
+f}{W} \, dx.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="subsec-variation-parameters-7"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-variation-parameters-7-1">The main advantage of the method of <em class="emphasis">variation of parameters</em> over the method of <em class="emphasis">undetermined coefficients</em> is that it is applicable to all non homogeneous linear differential equations, including the equations with variable coefficients. However, the evaluation of the integrals in <a href="sec-3-3.html#eq-VOP-integrals" class="internal" title="Equation 3.3.9">(3.3.9)</a> can become quite cumbersome even when <span class="process-math">\(f(x)\)</span> involves only elementary functions, such as the ones treated with the method of undetermined coefficients discussed <a href="sec-3-3.html#subsec-3-3-2" class="internal" title="Subsection 3.3.2: Method of Undetermined Coefficients">Subsection 3.3.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.3.3"><a href="#subsec-variation-parameters-7" title="Copy heading and permalink for Remark 3.3.3" aria-label="Copy heading and permalink for Remark 3.3.3">🔗</a></div></article><div class="para" id="subsec-variation-parameters-8">We illustrate the method of variation of parameters with the following initial value problem which can be readily solved using the method of undetermined coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="eg-variation-parameters" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-variation-parameters-1-1">
+<div class="para">Solve the initial value problem</div>
+<div class="displaymath process-math" id="eg-variation-parameters-1-1-1">
+\begin{equation*}
+y'' + 8 y' + 16 y = 4 x,\quad y(0) = 0,\; y'(0) = 0
+\end{equation*}
+</div>
+<div class="para">by variation of parameters.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-variation-parameters-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-variation-parameters-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-variation-parameters-2-1">
+<div class="para">The auxiliary equation for the associated homogeneous equation is <span class="process-math">\(\lambda^2 +
+8\lambda + 16 = 0\)</span> which gives <span class="process-math">\(\lambda = -4, -4,\)</span> and so the functions</div>
+<div class="displaymath process-math" id="eg-variation-parameters-2-1-3">
+\begin{equation*}
+y_1(x) = e^{-4x}, \quad y_2(x) = x e^{-4x}
+\end{equation*}
+</div>
+<div class="para">form a fundamental set solutions to <span class="process-math">\(y'' + 8 y' + 16 y=0.\)</span> The Wronskian of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> is</div>
+<div class="displaymath process-math" id="eg-variation-parameters-2-1-7">
+\begin{equation*}
+W(x) = \begin{vmatrix} e^{-4x} &amp; x e^{-4x} \\ -4 e^{-4x} &amp; (1 - 4x) e^{-4x}
+\end{vmatrix} = e^{-8x} (1 - 4x + 4x) = e^{-8x}.
+\end{equation*}
+</div>
+<div class="para">We note that the given nonhomogeneous equation is in the standard form with <span class="process-math">\(f(x) = 4x\)</span> and therefore a particular solution by the method of variation of parameters is given by</div>
+<div class="displaymath process-math" id="eg-variation-parameters-2-1-9">
+\begin{equation*}
+y_p = -y_1 \int \frac{y_2 f}{W} dx + y_2 \int \frac{y_1 f}{W} dx.
+\end{equation*}
+</div>
+<div class="para">Then the integration by parts with the Kronecker method gives</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-variation-parameters-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="kronecker"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/di_method.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Kronecker method for integration by parts<div class="autopermalink" data-description="Figure 3.3.5"><a href="#kronecker" title="Copy heading and permalink for Figure 3.3.5" aria-label="Copy heading and permalink for Figure 3.3.5">🔗</a></div></figcaption></figure><div class="para logical" id="eg-variation-parameters-2-3">
+<div class="displaymath process-math" id="eg-variation-parameters-2-3-1">
+\begin{equation*}
+\int \frac{y_2 f}{W} dx= \int \frac{4x^2 e^{-4x}}{e^{-8x}}\, dx =x^2 e^{4x} -
+\frac{1}{2} x e^{4x} + \frac{1}{8} e^{4x}.
+\end{equation*}
+</div>
+<div class="para">In a similar manner, we also evaluate</div>
+<div class="displaymath process-math" id="eg-variation-parameters-2-3-2">
+\begin{equation*}
+\int \frac{y_2 f}{W} dx=\int \frac{4x e^{-4x}}{e^{-8x}}\, dx= \int 4x e^{4x} dx = x
+e^{4x} - \frac{1}{4} e^{4x}.
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(y_p\)</span> becomes</div>
+<div class="displaymath process-math" id="eg-variation-parameters-2-3-4">
+\begin{equation*}
+\begin{aligned} y_p &amp;= -e^{-4x} \left( x^2 e^{4x} - \frac{1}{2} x e^{4x} +
+\frac{1}{8} e^{4x} \right) + x e^{-4x}\left( x e^{4x} - \frac{1}{4} e^{4x} \right)\\
+&amp;=- x^2 + \frac{x}{2} - \frac{1}{8} + x^2 - \frac{x}{4}\\ &amp;=\frac{x}{4} -
+\frac{1}{8}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">The general solution of the nonhomogeneous differential equation is</div>
+<div class="displaymath process-math" id="eg-variation-parameters-2-3-5">
+\begin{equation*}
+y(x) = c_1 e^{-4x} + c_2 x e^{-4x} + \frac{x}{4} - \frac{1}{8},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. Since <span class="process-math">\(y(0) = 0,\)</span> we get <span class="process-math">\(c_1
+= \frac{1}{8}.\)</span> We find</div>
+<div class="displaymath process-math" id="eg-variation-parameters-2-3-10">
+\begin{equation*}
+y'(x) = -4 c_1 e^{-4x} + c_2 e^{-4x} - 4 c_2 x e^{-4x} + \frac{1}{4}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(y'(0) =0,\)</span> we have<span class="process-math">\(-4 c_1 + c_2 + \frac{1}{4} = 0.\)</span> Using <span class="process-math">\(c_1=
+\frac{1}{8}\text{,}\)</span> we get <span class="process-math">\(-\frac{1}{2} + c_2 + \frac{1}{4} = 0\text{,}\)</span> so that <span class="process-math">\(c_2 =
+\frac{1}{4}.\)</span> Hence the solution to the given initial value problem is</div>
+<div class="displaymath process-math" id="eg-variation-parameters-2-3-16">
+\begin{equation*}
+y(x) = \frac{1}{8} e^{-4x} + \frac{1}{4} x e^{-4x} + \frac{x}{4} - \frac{1}{8}
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\((-\infty, \infty).\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-variation-parameters-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+              
+                
+
+                    
+
+                        
+                            Derivative
+                        
+                        
+                            Integral
+                        
+
+
+                        
+                        
+
+                        
+                            4x^2
+                        
+                        
+                            8x
+                        
+                        
+                            8
+                        
+                        
+                            0
+                        
+
+
+                        
+                            e^{4x}
+                        
+                        
+                            \frac{1}{4}e^{4x}
+                        
+                        
+                            \frac{1}{16}e^{4x}
+                        
+                        
+                            e^x
+                        
+
+
+                        
+                        
+                        
+
+
+                        
+                        
+                        
+
+
+                        
+                        
+                        
+
+
+                        
+                            +
+                        
+                        
+                            -
+                        
+                        
+                            +
+                        
+                    
+                
+              
+            </div>
+<div class="autopermalink" data-description="Solution 3.3.4.1"><a href="#eg-variation-parameters-2" title="Copy heading and permalink for Solution 3.3.4.1" aria-label="Copy heading and permalink for Solution 3.3.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.4"><a href="#eg-variation-parameters" title="Copy heading and permalink for Example 3.3.4" aria-label="Copy heading and permalink for Example 3.3.4">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3.1: Variation of Parameters"><a href="#subsec-variation-parameters" title="Copy heading and permalink for Subsection 3.3.1: Variation of Parameters" aria-label="Copy heading and permalink for Subsection 3.3.1: Variation of Parameters">🔗</a></div></section><section class="subsection" id="subsec-3-3-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method of Undetermined Coefficients</span>
+</h3>
+<div class="autopermalink" data-description="Subsection 3.3.2: Method of Undetermined Coefficients"><a href="#subsec-3-3-2" title="Copy heading and permalink for Subsection 3.3.2: Method of Undetermined Coefficients" aria-label="Copy heading and permalink for Subsection 3.3.2: Method of Undetermined Coefficients">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Second Order Nonhomogeneous Linear Differential Equations"><a href="#sec-3-3" title="Copy heading and permalink for Section 3.3: Second Order Nonhomogeneous Linear Differential Equations" aria-label="Copy heading and permalink for Section 3.3: Second Order Nonhomogeneous Linear Differential Equations">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-3-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-3-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
