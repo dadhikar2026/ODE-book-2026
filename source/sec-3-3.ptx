@@ -56,7 +56,7 @@
           \begin{split} &amp;\phi''(x) + a_1(x)\phi'(x) + a_0(x)\phi(x)\\ &amp;= \left(y''(x)
         -y_p''(x)\right)+a_1(x)\left(y'(x) -y_p'(x)\right)+a_0(x)\left(y(x) -y_p(x)\right)\\ &amp;=
         \left(y''(x) + a_1(x)y'(x) + a_0(x)y(x)\right)\\ &amp; \quad - \left(y_p''(x) +
-        a_1(x)y_p'(x) + a_0(x)y_p(x)\right)\\ &amp;=f(x)-f(x)\\ &amp;=0.
+          a_1(x)y_p'(x) + a_0(x)y_p(x)\right)\\ &amp;=f(x)-f(x)\\ &amp;=0.
           \end{split}
         </me>
         Therefore, <m>\phi(x)</m> takes the form of <m>y_h(x)</m> on <m>I.</m> It follows from <xref
@@ -75,8 +75,8 @@
           <em>complementary function</em>
         </term> of the general solution, and it is given by <me>
         y_h(x)=c_1 y_1(x) + c_2 y_2(x),
-        </me> where <m>y_1</m> and <m> y_2</m>
-        form a fundamental set of solutions for <xref
+        </me> where <m>y_1</m> and <m> y_2</m> form
+        a fundamental set of solutions for <xref
           ref="eq-second-order-homogeneous-associated-to-nonhomogeneous" /> and <m>c_1</m> and <m>
         c_2</m> are arbitrary constants. </p>
     </remark>
@@ -157,7 +157,7 @@
       Substituting <m>y_p</m>, <m>y_p'</m>, and <m>y_p''</m> for <m>y, y',</m> and <m>y''</m>,
       respectively, into <xref ref="eq-standard-form" /> gives <me>
         u_1' y_1' + u_1 y_1'' + u_2' y_2' + u_2 y_2''+Pu_1 y_1' + Pu_2 y_2' +Qu_1 y_1 + Qu_2 y_2 =
-      f,
+        f,
       </me>
       which can be rewritten as <me>
         u_1 (y_1''+P y_1'+Q y_1)+ u_2 (y_2''+P y_2'+Q y_2) +u_1' y_1' + u_2' y_2' = f.
@@ -179,7 +179,7 @@
       </men>
       Consequently, the general solution of <xref ref="eq-standard-form" /> is <me>
         y = y_h + y_p = c_1 y_1 + c_2 y_2 - y_1 \int \frac{y_2 f}{W} \, dx + y_2 \int \frac{y_1
-      f}{W} \, dx.
+        f}{W} \, dx.
       </me>
     </p>
 
@@ -207,8 +207,8 @@
 
       <solution>
         <p> The auxiliary equation for the associated homogeneous equation is <m>\lambda^2 +
-          8\lambda + 16 = 0</m> which gives <m>\lambda = -4, -4,</m> and so the functions <me>
-            y_1(x) = e^{-4x}, \quad y_2(x) = x e^{-4x}
+            8\lambda + 16 = 0</m> which gives <m>\lambda = -4, -4,</m> and so the functions <me>
+          y_1(x) = e^{-4x}, \quad y_2(x) = x e^{-4x}
           </me> form a fundamental
           set solutions to <m>y'' + 8 y' + 16 y=0.</m> The Wronskian of <m>y_1</m> and <m>y_2</m> is <me>
           W(x) = \begin{vmatrix} e^{-4x} &amp; x e^{-4x} \\ -4 e^{-4x} &amp; (1 - 4x) e^{-4x}
@@ -218,19 +218,16 @@
           and therefore a particular solution by the method of variation of parameters is given by <me>
           y_p = -y_1 \int \frac{y_2 f}{W} dx + y_2 \int \frac{y_1 f}{W} dx.
           </me>
-          Then the integration by parts with the Kronecker method gives </p>
+          Then the integration by parts with the Kronecker method </p>
 
         <figure xml:id="kronecker">
           <caption> Kronecker method for integration by parts </caption>
           <image source="images/di_method" width="50%" />
         </figure>
 
-
-
-        <p>
-          <me>
+        <p> gives <me>
             \int \frac{y_2 f}{W} dx= \int \frac{4x^2 e^{-4x}}{e^{-8x}}\, dx =x^2 e^{4x} -
-          \frac{1}{2} x e^{4x} + \frac{1}{8} e^{4x}.
+            \frac{1}{2} x e^{4x} + \frac{1}{8} e^{4x}.
           </me>
           In a similar manner, we also evaluate <me>
             \int \frac{y_2 f}{W} dx=\int \frac{4x e^{-4x}}{e^{-8x}}\, dx= \int 4x e^{4x} dx = x
@@ -257,97 +254,260 @@
           </me>
           on <m>(-\infty, \infty).</m>
         </p>
-
-             <image width="50%">
-              <prefigure>
-                <diagram dimensions="(300,300)"  margins="5" xmlns="https://prefigure.org">
-
-                    <coordinates bbox="(-1,-5,7,2)">
-
-                        <label anchor="(.5,1.2)" alignment="c">
-                            Derivative
-                        </label>
-                        <label anchor="(3.6,1.2)" alignment="c">
-                            Integral
-                        </label>
-
-
-                        <line endpoints="[(-.5,1.5),(4.5,1.5)]"
-                            arrows="0" stroke="black" thickness="2" />
-                        <line endpoints="[(-.5,1),(4.5,1)]"
-                            arrows="0" stroke="black" thickness="1" />
-
-                        <label anchor="(0,0.5)" alignment="c">
-                            <m>4x^2</m>
-                        </label>
-                        <label anchor="(0,-.7)" alignment="c">
-                            <m>8x</m>
-                        </label>
-                        <label anchor="(0,-1.9)" alignment="c">
-                            <m>8</m>
-                        </label>
-                        <label anchor="(0,-3.1)" alignment="c">
-                            <m>0</m>
-                        </label>
-
-
-                        <label anchor="(4,0.5)" alignment="c">
-                            <m>e^{4x}</m>
-                        </label>
-                        <label anchor="(4,-.7)" alignment="c">
-                            <m>\frac{1}{4}e^{4x}</m>
-                        </label>
-                        <label anchor="(4,-1.9)" alignment="c">
-                            <m>\frac{1}{16}e^{4x}</m>
-                        </label>
-                        <label anchor="(4,-3.1)" alignment="c">
-                            <m>e^x</m>
-                        </label>
-
-
-                        <line endpoints="[(0,0.3),(0,-.5)]"
-                            arrows="1" thickness="1" dash="2" />
-                        <line endpoints="[(0,-.9),(0,-1.7)]"
-                            arrows="1" thickness="1" dash="2" />
-                        <line endpoints="[(0,-2.1),(0,-2.9)]"
-                            arrows="1" thickness="1" dash="2" />
-
-
-                        <line endpoints="[(4,0.3),(4,-0.5)]" arrows="1" thickness="1" dash="2" />
-                        <line endpoints="[(4,-0.9),(4,-1.7)]" arrows="1" thickness="1" dash="2" />
-                        <line endpoints="[(4,-2.1),(4,-2.9)]" arrows="1" thickness="1" dash="2" />
-
-
-                        <line endpoints="[(0.35,0.45),(3.6,-0.5)]"
-                            arrows="1" stroke="red" thickness="1" />
-                        <line endpoints="[(0.35,-0.75),(3.6,-1.7)]"
-                            arrows="1" stroke="orange" thickness="1" />
-                        <line endpoints="[(0.35,-1.95),(3.65,-2.9)]"
-                            arrows="1" stroke="blue" thickness="1" />
-
-
-                        <label anchor="(2,-0.7)" alignment="c">
-                            <m>+</m>
-                        </label>
-                        <label anchor="(2,-1.9)" alignment="c">
-                            <m>-</m>
-                        </label>
-                        <label anchor="(2,-3.1)" alignment="c">
-                            <m>+</m>
-                        </label>
-                    </coordinates>
-                </diagram>
-              </prefigure>
-            </image>
-
       </solution>
     </example>
   </subsection>
 
+
   <subsection xml:id="subsec-3-3-2">
-    <title> Method of Undetermined Coefficients</title>
+    <title>Method of Undetermined Coefficients</title>
 
+    <p> We note that variation of parameters often leads to integrals that can be quite involved and
+      sometimes unexpectedly time-consuming even for simple forcing terms such as <m>f(x) = \sin x</m>.
+      For instance, to find a particular solution of <me>
+        y'' - 9y = \sin x,
+      </me> one may instead <em>guess</em> a solution of the form <m>y_p(x)
+      = A\sin x</m> (or a slightly more general form, <m>y_p(x) = A\sin x +B\cos x,</m> if needed).
+      See <xref ref="example-udc-1" /> and <xref ref="example-udc-2" /> below. This strategy of
+      guessing a trial function for <m>y_p</m> based on type of <m>f(x)</m> and determining the
+      unknown constant coefficients in the trial function is known as the method of <term>
+        <em>undetermined coefficients</em>
+      </term>. However, a demerit of this method is that
+      it becomes quite complicated when differential equations has variable coefficients. </p>
+
+    <example xml:id="example-udc-1">
+      <statement>
+        <p> Find a particular solution of <men xml:id="eq-udc-1">
+            y'' - 9y = \sin x
+          </men> by using the method of undetermined
+          coefficients and write down the general solution. </p>
+      </statement>
+
+      <solution>
+        <p> Let <me>
+            y_p = A\sin x
+          </me> be a particular solution of the equation, where <m>
+          A</m> is a constant to be determined. Differentiating yields <me>
+            y_p' = A\cos x, \quad y_p''= -A\sin x.
+          </me> Substituting these
+          into <xref ref="eq-udc-1" /> gives <me>
+            -A\sin x+ 9A\sin x = \sin x,
+          </me> i.e., <me>
+            8A\sin x = \sin x,
+          </me> an identity in <m>x.</m> This implies <m>A
+          = \frac{1}{8}.</m> Therefore, <me>
+            y_p = \frac{1}{8}\sin x
+          </me> is a particular solution. </p>
+
+        <p> To determine the complementary function of the general solution, the auxiliary equation
+          for the associated homogeneous equation <me>
+            y'' - 9y =0
+          </me> is <me>
+            \lambda^2 -9 =0,
+          </me> whose roots are <m>\lambda_1 = 3</m> and <m>\lambda_1
+          = -3.</m> Then the complementary function <m>y_h</m> is given by <me>
+            y_h = c_1 e^{3x} + c_2 e^{-3x},
+          </me> where <m>c_1</m> and <m>
+            c_2</m> are arbitrary constants. Finally, the general solution of <xref ref="eq-udc-1" />
+          is <me>
+            y = y_h(x)+y_p(x) = c_1 e^{3x} + c_2 e^{-3x}+\frac{1}{8}\sin x,
+          </me>
+          where <m>c_1</m> and <m>c_2</m> are arbitrary constants. </p>
+      </solution>
+    </example>
+
+    <remark>
+      <p>
+        <ol marker="i.">
+          <li>
+            <p> The method of undetermined coefficients is most effective when the forcing function <m>
+              f(x)</m> is a polynomial, exponential, sine, cosine, or a linear combination of these
+              functions. </p>
+          </li>
+
+          <li>
+            <p> A particular solution of a differential equation is just one member of the family
+              represented by its general solution, and thus infinitely many particular solutions
+              exist. In <xref ref="example-udc-1" />, the guess for <m>y_p</m> was relatively easy
+              to make by observing that the equation has no first derivative term and its forcing
+              function is <m>\sin x.</m>
+            </p>
+          </li>
+
+          <li>
+            <p> When variation of parameters may involve complicated integrals, the method of
+              undetermined coefficients may be a quicker alternative technique for finding
+              particular solutions of equations with constant coefficients and simple combination of
+              elementary functions for <m>f(x)</m> remarked in part (i). The method of undetermined
+              coefficients, however, requires a well-informed guessing for <m>y_p</m>, which makes
+              it challenging to apply even when <m>f(x)</m> is a common function, such as <m>\sec x</m>
+              or <m>\tan x</m>. </p>
+          </li>
+        </ol>
+      </p>
+    </remark>
+
+    <p> In the next example, the equation also has a first derivative term, so the trial solution
+      used for <m>y_p</m> in <xref ref="example-udc-1" /> does not work. </p>
+
+    <example xml:id="example-udc-2">
+      <statement>
+        <p> Find a particular solution of <men xml:id="eq-udc-2">
+            y'' -6y'+ 9y = \sin x
+          </men> and then write down the general
+          solution. </p>
+      </statement>
+
+      <solution>
+        <p> First, we use the same trial solution as in <xref ref="example-udc-1" /> and see what
+          happens. Let <me>
+            y_p = A\sin x
+          </me> be a particular solution, where <m>A</m> is a
+          constant to be determined. Differentiating yields <me>
+            y_p' = A\cos x, \quad y_p''= -A\sin x.
+          </me> Substituting these
+          into <xref ref="eq-udc-2" /> would give <me>
+            -A\sin x-6A\cos x+ 9A\sin x = \sin x,
+          </me> i.e., <me>
+            (8A-1)\sin x -6A\cos x = 0,
+          </me> which is not an identity in <m>
+            x</m> for any value of <m>A</m> because <m>\sin x</m> and <m>\cos x</m> are linearly
+          independent. Thus, no value of <m>A</m> makes <m>y_p = A\sin x</m> a valid particular
+          solution. This occurs because <m>\cos x</m> is involved in the process. Therefore, we
+          modify our trial function for <m>y_p</m> and take <me>
+            y_p = A\sin x + B\cos x
+          </me> where <m> A</m> and <m>B</m> are
+          constants to be determined. Differentiating twice gives <me>
+            y_p' = A\cos x-B\sin x, \quad y_p''= -A\sin x - B\cos x.
+          </me>
+          Substituting these into <xref ref="eq-udc-2" /> gives <me>
+            (-A\sin x - B\cos x)-6(A\cos x-B\sin x)+9(A\sin x + B\cos x) = \sin x,
+          </me>
+          i.e., <me>
+            (8A+6B) \sin x +(8B-6A)\cos x =\sin x,
+          </me> an identity in <m>
+            x.</m> Since <m>\sin x</m> and <m>\cos x</m> are linearly independent, we obtain <me>
+          \begin{cases} 8A+6B=1,\\ 8B-6A=0.
+            \end{cases}
+          </me>
+          Solving these equations for <m>A</m> and <m>B</m> yields <m>A = \frac{2}{25}</m> and <m>B=
+          \frac{3}{50}.</m> Thus, <me>
+            y_p =\frac{2}{25}\sin x+\frac{3}{50}\cos x
+          </me> is a particular
+          solution. </p>
+
+        <p> To determine the complementary function of the general solution of <xref ref="eq-udc-2" />,
+          the auxiliary equation for the associated homogeneous equation <me>
+            y'' -6y'+ 9y =0
+          </me> is <me>
+            \lambda^2 -6\lambda +9 =0,
+          </me> which has a repeated root <m>\lambda
+          = 3.</m> Then the complementary function <m>y_h</m> is given by <me>
+            y_h = c_1 e^{3x} + c_2 xe^{3x},
+          </me> where <m>c_1</m> and <m>
+            c_2</m> are arbitrary constants. Hence the general solution of <xref ref="eq-udc-2" />
+          is <me>
+            y = y_h(x)+y_p(x) = c_1 e^{3x} + c_2 xe^{3x}+\frac{2}{25}\sin x+\frac{3}{50}\cos x,
+          </me>
+          where <m>c_1</m> and <m>c_2</m> are arbitrary constants. </p>
+      </solution>
+    </example>
+
+    <p> In the previous two examples, we chose trial solutions <m>y_p</m> before finding the
+      complementary function without any difficulty. In general, however, a trial solution may
+      include terms that duplicate in the complementary function, which are redundant (even useless)
+      since they satisfy the associated homogeneous equation. Therefore, it is useful to determine
+      the complementary function first and then select a trial function for a particular solution.
+      We will typically follow this procedure from now on. </p>
+
+    <example xml:id="example-udc-3">
+      <statement>
+        <p> Find the general solution of <men xml:id="eq-udc-3">
+            y'' -4y'+ 4y = e^{2x}.
+          </men>
+        </p>
+      </statement>
+
+      <solution>
+        <p> First, we find the complementary function. The auxiliary equation for the associated
+          homogeneous equation <me>
+            y'' -4y'+ 4y =0
+          </me> is <me>
+            \lambda^2 -4\lambda +4 =0,
+          </me> which has a repeated root <m>\lambda
+          = 2.</m> Then the complementary function <m>y_h</m> is given by <me>
+            y_h = c_1 e^{2x} + c_2 xe^{2x},
+          </me> where <m>c_1</m> and <m>
+            c_2</m> are arbitrary constants. </p>
+
+        <p> Next, we choose a trial solution for the particular solution. Since the right-hand side
+          is <m>e^{2x}</m>, and this term appears in the complementary function, we need to multiply
+          by <m>x^2</m>. Thus, we take <me>
+            y_p = Ax^2e^{2x}
+          </me> where <m>A</m> is a constant to be
+          determined. Differentiating twice gives <me>
+            y_p' = Ae^{2x}(2x^2 + 2x), \quad y_p''= Ae^{2x}(4x^2 + 8x + 4).
+          </me>
+          Substituting these into <xref ref="eq-udc-3" /> gives <md>
+            Ae^{2x}(4x^{2} + 8x + 4)-4Ae^{2x}(2x^{2} + 2x)+4Ax^{2}e^{2x}= e^{2x}.
+          </md>
+          This yields <md>
+            4Ae^{2x}= e^{2x}.
+          </md> Therefore, <m>A= 1/4</m> and <md>
+            y_{p} = \frac{1}{4}x^{2} e^{2x}.
+          </md> Hence the general solution
+          is <md>
+            y =c_{1} e^{2x}+ c_{2} xe^{2x}+ \frac{1}{4}x^{2} e^{2x},
+          </md>
+          where <m>c_{1}</m> and <m>c_{2}</m> are arbitrary constants. </p>
+      </solution>
+    </example>
+
+    <example xml:id="example-udc-4">
+      <statement>
+        <p> Find the general solution of <men xml:id="eq-udc-4">
+            y'' +y = \cos x.
+          </men>
+        </p>
+      </statement>
+
+      <solution>
+        <p> The auxiliary equation of the associated homogeneous equation <me>
+            y''+y=0
+          </me> is <me>
+            \lambda^2 + 1=0,
+          </me> whose complex roots are <me>
+            \lambda = \pm i.
+          </me> Therefore, the complementary function of the
+          general solution of the nonhomogeneous equitation is <me>
+            y_h = c_1 \cos x+ c_2 \sin x,
+          </me> where <m>c_1</m> and <m>c_2</m>
+          arbitrary constants. If <m>y_h</m> was not known in advance, we might initially guess <me>
+          y_p = A\cos x + B\sin x,
+          </me> with <m>A</m> and <m>B</m> as
+          undetermined coefficients. However, this form of <m>y_p</m> duplicates <m>y_h</m> and it
+          cannot satisfy the nonhomogeneous equation. A point of action is to modify <m>y_p</m> to <me>
+          y_p = x( A\cos x + B\sin x).
+          </me> This will work! Let us proceed to
+          determine <m>A</m> and <m>B.</m> Differentiating <m>y_p</m> gives <me>
+            \begin{split} y_p'&amp;= A\cos x + B\sin x+ x( -A\sin x + B\cos x),\\ y_p''&amp;=
+            -2A\sin
+            x + 2B\cos x+ x( -A\cos x - B\sin x).
+            \end{split}
+          </me>
+          Substituting these into the nonhomogeneous equation <xref ref="eq-udc-4" /> yields <me>
+          -2A\sin x + 2B\cos x = \cos x.
+          </me> For this to be an identity in <m>
+          x,</m> we must have <me>
+            A= 0, \quad B= \frac{1}{2},
+          </me> so <me>
+            y_p = \frac{1}{2}x\sin x
+          </me> is a particular solution of <xref
+            ref="eq-udc-4" />, and thefore its general solution is <me>
+            y = c_1 \cos x + c_2 \sin x +\frac{1}{2}x\sin x,
+          </me> where <m>
+            c_1</m> and <m>c_2</m> arbitrary constants. </p>
+      </solution>
+    </example>
   </subsection>
-
-
 </section>
