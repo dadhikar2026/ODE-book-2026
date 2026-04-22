@@ -34,16 +34,547 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Introduction",
-  "body": " Introduction    The order linear differential equations are of the form   where the functions and are continuous on some interval .   "
+  "body": " Introduction    Understand basics of order linear differential equations     The order linear differential equations are of the form where the functions and are continuous on some interval We say that is  homogeneous  on if for all in and  nonhomogeneous  on if for some in We will usually have on If for some point of we will simply restrict our attention to a smaller interval, denoted again by , on which With these consideration, can be rewritten in the form  and are continuous on some interval This is achieved by dividing both sides of by to obtain and redefining the functions as respectively.    A function defined on is said to be a  solution  of if for all in that is, if is satisfied for all in when we substitute for     In , we note the following.     Derivatives of at the endpoints (if any) of are understood as one-sided.    Solutions may be complex-valued, though real solutions are preferred in applications. For with real and , where , and higher derivatives are computed similarly.       Let be functions defined on some interval , be a point in , and be fixed numbers. The order linear differential equation subject to the conditions (called initial conditions) is called an initial value problem (IVP) .    It is essential to know when an initial value problem has a solution if are continuous on some interval containing . This is addressed by the existence and uniqueness theorem stated below, whose proof requires advanced calculus and is beyond the scope of this book.   (Existence and Uniqueness)   Let be continuous functions on some interval , be a point in , and be fixed numbers. Then the IVP has a unique solution defined on      When for all in and , it follows from that the function for all in is the unique solution of the IVP. By the uniqueness, if at least one of is nonzero, then the unique solution of the IVP in must be a nonzero function.   The superposition principle discussed below provides a general procedure for constructing new solutions from known solutions.   (Superposition Principle)   Suppose that are solutions of the homogeneous linear equation where are continuous on some interval Then, for any constants (possibly complex), the function is a solution on The expression is called a  linear combination  (or  superposition  ) of with  weights        We treat the special case here for clarity of this proof and leave the general case as an exercise. Let and be solutions on of and let for constants and Then on We note that the differentiation rules also apply when and are complex. Substituting these into the left side of the differential equation gives on Since satisfies on for we obtain Thus, is a solution of on     The superposition principle provides the following basic operations for constructing new solutions from known solutions.     If is a solution, then is also a solution for any constant .    If and are solutions, then so is        We can verify that and are solutions of which is a homogeneous linear equation. Moreover, and are also solutions. In fact, and are solutions for any constants and    When building new solutions of a homogeneous linear differential equation from a collection of known solutions, it is desirable to use a minimal set of solutions as building blocks. Even if several solutions are available, we may not actually need many of them, and some solutions can be discarded based on how they are related to the remaining solutions. This important technique is addressed in the next subsection.    Linear Independence  Two functions and defined on an interval are said to be linearly independent on if neither function is a constant multiple of the other. For instance, the functions and are linearly independent on , as are and on . The concept of linear independence of functions extends naturally to any finite collection of functions, as formalized in the following definition.    The functions defined on an interval , where is a positive integer, are said to be  linearly independent on  if the relation holds for all in  only when the constants satisfy . If this condition does not hold, that is, if there exist constants , not all zero , satisfying the above relation for all in , then the functions are said to be  linearly dependent on  .    We say that the set is linearly independent on if the functions are linearly independent on Similarly, we say that the set is linearly dependent on if the functions are linearly dependent on   The linear dependence or independence of a set of functions on an interval may change when the interval is changed or when functions are added or removed. It follows directly from the definition that if the set is linearly independent on then it remains linearly independent on any larger interval containing provided the functions are defined on Similarly, if the set is linearly dependent on it will also be linearly dependent on every subinterval of   Moreover, using the definition above, any subset of a linearly independent set of functions is itself linearly independent, whereas a set that contains a linearly independent set can be linearly dependent. Similarly, a set containing a linearly dependent set of functions is necessarily linearly dependent, whereas a subset of a linearly dependent set can be linearly independent.  Suppose the functions are linearly dependent on an interval . Then there exist constants , not all zero, such that for all in Since the constants are not all zero, at least one of them must be nonzero. Suppose, for instance, that Then, from , we can express on . This shows that is a linear combination of the remaining functions. Similarly, if then on , and so is a linear combination of the remaining functions. In general, for any integer with and  implies that is a linear combination of the remaining functions. Thus, if is a linearly dependent set of functions defined on then at least one of the functions can be expressed as a linear combination of the others. In particular, this means that any set containing the zero function is necessarily linearly dependent.  From a linearly dependent set, it is often desirable to remove any function that can be expressed as a linear combination of the remaning functions. By repeatedly removing such functions, we eventually obtain a linearly independent set. The functions in this linearly independent set can then be used to construct new functions by forming linear combinations.    Determine whether and are linearly independent on     Suppose there are constants and that satisfy for all in The main question here is: can we have at least one of nonzero? In view of , we can take Therefore and are linearly dependent on       Determine whether and are linearly independent on     Suppose there are constants and that satisfy for all in Again, can we have at least one of nonzero? Differentiating both sides with respect to gives for all in Since is never zero, we have for all in Differentiating both sides with respect to yields Using in yields Using in , we get Therefore and are linearly independent on       The Wronskian  The methods used in and to test the linear independence of functions can become cumbersome, especially when the functions involved are more complicated than those in the examples. In this book, we will typically need to determine whether a set of solutions of homogeneous linear differential equations is linearly independent. For such sets of solutions, the linear independence of solutions can be determined by using the Wronskian , a determinant involving solutions and their derivatives, introduced in 1812 by the Polish mathematician Józef Wroński.   (Wronskian)   Let be functions that are times differentiable on an interval Their  Wronskian  , denoted by (or simply by ), is a function on defined by on       Compute the Wronskian of and on     The Wronskian of and is on     The next theorem provides a Wronskian test for linear independence of differentiable functions.   (Wronskian Test for Linear Independence)   Let be times differentiable functions on an interval with Then are linearly independent on      For simplicity, we treat the case the general case is analogous. Suppose that and are differentiable functions on an interval such that on Let and be constants such that for all in Differentiating gives for all in Since for every in the linear system consisting of the and has the unique solution for every in Hence and are linearly independent on .       The conclusion of holds even if at just one point in . The case appears as Problem 2(i) in Exercises.    The converse of is not true. For example, take the differentiable functions and on We know from Example that are linearly independent on however, their Wronskian on      there are items missing here and these will be added later      A useful formula for the Wronskian of two solutions of a second order linear homogeneous equation is derived in . Problem in Exercises  shows how the Wronskian can be used to determine a second linearly independent solution when one solution is known.         Determine whether each set of functions below is linearly independent on the specified interval using or the discussion that follows it.                                                                              Suppose that are differentiable functions on an interval     Let be point in such that Show that are linearly independent on     Determine whether the functions and considered in are linearly independent on     Find examples of that are linearly independent on and satisfy for all in       "
+},
+{
+  "id": "sec-3-1-2",
+  "level": "2",
+  "url": "sec-3-1.html#sec-3-1-2",
+  "type": "Objectives",
+  "number": "3.1",
+  "title": "",
+  "body": "  Understand basics of order linear differential equations   "
+},
+{
+  "id": "sec-3-1-3-1",
+  "level": "2",
+  "url": "sec-3-1.html#sec-3-1-3-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": " homogeneous   nonhomogeneous  "
+},
+{
+  "id": "def-3-1",
+  "level": "2",
+  "url": "sec-3-1.html#def-3-1",
+  "type": "Definition",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  A function defined on is said to be a  solution  of if for all in that is, if is satisfied for all in when we substitute for    "
+},
+{
+  "id": "def-3-2",
+  "level": "2",
+  "url": "sec-3-1.html#def-3-2",
+  "type": "Definition",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Let be functions defined on some interval , be a point in , and be fixed numbers. The order linear differential equation subject to the conditions (called initial conditions) is called an initial value problem (IVP) .   "
+},
+{
+  "id": "existence-uniqueness-theorem",
+  "level": "2",
+  "url": "sec-3-1.html#existence-uniqueness-theorem",
+  "type": "Theorem",
+  "number": "3.1.3",
+  "title": "(Existence and Uniqueness).",
+  "body": " (Existence and Uniqueness)   Let be continuous functions on some interval , be a point in , and be fixed numbers. Then the IVP has a unique solution defined on    "
+},
+{
+  "id": "rem-3-1",
+  "level": "2",
+  "url": "sec-3-1.html#rem-3-1",
+  "type": "Remark",
+  "number": "3.1.4",
+  "title": "",
+  "body": " When for all in and , it follows from that the function for all in is the unique solution of the IVP. By the uniqueness, if at least one of is nonzero, then the unique solution of the IVP in must be a nonzero function.  "
+},
+{
+  "id": "superposition-principle-theorem",
+  "level": "2",
+  "url": "sec-3-1.html#superposition-principle-theorem",
+  "type": "Theorem",
+  "number": "3.1.5",
+  "title": "(Superposition Principle).",
+  "body": " (Superposition Principle)   Suppose that are solutions of the homogeneous linear equation where are continuous on some interval Then, for any constants (possibly complex), the function is a solution on The expression is called a  linear combination  (or  superposition  ) of with  weights      "
+},
+{
+  "id": "sec-3-1-3-11",
+  "level": "2",
+  "url": "sec-3-1.html#sec-3-1-3-11",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " We treat the special case here for clarity of this proof and leave the general case as an exercise. Let and be solutions on of and let for constants and Then on We note that the differentiation rules also apply when and are complex. Substituting these into the left side of the differential equation gives on Since satisfies on for we obtain Thus, is a solution of on   "
+},
+{
+  "id": "rem-3-2",
+  "level": "2",
+  "url": "sec-3-1.html#rem-3-2",
+  "type": "Remark",
+  "number": "3.1.6",
+  "title": "",
+  "body": " The superposition principle provides the following basic operations for constructing new solutions from known solutions.     If is a solution, then is also a solution for any constant .    If and are solutions, then so is      "
+},
+{
+  "id": "sec-3-1-3-13",
+  "level": "2",
+  "url": "sec-3-1.html#sec-3-1-3-13",
+  "type": "Example",
+  "number": "3.1.7",
+  "title": "",
+  "body": " We can verify that and are solutions of which is a homogeneous linear equation. Moreover, and are also solutions. In fact, and are solutions for any constants and   "
+},
+{
+  "id": "def-3-3",
+  "level": "2",
+  "url": "sec-3-1.html#def-3-3",
+  "type": "Definition",
+  "number": "3.1.8",
+  "title": "",
+  "body": "  The functions defined on an interval , where is a positive integer, are said to be  linearly independent on  if the relation holds for all in  only when the constants satisfy . If this condition does not hold, that is, if there exist constants , not all zero , satisfying the above relation for all in , then the functions are said to be  linearly dependent on  .   "
+},
+{
+  "id": "ex-test-for-indepedence-1",
+  "level": "2",
+  "url": "sec-3-1.html#ex-test-for-indepedence-1",
+  "type": "Example",
+  "number": "3.1.9",
+  "title": "",
+  "body": "  Determine whether and are linearly independent on     Suppose there are constants and that satisfy for all in The main question here is: can we have at least one of nonzero? In view of , we can take Therefore and are linearly dependent on    "
+},
+{
+  "id": "ex-test-for-independence-2",
+  "level": "2",
+  "url": "sec-3-1.html#ex-test-for-independence-2",
+  "type": "Example",
+  "number": "3.1.10",
+  "title": "",
+  "body": "  Determine whether and are linearly independent on     Suppose there are constants and that satisfy for all in Again, can we have at least one of nonzero? Differentiating both sides with respect to gives for all in Since is never zero, we have for all in Differentiating both sides with respect to yields Using in yields Using in , we get Therefore and are linearly independent on    "
+},
+{
+  "id": "Wronskian-2",
+  "level": "2",
+  "url": "sec-3-1.html#Wronskian-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Wronskian "
+},
+{
+  "id": "def-3-2-1",
+  "level": "2",
+  "url": "sec-3-1.html#def-3-2-1",
+  "type": "Definition",
+  "number": "3.1.11",
+  "title": "(Wronskian).",
+  "body": " (Wronskian)   Let be functions that are times differentiable on an interval Their  Wronskian  , denoted by (or simply by ), is a function on defined by on    "
+},
+{
+  "id": "wronskian-calculation",
+  "level": "2",
+  "url": "sec-3-1.html#wronskian-calculation",
+  "type": "Example",
+  "number": "3.1.12",
+  "title": "",
+  "body": "  Compute the Wronskian of and on     The Wronskian of and is on    "
+},
+{
+  "id": "wronskian-theorem",
+  "level": "2",
+  "url": "sec-3-1.html#wronskian-theorem",
+  "type": "Theorem",
+  "number": "3.1.13",
+  "title": "(Wronskian Test for Linear Independence).",
+  "body": " (Wronskian Test for Linear Independence)   Let be times differentiable functions on an interval with Then are linearly independent on    "
+},
+{
+  "id": "Wronskian-7",
+  "level": "2",
+  "url": "sec-3-1.html#Wronskian-7",
+  "type": "Proof",
+  "number": "3.1.2.1",
+  "title": "",
+  "body": " For simplicity, we treat the case the general case is analogous. Suppose that and are differentiable functions on an interval such that on Let and be constants such that for all in Differentiating gives for all in Since for every in the linear system consisting of the and has the unique solution for every in Hence and are linearly independent on .  "
+},
+{
+  "id": "Wronskian-8",
+  "level": "2",
+  "url": "sec-3-1.html#Wronskian-8",
+  "type": "Remark",
+  "number": "3.1.14",
+  "title": "",
+  "body": "    The conclusion of holds even if at just one point in . The case appears as Problem 2(i) in Exercises.    The converse of is not true. For example, take the differentiable functions and on We know from Example that are linearly independent on however, their Wronskian on      there are items missing here and these will be added later      A useful formula for the Wronskian of two solutions of a second order linear homogeneous equation is derived in . Problem in Exercises  shows how the Wronskian can be used to determine a second linearly independent solution when one solution is known.     "
+},
+{
+  "id": "exercises-3-1-1",
+  "level": "2",
+  "url": "sec-3-1.html#exercises-3-1-1",
+  "type": "Exercise",
+  "number": "3.1.3.1",
+  "title": "",
+  "body": " Determine whether each set of functions below is linearly independent on the specified interval using or the discussion that follows it.                                                                            "
+},
+{
+  "id": "exercises-3-1-2",
+  "level": "2",
+  "url": "sec-3-1.html#exercises-3-1-2",
+  "type": "Exercise",
+  "number": "3.1.3.2",
+  "title": "",
+  "body": " Suppose that are differentiable functions on an interval     Let be point in such that Show that are linearly independent on     Determine whether the functions and considered in are linearly independent on     Find examples of that are linearly independent on and satisfy for all in     "
+},
+{
+  "id": "sec-3-2",
+  "level": "1",
+  "url": "sec-3-2.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Second Order Homogeneous Linear Differential Equations",
+  "body": " Second Order Homogeneous Linear Differential Equations    Understand methods of solutions for second order homogeneous linear differential equations     We now discuss the Wronskian of solutions of second order homogeneous linear equations.  Let and be solutions of the homogeneous linear differential equation where and are continuous functions on an interval The  Wronskian  of and , denoted by , , or simply , is defined as Let us examine the derivative of the Wronskian We have where we used and It then follows that where is a fixed number in The formula is known as Abel’s formula . It follows from this formula that is a constant when on Also, if , then for all in On the other hand, since it follows that for all in if and for all in if Thus, either is identically zero or it does not change its sign in   The analysis of the Wronskian together with the formula above also hold for higher order homogeneous linear equations (see Section?? Higher Order).   (Criterion for Linearly Indepedent Solutions)   Two solutions and of where and are continuous functions on an interval are linearly independent on if and only if for all in      Let and be linearly independent solutions of on . Suppose, for a contradiction, that there is a point in such that Let and be constants. Then the linear system has a solution not both zero because the determinant of the coefficient matrix is zero. Fix , not both zero, satisfying , and define the function on By and the superposition principle, is a solution on of the initial value problem The uniqueness part of Theorem  implies on that is, on Thus, and are linearly dependent on , contradicting our assumption. Hence for every in   Suppose that on By , and are linearly independent on . Note that and need not be solutions for this part of the theorem to hold.     Existence of Fundamental Sets of Solutions    Consider the second order homogeneous linear differential equation where and are continuous functions on an interval Two solutions and that are linearly independent on are said to form a  fundamental set of solutions  of the differential equation. Each of these solutions, and , is referred to as a fundamental solution.    An important question arises: does a fundamental set of solutions always exist? The following theorem ensures the existence of a fundamental set of solutions for second order homogeneous linear equations when and are continuous. These concepts extend naturally to higher order equations.    Consider the second order homogeneous linear differential equation where and are continuous functions on an interval Then there exist two functions and on that form a fundamental set of solutions for .     By , there exists a unique solutions of the initial value problem and a unique of the initial value problem The two solutions and are linearly independent on In fact, let be constants such that for all in Since is in we have which implies . We then only have for all in Differentiating yields for all in Since we must have Thus, forms a fundamental set of solutions for on   Let be a fundamental set of solutions of on the interval where both and are continuous. Denote by the Wronskian of and . Let be a point in Since and are linearly independent on we have Then the Wronskian of and is Obviously, Hence we have Thus, the solutions in a fundamental set can be scaled so that the Wronskian of the scaled solutions is where is a fixed point in      Find the Wronskian of a fundamental set of solutions of each of the following differential equations.                       (i) Take in There is a fundamental set of solutions whose Wronskian is  (ii) Take in There is a fundamental set of solutions whose Wronskian is  (iii) Take in There is a fundamental set of solutions whose Wronskian is     The next theorem provides a method for finding the general solutions of second order homogeneous linear differential equations.    Let form a fundamental set of solutions of the second order homogeneous linear differential equation where and are continuous functions on an interval Then the functions of the form are solutions on for any constants and . Moreover, every solution of is of form for some constants and .     For any and constants, the implies that is a solution of on   To show that every solution of is of this form , let be a solution of on and be in Denote by and the constants and , respectively. Then solves the initial value problem On the other hand, let and be constants to be determined so that satisfies Then Since is a linearly independent set of solutions, implies and therefore, by the Cramer’s rule, we find the unique values of and given by With these values of and , the function solves the same initial value problem as . By the uniqueness part of Theorem  , we conclude that on      Constructing Fundamental Sets of Solutions  We now discuss methods for determining fundamental sets of solutions for second order homogeneous linear differential equations with constant coefficients, specifically where are constant coefficients and This equation can equivalently be written in the standard form Because the coefficient functions are constants and defined on the interval in the existence and uniqueness theorem ( ) for is the entire set of real numbers Consequently, the solutions in any fundamental set are defined on   Motivated from first order linear equations, we expect that solutions appear as exponential functions. So, we let be a trial solution of for some number (possibly complex) Differentiating twice with respect to and substituting into yields for all in In particular, when we obtain which is called the  auxiliary  (or  characteristic ) The polynomial is called the  characteristic polynomial  for the differential equation . equation for . The roots  Solutions would be a more precise term, but we use  roots  here to avoid confusion with solutions of differential equations. of are given by which are  distinct real  ,  complex  , or  repeated  according as , , or . We now construct a fundamental set of solutions for each case.   Case I. (Distinct Real Roots)  When , the auxiliary equation possesses two distinct real roots and given by . Take Since it follows that and are linearly independent solutions of . We confirm the linear independence of and by evaluating their Wronskian: on . Therefore, is a fundamental set of solutions. By , the general solution of is where and are arbitrary constants.    Case II. (Complex Roots)  When , we have where , the imaginary unit in the complex number system. Then the auxiliary equation possesses two distinct complex roots and given by . Take Let It is evident that Then the roots and of the auxiliary equation give the complex-valued solutions and of . To extract real-valued solutions, we use first use the Euler formula and write It is evident that which imply Since and are solutions of (and equivalently of ), it follows from the superposition principle ( ) that and are solutions of the homogeneous equation . Denote and Then and are linearly independent solutions because their Wronskian satisfies for all in . Thus, is a fundamental set of solutions. By , the general solution of is where and are arbitrary constants.    Case III. (Repeated Root)  In this case, the auxiliary equation has a repeated real root as given in . Consequently, we obtain only a single solution: Since a fundamental set of solutions for requires two linearly independent solutions, we must determine a second solution so that forms a fundamental set of solutions.  We next discuss a method known as  reduction of order  , which allows us to find a second linearly independent solution of a second order homogeneous linear differential equation, even when the equation has variable coefficients, as in , given that one nontrivial solution is already known.  Let be a known solution of where and are continuous functions on an interval satisfying either for all in or for all in . guarantees the existence of such a nonzero solution on for the initial condition We assume on ; the other case can be treated similarly.  Our goal is to find a second solution such that is linearly independent on To this end, let be a function on such that is a solution of . If we find a non-constant function then it will follow that is a fundamental set of solutions. Then, suppressing from the arguments for simplicity, we have Substituting these into gives which becomes Since is a solution of , we have and therefore we obtain We observe that there is no in this equation. Let Then the equation becomes which is of the first order. Since never vanishes on , we can rewrite the above equation as A solution of is given by Since we obtain on and consequently, the solution is given by on This formula is due the French mathematician Joseph Liouville Thus, is a fundamental set of solutions for . We now return to finding a second linearly independent solution for Case III . Since and is a constant, the reduction of the order formula gives on . Since we only need a second solution , the constants of integration are set to zero for convenience. Thus, forms a fundamental set of solutions. By , the general solution of is where and are arbitrary constants.   An alternative method for finding a second linearly independent solution when the characteristic polynomial has a repeated root is outlined in Exercises.      The method discussed above for finding is known as the reduction of order because the resulting differential equation for is of first order; one order less than that of the original equation .    If the known solution vanishes at some points in the interval , we can first apply the reduction of the order on a subinterval of where does not change sign, and then extend the solution to all of using a theorem on continuation of solutions (which is beyond the scope of this book). In practice, we may formally compute using and then verify that is actually well-defined on the entire interval . For this, see .        Find the general solution of     Assume a solution of the form . Then and . Substituting into the differential equation gives which gives Since , the auxiliary equation that we obtain is whose distinct real roots are By , the general solution is where and are arbitrary constants.      Find the general solution of     Assume a solution of the form . Then and . Substituting into the differential equation gives which gives Since , the auxiliary equation that we obtain is whose distinct real roots are By , the general solution is where and are arbitrary constants.      Find the general solution of     Assume a solution of the form . Then and . Substituting into the differential equation gives Then the auxiliary equation is whose complex roots are Substituting and in , the general solution is where and are arbitrary constants.      Find the general solution of     Assume a solution of the form . Then and . Substituting into the differential equation gives which gives Since , the auxiliary equation that we obtain is whose repeated real root is By , the general solution is where and are arbitrary constants.      Given that solves on , find a second linearly independent solution using the formula for the reduction of the order.    For , we have Also, the given solution vanishes at the points  Therefore, we restrict to an interval not containing these points. For example, take Applying the formula , a second solution is given by on By scaling, we redefine on Since can be extended by the same formula to all of and for all in it follows that and are linearly independent on     Techniques for finding fundamental sets of solutions for homogeneous linear equations with variable coefficients are discussed in . In this section, we will only discuss the Cauchy–Euler equations of the form where and are real constants. The method uses as a trial solution, with to be determined from the auxiliary equation whose roots are real and distinct, complex, or repeated according as We next discuss three examples, one for each case.    Find the general solution of the Cauchy-Euler equation     Take as a trial solution, where is a number to be determined. Differentiating twice with respect to and substituting into the differential equation, we obtain for all in an interval so the auxiliary equation is with roots Let Obviously, and From the two options and let us take Then and are solutions on and their Wronskian for all in since . Thus is a fundamental set of solutions, and therefore the general solution of the Cauchy-Euler equation is on where and are arbitrary constants.      Solve the Cauchy–Euler equation     Let be a trial solution. Then Substituting into the differential equation gives Then the auxiliary equation is whose solutions are   For complex numbers , we have Let and It is routine to verify that and are linearly independent solutions on Then the general solution of the Cauchy–Euler equation is where and are arbitrary constants.      Solve the Cauchy–Euler equation     Let be a trial solution. Then Substituting into the differential equation yields Then the auxiliary equation is Its solutions are We thus have one solution as By the reduction of the order formula , a second linearly independent solution is given by Hence the general solution of the Cauchy-Euler equation is where and are arbitrary constants.       Verify that the indicated solution set for each differential equation below is linearly independent on the specified interval by computing Wronskian of the solutions (see ).    ,      ,      ,      ,      ,      ,      ,      ,      ,                    Find the general solution of each differential equation below (see ).                                              Find the general solution of each of the following Cauchy-Euler differential equations (see ).                                    Find the solution of each of the following initial value problems:      (Hint: See for the general solution.)       (Hint: See for the general solution.)       (Hint: See for the general solution.)       (Hint: See for the general solution.)       Solve the following initial value problems by using the general solutions of the related equations obtained in and .                                                                  Suppose that the characteristic polynomial of the differential equation where are constants, has a repeated root Then is a solution of the differential equation. To find a second linearly independent solution, proceed as follows.   Let with parameter . Show that     Differentiate both sides of the equation in with respect to to obtain     Using , conclude that is also a solution.    Show that and are linearly independent on .       Let be a known solution of where and are continuous functions on an interval satisfying for all in . Use the Wronskian to derive Liouville’s formula as follows:   Suppose that is a solution of such that is linearly independent on Show that where is the Wronskian of and given by     Using , show that     Obtain Liouville’s formula from part .   The same steps also apply when the known solution satisfies for all in . For the general case, see (ii) of Remark  .    "
+},
+{
+  "id": "sec-3-2-2",
+  "level": "2",
+  "url": "sec-3-2.html#sec-3-2-2",
+  "type": "Objectives",
+  "number": "3.2",
+  "title": "",
+  "body": "  Understand methods of solutions for second order homogeneous linear differential equations   "
+},
+{
+  "id": "sec-3-2-3-2",
+  "level": "2",
+  "url": "sec-3-2.html#sec-3-2-3-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": " Wronskian  Abel’s formula "
+},
+{
+  "id": "wronskian-linearly-independent-theorem",
+  "level": "2",
+  "url": "sec-3-2.html#wronskian-linearly-independent-theorem",
+  "type": "Theorem",
+  "number": "3.2.1",
+  "title": "(Criterion for Linearly Indepedent Solutions).",
+  "body": " (Criterion for Linearly Indepedent Solutions)   Two solutions and of where and are continuous functions on an interval are linearly independent on if and only if for all in    "
+},
+{
+  "id": "sec-3-2-3-5",
+  "level": "2",
+  "url": "sec-3-2.html#sec-3-2-3-5",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Let and be linearly independent solutions of on . Suppose, for a contradiction, that there is a point in such that Let and be constants. Then the linear system has a solution not both zero because the determinant of the coefficient matrix is zero. Fix , not both zero, satisfying , and define the function on By and the superposition principle, is a solution on of the initial value problem The uniqueness part of Theorem  implies on that is, on Thus, and are linearly dependent on , contradicting our assumption. Hence for every in   Suppose that on By , and are linearly independent on . Note that and need not be solutions for this part of the theorem to hold.  "
+},
+{
+  "id": "def-fundamental-set",
+  "level": "2",
+  "url": "sec-3-2.html#def-fundamental-set",
+  "type": "Definition",
+  "number": "3.2.2",
+  "title": "",
+  "body": "  Consider the second order homogeneous linear differential equation where and are continuous functions on an interval Two solutions and that are linearly independent on are said to form a  fundamental set of solutions  of the differential equation. Each of these solutions, and , is referred to as a fundamental solution.   "
+},
+{
+  "id": "thm-existence-fundamental-solution-set",
+  "level": "2",
+  "url": "sec-3-2.html#thm-existence-fundamental-solution-set",
+  "type": "Theorem",
+  "number": "3.2.3",
+  "title": "",
+  "body": "  Consider the second order homogeneous linear differential equation where and are continuous functions on an interval Then there exist two functions and on that form a fundamental set of solutions for .   "
+},
+{
+  "id": "subsec-existence-of-fundamental-sets-of-solutions-5",
+  "level": "2",
+  "url": "sec-3-2.html#subsec-existence-of-fundamental-sets-of-solutions-5",
+  "type": "Proof",
+  "number": "3.2.1.1",
+  "title": "",
+  "body": " By , there exists a unique solutions of the initial value problem and a unique of the initial value problem The two solutions and are linearly independent on In fact, let be constants such that for all in Since is in we have which implies . We then only have for all in Differentiating yields for all in Since we must have Thus, forms a fundamental set of solutions for on   Let be a fundamental set of solutions of on the interval where both and are continuous. Denote by the Wronskian of and . Let be a point in Since and are linearly independent on we have Then the Wronskian of and is Obviously, Hence we have Thus, the solutions in a fundamental set can be scaled so that the Wronskian of the scaled solutions is where is a fixed point in   "
+},
+{
+  "id": "eg-wronskian-1",
+  "level": "2",
+  "url": "sec-3-2.html#eg-wronskian-1",
+  "type": "Example",
+  "number": "3.2.4",
+  "title": "",
+  "body": "  Find the Wronskian of a fundamental set of solutions of each of the following differential equations.                       (i) Take in There is a fundamental set of solutions whose Wronskian is  (ii) Take in There is a fundamental set of solutions whose Wronskian is  (iii) Take in There is a fundamental set of solutions whose Wronskian is    "
+},
+{
+  "id": "thm-general-solution",
+  "level": "2",
+  "url": "sec-3-2.html#thm-general-solution",
+  "type": "Theorem",
+  "number": "3.2.5",
+  "title": "",
+  "body": "  Let form a fundamental set of solutions of the second order homogeneous linear differential equation where and are continuous functions on an interval Then the functions of the form are solutions on for any constants and . Moreover, every solution of is of form for some constants and .   "
+},
+{
+  "id": "subsec-existence-of-fundamental-sets-of-solutions-9",
+  "level": "2",
+  "url": "sec-3-2.html#subsec-existence-of-fundamental-sets-of-solutions-9",
+  "type": "Proof",
+  "number": "3.2.1.2",
+  "title": "",
+  "body": " For any and constants, the implies that is a solution of on   To show that every solution of is of this form , let be a solution of on and be in Denote by and the constants and , respectively. Then solves the initial value problem On the other hand, let and be constants to be determined so that satisfies Then Since is a linearly independent set of solutions, implies and therefore, by the Cramer’s rule, we find the unique values of and given by With these values of and , the function solves the same initial value problem as . By the uniqueness part of Theorem  , we conclude that on   "
+},
+{
+  "id": "subsec-construction-fundamental-solutions-3",
+  "level": "2",
+  "url": "sec-3-2.html#subsec-construction-fundamental-solutions-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": " auxiliary   characteristic )  characteristic polynomial  roots  distinct real   complex   repeated  "
+},
+{
+  "id": "case-iii-b2-4ac0-repeated-root-3",
+  "level": "2",
+  "url": "sec-3-2.html#case-iii-b2-4ac0-repeated-root-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": " reduction of order  "
+},
+{
+  "id": "case-iii-b2-4ac0-repeated-root-5",
+  "level": "2",
+  "url": "sec-3-2.html#case-iii-b2-4ac0-repeated-root-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Case III "
+},
+{
+  "id": "subsec-construction-fundamental-solutions-8",
+  "level": "2",
+  "url": "sec-3-2.html#subsec-construction-fundamental-solutions-8",
+  "type": "Remark",
+  "number": "3.2.6",
+  "title": "",
+  "body": "    The method discussed above for finding is known as the reduction of order because the resulting differential equation for is of first order; one order less than that of the original equation .    If the known solution vanishes at some points in the interval , we can first apply the reduction of the order on a subinterval of where does not change sign, and then extend the solution to all of using a theorem on continuation of solutions (which is beyond the scope of this book). In practice, we may formally compute using and then verify that is actually well-defined on the entire interval . For this, see .     "
+},
+{
+  "id": "eg-general-solution-1",
+  "level": "2",
+  "url": "sec-3-2.html#eg-general-solution-1",
+  "type": "Example",
+  "number": "3.2.7",
+  "title": "",
+  "body": "  Find the general solution of     Assume a solution of the form . Then and . Substituting into the differential equation gives which gives Since , the auxiliary equation that we obtain is whose distinct real roots are By , the general solution is where and are arbitrary constants.   "
+},
+{
+  "id": "eg-general-solution-2",
+  "level": "2",
+  "url": "sec-3-2.html#eg-general-solution-2",
+  "type": "Example",
+  "number": "3.2.8",
+  "title": "",
+  "body": "  Find the general solution of     Assume a solution of the form . Then and . Substituting into the differential equation gives which gives Since , the auxiliary equation that we obtain is whose distinct real roots are By , the general solution is where and are arbitrary constants.   "
+},
+{
+  "id": "eg-general-solution-3",
+  "level": "2",
+  "url": "sec-3-2.html#eg-general-solution-3",
+  "type": "Example",
+  "number": "3.2.9",
+  "title": "",
+  "body": "  Find the general solution of     Assume a solution of the form . Then and . Substituting into the differential equation gives Then the auxiliary equation is whose complex roots are Substituting and in , the general solution is where and are arbitrary constants.   "
+},
+{
+  "id": "eg-general-solution-4",
+  "level": "2",
+  "url": "sec-3-2.html#eg-general-solution-4",
+  "type": "Example",
+  "number": "3.2.10",
+  "title": "",
+  "body": "  Find the general solution of     Assume a solution of the form . Then and . Substituting into the differential equation gives which gives Since , the auxiliary equation that we obtain is whose repeated real root is By , the general solution is where and are arbitrary constants.   "
+},
+{
+  "id": "eg-order-reduction",
+  "level": "2",
+  "url": "sec-3-2.html#eg-order-reduction",
+  "type": "Example",
+  "number": "3.2.11",
+  "title": "",
+  "body": "  Given that solves on , find a second linearly independent solution using the formula for the reduction of the order.    For , we have Also, the given solution vanishes at the points  Therefore, we restrict to an interval not containing these points. For example, take Applying the formula , a second solution is given by on By scaling, we redefine on Since can be extended by the same formula to all of and for all in it follows that and are linearly independent on    "
+},
+{
+  "id": "subsec-construction-fundamental-solutions-14",
+  "level": "2",
+  "url": "sec-3-2.html#subsec-construction-fundamental-solutions-14",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Cauchy–Euler "
+},
+{
+  "id": "eg-Cauchy-Euler",
+  "level": "2",
+  "url": "sec-3-2.html#eg-Cauchy-Euler",
+  "type": "Example",
+  "number": "3.2.12",
+  "title": "",
+  "body": "  Find the general solution of the Cauchy-Euler equation     Take as a trial solution, where is a number to be determined. Differentiating twice with respect to and substituting into the differential equation, we obtain for all in an interval so the auxiliary equation is with roots Let Obviously, and From the two options and let us take Then and are solutions on and their Wronskian for all in since . Thus is a fundamental set of solutions, and therefore the general solution of the Cauchy-Euler equation is on where and are arbitrary constants.   "
+},
+{
+  "id": "eg-Cauchy-Euler-complex",
+  "level": "2",
+  "url": "sec-3-2.html#eg-Cauchy-Euler-complex",
+  "type": "Example",
+  "number": "3.2.13",
+  "title": "",
+  "body": "  Solve the Cauchy–Euler equation     Let be a trial solution. Then Substituting into the differential equation gives Then the auxiliary equation is whose solutions are   For complex numbers , we have Let and It is routine to verify that and are linearly independent solutions on Then the general solution of the Cauchy–Euler equation is where and are arbitrary constants.   "
+},
+{
+  "id": "eg-Cauchy-Euler-repeated-roots",
+  "level": "2",
+  "url": "sec-3-2.html#eg-Cauchy-Euler-repeated-roots",
+  "type": "Example",
+  "number": "3.2.14",
+  "title": "",
+  "body": "  Solve the Cauchy–Euler equation     Let be a trial solution. Then Substituting into the differential equation yields Then the auxiliary equation is Its solutions are We thus have one solution as By the reduction of the order formula , a second linearly independent solution is given by Hence the general solution of the Cauchy-Euler equation is where and are arbitrary constants.   "
+},
+{
+  "id": "ex-sec-second-order-homogeneous-1",
+  "level": "2",
+  "url": "sec-3-2.html#ex-sec-second-order-homogeneous-1",
+  "type": "Exercise",
+  "number": "3.2.3.1",
+  "title": "",
+  "body": " Verify that the indicated solution set for each differential equation below is linearly independent on the specified interval by computing Wronskian of the solutions (see ).    ,      ,      ,      ,      ,      ,      ,      ,      ,                  "
+},
+{
+  "id": "ex-sec-second-order-homogeneous-2",
+  "level": "2",
+  "url": "sec-3-2.html#ex-sec-second-order-homogeneous-2",
+  "type": "Exercise",
+  "number": "3.2.3.2",
+  "title": "",
+  "body": " Find the general solution of each differential equation below (see ).                                            "
+},
+{
+  "id": "ex-sec-second-order-homogeneous-3",
+  "level": "2",
+  "url": "sec-3-2.html#ex-sec-second-order-homogeneous-3",
+  "type": "Exercise",
+  "number": "3.2.3.3",
+  "title": "",
+  "body": " Find the general solution of each of the following Cauchy-Euler differential equations (see ).                                  "
+},
+{
+  "id": "ex-sec-second-order-homogeneous-4",
+  "level": "2",
+  "url": "sec-3-2.html#ex-sec-second-order-homogeneous-4",
+  "type": "Exercise",
+  "number": "3.2.3.4",
+  "title": "",
+  "body": " Find the solution of each of the following initial value problems:      (Hint: See for the general solution.)       (Hint: See for the general solution.)       (Hint: See for the general solution.)       (Hint: See for the general solution.)     "
+},
+{
+  "id": "ex-sec-second-order-homogeneous-5",
+  "level": "2",
+  "url": "sec-3-2.html#ex-sec-second-order-homogeneous-5",
+  "type": "Exercise",
+  "number": "3.2.3.5",
+  "title": "",
+  "body": " Solve the following initial value problems by using the general solutions of the related equations obtained in and .                                                                "
+},
+{
+  "id": "ex-sec-second-order-homogeneous-6",
+  "level": "2",
+  "url": "sec-3-2.html#ex-sec-second-order-homogeneous-6",
+  "type": "Exercise",
+  "number": "3.2.3.6",
+  "title": "",
+  "body": " Suppose that the characteristic polynomial of the differential equation where are constants, has a repeated root Then is a solution of the differential equation. To find a second linearly independent solution, proceed as follows.   Let with parameter . Show that     Differentiate both sides of the equation in with respect to to obtain     Using , conclude that is also a solution.    Show that and are linearly independent on .     "
+},
+{
+  "id": "ex-sec-second-order-homogeneous-7",
+  "level": "2",
+  "url": "sec-3-2.html#ex-sec-second-order-homogeneous-7",
+  "type": "Exercise",
+  "number": "3.2.3.7",
+  "title": "",
+  "body": " Let be a known solution of where and are continuous functions on an interval satisfying for all in . Use the Wronskian to derive Liouville’s formula as follows:   Suppose that is a solution of such that is linearly independent on Show that where is the Wronskian of and given by     Using , show that     Obtain Liouville’s formula from part .   The same steps also apply when the known solution satisfies for all in . For the general case, see (ii) of Remark  .  "
+},
+{
+  "id": "sec-3-3",
+  "level": "1",
+  "url": "sec-3-3.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Second Order Nonhomogeneous Linear Differential Equations",
+  "body": " Second Order Nonhomogeneous Linear Differential Equations     Be able to work out methods for solving second order nonhomogeneous linear differential equations.      Something about forced oscillations and resonance goes here yes.    something  soemthing   "
+},
+{
+  "id": "sec-3-3-2",
+  "level": "2",
+  "url": "sec-3-3.html#sec-3-3-2",
+  "type": "Objectives",
+  "number": "3.3",
+  "title": "",
+  "body": "   Be able to work out methods for solving second order nonhomogeneous linear differential equations.    "
+},
+{
+  "id": "sec-3-4",
+  "level": "1",
+  "url": "sec-3-4.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Higher Order Linear Differential Equations",
+  "body": " Higher Order Linear Differential Equations     Understand solution techiques for linear differential equations of order higher than two.      Something about forced oscillations and resonance goes here yes.    something  soemthing   "
+},
+{
+  "id": "sec-3-4-2",
+  "level": "2",
+  "url": "sec-3-4.html#sec-3-4-2",
+  "type": "Objectives",
+  "number": "3.4",
+  "title": "",
+  "body": "   Understand solution techiques for linear differential equations of order higher than two.    "
 },
 {
   "id": "sec-3-5",
   "level": "1",
   "url": "sec-3-5.html",
   "type": "Section",
-  "number": "3.2",
-  "title": "Forced Oscillations and Resonance",
-  "body": " Forced Oscillations and Resonance   Something about forced oscillations and resonance goes here yes.   "
+  "number": "3.5",
+  "title": "Applications",
+  "body": " Applications     Be able to apply methods of solutions from previous sections to some basic problems in applications.      In this section we will study two commons examples of applications where the solution methods from previous sections can be effectively used.    Spring-Mass System  A spring-mass system is a common physical application of second-order linear differential equations.    Electrical Circuits  An RLC circuit is another common physical application of second-order linear differential equations.   "
+},
+{
+  "id": "sec-3-5-2",
+  "level": "2",
+  "url": "sec-3-5.html#sec-3-5-2",
+  "type": "Objectives",
+  "number": "3.5",
+  "title": "",
+  "body": "   Be able to apply methods of solutions from previous sections to some basic problems in applications.    "
+},
+{
+  "id": "sec-3-6",
+  "level": "1",
+  "url": "sec-3-6.html",
+  "type": "Section",
+  "number": "3.6",
+  "title": "Change of Variables",
+  "body": " Change of Variables     Understand the change of variables techniques.      Something about forced oscillations and resonance goes here yes.    something  soemthing   "
+},
+{
+  "id": "sec-3-6-2",
+  "level": "2",
+  "url": "sec-3-6.html#sec-3-6-2",
+  "type": "Objectives",
+  "number": "3.6",
+  "title": "",
+  "body": "   Understand the change of variables techniques.    "
 },
 {
   "id": "ch-4",
@@ -970,7 +1501,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Formulas",
-  "body": " Formulas   Common Laplace Transforms                1.           2.           2.           3.           4.           5.           6.           7.           8.           9.           10.           11.           12.           13.           14.           15.           16.           17.           18.           19.           20.           21.           22.           23.           24.           25.           26.           27.           28.           29.           30.           31.           32.           33.          34.          35.          36.          37.          38.          39.          40.          41.          42.          43.          44.          45.          46.          47.          48.          49.          50.          51.          52.          53.          54.          55.          56.            Derivatives  We use notations and to synonymously denote the derivative of with respect to    Differentiation Rules     Constant:       Constant Multiple:       Sum:       Product:       Quotient:       Chain:       Power:       Power:                                                                                                         "
+  "body": " Formulas   Common Laplace Transforms                1.           2.           3.           4.           5.           6.           7.           8.           9.           10.           11.           12.           13.           14.           15.           16.           17.           18.           19.           20.           21.           22.           23.           24.           25.           26.           27.           28.           29.           30.           31.           32.           33.           34.          35.          36.          37.          38.          39.          40.          41.          42.          43.          44.          45.          46.          47.          48.          49.          50.          51.          52.          53.          54.          55.          56.          57.            Derivatives  We use notations and to synonymously denote the derivative of with respect to    Differentiation Rules     Constant:       Constant Multiple:       Sum:       Product:       Quotient:       Chain:       Power:       Power:                                                                                                         "
 },
 {
   "id": "ws-1",

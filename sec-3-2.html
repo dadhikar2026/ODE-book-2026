@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Second Order Homogeneous Linear Differential Equations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Elementary Ordinary Differential Equations">
+<meta property="book:author" content="Dhruba R. Adhikari">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Elementary Ordinary Differential Equations</span> <span class="subtitle">Methods and Applications</span></a></h1>
+<p class="byline">Dhruba R. Adhikari</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-3-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-3-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
+\newcommand{\real}{\Bbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction and Preliminaries</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-2.html" class="internal"><span class="codenumber">2</span> <span class="title">First Order Differential Equations</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Second and Higher Order Linear Differential Equations and Applications</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-1.html#linear-independence" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Linear Independence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-1.html#Wronskian" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Wronskian</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-1.html#exercises-3-1" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-3-2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Second Order Homogeneous Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-2.html#subsec-existence-of-fundamental-sets-of-solutions" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Existence of Fundamental Sets of Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-2.html#subsec-construction-fundamental-solutions" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Constructing Fundamental Sets of Solutions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-2.html#exercises-second-order" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Second Order Nonhomogeneous Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-something-something-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">something</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Higher Order Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsec-something-higher-order" class="internal"><span class="codenumber">3.4.1</span> <span class="title">something</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-3-5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#spring-mass-system" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Spring-Mass System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#RLC-circuit" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Electrical Circuits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-3-6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Change of Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#subsec-something-something" class="internal"><span class="codenumber">3.6.1</span> <span class="title">something</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Method of Series Solutions</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-5.html" class="internal"><span class="codenumber">5</span> <span class="title">The Laplace Transform and Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-1.html#subsec-5-1-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">When does the Laplace transform exist?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-1.html#subsec-5-1-5" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Inverse Laplace transform</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-1.html#exercises-5-1" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Applications to Initial Value Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-2.html#subsec-Laplace-Transform-of-Derivatives" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Laplace Transforms of Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-2.html#exercises-5-2" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-3.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Derivatives and Integrals of Laplace Transforms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-3.html#subsec-Derivatives-Laplace-Transforms" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Derivatives of Laplace Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-3.html#subsec-Integrals-Laplace-Transforms" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Integrals of Laplace Transforms</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-3.html#exercises-" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-4.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Laplace Transforms of Periodic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-4.html#subsec-5-4-1" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Periodic Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-4.html#exercises-sec-5-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-5.html" class="internal"><span class="codenumber">5.5</span> <span class="title">A Convolution Theorem and its Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-5.html#theorem-convolution" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Convolution Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-5.html#subsec-application-convolution" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Application of the Convolution Theorem to Initial Value Problems</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-5.html#exercises-convolution-theorem" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-5-6.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Systems of Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-laplace-transform-method" class="internal"><span class="codenumber">5.6.1</span> <span class="title">The Laplace Transform Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-radioactive" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Radioactive Decay Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-Mixing-Tanks" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Mixing Tanks</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-Coupled-Spring-Mass-Systems" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Coupled Spring-Mass Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-Electrical-Network-Systems" class="internal"><span class="codenumber">5.6.5</span> <span class="title">Electrical Network Systems</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-6.html#exercises-linear-systems" class="internal"><span class="codenumber">5.6.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-7.html" class="internal"><span class="codenumber">6</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-7-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Differentiation Under the Integral</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-7-2.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Partial Fraction Decomposition</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Linear Factors <span class="process-math">\(x-a\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Repeated Linear Factors <span class="process-math">\((x-a)^{n}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Irreducible Quadratic Factors <span class="process-math">\(x^{2}+bx+c\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-6" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Repeated Irreducible Quadratic Factors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-7" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Mixed Factors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-8" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-7-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-3.html#laplace-formulas" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Common Laplace Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-3.html#sec-7-3-3" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Derivatives</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ws-3-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Worksheets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">WS-1</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">WS-2</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-3-2"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second Order Homogeneous Linear Differential Equations</span>
+</h2>
+<article class="objectives goal-like" id="sec-3-2-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc" id="sec-3-2-2-1"><li id="sec-3-2-2-1-1">
+<div class="para" id="p-derived-sec-3-2-2-1-1">Understand methods of solutions for second order homogeneous linear differential equations</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec-3-2-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Objectives 3.2"><a href="#sec-3-2-2" title="Copy heading and permalink for Objectives 3.2" aria-label="Copy heading and permalink for Objectives 3.2">🔗</a></div></article><section class="introduction" id="sec-3-2-3"><div class="para" id="sec-3-2-3-1">We now discuss the Wronskian of solutions of second order homogeneous linear equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-3-2-3-2">
+<div class="para">Let <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> be solutions of the homogeneous linear differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-Abel-formula.html" id="sec-3-2-3-2-3">
+\begin{equation*}
+y'' + a_1(x)y' + a_0(x)y = 0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(a_0(x)\)</span> are continuous functions on an interval <span class="process-math">\(I.\)</span> The <dfn class="terminology"><em class="emphasis">Wronskian</em></dfn> of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\text{,}\)</span> denoted by <span class="process-math">\(W(y_1, y_2)(x)\)</span> , <span class="process-math">\(W(y_1(x), y_2(x))\text{,}\)</span> or simply <span class="process-math">\(W(x)\text{,}\)</span> is defined as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-Abel-formula.html" id="sec-3-2-3-2-13">
+\begin{equation*}
+W(x) = \begin{vmatrix} y_1(x) &amp; y_2(x) \\ y_1'(x) &amp; y_2'(x) \end{vmatrix} =
+y_1(x)y_2'(x) - y_1'(x)y_2(x).
+\end{equation*}
+</div>
+<div class="para">Let us examine the derivative of the Wronskian <span class="process-math">\(W(x).\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-Abel-formula.html" id="sec-3-2-3-2-15">
+\begin{equation*}
+\begin{split} W'(x) &amp;= y_1(x)y_2''(x)+y'_1(x)y'_2(x) - y_1'(x)y'_2(x)- y_2(x)y''_1(x)\\
+&amp;=y_1(x)y_2''(x)-y_2(x)y''_1(x)\\ &amp;=y_1(x)\big(-a_1(x) y'_2(x)- a_0(x)y_2(x)\big)\\
+&amp;\quad -y_2(x)\big(-a_1(x) y'_1(x)- a_0(x)y_1(x)\big)\\ &amp;=- a_1(x) W(x), \end{split}
+\end{equation*}
+</div>
+<div class="para">where we used <span class="process-math">\(y_1''(x) = -a_1(x) y'_1(x)- a_0(x)y_1(x)\)</span> and <span class="process-math">\(y_2''(x) = -a_1(x)
+y'_2(x)- a_0(x)y_2(x).\)</span> It then follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-Abel-formula.html" id="eq-Abel-formula">
+\begin{equation}
+W(x) =W(x_0)\; e^{-\int_{x_0}^x a_1(t)\, dt},\tag{3.2.1}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(x_0\)</span> is a fixed number in <span class="process-math">\(I.\)</span> The formula <a href="sec-3-2.html#eq-Abel-formula" class="xref" data-knowl="./knowl/xref/eq-Abel-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> is known as <dfn class="terminology">Abel’s formula</dfn>. It follows from this formula that <span class="process-math">\(W(x)\)</span> is a constant when <span class="process-math">\(a_1(x) =0\)</span> on <span class="process-math">\(I.\)</span> Also, if <span class="process-math">\(W(x_0)= 0\text{,}\)</span> then <span class="process-math">\(W(x) = 0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I.\)</span> On the other hand, since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-Abel-formula.html" id="sec-3-2-3-2-30">
+\begin{equation*}
+e^{-\int_{x_0}^x a_1(t)\, dt} &gt;0 \quad \mbox{ for all } x \mbox{ in } I,
+\end{equation*}
+</div>
+<div class="para">it follows that <span class="process-math">\(W(x) &lt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\)</span> if <span class="process-math">\(W(x_0)&lt;0,\)</span> and <span class="process-math">\(W(x)
+&gt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\)</span> if <span class="process-math">\(W(x_0)&gt;0.\)</span> Thus, either <span class="process-math">\(W(x)\)</span> is identically zero or it does not change its sign in <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-3-2-3-3">The analysis of the Wronskian together with the formula <a href="sec-3-2.html#eq-Abel-formula" class="xref" data-knowl="./knowl/xref/eq-Abel-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> above also hold for higher order homogeneous linear equations (see Section?? Higher Order).<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="wronskian-linearly-independent-theorem"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(Criterion for Linearly Indepedent Solutions).</span>
+</h3>
+<div class="para logical" id="wronskian-linearly-independent-theorem-2-1">
+<div class="para">Two solutions <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> of</div>
+<div class="displaymath process-math" id="homogeneous-linear-second-order-de">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.2}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(a_0(x)\)</span> are continuous functions on an interval <span class="process-math">\(I,\)</span> are linearly independent on <span class="process-math">\(I\)</span> if and only if <span class="process-math">\(W(y_1, y_2)(x)\ne 0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#wronskian-linearly-independent-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)"><a href="#wronskian-linearly-independent-theorem" title="Copy heading and permalink for Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)" aria-label="Copy heading and permalink for Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">🔗</a></div></article><details id="sec-3-2-3-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-3-2-3-5-1">
+<div class="para">Let <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> be linearly independent solutions of <a href="sec-3-2.html#homogeneous-linear-second-order-de" class="xref" data-knowl="./knowl/xref/homogeneous-linear-second-order-de.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.2">(3.2.2)</a> on <span class="process-math">\(I\text{.}\)</span> Suppose, for a contradiction, that there is a point <span class="process-math">\(x_0\)</span> in <span class="process-math">\(I\)</span> such that <span class="process-math">\(W(y_1,y_2)(x_0)= 0.\)</span> Let <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> be constants. Then the linear system</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous-linear-second-order-de.html ./knowl/xref/system.html ./knowl/xref/system.html ./knowl/xref/existence-uniqueness-theorem.html" id="system">
+\begin{equation}
+\begin{cases} c_1 y_1(x_0) + c_2 y_2(x_0) = 0\\ c_1 y_1'(x_0) + c_2 y_2'(x_0) = 0
+\end{cases}\tag{3.2.3}
+\end{equation}
+</div>
+<div class="para">has a solution <span class="process-math">\(c_1, c_2,\)</span> not both zero because the determinant of the coefficient matrix is zero. Fix <span class="process-math">\(c_1, c_2\text{,}\)</span> not both zero, satisfying <a href="sec-3-2.html#system" class="xref" data-knowl="./knowl/xref/system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.3">(3.2.3)</a>, and define the function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous-linear-second-order-de.html ./knowl/xref/system.html ./knowl/xref/system.html ./knowl/xref/existence-uniqueness-theorem.html" id="sec-3-2-3-5-1-14">
+\begin{equation*}
+\phi(x) = c_1 y_1(x) + c_2 y_2(x)
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(I.\)</span> By <a href="sec-3-2.html#system" class="xref" data-knowl="./knowl/xref/system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.3">(3.2.3)</a> and the superposition principle, <span class="process-math">\(y = \phi(x)\)</span> is a solution on <span class="process-math">\(I\)</span> of the initial value problem</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous-linear-second-order-de.html ./knowl/xref/system.html ./knowl/xref/system.html ./knowl/xref/existence-uniqueness-theorem.html" id="sec-3-2-3-5-1-19">
+\begin{equation*}
+y''+a_1(x) y' + a_0(x) y = 0, \quad y(x_0) = 0,\; y'(x_0) =0.
+\end{equation*}
+</div>
+<div class="para">The uniqueness part of Theorem <a href="sec-3-1.html#existence-uniqueness-theorem" class="xref" data-knowl="./knowl/xref/existence-uniqueness-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.3: (Existence and Uniqueness)">Theorem 3.1.3</a> implies <span class="process-math">\(\phi(x) =0\)</span> on <span class="process-math">\(I,\)</span> that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous-linear-second-order-de.html ./knowl/xref/system.html ./knowl/xref/system.html ./knowl/xref/existence-uniqueness-theorem.html" id="sec-3-2-3-5-1-23">
+\begin{equation*}
+c_1 y_1(x) + c_2 y_2(x) = 0
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(I.\)</span> Thus, <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are linearly dependent on <span class="process-math">\(I\text{,}\)</span> contradicting our assumption. Hence <span class="process-math">\(W(y_1,y_2)(x)\neq
+0\)</span> for every <span class="process-math">\(x\)</span> in <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-3-2-3-5-2">Suppose that <span class="process-math">\(W(y_1, y_2)(x)\ne 0\)</span> on <span class="process-math">\(I.\)</span> By <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a>, <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are linearly independent on <span class="process-math">\(I\text{.}\)</span> Note that <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> need not be solutions <a href="sec-3-2.html#homogeneous-linear-second-order-de" class="xref" data-knowl="./knowl/xref/homogeneous-linear-second-order-de.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.2">(3.2.2)</a> for this part of the theorem to hold.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1"><a href="#sec-3-2-3-5" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details></section><section class="subsection" id="subsec-existence-of-fundamental-sets-of-solutions"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Existence of Fundamental Sets of Solutions</span>
+</h3>
+<article class="definition definition-like" id="def-fundamental-set"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="def-fundamental-set-1-1">
+<div class="para">Consider the second order homogeneous linear differential equation</div>
+<div class="displaymath process-math" id="def-fundamental-set-1-1-1">
+\begin{equation*}
+y'' + a_1(x)y' + a_0(x)y = 0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(a_0(x)\)</span> are continuous functions on an interval <span class="process-math">\(I.\)</span> Two solutions <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> that are linearly independent on <span class="process-math">\(I\)</span> are said to form a <dfn class="terminology"><em class="emphasis">fundamental set of solutions</em></dfn> of the differential equation. Each of these solutions, <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\text{,}\)</span> is referred to as a fundamental solution.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-fundamental-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.2"><a href="#def-fundamental-set" title="Copy heading and permalink for Definition 3.2.2" aria-label="Copy heading and permalink for Definition 3.2.2">🔗</a></div></article><div class="para" id="subsec-existence-of-fundamental-sets-of-solutions-3">An important question arises: does a fundamental set of solutions always exist? The following theorem ensures the existence of a fundamental set of solutions for second order homogeneous linear equations when <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(a_0(x)\)</span> are continuous. These concepts extend naturally to higher order equations.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-existence-of-fundamental-sets-of-solutions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-existence-fundamental-solution-set"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-existence-fundamental-solution-set-1-1">
+<div class="para">Consider the second order homogeneous linear differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/second-order-linear-homogeneous-de.html" id="second-order-linear-homogeneous-de">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.4}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(a_0(x)\)</span> are continuous functions on an interval <span class="process-math">\(I.\)</span> Then there exist two functions <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> on <span class="process-math">\(I\)</span> that form a fundamental set of solutions for <a href="sec-3-2.html#second-order-linear-homogeneous-de" class="xref" data-knowl="./knowl/xref/second-order-linear-homogeneous-de.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.4">(3.2.4)</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-existence-fundamental-solution-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.3"><a href="#thm-existence-fundamental-solution-set" title="Copy heading and permalink for Theorem 3.2.3" aria-label="Copy heading and permalink for Theorem 3.2.3">🔗</a></div></article><details id="subsec-existence-of-fundamental-sets-of-solutions-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="subsec-existence-of-fundamental-sets-of-solutions-5-1">
+<div class="para">By <a href="sec-3-1.html#existence-uniqueness-theorem" class="xref" data-knowl="./knowl/xref/existence-uniqueness-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.3: (Existence and Uniqueness)">Theorem 3.1.3</a>, there exists a unique solutions of <span class="process-math">\(y_1\)</span> the initial value problem</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/existence-uniqueness-theorem.html ./knowl/xref/second-order-linear-homogeneous-de.html" id="subsec-existence-of-fundamental-sets-of-solutions-5-1-3">
+\begin{equation*}
+y'' + a_1(x)y' + a_0(x)y = 0, \quad y(x_0) = 1,\; y'(x_0) = 0,
+\end{equation*}
+</div>
+<div class="para">and a unique <span class="process-math">\(y_2\)</span> of the initial value problem</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/existence-uniqueness-theorem.html ./knowl/xref/second-order-linear-homogeneous-de.html" id="subsec-existence-of-fundamental-sets-of-solutions-5-1-5">
+\begin{equation*}
+y'' + a_1(x)y' + a_0(x)y = 0, \quad y(x_0) = 0,\; y'(x_0) = 1.
+\end{equation*}
+</div>
+<div class="para">The two solutions <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are linearly independent on <span class="process-math">\(I.\)</span> In fact, let <span class="process-math">\(c_1,
+c_2\)</span> be constants such that <span class="process-math">\(c_1y_1(x) + c_2y_2( x) = 0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I.\)</span> Since <span class="process-math">\(x_0\)</span> is in <span class="process-math">\(I,\)</span> we have <span class="process-math">\(c_1y_1(x_0) + c_2y_2( x_0) = 0,\)</span> which implies <span class="process-math">\(c_1 =0\text{.}\)</span> We then only have <span class="process-math">\(c_2y_2(x) = 0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I.\)</span> Differentiating <span class="process-math">\(c_2y_2( x) = 0\)</span> yields <span class="process-math">\(c_2 y'_2(x) = 0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I.\)</span> Since <span class="process-math">\(y'_2(x_0) = 1,\)</span> we must have <span class="process-math">\(c_2 = 0.\)</span> Thus, <span class="process-math">\(\{y_1, y_2\}\)</span> forms a fundamental set of solutions for <a href="sec-3-2.html#second-order-linear-homogeneous-de" class="xref" data-knowl="./knowl/xref/second-order-linear-homogeneous-de.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.4">(3.2.4)</a> on <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-existence-of-fundamental-sets-of-solutions-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-existence-of-fundamental-sets-of-solutions-5-2">
+<div class="para">Let <span class="process-math">\(\{y_1, y_2\}\)</span> be a fundamental set of solutions of <a href="sec-3-2.html#second-order-linear-homogeneous-de" class="xref" data-knowl="./knowl/xref/second-order-linear-homogeneous-de.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.4">(3.2.4)</a> on the interval <span class="process-math">\(I,\)</span> where both <span class="process-math">\(a_0(x)\)</span> and <span class="process-math">\(a_1(x)\)</span> are continuous. Denote by <span class="process-math">\(W(x)\)</span> the Wronskian of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\text{.}\)</span> Let <span class="process-math">\(x_0\)</span> be a point in <span class="process-math">\(I.\)</span> Since <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are linearly independent on <span class="process-math">\(I,\)</span> we have <span class="process-math">\(W(x_0)\ne 0.\)</span> Then the Wronskian <span class="process-math">\(\widetilde{W}(x)\)</span> of <span class="process-math">\(\frac{1}{ W(x_0)}y_1\)</span> and <span class="process-math">\(y_2\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/second-order-linear-homogeneous-de.html" id="subsec-existence-of-fundamental-sets-of-solutions-5-2-18">
+\begin{equation*}
+\begin{split} \widetilde{W}(x) &amp;=\frac{y_1(x) }{W(x_0)} y'_2(x) -\frac{y'_1(x)
+}{W(x_0)} y_2(x)\\ &amp; = \frac{W(x)}{W(x_0)}.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Obviously, <span class="process-math">\(\widetilde{W}(x_0)=1.\)</span> Hence we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/second-order-linear-homogeneous-de.html" id="subsec-existence-of-fundamental-sets-of-solutions-5-2-20">
+\begin{equation*}
+\widetilde{W}(x) = \widetilde{W}(x_0) e^{-\int_{x_0}^x a_1(t)\, dt} =e^{-\int_{x_0}^x
+a_1(t)\, dt}.
+\end{equation*}
+</div>
+<div class="para">Thus, the solutions in a fundamental set can be scaled so that the Wronskian of the scaled solutions is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/second-order-linear-homogeneous-de.html" id="subsec-existence-of-fundamental-sets-of-solutions-5-2-21">
+\begin{equation*}
+e^{-\int_{x_0}^x a_1(t)\, dt},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x_0\)</span> is a fixed point in <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-existence-of-fundamental-sets-of-solutions-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.1.1"><a href="#subsec-existence-of-fundamental-sets-of-solutions-5" title="Copy heading and permalink for Proof 3.2.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.1">🔗</a></div></article></details><details id="eg-wronskian-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="eg-wronskian-1-1-1">Find the Wronskian of a fundamental set of solutions of each of the following differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#eg-wronskian-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="eg-wronskian-1-1-2">
+<ol class="lower-roman ol-marker-1" id="eg-wronskian-1-1-2-1">
+<li id="eg-wronskian-1-1-2-1-1">
+<div class="para" id="eg-wronskian-1-1-2-1-1-1">
+<span class="process-math">\(\displaystyle y''+\frac{2}{x}y'+\frac{10}{x^2}y = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-wronskian-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#eg-wronskian-1-1-2-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="eg-wronskian-1-1-2-1-2">
+<div class="para" id="eg-wronskian-1-1-2-1-2-1">
+<span class="process-math">\(\displaystyle y''+\ln x\, y'+ 10 y =0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-wronskian-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#eg-wronskian-1-1-2-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li id="eg-wronskian-1-1-2-1-3">
+<div class="para" id="eg-wronskian-1-1-2-1-3-1">
+<span class="process-math">\(\displaystyle y''-2xy'+5y = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-wronskian-1-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#eg-wronskian-1-1-2-1-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-wronskian-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-wronskian-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-wronskian-1-2-1">
+<div class="para">(i) Take <span class="process-math">\(x_0= 1\)</span> in <span class="process-math">\((0, \infty).\)</span> There is a fundamental set of solutions whose Wronskian is</div>
+<div class="displaymath process-math" id="eg-wronskian-1-2-1-3">
+\begin{equation*}
+e^{-\int_1^x a_1(t)\, dt} = e^{-\int_1^x \frac{2}{t}\, dt} = e^{-2 \ln x}=
+\frac{1}{x^2}.
+\end{equation*}
+</div>
+<div class="para">(ii) Take <span class="process-math">\(x_0= 1\)</span> in <span class="process-math">\((0, \infty).\)</span> There is a fundamental set of solutions whose Wronskian is</div>
+<div class="displaymath process-math" id="eg-wronskian-1-2-1-6">
+\begin{equation*}
+e^{-\int_1^x a_1(t)\, dt} =e^{-\int_1^x \ln t\, dt} = e^{x-x\ln x-1}.
+\end{equation*}
+</div>
+<div class="para">(iii) Take <span class="process-math">\(x_0= 0\)</span> in <span class="process-math">\((-\infty, \infty).\)</span> There is a fundamental set of solutions whose Wronskian is</div>
+<div class="displaymath process-math" id="eg-wronskian-1-2-1-9">
+\begin{equation*}
+e^{-\int_0^x a_1(t)\, dt} =e^{-\int_0^x (-2 t)\, dt} =e^{x^2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-wronskian-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.4.1"><a href="#eg-wronskian-1-2" title="Copy heading and permalink for Solution 3.2.4.1" aria-label="Copy heading and permalink for Solution 3.2.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.4"><a href="#eg-wronskian-1" title="Copy heading and permalink for Example 3.2.4" aria-label="Copy heading and permalink for Example 3.2.4">🔗</a></div></article></details><div class="para" id="subsec-existence-of-fundamental-sets-of-solutions-7">The next theorem provides a method for finding the general solutions of second order homogeneous linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-existence-of-fundamental-sets-of-solutions-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-general-solution"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-general-solution-1-1">
+<div class="para">Let <span class="process-math">\(\{y_1,y_2 \}\)</span> form a fundamental set of solutions of the second order homogeneous linear differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html" id="eq-homogeneous-3">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.5}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(a_0(x)\)</span> are continuous functions on an interval <span class="process-math">\(I.\)</span> Then the functions of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html" id="eq-homogeneous-general-solution">
+\begin{equation}
+y = c_1 y_1(x) + c_2 y_2(x)\tag{3.2.6}
+\end{equation}
+</div>
+<div class="para">are solutions on <span class="process-math">\(I\)</span> for any constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{.}\)</span> Moreover, every solution of <a href="sec-3-2.html#eq-homogeneous-3" class="xref" data-knowl="./knowl/xref/eq-homogeneous-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.5">(3.2.5)</a> is of form <a href="sec-3-2.html#eq-homogeneous-general-solution" class="xref" data-knowl="./knowl/xref/eq-homogeneous-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.6">(3.2.6)</a> for some constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-general-solution-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.5"><a href="#thm-general-solution" title="Copy heading and permalink for Theorem 3.2.5" aria-label="Copy heading and permalink for Theorem 3.2.5">🔗</a></div></article><details id="subsec-existence-of-fundamental-sets-of-solutions-9" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="subsec-existence-of-fundamental-sets-of-solutions-9-1">
+<div class="para">For any <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> constants, the <a href="sec-3-1.html#superposition-principle-theorem" class="xref" data-knowl="./knowl/xref/superposition-principle-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.5: (Superposition Principle)">Theorem 3.1.5</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-3.html" id="subsec-existence-of-fundamental-sets-of-solutions-9-1-4">
+\begin{equation}
+y = c_1 y_1(x) + c_2 y_2(x)\tag{3.2.7}
+\end{equation}
+</div>
+<div class="para">is a solution of <a href="sec-3-2.html#eq-homogeneous-3" class="xref" data-knowl="./knowl/xref/eq-homogeneous-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.5">(3.2.5)</a> on <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-existence-of-fundamental-sets-of-solutions-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-existence-of-fundamental-sets-of-solutions-9-2">
+<div class="para">To show that every solution of <a href="sec-3-2.html#eq-homogeneous-3" class="xref" data-knowl="./knowl/xref/eq-homogeneous-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.5">(3.2.5)</a> is of this form <a href="sec-3-2.html#eq-homogeneous-general-solution" class="xref" data-knowl="./knowl/xref/eq-homogeneous-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.6">(3.2.6)</a>, let <span class="process-math">\(\phi(x)\)</span> be a solution of <a href="sec-3-2.html#eq-homogeneous-3" class="xref" data-knowl="./knowl/xref/eq-homogeneous-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.5">(3.2.5)</a> on <span class="process-math">\(I\)</span> and <span class="process-math">\(x_0\)</span> be in <span class="process-math">\(I.\)</span> Denote by <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> the constants <span class="process-math">\(\phi(x_0)\)</span> and <span class="process-math">\(\phi'(x_0)\text{,}\)</span> respectively. Then <span class="process-math">\(y =
+\phi(x)\)</span> solves the initial value problem</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/wronskian-theorem.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="eq-homogeneous-ivp-1">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = 0, \quad y(x_0) = a, y'(x_0) =b.\tag{3.2.8}
+\end{equation}
+</div>
+<div class="para">On the other hand, let <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> be constants to be determined so that <span class="process-math">\(y(x) =
+c_1y_1(x)+ c_2y_2(x)\)</span> satisfies <span class="process-math">\(y(x_0) = a, y'(x_0) = b.\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/wronskian-theorem.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="subsec-existence-of-fundamental-sets-of-solutions-9-2-18">
+\begin{equation*}
+\begin{cases} c_1y_1(x_0) +c_2y_2(x_0) = a,\\ c_1y'_1(x_0) +c_2y'_2(x_0) = b.\\
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\{y_1, y_2\}\)</span> is a linearly independent set of solutions, <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> implies <span class="process-math">\(W(y_1, y_2)(x_0)\ne 0,\)</span> and therefore, by the Cramer’s rule, we find the unique values of <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/wronskian-theorem.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="subsec-existence-of-fundamental-sets-of-solutions-9-2-24">
+\begin{equation*}
+c_1 = \frac{ \begin{vmatrix} a &amp; y_2(x_0) \\ b&amp; y_2'(x_0) \end{vmatrix}}{W(y_1,
+y_2)(x_0)} \mbox{ and } c_2 = \frac{ \begin{vmatrix} y_1(x_0)&amp;a \\ y_1'(x_0)&amp;b
+\end{vmatrix}}{W(y_1, y_2)(x_0)}.
+\end{equation*}
+</div>
+<div class="para">With these values of <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{,}\)</span> the function <span class="process-math">\(y= c_1 y_1 + c_2 y_2\)</span> solves the same initial value problem <a href="sec-3-2.html#eq-homogeneous-ivp-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-ivp-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.8">(3.2.8)</a> as <span class="process-math">\(\phi(x)\text{.}\)</span> By the uniqueness part of Theorem <a href="sec-3-1.html#existence-uniqueness-theorem" class="xref" data-knowl="./knowl/xref/existence-uniqueness-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.3: (Existence and Uniqueness)">Theorem 3.1.3</a>, we conclude that <span class="process-math">\(\phi(x) = c_1 y_1(x) + c_2 y_2(x)\)</span> on <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-existence-of-fundamental-sets-of-solutions-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.1.2"><a href="#subsec-existence-of-fundamental-sets-of-solutions-9" title="Copy heading and permalink for Proof 3.2.1.2" aria-label="Copy heading and permalink for Proof 3.2.1.2">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.2.1: Existence of Fundamental Sets of Solutions"><a href="#subsec-existence-of-fundamental-sets-of-solutions" title="Copy heading and permalink for Subsection 3.2.1: Existence of Fundamental Sets of Solutions" aria-label="Copy heading and permalink for Subsection 3.2.1: Existence of Fundamental Sets of Solutions">🔗</a></div></section><section class="subsection" id="subsec-construction-fundamental-solutions"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constructing Fundamental Sets of Solutions</span>
+</h3>
+<div class="para logical" id="subsec-construction-fundamental-solutions-2">
+<div class="para">We now discuss methods for determining fundamental sets of solutions for second order homogeneous linear differential equations with constant coefficients, specifically</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/existence-uniqueness-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-homogeneous-constant-coefficients-1">
+\begin{equation}
+ay''+by'+cy =0,\tag{3.2.9}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a, b, c\)</span> are constant coefficients and <span class="process-math">\(a\ne
+0.\)</span> This equation can equivalently be written in the standard form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/existence-uniqueness-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-homogeneous-constant-coefficients-2">
+\begin{equation}
+y''+\frac{b}{a}y'+\frac{c}{a}y =0.\tag{3.2.10}
+\end{equation}
+</div>
+<div class="para">Because the coefficient functions are constants and defined on <span class="process-math">\((-\infty, \infty),\)</span> the interval <span class="process-math">\(I\)</span> in the existence and uniqueness theorem (<a href="sec-3-1.html#existence-uniqueness-theorem" class="xref" data-knowl="./knowl/xref/existence-uniqueness-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.3: (Existence and Uniqueness)">Theorem 3.1.3</a>) for <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> is the entire set of real numbers <span class="process-math">\((-\infty,
+\infty).\)</span> Consequently, the solutions in any fundamental set are defined on <span class="process-math">\((-\infty,
+\infty).\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-construction-fundamental-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-construction-fundamental-solutions-3">
+<div class="para">Motivated from first order linear equations, we expect that solutions appear as exponential functions. So, we let <span class="process-math">\(y = e^{\lambda x}\)</span> be a <em class="emphasis">trial</em> solution of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> for some number (possibly complex) <span class="process-math">\(\lambda.\)</span> Differentiating <span class="process-math">\(y = e^{\lambda x}\)</span> twice with respect to <span class="process-math">\(x\)</span> and substituting <span class="process-math">\(y, y',y''\)</span> into <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-auxiliary-equation.html" id="subsec-construction-fundamental-solutions-3-9">
+\begin{equation*}
+(a\lambda^2+ b\lambda +c)e^{\lambda x} = 0
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,
+\infty).\)</span> In particular, when <span class="process-math">\(x=0,\)</span> we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-auxiliary-equation.html" id="eq-auxiliary-equation">
+\begin{equation}
+a\lambda^2+ b\lambda +c =0,\tag{3.2.11}
+\end{equation}
+</div>
+<div class="para">which is called the <dfn class="terminology"><em class="emphasis">auxiliary</em></dfn> (or <dfn class="terminology"><em class="emphasis">characteristic</em>)</dfn><details class="ptx-footnote" aria-live="polite" id="subsec-construction-fundamental-solutions-3-16"><summary class="ptx-footnote__number" title="Footnote 3.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="subsec-construction-fundamental-solutions-3-16">The polynomial <span class="process-math">\(p(\lambda) = a\lambda^2+b\lambda+c\)</span> is called the <dfn class="terminology"><em class="emphasis">characteristic polynomial</em></dfn> for the differential equation <span class="process-math">\(ay''+by'+cy=0\text{.}\)</span>
+</div></details> equation for <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a>. The roots<details class="ptx-footnote" aria-live="polite" id="subsec-construction-fundamental-solutions-3-18"><summary class="ptx-footnote__number" title="Footnote 3.2.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="subsec-construction-fundamental-solutions-3-18">
+<em class="emphasis">Solutions</em> would be a more precise term, but we use <em class="emphasis"><dfn class="terminology">roots</dfn></em> here to avoid confusion with solutions of differential equations.</div></details> of <a href="sec-3-2.html#eq-auxiliary-equation" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.11">(3.2.11)</a> are given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-auxiliary-equation.html" id="eq-auxiliary-equation-solutions">
+\begin{equation}
+\lambda=\frac{-b\pm\sqrt{b^2-4ac}}{2a},\tag{3.2.12}
+\end{equation}
+</div>
+<div class="para">which are <dfn class="terminology"><em class="emphasis">distinct real</em></dfn>, <dfn class="terminology"><em class="emphasis">complex</em></dfn>, or <dfn class="terminology"><em class="emphasis">repeated</em></dfn> according as <span class="process-math">\(b^2-4ac&gt;0\text{,}\)</span> <span class="process-math">\(b^2-4ac&lt;0\text{,}\)</span> or <span class="process-math">\(b^2-4ac=0\text{.}\)</span> We now construct a fundamental set of solutions for each case.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-construction-fundamental-solutions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="paragraphs" id="case-i-b2-4ac0-distinct-real-roots"><h4 class="heading"><span class="title">Case I. <span class="process-math">\(b^2-4ac&gt;0\)</span> (Distinct Real Roots).</span></h4>
+<div class="para logical" id="case-i-b2-4ac0-distinct-real-roots-2">
+<div class="para">When <span class="process-math">\(b^2-4ac&gt;0\text{,}\)</span> the auxiliary equation <a href="sec-3-2.html#eq-auxiliary-equation" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.11">(3.2.11)</a> possesses two distinct real roots <span class="process-math">\(\lambda_1\)</span> and <span class="process-math">\(\lambda_2\)</span> given by <a href="sec-3-2.html#eq-auxiliary-equation-solutions" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.12">(3.2.12)</a>. Take</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-auxiliary-equation-solutions-real">
+\begin{equation}
+\lambda_1= -\frac{b}{2a}+ \frac{\sqrt{b^2-4ac}}{2a} \quad\mbox{and}\quad
+\lambda_2=-\frac{b}{2a}- \frac{\sqrt{b^2-4ac}}{2a}.\tag{3.2.13}
+\end{equation}
+</div>
+<div class="para">Since <span class="process-math">\(\lambda_1\ne \lambda_2,\)</span> it follows that <span class="process-math">\(y_1=e^{\lambda_1x}\)</span> and <span class="process-math">\(y_2=e^{\lambda_2x}\)</span> are linearly independent solutions of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a>. We confirm the linear independence of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> by evaluating their Wronskian:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-i-b2-4ac0-distinct-real-roots-2-13">
+\begin{equation*}
+W(y_1,y_2)(x) = \begin{vmatrix} e^{\lambda_1x}&amp;e^{\lambda_2x}\\ \lambda_1
+e^{\lambda_1x}&amp;\lambda_2e^{\lambda_2x} \end{vmatrix} =
+(\lambda_2-\lambda_1)e^{\lambda_1x} e^{\lambda_2x} \ne 0
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\((-\infty, \infty)\text{.}\)</span> Therefore, <span class="process-math">\(\{y_1, y_2\}\)</span> is a fundamental set of solutions. By <a href="sec-3-2.html#thm-general-solution" class="xref" data-knowl="./knowl/xref/thm-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.5">Theorem 3.2.5</a>, the general solution of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-real-distict-general-solution">
+\begin{equation}
+\boxed{y = c_1e^{\lambda_1x}+c_2e^{\lambda_2x},}\tag{3.2.14}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#case-i-b2-4ac0-distinct-real-roots-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Case I. b^2-4ac&gt;0 (Distinct Real Roots)"><a href="#case-i-b2-4ac0-distinct-real-roots" title="Copy heading and permalink for Paragraphs: Case I. b^2-4ac&gt;0 (Distinct Real Roots)" aria-label="Copy heading and permalink for Paragraphs: Case I. b^2-4ac&gt;0 (Distinct Real Roots)">🔗</a></div></section><section class="paragraphs" id="case-ii-b2-4ac0-complex-roots"><h4 class="heading"><span class="title">Case II. <span class="process-math">\(b^2-4ac&lt;0\)</span> (Complex Roots).</span></h4>
+<div class="para logical" id="case-ii-b2-4ac0-complex-roots-2">
+<div class="para">When <span class="process-math">\(b^2-4ac&lt;0\text{,}\)</span> we have <span class="process-math">\(\sqrt{b^2-4ac}= i\sqrt{4ac-b^2},\)</span> where <span class="process-math">\(i =
+\sqrt{-1}\text{,}\)</span> the imaginary unit in the complex number system. Then the auxiliary equation <a href="sec-3-2.html#eq-auxiliary-equation" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.11">(3.2.11)</a> possesses two distinct complex roots <span class="process-math">\(\lambda_1\)</span> and <span class="process-math">\(\lambda_2\)</span> given by <a href="sec-3-2.html#eq-auxiliary-equation-solutions" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.12">(3.2.12)</a>. Take</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-2.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-auxiliary-equation-solutions-complex">
+\begin{equation}
+\lambda_1= -\frac{b}{2a}+ i\frac{\sqrt{4ac-b^2}}{2a} \quad\mbox{and}\quad
+\lambda_2=-\frac{b}{2a}- i\frac{\sqrt{4ac-b^2}}{2a}.\tag{3.2.15}
+\end{equation}
+</div>
+<div class="para">Let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-2.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-ii-b2-4ac0-complex-roots-2-9">
+\begin{equation*}
+\alpha = -\frac{b}{2a} \quad \mbox{and}\quad \beta =\frac{\sqrt{4ac-b^2}}{2a}.
+\end{equation*}
+</div>
+<div class="para">It is evident that <span class="process-math">\(\beta \ne 0.\)</span> Then the roots <span class="process-math">\(\lambda_1=\alpha+ i\beta\)</span> and <span class="process-math">\(\lambda_2=\alpha
+- i \beta\)</span> of the auxiliary equation <a href="sec-3-2.html#eq-auxiliary-equation" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.11">(3.2.11)</a> give the complex-valued solutions <span class="process-math">\(z_1=e^{\lambda_1x}\)</span> and <span class="process-math">\(z_2=e^{\lambda_2x}\)</span> of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a>. To extract real-valued solutions, we use first use the Euler formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-2.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-ii-b2-4ac0-complex-roots-2-17">
+\begin{equation*}
+e^{i\theta} = \cos \theta + i \sin \theta, \quad \theta \mbox{ in radian,}
+\end{equation*}
+</div>
+<div class="para">and write</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-2.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-ii-b2-4ac0-complex-roots-2-18">
+\begin{equation*}
+\begin{split} z_1&amp;=e^{\lambda_1x} = e^{(\alpha+ i\beta)x} = e^{\alpha x} e^{i\beta x}
+=e^{\alpha x} \cos(\beta x)+ ie^{\alpha x}\sin(\beta x), \mbox{and }\\
+z_2&amp;=e^{\lambda_1x} = e^{(\alpha- i\beta)x} = e^{\alpha x} e^{-i\beta x} =e^{\alpha x}
+\cos(\beta x)- ie^{\alpha x}\sin(\beta x).
+\end{split}
+\end{equation*}
+</div>
+<div class="para">It is evident that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-2.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-ii-b2-4ac0-complex-roots-2-19">
+\begin{equation*}
+z_1 + z_2 =2e^{\alpha x} \cos(\beta x) \quad\mbox{and}\quad z_1 - z_2 =2ie^{\alpha x}
+\sin(\beta x),
+\end{equation*}
+</div>
+<div class="para">which imply</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-2.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-ii-b2-4ac0-complex-roots-2-20">
+\begin{equation*}
+\begin{split} e^{\alpha x} \cos(\beta x) &amp;=\frac{1}{2}\left(z_1+z_2\right)=
+\frac{1}{2}z_1 + \frac{1}{2}z_2\\ e^{\alpha x} \sin(\beta
+x)&amp;=\frac{1}{2i}\left(z_1-z_2\right)=\frac{1}{2i}z_1 - \frac{1}{2i}z_2.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(z_1\)</span> and <span class="process-math">\(z_2\)</span> are solutions of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-2" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.10">(3.2.10)</a> (and equivalently of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a>), it follows from the superposition principle (<a href="sec-3-1.html#superposition-principle-theorem" class="xref" data-knowl="./knowl/xref/superposition-principle-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.5: (Superposition Principle)">Theorem 3.1.5</a>) that <span class="process-math">\(e^{\alpha x} \cos(\beta
+x)\)</span> and <span class="process-math">\(e^{\alpha x} \sin(\beta x)\)</span> are solutions of the homogeneous equation <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a>. Denote <span class="process-math">\(y_1=e^{\alpha x} \cos(\beta x)\)</span> and <span class="process-math">\(y_2=e^{\alpha x} \sin(\beta x).\)</span> Then <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are linearly independent solutions because their Wronskian satisfies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-2.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-ii-b2-4ac0-complex-roots-2-33">
+\begin{equation*}
+\begin{split} W(y_1,y_2)(x) &amp;= \begin{vmatrix} e^{\alpha x} \cos(\beta
+x)&amp;e^{\alpha x} \sin(\beta x)\\ -\beta e^{\alpha x} \sin(\beta x) +\alpha e^{\alpha x}
+\cos(\beta x) &amp;\beta e^{\alpha x} \cos(\beta x) +\alpha e^{\alpha x} \sin(\beta x)
+\end{vmatrix}\\ &amp;=e^{2\alpha x} \beta\\ &amp;\ne 0 \end{split}
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty, \infty)\text{.}\)</span> Thus, <span class="process-math">\(\{y_1, y_2\}\)</span> is a fundamental set of solutions. By <a href="sec-3-2.html#thm-general-solution" class="xref" data-knowl="./knowl/xref/thm-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.5">Theorem 3.2.5</a>, the general solution of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/eq-homogeneous-constant-coefficients-2.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/superposition-principle-theorem.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-complex-general-solution">
+\begin{equation}
+\boxed{y = c_1e^{\alpha x} \cos(\beta x)+c_2e^{\alpha x} \sin(\beta x) = e^{\alpha x}
+\big(c_1\cos(\beta x)+c_2 \sin(\beta x)\big),}\tag{3.2.16}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#case-ii-b2-4ac0-complex-roots-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Case II. b^2-4ac&lt;0 (Complex Roots)"><a href="#case-ii-b2-4ac0-complex-roots" title="Copy heading and permalink for Paragraphs: Case II. b^2-4ac&lt;0 (Complex Roots)" aria-label="Copy heading and permalink for Paragraphs: Case II. b^2-4ac&lt;0 (Complex Roots)">🔗</a></div></section><section class="paragraphs" id="case-iii-b2-4ac0-repeated-root"><h4 class="heading"><span class="title">Case III. <span class="process-math">\(b^2-4ac=0\)</span> (Repeated Root).</span></h4>
+<div class="para logical" id="case-iii-b2-4ac0-repeated-root-2">
+<div class="para">In this case, the auxiliary equation <a href="sec-3-2.html#eq-auxiliary-equation" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.11">(3.2.11)</a> has a repeated real root</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-2-2">
+\begin{equation*}
+\lambda_1 = \lambda_2 = -\frac{b}{2a},
+\end{equation*}
+</div>
+<div class="para">as given in <a href="sec-3-2.html#eq-auxiliary-equation-solutions" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.12">(3.2.12)</a>. Consequently, we obtain only a single solution:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-2-4">
+\begin{equation*}
+y_1 = e^{\lambda_1 x} = e^{-\frac{b}{2a}x}.
+\end{equation*}
+</div>
+<div class="para">Since a fundamental set of solutions for <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> requires two linearly independent solutions, we must determine a second solution <span class="process-math">\(y_2\)</span> so that <span class="process-math">\(\{y_1,
+y_2\}\)</span> forms a fundamental set of solutions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#case-iii-b2-4ac0-repeated-root-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="case-iii-b2-4ac0-repeated-root-3">We next discuss a method known as <dfn class="terminology"><em class="emphasis">reduction of order</em></dfn>, which allows us to find a second linearly independent solution of a second order homogeneous linear differential equation, even when the equation has variable coefficients, as in <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a>, given that one nontrivial solution is already known.<div class="autopermalink" data-description="Paragraph"><a href="#case-iii-b2-4ac0-repeated-root-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="case-iii-b2-4ac0-repeated-root-4">
+<div class="para">Let <span class="process-math">\(y_1(x)\)</span> be a known solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/existence-uniqueness-theorem.html" id="eq-second-order-linear-homo-de-2">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.17}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_0(x)\)</span> and <span class="process-math">\(a_1(x)\)</span> are continuous functions on an interval <span class="process-math">\(I,\)</span> satisfying either <span class="process-math">\(y_1(x)&gt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\)</span> or <span class="process-math">\(y_1(x) &lt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{.}\)</span> <a href="sec-3-1.html#existence-uniqueness-theorem" class="xref" data-knowl="./knowl/xref/existence-uniqueness-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.3: (Existence and Uniqueness)">Theorem 3.1.3</a> guarantees the existence of such a nonzero solution on <span class="process-math">\(I\)</span> for the initial condition <span class="process-math">\(y(x_0) = y_0 \neq 0.\)</span> We assume <span class="process-math">\(y_1(x) &gt; 0\)</span> on <span class="process-math">\(I\text{;}\)</span> the other case can be treated similarly.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#case-iii-b2-4ac0-repeated-root-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="case-iii-b2-4ac0-repeated-root-5">
+<div class="para">Our goal is to find a second solution <span class="process-math">\(y_2\)</span> such that <span class="process-math">\(\{y_1, y_2\}\)</span> is linearly independent on <span class="process-math">\(I.\)</span> To this end, let <span class="process-math">\(u(x)\)</span> be a function on <span class="process-math">\(I\)</span> such that <span class="process-math">\(y_2
+(x) = u(x) y_1(x)\)</span> is a solution of <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a>. If we find a non-constant function <span class="process-math">\(u,\)</span> then it will follow that <span class="process-math">\(\{y_1, y_2\}\)</span> is a fundamental set of solutions. Then, suppressing <span class="process-math">\(x\)</span> from the arguments for simplicity, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-11">
+\begin{equation*}
+\begin{split} y'_2 &amp;= u' y_1 + u y'_1\quad \mbox{ and }\\ y''_2 &amp;= u'' y_1 +2u'
+y'_1+ u y''_1.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Substituting these into <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-13">
+\begin{equation*}
+u'' y_1 +2u' y'_1+ u y''_1 +a_1u' y_1 + a_1u y'_1 + a_0 u y_1=0.\,
+\end{equation*}
+</div>
+<div class="para">which becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-14">
+\begin{equation*}
+u'' y_1 +u'\big(2 y'_1+ a_1y_1\big) +u\big( y''_1 + a_1 y'_1+ a_0 y_1\big) =0.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(y_1\)</span> is a solution of <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a>, we have <span class="process-math">\(y''_1
++ a_1 y'_1 +a_0 y_1 = 0,\)</span> and therefore we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-18">
+\begin{equation*}
+u'' y_1 +u'\Big(2 y'_1 +a_1y_1\Big) =0.
+\end{equation*}
+</div>
+<div class="para">We observe that there is no <span class="process-math">\(u\)</span> in this equation. Let <span class="process-math">\(v = u'.\)</span> Then the equation becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-21">
+\begin{equation*}
+v' y_1 +v\Big(2 y'_1 +a_1y_1\Big) =0,
+\end{equation*}
+</div>
+<div class="para">which is of the first order. Since <span class="process-math">\(y_1\)</span> never vanishes on <span class="process-math">\(I\text{,}\)</span> we can rewrite the above equation as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-reduction-or-order">
+\begin{equation}
+v' +\left(\frac{2 y'_1 +a_1y_1}{y_1}\right) v =0.\tag{3.2.18}
+\end{equation}
+</div>
+<div class="para">A solution of <a href="sec-3-2.html#eq-reduction-or-order" class="xref" data-knowl="./knowl/xref/eq-reduction-or-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.18">(3.2.18)</a> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-26">
+\begin{equation*}
+v(x) = e^{-\int\left(2\frac{y'_1(x)}{y_1(x)}+a_1(x)\right)dx}=
+e^{-2\ln\lvert{y_1(x)}\rvert} \; e^{-\int a_1(x)\, dx}= \frac{e^{-\int a_1(x)\,
+dx}}{[y_1(x)]^2}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(v(x) = u'(x),\)</span> we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-28">
+\begin{equation*}
+u(x) = \int \frac{e^{-\int a_1(x)\, dx}}{[y_1(x)]^2}\, dx
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(I,\)</span> and consequently, the solution <span class="process-math">\(y_2(x)\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-reduction-of-order-formula">
+\begin{equation}
+\boxed{y_2(x) = y_1(x) \int \frac{e^{-\int a_1(x)\, dx}}{[y_1(x)]^2}\, dx.}\tag{3.2.19}
+\end{equation}
+</div>
+<div class="para">on <span class="process-math">\(I.\)</span><details class="ptx-footnote" aria-live="polite" id="case-iii-b2-4ac0-repeated-root-5-33"><summary class="ptx-footnote__number" title="Footnote 3.2.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="case-iii-b2-4ac0-repeated-root-5-33">This formula is due the French mathematician Joseph Liouville</div></details> Thus, <span class="process-math">\(\{y_1,
+y_2\}\)</span> is a fundamental set of solutions for <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a> . We now return to finding a second linearly independent solution <span class="process-math">\(y_2\)</span> for <dfn class="terminology">Case III</dfn>. Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-38">
+\begin{equation*}
+y_1 = e^{\lambda_1 x} = e^{-\frac{b}{2a}x}
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(a_1(x) =
+\frac{b}{a}\)</span> is a constant, the reduction of the order formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="case-iii-b2-4ac0-repeated-root-5-41">
+\begin{equation*}
+y_2(x) = e^{-\frac{b}{2a}x} \int \frac{e^{-\int (b/a)\, dx}}{e^{-\frac{b}{a}x}}\, dx =
+e^{-\frac{b}{2a}x} \int 1\, dx = x e^{-\frac{b}{2a}x}
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(I\text{.}\)</span> Since we only need a second solution <span class="process-math">\(y_2\text{,}\)</span> the constants of integration are set to zero for convenience. Thus, <span class="process-math">\(\{y_1, y_2\}\)</span> forms a fundamental set of solutions. By <a href="sec-3-2.html#thm-general-solution" class="xref" data-knowl="./knowl/xref/thm-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.5">Theorem 3.2.5</a>, the general solution of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html" id="eq-repeated-roots-general-solution">
+\begin{equation}
+\boxed{ y = c_1 e^{-\frac{b}{2a}x} + c_2 x e^{-\frac{b}{2a}x} = (c_1 + c_2 x)
+e^{-\frac{b}{2a}x},}\tag{3.2.20}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#case-iii-b2-4ac0-repeated-root-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Case III. b^2-4ac=0 (Repeated Root)"><a href="#case-iii-b2-4ac0-repeated-root" title="Copy heading and permalink for Paragraphs: Case III. b^2-4ac=0 (Repeated Root)" aria-label="Copy heading and permalink for Paragraphs: Case III. b^2-4ac=0 (Repeated Root)">🔗</a></div></section><div class="para" id="subsec-construction-fundamental-solutions-7">An alternative method for finding a second linearly independent solution when the characteristic polynomial has a repeated root is outlined in Exercises.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-construction-fundamental-solutions-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="subsec-construction-fundamental-solutions-8"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="subsec-construction-fundamental-solutions-8-1">
+<ol class="decimal" id="subsec-construction-fundamental-solutions-8-1-1">
+<li id="subsec-construction-fundamental-solutions-8-1-1-1">
+<div class="para" id="subsec-construction-fundamental-solutions-8-1-1-1-1">The method discussed above for finding <span class="process-math">\(u(x)\)</span> is known as the <dfn class="terminology">reduction of order</dfn> because the resulting differential equation <a href="sec-3-2.html#eq-reduction-or-order" class="xref" data-knowl="./knowl/xref/eq-reduction-or-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.18">(3.2.18)</a> for <span class="process-math">\(v(x)\)</span> is of first order; one order less than that of the original equation <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-construction-fundamental-solutions-8-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#subsec-construction-fundamental-solutions-8-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="rem-Abel-formula">
+<div class="para" id="rem-Abel-formula-1">If the known solution <span class="process-math">\(y_1\)</span> vanishes at some points in the interval <span class="process-math">\(I\text{,}\)</span> we can first apply the reduction of the order on a subinterval <span class="process-math">\(J\)</span> of <span class="process-math">\(I\)</span> where <span class="process-math">\(y_1\)</span> does not change sign, and then extend the solution to all of <span class="process-math">\(I\)</span> using a theorem on continuation of solutions (which is beyond the scope of this book). In practice, we may formally compute <span class="process-math">\(y_2(x)\)</span> using <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a> and then verify that <span class="process-math">\(y_2\)</span> is actually well-defined on the entire interval <span class="process-math">\(I\text{.}\)</span> For this, see <a href="sec-3-2.html#eg-order-reduction" class="xref" data-knowl="./knowl/xref/eg-order-reduction.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.11">Example 3.2.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#rem-Abel-formula-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#rem-Abel-formula" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-construction-fundamental-solutions-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.2.6"><a href="#subsec-construction-fundamental-solutions-8" title="Copy heading and permalink for Remark 3.2.6" aria-label="Copy heading and permalink for Remark 3.2.6">🔗</a></div></article><details id="eg-general-solution-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-general-solution-1-1-1">
+<div class="para">Find the general solution of</div>
+<div class="displaymath process-math" id="eg-general-solution-1-1-1-1">
+\begin{equation*}
+y''-16y = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-general-solution-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-general-solution-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-general-solution-1-2-1">
+<div class="para">Assume a solution of the form <span class="process-math">\(y = e^{\lambda x}\text{.}\)</span> Then <span class="process-math">\(y' = \lambda e^{\lambda
+x}\)</span> and <span class="process-math">\(y'' = \lambda^2 e^{\lambda x}\text{.}\)</span> Substituting into the differential equation gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-1-2-1-4">
+\begin{equation*}
+\lambda^2 e^{\lambda x} - 16 e^{\lambda x} = 0,
+\end{equation*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-1-2-1-5">
+\begin{equation*}
+(\lambda^2 - 16) e^{\lambda x} = 0.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(e^{\lambda x}
+\neq 0\text{,}\)</span> the auxiliary equation that we obtain is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-1-2-1-7">
+\begin{equation*}
+\lambda^2 - 16 = 0,
+\end{equation*}
+</div>
+<div class="para">whose distinct real roots are</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-1-2-1-8">
+\begin{equation*}
+\lambda_1 = 4\quad\mbox{and}\quad \lambda_2 =-4.
+\end{equation*}
+</div>
+<div class="para">By <a href="sec-3-2.html#eq-real-distict-general-solution" class="xref" data-knowl="./knowl/xref/eq-real-distict-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.14">(3.2.14)</a>, the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-1-2-1-10">
+\begin{equation*}
+y(x) = c_1 e^{4x} + c_2 e^{-4x},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-general-solution-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.7.1"><a href="#eg-general-solution-1-2" title="Copy heading and permalink for Solution 3.2.7.1" aria-label="Copy heading and permalink for Solution 3.2.7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.7"><a href="#eg-general-solution-1" title="Copy heading and permalink for Example 3.2.7" aria-label="Copy heading and permalink for Example 3.2.7">🔗</a></div></article></details><details id="eg-general-solution-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-general-solution-2-1-1">
+<div class="para">Find the general solution of</div>
+<div class="displaymath process-math" id="eg-general-solution-2-1-1-1">
+\begin{equation*}
+y''-y'-6y = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-general-solution-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-general-solution-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-general-solution-2-2-1">
+<div class="para">Assume a solution of the form <span class="process-math">\(y = e^{\lambda x}\text{.}\)</span> Then <span class="process-math">\(y' = \lambda e^{\lambda
+x}\)</span> and <span class="process-math">\(y'' = \lambda^2 e^{\lambda x}\text{.}\)</span> Substituting into the differential equation gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-2-2-1-4">
+\begin{equation*}
+\lambda^2 e^{\lambda x} - 16 e^{\lambda x} = 0,
+\end{equation*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-2-2-1-5">
+\begin{equation*}
+(\lambda^2 - 16) e^{\lambda x} = 0.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(e^{\lambda x}
+\neq 0\text{,}\)</span> the auxiliary equation that we obtain is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-2-2-1-7">
+\begin{equation*}
+\lambda^2 - 16 = 0,
+\end{equation*}
+</div>
+<div class="para">whose distinct real roots are</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-2-2-1-8">
+\begin{equation*}
+\lambda_1 = 4\quad\mbox{and}\quad \lambda_2 =-4.
+\end{equation*}
+</div>
+<div class="para">By <a href="sec-3-2.html#eq-real-distict-general-solution" class="xref" data-knowl="./knowl/xref/eq-real-distict-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.14">(3.2.14)</a>, the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-real-distict-general-solution.html" id="eg-general-solution-2-2-1-10">
+\begin{equation*}
+y(x) = c_1 e^{4x} + c_2 e^{-4x},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-general-solution-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.8.1"><a href="#eg-general-solution-2-2" title="Copy heading and permalink for Solution 3.2.8.1" aria-label="Copy heading and permalink for Solution 3.2.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.8"><a href="#eg-general-solution-2" title="Copy heading and permalink for Example 3.2.8" aria-label="Copy heading and permalink for Example 3.2.8">🔗</a></div></article></details><details id="eg-general-solution-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-general-solution-3-1-1">
+<div class="para">Find the general solution of</div>
+<div class="displaymath process-math" id="eg-general-solution-3-1-1-1">
+\begin{equation*}
+3y''+2y'+y = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-general-solution-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-general-solution-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-general-solution-3-2-1">
+<div class="para">Assume a solution of the form <span class="process-math">\(y = e^{\lambda x}\text{.}\)</span> Then <span class="process-math">\(y' = \lambda e^{\lambda
+x}\)</span> and <span class="process-math">\(y'' = \lambda^2 e^{\lambda x}\text{.}\)</span> Substituting into the differential equation gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-complex-general-solution.html" id="eg-general-solution-3-2-1-4">
+\begin{equation*}
+(3\lambda^2 + 2\lambda + 1)e^{\lambda x} = 0.
+\end{equation*}
+</div>
+<div class="para">Then the auxiliary equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-complex-general-solution.html" id="eg-general-solution-3-2-1-5">
+\begin{equation*}
+3\lambda^2 + 2\lambda + 1=0,
+\end{equation*}
+</div>
+<div class="para">whose complex roots are</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-complex-general-solution.html" id="eg-general-solution-3-2-1-6">
+\begin{equation*}
+\lambda = \frac{-2 \pm \sqrt{-8}}{6} = \frac{-1 \pm \sqrt{2} i}{3} = -\frac{1}{3} \pm i
+\frac{\sqrt{2}}{3}.
+\end{equation*}
+</div>
+<div class="para">Substituting <span class="process-math">\(\alpha = -\frac{1}{3}\)</span> and <span class="process-math">\(\beta = \frac{\sqrt{2}}{3}\)</span> in <a href="sec-3-2.html#eq-complex-general-solution" class="xref" data-knowl="./knowl/xref/eq-complex-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.16">(3.2.16)</a>, the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-complex-general-solution.html" id="eg-general-solution-3-2-1-10">
+\begin{equation*}
+y = e^{-x/3} \left( c_1 \cos \left(\frac{\sqrt{2}}{3} x\right) + c_2 \sin
+\left(\frac{\sqrt{2}}{3} x\right) \right),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-general-solution-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.9.1"><a href="#eg-general-solution-3-2" title="Copy heading and permalink for Solution 3.2.9.1" aria-label="Copy heading and permalink for Solution 3.2.9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.9"><a href="#eg-general-solution-3" title="Copy heading and permalink for Example 3.2.9" aria-label="Copy heading and permalink for Example 3.2.9">🔗</a></div></article></details><details id="eg-general-solution-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-general-solution-4-1-1">
+<div class="para">Find the general solution of</div>
+<div class="displaymath process-math" id="eg-general-solution-4-1-1-1">
+\begin{equation*}
+y''+8y'+16y = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-general-solution-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-general-solution-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-general-solution-4-2-1">
+<div class="para">Assume a solution of the form <span class="process-math">\(y = e^{\lambda x}\text{.}\)</span> Then <span class="process-math">\(y' = \lambda e^{\lambda
+x}\)</span> and <span class="process-math">\(y'' = \lambda^2 e^{\lambda x}\text{.}\)</span> Substituting into the differential equation gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-repeated-roots-general-solution.html" id="eg-general-solution-4-2-1-4">
+\begin{equation*}
+\lambda^2 e^{\lambda x} + 8\lambda e^{\lambda x} + 16 e^{\lambda x} = 0,
+\end{equation*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-repeated-roots-general-solution.html" id="eg-general-solution-4-2-1-5">
+\begin{equation*}
+(\lambda^2 + 8\lambda + 16) e^{\lambda x} = 0.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(e^{\lambda
+x} \neq 0\text{,}\)</span> the auxiliary equation that we obtain is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-repeated-roots-general-solution.html" id="eg-general-solution-4-2-1-7">
+\begin{equation*}
+\lambda^2 + 8\lambda + 16 = 0,
+\end{equation*}
+</div>
+<div class="para">whose repeated real root is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-repeated-roots-general-solution.html" id="eg-general-solution-4-2-1-8">
+\begin{equation*}
+\lambda = -4.
+\end{equation*}
+</div>
+<div class="para">By <a href="sec-3-2.html#eq-repeated-roots-general-solution" class="xref" data-knowl="./knowl/xref/eq-repeated-roots-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.20">(3.2.20)</a>, the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-repeated-roots-general-solution.html" id="eg-general-solution-4-2-1-10">
+\begin{equation*}
+y(x) = (c_1 + c_2 x) e^{-4x},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-general-solution-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.10.1"><a href="#eg-general-solution-4-2" title="Copy heading and permalink for Solution 3.2.10.1" aria-label="Copy heading and permalink for Solution 3.2.10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.10"><a href="#eg-general-solution-4" title="Copy heading and permalink for Example 3.2.10" aria-label="Copy heading and permalink for Example 3.2.10">🔗</a></div></article></details><details id="eg-order-reduction" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="eg-order-reduction-1-1">Given that <span class="process-math">\(y_1 = \sin x\)</span> solves <span class="process-math">\(y'' + y = 0\)</span> on <span class="process-math">\((-\infty, \infty)\text{,}\)</span> find a second linearly independent solution using the formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a> for the reduction of the order.<div class="autopermalink" data-description="Paragraph"><a href="#eg-order-reduction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-order-reduction-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-order-reduction-2-1">
+<div class="para">For <span class="process-math">\(y'' + y = 0\text{,}\)</span> we have <span class="process-math">\(a_1 =0.\)</span> Also, the given solution <span class="process-math">\(y_1 = \sin x\)</span> vanishes at the points <span class="process-math">\(x = n\pi,\)</span> <span class="process-math">\(n= 0, \pm 1, \pm 2, \dots.\)</span> Therefore, we restrict <span class="process-math">\(y_1\)</span> to an interval <span class="process-math">\(J\)</span> not containing these points. For example, take <span class="process-math">\(J
+= (0, \pi).\)</span> Applying the formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a>, a second solution <span class="process-math">\(y_2\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/wronskian-theorem.html" id="eg-order-reduction-2-1-11">
+\begin{equation*}
+\begin{split}y_2(x) &amp;= \sin x \int \frac{1}{\sin^2x}\, dx\\ &amp; = \sin x \int
+\csc^2 x\, dx= -\sin x \cot x\\ &amp; = -\cos x\end{split}
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(J.\)</span> By scaling, we redefine <span class="process-math">\(y_2 = \cos x\)</span> on <span class="process-math">\(J=(0, \pi).\)</span> Since <span class="process-math">\(y_2=
+\cos x\)</span> can be extended by the same formula to all of <span class="process-math">\((-\infty, \infty)\)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/wronskian-theorem.html" id="eg-order-reduction-2-1-17">
+\begin{equation*}
+W(\cos x, \sin x) = 1\ne 0
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,
+\infty),\)</span> it follows <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> that <span class="process-math">\(y_1= \sin x\)</span> and <span class="process-math">\(y_2
+= \cos x\)</span> are linearly independent on <span class="process-math">\((-\infty, \infty).\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-order-reduction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.11.1"><a href="#eg-order-reduction-2" title="Copy heading and permalink for Solution 3.2.11.1" aria-label="Copy heading and permalink for Solution 3.2.11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.11"><a href="#eg-order-reduction" title="Copy heading and permalink for Example 3.2.11" aria-label="Copy heading and permalink for Example 3.2.11">🔗</a></div></article></details><div class="para logical" id="subsec-construction-fundamental-solutions-14">
+<div class="para">Techniques for finding fundamental sets of solutions for homogeneous linear equations with variable coefficients are discussed in <a href="sec-3-6.html" class="internal" title="Section 3.6: Change of Variables">Section 3.6</a>. In this section, we will only discuss the <dfn class="terminology">Cauchy–Euler</dfn> equations of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-3-6.html" id="eq-Cauchy-Euler">
+\begin{equation}
+x^2y''+b xy' +cy =0,\quad x&gt;0,\tag{3.2.21}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> are real constants. The method uses <span class="process-math">\(y = x^\lambda\)</span> as a trial solution, with <span class="process-math">\(\lambda\)</span> to be determined from the auxiliary equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-3-6.html" id="subsec-construction-fundamental-solutions-14-8">
+\begin{equation*}
+\lambda^2 +(b-1)\lambda +c=0,
+\end{equation*}
+</div>
+<div class="para">whose roots are real and distinct, complex, or repeated according as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-3-6.html" id="subsec-construction-fundamental-solutions-14-9">
+\begin{equation*}
+(b-1)^2-4c&gt;0,\;\; (b-1)^2-4c&lt;0,\;\; \mbox{ or } (b-1)^2-4c=0.
+\end{equation*}
+</div>
+<div class="para">We next discuss three examples, one for each case.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-construction-fundamental-solutions-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="eg-Cauchy-Euler" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-Cauchy-Euler-1-1">
+<div class="para">Find the general solution of the Cauchy-Euler equation</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-1-1-1">
+\begin{equation*}
+x^2 y''+4xy'+y = 0,\quad x&gt;0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-Cauchy-Euler-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-Cauchy-Euler-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-Cauchy-Euler-2-1">
+<div class="para">Take <span class="process-math">\(y = x^\lambda\)</span> as a trial solution, where <span class="process-math">\(\lambda\)</span> is a number to be determined. Differentiating <span class="process-math">\(y = x^\lambda\)</span> twice with respect to <span class="process-math">\(x\)</span> and substituting <span class="process-math">\(y, y', y''\)</span> into the differential equation, we obtain</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-2-1-6">
+\begin{equation*}
+(\lambda^2+ 3\lambda +1)x^\lambda =0
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in an interval <span class="process-math">\(I,\)</span> so the auxiliary equation is</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-2-1-9">
+\begin{equation*}
+\lambda^2+ 3\lambda +1=0
+\end{equation*}
+</div>
+<div class="para">with roots</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-2-1-10">
+\begin{equation*}
+\lambda = \frac{-3\pm \sqrt{5}}{2}.
+\end{equation*}
+</div>
+<div class="para">Let</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-2-1-11">
+\begin{equation*}
+\lambda_1=\frac{-3+ \sqrt{5}}{2}\quad\mbox{and}\quad\lambda_2=\frac{-3- \sqrt{5}}{2}.
+\end{equation*}
+</div>
+<div class="para">Obviously, <span class="process-math">\(\lambda_1&lt;0\)</span> and <span class="process-math">\(\lambda_2&lt;0.\)</span> From the two options <span class="process-math">\((-\infty,0)\)</span> and <span class="process-math">\((0, \infty),\)</span> let us take <span class="process-math">\(I = (0, \infty).\)</span> Then <span class="process-math">\(y_1 =
+x^{\lambda_1}\)</span> and <span class="process-math">\(\lambda_2 = x^{\lambda_2}\)</span> are solutions on <span class="process-math">\(I,\)</span> and their Wronskian</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-2-1-20">
+\begin{equation*}
+\begin{split} W(y_1, y_2)(x) &amp;= \begin{vmatrix} x^{\lambda_1}&amp;x^{\lambda_2}\\
+\lambda_1x^{\lambda_1-1}&amp;\lambda_2x^{\lambda_2-1} \end{vmatrix} \\ &amp;=
+(\lambda_2-\lambda_1) x^{(\lambda_1+\lambda_2-2)}\\ &amp;=(\lambda_2-\lambda_1) x^{-5}\\
+&amp; \ne 0 \end{split}
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\)</span> since <span class="process-math">\(\lambda_1+\lambda_2 = -3\text{.}\)</span> Thus <span class="process-math">\(\{y_1, y_2\}\)</span> is a fundamental set of solutions, and therefore the general solution of the Cauchy-Euler equation is</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-2-1-25">
+\begin{equation*}
+y = c_1x^{\lambda_1}+c_2x^{\lambda_2} = c_1x^{\frac{-3+ \sqrt{5}}{2}}+c_2x^{\frac{-3-
+\sqrt{5}}{2}}
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(I,\)</span> where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-Cauchy-Euler-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.12.1"><a href="#eg-Cauchy-Euler-2" title="Copy heading and permalink for Solution 3.2.12.1" aria-label="Copy heading and permalink for Solution 3.2.12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.12"><a href="#eg-Cauchy-Euler" title="Copy heading and permalink for Example 3.2.12" aria-label="Copy heading and permalink for Example 3.2.12">🔗</a></div></article></details><details id="eg-Cauchy-Euler-complex" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-Cauchy-Euler-complex-1-1">
+<div class="para">Solve the Cauchy–Euler equation</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-complex-1-1-1">
+\begin{equation*}
+x^2 y'' - y' + 5y = 0, \quad x&gt;0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-Cauchy-Euler-complex-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-Cauchy-Euler-complex-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-Cauchy-Euler-complex-2-1">
+<div class="para">Let <span class="process-math">\(y = x^\lambda\)</span> be a trial solution. Then</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-complex-2-1-2">
+\begin{equation*}
+y' = \lambda x^{\lambda-1}, \qquad y'' = \lambda(\lambda-1)x^{\lambda-2}.
+\end{equation*}
+</div>
+<div class="para">Substituting into the differential equation gives</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-complex-2-1-3">
+\begin{equation*}
+(\lambda^2 - 2\lambda + 5)x^\lambda = 0.
+\end{equation*}
+</div>
+<div class="para">Then the auxiliary equation is</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-complex-2-1-4">
+\begin{equation*}
+\lambda^2 - 2\lambda + 5=0
+\end{equation*}
+</div>
+<div class="para">whose solutions are</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-Cauchy-Euler-complex-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="eg-Cauchy-Euler-complex-2-2">
+<div class="displaymath process-math" id="eg-Cauchy-Euler-complex-2-2-1">
+\begin{equation*}
+\lambda = \frac{2 \pm \sqrt{-16}}{2} = 1 \pm 2i.
+\end{equation*}
+</div>
+<div class="para">For complex numbers <span class="process-math">\(\lambda = 1 \pm 2i\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-complex-2-2-3">
+\begin{equation*}
+x^{1 \pm 2i}= x\, x^{\pm 2i}= x e^{\pm 2i\ln x} = x\big(\cos(2 \ln x) \pm i \sin(2\ln
+x)\big).
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(y_1 = x\cos(2 \ln x)\)</span> and <span class="process-math">\(y_2 = x\sin(2 \ln x).\)</span> It is routine to verify that <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are linearly independent solutions on <span class="process-math">\((0, \infty).\)</span> Then the general solution of the Cauchy–Euler equation is</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-complex-2-2-9">
+\begin{equation*}
+y(x) = x \big(c_1 \cos(2 \ln x) + c_2 \sin(2 \ln x)\big), \quad x&gt;0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-Cauchy-Euler-complex-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.13.1"><a href="#eg-Cauchy-Euler-complex-2" title="Copy heading and permalink for Solution 3.2.13.1" aria-label="Copy heading and permalink for Solution 3.2.13.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.13"><a href="#eg-Cauchy-Euler-complex" title="Copy heading and permalink for Example 3.2.13" aria-label="Copy heading and permalink for Example 3.2.13">🔗</a></div></article></details><details id="eg-Cauchy-Euler-repeated-roots" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-Cauchy-Euler-repeated-roots-1-1">
+<div class="para">Solve the Cauchy–Euler equation</div>
+<div class="displaymath process-math" id="eg-Cauchy-Euler-repeated-roots-1-1-1">
+\begin{equation*}
+x^2 y'' - y' + y = 0, \quad x&gt;0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-Cauchy-Euler-repeated-roots-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-Cauchy-Euler-repeated-roots-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-Cauchy-Euler-repeated-roots-2-1">
+<div class="para">Let <span class="process-math">\(y = x^\lambda\)</span> be a trial solution. Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html" id="eg-Cauchy-Euler-repeated-roots-2-1-2">
+\begin{equation*}
+y' = \lambda x^{\lambda-1}, \qquad y'' = \lambda(\lambda-1)x^{\lambda-2}.
+\end{equation*}
+</div>
+<div class="para">Substituting into the differential equation yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html" id="eg-Cauchy-Euler-repeated-roots-2-1-3">
+\begin{equation*}
+(\lambda^2 - 2\lambda + 1)x^\lambda = 0.
+\end{equation*}
+</div>
+<div class="para">Then the auxiliary equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html" id="eg-Cauchy-Euler-repeated-roots-2-1-4">
+\begin{equation*}
+\lambda^2 - 2\lambda + 1=0,\quad \mbox{i.e.},\; (\lambda-1)^2 = 0.
+\end{equation*}
+</div>
+<div class="para">Its solutions are</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html" id="eg-Cauchy-Euler-repeated-roots-2-1-5">
+\begin{equation*}
+\lambda = 1, 1 \; (\text{repeated})
+\end{equation*}
+</div>
+<div class="para">We thus have one solution as <span class="process-math">\(y_1= x.\)</span> By the reduction of the order formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a>, a second linearly independent solution <span class="process-math">\(y_2\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html" id="eg-Cauchy-Euler-repeated-roots-2-1-9">
+\begin{equation*}
+\begin{split} y_2&amp;= y_1 \int \frac{e^{-\int a_1(x)\, dx}}{y_1^2}\, dx\quad
+\mbox{with } a_1(x) = -\frac{1}{x}\\ &amp;= x \int \frac{e^{-\int
+\left(-\frac{1}{x}\right)\, dx}}{x^2}\, dx\\ &amp;=x \int \frac{1}{x}\, dx\\ &amp;= x \ln
+x.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Hence the general solution of the Cauchy-Euler equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html" id="eg-Cauchy-Euler-repeated-roots-2-1-10">
+\begin{equation*}
+y= c_1 x+c_2 x\ln x,\quad x&gt;0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-Cauchy-Euler-repeated-roots-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.14.1"><a href="#eg-Cauchy-Euler-repeated-roots-2" title="Copy heading and permalink for Solution 3.2.14.1" aria-label="Copy heading and permalink for Solution 3.2.14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.14"><a href="#eg-Cauchy-Euler-repeated-roots" title="Copy heading and permalink for Example 3.2.14" aria-label="Copy heading and permalink for Example 3.2.14">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.2.2: Constructing Fundamental Sets of Solutions"><a href="#subsec-construction-fundamental-solutions" title="Copy heading and permalink for Subsection 3.2.2: Constructing Fundamental Sets of Solutions" aria-label="Copy heading and permalink for Subsection 3.2.2: Constructing Fundamental Sets of Solutions">🔗</a></div></section><section class="exercises" id="exercises-second-order"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="ex-sec-second-order-homogeneous-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ex-sec-second-order-homogeneous-1-1">
+<div class="para">Verify that the indicated solution set for each differential equation below is linearly independent on the specified interval <span class="process-math">\(I\)</span> by computing Wronskian of the solutions (see <a href="sec-3-2.html#wronskian-linearly-independent-theorem" class="xref" data-knowl="./knowl/xref/wronskian-linearly-independent-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">Theorem 3.2.1</a>).</div>
+<ol class="lower-roman ol-marker-1" id="ex-sec-second-order-homogeneous-1-1-3">
+<li id="ex-sec-second-order-homogeneous-1-1-3-1">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-1-1">
+<span class="process-math">\(y''=0\text{,}\)</span> <span class="process-math">\(\{7,\, x\}, \qquad I=(-\infty,\infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.i"><a href="#ex-sec-second-order-homogeneous-1-1-3-1" title="Copy heading and permalink for Item 3.2.3.1.i" aria-label="Copy heading and permalink for Item 3.2.3.1.i">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-2">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-2-1">
+<span class="process-math">\(y''+y=0\text{,}\)</span> <span class="process-math">\(\{\sin x,\, \cos x\}, \qquad I=(-\infty,\infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.ii"><a href="#ex-sec-second-order-homogeneous-1-1-3-2" title="Copy heading and permalink for Item 3.2.3.1.ii" aria-label="Copy heading and permalink for Item 3.2.3.1.ii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-3">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-3-1">
+<span class="process-math">\(y''+y=0\text{,}\)</span> <span class="process-math">\(\{\sin x,\, \sin x+\cos x\}, \qquad I=(-\infty,\infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.iii"><a href="#ex-sec-second-order-homogeneous-1-1-3-3" title="Copy heading and permalink for Item 3.2.3.1.iii" aria-label="Copy heading and permalink for Item 3.2.3.1.iii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-4">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-4-1">
+<span class="process-math">\(y''-4y=0\text{,}\)</span> <span class="process-math">\(\{e^{2x},\, e^{-2x}\}, \qquad I=(-\infty,\infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.iv"><a href="#ex-sec-second-order-homogeneous-1-1-3-4" title="Copy heading and permalink for Item 3.2.3.1.iv" aria-label="Copy heading and permalink for Item 3.2.3.1.iv">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-5">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-5-1">
+<span class="process-math">\(y''-4y=0\text{,}\)</span> <span class="process-math">\(\{e^{2x},\, e^{-2x}\}, \qquad I=(-\infty,\infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.v"><a href="#ex-sec-second-order-homogeneous-1-1-3-5" title="Copy heading and permalink for Item 3.2.3.1.v" aria-label="Copy heading and permalink for Item 3.2.3.1.v">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-6">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-6-1">
+<span class="process-math">\(y''-4y'+4y=0\text{,}\)</span> <span class="process-math">\(\{e^{2x},\, xe^{2x}\}, \qquad I=(-\infty,\infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.vi"><a href="#ex-sec-second-order-homogeneous-1-1-3-6" title="Copy heading and permalink for Item 3.2.3.1.vi" aria-label="Copy heading and permalink for Item 3.2.3.1.vi">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-7">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-7-1">
+<span class="process-math">\(y''-4y'+4y=0\text{,}\)</span> <span class="process-math">\(\{e^{2x},\, (x+1)e^{2x}\}, \qquad I=(-\infty,\infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.vii"><a href="#ex-sec-second-order-homogeneous-1-1-3-7" title="Copy heading and permalink for Item 3.2.3.1.vii" aria-label="Copy heading and permalink for Item 3.2.3.1.vii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-8">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-8-1">
+<span class="process-math">\(y''-4y'+13y=0\text{,}\)</span> <span class="process-math">\(\{e^{2x}\cos(3x),\, e^{2x}\sin(3x)\}, \qquad
+I=(-\infty,\infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.viii"><a href="#ex-sec-second-order-homogeneous-1-1-3-8" title="Copy heading and permalink for Item 3.2.3.1.viii" aria-label="Copy heading and permalink for Item 3.2.3.1.viii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-9">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-9-1">
+<span class="process-math">\(y''-\frac{2}{x}y'=0\text{,}\)</span> <span class="process-math">\(\{1, x^3\}, \qquad I = (0, \infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.ix"><a href="#ex-sec-second-order-homogeneous-1-1-3-9" title="Copy heading and permalink for Item 3.2.3.1.ix" aria-label="Copy heading and permalink for Item 3.2.3.1.ix">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-10">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-10-1">
+<span class="process-math">\(x^2 y''+xy'+y = 0,\)</span> <span class="process-math">\(\{\cos(\ln x),\, \sin(\ln x)\}, \quad I = (0, \infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.x"><a href="#ex-sec-second-order-homogeneous-1-1-3-10" title="Copy heading and permalink for Item 3.2.3.1.x" aria-label="Copy heading and permalink for Item 3.2.3.1.x">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-1-1-3-11">
+<div class="para" id="ex-sec-second-order-homogeneous-1-1-3-11-1">
+<span class="process-math">\(x^2 y''+4xy'+y = 0,\)</span> <span class="process-math">\(\{x^{\frac{-3+ \sqrt{5}}{2}}, x^{\frac{-3- \sqrt{5}}{2}}\}, \qquad I = (0, \infty)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.xi"><a href="#ex-sec-second-order-homogeneous-1-1-3-11" title="Copy heading and permalink for Item 3.2.3.1.xi" aria-label="Copy heading and permalink for Item 3.2.3.1.xi">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.1"><a href="#ex-sec-second-order-homogeneous-1" title="Copy heading and permalink for Exercise 3.2.3.1" aria-label="Copy heading and permalink for Exercise 3.2.3.1">🔗</a></div></article><article class="exercise exercise-like" id="ex-sec-second-order-homogeneous-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ex-sec-second-order-homogeneous-2-1">
+<div class="para">Find the general solution of each differential equation below (see <a href="sec-3-2.html#thm-general-solution" class="xref" data-knowl="./knowl/xref/thm-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.5">Theorem 3.2.5</a>).</div>
+<ol class="lower-roman ol-marker-1 cols2 multicolumn" id="ex-sec-second-order-homogeneous-2-1-2">
+<li id="ex-sec-second-order-homogeneous-2-1-2-1">
+<div class="para" id="ex-sec-second-order-homogeneous-2-1-2-1-1">
+<span class="process-math">\(\displaystyle y''-5y'+6y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.2.i"><a href="#ex-sec-second-order-homogeneous-2-1-2-1" title="Copy heading and permalink for Item 3.2.3.2.i" aria-label="Copy heading and permalink for Item 3.2.3.2.i">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-2-1-2-2">
+<div class="para" id="ex-sec-second-order-homogeneous-2-1-2-2-1">
+<span class="process-math">\(\displaystyle y''+11y'+30y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.2.ii"><a href="#ex-sec-second-order-homogeneous-2-1-2-2" title="Copy heading and permalink for Item 3.2.3.2.ii" aria-label="Copy heading and permalink for Item 3.2.3.2.ii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-2-1-2-3">
+<div class="para" id="ex-sec-second-order-homogeneous-2-1-2-3-1">
+<span class="process-math">\(\displaystyle 2y''+5y'+3y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.2.iii"><a href="#ex-sec-second-order-homogeneous-2-1-2-3" title="Copy heading and permalink for Item 3.2.3.2.iii" aria-label="Copy heading and permalink for Item 3.2.3.2.iii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-2-1-2-4">
+<div class="para" id="ex-sec-second-order-homogeneous-2-1-2-4-1">
+<span class="process-math">\(\displaystyle y''-7y'-30y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.2.iv"><a href="#ex-sec-second-order-homogeneous-2-1-2-4" title="Copy heading and permalink for Item 3.2.3.2.iv" aria-label="Copy heading and permalink for Item 3.2.3.2.iv">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-2-1-2-5">
+<div class="para" id="ex-sec-second-order-homogeneous-2-1-2-5-1">
+<span class="process-math">\(\displaystyle y''+4y'=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.2.v"><a href="#ex-sec-second-order-homogeneous-2-1-2-5" title="Copy heading and permalink for Item 3.2.3.2.v" aria-label="Copy heading and permalink for Item 3.2.3.2.v">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-2-1-2-6">
+<div class="para" id="ex-sec-second-order-homogeneous-2-1-2-6-1">
+<span class="process-math">\(\displaystyle y''+4y'+13y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.2.vi"><a href="#ex-sec-second-order-homogeneous-2-1-2-6" title="Copy heading and permalink for Item 3.2.3.2.vi" aria-label="Copy heading and permalink for Item 3.2.3.2.vi">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-2-1-2-7">
+<div class="para" id="ex-sec-second-order-homogeneous-2-1-2-7-1">
+<span class="process-math">\(\displaystyle y''-5y'+y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.2.vii"><a href="#ex-sec-second-order-homogeneous-2-1-2-7" title="Copy heading and permalink for Item 3.2.3.2.vii" aria-label="Copy heading and permalink for Item 3.2.3.2.vii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-2-1-2-8">
+<div class="para" id="ex-sec-second-order-homogeneous-2-1-2-8-1">
+<span class="process-math">\(\displaystyle 2y''+5y'+y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.2.viii"><a href="#ex-sec-second-order-homogeneous-2-1-2-8" title="Copy heading and permalink for Item 3.2.3.2.viii" aria-label="Copy heading and permalink for Item 3.2.3.2.viii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.2"><a href="#ex-sec-second-order-homogeneous-2" title="Copy heading and permalink for Exercise 3.2.3.2" aria-label="Copy heading and permalink for Exercise 3.2.3.2">🔗</a></div></article><article class="exercise exercise-like" id="ex-sec-second-order-homogeneous-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ex-sec-second-order-homogeneous-3-1">
+<div class="para">Find the general solution of each of the following Cauchy-Euler differential equations (see <a href="sec-3-2.html#eg-Cauchy-Euler" class="xref" data-knowl="./knowl/xref/eg-Cauchy-Euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.12">Example 3.2.12</a>).</div>
+<ol class="lower-roman ol-marker-1 cols2 multicolumn" id="ex-sec-second-order-homogeneous-3-1-2">
+<li id="ex-sec-second-order-homogeneous-3-1-2-1">
+<div class="para" id="ex-sec-second-order-homogeneous-3-1-2-1-1">
+<span class="process-math">\(\displaystyle x^2y''+xy'-y = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.3.i"><a href="#ex-sec-second-order-homogeneous-3-1-2-1" title="Copy heading and permalink for Item 3.2.3.3.i" aria-label="Copy heading and permalink for Item 3.2.3.3.i">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-3-1-2-2">
+<div class="para" id="ex-sec-second-order-homogeneous-3-1-2-2-1">
+<span class="process-math">\(\displaystyle x y''-2y'=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.3.ii"><a href="#ex-sec-second-order-homogeneous-3-1-2-2" title="Copy heading and permalink for Item 3.2.3.3.ii" aria-label="Copy heading and permalink for Item 3.2.3.3.ii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-3-1-2-3">
+<div class="para" id="ex-sec-second-order-homogeneous-3-1-2-3-1">
+<span class="process-math">\(\displaystyle x^2 y''-x y'-3y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.3.iii"><a href="#ex-sec-second-order-homogeneous-3-1-2-3" title="Copy heading and permalink for Item 3.2.3.3.iii" aria-label="Copy heading and permalink for Item 3.2.3.3.iii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-3-1-2-4">
+<div class="para" id="ex-sec-second-order-homogeneous-3-1-2-4-1">
+<span class="process-math">\(\displaystyle x^2 y''-2y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-3-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.3.iv"><a href="#ex-sec-second-order-homogeneous-3-1-2-4" title="Copy heading and permalink for Item 3.2.3.3.iv" aria-label="Copy heading and permalink for Item 3.2.3.3.iv">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-3-1-2-5">
+<div class="para" id="ex-sec-second-order-homogeneous-3-1-2-5-1">
+<span class="process-math">\(\displaystyle x^2 y''+x y'+y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-3-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.3.v"><a href="#ex-sec-second-order-homogeneous-3-1-2-5" title="Copy heading and permalink for Item 3.2.3.3.v" aria-label="Copy heading and permalink for Item 3.2.3.3.v">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-3-1-2-6">
+<div class="para" id="ex-sec-second-order-homogeneous-3-1-2-6-1">
+<span class="process-math">\(\displaystyle x^2y''+3xy'+5y = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-3-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.3.vi"><a href="#ex-sec-second-order-homogeneous-3-1-2-6" title="Copy heading and permalink for Item 3.2.3.3.vi" aria-label="Copy heading and permalink for Item 3.2.3.3.vi">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.3"><a href="#ex-sec-second-order-homogeneous-3" title="Copy heading and permalink for Exercise 3.2.3.3" aria-label="Copy heading and permalink for Exercise 3.2.3.3">🔗</a></div></article><article class="exercise exercise-like" id="ex-sec-second-order-homogeneous-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ex-sec-second-order-homogeneous-4-1">
+<div class="para">Find the solution of each of the following initial value problems:</div>
+<ol class="lower-roman ol-marker-1" id="ex-sec-second-order-homogeneous-4-1-1">
+<li id="ex-sec-second-order-homogeneous-4-1-1-1">
+<div class="para" id="ex-sec-second-order-homogeneous-4-1-1-1-1">
+<span class="process-math">\(y''-16y =0,\; y(0)= 0, \; y'(1) = 1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-sec-second-order-homogeneous-4-1-1-1-2">(Hint: See <a href="sec-3-2.html#eg-general-solution-1" class="xref" data-knowl="./knowl/xref/eg-general-solution-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.7">Example 3.2.7</a> for the general solution.)<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.4.i"><a href="#ex-sec-second-order-homogeneous-4-1-1-1" title="Copy heading and permalink for Item 3.2.3.4.i" aria-label="Copy heading and permalink for Item 3.2.3.4.i">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-4-1-1-2">
+<div class="para" id="ex-sec-second-order-homogeneous-4-1-1-2-1">
+<span class="process-math">\(y''-y'-6y = 0, \;y(0)= -1, \; y'(0) = 1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-sec-second-order-homogeneous-4-1-1-2-2">(Hint: See <a href="sec-3-2.html#eg-general-solution-2" class="xref" data-knowl="./knowl/xref/eg-general-solution-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.8">Example 3.2.8</a> for the general solution.)<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.4.ii"><a href="#ex-sec-second-order-homogeneous-4-1-1-2" title="Copy heading and permalink for Item 3.2.3.4.ii" aria-label="Copy heading and permalink for Item 3.2.3.4.ii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-4-1-1-3">
+<div class="para" id="ex-sec-second-order-homogeneous-4-1-1-3-1">
+<span class="process-math">\(3y''+2y'+y=0,\; y(0)=1,\; y'(0)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-sec-second-order-homogeneous-4-1-1-3-2">(Hint: See <a href="sec-3-2.html#eg-general-solution-3" class="xref" data-knowl="./knowl/xref/eg-general-solution-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.9">Example 3.2.9</a> for the general solution.)<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.4.iii"><a href="#ex-sec-second-order-homogeneous-4-1-1-3" title="Copy heading and permalink for Item 3.2.3.4.iii" aria-label="Copy heading and permalink for Item 3.2.3.4.iii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-4-1-1-4">
+<div class="para" id="ex-sec-second-order-homogeneous-4-1-1-4-1">
+<span class="process-math">\(y''+8y'+16y = 0,\; y(1)=1,\; y'(1)=-1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-sec-second-order-homogeneous-4-1-1-4-2">(Hint: See <a href="sec-3-2.html#eg-general-solution-4" class="xref" data-knowl="./knowl/xref/eg-general-solution-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.10">Example 3.2.10</a> for the general solution.)<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.4.iv"><a href="#ex-sec-second-order-homogeneous-4-1-1-4" title="Copy heading and permalink for Item 3.2.3.4.iv" aria-label="Copy heading and permalink for Item 3.2.3.4.iv">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.4"><a href="#ex-sec-second-order-homogeneous-4" title="Copy heading and permalink for Exercise 3.2.3.4" aria-label="Copy heading and permalink for Exercise 3.2.3.4">🔗</a></div></article><article class="exercise exercise-like" id="ex-sec-second-order-homogeneous-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ex-sec-second-order-homogeneous-5-1">
+<div class="para">Solve the following initial value problems by using the general solutions of the related equations obtained in <a href="sec-3-2.html#ex-sec-second-order-homogeneous-2" class="xref" data-knowl="./knowl/xref/ex-sec-second-order-homogeneous-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.2.3.2">Exercise 3.2.3.2</a> and <a href="sec-3-2.html#ex-sec-second-order-homogeneous-3" class="xref" data-knowl="./knowl/xref/ex-sec-second-order-homogeneous-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.2.3.3">Exercise 3.2.3.3</a>.</div>
+<ol class="lower-roman ol-marker-1" id="ex-sec-second-order-homogeneous-5-1-3">
+<li id="ex-sec-second-order-homogeneous-5-1-3-1">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-1-1">
+<span class="process-math">\(\displaystyle y''-5y'+6y=0, \quad y(0) = 0, \quad y'(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.i"><a href="#ex-sec-second-order-homogeneous-5-1-3-1" title="Copy heading and permalink for Item 3.2.3.5.i" aria-label="Copy heading and permalink for Item 3.2.3.5.i">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-2">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-2-1">
+<span class="process-math">\(\displaystyle y''+11y'+30y=0, \quad y(0) = 0, \quad y'(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.ii"><a href="#ex-sec-second-order-homogeneous-5-1-3-2" title="Copy heading and permalink for Item 3.2.3.5.ii" aria-label="Copy heading and permalink for Item 3.2.3.5.ii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-3">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-3-1">
+<span class="process-math">\(\displaystyle 2y''+5y'+3y=0, \quad y(0) = 1, \quad y'(0)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.iii"><a href="#ex-sec-second-order-homogeneous-5-1-3-3" title="Copy heading and permalink for Item 3.2.3.5.iii" aria-label="Copy heading and permalink for Item 3.2.3.5.iii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-4">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-4-1">
+<span class="process-math">\(\displaystyle y''-7y'-30y=0, \quad y(0) = 1, \quad y'(0)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.iv"><a href="#ex-sec-second-order-homogeneous-5-1-3-4" title="Copy heading and permalink for Item 3.2.3.5.iv" aria-label="Copy heading and permalink for Item 3.2.3.5.iv">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-5">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-5-1">
+<span class="process-math">\(\displaystyle y''+4y'=0, \quad y(0) = 1, \quad y'(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.v"><a href="#ex-sec-second-order-homogeneous-5-1-3-5" title="Copy heading and permalink for Item 3.2.3.5.v" aria-label="Copy heading and permalink for Item 3.2.3.5.v">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-6">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-6-1">
+<span class="process-math">\(\displaystyle y''+4y'+13y=0, \quad y(0) = 1, \quad y'(0)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.vi"><a href="#ex-sec-second-order-homogeneous-5-1-3-6" title="Copy heading and permalink for Item 3.2.3.5.vi" aria-label="Copy heading and permalink for Item 3.2.3.5.vi">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-7">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-7-1">
+<span class="process-math">\(\displaystyle y''-5y'+y=0, \quad y(0) = 0, \quad y'(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.vii"><a href="#ex-sec-second-order-homogeneous-5-1-3-7" title="Copy heading and permalink for Item 3.2.3.5.vii" aria-label="Copy heading and permalink for Item 3.2.3.5.vii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-8">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-8-1">
+<span class="process-math">\(\displaystyle 2y''+5y'+y=0, \quad y(0) = 0, \quad y'(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.viii"><a href="#ex-sec-second-order-homogeneous-5-1-3-8" title="Copy heading and permalink for Item 3.2.3.5.viii" aria-label="Copy heading and permalink for Item 3.2.3.5.viii">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-9">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-9-1">
+<span class="process-math">\(\displaystyle x^2y''+xy'-y = 0, \quad y(1) = 1, \quad y'(1)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.ix"><a href="#ex-sec-second-order-homogeneous-5-1-3-9" title="Copy heading and permalink for Item 3.2.3.5.ix" aria-label="Copy heading and permalink for Item 3.2.3.5.ix">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-10">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-10-1">
+<span class="process-math">\(\displaystyle x^2 y''+x y'+y=0, \quad y(1) = 1, \quad y'(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.x"><a href="#ex-sec-second-order-homogeneous-5-1-3-10" title="Copy heading and permalink for Item 3.2.3.5.x" aria-label="Copy heading and permalink for Item 3.2.3.5.x">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-11">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-11-1">
+<span class="process-math">\(\displaystyle x^2 y''-x y'-3y=0, \quad y(1) = 1, \quad y'(1)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.xi"><a href="#ex-sec-second-order-homogeneous-5-1-3-11" title="Copy heading and permalink for Item 3.2.3.5.xi" aria-label="Copy heading and permalink for Item 3.2.3.5.xi">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-5-1-3-12">
+<div class="para" id="ex-sec-second-order-homogeneous-5-1-3-12-1">
+<span class="process-math">\(\displaystyle x^2y''+3xy'+5y = 0,\quad y(1) = 1, \quad y'(1)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1-3-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.xii"><a href="#ex-sec-second-order-homogeneous-5-1-3-12" title="Copy heading and permalink for Item 3.2.3.5.xii" aria-label="Copy heading and permalink for Item 3.2.3.5.xii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.5"><a href="#ex-sec-second-order-homogeneous-5" title="Copy heading and permalink for Exercise 3.2.3.5" aria-label="Copy heading and permalink for Exercise 3.2.3.5">🔗</a></div></article><article class="exercise exercise-like" id="ex-sec-second-order-homogeneous-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ex-sec-second-order-homogeneous-6-1">
+<div class="para">Suppose that the characteristic polynomial</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/part-a.html" id="ex-sec-second-order-homogeneous-6-1-1">
+\begin{equation*}
+p(\lambda) = a\lambda^2 + b\lambda + c
+\end{equation*}
+</div>
+<div class="para">of the differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/part-a.html" id="ex-sec-second-order-homogeneous-6-1-2">
+\begin{equation*}
+ay'' + by' + cy = 0, \quad a \ne 0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a, b, c\)</span> are constants, has a repeated root <span class="process-math">\(\lambda_0.\)</span> Then <span class="process-math">\(y_1 = e^{\lambda_0 x}\)</span> is a solution of the differential equation. To find a second linearly independent solution, proceed as follows.</div>
+<ol class="lower-alpha ol-marker-2" id="ex-sec-second-order-homogeneous-6-1-6">
+<li id="part-a">
+<div class="para logical" id="part-a-1">
+<div class="para">Let <span class="process-math">\(y = e^{\lambda x}\)</span> with parameter <span class="process-math">\(\lambda\text{.}\)</span> Show that</div>
+<div class="displaymath process-math" id="part-a-1-3">
+\begin{equation*}
+a\frac{\partial^2}{\partial
+x^2} (e^{\lambda x}) + b\frac{\partial}{\partial x} (e^{\lambda x}) + c (e^{\lambda x}) =
+p(\lambda) e^{\lambda x}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#part-a-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.6.a"><a href="#part-a" title="Copy heading and permalink for Item 3.2.3.6.a" aria-label="Copy heading and permalink for Item 3.2.3.6.a">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-6-1-6-2">
+<div class="para logical" id="ex-sec-second-order-homogeneous-6-1-6-2-1">
+<div class="para">Differentiate both sides of the equation in <a href="sec-3-2.html#part-a" class="xref" data-knowl="./knowl/xref/part-a.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.2.3.6.a">Item 3.2.3.6.a</a> with respect to <span class="process-math">\(\lambda\)</span> to obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/part-a.html" id="ex-sec-second-order-homogeneous-6-1-6-2-1-3">
+\begin{equation*}
+a\frac{\partial^2}{\partial x^2} (x e^{\lambda x}) +
+b\frac{\partial}{\partial x} (x e^{\lambda x}) + c (x e^{\lambda x}) = \big(p'(\lambda) +
+x\, p(\lambda)\big) e^{\lambda x}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-6-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.6.b"><a href="#ex-sec-second-order-homogeneous-6-1-6-2" title="Copy heading and permalink for Item 3.2.3.6.b" aria-label="Copy heading and permalink for Item 3.2.3.6.b">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-6-1-6-3">
+<div class="para" id="ex-sec-second-order-homogeneous-6-1-6-3-1">Using <span class="process-math">\(p(\lambda_0) = p'(\lambda_0) = 0\text{,}\)</span> conclude that <span class="process-math">\(y_2 = x e^{\lambda_0
+x}\)</span> is also a solution.<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-6-1-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.6.c"><a href="#ex-sec-second-order-homogeneous-6-1-6-3" title="Copy heading and permalink for Item 3.2.3.6.c" aria-label="Copy heading and permalink for Item 3.2.3.6.c">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-6-1-6-4">
+<div class="para" id="ex-sec-second-order-homogeneous-6-1-6-4-1">Show that <span class="process-math">\(y_1 =e^{\lambda_0 x}\)</span> and <span class="process-math">\(y_2=x e^{\lambda_0 x}\)</span> are linearly independent on <span class="process-math">\((-\infty, \infty)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-6-1-6-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.6.d"><a href="#ex-sec-second-order-homogeneous-6-1-6-4" title="Copy heading and permalink for Item 3.2.3.6.d" aria-label="Copy heading and permalink for Item 3.2.3.6.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.6"><a href="#ex-sec-second-order-homogeneous-6" title="Copy heading and permalink for Exercise 3.2.3.6" aria-label="Copy heading and permalink for Exercise 3.2.3.6">🔗</a></div></article><article class="exercise exercise-like" id="ex-sec-second-order-homogeneous-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ex-sec-second-order-homogeneous-7-1">
+<div class="para">Let <span class="process-math">\(y_1(x)\)</span> be a known solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/eq-second-order-linear_homo-de-3.html ./knowl/xref/wronskian-method.html ./knowl/xref/Abel-2.html ./knowl/xref/rem-Abel-formula.html" id="eq-second-order-linear_homo-de-3">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.22}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_0(x)\)</span> and <span class="process-math">\(a_1(x)\)</span> are continuous functions on an interval <span class="process-math">\(I,\)</span> satisfying <span class="process-math">\(y_1(x)&gt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{.}\)</span> Use the Wronskian to derive Liouville’s formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a> as follows:</div>
+<ol class="lower-alpha ol-marker-2" id="ex-sec-second-order-homogeneous-7-1-10">
+<li id="wronskian-method">
+<div class="para logical" id="wronskian-method-1">
+<div class="para">Suppose that <span class="process-math">\(y_2\)</span> is a solution of <a href="sec-3-2.html#eq-second-order-linear_homo-de-3" class="xref" data-knowl="./knowl/xref/eq-second-order-linear_homo-de-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.22">(3.2.22)</a> such that <span class="process-math">\(\{y_1, y_2\}\)</span> is linearly independent on <span class="process-math">\(I.\)</span> Show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear_homo-de-3.html" id="wronskian-method-1-5">
+\begin{equation*}
+\left(\frac{y_2}{y_1}\right)' = \frac{W(x)}{y_1^2}
+\quad \mbox{on } I,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(W(x)\)</span> is the Wronskian of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> given by <span class="process-math">\(W(x) =y_1(x)y_2'(x) - y_1'(x)y_2(x).\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#wronskian-method-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.7.a"><a href="#wronskian-method" title="Copy heading and permalink for Item 3.2.3.7.a" aria-label="Copy heading and permalink for Item 3.2.3.7.a">🔗</a></div>
+</li>
+<li id="Abel-2">
+<div class="para logical" id="Abel-2-1">
+<div class="para">Using <a href="sec-3-2.html#wronskian-method" class="xref" data-knowl="./knowl/xref/wronskian-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.2.3.7.a">Item 3.2.3.7.a</a>, show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/wronskian-method.html" id="Abel-2-1-2">
+\begin{equation*}
+y_2 = y_1(x)
+\int\frac{W(x)}{[y_1(x)]^2}\, dx.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Abel-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.7.b"><a href="#Abel-2" title="Copy heading and permalink for Item 3.2.3.7.b" aria-label="Copy heading and permalink for Item 3.2.3.7.b">🔗</a></div>
+</li>
+<li id="ex-sec-second-order-homogeneous-7-1-10-3">
+<div class="para logical" id="ex-sec-second-order-homogeneous-7-1-10-3-1">
+<div class="para">Obtain Liouville’s formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Abel-2.html" id="ex-sec-second-order-homogeneous-7-1-10-3-1-1">
+\begin{equation*}
+y_2 = y_1(x) \int\frac{e^{-\int
+a_1(x)\,dx}}{[y_1(x)]^2}\, dx
+\end{equation*}
+</div>
+<div class="para">from part <a href="sec-3-2.html#Abel-2" class="xref" data-knowl="./knowl/xref/Abel-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.2.3.7.b">Item 3.2.3.7.b</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-7-1-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.7.c"><a href="#ex-sec-second-order-homogeneous-7-1-10-3" title="Copy heading and permalink for Item 3.2.3.7.c" aria-label="Copy heading and permalink for Item 3.2.3.7.c">🔗</a></div>
+</li>
+</ol>
+<div class="para">The same steps also apply when the known solution <span class="process-math">\(y_1\)</span> satisfies <span class="process-math">\(y_1(x) &lt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{.}\)</span> For the general case, see (ii) of Remark <a href="sec-3-2.html#rem-Abel-formula" class="xref" data-knowl="./knowl/xref/rem-Abel-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2">Item 2</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.7"><a href="#ex-sec-second-order-homogeneous-7" title="Copy heading and permalink for Exercise 3.2.3.7" aria-label="Copy heading and permalink for Exercise 3.2.3.7">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.2.3"><a href="#exercises-second-order" title="Copy heading and permalink for Exercises 3.2.3" aria-label="Copy heading and permalink for Exercises 3.2.3">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: Second Order Homogeneous Linear Differential Equations"><a href="#sec-3-2" title="Copy heading and permalink for Section 3.2: Second Order Homogeneous Linear Differential Equations" aria-label="Copy heading and permalink for Section 3.2: Second Order Homogeneous Linear Differential Equations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-3-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-3-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
