@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Find a particular solution of</div>
+<div class="displaymath process-math">
+\begin{equation}
+y'' -6y'+ 9y = \sin x\tag{3.3.12}
+\end{equation}
+</div>
+<div class="para">and then write down the general solution.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-udc-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">First, we use the same trial solution as in <a href="sec-3-3.html#example-udc-1" class="xref" data-knowl="./knowl/xref/example-udc-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.6">Example 3.3.6</a> and see what happens. Let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+y_p = A\sin x
+\end{equation*}
+</div>
+<div class="para">be a particular solution, where <span class="process-math">\(A\)</span> is a constant to be determined. Differentiating yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+y_p' = A\cos x, \quad y_p''= -A\sin x.
+\end{equation*}
+</div>
+<div class="para">Substituting these into <a href="sec-3-3.html#eq-udc-2" class="xref" data-knowl="./knowl/xref/eq-udc-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.12">(3.3.12)</a> would give</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+-A\sin x-6A\cos x+ 9A\sin x = \sin x,
+\end{equation*}
+</div>
+<div class="para">i.e.,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+(8A-1)\sin x -6A\cos x = 0,
+\end{equation*}
+</div>
+<div class="para">which is not an identity in <span class="process-math">\(x\)</span> for any value of <span class="process-math">\(A\)</span> because <span class="process-math">\(\sin x\)</span> and <span class="process-math">\(\cos x\)</span> are linearly independent. Thus, no value of <span class="process-math">\(A\)</span> makes <span class="process-math">\(y_p = A\sin x\)</span> a valid particular solution. This occurs because <span class="process-math">\(\cos x\)</span> is involved in the process. Therefore, we modify our trial function for <span class="process-math">\(y_p\)</span> and take</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+y_p = A\sin x + B\cos x
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are constants to be determined. Differentiating twice gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+y_p' = A\cos x-B\sin x, \quad y_p''= -A\sin x - B\cos x.
+\end{equation*}
+</div>
+<div class="para">Substituting these into <a href="sec-3-3.html#eq-udc-2" class="xref" data-knowl="./knowl/xref/eq-udc-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.12">(3.3.12)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+(-A\sin x - B\cos x)-6(A\cos x-B\sin x)+9(A\sin x + B\cos x) = \sin x,
+\end{equation*}
+</div>
+<div class="para">i.e.,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+(8A+6B) \sin x +(8B-6A)\cos x =\sin x,
+\end{equation*}
+</div>
+<div class="para">an identity in <span class="process-math">\(x.\)</span> Since <span class="process-math">\(\sin x\)</span> and <span class="process-math">\(\cos x\)</span> are linearly independent, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+\begin{cases} 8A+6B=1,\\ 8B-6A=0.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Solving these equations for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> yields <span class="process-math">\(A = \frac{2}{25}\)</span> and <span class="process-math">\(B=
+\frac{3}{50}.\)</span> Thus,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+y_p =\frac{2}{25}\sin x+\frac{3}{50}\cos x
+\end{equation*}
+</div>
+<div class="para">is a particular solution.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-udc-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To determine the complementary function of the general solution of <a href="sec-3-3.html#eq-udc-2" class="xref" data-knowl="./knowl/xref/eq-udc-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.12">(3.3.12)</a>, the auxiliary equation for the associated homogeneous equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+y'' -6y'+ 9y =0
+\end{equation*}
+</div>
+<div class="para">is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+\lambda^2 -6\lambda +9 =0,
+\end{equation*}
+</div>
+<div class="para">which has a repeated root <span class="process-math">\(\lambda
+= 3.\)</span> Then the complementary function <span class="process-math">\(y_h\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+y_h = c_1 e^{3x} + c_2 xe^{3x},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. Hence the general solution of <a href="sec-3-3.html#eq-udc-2" class="xref" data-knowl="./knowl/xref/eq-udc-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.12">(3.3.12)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-2.html ./knowl/xref/eq-udc-2.html">
+\begin{equation*}
+y = y_h(x)+y_p(x) = c_1 e^{3x} + c_2 xe^{3x}+\frac{2}{25}\sin x+\frac{3}{50}\cos x,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-udc-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.8.1"><a href="#example-udc-2-2" title="Copy heading and permalink for Solution 3.3.8.1" aria-label="Copy heading and permalink for Solution 3.3.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.8"><a href="#example-udc-2" title="Copy heading and permalink for Example 3.3.8" aria-label="Copy heading and permalink for Example 3.3.8">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-3-3.html#example-udc-2">in-context</a></span>
+</body>
+</html>
