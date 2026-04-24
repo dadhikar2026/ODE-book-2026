@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-5-6" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Systems of Linear Differential Equations</title>
+    <introduction>
+        <p>
+            This chapter focuses on the applications of the Laplace transform to solve systems of
+            linear ordinary differential equations. Using the Laplace transform, we convert a system
+            of differential equations into a system of algebraic equations involving Laplace
+            transforms of the unknown functions (dependent variables), solve this algebraic system
+            for the Laplace transforms , and then apply the inverse Laplace transform to recover the
+            functions from their Laplace transforms. These functions then become solutions of the
+            differential equations in the system.
+        </p>
+        <p> To fix the ideas, we consider below a first-order linear system of ordinary differential
+            equations in the three variables <m>x(t), y(t), z(t)</m>: <men xml:id="linear-system">
+            \begin{cases}
+                \ds \frac{dx}{dt}\amp= a_{11}x + a_{12}y + a_{13}z + f_1(t),\\
+                \ds \frac{dy}{dt} \amp= a_{21}x + a_{22}y + a_{23}z + f_2(t),\\
+                \ds \frac{dz}{dt} \amp= a_{31}x + a_{32}y + a_{33}z + f_3(t),
+                \end{cases}
+            </men>
+            where <ul>
+                <li>
+                    <p>
+                        <m>x(t), y(t), z(t)</m> are unknown functions of time <m>t</m>, </p>
+                </li>
+
+                <li>
+                    <p> the coefficients <m>a_{ij}</m> are fixed real numbers, and </p>
+                </li>
+
+                <li>
+                    <p>
+                        <m>f_i(t)</m> are given functions of <m>t</m>, possibly zero. </p>
+                </li>
+
+            </ul>
+        </p>
+
+        <p> The system <xref ref="linear-system" /> is said to be <term>
+                <em>decoupled</em>
+            </term> if <m>a_{ij}= 0</m> for all <m>i, j</m> with <m>i\ne
+            j</m> and <term>
+                <em>coupled</em>
+            </term> if for each <m>i = 1, 2, 3</m> there is <m>j =
+                1, 2,3</m> with <m>i\ne j</m> and <m>a_{ij}\ne 0.</m> The linear system <xref
+                ref="linear-system" /> is said to be <term>
+                <em>partially decoupled</em>
+            </term> if it has a structure that allows
+            solving one or more of the equations in isolation, and then using those solutions to
+            simplify or solve the remaining equations. </p>
+    </introduction>
+
+    <subsection xml:id="subsec-laplace-transform-method">
+        <title>The Laplace Transform Method</title>
+        <p> To solve the linear system <xref ref="linear-system" /> with the initial conditions <me>x(0)
+            = x_0, \quad y(0) = y_0, \quad
+                z(0) = z_0,
+            </me>
+            we apply the Laplace transform <m>\mathcal{L}</m> to each equation. The system is then
+            transformed into </p>
+        <p>
+            <me>
+                \begin{cases}
+                sX(s) - x_0 = a_{11}X(s) + a_{12}Y(s) + a_{13}Z(s) + F_1(s), \\
+                sY(s) - y_0 = a_{21}X(s) + a_{22}Y(s) + a_{23}Z(s) + F_2(s), \\
+                sZ(s) - z_0 = a_{31}X(s) + a_{32}Y(s) + a_{33}Z(s) + F_3(s),
+                \end{cases}
+            </me>
+            where <m>X(s), Y(s), Z(s)</m> are the Laplace transforms of <m>x(t), y(t), z(t)</m>, and <m>F_i(s)
+            = \mathcal{L}\{f_i(t)\}, i =1, 2, 3</m>. </p>
+
+
+        <p> We solve the above system for <m>X(s), Y(s), Z(s)</m> using algebraic techniques, such
+            as Cramer’s rule, Gaussian elimination, etc. and then apply the inverse Laplace
+            transform to obtain solutions <m>x(t), y(t), z(t)</m>. </p>
+
+        <p>
+            We proceed to discuss four main examples; namely, radioactive decay series, mixing
+            solutions,
+            coupled spring-mass systems, and electrical circuits.
+        </p>
+    </subsection>
+
+    <subsection xml:id="subsec-radioactive">
+        <title>Radioactive Decay Series</title>
+        <p> Consider a three-stage radioactive decay series of a radioactive element represented in
+            a schematic diagram below: <me>X \longrightarrow Y \longrightarrow Z</me> where </p>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <m>X</m> is a parent radioactive isotope, </p>
+                </li>
+
+                <li>
+                    <p>
+                        <m>Y</m> is a radioactive daughter element, and </p>
+                </li>
+
+                <li>
+                    <p>
+                        <m>Z</m> is a stable (non-decaying) end element. </p>
+                </li>
+
+            </ul>
+        </p>
+
+        <p> Let <me>\begin{split}
+                x(t) &amp;=\ \text{the amount of isotope } X \text{ at time } t, \\
+                y(t) &amp;=\ \text{the amount of isotope } Y \text{ at time } t, \\
+                z(t) &amp;=\ \text{the amount of isotope } Z \text{ at time } t, \\
+                a &amp;=\ \text{the decay constant of } X, \text{ and} \\
+                b &amp;=\ \text{the decay constant of } Y.
+                \end{split}</me> We assume that the disintegration rate of <m>X</m> at time <m>t</m>
+            is proportional to its amount at that time, and the same holds true for <m>Y</m>. Then
+            the system of differential equations modeling the decay series is <men
+                xml:id="decay-system">
+                \begin{cases}
+                \ds\frac{dx}{dt} &amp;= -a x\\[1ex]
+                \ds\frac{dy}{dt} &amp;= ax - by\\[1ex]
+                \ds\frac{dz}{dt} &amp;= by
+                \end{cases}
+            </men>
+            subject to the initial conditions: <me>x(0) = x_0, \quad y(0) = 0, \quad z(0) = 0.</me>
+        </p>
+
+        <p> The linear system <xref ref="decay-system" /> describes how the parent isotope <m>X</m>
+            decays into <m>Y</m>, which in turn decays into a stable isotope <m>Z</m>. We can adopt
+            this scheme to model real-world decay chains such as <me>\text{Uranium-238} \rightarrow
+            \text{Thorium-234}\rightarrow\cdots \rightarrow \text{Lead-206}.</me> The linear system <xref
+                ref="decay-system" /> is an example of a <term>
+                <em>partially decoupled</em>
+            </term> system. We observe that the
+            solutions of the differential equation in the system <xref ref="decay-system" /> can be
+            obtained in a sequence of steps: first solve the first equation for <m>x(t)</m>,
+            substitute this <m>x(t)</m> into the second equation to find <m>y(t)</m> using the
+            integrating factor method, and then substitute <m>y(t)</m> into the third equation to
+            solve for <m>z(t)</m>. Details are omitted, but the solutions can be found to be <me>\begin{cases}
+            x(t) &amp;= x_0 e^{-a t}, \\[6pt]
+                y(t) &amp;= \frac{a x_0}{b - a} \left( e^{-a t} - e^{-b t} \right), \\[6pt]
+                z(t) &amp;= x_0 \left[ 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right].
+                \end{cases}</me> Let us obtain these solutions by using the Laplace transform
+            method. </p>
+
+        <!-- linebreak -->
+        <p>
+
+            <term>Step 1: Laplace Transforms.</term><!-- linebreak --> Since <me>\mathcal{L}\left\{\frac{dx}{dt}\right\}
+            =-a \mathcal{L}\{x(t)\},</me> we have <me>s X(s) - x_0 = -a X(s),</me> and therefore <me>X(s)
+            =\frac{x_0}{s + a}.</me> Similarly, </p>
+        <p>
+            <me>\mathcal{L}\left\{\frac{dy}{dt}\right\} = a X(s) - b Y(s),</me> which yields <me>s
+            Y(s) = a X(s) - b Y(s),</me> and therefore <me>Y(s) = \frac{a X(s)}{s + b} = \frac{a
+            x_0}{(s + a)(s + b)}.</me> Also, <me>\mathcal{L}\left\{\frac{dz}{dt}\right\} = b Y(s)</me>
+            gives <me>Z(s) = \frac{b}{s} Y(s) = \frac{a b x_0}{s(s + a)(s + b)}</me>
+        </p>
+        <p>
+            <term>Step 2: Inverse Laplace Transforms.</term><!-- linebreak -->We have <me>x(t) =
+                {\mathcal L}^{-1}\left\{\frac{x_0}{s + a}\right\} = x_0 e^{-a t}.</me> Since <me>Y(s)
+            = \frac{a
+                x_0}{(s + a)(s + b)}
+                = \frac{a x_0}{b - a} \left( \frac{1}{s + a} - \frac{1}{s + b} \right),</me> we have <me>y(t)
+            = \frac{a x_0}{b - a} \left( e^{-a t} - e^{-b t} \right).</me> Finally, since <me>Z(s) =
+            \frac{a b x_0}{s(s + a)(s + b)},</me> we have <me>\begin{split}
+                z(t) \amp= \int_0^t b y(\tau) \, d\tau\\
+                \amp= \frac{a b x_0}{b - a} \left( \frac{1 - e^{-a t}}{a} - \frac{1 - e^{-b t}}{b}
+            \right)\\
+                \amp= x_0 \left[ 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right]
+                \end{split}
+            </me>
+            Thus, the solutions are given by </p>
+        <p>
+            <me>\begin{cases}
+                x(t) &amp;= x_0 e^{-a t}, \\[6pt]
+                y(t) &amp;= \frac{a x_0}{b - a} \left( e^{-a t} - e^{-b t} \right), \\[6pt]
+                z(t) &amp;= x_0 \left[\ds 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right],
+            \end{cases}</me> as expected. </p>
+    </subsection>
+
+    <subsection xml:id="subsec-Mixing-Tanks">
+        <title>Mixing Tanks</title>
+        <p>
+            Consider two connected mixing tanks as shown
+            in the figure below.
+        </p>
+
+        <figure xml:id="mixing-tanks">
+            <caption>Two connected mixing tanks.</caption>
+            <image width="70%">
+                <latex-image>
+                    \begin{tikzpicture}[thick, scale=1.2, every node/.style={scale=1}]
+
+                    % Tank A
+                    \shade[ball color=blue!5] (0,0) ellipse (1 and 0.3); % Top ellipse
+                    \draw[thick] (-1,0) -- (-1,-2); % Left side
+                    \draw[thick] (1,0) -- (1,-2); % Right side
+                    \draw[thick] (-1,-2) arc[start angle=180,end angle=360,x radius=1, y
+                    radius=0.3]; % Bottom
+                    \draw[dashed] (-1,0) arc[start angle=180,end angle=360,x radius=1, y
+                    radius=0.3]; % Top (dashed back)
+                    \node at (0,-1) { Tank A};
+                    \node at (0,-1.5) { $x(t)$};
+
+                    % Tank B
+                    \shade[ball color=blue!5] (3.5,0) ellipse (1 and 0.3);
+                    \draw[thick] (2.5,0) -- (2.5,-2);
+                    \draw[thick] (4.5,0) -- (4.5,-2);
+                    \draw[thick] (2.5,-2) arc[start angle=180,end angle=360,x radius=1, y
+                    radius=0.3];
+                    \draw[dashed] (2.5,0) arc[start angle=180,end angle=360,x radius=1, y
+                    radius=0.3];
+                    \node at (3.5,-1) { Tank B};
+                    \node at (3.5,-1.5) { $y(t)$};
+
+                    % Pipe from B to A (top)
+                    \draw[thick] (1, -0.2) -- (2.5, -0.2);
+                    \draw[thick] (1, -0.5) -- (2.5, -0.5);
+                    \draw[->, very thick, blue!60!black] (2, -0.35) --(1.6, -0.35) node[left]
+                    {$k_2$};
+
+
+                    % Pipe from A to B (bottom)
+                    \draw[thick] (2.5,-1.6) -- (1,-1.6);
+                    \draw[thick] (2.5,-1.9) -- (1,-1.9);
+                    \draw[->, very thick, blue!60!black](1.6,-1.75) -- (2,-1.75) node[right]
+                    {$k_1$};
+
+                    % Inflow into Tank A
+                    \draw[thick] (-2,-0.2) -- (-1,-0.2);
+                    \draw[thick] (-2,-0.5) -- (-1,-0.5);
+                    \draw[->, very thick, teal] (-1.5, -0.35) -- (-1.25, -0.35);
+                    \node[left, teal] at (-1.5, -0.35) { $r_{\text{in}}$};
+                    \node[left, blue] at (-1.5, -0.05) { $c$};
+
+                    % Outflow from Tank B
+
+                    \draw[thick] (4.5,-1.9) -- (5.5,-1.9);
+                    \draw[thick] (4.5,-1.6) -- (5.5,-1.6);
+
+                    \draw[->, very thick, red] (4.5, -1.75) -- (4.8, -1.75);
+                    \node[right, red] at (4.8, -1.75) { $r_{\text{out}}$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+
+        </figure>
+
+        <p>
+            <me>\displaystyle\begin{cases}
+                \displaystyle x'(t) = r_{\text{in}}\;
+            c+\frac{k_2y(t)}{V_2+t(k_1-k_2-r_{\text{out}})}-\frac{k_1x(t)}{V_1
+            +t(r_{\text{in}}+k_2-k_1)},\\[2ex]
+                \displaystyle y'(t) = \frac{k_1x(t)}{V_1
+            +t(r_{\text{in}}+k_2-k_1)}-\frac{(k_2+r_{\text{out}})y(t)}{V_2+t(k_1-k_2-r_{\text{out}})}.
+            \end{cases}</me> When <m>r_{\text{in}} = k_1-k_2 = r_{\text{out}},</m> the system
+            becomes </p>
+        <p>
+            <me>\displaystyle\begin{cases}
+                \displaystyle x'(t) = r_{\text{in}}\; c+\frac{k_2y(t)}{V_2} - \frac{k_1x(t)}{V_1
+                },\\[2ex]
+                \displaystyle y'(t) = \frac{k_1x(t)}{V_1}-\frac{(k_2+r_{\text{out}})y(t)}{V_2}.
+                \end{cases}</me>
+        </p>
+    </subsection>
+
+    <subsection xml:id="subsec-Coupled-Spring-Mass-Systems">
+        <title>Coupled Spring-Mass Systems</title>
+        <p> Suppose that two masses <m>m_1</m> and <m>m_2</m> are connected to two springs <m>A</m>
+            and <m>B</m> hanging vertically from a rigid support to form a coupled spring-mass
+            system as shown in the figure below. </p>
+
+        <figure xml:id="fig-coupled-mass-spring">
+            <caption>A coupled mass-spring system showing unstretched, equilibrium, motion, and
+                coordinate-axis.</caption>
+            <image width="90%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.1, &gt;=stealth]
+                    \tikzset{
+                    spring/.style={thick,decorate,decoration={coil,aspect=0.4,segment
+                    length=4pt,amplitude=3pt}},
+                    mass/.style={draw,fill=pink!60,minimum width=1cm,minimum height=0.7cm},
+                    dashedline/.style={dashed,gray},
+                    labeltext/.style={font=\small}
+                    }
+                    %--------------------------------
+                    % (a) Unstretched spring
+                    %--------------------------------
+                    \begin{scope}[xshift=0cm]
+                    \node[below] at (0,-4.7) {(a)};
+                    % Ceiling
+                    \draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+                    \node[above] at (0,0.2) {\small Rigid Support};
+                    % Spring (natural length l_1)
+                    \draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate]
+                    (0,0) -- (0,-2.2);
+                    %\draw[spring, aspect=0.7] (0,0) -- (0,-2.2);
+                    \draw[&lt;-&gt;] (0.4,0) -- (0.4,-2.2);
+                    \node[right,labeltext] at (0.41,-1) {$\ell_1$};
+                    \node[left,labeltext] at (-0.2,-0.5) {$k_1$};
+                    \node[left,labeltext] at (-0.3,-1.5) {$A$};
+
+                    % Dashed reference line
+                    \draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+
+                    %Spring (natural length l_2)
+                    \draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate]
+                    (0,-2.2) -- (0,-4.4);
+                    %\draw[spring, aspect=0.7] (0,-2,2) -- (0,-4.4);
+                    \draw[&lt;-&gt;](0.4,-2.2) -- (0.4,-4.4);
+                    \node[right,labeltext] at (0.41,-3) {$\ell_2$};
+                    \node[left,labeltext] at (-0.2,-2.5) {$k_2$};
+                    \node[left,labeltext] at (-0.3,-3.5) {$B$};
+                    % Dashed reference line
+                    \draw[dashedline] (-0.8,-4.4) -- (0.8,-4.4);
+
+                    \node[below,labeltext] at (0,-4.4) {unstretched springs};
+
+                    \end{scope}
+                    %--------------------------------
+                    % (b) Equilibrium position
+                    %--------------------------------
+                    \begin{scope}[xshift=1.75cm]
+                    \node[below] at (0,-7.8) {(b)};
+                    % Ceiling
+                    \draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+                    %\node[above] at (0,0.2) {\small Rigid Support};
+                    %first spring
+                    \draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate]
+                    (0,0) -- (0,-3.1);
+                    %\draw[spring] (0,0) -- (0,-3.1);
+                    \node[mass] (m1) at (0,-3.4) {$m_1$};
+                    % Labels
+                    \draw[&lt;-&gt;] (0.45,0) -- (0.45,-2.2);
+                    \node[right,labeltext] at (0.45,-1) {$\ell_1$};
+                    \draw[dashedline] (0.45,-3.4) -- (5,-3.4); %the line corresponding to the origin
+                    %\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+                    % Bracket for s
+                    \draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.4);
+                    \node[right,labeltext] at (0.45,-2.7) {$s_1$};
+                    %%\node[below,labeltext] at (0,-3.8) {mass in equilibrium};
+                    %second spring
+                    \draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate]
+                    (0,-3.7) -- (0,-7);
+                    %\draw[spring] (0,0) -- (0,-3.1);
+                    \node[mass] (m2) at (0,-7.2) {$m_2$};
+                    % Labels
+                    \draw[&lt;-&gt;] (0.45,-3.4) -- (0.45,-5.6);
+                    \node[right,labeltext] at (0.45,-4.8) {$\ell_2$};
+                    %\node[right,labeltext] at (0,-2.4) {$s$};
+                    \draw[dashedline] (0.45,-7.2) -- (5,-7.2); %the line corresponding to the origin
+                    for y2
+                    % Bracket for s
+                    \draw[&lt;-&gt;] (0.45,-5.6) -- (0.45,-7.1);
+                    \node[right,labeltext] at (0.45,-6) {$s_2$};
+                    \node[below,labeltext] at (0,-7.5) {masses in equilibrium};
+                    \end{scope}
+                    %--------------------------------
+                    % (b) Equilibrium position
+                    %--------------------------------
+                    \begin{scope}[xshift=1.75cm]
+                    \node[below] at (0,-7.8) {(b)};
+                    % Ceiling
+                    \draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+                    %\node[above] at (0,0.2) {\small Rigid Support};
+                    %first spring
+                    \draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate]
+                    (0,0) -- (0,-3.1);
+                    %\draw[spring] (0,0) -- (0,-3.1);
+                    \node[mass] (m1) at (0,-3.4) {$m_1$};
+                    % Labels
+                    \draw[&lt;-&gt;](0.45,0) -- (0.45,-2.2);
+                    \node[right,labeltext] at (0.45,-1) {$\ell_1$};
+                    \draw[dashedline] (0.45,-3.4) -- (5,-3.4); %the line corresponding to the origin
+                    %\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+                    % Bracket for s
+                    \draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.4);
+                    \node[right,labeltext] at (0.45,-2.7) {$s_1$};
+                    %%\node[below,labeltext] at (0,-3.8) {mass in equilibrium};
+                    %second spring
+                    \draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate]
+                    (0,-3.7) -- (0,-7);
+                    %\draw[spring] (0,0) -- (0,-3.1);
+                    \node[mass] (m2) at (0,-7.2) {$m_2$};
+                    % Labels
+                    \draw[&lt;-&gt;] (0.45,-3.4) -- (0.45,-5.6);
+                    \node[right,labeltext] at (0.45,-4.8) {$\ell_2$};
+                    %\node[right,labeltext] at (0,-2.4) {$s$};
+                    \draw[dashedline] (0.45,-7.2) -- (5,-7.2); %the line corresponding to the origin
+                    for y2
+                    % Bracket for s
+                    \draw[&lt;-&gt;] (0.45,-5.6) -- (0.45,-7.1);
+                    \node[right,labeltext] at (0.45,-6) {$s_2$};
+                    \node[below,labeltext] at (0,-7.5) {masses in equilibrium};
+                    \end{scope}
+                    %--------------------------------
+                    % (c) Motion (displacement y_1 nd y_2)
+                    %--------------------------------
+                    \begin{scope}[xshift=4.25cm]
+
+                    % Ceiling
+                    \draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+                    %\node[above] at (0,0.2) {\small Rigid Support};
+                    % Spring
+                    \draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate]
+                    (0,0) -- (0,-4.1);
+                    %\draw[spring] (0,0) -- (0,-3);
+                    \node[mass] (m2) at (0,-4.4) {$m_1$};
+                    \draw[dashedline] (0.2,-4.4) -- (0.8,-4.4);
+                    % Labels
+                    % \node[right,labeltext] at (0,-1.3) {$\ell$};
+                    % \node[right,labeltext] at (0,-2.7) {$s$};
+
+                    % Bracket for total extension
+                    \draw[&lt;-&gt;] (0.7,0) -- (0.7,-3.4);
+                    \node[right,labeltext] at (0.7,-1.5) {$\ell_1 + s_1$};
+
+                    \draw[&lt;-&gt;] (0.7,-3.4)--(0.7,-4.4);
+                    \node[right,labeltext] at (0.7,-3.6) {$x_1(t)$};
+                    % Dashed lines
+                    %\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+                    %\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
+
+
+                    % Thick vertical wall
+                    \draw[thick] (-0.4,-10) -- (-0.4,0);
+                    % Friction hatch marks (diagonal lines)
+                    \foreach \y in {-10,-9.8,...,-0.2}
+                    \draw[thick] (-0.4,\y) -- (-0.45,\y+0.2);
+
+
+                    % Optional label
+                    \node[rotate=90,left] at (-0.8,-1) {\text{wall/friction}};
+
+                    % % Example mass block next to wall
+                    % \draw[fill=gray!30] (0.5,1) rectangle (1.5,2);
+
+                    % Optional arrow to indicate external force
+                    \draw[-&gt;,blue,very thick] (-0.3,-4.1) -- (-0.3,-3.7);
+                    \draw[-&gt;,blue,very thick] (-0.3,-4.7) -- (-0.3,-5.1);
+                    \node[left, blue] at (-0.3,-4.4) {$F_1(t)$};
+
+
+                    %second spring-mass
+                    \draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate]
+                    (0,-4.7) -- (0,-9);
+                    %\draw[spring] (0,0) -- (0,-3);
+                    \node[mass] (m2) at (0,-9.2) {$m_2$};
+                    % Bracket for total extension
+                    \draw[&lt;-&gt;] (0.7,-4.4) -- (0.7,-8.2);
+                    \node[right,labeltext] at (0.7,-5.5) {$\ell_2 + s_2$};
+                    \draw[dashedline] (-0.4,-8.2) -- (0.8,-8.2);
+
+                    \draw[&lt;-&gt;] (0.9,-7.2)--(0.9,-9.2);
+                    \node[right,labeltext] at (0.8,-8.5) {$x_2(t)$};
+                    \draw[dashedline] (0.2,-9.2) -- (1,-9.2);
+
+                    % Optional arrow to indicate external force
+                    \draw[-&gt;,blue,very thick] (-0.3,-8.9) -- (-0.3,-8.5) node[left] {};
+                    \draw[-&gt;,blue,very thick] (-0.3,-9.5) -- (-0.3,-9.9);
+                    \node[left, blue] at (-0.3,-9.2) {$F_2(t)$};
+
+                    \node[below,labeltext] at (0,-9.9) {masses in motion};
+                    \node[below] at (0,-10.2) {(c)};
+                    \end{scope}
+
+                    %--------------------------------
+                    % (d) Coordinate system
+                    %--------------------------------
+                    \begin{scope}[xshift=3.8cm]
+
+                    % Bracket for total extension
+                    \draw[-&gt;,very thick] (3,0.25) -- (3,-9.2); % the coordinate axis line
+                    \node[right,labeltext] at (3.1,-1.9) {$x_1&lt;0$};
+
+                    \filldraw[black] (3,-3.4) circle (2pt);
+                    \node[right,labeltext] at (3.1,-3.4) {$x_1=0$\;(origin)};
+                    \node[right,labeltext] at (3.1,-4.5) {$x_1&gt;0$};
+
+                    \node[right,labeltext] at (3.1,-5.9) {$x_2&lt;0$};
+
+                    \filldraw[black] (3,-7.2) circle (2pt);
+                    \node[right,labeltext] at (3.1,-7.2) {$x_2=0$\;(origin)};
+                    \node[right,labeltext] at (3.1,-8.3) {$x_2>0$};
+
+                    % Dashed lines
+                    %\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+                    % \draw[dashedline] (-0.8,-4.3) -- (0.8,-4.3);
+                    % \draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
+                    \node[below,labeltext] at (3.1,-9.9) {the coordinate axes};
+                    \node[below] at (3.1,-10.2) {(d)};
+                    %\node[below,labeltext] at (3.1,-5.1) {positive downward};
+                    \end{scope}
+
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+
+        <p> Let <m>
+                k_1</m> and <m>k_2</m> be the constants of proportionality in Hooke's law for the
+            springs <m>A</m> and <m>B</m>, respectively. When both masses <m>m_1</m> and <m>m_2</m>
+            are in equilibrium, we have <men xml:id="spring-mass-0">
+                \begin{cases}
+                m_1g &amp;=k_1 s_1 - k_2s_2,\\
+                m_2g &amp;=k_2s_2.
+                \end{cases}
+            </men>
+            Adding together the two relations in the above display yields <men
+                xml:id="spring-mass-1">
+                (m_1+m_2)g = k_1s_1,
+            </men> which reflects the intuition that
+            the presence of the spring <m>B</m> could be thought of considering the mass <m>m_1+m_2</m>
+            in place of <m>m_1</m> and removing the spring <m>B</m> entirely. We recall that the
+            stretch <m>s_1</m> of the spring <m>A</m> depends on both masses <m>m_1</m> and <m>m_2</m>,
+            while the stretch <m>s_2</m> of the spring <m>B</m> depends only on the mass <m>m_2</m>
+            when the spring constants are computed using the gravitational force. </p>
+
+        <p> Let <m>x_1(t)</m> and <m>x_2(t)</m> denote the vertical displacements of the masses from
+            their equilibrium positions at time <m> t</m>. We take the positive direction of the
+            displacements to be vertically downward. When the masses are in motion, the spring <m>B</m>
+            is subject to both a stretch and a compression, so that its net stretch of the spring <m>
+            B</m> is given by <m>s_2+(x_2(t)-x_1(t))</m> when the stretch of the spring <m>A</m> is <m>
+            s_1+x_1(t)</m>. </p>
+
+        <p> The restoring force of the spring <m>A</m> acting on the mass <m>m_1</m> at time <m>t</m>
+            is <m>-k_1 (s_1+x_1(t))</m>, and the restoring force of the spring <m>B</m> acting on
+            the mass <m>
+                m_2</m> at time <m>t</m> is <m>-k_2(s_2+x_2(t)-x_1(t))</m>. In addition to the
+            restoring force of the spring <m>A</m>, the mass <m>m_1</m> also experiences the force
+            of <m>k_2(s_2+x_2(t)-
+                x_1(t))</m> at time <m>t</m>. Let <m>b_1</m> and <m>b_2</m> denote the damping
+            coefficients for the masses <m>m_1</m> and <m>m_2</m>, respectively. Also, let <m>F_1(t)</m>
+            and <m>F_2(t)</m> denote the external forces acting on the masses <m>m_1</m> and <m>m_2</m>,
+            respectively. We assume that the spring weights are negligible compared to the weights
+            of the masses. Suppressing <m>t</m> in <m>x_1(t)</m> and <m>x_2(t)</m> and using
+            Newton's law, we see that the motion of the two masses in the spring-mass system is
+            described by <me>\begin{split}
+                m_1x''_1 &amp;= m_1g - k_1 (s_1+x_1) + k_2(s_2+x_2-x_1)-b_1x'_1+F_1(t) \\
+                &amp;= m_1g - k_1 s_1 + k_2 s_2 - (k_1+k_2) x_1 + k_2 x_2-b_1x'_1+F_1(t)\\
+            \end{split}
+            </me>
+            and <me>\begin{split}
+                m_2 x''_2 &amp;= m_2g-k_2 (s_2+x_2-x_1)-b_2x'_2+F_2(t)\\
+                &amp;= m_2g - k_2 s_2 + k_2 x_1 - k_2 x_2-b_2x'_2+F_2(t).
+                \end{split}
+            </me>
+            Using <xref ref="spring-mass-0" />, we obtain
+            <men xml:id="spring-mass-2">
+                \begin{cases}
+                m_1 x''_1+b_1x'_1 + (k_1+k_2) x_1 - k_2 x_2=F_1(t), \\
+                m_2 x''_2+b_2x'_2 + k_2 x_2- k_2 x_1 =F_2(t).
+                \end{cases}</men> The above system of second-order coupled linear differential
+            equations describes the motion of the two masses in the coupled spring-mass system,
+            which, together with the initial conditions <m>x_1(t_0) = a,
+                x'_1(t_0) = b</m>, <m>x_2(t_0) = c, x'_2(t_0) = d,</m> forms an initial value
+            problem. </p>
+
+        <p> In the next example, we solve the initial value problem <xref ref="spring-mass-2" /> for <m>m_1=m_2=1,
+            k_1=3, k_2=2</m>, <m>b_1=b_2=0</m>, <m>F_1(t)=F_2(t)=0</m>, and <m>x_1(0)=0, x'_1(0)=-1,
+            x_2(0)=0, x'_2(0)=1.</m>
+        </p>
+        <example>
+            <p> Solve the second-order coupled system of linear differential equations with initial
+                conditions <men xml:id="spring-mass-3">
+                    \begin{cases}
+                    x_1'' = -5 x_1 + 2 x_2 , \\
+                    x_2'' = 2 x_1 - 2 x_2, \\
+                    x_1(0) = 0, \quad x_1'(0) = -1, \\
+                    x_2(0) = 0, \quad x_2'(0) = 1.
+                    \end{cases}
+                </men>
+            </p>
+
+            <p>
+                Taking the Laplace transform yields
+            </p>
+
+            <p>
+                <me>\begin{cases}
+                    s^2 X_1(s) - s x_1(0) - x_1'(0) = -5 X_1(s) + 2 X_2(s), \\
+                    s^2 X_2(s) - s x_2(0) - x_2'(0) = 2 X_1(s) - 2 X_2(s).
+                    \end{cases}</me> Using the given initial conditions yields <me>\begin{cases}
+                (s^2+5) X_1(s) + 1 = 2 X_2(s), \\
+                    (s^2+2) X_2(s) - 1 = 2 X_1(s).
+                    \end{cases}</me> Solving for <m>X_1(s)</m> and <m>X_2(s)</m> gives </p>
+            <p>
+                <me>X_1(s) = \frac{-s^2}{(s^2 + 1)(s^2 + 6)} \quad \text{and}\quad
+                    X_2(s) = \frac{s^2 + 3}{(s^2 + 1)(s^2 + 6)}.</me> Partial fraction decomposition
+                of <m>X_1(s)</m> and <m>X_2(s)</m> are </p>
+            <p>
+                <me>X_1(s) = \frac{1/5}{s^2 + 1} - \frac{6/5}{s^2 + 6}\quad \text{and}\quad
+                    X_2(s) = \frac{2/5}{s^2 + 1} + \frac{3/5}{s^2 + 6}.</me> Taking the inverse
+                Laplace transform yields <me>\begin{cases}
+                    x_1(t) &amp;= \frac{1}{5} \sin t - \frac{6}{5 \sqrt{6}} \sin(\sqrt{6} t), \\
+                x_2(t) &amp;= \frac{2}{5} \sin t + \frac{3}{5 \sqrt{6}} \sin(\sqrt{6} t),
+                    \end{cases}</me> which render the solutions of the given initial value problem <xref
+                    ref="spring-mass-3" />.</p>
+
+            <figure xml:id="fig-coupled-spring-mass">
+                <caption>Graphs of the solutions <m>x_1(t)</m> and <m> x_2(t)</m>
+                </caption>
+                <image source="images/spring_mass" width="70%">
+                    <description>
+                        <p>
+                        The graph of <m>x_1(t)</m> is shown in blue, and the graph of <m>x_2(t)</m> is
+                        shown in red.
+                        </p>
+                    </description>
+                </image>
+            </figure>
+
+
+        </example>
+
+    </subsection>
+
+    <subsection xml:id="subsec-Electrical-Network-Systems">
+        <title>Electrical Network Systems</title>
+        <p> We discussed series and parallel <m>LRC</m> circuits in <xref ref="ch-3" />. In <xref
+                ref="fig-lrc-circuit" /> below, we have an <m>
+                LRC</m> circuit with a voltage source <m>e(t)</m>. We develop a system of linear
+            differential equations to find the charge <m>q_1(t)</m> on the capacitor and currents <m>
+            i(t)</m> and <m>i_2(t)</m> flowing through the resistor and inductor, respectively. Let <m>
+            i_1(t)</m> be the current flowing through the capacitor. </p>
+
+
+            <figure xml:id="fig-lrc-circuit">
+            <caption>An LRC circuit with a voltage source.</caption>
+            <image width="70%">
+                <latex-image>
+                    \begin{circuitikz}[american]
+                    % Current source from bottom to top
+                    \draw
+                    (0,0) to[sV, invert, v_&gt;={}, i_&gt;=${i(t)}$] (0,4)
+                    to[american resistor, i_=${}$, l=$R$] (2,4)
+                    to[short] (2.5,4); % top horizontal wire
+                    \node[circle, fill=white, inner sep=1pt, label=above left: Voltage source
+                    \(e(t)\)]
+                    at (-0.4,1.75) {};
+                    % Split point at (2,4), three parallel branches
+
+                    \node[circle, fill=black, inner sep=1pt, label=above right: A] at (2.5,4) {};
+                    % Resistor branch (left)
+                    \draw
+                    (2.5,4)
+                    to[C=$C$, i&gt;_=${i_1(t)}$ ] (2.5,.2)
+                    -- (2.5,0); % back to bottom of source
+
+                    % Inductor branch (right)
+                    \draw
+                    (2.5,4) -- (4.5,4)
+                    to[cute inductor, l=$L$, i&gt;_=${i_2(t)}$] (4.5,0)
+                    -- (4.5,0);
+                    % Merge point at (0,4), three parallel branches
+                    \node[circle, fill=black, inner sep=1pt, label=above right:] at (2.5,0) {};
+                    \draw
+                    (4.5,0) -- (0,0); % central node
+                    \end{circuitikz}
+                </latex-image>
+            </image>
+        </figure>
+
+        <p>
+            We observe that the circuit contains three distinct closed loops:
+        </p>
+
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <term>Loop 1</term>: consisting of the battery, resistor, and capacitor; </p>
+                </li>
+
+                <li>
+                    <p>
+                        <term>Loop 2</term>: consisting of the battery, resistor, and inductor; and </p>
+                </li>
+
+                <li>
+                    <p>
+                        <term>Loop 3</term>: formed by the capacitor and inductor alone. </p>
+                </li>
+
+            </ul>
+        </p>
+
+        <p> The system of corresponding equations for the loops are: <me>
+                \begin{cases}
+                \ds R\, i(t)+\frac{1}{C} q_1(t) = e(t) &amp; \qquad\text{(for Loop 1)}\\
+                \ds L\, i_2'(t) + R\, i(t) = e(t) &amp; \qquad \text{(for Loop 2)} \\
+                \ds L\, i_2'(t) - \frac{1}{C} q_1(t) = 0&amp; \qquad \text{(for Loop 3)}
+                \end{cases}
+            </me>
+            We observe that each equation in the system can be obtained from the remaining two. For
+            example, the equation for Loop 2 can be obtained by adding the equations for Loop 1 and
+            Loop 3. For the discussion that follows, we omit the equation for Loop 2. </p>
+
+        <p> Furthermore, by Kirchhoff’s second law, the current split at the junction A is given by <me>
+            i(t) = i_1(t) + i_2(t),
+            </me> which, in view of <m>i_1(t)=
+            q_1'(t)</m>, becomes <me>
+                q'_1(t) + i_2(t) -i(t) =0.
+            </me> Thus, a linear system in <m>i(t),
+            q_1(t)</m> and <m> i_2(t)</m> is <men xml:id="LRC-system">
+                \begin{cases}
+                \ds R\, i(t)+\frac{1}{C} q_1(t) = e(t) &amp; \qquad\text{(for Loop 1)}\\
+                \ds L\, i_2'(t) - \frac{1}{C} q_1(t) = 0&amp; \qquad \text{(for Loop 3)}\\
+                \ds q'_1(t) + i_2(t) -i(t) =0 &amp; \qquad \text{(the current split at the junction
+            A)}
+                \end{cases}
+            </men>
+        </p>
+
+        <p> We now proceed to solve the system <xref ref="LRC-system" />. Differentiating the third
+            equation in <xref ref="LRC-system" /> with respect to <m>t</m> yields <men
+                xml:id="LRC-system-1">
+                i'(t) = q''_1(t) + i'_2(t).
+            </men> Solving for <m>i'_2(t)</m>
+            from the second equation in <xref ref="LRC-system" /> and substituting it into <xref
+                ref="LRC-system-1" /> gives <me>
+                i'(t) = q''_1(t) + \frac{1}{LC}q_1(t).
+            </me> Substituting
+            this expression for <m>i'(t)</m> into the equation obtained by differentiating the first
+            equation in <xref ref="LRC-system" /> with respect to <m>t</m>, we get <men
+                xml:id="LRC-system-2">
+                LRC q''_1(t) +Lq'_1(t)+ Rq_1(t) = LCe'(t),
+            </men> which can
+            be solved for <m>q_1(t).</m> Once <m>q_1(t)</m> is determined, we find <m>i_1(t)</m> by
+            using <m>i_1(t)= q_1'(t).</m> We then find <m>i(t)</m> from the first equation in <xref
+                ref="LRC-system" /> by using <m>q_1(t)</m> there. Finally, we find <m>i_2(t)
+                = i(t) - i_1(t).</m>
+        </p>
+    </subsection>
+
+    <exercises xml:id="exercises-linear-systems">
+        <exercise>
+            <p> Solve the initial value problem <me>\begin{cases}
+                    x_1'' = -5 x_1 + 2 x_2 , \\
+                    x_2'' = 2 x_1 - 2 x_2, \\
+                    x_1(0) = 0, \quad x_1'(0) = -1, \\
+                    x_2(0) = 0, \quad x_2'(0) = 1.
+                    \end{cases}</me> by using the Laplace transform. </p>
+        </exercise>
+
+    </exercises>
+
+</section>
+
+
+
+
+

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-5-4" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Laplace Transforms of Periodic Functions</title>
+<introduction>
+  <p>
+      In  <xref ref="sec-5-1" />, we computed the Laplace transforms of the periodic
+      functions <m>\sin(\omega t)</m> and <m>\cos(\omega t)</m> that are continuous. In applications, we also have to address periodic functions that are periodic
+         but piecewise continuous on <m>[0, \infty).</m>
+       </p>
+</introduction>
+
+<subsection xml:id="subsec-5-4-1">
+  <title>Periodic Functions</title>
+<definition xml:id="def-">
+  <statement>
+      <p>  A function <m>f</m> is said to be <em>periodic</em> on <m>(-\infty, \infty)</m> if there exists a number <m>T&gt;0,</m> called a <em>period</em> of <m>f,</m> such that
+      <me>
+        f(t) = f(t+T)\quad\text{ for all } t\in (-\infty, \infty).
+      </me>
+    </p>
+  </statement>
+</definition>
+ <p>
+      Graphically, a periodic function <m>f</m> repeats the portion of its graph restricted to <m>[0, T]</m> across subsequent intervals of the same length <m>T</m>.
+    </p>
+
+    <p>
+      A piecewise continuous periodic function <m>f(t)</m> with a period <m>T</m> has the following property:
+      <me>
+        f(t) = f(t+T)  = f(t+2T) = \cdots = f(t+nT)
+      </me>
+      for all positive integers <m>n.</m> This property is visualized in
+      <xref ref="fig-piecewise-periodic-1" /> below.
+ </p>
+ <p>
+      <figure xml:id="fig-piecewise-periodic-1">
+        <caption>The graph of <m>f(t)</m>.</caption>
+        <image>
+          <latex-image>
+   	    \begin{tikzpicture}[scale=1]
+		\begin{axis}[
+			axis lines=middle,
+			xmin=-3.2, xmax=3.2,
+			ymin=-1.1, ymax=1.5,
+			xtick={-3, -2,-1,0,1,2,3},
+			ytick={-1,0,1},
+			xlabel={$t$},
+			ylabel={$f(t)$},
+			grid=both,
+			width=13cm,
+			height=5cm,
+			samples=200,
+			domain=0:6,
+			]
+			% Semicircular arcs: f(x) = sqrt(1 - (x - shift)^2)
+			\addplot[blue, thick, domain=-3:-2]   {-0.5};
+			\addplot[blue, thick, domain=-2:-1]   {sqrt(1 - (x +1)^2)};
+			\addplot[blue, thick, domain=-1:0]   {-0.5};
+			\addplot[blue, thick, domain=0:1]   {sqrt(1 - (x - 1)^2)};
+			\addplot[blue, thick, domain=1:2]   {-0.5};
+			\addplot[blue, thick, domain=2:3]   {sqrt(1 - (x - 3)^2)};
+			%\node at (axis cs:1,1.1) {$f(x)$};
+			% Dots to indicate discontinuities
+			\foreach \x in {-2,0,2,4}
+			\addplot[only marks, mark=*, blue] coordinates {(\x,0)};
+			\foreach \x in {-2,0,2,4}
+			\addplot[only marks, mark=*, fill=white, draw=blue]  coordinates {(\x,-0.5)};
+				\foreach \x in {-3,-1,1,3}
+			\addplot[only marks, mark=*, blue] coordinates {(\x,-0.5)};
+			\foreach \x in {-1,1,3}
+			\addplot[only marks, mark=*, fill=white, draw=blue]  coordinates {(\x,1)};
+		\end{axis}
+	    \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </p>
+    <p>
+      To compute <m>\mathcal{L}\{f(t)\},</m> we express it as an infinite series of integrals as follows:
+      <me>
+        \begin{split} \mathcal{L}\{f(t)\}&amp; =\int_0^\infty f(t) e^{-st}\, dt\\ &amp;= \int_0^T f(t) e^{-st}\, dt+ \int_T^{2T} f(t) e^{-st}\, dt+ \int_{2T}^{3T} f(t) e^{-st}\, dt +\dots\\ &amp;=\int_0^T f(t) e^{-st}\, dt + \int_0^T f(t+T) e^{-s(t+T)}\, dt\\ &amp; \quad + \int_0^T f(t+2T) e^{-s(t+2T)}\, dt+ \dots+ \int_0^T f(t+nT) e^{-s(t+nT)}\, dt+\cdots\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\Big(1+e^{-sT}+ e^{-2sT} + \dots+ e^{-nsT}+\cdots \Big)\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\; \sum_{n=0}^\infty e^{-nsT}.
+        \end{split}
+      </me>
+      Since the geometric series <m>\displaystyle \sum_{n=0}^\infty e^{-nsT}</m> converges for <m>s&gt;0</m> to <m>\displaystyle \frac{1}{1- e^{-sT}},</m> we obtain
+      <men xml:id="Laplace-periodic-function">
+        \boxed{\mathcal{L}\{f(t)\} = \frac{1}{1- e^{-sT}}\int_0^T f(t) e^{-st}\, dt.}
+      </men>
+    </p>
+
+  <example>
+    <p>
+      Let us revisit <m>\mathcal{L}\{\sin(\omega t)\}.</m>
+    </p>
+     </example>
+     <p>
+      Using <xref ref="Laplace-periodic-function" /> with <m>T= 2\pi/\omega</m>, we obtain
+      <me>
+        \mathcal{L}\{\sin(\omega t)\} = \frac{1}{1- e^{-2\pi s/\omega}}\int_0^{2\pi/\omega} \sin(\omega t) e^{-st}\, dt.
+      </me>
+      We compute
+      <me>
+        \int_0^{2\pi/\omega} \sin(\omega t) e^{-st}\, dt=\frac{\omega}{s^2+\omega^2}\left( 1- e^{-2\pi s/\omega}\right).
+      </me>
+      Hence
+      <me>
+        \mathcal{L}\{\sin(\omega t)\} =\frac{\omega}{s^2+\omega^2},
+      </me>
+      as expected.
+    </p>
+
+
+  <p>
+    The example above suggests that the direct computation of the Laplace transform of a periodic function may be more convenient.
+  </p>
+
+  <p>
+    The example below concerns a periodic function acting as the source term of an initial value problem.
+  </p>
+
+  <example>
+    <p>
+      Consider the initial value problem <m>y'+ y = f(t), \; y(0) = 0,</m> where <m>f(t)</m> is given by
+      <me>
+        f(t) = \begin{cases} 1 &amp;\text{if } 0\le  t\le 1,\\ 0 &amp;\text{if } 1&lt; t &lt; 2, \end{cases}
+      </me>
+      and <m>f(t) = f(t+2)</m> for all <m>t</m> in <m>(-\infty, \infty).</m>
+    </p>
+    </example>
+    <p>
+      The graph of <m>f</m> on <m>[0, \infty)</m> is shown below.
+      <figure xml:id="fig-piecewise-periodic-2">
+        <caption>The graph of <m>f(t)</m>.</caption>
+        <image>
+          <latex-image>
+            \begin{tikzpicture}[scale=1]
+	 			\begin{axis}[
+	 					axis lines=middle,
+	 					xmin=0, xmax=6.2,
+	 					ymin=-0.2, ymax=1.5,
+	 					xtick={0,1,2,3,4,5,6},
+	 					ytick={0,1},
+	 					xlabel={$t$},
+	 					ylabel={$f(t)$},
+	 					grid=both,
+	 					width=13cm,
+	 					height=5cm,
+	 					samples=100,
+	 					domain=0:6,
+	 					]
+	 					% Square wave segments (period 2: [0,1)=1, [1,2)=-1, repeat)
+	 					\addplot[blue, thick, domain=0:1]   {1};
+	 					\addplot[blue, thick, domain=1:2]   {0};
+	 					\addplot[blue, thick, domain=2:3]   {1};
+	 					\addplot[blue, thick, domain=3:4]   {0};
+	 					\addplot[blue, thick, domain=4:5]   {1};
+	 					\addplot[blue, thick, domain=5:6]   {0};
+	 					\addplot[blue, thick, domain=6:6.1] {1};
+		 					% Dots to indicate discontinuities
+	 					\foreach \x in {0,1,2,3,4,5,6}
+	 					\addplot[only marks, mark=*, blue] coordinates {(\x,1)};
+	 					\foreach \x in {1,2,3,4, 5,6}
+	 					\addplot[only marks, mark=*, fill=white, draw=blue] coordinates {(\x,0)};
+	 				\end{axis}
+	 		\end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </p>
+  <p>
+    Then
+    <me>
+      \begin{split} F(s) &amp;= \frac{1}{1-e^{-2s}}\int_0^2 f(t) e^{-st}\, dt\\ &amp;= \frac{1}{1-e^{-2s}}\int_0^1 e^{-st}\, dt\\ &amp;  = \frac{1}{1-e^{-2s}}\left(\frac{e^{-s}-1}{-s}\right)\\ &amp;= \frac{1}{s(1+e^{-s})}.
+      \end{split}
+    </me>
+    Taking the Laplace transform of the differential equation <m> y' + y = f(t) </m>, we get
+    <me>
+      sY(s) - y(0) + Y(s) = F(s).
+    </me>
+    With <m>y(0) = 0,</m> we have
+    <me>
+      Y(s) = \frac{1}{s(s+1)(1+e^{-s})}.
+    </me>
+    Since
+    <me>
+      \displaystyle \frac{1}{s(s+1)} = \frac{1}{s}- \frac{1}{s+1}
+    </me>
+    and
+    <me>
+      \displaystyle\frac{1}{1+e^{-s}} = \sum_{n=0}^\infty (-1)^ne^{-ns},
+    </me>
+    it follows that
+    <me>
+      Y(s) = \left(\frac{1}{s}- \frac{1}{s+1}\right)\sum_{n=0}^\infty (-1)^ne^{-ns}.
+    </me>
+    In view of the shifting on the <m>t-</m>axis property discussed in
+     <xref ref="ex-shifting-on-t-axis" />, the solution <m>y(t)</m> of the initial value problem is
+    <men xml:id="solution-piecewise-periodic">
+      y(t)  =  \sum_{n=0}^{\infty}(-1)^n \mathcal{U}(t-n)\; (1- e^{-(t-n)}).
+    </men>
+    The graph of this solution is in <xref ref="fig-piecewise-periodic-3" /> below.
+    The solution <m>y(t)</m> is a piecewise continuous periodic function with period 2,
+     and it converges to the periodic function <m>f(t)</m> as <m>t\to\infty.</m>
+
+     <figure xml:id="fig-piecewise-periodic-3">
+      <caption>The graph of <m>y(t)</m>.</caption>
+      <image>
+        <latex-image>
+          \begin{tikzpicture}[scale=1]
+            \begin{axis}[
+              axis lines=middle,
+              xmin=0, xmax=10.2,
+              ymin=-0.2, ymax=1.25,
+              xtick={0,1,2,3,4,5,6,7,8,9,10},
+              ytick={0,1},
+              xlabel={$t$},
+              ylabel={$y(t)$},
+              grid=both,
+              width=13cm,
+              height=5cm,
+              samples=100,
+              domain=0:10,
+            ]
+              % Plot the solution y(t) = sum_{n=0}^\infty (-1)^n U(t-n) (1 - e^{-(t-n)})
+              \addplot[blue, thick, domain=0:10] { (1 - exp(-x)) - (1 - exp(-(x-1))) * (x >= 1) +
+                (1 - exp(-(x-2))) * (x >= 2) - (1 - exp(-(x-3))) * (x >= 3)
+                + (1 - exp(-(x-4))) * (x >= 4) - (1 - exp(-(x-5))) * (x >= 5)
+                 + (1 - exp(-(x-6))) * (x >= 6) - (1 - exp(-(x-7))) * (x >= 7)
+                 + (1 - exp(-(x-8))) * (x >= 8) - (1 - exp(-(x-9))) * (x >= 9)
+                 + (1 - exp(-(x-10))) * (x >= 10)};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+<!-- <figure xml:id="fig-piecewise-periodic-3">
+      <caption>The graph of <m>y(t)</m> in <xref ref="solution-piecewise-periodic"/>.</caption>
+      <image width="100%">
+        <latex-image>
+    \begin{tikzpicture}[scale=1]
+		\begin{axis}[
+			axis lines=middle,
+			xmin=0, xmax=10.2,
+			ymin=0, ymax=0.75,
+			samples=500,
+			domain=0:10,
+			%grid=both,
+			width=14cm,
+			height=6cm,
+			xlabel={$t$},
+			ylabel={$y(t)$}
+			]
+
+		 \addplot[blue, domain=0:1]     {1 - exp(-x)};
+		 \addplot[blue, domain=1:2]     {1 - exp(-x) - (1 - exp(-(x - 1)))};
+		 \addplot[blue, domain=2:3]     {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2)))};
+		 \addplot[blue, domain=3:4]     {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2))) - (1 - exp(-(x - 3)))};
+		 \addplot[blue, domain=4:5]     {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2))) - (1 - exp(-(x - 3))) + (1 - exp(-(x - 4)))};
+		 \addplot[blue, domain=5:6]     {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2))) - (1 - exp(-(x - 3))) + (1 - exp(-(x - 4))) - (1 - exp(-(x - 5)))};
+		 \addplot[blue, domain=6:7]     {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2))) - (1 - exp(-(x - 3))) + (1 - exp(-(x - 4))) - (1 - exp(-(x - 5))) + (1 - exp(-(x - 6)))};
+		 \addplot[blue, domain=7:8]     {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2))) - (1 - exp(-(x - 3))) + (1 - exp(-(x - 4))) - (1 - exp(-(x - 5))) + (1 - exp(-(x - 6))) - (1 - exp(-(x - 7)))};
+		 \addplot[blue, domain=8:9]     {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2))) - (1 - exp(-(x - 3))) + (1 - exp(-(x - 4))) - (1 - exp(-(x - 5))) + (1 - exp(-(x - 6))) - (1 - exp(-(x - 7))) + (1 - exp(-(x - 8)))};
+		 \addplot[blue, domain=9:10]    {1 - exp(-x) - (1 - exp(-(x - 1))) + (1 - exp(-(x - 2))) - (1 - exp(-(x - 3))) + (1 - exp(-(x - 4))) - (1 - exp(-(x - 5))) + (1 - exp(-(x - 6))) - (1 - exp(-(x - 7))) + (1 - exp(-(x - 8))) - (1 - exp(-(x - 9)))};
+  \end{axis}
+\end{tikzpicture}
+ </latex-image>
+      </image>
+    </figure> -->
+  </p>
+  </subsection>
+
+<exercises xml:id="exercises-sec-5-4">
+  <exercise xml:id="exercise-5-4-1">
+    <p>
+				  Sketch the graph of three periods of each function below and compute its Laplace transform. The interval for the first period is provided.
+			</p>
+      <ol marker="i.">
+        <li xml:id="part-5-4-1-1">
+          <p>
+              <m>f(t)  = \cos t, \quad 0\le t &lt; \pi</m>
+          </p>
+        </li>
+        <li xml:id="part-5-4-1-2">
+          <p>
+            <m>f(t) =  t, \quad 0\le t &lt; 3</m>
+          </p>
+        </li>
+        <li xml:id="part-5-4-1-3">
+          <p>
+            <m>f(t) =  t-2, \quad 0\le t &lt; 4</m>
+          </p>
+        </li>
+
+        <li xml:id="part-5-4-1-4">
+          <p>
+          <m>f(t) = \begin{cases}
+            1   &amp; \text{if } 0\le t&lt; 1\\
+            -1      &amp; \text{if } 1\le  t&lt; 2\\
+          \end{cases}</m>
+          </p>
+        </li>
+
+        <li xml:id="part-5-4-1-5">
+         <p>
+				<m>f(t) = \begin{cases}
+            \sin t  &amp; \text{if } 0\le t&lt; \pi\\
+            0       &amp; \text{if } \pi\le  t&lt; 2\pi\\
+        \end{cases}</m>
+			</p>
+    </li>
+
+    <li xml:id="part-5-4-1-6">
+         <p>
+				<m>f(t) = \begin{cases}
+        e^{-t}\sin t    &amp; \text{if } 0\le t&lt; \pi\\
+        0       &amp; \text{if } \pi\le  t&lt; 2\pi\\
+    \end{cases}</m>
+			</p>
+    </li>
+      </ol>
+  </exercise>
+
+  <exercise>
+    <p>
+				Solve the following initial value problems using the Laplace transform method.
+        You will need <m>\frac{1}{1-t} = \sum_{n=0}^\infty (-1)^n t^n</m> and
+         <m>\frac{1}{1+t} = \sum_{n=0}^\infty  t^n</m> when <m>|t| \lt 1.</m>
+			</p>
+      <ol marker="i.">
+        <li>
+          <p>
+            <m>y''+4y'+3y = f(t), \quad y(0) = 0, y'(0) = 0</m> where <m>f(t) =\begin{cases}
+            0 &amp;\text{if } 0\le  t\le 1\\
+            1 &amp;\text{if } 1&lt; t &lt; 2
+        \end{cases}</m> and <m>f(t) = f(t+2)</m> for all <m>t</m> in <m>(-\infty, \infty).</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>y''+4y'+4y = f(t),\quad y(0) = 0, y'(0) = 0,</m> where <m>f(t)</m> is the periodic
+             function in
+            <xref ref="part-5-4-1-4" /> of  <xref ref="exercise-5-4-1" />.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>y''+3y'+2y = f(t),\quad y(0) = 0, y'(0) = 0,</m> where <m>f(t)</m>
+            is the periodic function in  <xref ref="part-5-4-1-5" /> of  <xref ref="exercise-5-4-1" />.
+          </p>
+        </li>
+        <li>
+          <p>
+             <m>y''+4y = f(t),\quad y(0) = 0, y'(0) = 0,</m> where <m>f(t)</m> is the periodic function
+             in  <xref ref="part-5-4-1-6" /> of  <xref ref="exercise-5-4-1" />.
+          </p>
+        </li>
+      </ol>
+  </exercise>
+
+</exercises>
+
+
+</section>

@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-7-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <title>Formulas</title>
+
+    <subsection xml:id="laplace-formulas">
+        <title>Common Laplace Transforms</title>
+        <tabular>
+            <col />
+            <col />
+            <col halign="center" />
+            <row header="yes" bottom="minor">
+                <cell></cell>
+                <cell>
+                    <m>\boldsymbol{f(t)}</m>
+                </cell>
+                <cell>
+                    <m>\mathcal{L}\boldsymbol{\{f(t)\}=F(s)}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>1.<nbsp /><nbsp /><nbsp /></cell>
+                <cell>
+                    <m>1</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{1}{s},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>2.</cell>
+                <cell>
+                    <m>t</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{1}{s^{2}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>3.</cell>
+                <cell>
+                    <m>t^{n},\; n\mbox{ being a natural number}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{n!}{s^{\,n+1}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>4.</cell>
+                <cell>
+                    <m>t^{-1/2}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{\sqrt{\pi}}{\sqrt{s}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>5.</cell>
+                <cell>
+                    <m>t^{1/2}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{\sqrt{\pi}}{2\,s^{3/2}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>6.</cell>
+                <cell>
+                    <m>t^{\alpha},\ \alpha &gt;-1</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{\Gamma(\alpha+1)}{s^{\alpha+1}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>7.</cell>
+                <cell>
+                    <m>\sin(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{k}{s^{2}+k^{2}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>8.</cell>
+                <cell>
+                    <m>\cos(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s}{s^{2}+k^{2}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>9.</cell>
+                <cell>
+                    <m>\sin^{2}(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{2k^{2}}{s(s^{2}+4k^{2})},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell>10.</cell>
+                <cell>
+                    <m>\cos^{2}(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s^{2}+2k^{2}}{s(s^{2}+4k^{2})},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+
+            <row>
+                <cell>11. </cell>
+                <cell>
+                    <m>e^{at}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{1}{s-a},</m>
+                    <m>s&gt;a</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 12. </cell>
+                <cell>
+                    <m>\sinh(k t)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{k}{s^{2}-k^{2}},</m>
+                    <m>s&gt;\lvert k\rvert</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 13. </cell>
+                <cell>
+                    <m>\cosh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s}{s^{2}-k^{2}},</m>
+                    <m>s&gt;\lvert k\rvert</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 14. </cell>
+                <cell>
+                    <m>\sinh^{2}(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{2k^{2}}{s(s^{2}-4k^{2})},</m>
+                    <m>s&gt;\lvert k\rvert</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 15. </cell>
+                <cell>
+                    <m>\cosh^{2}(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s^{2}-2k^{2}}{s(s^{2}-4k^{2})},</m>
+                    <m>s&gt;\lvert k\rvert</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 16. </cell>
+                <cell>
+                    <m>t e^{at}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{1}{(s-a)^{2}},</m>
+                    <m>s&gt;a</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 17. </cell>
+                <cell>
+                    <m>t^{n}e^{at},\; n\mbox{ being a natural number}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{n!}{(s-a)^{n+1}},</m>
+                    <m>s&gt;a</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 18. </cell>
+                <cell>
+                    <m>e^{at}\sin(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{k}{(s-a)^{2}+k^{2}},</m>
+                    <m>s&gt;a</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 19. </cell>
+                <cell>
+                    <m>e^{at}\cos(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s-a}{(s-a)^{2}+k^{2}},</m>
+                    <m>s&gt;a</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 20. </cell>
+                <cell>
+                    <m>e^{at}\sinh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{k}{(s-a)^{2}-k^{2}},</m>
+                    <m>s&gt;a+\lvert k\rvert</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 21. </cell>
+                <cell>
+                    <m>e^{at}\cosh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s-a}{(s-a)^{2}-k^{2}},</m>
+                    <m>s&gt;a+\lvert k\rvert</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 22. </cell>
+                <cell>
+                    <m>t\sin(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{2ks}{(s^{2}+k^{2})^{2}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 23. </cell>
+                <cell>
+                    <m>t\cos(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s^{2}-k^{2}}{(s^{2}+k^{2})^{2}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 24. </cell>
+                <cell>
+                    <m>\sin(kt)+kt\cos(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{2k s^{2}}{(s^{2}+k^{2})^{2}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 25. </cell>
+                <cell>
+                    <m>\sin(kt)-kt\cos(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{2k^{3}}{(s^{2}+k^{2})^{2}},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 26. </cell>
+                <cell>
+                    <m>t\sinh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{2ks}{(s^{2}-k^{2})^{2}},</m>
+                    <m>s&gt;\lvert k\rvert</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 27. </cell>
+                <cell>
+                    <m>t\cosh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s^{2}+k^{2}}{(s^{2}-k^{2})^{2}},</m>
+                    <m>s&gt;\lvert k\rvert</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 28. </cell>
+                <cell>
+                    <m>\dfrac{e^{at}-e^{bt}}{a-b}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{1}{(s-a)(s-b)},</m>
+                    <m>s&gt;\max\{a, b\}</m>
+                </cell>
+            </row>
+
+
+            <row>
+                <cell> 29. </cell>
+                <cell>
+                    <m>\dfrac{ae^{at}-be^{bt}}{a-b}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s}{(s-a)(s-b)},</m>
+                    <m>s&gt;\max\{a, b\}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 30. </cell>
+                <cell>
+                    <m>1-\cos(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{k^{2}}{s(s^{2}+k^{2})},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 31. </cell>
+                <cell>
+                    <m>kt-\sin(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{k^{3}}{s^{2}(s^{2}+k^{2})},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 32. </cell>
+                <cell>
+                    <m>\dfrac{a\sin(bt)-b\sin(at)}{ab(a^{2}-b^{2})}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{1}{(s^{2}+a^{2})(s^{2}+b^{2})},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 33. </cell>
+                <cell>
+                    <m>\dfrac{\cos(bt)-\cos(at)}{a^{2}-b^{2}}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s}{(s^{2}+a^{2})(s^{2}+b^{2})},</m>
+                    <m>s&gt;0</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 34. </cell>
+                <cell>
+                    <m>\sin(kt)\sinh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{2k^{2}s}{s^{4}-4k^{4}}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 35. </cell>
+                <cell>
+                    <m>\sin(kt)\cosh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{k(s^{2}+2k^{2})}{s^{4}-4k^{4}}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 36. </cell>
+                <cell>
+                    <m>\cos(kt)\sinh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{k(s^{2}-2k^{2})}{s^{4}-4k^{4}}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 37. </cell>
+                <cell>
+                    <m>\cos(kt)\cosh(kt)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{s^{3}}{s^{4}-4k^{4}}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 38. </cell>
+                <cell>
+                    <m>\dfrac{e^{bt}-e^{at}}{t}</m>
+                </cell>
+                <cell>
+                    <m>\ln\!\left(\dfrac{s-a}{s-b}\right)</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 39. </cell>
+                <cell>
+                    <m>\dfrac{2(1-\cos(kt))}{t}</m>
+                </cell>
+                <cell>
+                    <m>\ln\!\left(\dfrac{s^{2}+k^{2}}{s^{2}}\right)</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 40. </cell>
+                <cell>
+                    <m>\dfrac{2(1-\cosh(kt))}{t}</m>
+                </cell>
+                <cell>
+                    <m>\ln\!\left(\dfrac{s^{2}}{s^{2}-k^{2}}\right)</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 41. </cell>
+                <cell>
+                    <m>\dfrac{\sin(at)}{t}</m>
+                </cell>
+                <cell>
+                    <m>\arctan\!\left(\dfrac{a}{s}\right)</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 42. </cell>
+                <cell>
+                    <m>\dfrac{\sin(at)\cos(bt)}{t}</m>
+                </cell>
+                <cell>
+                    <m>\dfrac12\!\left[ \arctan\!\left(\dfrac{a+b}{s}\right)
+                        +\arctan\!\left(\dfrac{a-b}{s}\right) \right]</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 43. </cell>
+                <cell>
+                    <m>\ds \operatorname{erf}\!\left(\frac{a}{2\sqrt{t}}\right)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{1 - e^{-a\sqrt{s}}}{s}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 44. </cell>
+                <cell>
+                    <m>\ds \operatorname{erfc}\!\left(\frac{a}{2\sqrt{t}}\right)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{e^{-a\sqrt{s}}}{s}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 45. </cell>
+                <cell>
+                    <m>\ds \frac{1}{\sqrt{\pi t}}\, \exp\!\left(-\frac{a^{2}}{4t}\right)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{e^{-a\sqrt{s}}}{\sqrt{s}}</m>
+                </cell>
+            </row>
+
+
+            <row>
+                <cell> 46. </cell>
+                <cell>
+                    <m>e^{at}f(t)</m>
+                </cell>
+                <cell>
+                    <m>F(s-a)</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 47. </cell>
+                <cell>
+                    <m>\mathcal{U}(t-a)</m>
+                </cell>
+                <cell>
+                    <m>\dfrac{e^{-as}}{s}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 48. </cell>
+                <cell>
+                    <m>f(t-a)\,\mathcal{U}(t-a)</m>
+                </cell>
+                <cell>
+                    <m>e^{-as}F(s)</m>
+                </cell>
+            </row>
+            <row>
+                <cell> 49. </cell>
+                <cell>
+                    <m>g(t)\,\mathcal{U}(t-a)</m>
+                </cell>
+                <cell>
+                    <m>e^{-as}\,\mathcal{L}\{g(t+a)\}</m>
+                </cell>
+            </row>
+            <row>
+                <cell> 50. </cell>
+                <cell>
+                    <m>\delta(t-a)</m>
+                </cell>
+                <cell>
+                    <m>e^{-as}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 51. </cell>
+                <cell>
+                    <m>\delta(t-a)\ast f(t)</m>
+                </cell>
+                <cell>
+                    <m>e^{-as}F(s)</m>
+                </cell>
+            </row>
+            <row>
+                <cell> 52. </cell>
+                <cell>
+                    <m>g(t)\,\mathcal{U}(t-a)</m>
+                </cell>
+                <cell>
+                    <m>e^{-as}\,\mathcal{L}\{g(t+a)\}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 53. </cell>
+                <cell>
+                    <m>y^{(n)}(t)</m>
+                </cell>
+                <cell>
+                    <m>s^{n}Y(s)-s^{n-1}y(0)-\cdots-y^{(n-1)}(0)</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 54. </cell>
+                <cell>
+                    <m>t^{n}f(t)</m>
+                </cell>
+                <cell>
+                    <m>(-1)^{n}F^{(n)}(s)</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 55. </cell>
+                <cell>
+                    <m>\ds \frac{f(t)}{t}</m>
+                </cell>
+                <cell>
+                    <m>\ds \int_{s}^{\infty} F(p)\,dp</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 56. </cell>
+                <cell>
+                    <m>(f*g)(t)=\ds \int_{0}^{t}f(\tau)g(t-\tau)\,d\tau</m>
+                </cell>
+                <cell>
+                    <m>F(s)G(s)</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell> 57. </cell>
+                <cell>
+                    <m>f\left({t + T}\right) = f\left( t \right)</m>
+                </cell>
+                <cell>
+                    <m>\ds \frac{1}{1- e^{-sT}}\int_{0}^{T} f(t) e^{-st}\, dt</m>
+                </cell>
+            </row>
+
+        </tabular>
+    </subsection>
+
+    <subsection>
+        <title>Derivatives</title>
+
+        <p> We use notations <m>\dfrac{d}{dx}f(x)</m> and <m>f'(x)</m> to synonymously denote the
+            derivative of <m>f(x)</m> with respect to <m>x.</m>
+        </p>
+
+        <p>
+            <alert>Differentiation Rules</alert>
+        </p>
+
+        <tabular>
+            <row>
+                <cell> Constant: <m>\ds \frac{d}{dx}c = 0</m></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+
+            <row>
+                <cell> Constant Multiple: <m>\ds \frac{d}{dx}\big(cf(x)\big) = c f'(x)</m></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+
+            <row>
+                <cell> Sum: <m>\ds \frac{d}{dx}\!\big(f(x)\pm g(x)\big) = f'(x)\pm g'(x)</m></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell> Product: <m>\ds \frac{d}{dx}\big(f(x)g(x)\big) = f'(x)g(x) + g'(x)f(x)</m></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell> Quotient: <m>\ds \frac{d}{dx}\left(\frac{f(x)}{g(x)}\right) =
+                    \frac{g(x)f'(x)-f(x)g'(x)}{[g(x)]^{2}}</m></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell> Chain: <m>\ds \frac{d}{dx}f(g(x)) = f'(g(x))\,g'(x)</m></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell> Power: <m>\ds \frac{d}{dx}x^{n}= n x^{n-1}</m></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell> Power: <m>\ds \frac{d}{dx}[g(x)]^{n}= n[g(x)]^{n-1}g'(x)</m></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\sin x = \cos x</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\cos x = -\sin x</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\tan x = \sec^{2}x</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\cot x = -\csc^{2}x</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\sec x = \sec x\tan x</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\csc x = -\csc x\cot x</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\sin^{-1}x = \frac{1}{\sqrt{1-x^{2}}}</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\cos^{-1}x = -\frac{1}{\sqrt{1-x^{2}}}</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\tan^{-1}x = \frac{1}{1+x^{2}}</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\cot^{-1}x = -\frac{1}{1+x^{2}}</m>
+                </cell>
+            </row>
+
+            <row>
+                <cell></cell>
+            </row>
+
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\sec^{-1}x = \frac{1}{|x|\sqrt{x^{2}-1}}</m>
+                </cell>
+            </row>
+            <row>
+                <cell></cell>
+            </row>
+            <row>
+                <cell>
+                    <m>\ds \frac{d}{dx}\csc^{-1}x = -\frac{1}{|x|\sqrt{x^{2}-1}}</m>
+                </cell>
+            </row>
+        </tabular>
+
+    </subsection>
+
+    <!-- <worksheet xml:id="ws-1">
+        <exercise>
+            Solve the following problem.
+        </exercise>
+    </worksheet> -->
+
+</section>

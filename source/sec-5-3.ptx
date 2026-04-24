@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-5-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Derivatives and Integrals of Laplace Transforms</title>
+  <introduction>
+    <p>
+    The evaluation of Laplace transforms and inverse Laplace transforms can often be carried out efficiently by applying differentiation or integration techniques to certain Laplace transforms.
+  </p>
+  </introduction>
+ 
+  <!-- SUBSECTION: Derivatives of Laplace Transforms -->
+  
+  
+  <subsection xml:id="subsec-Derivatives-Laplace-Transforms">
+    <title>Derivatives of Laplace Transforms</title>
+    <p>
+      Let <m>f</m> be a piecewise continuous function on <m>[0, \infty)</m> and of exponential order as <m>t\to\infty</m>.
+      Using the Leibniz rule  from <xref ref="thm-Leibnitz-Rule-Improper-Integrals" /> in <xref ref="sec-7-1" /> for differentiating under the integral sign, we have
+      <me>
+        \begin{split} F'(s) &amp;= \frac{d}{ds}\int_0^\infty e^{-st} f(t)\, dt\\ &amp;= \int_0^\infty (-t) e^{-st} f(t)\, dt\\ &amp;= -\int_0^\infty  e^{-st} \big[tf(t)\big]\, dt\\ &amp;=-\mathcal  {L}\{tf(t)\}.
+        \end{split}
+      </me>
+      Thus, we have
+      <me>
+        \mathcal  {L}\{tf(t)\} =- F'(s).
+      </me>
+      In a similar fashion, we obtain
+      <me>
+        \mathcal  {L}\{t^2f(t)\}= (-1)^2F''(s).
+      </me>
+      Repeating this procedure inductively we obtain
+    </p>
+
+    <p>
+      <men xml:id="laplace-derivative">
+        \boxed{ \mathcal  {L}\{t^nf(t)\} =(-1)^nF^{(n)}(s)}
+      </men>
+      for all positive integers <m>n</m>.
+    </p>
+
+    <example>
+      <p>
+        Find the Laplace transform <m>\mathcal  {L}\{t\sin(\omega t)\}</m>.
+      </p>
+      <solution>
+        <p>
+          We have
+          <me>
+            \begin{split} \mathcal  {L}\{t\sin(\omega t)\} &amp;= -\frac{d}{ds}\mathcal  {L}\{\sin(\omega t)\}\\ &amp;= -\frac{d}{ds}\left(\frac{\omega}{s^2+\omega^2}\right)\\ &amp;= \frac{2\omega s}{(s^2+\omega^2)^2}.
+            \end{split}
+          </me>
+        </p>
+      </solution>
+    </example>
+
+    <example>
+      <p>
+        Find the Laplace transform <m>\mathcal  {L}\{t^2\sin(\omega t)\}</m>.
+      </p>
+      <solution>
+        <p>
+          We have
+          <me>
+            \begin{split} \mathcal  {L}\{t^2\sin(\omega t)\} &amp;= \frac{d^2}{ds^2}\mathcal  {L}\{\sin(\omega t)\}\\ &amp;= \frac{d^2}{ds^2}\left(\frac{\omega}{s^2+\omega^2}\right)\\ &amp;= \frac{2\omega(3s^2-\omega^2)}{(s^2+\omega^2)^3}.
+            \end{split}
+          </me>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+
+  <subsection xml:id="subsec-Integrals-Laplace-Transforms">
+    <title>Integrals of Laplace Transforms</title>
+    <p>
+      Let us discuss about what happens when you integrate a Laplace transform.
+      Let <m>f</m> be a piecewise continuous function of exponential order as <m>t\to\infty</m>.
+      Suppose <m>s_0</m> is a real number such that <m>F(s)</m> exists for all <m>s&gt;s_0.</m> To compute <m>\mathcal  {L}\{f(t)/t\}</m>, let <m>g(t) = f(t)/t</m> so that <m>t g(t) =f(t).</m> Then, in view of <xref ref="laplace-derivative" />, we obtain
+      <me>
+        G'(s) = -F(s).
+      </me>
+      Consequently, we have
+      <me>
+        G(s) = -\int_s^{\infty}  G'(p)\; dp = \int_s^\infty F(p)\, dp.
+      </me>
+    </p>
+
+      <p>
+        Here, we have considered only those <m>f</m> for which the Laplace transform <m>G(s)</m> of <m>g</m> satisfies the limiting property that <m>G(s) \to 0</m> as <m>s\to \infty.</m> Thus, we have
+        <men xml:id="laplace-integral">
+          \boxed{\mathcal  {L}\left\{\frac{f(t)}{t}\right\}(s) =    \int_s^\infty F(p)\, dp.}
+        </men>
+        Moreover, we can use <xref ref="laplace-integral" /> to determine the existence of the Laplace transform of <m>f(t)/t.</m> For instance, if the integral on the right-hand side of <xref ref="laplace-integral" /> diverges for all <m>s&gt;s_0,</m> then the Laplace transform of <m>f(t)/t</m> does not exist for any <m>s&gt;s_0.</m>
+      </p>
+
+      <p>
+        From the definition of the Laplace transform, it follows that
+        <me>
+          F(0) = \int_0^\infty f(t)\, dt.
+        </me>
+        provided the improper integral on the right-hand side converges.
+      </p>
+
+      <example>
+        <p>
+          Compute <m>\mathcal  {L}\{\sin(\omega t)/t\}</m> for positive values of <m>\omega</m> .
+        </p>
+
+        <solution>
+          We have
+          <me>
+            \begin{split} \mathcal  {L}\left\{\frac{\sin(\omega t)}{t}\right\}(s) &amp;= \int_s^\infty \frac{\omega}{p^2+\omega^2} dp\\ &amp;= \left[\tan^{-1}\left(\frac{p}{\omega}\right)\right]_s^\infty\\ &amp;= \frac{\pi}{2}-\tan^{-1}\left(\frac{s}{\omega}\right).
+            \end{split}
+          </me>
+
+          <p>
+            Note that the improper integral
+            <md>
+              \int_0^\infty \frac{\sin(\omega t)}{t}\, dt
+            </md>
+            converges and is equal to <m>\pi/2.</m>
+          </p>
+        </solution>
+      </example>
+
+      <example>
+        <statement>
+          <p>
+            Compute <m>\mathcal  {L}\{\cos(\omega t)/t\}</m> for positive values of <m>\omega</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            We have
+            <md>
+              \mathcal  {L}\left\{\cos(\omega t) \right\}(p) = \frac{p}{p^2+\omega^2}.
+            </md>
+            Since
+            <me>
+              \begin{split} \int_s^\infty \frac{p}{p^2+\omega^2} dp\\ &amp;= \left[\frac{1}{2}\ln(p^2+\omega^2)\right]_s^\infty\\ &amp;= \infty, \end{split}
+            </me>
+            it  follows that that the improper integral
+            <md>
+              \int_0^\infty \frac{\cos(\omega t)}{t}\, dt
+            </md>
+            diverges.
+          </p>
+        </solution>
+      </example>
+
+      <example>
+        <p>
+          Compute <m>\mathcal  {L}\left\{\frac{e^t-1}{t}\right\}.</m>
+        </p>
+
+        <solution>
+          <p>
+            Since
+            <me>
+              \mathcal  {L}\left\{e^t-1\right\}(p) = \frac{1}{p-1} - \frac{1}{p},
+            </me>
+            we have
+            <me>
+              \begin{split} \mathcal  {L}\left\{\frac{e^t-1}{t}\right\}(s) &amp;= \int_s^\infty \left(\frac{1}{p-1} - \frac{1}{p}\right) dp\\ &amp;= \left[\ln\left(\frac{p-1}{p}\right)\right]_s^\infty\\ &amp;= \ln\left(\frac{s}{s-1}\right).
+              \end{split}
+            </me>
+            for <m> s&gt;1.</m>
+          </p>
+        </solution>
+      </example>
+  </subsection>
+
+
+
+    <!-- EXERCISES --> <exercises xml:id="exercises-">
+    <exercise>
+      <p>
+        Find the Laplace transform of each of the following functions:
+      </p>
+
+      <p>
+        <ol marker="i." cols="2">
+          <li>
+            <m>te^{-7t}</m>
+          </li>
+
+          <li>
+            <m>t^2e^{-7t}</m>
+          </li>
+
+          <li>
+            <m>t\cos(2t)</m>
+          </li>
+
+          <li>
+            <m>t^2\cos(2t)</m>
+          </li>
+
+          <li>
+            <m>t e^{-3t}\cos(2t)</m>
+          </li>
+
+          <li>
+            <m>t^2 e^{-3t}\cos(2t)</m>
+          </li>
+
+          <li>
+            <m>te^{3t}\sin(5t)</m>
+          </li>
+        </ol>
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        Compute <m>\mathcal  {L}\left\{\frac{e^{-t}-1}{t}\right\}</m>
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        Determine whether <m>\frac{e^t-2}{t}</m> has its Laplace transform.
+      </p>
+
+      <hint>
+        <p>
+          Use <xref ref="laplace-integral" />.
+          to determine whether the Laplace transform of <m>(e^t-2)/t</m> exists.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise>
+      <p>
+        Solve the following initial value problems using the Laplace transform method.
+      </p>
+
+      <p>
+        <ol>
+          <li>
+            <m>y'+y= t\cos t, \quad y(0) =0</m>
+          </li>
+
+          <li>
+            <m>y'-y= t e^t\cos t, \quad y(0) =0</m>
+          </li>
+
+          <li>
+            <m>y''+4y= \cos (2t), \quad y(0) =2, y'(0)= 1</m>
+          </li>
+
+          <li>
+            <m>y''+4y= f(t),\; y(0) =2, y'(0)= 1,</m> with <m>f(t) =\begin{cases} \cos(2t) &amp;\text{ if } t&lt; 2\pi,\\ 0&amp;\text{ if } t\ge 2\pi. \end{cases}</m>
+          </li>
+        </ol>
+      </p>
+    </exercise>
+    </exercises>
+  </section>

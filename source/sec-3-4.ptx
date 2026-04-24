@@ -1,0 +1,26 @@
+<section xml:id="sec-3-4" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Higher Order Linear Differential Equations</title>
+    <objectives>
+        <ul>
+            <li>
+                <p>
+                    Understand solution techiques for linear
+                    differential equations of order higher than two.
+                </p>
+            </li>
+        </ul>
+    </objectives>
+
+    <introduction>
+        <p>
+            Something about forced oscillations and resonance goes here yes.
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-something-higher-order">
+        <title>something</title>
+        <p>
+            soemthing
+        </p>
+
+    </subsection>
+</section>

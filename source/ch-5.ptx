@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-5" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Laplace Transform and Applications</title>
+
+  <introduction>
+    <p>
+      In the previous chapters, we  developed methods for solving initial value problems for ordinary differential equations with continuous forcing functions.
+      In this chapter, we will extend our methods to solve initial value problems with discontinuous forcing functions and impulsive forcing functions modeled by the Dirac delta function.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-5-1.ptx" />
+  <xi:include href="sec-5-2.ptx" />
+  <xi:include href="sec-5-3.ptx" />
+  <xi:include href="sec-5-4.ptx" />
+  <xi:include href="sec-5-5.ptx" />
+  <xi:include href="sec-5-6.ptx" />
+
+</chapter>

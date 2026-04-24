@@ -1,0 +1,44 @@
+/* Zebra striping for tables */
+#laplace-table tbody tr:nth-child(even) {
+  background-color:#f2f2f2;
+}
+.ptx-print-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #888;
+  border-radius: 0.35rem;
+  background: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.ptx-print-button {
+  position: fixed;
+  pointer-events: auto;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10000;
+  display: inline-block;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #888;
+  border-radius: 0.35rem;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ptx-print-button:hover {
+  background: #f2f2f2;
+}
+
+@media print {
+  .ptx-print-button {
+    display: none;
+  }
+}

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-5-5" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>A Convolution Theorem and its Applications</title>
+    <introduction>
+        <p> A crucial step in solving a linear initial value problem using Laplace transforms is
+            determining the inverse Laplace transform of the solution’s Laplace transform. This step
+            can become challenging when the expression, whose inverse Laplace transform is desired,
+            is complicated. In this section, we discuss a procedure with which we can determine the
+            inverse Laplace transform of an expression that is a product of known Laplace
+            transforms. For example, we recall that <me>\mathcal
+            {L}^{-1}\left\{\ds\frac{1}{s^2}\right\}
+                = t \quad \text{ and }\quad \mathcal {L}^{-1}\left\{\ds\frac{2}{s^3}\right\} = t^2.</me>
+            However, if we were to compute <me>\mathcal {L}^{-1}\left\{\ds\left(\frac{1}{s^2}\right)
+            \left(\frac{2}{s^3}\right)\right\},</me> a direct way is to see this problem as <me>\mathcal
+            {L}^{-1}\left\{\frac{2}{s^5}\right\}
+                = \frac{2}{4!}\; t^4 = \frac{t^4}{12}.</me> This leads to a natural question: in
+            what way can we combine <m>t</m> and <m>t^2</m> to produce <m>t^4/12</m>? The operation
+            for combining inverse Laplace transforms—specifically, to determine the inverse of a
+            product—is known as <em>
+                convolution</em>, which is formalized in the following definition. </p>
+
+        <definition xml:id="def-convolution">
+            <statement>
+                <p> Let <m>f</m> and <m>g</m> be functions on <m>[0, \infty).</m> The <term>
+                        <em>convolution</em>
+                    </term> of <m>f</m> and <m>g</m>,
+                    denoted by <m>f\ast
+                        g</m>, is the function defined by <me>(f\ast g)(t) = \int_0^t f(u) g(t-u)\,
+                    du</me> whenever the integral exists for a given <m>t</m> in <m>[0, \infty).</m>
+                </p>
+            </statement>
+        </definition>
+
+        <p> For computational purposes, <m>(f * g)(t)</m> may also be written as <m>f(t) * g(t)</m>.
+            It can be proved that <m>f\ast g = g\ast f;</m> see, for example, <xref
+                ref="exercise-5-5-2-ii" /> in <xref
+                ref="exercises-convolution-theorem" />. The convolution <m>1\ast
+                f</m> is particularly useful, and it is given by <me>
+                (1\ast f)(t) = \int_0^t f(u) \, du.
+            </me> See, also, <xref
+                ref="exercise-5-5-2-v" /> in <xref ref="exercises-convolution-theorem" />. </p>
+        <example>
+            <p> Let us return to the example discussed before <xref ref="def-convolution" /> and
+                calculate the convolution of <m>f(t) =t</m> and <m>g(t) =t^2</m>. We have <me>\begin{split}
+                (f\ast g)(t)&amp; = \int_0^t u (t-u)^2\, du\\
+                    &amp;= \int_0^t (t^2u-2tu^2 +u^3)\, du\\
+                    &amp;= \left[t^2\frac{u^2}{2}-2t\frac{u^3}{3}+\frac{u^4}{4}\right]_0^t\\
+                &amp;=\frac{t^4}{2}-\frac{2t^4}{3}+\frac{t^4}{4}\\
+                    &amp;=\frac{t^4}{12},
+                    \end{split}</me> as expected. </p>
+        </example>
+
+
+    </introduction>
+    <subsection xml:id="theorem-convolution">
+        <title>Convolution Theorem</title>
+        <p>
+            We now state and prove the most important theorem of this section.
+        </p>
+        <theorem xml:id="thm-convolution">
+            <statement>
+                <p> Let <m>f</m> and <m>g</m> be piecewise continuous functions on <m>[0,\infty)</m>
+                    and of the exponential order <m>\alpha</m> as <m>t\to\infty</m>. Then <me>\mathcal {L}\{(f\ast
+                    g)(t)\}= F(s) \,G(s);</me> or equivalently, <me>\mathcal {L}^{-1}\left\{ F(s)
+                    G(s)\right\} =\mathcal {L}^{-1}\{F(s)\}\ast \mathcal {L}^{-1}\{G(s)\} = (f\ast
+                    g)(t)</me> for <m>
+                        s&gt;\alpha.</m>
+                </p>
+            </statement>
+        </theorem>
+        <p>
+            To see how this theorem holds, we need to use a method for changing the order of an
+            iterated integral. We include a proof of the Convolution Theorem below for the sake of
+            completeness; however, not to be distracted from the proof, the reader may choose to
+            skip it for now and proceed directly to apply the theorem.
+        </p>
+        <proof>
+            <title>Proof of <xref ref="thm-convolution" /></title>
+            <p> We recall that <me>F(s) = \int_0^\infty e^{-s\eta} f(\eta) \, d\eta\quad \text{ and
+                }\quad
+                    G(s) = \int_0^\infty e^{-su} g(u) \, du.</me> Then <me>
+                    \begin{split}
+                    F(s) G(s) &amp; = \int_0^\infty e^{-s\eta} f(\eta) \, d\eta\; \int_0^\infty
+                e^{-su} g(u) \, du\\
+                    &amp;=\int_0^\infty g(u) \left( \int_0^\infty e^{-s(\eta+u)} f(\eta) \, d\eta
+                \right) \, du\\
+                    &amp; = \int_0^\infty g(u) \left( \int_u^\infty e^{-st} f(t - u) \, d\xi \right)
+                \, du,
+                    \end{split}</me> where <m>t=\eta+u.</m> By changing the order of integration, we
+                obtain <me>\begin{split}
+                    F(s) G(s)&amp;=\int_0^\infty e^{-s t} \left( \int_0^t g(u) f(t - u) \, du
+                    \right) \, dt \\
+                    &amp;=\int_0^\infty e^{-st} (g\ast f)(t)\, dt\\
+                    &amp; = \mathcal {L}\{(f\ast g)(t)\}.
+                    \end{split}</me>
+            </p>
+        </proof>
+        <p> Some fundamental properties of the convolution operation are discussed in <xref
+                ref="exercises-convolution-theorem" />; see the problem <xref
+                ref="exercise-5-5-2-ii" />. </p>
+
+    </subsection>
+    <subsection xml:id="subsec-application-convolution">
+        <title>Application of the Convolution Theorem to Initial Value Problems</title>
+        <p> The following theorem concerns an interesting application of <xref
+                ref="thm-convolution" /> to linear initial value problems that involve the Dirac
+            delta functions. </p>
+        <theorem xml:id="thm-application-convolution">
+            <statement>
+                <p> Let <m>y_\delta(t)</m> denote the solution of the initial value problem <men
+                        xml:id="IVP-delta1">
+                        ay''+by'+cy = \delta(t), \quad y(0) = 0, y'(0) = 0.
+                    </men>
+                    The the solution <m>y(t)</m> of the initial value problem <men
+                        xml:id="IVP-delta2">
+                        ay''+by'+cy = g(t), \quad y(0) = 0, y'(0) = 0
+                    </men>
+                    where <m>a, b, c</m> are constants with <m>a\ne 0,</m> and <m>g</m> is a
+                    piecewise continuous function that is of exponential order as <m>
+                        t\to\infty,</m> is given by <me>y(t) = (y_\delta \ast g)(t).</me>
+                </p>
+            </statement>
+        </theorem>
+
+        <p> We first remark that <m>y'</m> and <m>y''</m> in <xref ref="IVP-delta1" /> are to be
+            interpreted differently (as <em>distributional derivatives</em>) because of the presence
+            of <m>\delta(t)</m> on the right side of the equation. The fact beyond the scope of this
+            book is that the Laplace transforms of distributional derivatives coincide with the
+            Laplace transforms of the classical derivatives. </p>
+
+
+        <proof>
+            <title>Proof of <xref ref="thm-application-convolution" /></title>
+            <p> We first find the solution of the initial value problem <xref
+                    ref="IVP-delta1" />. Applying the Laplace transform <m>
+
+
+
+                        athcal{L}</m> to the initial
+                value problem <xref ref="IVP-delta1" /> and using <m>y(0)= y'(0)=0</m> yields <me>(as^2+bs
+                +c)Y_\delta(s)= 1,</me>that is, <me>Y_\delta(s)= \frac{1}{as^2+bs +c}.</me> Then, by
+                taking the inverse Laplace transform, we have <me>y_\delta(t)
+                    = \mathcal{L}^{-1}\left\{\frac{1}{as^2 + bs + c}\right\}.</me> Next, we take the
+                Laplace transform of both sides of the equation in <xref ref="IVP-delta2" /> to get <me>Y(s)
+                = \frac{G(s)}{as^2 + bs + c} = G(s) Y_\delta(s).</me> Finally, by applying the
+                convolution theorem (<xref ref="thm-convolution" />), we conclude that <me>y(t) =
+                (y_\delta \ast g)(t)</me> solves the initial value problem <xref ref="IVP-delta2" />
+                . </p>
+        </proof>
+        <example>
+            <p> Consider the initial value problem <m>y''+ y= e^t,\; y(0) = y'(0)= 0.</m> To solve
+                this problem, we first find the solution of the initial value problem <m>y''+ y=
+                \delta(t),\; y(0) = y'(0)= 0.</m> Applying the Laplace transform to this problem
+                yields <me>(s^2 + 1) Y_\delta(s) = 1,</me> that is, <me>Y_\delta(s) = \frac{1}{s^2 +
+                1}.</me> Then, by taking the inverse Laplace transform, we have <me>y_\delta(t) =
+                \sin t.</me> Finally, by applying <xref ref="thm-application-convolution" /> with <m>
+                g(t) = e^t</m>, we conclude that <me>y(t) = y_\delta(t) \ast e^t = \sin t \ast e^t =
+                -\frac{1}{2}\left(-e^t+\sin t+\cos t\right)</me> on <m>(-\infty, \infty).</m>
+            </p>
+        </example>
+    </subsection>
+
+
+    <exercises xml:id="exercises-convolution-theorem">
+        <exercise xml:id="exercise-5-5-1">
+            <p> For the functions <m>f</m> and <m>g</m> on <m>[0, \infty)</m> given below, compute <m>f\ast
+                g</m>, <m>\mathcal{L}\{(f\ast g)(t) \}</m> and verify that <m>\mathcal{L}\{(f\ast g)(t) \}
+                =\mathcal{L}\{f(t)\}\, \mathcal{L}\{g(t)\}.</m> In the following, <m>k</m> and <m>\omega</m> are any
+                real numbers. </p>
+            <ol marker="i.">
+                <li xml:id="exercise-5-5-1-i">
+                    <p>
+                        <m>f(t) = g(t) = 1</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-1-ii">
+                    <p>
+                        <m>f(t) = g(t) = e^{kt}</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-1-iii">
+                    <p>
+                        <m>f(t) = \sin t,\; g(t) = e^{kt}</m>
+                    </p>
+
+                </li>
+                <li xml:id="exercise-5-5-1-iv">
+                    <p>
+                        <m>f(t)= g(t) = \sin (\omega t)</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-1-v">
+                    <p>
+                        <m>f(t)= \sin(\omega t),\; g(t) = \cos(\omega t)</m>
+
+                    </p>
+                </li>
+
+            </ol>
+        </exercise>
+        <exercise xml:id="exercise-5-5-2">
+            <p> Let <m>f, g, h</m> be functions defined on the interval <m>[0, \infty)</m>, and
+                assume that all the convolutions below are well-defined. Use the definition of the
+                convolution to prove the following properties. </p>
+            <ol marker="i.">
+                <li xml:id="exercise-5-5-2-i">
+                    <p>
+                        <m>f\ast g = g\ast f.</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-2-ii">
+                    <p>
+                        <m>f\ast (g\ast h) = (f\ast g)\ast h</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-2-iii">
+                    <p>
+                        <m>f\ast (g + h) = f\ast g + f\ast h</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-2-iv">
+                    <p>
+                        <m>f\ast (k g) = k (f\ast g)</m> for any constant <m>k</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-2-v">
+                    <p>
+                        <m>(1\ast f)(t) = \int_0^t f(u) \, du.</m>
+                    </p>
+                </li>
+            </ol>
+        </exercise>
+
+        <exercise xml:id="exercise-5-5-3">
+            <p> Use the convolution theorem (<xref ref="thm-convolution" />) to find the Laplace
+                transform of each of the following functions. </p>
+            <ol marker="i." cols="2">
+                <li xml:id="exercise-5-5-3-i">
+                    <p>
+                        <m>1\ast t\ast t^2</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-iii">
+                    <p>
+                        <m>1\ast t^2\ast \sin t</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-iv">
+                    <p>
+                        <m>1\ast \cos t\ast \sin t</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-v">
+                    <p>
+                        <m>1\ast \sin t\ast \mathcal{U} (t-2)</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-vi">
+                    <p>
+                        <m>1\ast \mathcal{U} (t-2)\ast \mathcal{U} (t-5)</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-vii">
+
+                    <p>
+                        <m>\ds\int_0^t e^u\, du</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-viii">
+                    <p>
+                        <m>\ds\int_0^t \sin u\, du</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-ix">
+                    <p>
+                        <m>\ds\int_0^t u\sin u\, du</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-x">
+                    <p>
+                        <m>\ds\int_0^t \sin u\,\cos(t-u)\, du</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-3-xi">
+                    <p>
+                        <m>\ds t\int_0^t \sin u\,\cos(t-u)\, du</m>
+                    </p>
+                </li>
+            </ol>
+        </exercise>
+
+        <exercise xml:id="exercise-5-5-4">
+            <p> Use the convolution theorem (<xref ref="thm-convolution" />) to find each of the
+                following inverse Laplace transforms. </p>
+            <ol marker="i." cols="2">
+                <li xml:id="exercise-5-5-4-i">
+                    <p>
+                        <m>\ds\mathcal{L}^{-1}\left\{\frac{1}{(s+1)(s-1)}\right\}</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-4-ii">
+                    <p>
+                        <m>\ds\mathcal{L}^{-1}\left\{\frac{1}{s^3(s-1)}\right\}</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-4-iii">
+                    <p>
+                        <m>\ds\mathcal{L}^{-1}\left\{\frac{2}{(s^2+4)^2}\right\}</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-4-iv">
+                    <p>
+                        <m>\ds\mathcal{L}^{-1}\left\{\frac{s^2}{(s^2+4)^2}\right\}</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-4-v">
+                    <p>
+                        <m>\ds\mathcal{L}^{-1}\left\{\frac{s^2}{(s^2-4)^2}\right\}</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-4-vi">
+                    <p>
+                        <m>\ds\mathcal{L}^{-1}\left\{\frac{1}{s^2(s^2+4)^2}\right\}</m>
+                    </p>
+                </li>
+
+            </ol>
+        </exercise>
+        <exercise xml:id="exercise-5-5-5">
+            <p>
+                Solve the following integral or integro-differential equations using the Laplace
+                transform.
+            </p>
+            <ol marker="i.">
+                <li>
+                    <p>
+                        <m>\ds y(t)+\int_0^t y(u)\, du = 1</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\ds y(t) = te^t+ \int_0^t u\,y(t-u)\, du</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\ds y'(t) = 1-\cos t - \int_0^t y(u)\, du, \quad y(0) =0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\ds y'(t) +4 y(t) + 4 \int_0^t y(u)\, du=1, \quad y(0) =0</m>
+                    </p>
+                </li>
+            </ol>
+        </exercise>
+
+        <exercise xml:id="exercise-5-5-6">
+            <p> Use <xref ref="thm-application-convolution" /> to solve the following initial value
+                problems. </p>
+            <ol marker="i.">
+                <li>
+                    <p>
+                        <m>y'-3y= \sin t, \quad y(0)= 0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y''+y= \sin t, \quad y(0)= 0, \; y'(0)=0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y''+4y'+3y= e^t, \quad y(0)= 0, \; y'(0)=0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y''+4y'+13y= \cos t, \quad y(0)= 0, \; y'(0)=0</m>
+                    </p>
+                </li>
+            </ol>
+        </exercise>
+
+        <exercise xml:id="exercise-5-5-7">
+            <p> Let <m>f</m> be a continuous function defined on the interval <m>[0, \infty)</m>,
+                and assume that all the convolutions below are well-defined. Show the following
+                properties of the convolution operation. </p>
+            <ol marker="i.">
+                <li>
+                    <p>
+                        <m>f\ast \delta = f.</m> (This means that <m>\delta</m> is an identity
+                        element for the convolution operation.) </p>
+                </li>
+                <li>
+                    <p>
+                        <m>f(t)\ast \delta (t-a) = \mathcal{U}(t-a) f(t-a),</m> where <m>a\ge 0</m>
+                        and is a fixed real number. </p>
+                </li>
+            </ol>
+        </exercise>
+
+        <exercise xml:id="exercise-5-5-8">
+            <p> Let <m>f, g</m> be functions with continuous derivatives on the interval <m>[0,
+                \infty)</m> and of exponential order as <m>t\to\infty</m>. Assume further that all
+                the convolutions below are well-defined. Use the convolution theorem (<xref
+                    ref="thm-convolution" />) to prove the following properties. </p>
+            <ol marker="i.">
+                <li>
+                    <p>
+                        <m>1\ast f'(t) = f(t) - f(0).</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(f\ast g)'(t) = g(0) f(t) + (g'\ast f)(t) = f(0) g(t) + (g\ast f')(t).</m>
+                    </p>
+                </li>
+            </ol>
+            <remarks>
+                <p> The above properties are also valid for any differentiable functions <m>f</m>
+                    and <m>g</m>, not necessarily of exponential order as <m>t\to\infty</m>, in
+                    light of the Leibniz rule<fn>
+                        <men xml:id="Leibniz-rule">
+                            \begin{split}
+                            \frac{d}{dt}\int_{a(t)}^{b(t)} f(u, t) \, du \amp =
+                            f(b(t), t) \frac{db(t)}{dt} - f(a(t), t)\frac{da(t)}{dt}\\
+                            \amp +\int_{a(t)}^{b(t)} \frac{\partial f}{\partial t} (u, t)\, du
+                    \end{split}
+                        </men>
+                    </fn>
+                    for differentiating an integral (see <xref
+                        ref="thm-Leibnitz-Rule-Improper-Integrals" />). </p>
+            </remarks>
+        </exercise>
+        <exercise xml:id="exercise-5-5-9">
+            <p> By using the Leibniz rule <xref ref="Leibniz-rule" />, convert each of the following
+                integral or integro-differential equations into an equivalent initial value problem
+                and then solve it by using your favorite method. Compare your answers to those
+                obtained in <xref ref="exercise-5-5-5" />. </p>
+            <ol marker="i.">
+                <li>
+                    <p>
+                        <m>\ds y(t)+\int_0^t y(u)\, du = 1</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\ds y(t) = te^t+ \int_0^t u\,y(t-u)\, du</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\ds y'(t) = 1-\cos t - \int_0^t y(u)\, du, \quad y(0) =0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\ds y'(t) +4 y(t) + 4 \int_0^t y(u)\, du=1, \quad y(0) =0</m>
+                    </p>
+                </li>
+            </ol>
+        </exercise>
+
+        <exercise xml:id="exercise-5-5-10">
+            <p>
+                Solve the following initial value problems using the Laplace transform. Also,
+                determine whether the solutions are continuous at the point(s) of concentration of
+                the involved Dirac delta functions(s).
+            </p>
+            <ol marker="i.">
+                <li>
+                    <p>
+                        <m>y'-3y= \delta(t-1), \quad y(0)= 0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y'+4y= \delta(t-2), \quad y(0)= 1</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y''+4y= \delta(t-2\pi), \quad y(0)= 0, \; y'(0)=0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y''+4y'+3y= \delta(t-2\pi), \quad y(0)= 0, \; y'(0)=0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y''+4y'+13y= \delta(t-2\pi), \quad y(0)= 0, \; y'(0)=0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y''+4y'+3y= \delta(t-2\pi) +\delta(t-3\pi), \quad y(0)= 0, \; y'(0)=0</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y''+4y'+13y= \delta(t-2\pi) +\delta(t-3\pi), \quad y(0)= 0, \; y'(0)=0</m>
+                    </p>
+                </li>
+
+            </ol>
+        </exercise>
+    <exercise xml:id="exercise-5-5-11">
+        <p> A 32 lb mass stretches a vertically hanging spring 4 feet to equilibrium. The mass
+            is then pulled down 1 foot and released from rest. Assume no damping or external
+            forces. Let <m>y(t)</m> denote the displacement of the mass from equilibrium at time <m>
+            t,</m> measured positive in the downward direction. (Use <m>g= 32
+            \;\text{ft}/\text{s}^2</m>.) </p>
+        <ol marker ="i.">
+            <li xml:id="exercise-5-5-11-i">
+                <p> Set up an initial value problem for <m>y(t).</m>
+                </p>
+            </li>
+            <li xml:id="exercise-5-5-11-ii">
+                <p>
+                    Determine a Dirac delta function that models the impulsive force on the mass
+                    exerted by striking it with a hammer to stop it at the first time it passes
+                    through equilibrium, keeping it at the equilibrium position thereafter.
+                </p>
+            </li>
+            <li xml:id="exercise-5-5-11-iii">
+                <p>
+                    Repeat <xref ref="exercise-5-5-11-ii" /> to stop the mass at the second time it passes through equilibrium.
+                </p>
+            </li>
+        </ol>
+
+    </exercise>
+    </exercises>
+</section>

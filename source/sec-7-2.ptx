@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-7-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<title>Partial Fraction Decomposition</title>
+
+<introduction>
+  <p>
+    Let <m>P</m> and <m>Q</m> be general polynomials in <m>x,</m> and let <m>m</m> and <m>n</m> be
+    the degrees of <m>P</m> and <m>Q</m>, respectively. Then the <alert>
+      <em>rational</em>
+    </alert> function <md>
+      R(x)=\frac{P(x)}{Q(x)}
+    </md> is said to be <alert>
+      <em>proper </em>
+    </alert> if <m>m&#x3C;n</m> and <alert>
+      <em>improper</em>
+    </alert> if <m>m\ge n.</m> When <m>R(x)</m> is improper, we perform
+    polynomial division to obtain <md>
+      R(x)=q(x)+\frac{r(x)}{Q(x)},
+    </md> where <m>q(x)</m> is the <alert>
+      <em>quotient</em>
+    </alert> polynomial of degree <m>m-n,</m> and <m>r(x)</m> is called the <alert>
+      <em>remainder</em>
+    </alert> polynomial and it is of degree less than <m>n.</m> For example,
+    if <m>P(x) = x^{3}, Q(x) = x^{2}-1,</m> then <md>
+      \frac{x^{3}+2}{x^{2}-1}= x+ \frac{x+2}{x^{2}-1},
+    </md> so that <m>q(x) = x</m> and <m>r(x)
+    = x+2.</m>
+  </p>
+
+  <p> After performing polynomial division, the term <m>q(x)</m> is already a polynomial and
+    requires no decomposition. The term <m>\dfrac{r(x)}{Q(x)}</m> is a proper rational function and
+    the only part of <m>R(x)</m> that is usually decomposed into partial fractions. Therefore, in
+    what follows, we assume that <m>R(x)</m> itself is proper. The method of partial fraction
+    decomposition then depends entirely on the factorization of the denominator <m>Q(x)</m>. We now
+    examine all possible cases that may occur. </p>
+</introduction>
+
+<subsection>
+  <title> Linear Factors <m>x-a</m></title>
+
+  <p> If the denominator contains distinct linear factors, <md>
+    Q(x)=(x-a_{1})(x-a_{2})\cdots(x-a_{n}),
+    </md> then the decomposition has the form <md>
+    \frac{P(x)}{Q(x)}= \frac{A_{1}}{x-a_{1}}+\frac{A_{2}}{x-a_{2}}+\cdots+\frac{A_{n}}{x-a_{n}},
+    </md>
+    where <m>A_{1}, \dots, A_{n}</m> are constants to be determined. Let us illustrate this with an
+    example below. </p>
+
+    <example>
+      <p>Perform partial fraction decomposition of <md>
+          \frac{3x+5}{(x-1)(x+2)}.
+        </md> Suppose there are constants <m>A</m> and <m>
+        B</m> such that <md>
+          \frac{3x+5}{(x-1)(x+2)}= \frac{A}{x-1}+\frac{B}{x+2}.
+        </md> Multiplying
+        through by <m>(x-1)(x+2)</m> gives <md>
+          3x+5 = A(x+2)+B(x-1)
+        </md> which must be an identity in <m>x.</m> For
+        convenience, we do allow <m>x=1</m> or <m>x=-2</m> in this identity. We find <m>A=2</m>, <m>
+        B=1</m>, so <md>
+          \frac{3x+5}{(x-1)(x+2)}= \frac{2}{x-1}+\frac{1}{x+2}.
+        </md>
+      </p>
+    </example>
+
+</subsection>
+
+
+<subsection>
+  <title>Repeated Linear Factors <m>(x-a)^{n}</m></title>
+
+  <p> If <md>
+      Q(x)=(x-a)^{n},
+    </md> then the decomposition includes every power of the linear
+    factor: <md>
+      \frac{P(x)}{(x-a)^{n}}= \frac{A_{1}}{x-a}+ \frac{A_{2}}{(x-a)^{2}}+ \cdots +
+    \frac{A_{n}}{(x-a)^{n}},
+    </md>
+    <m>A_{1},
+    \dots, A_{n}</m> are constants to be determined. </p>
+
+
+
+    <example>
+      <p>Perform the partial fraction decomposition of <md>
+          \frac{x+1}{(x-1)^{2}}.
+        </md> Suppose there exist constants <m>A</m> and <m>
+        B</m> such that <md>
+          \frac{x+1}{(x-1)^{2}}= \frac{A}{x-1}+\frac{B}{(x-1)^{2}}.
+        </md>
+        Multiplying through by <m>(x-1)^{2}</m> gives <md>
+          x+1 = A(x-1) + B.
+        </md> We find <m>A=1</m> and <m>B=2.</m> Then <md>
+        \frac{x+1}{(x-1)^{2}}= \frac{1}{x-1}+\frac{2}{(x-1)^{2}}.
+        </md>
+      </p>
+    </example>
+
+</subsection>
+
+
+<subsection>
+  <title>Irreducible Quadratic Factors <m>x^{2}+bx+c</m></title>
+
+  <p> Suppose that <m>Q(x)</m> contains a factor <m>x^{2}+bx+c</m> that is irreducible over the real
+    numbers. The partial fraction decomposition of <m>\ds\frac{P(x)}{Q(x)}</m> contains a
+    term of the form <md>
+      \frac{Ax+B}{x^{2}+bx+c},
+    </md> where <m>A</m> and <m>B</m> are constants to be
+    determined. We illustrate this in the next an example. </p>
+
+
+
+    <example>
+      <p> To perform the partial fraction decomposition of <md>
+          \frac{x}{(x^{2}+1)(x-2)},
+        </md> we find <m>A</m>,<m>B</m> and <m>C</m>
+        such that <md>
+          \frac{x}{(x^{2}+1)(x-2)}= \frac{Ax+B}{x^{2}+1}+ \frac{C}{x-2}.
+        </md>
+        Notice the term <m>\dfrac{C}{x-2}</m> corresponding to the linear factor <m>x-2</m> of the
+        denominator. Multiplying through by <m>(x^{2}+1)(x-2)</m> yields <md>
+          x = (Ax+B)(x-2) + C(x^{2}+1).
+        </md> Comparing coefficients gives <md>
+          A = \dfrac13, \qquad B = \dfrac23, \qquad C = -\dfrac13,
+        </md> so <md>
+        \frac{x}{(x^{2}+1)(x-2)}= \frac{\tfrac13 x + \tfrac23}{x^{2}+1}- \frac{1}{3(x-2)}.
+        </md>
+      </p>
+    </example>
+
+</subsection>
+
+
+<subsection>
+  <title>Repeated Irreducible Quadratic Factors</title>
+
+  <p> If <m>Q(x) = (x^{2}+bx+c)^{k},</m> where the quadratic <m>x^{2}+bx+c</m> is irreducible and
+    repeated with multiplicity <m>k,</m> then the decomposition <m>\ds\frac{P(x)}{Q(x)}</m>
+    is of the form <md>
+      \frac{P(x)}{(x^{2}+bx+c)^{k}}= \frac{A_{1}x+B_{1}}{x^{2}+bx+c}+
+    \frac{A_{2}x+B_{2}}{(x^{2}+bx+c)^{2}}+ \cdots + \frac{A_{k}x+B_{k}}{(x^{2}+bx+c)^{k}},
+    </md>
+    with the constants <m>A_{1}, \dots, A_{k}</m> and <m>B_{1}, \dots, B_{k}</m> are to be
+    determined. We illustrate this in the next example. </p>
+
+
+
+    <example>
+
+      <p> To perform the partial fraction decomposition of <md>
+          \frac{3x+5}{(x^{2}+1)^{2}},
+        </md> we find constants <m>A, B, C, D</m>
+        such that <md>
+          \frac{3x+5}{(x^{2}+1)^{2}}= \frac{Ax+B}{x^{2}+1}+ \frac{Cx+D}{(x^{2}+1)^{2}}.
+        </md>
+        Multiplying both sides by <m>(x^{2}+1)^{2}</m> gives <md>
+          3x+5 = (Ax+B)(x^{2}+1) + (Cx+D).
+        </md> Expanding and matching
+        coefficients yields <md>
+          A=0,\quad B=3,\quad C=-3,\quad D=5,
+        </md> and hence <md>
+        \frac{3x+5}{(x^{2}+1)^{2}}= \frac{3}{x^{2}+1}+ \frac{-3x+5}{(x^{2}+1)^{2}}.
+        </md>
+      </p>
+    </example>
+
+</subsection>
+
+
+<subsection>
+  <title>Mixed Factors</title>
+
+  <p> If the denominator <m>Q(x)</m> factors as<fn>The symbol <m>\prod_{i=1}^{\ell} p_{i}</m>
+    denotes product <m>p_{1}p_{2} \dots p_{\ell}</m>.</fn>
+    <md>
+      Q(x)= \prod_{i=1}^{\ell_1}(x-a_{i})^{k_i}\prod_{j=1}^{\ell_2}(x^{2} + b_{j}x + c_{j})^{m_j},
+    </md>
+    then the full partial fraction decomposition of <m>\ds\frac{P(x)}{Q(x)}</m> contains
+    terms </p>
+
+  <p>
+    <ul>
+      <li>
+        <p>
+          <m>\dfrac{A}{x-a}</m>, <m>\dfrac{A}{(x-a)^2}</m>, etc., and </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dfrac{Ax+B}{x^2+bx+c}</m>, <m>\dfrac{Ax+B}{(x^2+bx+c)^2}</m>, etc. </p>
+      </li>
+    </ul>
+    Let us illustrate this in the next example </p>
+
+
+
+    <example>
+
+
+      <p> To perform the partial fraction decomposition of <md>
+          \frac{2x^{2}+3x+1}{(x-1)(x^{2}+1)},
+        </md> we find constants <m>A, B, C</m>
+    such that <md>
+          \frac{2x^{2}+3x+1}{(x-1)(x^{2}+1)}= \frac{A}{x-1}+ \frac{Bx+C}{x^{2}+1}.
+        </md>
+    Multiplying both sides by <m>(x-1)(x^{2}+1)</m> gives <md>
+          2x^{2}+3x+1 = A(x^{2}+1) + (Bx+C)(x-1).
+        </md> Expanding and comparing
+    coefficients yields <md>
+          A = 1,\qquad B = 1,\qquad C = 2,
+        </md> so <md>
+    \frac{2x^{2}+3x+1}{(x-1)(x^{2}+1)}= \frac{1}{x-1}+ \frac{x+2}{x^{2}+1}.
+        </md>
+      </p>
+    </example>
+
+</subsection>
+
+<exercises>
+
+
+<exercise>
+<p>
+    Decompose each rational function into partial fractions.
+  </p>
+
+
+  <p>
+    <ol>
+      <li>
+        <p>
+          <m>\ds \frac{5x+3}{(x-1)(x+4)}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ds \frac{7}{(x+2)^{2}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ds \frac{3x^{2}+2x+1}{x(x^{2}+4)}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ds \frac{x^{2}+5}{(x^{2}+1)^{2}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ds \frac{4x+9}{(x-1)^{3}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ds \frac{2x^{2}-1}{(x^{2}+1)(x-3)}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ds \frac{6x}{(x^{2}+2x+5)(x-1)}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+</exercise>
+</exercises>
+
+<conclusion>
+    <title>Answers</title>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            <m>\ds \frac{2}{x-1}+\frac{3}{x+4}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\ds \frac{7}{(x+2)^{2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\ds \frac{1}{x}+\frac{x+2}{x^{2}+4}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\ds \frac{5}{x^{2}+1}-\frac{x}{(x^{2}+1)^{2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\ds \frac{A}{x-1}+\frac{B}{(x-1)^{2}}+\frac{C}{(x-1)^{3}}</m> (determine <m>A,
+            B, C</m>) </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\ds \frac{1}{x-3}+\frac{x+3}{x^{2}+1}</m>
+          </p>
+        </li>
+
+        <li>
+          <p> Divide first: <m>x+1+\frac{2}{x^{2}-1}</m> and then decompose  to get   <m>x+1+\dfrac{1}{x-1}-\dfrac{1}{x+1}.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\ds \frac{2}{x-1}+\frac{-2x+1}{x^{2}+2x+5}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+  </conclusion>
+
+</section>
