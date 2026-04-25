@@ -511,7 +511,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Second Order Nonhomogeneous Linear Differential Equations",
-  "body": " Second Order Nonhomogeneous Linear Differential Equations     Learn common methods for solving second order nonhomogeneous linear differential equations.      In this section, we discuss methods for solving second order nonhomogeneous linear differential equations. The same ideas extend naturally to higher order equation (see ). The following is concerning how the general solutions of nonhomogeneous linear differential equations must be formatted.   (General Solution)   Consider the nonhomogeneous equation where , and are continuous functions on an interval and the associated homogeneous equation on . Let be the general solution of and be a particular solution of the nonhomogeneous equation on Then the general solution of is of the form on      Let be a particular solution of . Let be any other solution of . Then the difference is a solution of the homogeneous equation . In fact, for all in , we have Therefore, takes the form of on It follows from that is the general solution of .     provides the fundamental structure for the general solution of nonhomogeneous linear differential equations. The function in is called the  complementary function  of the general solution, and it is given by where and form a fundamental set of solutions for and and are arbitrary constants.   In practice, solving a nonhomogeneous equation begins with finding the complementary function by determining a fundamental set of solutions to the associated homogeneous equation. We then find a particular solution of the nonhomogeneous equation, and the sum of the two provides the general solution. Finding a particular solution is typically the more difficult step; we outline two procedures for finding it in this section.    Variation of Parameters  The  variation of parameters  is a systematic method for constructing a particular solution of a nonhomogeneous linear differential equation of the form where the forcing term and coefficient functions and are assumed to be continuous on an interval with on We will be working with scenarios in which is either only positive or only negative on .  To formulate the method, we first divide both sides of by to rewrite it in standard form where and each of these functions remains to be continuous on .  Assume that is a fundamental set of solutions on for the homogeneous equation associated to the nonhomogeneous equation . Then the general solution to is for all in , where and are arbitrary constants.  To find a particular solution of the nonhomogeneous equation , the method of variation of parameters assumes a solution of the form for all in , where and are functions to be determined. The choice of reflects the name of the method: variation of parameters. The constants and in the solution of the homogeneous equation are replaced by the functions and , thereby varying the parameters in order to obtain a particular solution to . For the remainder of the discussion of the method, we suppress in all functions to minimize distractions.  Differentiating , we have and We impose the condition which is trivially satisfied when and are constant functions. The condition simplifies the expressions for and as follows: Substituting , , and for and , respectively, into gives which can be rewritten as Since and satisfy the homogeneous equation , we obtain the system This system can be solved for and : where is the Wronskian of and By integrating, we obtain Therefore, is given by Consequently, the general solution of is    The main advantage of the method of variation of parameters over the method of undetermined coefficients is that it is applicable to all non homogeneous linear differential equations, including the equations with variable coefficients. However, the evaluation of the integrals in can become quite cumbersome even when involves only elementary functions, such as the ones treated with the method of undetermined coefficients discussed .   We illustrate the method of variation of parameters with the following initial value problem which can be readily solved using the method of undetermined coefficients.    Solve the initial value problem by variation of parameters.    The auxiliary equation for the associated homogeneous equation is which gives and so the functions form a fundamental set solutions to The Wronskian of and is We note that the given nonhomogeneous equation is in the standard form with and therefore a particular solution by the method of variation of parameters is given by Then the integration by parts with the Kronecker method (see ) gives    Kronecker method for integration by parts      Derivative  Integral     4x^2    8x    8    0    e^{4x}    \\frac{1}{4}e^{4x}    \\frac{1}{16}e^{4x}    \\frac{1}{64}e^{4x}             +    -    +         In a similar manner, we also evaluate Then becomes The general solution of the nonhomogeneous differential equation is where and are arbitrary constants. Since we get We find Since we have Using , we get , so that Hence the solution to the given initial value problem is on       Method of Undetermined Coefficients  We note that variation of parameters often leads to integrals that can be quite involved and sometimes unexpectedly time-consuming even for simple forcing terms such as . For instance, to find a particular solution of one may instead guess a solution of the form (or a slightly more general form, if needed). See and below. This strategy of guessing a trial function for based on type of and determining the unknown constant coefficients in the trial function is known as the method of  undetermined coefficients  . However, a demerit of this method is that it becomes quite complicated when differential equations has variable coefficients.    Find a particular solution of by using the method of undetermined coefficients and write down the general solution.    Let be a particular solution of the equation, where is a constant to be determined. Differentiating yields Substituting these into gives i.e., an identity in This implies Therefore, is a particular solution.  To determine the complementary function of the general solution, the auxiliary equation for the associated homogeneous equation is whose roots are and Then the complementary function is given by where and are arbitrary constants. Finally, the general solution of is where and are arbitrary constants.        The method of undetermined coefficients is most effective when the forcing function is a polynomial, exponential, sine, cosine, or a linear combination of these functions.    A particular solution of a differential equation is just one member of the family represented by its general solution, and thus infinitely many particular solutions exist. In , the guess for was relatively easy to make by observing that the equation has no first derivative term and its forcing function is     When variation of parameters may involve complicated integrals, the method of undetermined coefficients may be a quicker alternative technique for finding particular solutions of equations with constant coefficients and simple combination of elementary functions for remarked in part (i). The method of undetermined coefficients, however, requires a well-informed guessing for , which makes it challenging to apply even when is a common function, such as or .      In the next example, the equation also has a first derivative term, so the trial solution used for in does not work.    Find a particular solution of and then write down the general solution.    First, we use the same trial solution as in and see what happens. Let be a particular solution, where is a constant to be determined. Differentiating yields Substituting these into would give i.e., which is not an identity in for any value of because and are linearly independent. Thus, no value of makes a valid particular solution. This occurs because is involved in the process. Therefore, we modify our trial function for and take where and are constants to be determined. Differentiating twice gives Substituting these into gives i.e., an identity in Since and are linearly independent, we obtain Solving these equations for and yields and Thus, is a particular solution.  To determine the complementary function of the general solution of , the auxiliary equation for the associated homogeneous equation is which has a repeated root Then the complementary function is given by where and are arbitrary constants. Hence the general solution of is where and are arbitrary constants.    In the previous two examples, we chose trial solutions before finding the complementary function without any difficulty. In general, however, a trial solution may include terms that duplicate in the complementary function, which are redundant (even useless) since they satisfy the associated homogeneous equation. Therefore, it is useful to determine the complementary function first and then select a trial function for a particular solution. We will typically follow this procedure from now on.    Find the general solution of     First, we find the complementary function. The auxiliary equation for the associated homogeneous equation is which has a repeated root Then the complementary function is given by where and are arbitrary constants.  Next, we choose a trial solution for the particular solution. Since the right-hand side is , and this term appears in the complementary function, we need to multiply by . Thus, we take where is a constant to be determined. Differentiating twice gives Substituting these into gives This yields Therefore, and Hence the general solution is where and are arbitrary constants.      Find the general solution of     The auxiliary equation of the associated homogeneous equation is whose complex roots are Therefore, the complementary function of the general solution of the nonhomogeneous equitation is where and arbitrary constants. If was not known in advance, we might initially guess with and as undetermined coefficients. However, this form of duplicates and it cannot satisfy the nonhomogeneous equation. A point of action is to modify to This will work! Let us proceed to determine and Differentiating gives Substituting these into the nonhomogeneous equation yields For this to be an identity in we must have so is a particular solution of , and therefore its general solution is where and arbitrary constants.     "
+  "body": " Second Order Nonhomogeneous Linear Differential Equations     Understand the structure of the general solution of second order nonhomogeneous linear differential equations.    Learn methods for solving second order nonhomogeneous linear differential equations.    Apply the methods to solve initial value problems for second order nonhomogeneous linear differential equations.      In this section, we discuss methods for solving second order nonhomogeneous linear differential equations. The same ideas extend naturally to higher order equation (see ). The following is concerning how the general solutions of nonhomogeneous linear differential equations must be formatted.   (General Solution)   Consider the nonhomogeneous equation where , and are continuous functions on an interval and the associated homogeneous equation on . Let be the general solution of and be a particular solution of the nonhomogeneous equation on Then the general solution of is of the form on      Let be a particular solution of . Let be any other solution of . Then the difference is a solution of the homogeneous equation . In fact, for all in , we have Therefore, takes the form of on It follows from that is the general solution of .     provides the fundamental structure for the general solution of nonhomogeneous linear differential equations. The function in is called the  complementary function  of the general solution, and it is given by where and form a fundamental set of solutions for and and are arbitrary constants.   In practice, solving a nonhomogeneous equation begins with finding the complementary function by determining a fundamental set of solutions to the associated homogeneous equation. We then find a particular solution of the nonhomogeneous equation, and the sum of the two provides the general solution. Finding a particular solution is typically the more difficult step; we outline two procedures for finding it in this section.    Variation of Parameters  The  variation of parameters  is a systematic method for constructing a particular solution of a nonhomogeneous linear differential equation of the form where the forcing term and coefficient functions and are assumed to be continuous on an interval with on We will be working with scenarios in which is either only positive or only negative on .  To formulate the method, we first divide both sides of by to rewrite it in standard form where and each of these functions remains to be continuous on .  Assume that is a fundamental set of solutions on for the homogeneous equation associated to the nonhomogeneous equation . Then the general solution to is for all in , where and are arbitrary constants.  To find a particular solution of the nonhomogeneous equation , the method of variation of parameters assumes a solution of the form for all in , where and are functions to be determined. The choice of reflects the name of the method: variation of parameters. The constants and in the solution of the homogeneous equation are replaced by the functions and , thereby varying the parameters in order to obtain a particular solution to . For the remainder of the discussion of the method, we suppress in all functions to minimize distractions.  Differentiating , we have and We impose the condition which is trivially satisfied when and are constant functions. The condition simplifies the expressions for and as follows: Substituting , , and for and , respectively, into gives which can be rewritten as Since and satisfy the homogeneous equation , we obtain the system This system can be solved for and : where is the Wronskian of and By integrating, we obtain Therefore, is given by Consequently, the general solution of is    The main advantage of the method of variation of parameters over the method of undetermined coefficients is that it is applicable to all non homogeneous linear differential equations, including the equations with variable coefficients. However, the evaluation of the integrals in can become quite cumbersome even when involves only elementary functions, such as the ones treated with the method of undetermined coefficients discussed .   We illustrate the method of variation of parameters with the following initial value problem which can be readily solved using the method of undetermined coefficients.    Solve the initial value problem by variation of parameters.    The auxiliary equation for the associated homogeneous equation is which gives and so the functions form a fundamental set solutions to The Wronskian of and is We note that the given nonhomogeneous equation is in the standard form with and therefore a particular solution by the method of variation of parameters is given by Then the integration by parts with the Kronecker method (see ) gives   Kronecker method for integration by parts      In a similar manner, we also evaluate Then becomes The general solution of the nonhomogeneous differential equation is where and are arbitrary constants. Since we get We find Since we have Using , we get , so that Hence the solution to the given initial value problem is on       Method of Undetermined Coefficients  We note that variation of parameters often leads to integrals that can be quite involved and sometimes unexpectedly time-consuming even for simple forcing terms such as . For instance, to find a particular solution of one may instead guess a solution of the form (or a slightly more general form, if needed). See and below. This strategy of guessing a trial function for based on type of and determining the unknown constant coefficients in the trial function is known as the method of  undetermined coefficients  . However, a demerit of this method is that it becomes quite complicated when differential equations has variable coefficients.    Find a particular solution of by using the method of undetermined coefficients and write down the general solution.    Let be a particular solution of the equation, where is a constant to be determined. Differentiating yields Substituting these into gives i.e., an identity in This implies Therefore, is a particular solution.  To determine the complementary function of the general solution, the auxiliary equation for the associated homogeneous equation is whose roots are and Then the complementary function is given by where and are arbitrary constants. Finally, the general solution of is where and are arbitrary constants.        The method of undetermined coefficients is most effective when the forcing function is a polynomial, exponential, sine, cosine, or a linear combination of these functions.    When variation of parameters may involve complicated integrals, the method of undetermined coefficients may be a quicker alternative technique for finding particular solutions of equations with constant coefficients and simple combination of elementary functions for remarked in part (i). The method of undetermined coefficients, however, requires a well-informed guessing for , which makes it challenging to apply even when is a common function, such as or .    A particular solution of a differential equation is just one member of the family represented by its general solution, and thus infinitely many particular solutions exist. In , the guess for was relatively easy to make by observing that the equation has no first derivative term and its forcing function is       In the next example, the equation also has a first derivative term, so the trial solution used for in does not work.    Find a particular solution of and then write down the general solution.    First, we use the same trial solution as in and see what happens. Let be a particular solution, where is a constant to be determined. Differentiating yields Substituting these into would give i.e., which is not an identity in for any value of because and are linearly independent. Thus, no value of makes a valid particular solution. This occurs because is involved in the process. Therefore, we modify our trial function for and take where and are constants to be determined. Differentiating twice gives Substituting these into gives i.e., an identity in Since and are linearly independent, we obtain Solving these equations for and yields and Thus, is a particular solution.  To determine the complementary function of the general solution of , the auxiliary equation for the associated homogeneous equation is which has a repeated root Then the complementary function is given by where and are arbitrary constants. Hence the general solution of is where and are arbitrary constants.    In the previous two examples, we chose trial solutions before finding the complementary function without any difficulty. In general, however, a trial solution may include terms that duplicate in the complementary function, which are redundant (even useless) since they satisfy the associated homogeneous equation. Therefore, it is useful to determine the complementary function first and then select a trial function for a particular solution. We will typically follow this procedure from now on.    Find the general solution of     First, we find the complementary function. The auxiliary equation for the associated homogeneous equation is which has a repeated root Then the complementary function is given by where and are arbitrary constants.  Next, we choose a trial solution for the particular solution. Since the right-hand side is , and this term appears in the complementary function, we need to multiply by . Thus, we take where is a constant to be determined. Differentiating twice gives Substituting these into gives This yields Therefore, and Hence the general solution is where and are arbitrary constants.      Find the general solution of     The auxiliary equation of the associated homogeneous equation is whose complex roots are Therefore, the complementary function of the general solution of the nonhomogeneous equitation is where and arbitrary constants. If was not known in advance, we might initially guess with and as undetermined coefficients. However, this form of duplicates and it cannot satisfy the nonhomogeneous equation. A point of action is to modify to This will work! Let us proceed to determine and Differentiating gives Substituting these into the nonhomogeneous equation yields For this to be an identity in we must have so is a particular solution of , and therefore its general solution is where and arbitrary constants.    When the forcing function can be decomposed into a sum of several forcing functions, then the sum of particular solutions with these individual forcing functions yields a particular solution of the original equation. The following theorem addresses this property.    Let and be continuous on an interval Suppose is a solution of for each Then the function is a solution of on      Define the linear differential operator on the class of -times differentiable functions by Since each satisfies , we have Then the linearity of the differential operator implies This shows that the function is a solution of on      Find first a particular solution and then the general solution of     The auxiliary equation of the associated homogeneous equation is whose complex roots are Therefore, the complementary function of the general solution of is where and are arbitrary constants.  To find a particular solution of , we split the forcing term into four simpler terms: In view of , we find particular solutions and then add them together.  Since in is a solution of the homogeneous equation, we take and find , . Thus,   For we take and find , Thus,   For , we try the quadratic and find , , Thus,   For , we take   and find Thus,   By , a particular solution of is given by   Hence the general solution of is where and are arbitrary constants.     Some Basic Trial Particular Solutions   In principle, the method of undetermined coefficients can always be employed; however, it requires an educated guess for particular trial solution . summarizes the basic form of a trial particular solution for a given forcing function when the forcing function is a polynomial, exponential, sine, cosine, or a linear combination of these functions, provided no term in a trial duplicates any term in the complementary function . If a term in a trial duplicates a term in , then we modify by multiplying it by , where is the smallest integer such that no term in the modified duplicates a term in . These ideas also apply to higher order linear equations.   Basic trial particular solutions        Basic trial particular solution                                                                                  In , the general polynomial is of degree with known coefficients and  are general polynomials of degree with undetermined coefficients. Also, , , are known constants, and and are undetermined constants.    Method of Operator Factorization  In this subsection, we discuss yet another method for finding particular solutions of a second order nonhomogeneous linear equations of the form where are continuous on some interval . For simplicity, we will restrict our attention to equations with constant coefficients and include only a few examples involving variable coefficients. The method extends naturally to higher-order linear equations, which we will briefly discuss in .  We let denote the differential operator defined by Higher order differential operators are denoted by integer powers of For example, and so forth. The differential operator of order is the identity operator denoted by and defined by With these notations, the second order equation can be written as or more concisely, where denotes the corresponding second order differential operator.  To introduce the operator method, we begin by considering the first order linear equation where and are continuous on an interval The equation in operator notation can be written as Formally, a solution may be expressed as Since a solution of is given by where is an arbitrary constant. A particular solution (with ) is given by In particular, if a constant, then the formula takes the form   We next study in the case where and are constants. When formally substituting with in we get which is the characteristic polynomial for the homogeneous equation If the polynomial factors as where may be real or complex, then the operator factors correspondingly as Thus, can be written a composition of two first order differential operators. Moreover, we find Since and it follows that and hence the factors commute. A particular solution of is expressed formally by In this situation, a solution of can be written formally as and it can be obtained by applying successively to these two first order operators.  Thus, the method of operators is based on the following idea: if we can factor the differential operator into a product of two first order operators, say then we can solve the equation by solving two first order equations in succession. We will illustrate this method with several examples. These techniques extend naturally to higher order linear equations.  The following example illustrates these techniques.     Find the general solution of     The equation in the operator form is where By , a particular solution is formally given by Using and integrating by parts, we get Consequently, again by and integrating by parts, we obtain   Hence the general solution of the nonhomogeneous equation is where and are arbitrary constants.    The formula can sometimes be more conveniently used using partial fraction decomposition: with the constants and to be evaluated. We can then evaluate the individual terms by using . Let us revisit with this technique.    Find a particular solution of     In , we have Suppose and are constants for which Then we find and In view of , we have which, by and integration by parts, yields     The partial fraction decomposition method employed in works naturally for higher order equations as well.  The next example shows how we deal with the case when certain factor is repeated.    Find a particular solution of     The equation in the operator form is where By , a particular solution is formally given by By , we have Then, by , we obtain     Whenever contains a factor of the form a more convenient method exists. To discuss this, suppose for some continuous function Suppose  and real or complex constants. Then and Thus, we have We also have a similar property of the inverse operator; namely, To see this, using , we have which yields .  The formulas and are called the  exponential shifting properties  of and its inverse operator, respectively. The next example provides an application of the exponential shifting properties.    Find a particular solution of by using the exponential shifting properties.    We can write By the exponential shifting property of the inverse operator, we have Since we have By using partial fraction decomposition and then applying and integration by parts, we get     When the coefficient functions and are variable, the factors of generally do not commute, as illustrated in .     Find a particular solution of     The equation in the operator form is where By inspection, may be factored as or and so which one is it? Direct computation shows and Thus, we only have Then turns into Put Then we have which is a first order linear equation in In view of , a particular solution of this equation is given by The constant of integration is chosen so as to simplify the integral below. Using this for in we obtain By , a particular solution of this equation is given by     We note that a fundamental set of solutions for the equation in involves an integral that cannot be evaluated in terms of elementary functions. We can construct the general solution by leaving these integrals unevaluated. A sketch of this construction is outlined in .    Find the general solution of the Cauchy-Euler equation using the method of operator factorization.    In the operator notation, the equation reads By inspection, the differential operator can be factored as and this product is commutative. For the general conditions under which the product of two binomial differential operators with variable coefficients commutes, see . Then the differential equation reads Let Then the equation in reads which is linear in , that is, The solution of this equation is given formally by By , we obtain   where is an arbitrary constant. Since we have that is, the solution of which is given formally by In view of , the general solution is given by where is an arbitrary constant.       Variation of Parameters        Solve the following differential equations using the method of variation of parameters to find particular solutions.                                                                            Find the general solution of each differential (Cauchy-Euler) equation below using the variation of parameters to find particular solutions.                           Find the general solution of each differential equation below. One nontrivial solution to the associated homogeneous equation is provided.                               Show that in may be written as where are in and with , the Wronskian of and . The function is called the Green's function for .    Use the Green's function derived in to find a particular solution of     Use to express a particular solution of where is in the form The integral on the right with is called the convolution of and in the context of the Laplace transform (see in ).     Show that the solution of with the initial conditions and is     Use the following rule for differentiating under the integral sign: if then      Use the result in to obtain the solution of the differential equation in satisfying        Method of Undetermined Coefficients        Find the general solution of each of the following nonhomogeneous linear differential equations.                                                                            Let be a fixed positive constant. Find the solution of the initial value problem by following the steps below.    Find the solution of the initial value problem for     Denote by the solution obtained in . For each in evaluate the limit     Verify that the function defined by is the solution of     Obtain the solution found in part by using the method of undetermined coefficients to find a particular solution.      Solve the following initial value problems and plot the corresponding solutions using a graphing utility. Describe any differences you observe in the behavior of the two solutions.                   Method of Operator Factorization        Find a particular solution of by using the method used in .    Find a particular solution of by using the method used in .    Find a particular solution of each of the following equations by using the method used in (the exponential shifting properties).                Use the exponential shifting properties to show that the general solution of the homogeneous equation where a real constant, has with and arbitrary constants.    Find a particular solution of by using the method used in .    Determine a fundamental set of solutions of by following the steps below.    Express in operator from as     Solve to obtain a nonzero solution and verify that is indeed a solution of .    Find a function by using the Liouville reduction formula so that forms a fundamental set of solutions for .      Let be differentiable functions on an interval Prove that if and only if     Let be a continuous function on some interval Let and be differentiable functions on Prove the following general exponential shifting properties.                Use the shifting properties established in to find a particular solution of each of the following equations.                   "
 },
 {
   "id": "sec-3-3-2",
@@ -520,7 +520,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "3.3",
   "title": "",
-  "body": "   Learn common methods for solving second order nonhomogeneous linear differential equations.    "
+  "body": "   Understand the structure of the general solution of second order nonhomogeneous linear differential equations.    Learn methods for solving second order nonhomogeneous linear differential equations.    Apply the methods to solve initial value problems for second order nonhomogeneous linear differential equations.    "
 },
 {
   "id": "thm-second-order-nonhomogeneous-general-solution",
@@ -574,12 +574,12 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.3.4",
   "title": "",
-  "body": "  Solve the initial value problem by variation of parameters.    The auxiliary equation for the associated homogeneous equation is which gives and so the functions form a fundamental set solutions to The Wronskian of and is We note that the given nonhomogeneous equation is in the standard form with and therefore a particular solution by the method of variation of parameters is given by Then the integration by parts with the Kronecker method (see ) gives    Kronecker method for integration by parts      Derivative  Integral     4x^2    8x    8    0    e^{4x}    \\frac{1}{4}e^{4x}    \\frac{1}{16}e^{4x}    \\frac{1}{64}e^{4x}             +    -    +         In a similar manner, we also evaluate Then becomes The general solution of the nonhomogeneous differential equation is where and are arbitrary constants. Since we get We find Since we have Using , we get , so that Hence the solution to the given initial value problem is on    "
+  "body": "  Solve the initial value problem by variation of parameters.    The auxiliary equation for the associated homogeneous equation is which gives and so the functions form a fundamental set solutions to The Wronskian of and is We note that the given nonhomogeneous equation is in the standard form with and therefore a particular solution by the method of variation of parameters is given by Then the integration by parts with the Kronecker method (see ) gives   Kronecker method for integration by parts      In a similar manner, we also evaluate Then becomes The general solution of the nonhomogeneous differential equation is where and are arbitrary constants. Since we get We find Since we have Using , we get , so that Hence the solution to the given initial value problem is on    "
 },
 {
-  "id": "subsec-3-3-2-2",
+  "id": "subsec-undetermined-coefficients-2",
   "level": "2",
-  "url": "sec-3-3.html#subsec-3-3-2-2",
+  "url": "sec-3-3.html#subsec-undetermined-coefficients-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -595,13 +595,13 @@ var ptx_lunr_docs = [
   "body": "  Find a particular solution of by using the method of undetermined coefficients and write down the general solution.    Let be a particular solution of the equation, where is a constant to be determined. Differentiating yields Substituting these into gives i.e., an identity in This implies Therefore, is a particular solution.  To determine the complementary function of the general solution, the auxiliary equation for the associated homogeneous equation is whose roots are and Then the complementary function is given by where and are arbitrary constants. Finally, the general solution of is where and are arbitrary constants.   "
 },
 {
-  "id": "subsec-3-3-2-4",
+  "id": "subsec-undetermined-coefficients-4",
   "level": "2",
-  "url": "sec-3-3.html#subsec-3-3-2-4",
+  "url": "sec-3-3.html#subsec-undetermined-coefficients-4",
   "type": "Remark",
   "number": "3.3.7",
   "title": "",
-  "body": "    The method of undetermined coefficients is most effective when the forcing function is a polynomial, exponential, sine, cosine, or a linear combination of these functions.    A particular solution of a differential equation is just one member of the family represented by its general solution, and thus infinitely many particular solutions exist. In , the guess for was relatively easy to make by observing that the equation has no first derivative term and its forcing function is     When variation of parameters may involve complicated integrals, the method of undetermined coefficients may be a quicker alternative technique for finding particular solutions of equations with constant coefficients and simple combination of elementary functions for remarked in part (i). The method of undetermined coefficients, however, requires a well-informed guessing for , which makes it challenging to apply even when is a common function, such as or .     "
+  "body": "    The method of undetermined coefficients is most effective when the forcing function is a polynomial, exponential, sine, cosine, or a linear combination of these functions.    When variation of parameters may involve complicated integrals, the method of undetermined coefficients may be a quicker alternative technique for finding particular solutions of equations with constant coefficients and simple combination of elementary functions for remarked in part (i). The method of undetermined coefficients, however, requires a well-informed guessing for , which makes it challenging to apply even when is a common function, such as or .    A particular solution of a differential equation is just one member of the family represented by its general solution, and thus infinitely many particular solutions exist. In , the guess for was relatively easy to make by observing that the equation has no first derivative term and its forcing function is      "
 },
 {
   "id": "example-udc-2",
@@ -629,6 +629,285 @@ var ptx_lunr_docs = [
   "number": "3.3.10",
   "title": "",
   "body": "  Find the general solution of     The auxiliary equation of the associated homogeneous equation is whose complex roots are Therefore, the complementary function of the general solution of the nonhomogeneous equitation is where and arbitrary constants. If was not known in advance, we might initially guess with and as undetermined coefficients. However, this form of duplicates and it cannot satisfy the nonhomogeneous equation. A point of action is to modify to This will work! Let us proceed to determine and Differentiating gives Substituting these into the nonhomogeneous equation yields For this to be an identity in we must have so is a particular solution of , and therefore its general solution is where and arbitrary constants.   "
+},
+{
+  "id": "thm-superposition-particular-solutions",
+  "level": "2",
+  "url": "sec-3-3.html#thm-superposition-particular-solutions",
+  "type": "Theorem",
+  "number": "3.3.11",
+  "title": "",
+  "body": "  Let and be continuous on an interval Suppose is a solution of for each Then the function is a solution of on    "
+},
+{
+  "id": "subsec-undetermined-coefficients-12",
+  "level": "2",
+  "url": "sec-3-3.html#subsec-undetermined-coefficients-12",
+  "type": "Proof",
+  "number": "3.3.2.1",
+  "title": "",
+  "body": " Define the linear differential operator on the class of -times differentiable functions by Since each satisfies , we have Then the linearity of the differential operator implies This shows that the function is a solution of on   "
+},
+{
+  "id": "subsec-undetermined-coefficients-13",
+  "level": "2",
+  "url": "sec-3-3.html#subsec-undetermined-coefficients-13",
+  "type": "Example",
+  "number": "3.3.12",
+  "title": "",
+  "body": "  Find first a particular solution and then the general solution of     The auxiliary equation of the associated homogeneous equation is whose complex roots are Therefore, the complementary function of the general solution of is where and are arbitrary constants.  To find a particular solution of , we split the forcing term into four simpler terms: In view of , we find particular solutions and then add them together.  Since in is a solution of the homogeneous equation, we take and find , . Thus,   For we take and find , Thus,   For , we try the quadratic and find , , Thus,   For , we take   and find Thus,   By , a particular solution of is given by   Hence the general solution of is where and are arbitrary constants.   "
+},
+{
+  "id": "table-particular-solutions",
+  "level": "2",
+  "url": "sec-3-3.html#table-particular-solutions",
+  "type": "Table",
+  "number": "3.3.13",
+  "title": "Basic trial particular solutions",
+  "body": " Basic trial particular solutions        Basic trial particular solution                                                                                 "
+},
+{
+  "id": "example-operator-method-1",
+  "level": "2",
+  "url": "sec-3-3.html#example-operator-method-1",
+  "type": "Example",
+  "number": "3.3.14",
+  "title": "",
+  "body": "  Find the general solution of     The equation in the operator form is where By , a particular solution is formally given by Using and integrating by parts, we get Consequently, again by and integrating by parts, we obtain   Hence the general solution of the nonhomogeneous equation is where and are arbitrary constants.   "
+},
+{
+  "id": "example-operator-method-2",
+  "level": "2",
+  "url": "sec-3-3.html#example-operator-method-2",
+  "type": "Example",
+  "number": "3.3.15",
+  "title": "",
+  "body": "  Find a particular solution of     In , we have Suppose and are constants for which Then we find and In view of , we have which, by and integration by parts, yields    "
+},
+{
+  "id": "subsec-method-operators-13",
+  "level": "2",
+  "url": "sec-3-3.html#subsec-method-operators-13",
+  "type": "Example",
+  "number": "3.3.16",
+  "title": "",
+  "body": "  Find a particular solution of     The equation in the operator form is where By , a particular solution is formally given by By , we have Then, by , we obtain    "
+},
+{
+  "id": "subsec-method-operators-15",
+  "level": "2",
+  "url": "sec-3-3.html#subsec-method-operators-15",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "exponential shifting properties "
+},
+{
+  "id": "example-shifting-properties",
+  "level": "2",
+  "url": "sec-3-3.html#example-shifting-properties",
+  "type": "Example",
+  "number": "3.3.17",
+  "title": "",
+  "body": "  Find a particular solution of by using the exponential shifting properties.    We can write By the exponential shifting property of the inverse operator, we have Since we have By using partial fraction decomposition and then applying and integration by parts, we get    "
+},
+{
+  "id": "eg-operator-method-3",
+  "level": "2",
+  "url": "sec-3-3.html#eg-operator-method-3",
+  "type": "Example",
+  "number": "3.3.18",
+  "title": "",
+  "body": "  Find a particular solution of     The equation in the operator form is where By inspection, may be factored as or and so which one is it? Direct computation shows and Thus, we only have Then turns into Put Then we have which is a first order linear equation in In view of , a particular solution of this equation is given by The constant of integration is chosen so as to simplify the integral below. Using this for in we obtain By , a particular solution of this equation is given by    "
+},
+{
+  "id": "subsec-method-operators-20",
+  "level": "2",
+  "url": "sec-3-3.html#subsec-method-operators-20",
+  "type": "Example",
+  "number": "3.3.19",
+  "title": "",
+  "body": "  Find the general solution of the Cauchy-Euler equation using the method of operator factorization.    In the operator notation, the equation reads By inspection, the differential operator can be factored as and this product is commutative. For the general conditions under which the product of two binomial differential operators with variable coefficients commutes, see . Then the differential equation reads Let Then the equation in reads which is linear in , that is, The solution of this equation is given formally by By , we obtain   where is an arbitrary constant. Since we have that is, the solution of which is given formally by In view of , the general solution is given by where is an arbitrary constant.   "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-1-3",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-1-3",
+  "type": "Exercise",
+  "number": "3.3.4.1",
+  "title": "",
+  "body": " Solve the following differential equations using the method of variation of parameters to find particular solutions.                                                                          "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-1-4",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-1-4",
+  "type": "Exercise",
+  "number": "3.3.4.2",
+  "title": "",
+  "body": " Find the general solution of each differential (Cauchy-Euler) equation below using the variation of parameters to find particular solutions.                         "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-1-5",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-1-5",
+  "type": "Exercise",
+  "number": "3.3.4.3",
+  "title": "",
+  "body": " Find the general solution of each differential equation below. One nontrivial solution to the associated homogeneous equation is provided.                             "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-Green-function-1",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-Green-function-1",
+  "type": "Exercise",
+  "number": "3.3.4.4",
+  "title": "",
+  "body": " Show that in may be written as where are in and with , the Wronskian of and . The function is called the Green's function for .  "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-1-7",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-1-7",
+  "type": "Exercise",
+  "number": "3.3.4.5",
+  "title": "",
+  "body": " Use the Green's function derived in to find a particular solution of   "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-Green-function-2",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-Green-function-2",
+  "type": "Exercise",
+  "number": "3.3.4.6",
+  "title": "",
+  "body": " Use to express a particular solution of where is in the form The integral on the right with is called the convolution of and in the context of the Laplace transform (see in ).  "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-1-9",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-1-9",
+  "type": "Exercise",
+  "number": "3.3.4.7",
+  "title": "",
+  "body": "  Show that the solution of with the initial conditions and is     Use the following rule for differentiating under the integral sign: if then    "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-1-10",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-1-10",
+  "type": "Exercise",
+  "number": "3.3.4.8",
+  "title": "",
+  "body": " Use the result in to obtain the solution of the differential equation in satisfying   "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-2-3",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-2-3",
+  "type": "Exercise",
+  "number": "3.3.4.9",
+  "title": "",
+  "body": " Find the general solution of each of the following nonhomogeneous linear differential equations.                                                                          "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-2-4",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-2-4",
+  "type": "Exercise",
+  "number": "3.3.4.10",
+  "title": "",
+  "body": " Let be a fixed positive constant. Find the solution of the initial value problem by following the steps below.    Find the solution of the initial value problem for     Denote by the solution obtained in . For each in evaluate the limit     Verify that the function defined by is the solution of     Obtain the solution found in part by using the method of undetermined coefficients to find a particular solution.    "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-2-5",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-2-5",
+  "type": "Exercise",
+  "number": "3.3.4.11",
+  "title": "",
+  "body": " Solve the following initial value problems and plot the corresponding solutions using a graphing utility. Describe any differences you observe in the behavior of the two solutions.              "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-3-3",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-3-3",
+  "type": "Exercise",
+  "number": "3.3.4.12",
+  "title": "",
+  "body": " Find a particular solution of by using the method used in .  "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-3-4",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-3-4",
+  "type": "Exercise",
+  "number": "3.3.4.13",
+  "title": "",
+  "body": " Find a particular solution of by using the method used in .  "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-3-5",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-3-5",
+  "type": "Exercise",
+  "number": "3.3.4.14",
+  "title": "",
+  "body": " Find a particular solution of each of the following equations by using the method used in (the exponential shifting properties).              "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-3-6",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-3-6",
+  "type": "Exercise",
+  "number": "3.3.4.15",
+  "title": "",
+  "body": " Use the exponential shifting properties to show that the general solution of the homogeneous equation where a real constant, has with and arbitrary constants.  "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-3-7",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-3-7",
+  "type": "Exercise",
+  "number": "3.3.4.16",
+  "title": "",
+  "body": " Find a particular solution of by using the method used in .  "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-3-8",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-3-8",
+  "type": "Exercise",
+  "number": "3.3.4.17",
+  "title": "",
+  "body": " Determine a fundamental set of solutions of by following the steps below.    Express in operator from as     Solve to obtain a nonzero solution and verify that is indeed a solution of .    Find a function by using the Liouville reduction formula so that forms a fundamental set of solutions for .    "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-3-9",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-3-9",
+  "type": "Exercise",
+  "number": "3.3.4.18",
+  "title": "",
+  "body": " Let be differentiable functions on an interval Prove that if and only if   "
+},
+{
+  "id": "exercises-shifting-properties",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-shifting-properties",
+  "type": "Exercise",
+  "number": "3.3.4.19",
+  "title": "",
+  "body": " Let be a continuous function on some interval Let and be differentiable functions on Prove the following general exponential shifting properties.              "
+},
+{
+  "id": "exercises-nonhomogeneous-DEs-3-11",
+  "level": "2",
+  "url": "sec-3-3.html#exercises-nonhomogeneous-DEs-3-11",
+  "type": "Exercise",
+  "number": "3.3.4.20",
+  "title": "",
+  "body": " Use the shifting properties established in to find a particular solution of each of the following equations.                "
 },
 {
   "id": "sec-3-4",

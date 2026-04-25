@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Solve the initial value problem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'' + 8 y' + 16 y = 4 x,\quad y(0) = 0,\; y'(0) = 0
+\end{equation*}
+</div>
+<div class="para">by variation of parameters.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-variation-parameters-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The auxiliary equation for the associated homogeneous equation is <span class="process-math">\(\lambda^2 +
+8\lambda + 16 = 0\)</span> which gives <span class="process-math">\(\lambda = -4, -4,\)</span> and so the functions</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/kronecker-method.html">
+\begin{equation*}
+y_1(x) = e^{-4x}, \quad y_2(x) = x e^{-4x}
+\end{equation*}
+</div>
+<div class="para">form a fundamental set solutions to <span class="process-math">\(y'' + 8 y' + 16 y=0.\)</span> The Wronskian of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/kronecker-method.html">
+\begin{equation*}
+W(x) = \begin{vmatrix} e^{-4x} &amp; x e^{-4x} \\ -4 e^{-4x} &amp; (1 - 4x)
+e^{-4x} \end{vmatrix} = e^{-8x} (1 - 4x + 4x) = e^{-8x}.
+\end{equation*}
+</div>
+<div class="para">We note that the given nonhomogeneous equation is in the standard form with <span class="process-math">\(f(x)
+= 4x\)</span> and therefore a particular solution by the method of variation of parameters is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/kronecker-method.html">
+\begin{equation*}
+y_p = -y_1 \int \frac{y_2 f}{W} dx + y_2 \int \frac{y_1 f}{W} dx.
+\end{equation*}
+</div>
+<div class="para">Then the integration by parts with the Kronecker method (see <a href="sec-3-3.html#kronecker-method" class="xref" data-knowl="./knowl/xref/kronecker-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.3.5">Figure 3.3.5</a>) gives</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-variation-parameters-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/kronecker.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Kronecker method for integration by parts<div class="autopermalink" data-description="Figure 3.3.5"><a href="#kronecker-method" title="Copy heading and permalink for Figure 3.3.5" aria-label="Copy heading and permalink for Figure 3.3.5">🔗</a></div></figcaption></figure><div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{y_2 f}{W} dx= \int \frac{4x^2 e^{-4x}}{e^{-8x}}\, dx =x^2 e^{4x}
+- \frac{1}{2} x e^{4x} + \frac{1}{8} e^{4x}.
+\end{equation*}
+</div>
+<div class="para">In a similar manner, we also evaluate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{y_1 f}{W} dx=\int \frac{4x e^{-4x}}{e^{-8x}}\, dx= \int 4x e^{4x}
+dx = x e^{4x} - \frac{1}{4} e^{4x}.
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(y_p\)</span> becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned} y_p &amp;= -e^{-4x} \left( x^2 e^{4x} - \frac{1}{2} x e^{4x}
++ \frac{1}{8} e^{4x} \right) + x e^{-4x}\left( x e^{4x} - \frac{1}{4} e^{4x}
+\right)\\ &amp;=- x^2 + \frac{x}{2} - \frac{1}{8} + x^2 - \frac{x}{4}\\
+&amp;=\frac{x}{4} - \frac{1}{8}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">The general solution of the nonhomogeneous differential equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x) = c_1 e^{-4x} + c_2 x e^{-4x} + \frac{x}{4} - \frac{1}{8},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. Since <span class="process-math">\(y(0) = 0,\)</span> we get <span class="process-math">\(c_1 = \frac{1}{8}.\)</span> We find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'(x) = -4 c_1 e^{-4x} + c_2 e^{-4x} - 4 c_2 x e^{-4x} + \frac{1}{4}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(y'(0) =0,\)</span> we have<span class="process-math">\(-4 c_1 + c_2 + \frac{1}{4} = 0.\)</span> Using <span class="process-math">\(c_1=
+\frac{1}{8}\text{,}\)</span> we get <span class="process-math">\(-\frac{1}{2} + c_2 + \frac{1}{4} = 0\text{,}\)</span> so that <span class="process-math">\(c_2
+= \frac{1}{4}.\)</span> Hence the solution to the given initial value problem is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x) = \frac{1}{8} e^{-4x} + \frac{1}{4} x e^{-4x} + \frac{x}{4} - \frac{1}{8}
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\((-\infty, \infty).\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-variation-parameters-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.4.1"><a href="#eg-variation-parameters-2" title="Copy heading and permalink for Solution 3.3.4.1" aria-label="Copy heading and permalink for Solution 3.3.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.4"><a href="#eg-variation-parameters" title="Copy heading and permalink for Example 3.3.4" aria-label="Copy heading and permalink for Example 3.3.4">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-3-3.html#eg-variation-parameters">in-context</a></span>
+</body>
+</html>

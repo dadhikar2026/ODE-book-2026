@@ -172,7 +172,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Second Order Nonhomogeneous Linear Differential Equations</span></a></div>
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-variation-parameters" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Variation of Parameters</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-3-3-2" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Method of Undetermined Coefficients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-undetermined-coefficients" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Method of Undetermined Coefficients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-method-operators" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Method of Operator Factorization</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-3.html#exercises-nonhomogeneous-DEs" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -284,11 +286,23 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second Order Nonhomogeneous Linear Differential Equations</span>
 </h2>
 <article class="objectives goal-like" id="sec-3-3-2"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ul class="disc" id="sec-3-3-2-1"><li id="sec-3-3-2-1-1">
-<div class="para" id="sec-3-3-2-1-1-1">Learn common methods for solving second order nonhomogeneous linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="sec-3-3-2-1">
+<li id="sec-3-3-2-1-1">
+<div class="para" id="sec-3-3-2-1-1-1">Understand the structure of the general solution of second order nonhomogeneous linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-3-3-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
-</li></ul>
+</li>
+<li id="sec-3-3-2-1-2">
+<div class="para" id="sec-3-3-2-1-2-1">Learn methods for solving second order nonhomogeneous linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec-3-3-2-1-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec-3-3-2-1-3">
+<div class="para" id="sec-3-3-2-1-3-1">Apply the methods to solve initial value problems for second order nonhomogeneous linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec-3-3-2-1-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
 <div class="autopermalink" data-description="Objectives 3.3"><a href="#sec-3-3-2" title="Copy heading and permalink for Objectives 3.3" aria-label="Copy heading and permalink for Objectives 3.3">🔗</a></div></article><section class="introduction" id="sec-3-3-3"><div class="para" id="sec-3-3-3-1">In this section, we discuss methods for solving second order nonhomogeneous linear differential equations. The same ideas extend naturally to higher order equation (see <a href="sec-3-4.html" class="internal" title="Section 3.4: Higher Order Linear Differential Equations">Section 3.4</a>). The following is concerning how the general solutions of nonhomogeneous linear differential equations must be formatted.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-second-order-nonhomogeneous-general-solution"><h3 class="heading">
@@ -497,7 +511,7 @@ y = y_h + y_p = c_1 y_1 + c_2 y_2 - y_1 \int \frac{y_2 f}{W} \, dx + y_2 \int
 <article class="remark remark-like" id="subsec-variation-parameters-7"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="subsec-variation-parameters-7-1">The main advantage of the method of <em class="emphasis">variation of parameters</em> over the method of <em class="emphasis">undetermined coefficients</em> is that it is applicable to all non homogeneous linear differential equations, including the equations with variable coefficients. However, the evaluation of the integrals in <a href="sec-3-3.html#eq-VOP-integrals" class="xref" data-knowl="./knowl/xref/eq-VOP-integrals.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.9">(3.3.9)</a> can become quite cumbersome even when <span class="process-math">\(f(x)\)</span> involves only elementary functions, such as the ones treated with the method of undetermined coefficients discussed <a href="sec-3-3.html#subsec-3-3-2" class="internal" title="Subsection 3.3.2: Method of Undetermined Coefficients">Subsection 3.3.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-variation-parameters-7-1">The main advantage of the method of <em class="emphasis">variation of parameters</em> over the method of <em class="emphasis">undetermined coefficients</em> is that it is applicable to all non homogeneous linear differential equations, including the equations with variable coefficients. However, the evaluation of the integrals in <a href="sec-3-3.html#eq-VOP-integrals" class="xref" data-knowl="./knowl/xref/eq-VOP-integrals.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.9">(3.3.9)</a> can become quite cumbersome even when <span class="process-math">\(f(x)\)</span> involves only elementary functions, such as the ones treated with the method of undetermined coefficients discussed <a href="sec-3-3.html#subsec-undetermined-coefficients" class="internal" title="Subsection 3.3.2: Method of Undetermined Coefficients">Subsection 3.3.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Remark 3.3.3"><a href="#subsec-variation-parameters-7" title="Copy heading and permalink for Remark 3.3.3" aria-label="Copy heading and permalink for Remark 3.3.3">🔗</a></div></article><div class="para" id="subsec-variation-parameters-8">We illustrate the method of variation of parameters with the following initial value problem which can be readily solved using the method of undetermined coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-variation-parameters-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -539,7 +553,7 @@ y_p = -y_1 \int \frac{y_2 f}{W} dx + y_2 \int \frac{y_1 f}{W} dx.
 <div class="para">Then the integration by parts with the Kronecker method (see <a href="sec-3-3.html#kronecker-method" class="xref" data-knowl="./knowl/xref/kronecker-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.3.5">Figure 3.3.5</a>) gives</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg-variation-parameters-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="kronecker-method"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/slope-field.svg" role="img" class="contained"></div>
+<figure class="figure figure-like" id="kronecker-method"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/kronecker.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Kronecker method for integration by parts<div class="autopermalink" data-description="Figure 3.3.5"><a href="#kronecker-method" title="Copy heading and permalink for Figure 3.3.5" aria-label="Copy heading and permalink for Figure 3.3.5">🔗</a></div></figcaption></figure><div class="para logical" id="eg-variation-parameters-2-3">
 <div class="displaymath process-math" id="eg-variation-parameters-2-3-1">
 \begin{equation*}
@@ -590,20 +604,20 @@ y(x) = \frac{1}{8} e^{-4x} + \frac{1}{4} x e^{-4x} + \frac{x}{4} - \frac{1}{8}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.4.1"><a href="#eg-variation-parameters-2" title="Copy heading and permalink for Solution 3.3.4.1" aria-label="Copy heading and permalink for Solution 3.3.4.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.3.4"><a href="#eg-variation-parameters" title="Copy heading and permalink for Example 3.3.4" aria-label="Copy heading and permalink for Example 3.3.4">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3.1: Variation of Parameters"><a href="#subsec-variation-parameters" title="Copy heading and permalink for Subsection 3.3.1: Variation of Parameters" aria-label="Copy heading and permalink for Subsection 3.3.1: Variation of Parameters">🔗</a></div></section><section class="subsection" id="subsec-3-3-2"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Example 3.3.4"><a href="#eg-variation-parameters" title="Copy heading and permalink for Example 3.3.4" aria-label="Copy heading and permalink for Example 3.3.4">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3.1: Variation of Parameters"><a href="#subsec-variation-parameters" title="Copy heading and permalink for Subsection 3.3.1: Variation of Parameters" aria-label="Copy heading and permalink for Subsection 3.3.1: Variation of Parameters">🔗</a></div></section><section class="subsection" id="subsec-undetermined-coefficients"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method of Undetermined Coefficients</span>
 </h3>
-<div class="para logical" id="subsec-3-3-2-2">
+<div class="para logical" id="subsec-undetermined-coefficients-2">
 <div class="para">We note that variation of parameters often leads to integrals that can be quite involved and sometimes unexpectedly time-consuming even for simple forcing terms such as <span class="process-math">\(f(x)
 = \sin x\text{.}\)</span> For instance, to find a particular solution of</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/example-udc-2.html" id="subsec-3-3-2-2-2">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-udc-1.html ./knowl/xref/example-udc-2.html" id="subsec-undetermined-coefficients-2-2">
 \begin{equation*}
 y'' - 9y = \sin x,
 \end{equation*}
 </div>
 <div class="para">one may instead <em class="emphasis">guess</em> a solution of the form <span class="process-math">\(y_p(x) = A\sin x\)</span> (or a slightly more general form, <span class="process-math">\(y_p(x) = A\sin x
 +B\cos x,\)</span> if needed). See <a href="sec-3-3.html#example-udc-1" class="xref" data-knowl="./knowl/xref/example-udc-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.6">Example 3.3.6</a> and <a href="sec-3-3.html#example-udc-2" class="xref" data-knowl="./knowl/xref/example-udc-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.8">Example 3.3.8</a> below. This strategy of guessing a trial function for <span class="process-math">\(y_p\)</span> based on type of <span class="process-math">\(f(x)\)</span> and determining the unknown constant coefficients in the trial function is known as the method of <dfn class="terminology"><em class="emphasis">undetermined coefficients</em></dfn>. However, a demerit of this method is that it becomes quite complicated when differential equations has variable coefficients.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-3-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="example-udc-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -683,32 +697,32 @@ y = y_h(x)+y_p(x) = c_1 e^{3x} + c_2 e^{-3x}+\frac{1}{8}\sin x,
 </div>
 <div class="autopermalink" data-description="Solution 3.3.6.1"><a href="#example-udc-1-2" title="Copy heading and permalink for Solution 3.3.6.1" aria-label="Copy heading and permalink for Solution 3.3.6.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.3.6"><a href="#example-udc-1" title="Copy heading and permalink for Example 3.3.6" aria-label="Copy heading and permalink for Example 3.3.6">🔗</a></div></article></details><article class="remark remark-like" id="subsec-3-3-2-4"><h4 class="heading">
+<div class="autopermalink" data-description="Example 3.3.6"><a href="#example-udc-1" title="Copy heading and permalink for Example 3.3.6" aria-label="Copy heading and permalink for Example 3.3.6">🔗</a></div></article></details><article class="remark remark-like" id="subsec-undetermined-coefficients-4"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para logical" id="subsec-3-3-2-4-1">
-<ol class="lower-roman ol-marker-1" id="subsec-3-3-2-4-1-1">
-<li id="subsec-3-3-2-4-1-1-1">
-<div class="para" id="subsec-3-3-2-4-1-1-1-1">The method of undetermined coefficients is most effective when the forcing function <span class="process-math">\(f(x)\)</span> is a polynomial, exponential, sine, cosine, or a linear combination of these functions.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-3-3-2-4-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="subsec-undetermined-coefficients-4-1">
+<ol class="lower-roman ol-marker-1" id="subsec-undetermined-coefficients-4-1-1">
+<li id="subsec-undetermined-coefficients-4-1-1-1">
+<div class="para" id="subsec-undetermined-coefficients-4-1-1-1-1">The method of undetermined coefficients is most effective when the forcing function <span class="process-math">\(f(x)\)</span> is a polynomial, exponential, sine, cosine, or a linear combination of these functions.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-4-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item i"><a href="#subsec-3-3-2-4-1-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+<div class="autopermalink" data-description="Item i"><a href="#subsec-undetermined-coefficients-4-1-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
 </li>
-<li id="subsec-3-3-2-4-1-1-2">
-<div class="para" id="subsec-3-3-2-4-1-1-2-1">A particular solution of a differential equation is just one member of the family represented by its general solution, and thus infinitely many particular solutions exist. In <a href="sec-3-3.html#example-udc-1" class="xref" data-knowl="./knowl/xref/example-udc-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.6">Example 3.3.6</a>, the guess for <span class="process-math">\(y_p\)</span> was relatively easy to make by observing that the equation has no first derivative term and its forcing function is <span class="process-math">\(\sin
-x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-3-3-2-4-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="subsec-undetermined-coefficients-4-1-1-2">
+<div class="para" id="subsec-undetermined-coefficients-4-1-1-2-1">When variation of parameters may involve complicated integrals, the method of undetermined coefficients may be a quicker alternative technique for finding particular solutions of equations with constant coefficients and simple combination of elementary functions for <span class="process-math">\(f(x)\)</span> remarked in part (i). The method of undetermined coefficients, however, requires a well-informed guessing for <span class="process-math">\(y_p\text{,}\)</span> which makes it challenging to apply even when <span class="process-math">\(f(x)\)</span> is a common function, such as <span class="process-math">\(\sec
+x\)</span> or <span class="process-math">\(\tan x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-4-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item ii"><a href="#subsec-3-3-2-4-1-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+<div class="autopermalink" data-description="Item ii"><a href="#subsec-undetermined-coefficients-4-1-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
 </li>
-<li id="subsec-3-3-2-4-1-1-3">
-<div class="para" id="subsec-3-3-2-4-1-1-3-1">When variation of parameters may involve complicated integrals, the method of undetermined coefficients may be a quicker alternative technique for finding particular solutions of equations with constant coefficients and simple combination of elementary functions for <span class="process-math">\(f(x)\)</span> remarked in part (i). The method of undetermined coefficients, however, requires a well-informed guessing for <span class="process-math">\(y_p\text{,}\)</span> which makes it challenging to apply even when <span class="process-math">\(f(x)\)</span> is a common function, such as <span class="process-math">\(\sec
-x\)</span> or <span class="process-math">\(\tan x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-3-3-2-4-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="subsec-undetermined-coefficients-4-1-1-3">
+<div class="para" id="subsec-undetermined-coefficients-4-1-1-3-1">A particular solution of a differential equation is just one member of the family represented by its general solution, and thus infinitely many particular solutions exist. In <a href="sec-3-3.html#example-udc-1" class="xref" data-knowl="./knowl/xref/example-udc-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.6">Example 3.3.6</a>, the guess for <span class="process-math">\(y_p\)</span> was relatively easy to make by observing that the equation has no first derivative term and its forcing function is <span class="process-math">\(\sin
+x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-4-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item iii"><a href="#subsec-3-3-2-4-1-1-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+<div class="autopermalink" data-description="Item iii"><a href="#subsec-undetermined-coefficients-4-1-1-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-3-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.3.7"><a href="#subsec-3-3-2-4" title="Copy heading and permalink for Remark 3.3.7" aria-label="Copy heading and permalink for Remark 3.3.7">🔗</a></div></article><div class="para" id="subsec-3-3-2-5">In the next example, the equation also has a first derivative term, so the trial solution used for <span class="process-math">\(y_p\)</span> in <a href="sec-3-3.html#example-udc-1" class="xref" data-knowl="./knowl/xref/example-udc-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.6">Example 3.3.6</a> does not work.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-3-3-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Remark 3.3.7"><a href="#subsec-undetermined-coefficients-4" title="Copy heading and permalink for Remark 3.3.7" aria-label="Copy heading and permalink for Remark 3.3.7">🔗</a></div></article><div class="para" id="subsec-undetermined-coefficients-5">In the next example, the equation also has a first derivative term, so the trial solution used for <span class="process-math">\(y_p\)</span> in <a href="sec-3-3.html#example-udc-1" class="xref" data-knowl="./knowl/xref/example-udc-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.6">Example 3.3.6</a> does not work.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="example-udc-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -821,7 +835,7 @@ x+\frac{3}{50}\cos x,
 </div>
 <div class="autopermalink" data-description="Solution 3.3.8.1"><a href="#example-udc-2-2" title="Copy heading and permalink for Solution 3.3.8.1" aria-label="Copy heading and permalink for Solution 3.3.8.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.3.8"><a href="#example-udc-2" title="Copy heading and permalink for Example 3.3.8" aria-label="Copy heading and permalink for Example 3.3.8">🔗</a></div></article></details><div class="para" id="subsec-3-3-2-7">In the previous two examples, we chose trial solutions <span class="process-math">\(y_p\)</span> before finding the complementary function without any difficulty. In general, however, a trial solution may include terms that duplicate in the complementary function, which are redundant (even useless) since they satisfy the associated homogeneous equation. Therefore, it is useful to determine the complementary function first and then select a trial function for a particular solution. We will typically follow this procedure from now on.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-3-3-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.3.8"><a href="#example-udc-2" title="Copy heading and permalink for Example 3.3.8" aria-label="Copy heading and permalink for Example 3.3.8">🔗</a></div></article></details><div class="para" id="subsec-undetermined-coefficients-7">In the previous two examples, we chose trial solutions <span class="process-math">\(y_p\)</span> before finding the complementary function without any difficulty. In general, however, a trial solution may include terms that duplicate in the complementary function, which are redundant (even useless) since they satisfy the associated homogeneous equation. Therefore, it is useful to determine the complementary function first and then select a trial function for a particular solution. We will typically follow this procedure from now on.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="example-udc-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -985,7 +999,1460 @@ y = c_1 \cos x + c_2 \sin x +\frac{1}{2}x\sin x,
 </div>
 <div class="autopermalink" data-description="Solution 3.3.10.1"><a href="#example-udc-4-2" title="Copy heading and permalink for Solution 3.3.10.1" aria-label="Copy heading and permalink for Solution 3.3.10.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.3.10"><a href="#example-udc-4" title="Copy heading and permalink for Example 3.3.10" aria-label="Copy heading and permalink for Example 3.3.10">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3.2: Method of Undetermined Coefficients"><a href="#subsec-3-3-2" title="Copy heading and permalink for Subsection 3.3.2: Method of Undetermined Coefficients" aria-label="Copy heading and permalink for Subsection 3.3.2: Method of Undetermined Coefficients">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Second Order Nonhomogeneous Linear Differential Equations"><a href="#sec-3-3" title="Copy heading and permalink for Section 3.3: Second Order Nonhomogeneous Linear Differential Equations" aria-label="Copy heading and permalink for Section 3.3: Second Order Nonhomogeneous Linear Differential Equations">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 3.3.10"><a href="#example-udc-4" title="Copy heading and permalink for Example 3.3.10" aria-label="Copy heading and permalink for Example 3.3.10">🔗</a></div></article></details><div class="para" id="subsec-undetermined-coefficients-10">When the forcing function can be decomposed into a sum of several forcing functions, then the sum of particular solutions with these individual forcing functions yields a particular solution of the original equation. The following theorem addresses this property.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-superposition-particular-solutions"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-superposition-particular-solutions-1-1">
+<div class="para">Let <span class="process-math">\(a_0(x), a_1(x), \dots, a_{n-1}(x)\)</span> and <span class="process-math">\(f_i(x), \quad i = 1, \dots,
+k,\)</span> be continuous on an interval <span class="process-math">\(I.\)</span> Suppose <span class="process-math">\(y_{p_i},\; i = 1,
+\dots, k,\)</span> is a solution of</div>
+<div class="displaymath process-math" id="eq-nonhomogeneous-particular-1">
+\begin{equation}
+y^{(n)}+ a_{n-1}(x)y^{(n-1)}+ \cdots+ + a_1(x) y' + a_0(x) y = f_i(x),\tag{3.3.15}
+\end{equation}
+</div>
+<div class="para">for each <span class="process-math">\(i = 1, \dots, k.\)</span> Then the function</div>
+<div class="displaymath process-math" id="thm-superposition-particular-solutions-1-1-7">
+\begin{equation*}
+y_p= \sum_{j=1}^ky_{p_j}(x)
+\end{equation*}
+</div>
+<div class="para">is a solution of</div>
+<div class="displaymath process-math" id="eq-nonhomogeneous-particular-3">
+\begin{equation}
+y^{(n)}+ a_{n-1}(x)y^{(n-1)}+ \cdots + a_1(x) y' + a_0(x) y =
+\sum_{j=1}^kf_j(x)\tag{3.3.16}
+\end{equation}
+</div>
+<div class="para">on <span class="process-math">\(I\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-superposition-particular-solutions-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.3.11"><a href="#thm-superposition-particular-solutions" title="Copy heading and permalink for Theorem 3.3.11" aria-label="Copy heading and permalink for Theorem 3.3.11">🔗</a></div></article><details id="subsec-undetermined-coefficients-12" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="subsec-undetermined-coefficients-12-1">
+<div class="para">Define the linear differential operator <span class="process-math">\(L\)</span> on the class of <span class="process-math">\(n\)</span>-times differentiable functions by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-particular-1.html ./knowl/xref/eq-nonhomogeneous-particular-1.html" id="subsec-undetermined-coefficients-12-1-3">
+\begin{equation*}
+L[y](x) = y^{(n)}+ a_{n-1}(x)y^{(n-1)}+ \cdots+ + a_1(x) y' + a_0(x) y.
+\end{equation*}
+</div>
+<div class="para">Since each <span class="process-math">\(y_{p_j}\)</span> satisfies <a href="sec-3-3.html#eq-nonhomogeneous-particular-1" class="xref" data-knowl="./knowl/xref/eq-nonhomogeneous-particular-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.15">(3.3.15)</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-particular-1.html ./knowl/xref/eq-nonhomogeneous-particular-1.html" id="subsec-undetermined-coefficients-12-1-6">
+\begin{equation*}
+L[y_{p_j}](x)= f_j(x) \quad \mbox{on } I,\quad j = 1, \dots, k.
+\end{equation*}
+</div>
+<div class="para">Then the linearity of the differential operator <span class="process-math">\(L\)</span> implies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-particular-1.html ./knowl/xref/eq-nonhomogeneous-particular-1.html" id="subsec-undetermined-coefficients-12-1-8">
+\begin{equation*}
+L\left[\sum_{j=1}^ky_{p_j}\right](x) =\sum_{j=1}^kL[y_{p_j}](x)= \sum_{j=1}^kf_j(x).
+\end{equation*}
+</div>
+<div class="para">This shows that the function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-particular-1.html ./knowl/xref/eq-nonhomogeneous-particular-1.html" id="subsec-undetermined-coefficients-12-1-9">
+\begin{equation*}
+y_p= \sum_{j=1}^ky_{p_j}
+\end{equation*}
+</div>
+<div class="para">is a solution of <a href="sec-3-3.html#eq-nonhomogeneous-particular-1" class="xref" data-knowl="./knowl/xref/eq-nonhomogeneous-particular-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.15">(3.3.15)</a> on <span class="process-math">\(I.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.3.2.1"><a href="#subsec-undetermined-coefficients-12" title="Copy heading and permalink for Proof 3.3.2.1" aria-label="Copy heading and permalink for Proof 3.3.2.1">🔗</a></div></article></details><details id="subsec-undetermined-coefficients-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-undetermined-coefficients-13-1-1">
+<div class="para">Find first a particular solution and then the general solution of</div>
+<div class="displaymath process-math" id="eq-udc-5">
+\begin{equation}
+y''+4y = 4\sin(2x)+8 \sin x+ 2x^2 -4x+ 3 e^x.\tag{3.3.17}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-undetermined-coefficients-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-undetermined-coefficients-13-2-1">
+<div class="para">The auxiliary equation of the associated homogeneous equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-5.html" id="subsec-undetermined-coefficients-13-2-1-1">
+\begin{equation*}
+y''+4y=0
+\end{equation*}
+</div>
+<div class="para">is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-5.html" id="subsec-undetermined-coefficients-13-2-1-2">
+\begin{equation*}
+\lambda^2 +4=0
+\end{equation*}
+</div>
+<div class="para">whose complex roots are <span class="process-math">\(\pm
+2i.\)</span> Therefore, the complementary function of the general solution of <a href="sec-3-3.html#eq-udc-5" class="xref" data-knowl="./knowl/xref/eq-udc-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.17">(3.3.17)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-5.html" id="subsec-undetermined-coefficients-13-2-1-5">
+\begin{equation*}
+y_h = c_1\cos x + c_2 \sin x,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-undetermined-coefficients-13-2-2">
+<div class="para">To find a particular solution of <a href="sec-3-3.html#eq-udc-5" class="xref" data-knowl="./knowl/xref/eq-udc-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.17">(3.3.17)</a>, we split the forcing term into four simpler terms:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-5.html ./knowl/xref/thm-superposition-particular-solutions.html" id="subsec-undetermined-coefficients-13-2-2-2">
+\begin{align*}
+&amp;f_1(x)=4\sin(2x), \quad f_2(x)=8\sin x, \\ &amp; f_3(x)=2x^2-4x,
+\quad f_4(x)=3e^x.
+\end{align*}
+</div>
+<div class="para">In view of <a href="sec-3-3.html#thm-superposition-particular-solutions" class="xref" data-knowl="./knowl/xref/thm-superposition-particular-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.11">Theorem 3.3.11</a>, we find particular solutions <span class="process-math">\(y_{p_1},y_{p_2},y_{p_3},y_{p_4}\)</span> and then add them together.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-undetermined-coefficients-13-2-3">
+<div class="para">Since <span class="process-math">\(\sin(2x)\)</span> in <span class="process-math">\(f_1(x)= 4\sin(2x)\)</span> is a solution of the homogeneous equation, we take</div>
+<div class="displaymath process-math" id="subsec-undetermined-coefficients-13-2-3-3">
+\begin{equation*}
+y_{p_1}(x) = x(A\cos(2x) + B\sin(2x)),
+\end{equation*}
+</div>
+<div class="para">and find <span class="process-math">\(A=-1\text{,}\)</span> <span class="process-math">\(B=0\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math" id="subsec-undetermined-coefficients-13-2-3-6">
+\begin{equation*}
+\boxed{y_{p_1}(x) = -x \cos(2x).}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-undetermined-coefficients-13-2-4">
+<div class="para">For <span class="process-math">\(f_2(x) =8 \sin x,\)</span> we take</div>
+<div class="displaymath process-math" id="subsec-undetermined-coefficients-13-2-4-2">
+\begin{equation*}
+y_{p_2}(x) = C \cos x + D \sin x
+\end{equation*}
+</div>
+<div class="para">and find <span class="process-math">\(C=0\text{,}\)</span> <span class="process-math">\(D=\frac{8}{3}.\)</span> Thus,</div>
+<div class="displaymath process-math" id="subsec-undetermined-coefficients-13-2-4-5">
+\begin{equation*}
+\boxed{y_{p_2}(x) = \frac{8}{3} \sin x.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-undetermined-coefficients-13-2-5">
+<div class="para">For <span class="process-math">\(f_3(x)= 2x^2-4x\text{,}\)</span> we try the quadratic</div>
+<div class="displaymath process-math" id="subsec-undetermined-coefficients-13-2-5-2">
+\begin{equation*}
+y_{p_3}(x) = E x^2 + F x + G.
+\end{equation*}
+</div>
+<div class="para">and find <span class="process-math">\(E=\frac12\text{,}\)</span> <span class="process-math">\(F=-1\text{,}\)</span> <span class="process-math">\(G=-\frac14.\)</span> Thus,</div>
+<div class="displaymath process-math" id="subsec-undetermined-coefficients-13-2-5-6">
+\begin{equation*}
+\boxed{y_{p_3}(x) = \frac12 x^2 - x - \frac14.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-undetermined-coefficients-13-2-6">For <span class="process-math">\(f_4(x)=3 e^x\text{,}\)</span> we take<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-undetermined-coefficients-13-2-7">
+<div class="displaymath process-math" id="subsec-undetermined-coefficients-13-2-7-1">
+\begin{equation*}
+y_{p_4}(x) = H e^x.
+\end{equation*}
+</div>
+<div class="para">and find <span class="process-math">\(H =
+\frac{3}{5}.\)</span> Thus,</div>
+<div class="displaymath process-math" id="subsec-undetermined-coefficients-13-2-7-3">
+\begin{equation*}
+\boxed{y_{p_4}(x) = \frac{3}{5} e^x.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-undetermined-coefficients-13-2-8">
+<div class="para">By <a href="sec-3-3.html#thm-superposition-particular-solutions" class="xref" data-knowl="./knowl/xref/thm-superposition-particular-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.11">Theorem 3.3.11</a>, a particular solution of <a href="sec-3-3.html#eq-udc-5" class="xref" data-knowl="./knowl/xref/eq-udc-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.17">(3.3.17)</a> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-superposition-particular-solutions.html ./knowl/xref/eq-udc-5.html" id="subsec-undetermined-coefficients-13-2-8-3">
+\begin{align*}
+y_p (x)&amp;= y_{p_1}(x) + y_{p_2}(x) + y_{p_3}(x) + y_{p_4}(x) \\
+&amp;= -x \cos(2x) + \frac{8}{3} \sin x + \frac12 x^2 - x - \frac14 +
+\frac{3}{5} e^x. 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-undetermined-coefficients-13-2-9">
+<div class="para">Hence the general solution of <a href="sec-3-3.html#eq-udc-5" class="xref" data-knowl="./knowl/xref/eq-udc-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.17">(3.3.17)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-udc-5.html" id="subsec-undetermined-coefficients-13-2-9-2">
+\begin{align*}
+y(x) &amp;= y_h(x) + y_p(x)\\ &amp;= c_1 \cos x + c_2 \sin x -x
+\cos(2x) + \frac{8}{3} \sin x \\ &amp;\qquad+ \frac12 x^2 - x - \frac14 +
+\frac{3}{5} e^x, 
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-13-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.12.1"><a href="#subsec-undetermined-coefficients-13-2" title="Copy heading and permalink for Solution 3.3.12.1" aria-label="Copy heading and permalink for Solution 3.3.12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.12"><a href="#subsec-undetermined-coefficients-13" title="Copy heading and permalink for Example 3.3.12" aria-label="Copy heading and permalink for Example 3.3.12">🔗</a></div></article></details><div class="para" id="subsec-undetermined-coefficients-14">
+<em class="alert">Some Basic Trial Particular Solutions</em><div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-undetermined-coefficients-15">In principle, the method of undetermined coefficients can always be employed; however, it requires an educated guess for particular trial solution <span class="process-math">\(y_p\text{.}\)</span> <a href="sec-3-3.html#table-particular-solutions" class="xref" data-knowl="./knowl/xref/table-particular-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.3.13: Basic trial particular solutions">Table 3.3.13</a> summarizes the basic form of a trial particular solution <span class="process-math">\(y_p(x)\)</span> for a given forcing function <span class="process-math">\(f(x)\)</span> when the forcing function is a polynomial, exponential, sine, cosine, or a linear combination of these functions, provided no term in a trial <span class="process-math">\(y_p(x)\)</span> duplicates any term in the complementary function <span class="process-math">\(y_h(x)\text{.}\)</span> If a term in a trial <span class="process-math">\(y_p(x)\)</span> duplicates a term in <span class="process-math">\(y_h(x)\text{,}\)</span> then we modify <span class="process-math">\(y_p(x)\)</span> by multiplying it by <span class="process-math">\(x^k\text{,}\)</span> where <span class="process-math">\(k\)</span> is the smallest integer such that no term in the modified <span class="process-math">\(y_p(x)\)</span> duplicates a term in <span class="process-math">\(y_h(x)\text{.}\)</span> These ideas also apply to higher order linear equations.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-particular-solutions"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Basic trial particular solutions<div class="autopermalink" data-description="Table 3.3.13: Basic trial particular solutions"><a href="#table-particular-solutions" title="Copy heading and permalink for Table 3.3.13: Basic trial particular solutions" aria-label="Copy heading and permalink for Table 3.3.13: Basic trial particular solutions">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines"><span class="process-math">\(g(x)\)</span></th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Basic trial particular solution <span class="process-math">\(y_p(x)\)</span>
+</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p_n(x)= a_n x^n + \dots + a_0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(q_n(x)= A_n x^n + \dots + A_0\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(Ce^{\alpha x}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(Ae^{\alpha x}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p_n(x) e^{\alpha x}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(q_n(x) e^{\alpha x}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(C \cos(\beta x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(A \cos(\beta x) + B \sin(\beta x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(C \sin(\beta x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(A \cos(\beta x) + B \sin(\beta x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p_n(x) \cos(\beta x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(q_n(x) \cos(\beta x) + r_n(x) \sin(\beta x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p_n(x) \sin(\beta x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(q_n(x) \cos(\beta x) + r_n(x) \sin(\beta x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(Ce^{\alpha x} \cos(\beta x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(Ae^{\alpha x} \cos(\beta x) + Be^{\alpha x} \sin(\beta x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(Ce^{\alpha x} \sin(\beta x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(Ae^{\alpha x} \cos(\beta x) + Be^{\alpha x} \sin(\beta x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><div class="para" id="subsec-undetermined-coefficients-17">In <a href="sec-3-3.html#table-particular-solutions" class="xref" data-knowl="./knowl/xref/table-particular-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.3.13: Basic trial particular solutions">Table 3.3.13</a>, the general polynomial <span class="process-math">\(p_n(x)\)</span> is of degree <span class="process-math">\(n\)</span> with known coefficients and <span class="process-math">\(q_n(x),\)</span> <span class="process-math">\(r_n(x)\)</span> are general polynomials of degree <span class="process-math">\(n\)</span> with undetermined coefficients. Also, <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\(\alpha\)</span> , <span class="process-math">\(\beta\)</span> are known constants, and <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are undetermined constants.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-undetermined-coefficients-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.3.2: Method of Undetermined Coefficients"><a href="#subsec-undetermined-coefficients" title="Copy heading and permalink for Subsection 3.3.2: Method of Undetermined Coefficients" aria-label="Copy heading and permalink for Subsection 3.3.2: Method of Undetermined Coefficients">🔗</a></div></section><section class="subsection" id="subsec-method-operators"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method of Operator Factorization</span>
+</h3>
+<div class="para logical" id="subsec-method-operators-2">
+<div class="para">In this subsection, we discuss yet another method for finding particular solutions of a second order nonhomogeneous linear equations of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-3-4.html" id="eq-nonhomogeneous-operator-method">
+\begin{equation}
+y'' + a_1(x) y' + a_0(x) y = f(x),\tag{3.3.18}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_1(x), a_0(x),
+f(x)\)</span> are continuous on some interval <span class="process-math">\(I\text{.}\)</span> For simplicity, we will restrict our attention to equations with constant coefficients and include only a few examples involving variable coefficients. The method extends naturally to higher-order linear equations, which we will briefly discuss in <a href="sec-3-4.html" class="internal" title="Section 3.4: Higher Order Linear Differential Equations">Section 3.4</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-method-operators-3">
+<div class="para">We let <span class="process-math">\(D\)</span> denote the differential operator <span class="process-math">\(\frac{d}{dx}\)</span> defined by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html" id="subsec-method-operators-3-3">
+\begin{equation*}
+Dy = \frac{dy}{dx}.
+\end{equation*}
+</div>
+<div class="para">Higher order differential operators are denoted by integer powers of <span class="process-math">\(D.\)</span> For example,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html" id="subsec-method-operators-3-5">
+\begin{equation*}
+D^2y = \frac{d^2y}{dx^2},\quad D^3y = \frac{d^3y}{dx^3},
+\end{equation*}
+</div>
+<div class="para">and so forth. The differential operator of order <span class="process-math">\(0\)</span> is the identity operator denoted by <span class="process-math">\(D^0\)</span> and defined by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html" id="subsec-method-operators-3-8">
+\begin{equation*}
+D^0y=y.
+\end{equation*}
+</div>
+<div class="para">With these notations, the second order equation <a href="sec-3-3.html#eq-nonhomogeneous-operator-method" class="xref" data-knowl="./knowl/xref/eq-nonhomogeneous-operator-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.18">(3.3.18)</a> can be written as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html" id="subsec-method-operators-3-10">
+\begin{equation*}
+D^2y + a_1(x) Dy+a_0(x)y= f(x),
+\end{equation*}
+</div>
+<div class="para">or more concisely,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html" id="subsec-method-operators-3-11">
+\begin{equation*}
+p(D)y= f(x),
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html" id="subsec-method-operators-3-12">
+\begin{equation*}
+p(D) = D^2 + a_1(x) D+a_0(x)
+\end{equation*}
+</div>
+<div class="para">denotes the corresponding second order differential operator.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-method-operators-4">
+<div class="para">To introduce the operator method, we begin by considering the first order linear equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eq-first-order-linear-operator-method">
+\begin{equation}
+y'+a_1(x) y = f(x),\tag{3.3.19}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(f(x)\)</span> are continuous on an interval <span class="process-math">\(I.\)</span> The equation in operator notation can be written as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="subsec-method-operators-4-5">
+\begin{equation*}
+\big(D+a_1(x)\big)y = f(x).
+\end{equation*}
+</div>
+<div class="para">Formally, a solution may be expressed as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="subsec-method-operators-4-6">
+\begin{equation*}
+y = \frac{1}{D+a_1(x)}f(x).
+\end{equation*}
+</div>
+<div class="para">Since a solution of <a href="sec-3-3.html#eq-first-order-linear-operator-method" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.19">(3.3.19)</a> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eq-first-order-linear-operator-method-formula-general-solution">
+\begin{equation}
+\begin{split} y&amp;=\frac{1}{D+a_1(x)}f(x)\\ &amp; = c_1e^{-\int a_1(x)\,dx} +e^{-\int
+a_1(x)\,dx} \int\left( f(x) \,e^{\int a_1(x)\,dx}\right)\, dx, \end{split}\tag{3.3.20}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> is an arbitrary constant. A particular solution <span class="process-math">\(y_p\)</span> (with <span class="process-math">\(c_1=0\)</span>) is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eq-first-order-linear-operator-method-formula-1">
+\begin{equation}
+\boxed{y_p= e^{-\int a_1(x)\,dx} \int f(x) \,e^{\int a_1(x)\,dx}\, dx,}\tag{3.3.21}
+\end{equation}
+</div>
+<div class="para">In particular, if <span class="process-math">\(a_1(x) =-k,\)</span> a constant, then the formula <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-1" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.21">(3.3.21)</a> takes the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eq-first-order-linear-operator-method-formula-2">
+\begin{equation}
+\boxed{y_p =\frac{1}{D-k}f(x)= e^{kx} \int f(x) e^{-kx}\, dx.}\tag{3.3.22}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-method-operators-5">
+<div class="para">We next study <a href="sec-3-3.html#eq-nonhomogeneous-operator-method" class="xref" data-knowl="./knowl/xref/eq-nonhomogeneous-operator-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.18">(3.3.18)</a> in the case where <span class="process-math">\(a_0\)</span> and <span class="process-math">\(a_1\)</span> are constants. When formally substituting <span class="process-math">\(D\)</span> with <span class="process-math">\(\lambda\)</span> in</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-6">
+\begin{equation*}
+p(D) = D^2 + a_1(x) D+a_0(x),
+\end{equation*}
+</div>
+<div class="para">we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-7">
+\begin{equation*}
+p(\lambda) = \lambda^2 +a_1\lambda +a_0,
+\end{equation*}
+</div>
+<div class="para">which is the characteristic polynomial for the homogeneous equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-8">
+\begin{equation*}
+y''+a_1y+a_0y=0.
+\end{equation*}
+</div>
+<div class="para">If the polynomial <span class="process-math">\(p(\lambda)\)</span> factors as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-10">
+\begin{equation*}
+p(\lambda)= (p-\lambda_1)(p-\lambda_2),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\lambda_1,
+\lambda_2\)</span> may be real or complex, then the operator <span class="process-math">\(p(D)\)</span> factors correspondingly as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-13">
+\begin{equation*}
+p(D) = (D-\lambda_1)(D-\lambda_2).
+\end{equation*}
+</div>
+<div class="para">Thus, <span class="process-math">\(p(D)\)</span> can be written a composition of two first order differential operators. Moreover, we find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-15">
+\begin{equation*}
+\begin{split} (D-\lambda_1)(D-\lambda_2)y&amp; = (D-\lambda_1)(Dy-\lambda_2y)\\
+&amp;=D(Dy-\lambda_2y)-\lambda_1(Dy-\lambda_2y)\\ &amp;=D^2y- \lambda_2Dy- \lambda_1Dy+
+\lambda_1\lambda_2y\\ &amp;=D^2y- (\lambda_1+\lambda_2)Dy+ \lambda_1\lambda_2y.\
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\lambda_1+\lambda_2 = \lambda_2+\lambda_1\)</span> and <span class="process-math">\(\lambda_1\lambda_2=
+\lambda_2\lambda_1,\)</span> it follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-18">
+\begin{equation*}
+p(D) =(D-\lambda_1)(D-\lambda_2)y= (D-\lambda_2)(D-\lambda_1)y,
+\end{equation*}
+</div>
+<div class="para">and hence the factors commute. A particular solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-19">
+\begin{equation*}
+p(D)y = f(x)
+\end{equation*}
+</div>
+<div class="para">is expressed formally by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-20">
+\begin{equation*}
+y_p = \frac{1}{p(D)}f(x) = \frac{1}{D-\lambda_1}\frac{1}{D-\lambda_2} f(x).
+\end{equation*}
+</div>
+<div class="para">In this situation, a solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-5-21">
+\begin{equation*}
+p(D)y = f(x)
+\end{equation*}
+</div>
+<div class="para">can be written formally as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-nonhomogeneous-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="eq-operator-form-formula-for-particular-solutions">
+\begin{equation}
+\boxed{y = \frac{1}{p(D)}f(x) =\frac{1}{D-\lambda_1}\; \frac{1}{D-\lambda_2} f(x),}\tag{3.3.23}
+\end{equation}
+</div>
+<div class="para">and it can be obtained by applying <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-2" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.22">(3.3.22)</a> successively to these two first order operators.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-method-operators-6">Thus, the method of operators is based on the following idea: if we can factor the differential operator <span class="process-math">\(p(D)\)</span> into a product of two first order operators, say <span class="process-math">\(p(D)
+= (D - \alpha)(D - \beta),\)</span> then we can solve the equation <a href="sec-3-3.html#eq-nonhomogeneous-operator-method" class="xref" data-knowl="./knowl/xref/eq-nonhomogeneous-operator-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.18">(3.3.18)</a> by solving two first order equations in succession. We will illustrate this method with several examples. These techniques extend naturally to higher order linear equations.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-method-operators-7">The following example illustrates these techniques.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-operator-method-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-operator-method-1-1-1">
+<div class="para">Find the general solution of</div>
+<div class="displaymath process-math" id="example-operator-method-1-1-1-1">
+\begin{equation*}
+y'' - 5y' + 6y = 4x e^x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-operator-method-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-operator-method-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-operator-method-1-2-1">
+<div class="para">The equation in the operator form is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-1-2-1-1">
+\begin{equation*}
+p(D)y =4xe^x,
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-1-2-1-2">
+\begin{equation*}
+p(D)= D^2-5D+6=(D-2)(D-3).
+\end{equation*}
+</div>
+<div class="para">By <a href="sec-3-3.html#eq-operator-form-formula-for-particular-solutions" class="xref" data-knowl="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.23">(3.3.23)</a>, a particular solution is formally given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-1-2-1-4">
+\begin{equation*}
+y_p = \frac{1}{D-2}\frac{1}{D-3} 4xe^x.
+\end{equation*}
+</div>
+<div class="para">Using <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-2" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.22">(3.3.22)</a> and integrating by parts, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-1-2-1-6">
+\begin{equation*}
+\frac{1}{D-3} xe^x = e^{3x}\int 4xe^x e^{-3x}\, dx = 4e^{3x}\int x e^{-2x}\,
+dx = -(2x+1)e^x.
+\end{equation*}
+</div>
+<div class="para">Consequently, again by <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-2" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.22">(3.3.22)</a> and integrating by parts, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-1-2-1-8">
+\begin{equation*}
+\begin{split} y_p&amp; =-\frac{1}{D-2}(2x+1)e^x \\ &amp;= -e^{2x}\int
+(2x+1)e^x e^{-2x}\, dx \\ &amp;=e^{2x}\int (2x+1)e^{-x}\, dx \\ &amp;=(2x+3)e^x.
+\end{split}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-operator-method-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-operator-method-1-2-2">
+<div class="para">Hence the general solution of the nonhomogeneous equation is</div>
+<div class="displaymath process-math" id="example-operator-method-1-2-2-1">
+\begin{equation*}
+y = c_1 e^{2x} + c_2 e^{3x} + (2x+3)e^x,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-operator-method-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.14.1"><a href="#example-operator-method-1-2" title="Copy heading and permalink for Solution 3.3.14.1" aria-label="Copy heading and permalink for Solution 3.3.14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.14"><a href="#example-operator-method-1" title="Copy heading and permalink for Example 3.3.14" aria-label="Copy heading and permalink for Example 3.3.14">🔗</a></div></article></details><div class="para logical" id="subsec-method-operators-9">
+<div class="para">The formula <a href="sec-3-3.html#eq-operator-form-formula-for-particular-solutions" class="xref" data-knowl="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.23">(3.3.23)</a> can sometimes be more conveniently used using partial fraction decomposition:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/example-operator-method-1.html" id="eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition">
+\begin{equation}
+\boxed{\begin{split}y_p &amp;= \frac{1}{D-\lambda_1}\; \frac{1}{D-\lambda_2} f(x)\\
+&amp;= \left(\frac{A_1}{D-\lambda_1}+ \frac{A_2}{D-\lambda_2}\right)f(x),\end{split}}\tag{3.3.24}
+\end{equation}
+</div>
+<div class="para">with the constants <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> to be evaluated. We can then evaluate the individual terms by using <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-2" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.22">(3.3.22)</a>. Let us revisit <a href="sec-3-3.html#example-operator-method-1" class="xref" data-knowl="./knowl/xref/example-operator-method-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.14">Example 3.3.14</a> with this technique.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-operator-method-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-operator-method-2-1-1">
+<div class="para">Find a particular solution <span class="process-math">\(y_p\)</span> of</div>
+<div class="displaymath process-math" id="example-operator-method-2-1-1-2">
+\begin{equation*}
+y''-5y'+6y= 4xe^{x}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-operator-method-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-operator-method-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-operator-method-2-2-1">
+<div class="para">In <a href="sec-3-3.html#example-operator-method-1" class="xref" data-knowl="./knowl/xref/example-operator-method-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.14">Example 3.3.14</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-operator-method-1.html ./knowl/xref/eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-2-2-1-2">
+\begin{equation*}
+y_p = \frac{1}{D-2}\frac{1}{D-3} 4xe^x.
+\end{equation*}
+</div>
+<div class="para">Suppose <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> are constants for which</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-operator-method-1.html ./knowl/xref/eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-2-2-1-5">
+\begin{equation*}
+\frac{1}{D-2}\frac{1}{D-3} = \frac{A_1}{D-2}+\frac{A_2}{D-3}.
+\end{equation*}
+</div>
+<div class="para">Then we find <span class="process-math">\(A_1= -1\)</span> and <span class="process-math">\(A_2= 1.\)</span> In view of <a href="sec-3-3.html#eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition" class="xref" data-knowl="./knowl/xref/eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.24">(3.3.24)</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-operator-method-1.html ./knowl/xref/eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-2-2-1-9">
+\begin{equation*}
+y_p=-\frac{1}{D-2} 4xe^x+ \frac{1}{D-3}4xe^x,
+\end{equation*}
+</div>
+<div class="para">which, by <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-2" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.22">(3.3.22)</a> and integration by parts, yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-operator-method-1.html ./knowl/xref/eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-operator-method-2-2-1-11">
+\begin{equation*}
+\begin{split} y_p &amp;= -4e^{2x} \int xe^x e^{-2x}\, dx + 4e^{3x} \int xe^x
+e^{-3x}\, dx\\ &amp;= -4e^{2x} \int x e^{-x}\, dx + 4e^{3x} \int x e^{-2x}\,
+dx\\ &amp;=e^x(4x+4)+e^x(-2x-1)\\ &amp;=(2x+3)e^x.\end{split}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-operator-method-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.15.1"><a href="#example-operator-method-2-2" title="Copy heading and permalink for Solution 3.3.15.1" aria-label="Copy heading and permalink for Solution 3.3.15.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.15"><a href="#example-operator-method-2" title="Copy heading and permalink for Example 3.3.15" aria-label="Copy heading and permalink for Example 3.3.15">🔗</a></div></article></details><div class="para" id="subsec-method-operators-11">The partial fraction decomposition method employed in <a href="sec-3-3.html#example-operator-method-2" class="xref" data-knowl="./knowl/xref/example-operator-method-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.15">Example 3.3.15</a> works naturally for higher order equations as well.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-method-operators-12">The next example shows how we deal with the case when certain factor <span class="process-math">\(D-\lambda\)</span> is repeated.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-method-operators-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-method-operators-13-1-1">
+<div class="para">Find a particular solution <span class="process-math">\(y_p\)</span> of</div>
+<div class="displaymath process-math" id="subsec-method-operators-13-1-1-2">
+\begin{equation*}
+y''-4y'+4y= 4e^{2x}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-method-operators-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-method-operators-13-2-1">
+<div class="para">The equation in the operator form is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-13-2-1-1">
+\begin{equation*}
+p(D)y =4e^{2x},
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-13-2-1-2">
+\begin{equation*}
+p(D)= D^2-4D+4=(D-2)^2.
+\end{equation*}
+</div>
+<div class="para">By <a href="sec-3-3.html#eq-operator-form-formula-for-particular-solutions" class="xref" data-knowl="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.23">(3.3.23)</a>, a particular solution is formally given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-13-2-1-4">
+\begin{equation*}
+y_p = \frac{1}{D-2}\frac{1}{D-2} 4e^{2x}.
+\end{equation*}
+</div>
+<div class="para">By <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-2" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.22">(3.3.22)</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-13-2-1-6">
+\begin{equation*}
+\frac{1}{D-2} 4e^{2x} = e^{2x}\int4e^{2x}e^{-2x}\, dx=4xe^{2x}.
+\end{equation*}
+</div>
+<div class="para">Then, by <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-2" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.22">(3.3.22)</a>, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-form-formula-for-particular-solutions.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html ./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="subsec-method-operators-13-2-1-8">
+\begin{equation*}
+y_p = \frac{1}{D-2}4xe^{2x} =e^{2x}\int4xe^{2x}e^{-2x}\, dx = e^{2x}\int4x\,
+dx = 2x^2e^{2x}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.16.1"><a href="#subsec-method-operators-13-2" title="Copy heading and permalink for Solution 3.3.16.1" aria-label="Copy heading and permalink for Solution 3.3.16.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.16"><a href="#subsec-method-operators-13" title="Copy heading and permalink for Example 3.3.16" aria-label="Copy heading and permalink for Example 3.3.16">🔗</a></div></article></details><div class="para logical" id="subsec-method-operators-14">
+<div class="para">Whenever <span class="process-math">\(f(x)\)</span> contains a factor of the form <span class="process-math">\(e^{\alpha x},\)</span> a more convenient method exists. To discuss this, suppose <span class="process-math">\(f(x) = e^{\alpha x} g(x)\)</span> for some continuous function <span class="process-math">\(g(x).\)</span> Suppose</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-shifting-property-1.html ./knowl/xref/eq-shifting-property-2.html" id="subsec-method-operators-14-5">
+\begin{equation*}
+p(D) = (D-\lambda_1) (D-\lambda_2),
+\end{equation*}
+</div>
+<div class="para">
+<span class="process-math">\(\lambda_1\)</span> and <span class="process-math">\(\lambda_2\)</span> real or complex constants. Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-shifting-property-1.html ./knowl/xref/eq-shifting-property-2.html" id="subsec-method-operators-14-8">
+\begin{equation*}
+\begin{split} (D-\lambda_2)(e^{\alpha x} g(x)) &amp; = e^{\alpha x} Dg(x)+\alpha
+e^{\alpha x} g(x)- \lambda_2 e^{\alpha x} g(x)\\ &amp;=e^{\alpha x}
+(D+\alpha-\lambda_2)g(x).
+\end{split}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-shifting-property-1.html ./knowl/xref/eq-shifting-property-2.html" id="subsec-method-operators-14-9">
+\begin{equation*}
+\begin{split} p(D)(e^{\alpha x} g(x))&amp;=(D-\lambda_1)(D-\lambda_2) (e^{\alpha x}
+g(x))\\ &amp;=(D-\lambda_1)\big(e^{\alpha x} (D+\alpha-\lambda_2)g(x)\big)\\
+&amp;=e^{\alpha x} (D+\alpha-\lambda_1)(D+\alpha-\lambda_2)g(x)\\ &amp;= e^{\alpha x}
+p(D+\alpha)g(x).
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Thus, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-shifting-property-1.html ./knowl/xref/eq-shifting-property-2.html" id="eq-shifting-property-1">
+\begin{equation}
+p(D)(e^{\alpha x} g(x)) =e^{\alpha x} p(D+\alpha)g(x).\tag{3.3.25}
+\end{equation}
+</div>
+<div class="para">We also have a similar property of the inverse operator; namely,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-shifting-property-1.html ./knowl/xref/eq-shifting-property-2.html" id="eq-shifting-property-2">
+\begin{equation}
+\frac{1}{p(D)} e^{\alpha x} g(x) = e^{\alpha x}\frac{1}{p(D+\alpha)}g(x).\tag{3.3.26}
+\end{equation}
+</div>
+<div class="para">To see this, using <a href="sec-3-3.html#eq-shifting-property-1" class="xref" data-knowl="./knowl/xref/eq-shifting-property-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.25">(3.3.25)</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-shifting-property-1.html ./knowl/xref/eq-shifting-property-2.html" id="subsec-method-operators-14-13">
+\begin{equation*}
+p(D)\left(e^{\alpha x}\frac{1}{p(D+\alpha)}g(x)\right) =e^{\alpha x}p(D+\alpha)
+\frac{1}{p(D+\alpha)}g(x)= e^{\alpha x}g(x),
+\end{equation*}
+</div>
+<div class="para">which yields <a href="sec-3-3.html#eq-shifting-property-2" class="xref" data-knowl="./knowl/xref/eq-shifting-property-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.26">(3.3.26)</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-method-operators-15">The formulas <a href="sec-3-3.html#eq-shifting-property-1" class="xref" data-knowl="./knowl/xref/eq-shifting-property-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.25">(3.3.25)</a> and <a href="sec-3-3.html#eq-shifting-property-2" class="xref" data-knowl="./knowl/xref/eq-shifting-property-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.26">(3.3.26)</a> are called the <em class="emphasis"><dfn class="terminology">exponential shifting properties</dfn></em> of <span class="process-math">\(p(D)\)</span> and its inverse operator, respectively. The next example provides an application of the exponential shifting properties.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-shifting-properties" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-shifting-properties-1-1">
+<div class="para">Find a particular solution of</div>
+<div class="displaymath process-math" id="example-shifting-properties-1-1-1">
+\begin{equation*}
+y'' - 5y' + 6y = 4x e^x
+\end{equation*}
+</div>
+<div class="para">by using the exponential shifting properties.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-shifting-properties-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-shifting-properties-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-shifting-properties-2-1">
+<div class="para">We can write</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-shifting-properties-2-1-1">
+\begin{equation*}
+4x e^x = e^x (4x).
+\end{equation*}
+</div>
+<div class="para">By the exponential shifting property of the inverse operator, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-shifting-properties-2-1-2">
+\begin{equation*}
+y_p = \frac{1}{D^2 - 5D + 6} (4x e^x) = e^x \frac{1}{(D+1)^2 - 5(D+1) + 6}
+(4x).
+\end{equation*}
+</div>
+<div class="para">Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-shifting-properties-2-1-3">
+\begin{equation*}
+(D+1)^2 - 5(D+1) + 6 = D^2 - 3D + 2,
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-shifting-properties-2-1-4">
+\begin{equation*}
+y_p = e^x \frac{1}{D^2 - 3D + 2} (4x).
+\end{equation*}
+</div>
+<div class="para">By using partial fraction decomposition and then applying <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-2" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.22">(3.3.22)</a> and integration by parts, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-2.html" id="example-shifting-properties-2-1-6">
+\begin{equation*}
+\begin{split} y_p&amp;= e^x \left(\frac{A_1}{D-1}+\frac{A_2}{D-2}\right)4x\\
+&amp;= e^x\left(-\frac{4}{D-1}+\frac{4}{D-2}\right)x\\
+&amp;=e^x\left(-4e^{x}\int xe^{-x}\, dx +4e^{2x}\int xe^{-2x}\, dx\right)\\
+&amp;=(2x+3)e^x.\end{split}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-shifting-properties-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.17.1"><a href="#example-shifting-properties-2" title="Copy heading and permalink for Solution 3.3.17.1" aria-label="Copy heading and permalink for Solution 3.3.17.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.17"><a href="#example-shifting-properties" title="Copy heading and permalink for Example 3.3.17" aria-label="Copy heading and permalink for Example 3.3.17">🔗</a></div></article></details><div class="para" id="subsec-method-operators-17">When the coefficient functions <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(a_0(x)\)</span> are variable, the factors of <span class="process-math">\(p(D)\)</span> generally do not commute, as illustrated in <a href="sec-3-3.html#eg-operator-method-3" class="xref" data-knowl="./knowl/xref/eg-operator-method-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.18">Example 3.3.18</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="eg-operator-method-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="eg-operator-method-3-1-1">
+<div class="para">Find a particular solution of</div>
+<div class="displaymath process-math" id="eg-operator-method-3-1-1-1">
+\begin{equation*}
+y''+(x+1)y'+xy=e^{-x^2/2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-operator-method-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-operator-method-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-operator-method-3-2-1">
+<div class="para">The equation in the operator form is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eq-operator-method">
+\begin{equation}
+p(D)y =e^{-x^2/2},\tag{3.3.27}
+\end{equation}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-2">
+\begin{equation*}
+p(D)= D^2+(x+1)D+x.
+\end{equation*}
+</div>
+<div class="para">By inspection, <span class="process-math">\(p(D)\)</span> may be factored as <span class="process-math">\((D+x)(D+1)\)</span> or <span class="process-math">\((D+1)(D+x),\)</span> and so which one is it? Direct computation shows</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-6">
+\begin{equation*}
+\begin{split} (D+x)(D+1)y &amp;= (D+x)(Dy+y)\\ &amp;= D(Dy+y)+x(Dy+y)\\
+&amp;= D^2y+Dy+xDy+xy\\ &amp;= (D^2+(x+1)D+x)y\\ &amp;=p(D)y, \end{split}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-7">
+\begin{equation*}
+\begin{split} (D+1)(D+x)y &amp;= (D+1)(Dy+xy)\\ &amp;= D(Dy+xy)+(Dy+xy)\\
+&amp;= D^2y+xDy+y+Dy+xy\\ &amp;= (D^2+(x+1)D+(x+1))y\\ &amp;\ne p(D)y.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Thus, we only have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-8">
+\begin{equation*}
+p(D)y= (D+x)(D+1)y.
+\end{equation*}
+</div>
+<div class="para">Then <a href="sec-3-3.html#eq-operator-method" class="xref" data-knowl="./knowl/xref/eq-operator-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.27">(3.3.27)</a> turns into</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-10">
+\begin{equation*}
+(D+x)(D+1)y= e^{-\frac{1}{2}x^2}.
+\end{equation*}
+</div>
+<div class="para">Put <span class="process-math">\((D+1)y
+=z.\)</span> Then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-12">
+\begin{equation*}
+(D+x)z=e^{-x^2/2},
+\end{equation*}
+</div>
+<div class="para">which is a first order linear equation in <span class="process-math">\(z.\)</span> In view of <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-1" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.21">(3.3.21)</a>, a particular solution of this equation is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-15">
+\begin{equation*}
+z_p=e^{-x^2/2}\int e^{-x^2/2} e^{x^2/2}\,dx= (x-1) e^{-x^2/2}.
+\end{equation*}
+</div>
+<div class="para">The constant of integration is chosen so as to simplify the integral below. Using this <span class="process-math">\(z_p\)</span> for <span class="process-math">\(z\)</span> in <span class="process-math">\((D+1)y =z,\)</span> we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-19">
+\begin{equation*}
+(D+1)y = (x-1) e^{-x^2/2}.
+\end{equation*}
+</div>
+<div class="para">By <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-1" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.21">(3.3.21)</a>, a particular solution of this equation is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-operator-method.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html ./knowl/xref/eq-first-order-linear-operator-method-formula-1.html" id="eg-operator-method-3-2-1-21">
+\begin{equation*}
+\begin{split} y_p &amp;= e^{-x} \int (x-1)e^x e^{-x^2/2}\, dx\\ &amp; =
+e^{-x+\frac{1}{2}} \int (x-1)e^{-\frac{1}{2}(x-1)^2}\, dx\\
+&amp;=e^{-x+\frac{1}{2}} \int e^{-t}\,dt\quad \left(\mbox{using } t=
+\frac{1}{2}(x-1)^2 \mbox{ so that }(x-1)dx =dt\right)\\
+&amp;=-e^{-(x-\frac{1}{2})} e^{-\frac{1}{2}(x-1)^2}\\
+&amp;=-e^{-\frac{1}{2}x^2}.
+\end{split}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-operator-method-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.18.1"><a href="#eg-operator-method-3-2" title="Copy heading and permalink for Solution 3.3.18.1" aria-label="Copy heading and permalink for Solution 3.3.18.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.18"><a href="#eg-operator-method-3" title="Copy heading and permalink for Example 3.3.18" aria-label="Copy heading and permalink for Example 3.3.18">🔗</a></div></article></details><div class="para" id="subsec-method-operators-19">We note that a fundamental set of solutions for the equation in <a href="sec-3-3.html#eg-operator-method-3" class="xref" data-knowl="./knowl/xref/eg-operator-method-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.18">Example 3.3.18</a> involves an integral that cannot be evaluated in terms of elementary functions. We can construct the general solution by leaving these integrals unevaluated. A sketch of this construction is outlined in <a href="sec-3-3.html#exercises-nonhomogeneous-DEs" class="internal" title="Exercises 3.3.4">Exercises 3.3.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-method-operators-20" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-method-operators-20-1-1">
+<div class="para">Find the general solution of the Cauchy-Euler equation</div>
+<div class="displaymath process-math" id="subsec-method-operators-20-1-1-1">
+\begin{equation*}
+x^2y''+4xy'+2y=e^x, \quad x&gt;0,
+\end{equation*}
+</div>
+<div class="para">using the method of operator factorization.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-method-operators-20-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-method-operators-20-2-1">
+<div class="para">In the operator notation, the equation reads</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercises-nonhomogeneous-DEs.html ./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-1-1">
+\begin{equation*}
+(x^2D^2+4xD+2)y = e^x.
+\end{equation*}
+</div>
+<div class="para">By inspection, the differential operator can be factored as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercises-nonhomogeneous-DEs.html ./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-1-2">
+\begin{equation*}
+(x^2D^2+4xD+2)= (xD+1)(xD+2),
+\end{equation*}
+</div>
+<div class="para">and this product is commutative. For the general conditions under which the product of two binomial differential operators with variable coefficients commutes, see <a href="sec-3-3.html#exercises-nonhomogeneous-DEs" class="internal" title="Exercises 3.3.4">Exercises 3.3.4</a>. Then the differential equation reads</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercises-nonhomogeneous-DEs.html ./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-1-4">
+\begin{equation*}
+(xD+1)(xD+2)y =e^x.
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(z=(xD+2)y.\)</span> Then the equation in <span class="process-math">\(z\)</span> reads</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercises-nonhomogeneous-DEs.html ./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-1-7">
+\begin{equation*}
+(xD+1)z=e^x,
+\end{equation*}
+</div>
+<div class="para">which is linear in <span class="process-math">\(z\text{,}\)</span> that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercises-nonhomogeneous-DEs.html ./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-1-9">
+\begin{equation*}
+\left(D+\frac{1}{x}\right)z=\frac{e^x}{x}.
+\end{equation*}
+</div>
+<div class="para">The solution of this equation is given formally by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercises-nonhomogeneous-DEs.html ./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-1-10">
+\begin{equation*}
+z = \frac{1}{D+\frac{1}{x}}\left(\frac{e^x}{x}\right).
+\end{equation*}
+</div>
+<div class="para">By <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-general-solution" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.20">(3.3.20)</a>, we obtain</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-method-operators-20-2-2">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-2-1">
+\begin{equation*}
+\begin{split} z&amp;=c_1 e^{-\int \frac{1}{x}\,dx}+e^{-\int
+\frac{1}{x}\,dx}\int\left(\frac{e^x}{x}e^{\int \frac{1}{x}\,dx}\right)\,dx\\
+&amp;=\frac{c_1}{x}+\frac{1}{x}\int e^x\,dx\\ &amp;=\frac{c_1}{x}+\frac{e^x}{x},
+\end{split}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> is an arbitrary constant. Since <span class="process-math">\(z=(xD+2)y,\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-2-4">
+\begin{equation*}
+(xD+2)y = \frac{c_1}{x}+\frac{e^x}{x},
+\end{equation*}
+</div>
+<div class="para">that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-2-5">
+\begin{equation*}
+\left(D+\frac{2}{x}\right)y = \frac{c_1}{x^2}+\frac{e^x}{x^2},
+\end{equation*}
+</div>
+<div class="para">the solution of which is given formally by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-2-6">
+\begin{equation*}
+y = \frac{1}{D+\frac{2}{x}}\left(\frac{c_1}{x^2}+\frac{e^x}{x^2}\right).
+\end{equation*}
+</div>
+<div class="para">In view of <a href="sec-3-3.html#eq-first-order-linear-operator-method-formula-general-solution" class="xref" data-knowl="./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.20">(3.3.20)</a>, the general solution is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-first-order-linear-operator-method-formula-general-solution.html" id="subsec-method-operators-20-2-2-8">
+\begin{equation*}
+\begin{split} y&amp; =
+c_2e^{-\int\frac{2}{x}\,dx}+e^{-\int\frac{2}{x}\,dx}\int\left(\left(\frac{c_1}{x^2}+\frac{e^x}{x^2}\right)e^{\int\frac{2}{x}\,dx}\right)\,dx\\
+&amp;=\frac{c_2}{x^2}+\frac{1}{x^2}\int (c_1+e^x)\, dx\\
+&amp;=\frac{c_2}{x^2}+\frac{1}{x^2}(c_1x+e^x)\\
+&amp;=\frac{c_1}{x}+\frac{c_2}{x^2}+\frac{e^x}{x^2}, \end{split}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_2\)</span> is an arbitrary constant.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-method-operators-20-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.19.1"><a href="#subsec-method-operators-20-2" title="Copy heading and permalink for Solution 3.3.19.1" aria-label="Copy heading and permalink for Solution 3.3.19.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.3.19"><a href="#subsec-method-operators-20" title="Copy heading and permalink for Example 3.3.19" aria-label="Copy heading and permalink for Example 3.3.19">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3.3: Method of Operator Factorization"><a href="#subsec-method-operators" title="Copy heading and permalink for Subsection 3.3.3: Method of Operator Factorization" aria-label="Copy heading and permalink for Subsection 3.3.3: Method of Operator Factorization">🔗</a></div></section><section class="exercises" id="exercises-nonhomogeneous-DEs"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercises-nonhomogeneous-DEs-1">
+<h4 class="heading"><span class="title">Subsection 3.3.1 Variation of Parameters.</span></h4>
+<div class="introduction" id="exercises-nonhomogeneous-DEs-1-2"><div class="para" id="exercises-nonhomogeneous-DEs-1-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-1-3"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-1">Solve the following differential equations using the method of variation of parameters to find particular solutions.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1 cols2 multicolumn" id="exercises-nonhomogeneous-DEs-1-3-2">
+<li id="exercises-nonhomogeneous-DEs-1-3-2-1">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-1-1">
+<span class="process-math">\(\displaystyle y''+y = 2e^x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.i"><a href="#exercises-nonhomogeneous-DEs-1-3-2-1" title="Copy heading and permalink for Item 3.3.4.1.i" aria-label="Copy heading and permalink for Item 3.3.4.1.i">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-2">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-2-1">
+<span class="process-math">\(\displaystyle y''-y =xe^{-2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.ii"><a href="#exercises-nonhomogeneous-DEs-1-3-2-2" title="Copy heading and permalink for Item 3.3.4.1.ii" aria-label="Copy heading and permalink for Item 3.3.4.1.ii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-3">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-3-1">
+<span class="process-math">\(\displaystyle y''+y = \sin x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.iii"><a href="#exercises-nonhomogeneous-DEs-1-3-2-3" title="Copy heading and permalink for Item 3.3.4.1.iii" aria-label="Copy heading and permalink for Item 3.3.4.1.iii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-4">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-4-1">
+<span class="process-math">\(\displaystyle y''+y = x\sin x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.iv"><a href="#exercises-nonhomogeneous-DEs-1-3-2-4" title="Copy heading and permalink for Item 3.3.4.1.iv" aria-label="Copy heading and permalink for Item 3.3.4.1.iv">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-5">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-5-1">
+<span class="process-math">\(\displaystyle y''+y = \sec x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.v"><a href="#exercises-nonhomogeneous-DEs-1-3-2-5" title="Copy heading and permalink for Item 3.3.4.1.v" aria-label="Copy heading and permalink for Item 3.3.4.1.v">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-6">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-6-1">
+<span class="process-math">\(\displaystyle y''+y = \tan x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.vi"><a href="#exercises-nonhomogeneous-DEs-1-3-2-6" title="Copy heading and permalink for Item 3.3.4.1.vi" aria-label="Copy heading and permalink for Item 3.3.4.1.vi">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-7">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-7-1">
+<span class="process-math">\(\displaystyle y''+y = \sin^2 x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.vii"><a href="#exercises-nonhomogeneous-DEs-1-3-2-7" title="Copy heading and permalink for Item 3.3.4.1.vii" aria-label="Copy heading and permalink for Item 3.3.4.1.vii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-8">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-8-1">
+<span class="process-math">\(\displaystyle y''+y = \sec x\tan x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.viii"><a href="#exercises-nonhomogeneous-DEs-1-3-2-8" title="Copy heading and permalink for Item 3.3.4.1.viii" aria-label="Copy heading and permalink for Item 3.3.4.1.viii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-9">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-9-1">
+<span class="process-math">\(\displaystyle y''+y = \sec^2 x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.ix"><a href="#exercises-nonhomogeneous-DEs-1-3-2-9" title="Copy heading and permalink for Item 3.3.4.1.ix" aria-label="Copy heading and permalink for Item 3.3.4.1.ix">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-10">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-10-1">
+<span class="process-math">\(\displaystyle y''+4y'+4y = e^{-2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.x"><a href="#exercises-nonhomogeneous-DEs-1-3-2-10" title="Copy heading and permalink for Item 3.3.4.1.x" aria-label="Copy heading and permalink for Item 3.3.4.1.x">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-11">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-11-1">
+<span class="process-math">\(\displaystyle y''+3y'+2y = \frac{1}{1+e^{x}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.xi"><a href="#exercises-nonhomogeneous-DEs-1-3-2-11" title="Copy heading and permalink for Item 3.3.4.1.xi" aria-label="Copy heading and permalink for Item 3.3.4.1.xi">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-12">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-12-1">
+<span class="process-math">\(\displaystyle y''+3y'+2y = \cos(e^x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.xii"><a href="#exercises-nonhomogeneous-DEs-1-3-2-12" title="Copy heading and permalink for Item 3.3.4.1.xii" aria-label="Copy heading and permalink for Item 3.3.4.1.xii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-13">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-13-1">
+<span class="process-math">\(\displaystyle y''+4y'+4y = 2\cos(2x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.xiii"><a href="#exercises-nonhomogeneous-DEs-1-3-2-13" title="Copy heading and permalink for Item 3.3.4.1.xiii" aria-label="Copy heading and permalink for Item 3.3.4.1.xiii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-3-2-14">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-3-2-14-1">
+<span class="process-math">\(\displaystyle y''+4y'+4y = 2e^{-2x}\cos(2x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-3-2-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.1.xiv"><a href="#exercises-nonhomogeneous-DEs-1-3-2-14" title="Copy heading and permalink for Item 3.3.4.1.xiv" aria-label="Copy heading and permalink for Item 3.3.4.1.xiv">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.1"><a href="#exercises-nonhomogeneous-DEs-1-3" title="Copy heading and permalink for Exercise 3.3.4.1" aria-label="Copy heading and permalink for Exercise 3.3.4.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-1-4"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-nonhomogeneous-DEs-1-4-1">Find the general solution of each differential (Cauchy-Euler) equation below using the variation of parameters to find particular solutions.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1 cols2 multicolumn" id="exercises-nonhomogeneous-DEs-1-4-2">
+<li id="exercises-nonhomogeneous-DEs-1-4-2-1">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-4-2-1-1"> <span class="process-math">\(\displaystyle x^2y''+xy'-y = 5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.2.i"><a href="#exercises-nonhomogeneous-DEs-1-4-2-1" title="Copy heading and permalink for Item 3.3.4.2.i" aria-label="Copy heading and permalink for Item 3.3.4.2.i">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-4-2-2">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-4-2-2-1">
+<span class="process-math">\(\displaystyle x^2 y''+x y'-y=2 x^4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.2.ii"><a href="#exercises-nonhomogeneous-DEs-1-4-2-2" title="Copy heading and permalink for Item 3.3.4.2.ii" aria-label="Copy heading and permalink for Item 3.3.4.2.ii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-4-2-3">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-4-2-3-1">
+<span class="process-math">\(\displaystyle x^2 y''-x y'+y=x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-4-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.2.iii"><a href="#exercises-nonhomogeneous-DEs-1-4-2-3" title="Copy heading and permalink for Item 3.3.4.2.iii" aria-label="Copy heading and permalink for Item 3.3.4.2.iii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-4-2-4">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-4-2-4-1">
+<span class="process-math">\(\displaystyle x y''-y'=x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-4-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.2.iv"><a href="#exercises-nonhomogeneous-DEs-1-4-2-4" title="Copy heading and permalink for Item 3.3.4.2.iv" aria-label="Copy heading and permalink for Item 3.3.4.2.iv">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.2"><a href="#exercises-nonhomogeneous-DEs-1-4" title="Copy heading and permalink for Exercise 3.3.4.2" aria-label="Copy heading and permalink for Exercise 3.3.4.2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-1-5"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-nonhomogeneous-DEs-1-5-1">Find the general solution of each differential equation below. One nontrivial solution to the associated homogeneous equation is provided.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1 cols2 multicolumn" id="exercises-nonhomogeneous-DEs-1-5-2">
+<li id="exercises-nonhomogeneous-DEs-1-5-2-1">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-5-2-1-1">
+<span class="process-math">\(\displaystyle x^2 y''+x y'-4 y=x; \quad u(x) = x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.3.i"><a href="#exercises-nonhomogeneous-DEs-1-5-2-1" title="Copy heading and permalink for Item 3.3.4.3.i" aria-label="Copy heading and permalink for Item 3.3.4.3.i">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-5-2-2">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-5-2-2-1">
+<span class="process-math">\(\displaystyle x^2 y''+x y'-4 y=\dfrac{1}{x}+1; \quad u(x) = x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.3.ii"><a href="#exercises-nonhomogeneous-DEs-1-5-2-2" title="Copy heading and permalink for Item 3.3.4.3.ii" aria-label="Copy heading and permalink for Item 3.3.4.3.ii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-5-2-3">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-5-2-3-1">
+<span class="process-math">\(\displaystyle x^2 y''+x y'+4 y=\dfrac{1}{x^2};\quad u(x) = x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-5-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.3.iii"><a href="#exercises-nonhomogeneous-DEs-1-5-2-3" title="Copy heading and permalink for Item 3.3.4.3.iii" aria-label="Copy heading and permalink for Item 3.3.4.3.iii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-5-2-4">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-5-2-4-1">
+<span class="process-math">\(\displaystyle (x-1)y''-x y'+y=(x-1)^2; \quad u(x) = x,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-5-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.3.iv"><a href="#exercises-nonhomogeneous-DEs-1-5-2-4" title="Copy heading and permalink for Item 3.3.4.3.iv" aria-label="Copy heading and permalink for Item 3.3.4.3.iv">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-1-5-2-5">
+<div class="para" id="exercises-nonhomogeneous-DEs-1-5-2-5-1">
+<span class="process-math">\(\displaystyle (\tan^2x)y''-(2 \tan x) y'+ \left(\sec ^2x+1\right)y=\sin^2x \, \tan
+x; \quad u(x) = \sin x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-5-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.3.v"><a href="#exercises-nonhomogeneous-DEs-1-5-2-5" title="Copy heading and permalink for Item 3.3.4.3.v" aria-label="Copy heading and permalink for Item 3.3.4.3.v">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.3"><a href="#exercises-nonhomogeneous-DEs-1-5" title="Copy heading and permalink for Exercise 3.3.4.3" aria-label="Copy heading and permalink for Exercise 3.3.4.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-Green-function-1"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-Green-function-1-1">
+<div class="para">Show that <span class="process-math">\(y_p\)</span> in <a href="sec-3-3.html#eq-particular-final-form" class="xref" data-knowl="./knowl/xref/eq-particular-final-form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.10">(3.3.10)</a> may be written as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-particular-final-form.html ./knowl/xref/eq-homogeneous1.html" id="exercises-nonhomogeneous-DEs-Green-function-1-1-3">
+\begin{equation*}
+y_p(x) = \int_{x_0}^x G(x, t) f(t) \, dt,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x,
+x_0\)</span> are in <span class="process-math">\(I\)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-particular-final-form.html ./knowl/xref/eq-homogeneous1.html" id="exercises-nonhomogeneous-DEs-Green-function-1-1-6">
+\begin{equation*}
+G(x, t) = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}=\frac{\begin{vmatrix}
+y_1(t)&amp;y_2(t)\\ y_1(x)&amp;y_2(x) \end{vmatrix}}{\begin{vmatrix}
+y_1(t)&amp;y_2(t)\\ y'_1(t)&amp;y'_2(t) \end{vmatrix}}
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(W(t) = W(y_1(t), y_2(t))\text{,}\)</span> the Wronskian of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\text{.}\)</span> The function <span class="process-math">\(G(x, t)\)</span> is called the <dfn class="terminology">Green’s function</dfn> for <a href="sec-3-3.html#eq-homogeneous1" class="xref" data-knowl="./knowl/xref/eq-homogeneous1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.7">(3.3.7)</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-Green-function-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.4"><a href="#exercises-nonhomogeneous-DEs-Green-function-1" title="Copy heading and permalink for Exercise 3.3.4.4" aria-label="Copy heading and permalink for Exercise 3.3.4.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-1-7"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-1-7-1">
+<div class="para">Use the Green’s function derived in <a href="sec-3-3.html#exercises-nonhomogeneous-DEs-Green-function-1" class="xref" data-knowl="./knowl/xref/exercises-nonhomogeneous-DEs-Green-function-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.3.4.4">Exercise 3.3.4.4</a> to find a particular solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercises-nonhomogeneous-DEs-Green-function-1.html" id="exercises-nonhomogeneous-DEs-1-7-1-2">
+\begin{equation*}
+y''+y = \frac{1}{\sin x}, \quad 0&lt;x&lt;\pi.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.5"><a href="#exercises-nonhomogeneous-DEs-1-7" title="Copy heading and permalink for Exercise 3.3.4.5" aria-label="Copy heading and permalink for Exercise 3.3.4.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-Green-function-2"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-Green-function-2-1">
+<div class="para">Use <a href="sec-3-3.html#exercises-nonhomogeneous-DEs-Green-function-1" class="xref" data-knowl="./knowl/xref/exercises-nonhomogeneous-DEs-Green-function-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.3.4.4">Exercise 3.3.4.4</a> to express a particular solution <span class="process-math">\(y_p(x)\)</span> of <span class="process-math">\(y''+k^2 y = f(x),\)</span> where <span class="process-math">\(k&gt;0\)</span> is in the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercises-nonhomogeneous-DEs-Green-function-1.html ./knowl/xref/def-convolution.html ./knowl/xref/ch-5.html" id="exercises-nonhomogeneous-DEs-Green-function-2-1-5">
+\begin{equation*}
+y_p(x) = \frac{1}{k}\int_{x_0}^x f(t) \sin(k(x-t))\, dt.
+\end{equation*}
+</div>
+<div class="para">The integral on the right with <span class="process-math">\(x_0=0\)</span> is called the <em class="emphasis">convolution</em> of <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(\sin (kx),\)</span> in the context of the Laplace transform (see <a href="sec-5-5.html#def-convolution" class="xref" data-knowl="./knowl/xref/def-convolution.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.5.1">Definition 5.5.1</a> in <a href="ch-5.html" class="internal" title="Chapter 5: The Laplace Transform and Applications">Chapter 5</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-Green-function-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.6"><a href="#exercises-nonhomogeneous-DEs-Green-function-2" title="Copy heading and permalink for Exercise 3.3.4.6" aria-label="Copy heading and permalink for Exercise 3.3.4.6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-1-9"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-1-9-1-1">
+<div class="para">Show that the solution of <a href="sec-3-3.html#eq-standard-form" class="xref" data-knowl="./knowl/xref/eq-standard-form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.6">(3.3.6)</a> with the initial conditions <span class="process-math">\(y(x_0) = 0\)</span> and <span class="process-math">\(y'(x_0) = 0\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-standard-form.html" id="exercises-nonhomogeneous-DEs-1-9-1-1-4">
+\begin{equation*}
+y(x) = \int_{x_0}^x G(x, t) f(t) \, dt.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-nonhomogeneous-DEs-1-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="exercises-nonhomogeneous-DEs-1-9-2-1">
+<div class="para">Use the following rule for differentiating under the integral sign: if</div>
+<div class="displaymath process-math" id="exercises-nonhomogeneous-DEs-1-9-2-1-1">
+\begin{equation*}
+F(x) = \int_{x_0}^x g(x, t)\, dt,
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math" id="exercises-nonhomogeneous-DEs-1-9-2-1-2">
+\begin{equation*}
+F'(x) = g(x,x) + \int_{x_0}^x \frac{\partial g}{\partial x}(x, t) \, dt.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.3.4.7.1"><a href="#exercises-nonhomogeneous-DEs-1-9-2" title="Copy heading and permalink for Hint 3.3.4.7.1" aria-label="Copy heading and permalink for Hint 3.3.4.7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.3.4.7"><a href="#exercises-nonhomogeneous-DEs-1-9" title="Copy heading and permalink for Exercise 3.3.4.7" aria-label="Copy heading and permalink for Exercise 3.3.4.7">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-1-10"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-nonhomogeneous-DEs-1-10-1">Use the result in <a href="sec-3-3.html#exercises-nonhomogeneous-DEs-Green-function-2" class="xref" data-knowl="./knowl/xref/exercises-nonhomogeneous-DEs-Green-function-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.3.4.6">Exercise 3.3.4.6</a> to obtain the solution of the differential equation in <a href="sec-3-3.html#eg-variation-parameters" class="xref" data-knowl="./knowl/xref/eg-variation-parameters.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.4">Example 3.3.4</a> satisfying <span class="process-math">\(y(0) = 0, y'(0) =0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-1-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.8"><a href="#exercises-nonhomogeneous-DEs-1-10" title="Copy heading and permalink for Exercise 3.3.4.8" aria-label="Copy heading and permalink for Exercise 3.3.4.8">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.3.4.1–8: Subsection 3.3.1 Variation of Parameters"><a href="#exercises-nonhomogeneous-DEs-1" title="Copy heading and permalink for Exercise Group 3.3.4.1–8: Subsection 3.3.1 Variation of Parameters" aria-label="Copy heading and permalink for Exercise Group 3.3.4.1–8: Subsection 3.3.1 Variation of Parameters">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercises-nonhomogeneous-DEs-2">
+<h4 class="heading"><span class="title">Subsection 3.3.2 Method of Undetermined Coefficients.</span></h4>
+<div class="introduction" id="exercises-nonhomogeneous-DEs-2-2"><div class="para" id="exercises-nonhomogeneous-DEs-2-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-2-3"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-1">Find the general solution of each of the following nonhomogeneous linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-nonhomogeneous-DEs-2-3-2">
+<li id="exercises-nonhomogeneous-DEs-2-3-2-1">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-1-1">
+<span class="process-math">\(\displaystyle y''-5y'+4y= 5x+1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.i"><a href="#exercises-nonhomogeneous-DEs-2-3-2-1" title="Copy heading and permalink for Item 3.3.4.9.i" aria-label="Copy heading and permalink for Item 3.3.4.9.i">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-2">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-2-1">
+<span class="process-math">\(\displaystyle y''-y'+2y= x^2+x+1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.ii"><a href="#exercises-nonhomogeneous-DEs-2-3-2-2" title="Copy heading and permalink for Item 3.3.4.9.ii" aria-label="Copy heading and permalink for Item 3.3.4.9.ii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-3">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-3-1">
+<span class="process-math">\(\displaystyle y''-5y'+4y= 5e^{2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.iii"><a href="#exercises-nonhomogeneous-DEs-2-3-2-3" title="Copy heading and permalink for Item 3.3.4.9.iii" aria-label="Copy heading and permalink for Item 3.3.4.9.iii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-4">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-4-1">
+<span class="process-math">\(\displaystyle y''+4y= 5\cos x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.iv"><a href="#exercises-nonhomogeneous-DEs-2-3-2-4" title="Copy heading and permalink for Item 3.3.4.9.iv" aria-label="Copy heading and permalink for Item 3.3.4.9.iv">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-5">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-5-1">
+<span class="process-math">\(\displaystyle y''+4y= 5\sin(2x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.v"><a href="#exercises-nonhomogeneous-DEs-2-3-2-5" title="Copy heading and permalink for Item 3.3.4.9.v" aria-label="Copy heading and permalink for Item 3.3.4.9.v">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-6">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-6-1">
+<span class="process-math">\(\displaystyle y''+4y'+5y = 2e^{-x}\sin x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.vi"><a href="#exercises-nonhomogeneous-DEs-2-3-2-6" title="Copy heading and permalink for Item 3.3.4.9.vi" aria-label="Copy heading and permalink for Item 3.3.4.9.vi">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-7">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-7-1">
+<span class="process-math">\(\displaystyle y''+4y'+4y = 3e^{2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.vii"><a href="#exercises-nonhomogeneous-DEs-2-3-2-7" title="Copy heading and permalink for Item 3.3.4.9.vii" aria-label="Copy heading and permalink for Item 3.3.4.9.vii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-8">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-8-1">
+<span class="process-math">\(\displaystyle y''-4y'+4y = 3xe^{2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.viii"><a href="#exercises-nonhomogeneous-DEs-2-3-2-8" title="Copy heading and permalink for Item 3.3.4.9.viii" aria-label="Copy heading and permalink for Item 3.3.4.9.viii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-9">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-9-1">
+<span class="process-math">\(\displaystyle y''- 4y'+5y = 2e^{2x}\sin x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.ix"><a href="#exercises-nonhomogeneous-DEs-2-3-2-9" title="Copy heading and permalink for Item 3.3.4.9.ix" aria-label="Copy heading and permalink for Item 3.3.4.9.ix">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-10">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-10-1">
+<span class="process-math">\(\displaystyle y''+16y = 2\sin(4x)+3\cos(4x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.x"><a href="#exercises-nonhomogeneous-DEs-2-3-2-10" title="Copy heading and permalink for Item 3.3.4.9.x" aria-label="Copy heading and permalink for Item 3.3.4.9.x">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-11">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-11-1">
+<span class="process-math">\(\displaystyle y''-5y'+4y= 5e^x+3e^{4x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.xi"><a href="#exercises-nonhomogeneous-DEs-2-3-2-11" title="Copy heading and permalink for Item 3.3.4.9.xi" aria-label="Copy heading and permalink for Item 3.3.4.9.xi">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-12">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-12-1">
+<span class="process-math">\(\displaystyle y''+16y = x^3+1+2e^{4x}+ \sin x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.xii"><a href="#exercises-nonhomogeneous-DEs-2-3-2-12" title="Copy heading and permalink for Item 3.3.4.9.xii" aria-label="Copy heading and permalink for Item 3.3.4.9.xii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-13">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-13-1">
+<span class="process-math">\(\displaystyle y''-y'=1+7e^x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.xiii"><a href="#exercises-nonhomogeneous-DEs-2-3-2-13" title="Copy heading and permalink for Item 3.3.4.9.xiii" aria-label="Copy heading and permalink for Item 3.3.4.9.xiii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-3-2-14">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-3-2-14-1">
+<span class="process-math">\(\displaystyle y''+y' =2+\sin x -7e^{-x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-3-2-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.9.xiv"><a href="#exercises-nonhomogeneous-DEs-2-3-2-14" title="Copy heading and permalink for Item 3.3.4.9.xiv" aria-label="Copy heading and permalink for Item 3.3.4.9.xiv">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.9"><a href="#exercises-nonhomogeneous-DEs-2-3" title="Copy heading and permalink for Exercise 3.3.4.9" aria-label="Copy heading and permalink for Exercise 3.3.4.9">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-2-4"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-2-4-1">
+<div class="para">Let <span class="process-math">\(\omega\)</span> be a fixed positive constant. Find the solution of the initial value problem</div>
+<div class="displaymath process-math" id="exercises-nonhomogeneous-DEs-2-4-1-2">
+\begin{equation*}
+y''+\omega^2 y= 5\cos(\omega x),\quad y(0)= 0, y'(0)=0
+\end{equation*}
+</div>
+<div class="para">by following the steps below.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-nonhomogeneous-DEs-2-4-2">
+<li id="item-nonresonance">
+<div class="para logical" id="item-nonresonance-1">
+<div class="para">Find the solution of the initial value problem</div>
+<div class="displaymath process-math" id="item-nonresonance-1-1">
+\begin{equation*}
+y''+\omega^2 y= 5\cos(\gamma x),\quad y(0)= 0, y'(0)=0
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(\gamma\ne \omega.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#item-nonresonance-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.10.i"><a href="#item-nonresonance" title="Copy heading and permalink for Item 3.3.4.10.i" aria-label="Copy heading and permalink for Item 3.3.4.10.i">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-4-2-2">
+<div class="para logical" id="exercises-nonhomogeneous-DEs-2-4-2-2-1">
+<div class="para">Denote by <span class="process-math">\(y_\gamma(x)\)</span> the solution obtained in <a href="sec-3-3.html#item-nonresonance" class="xref" data-knowl="./knowl/xref/item-nonresonance.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.3.4.10.i">Item 3.3.4.10.i</a>. For each <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,
+\infty),\)</span> evaluate the limit</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-nonresonance.html" id="exercises-nonhomogeneous-DEs-2-4-2-2-1-5">
+\begin{equation*}
+\lim\limits_{\gamma\to\omega}y_\gamma(x).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.10.ii"><a href="#exercises-nonhomogeneous-DEs-2-4-2-2" title="Copy heading and permalink for Item 3.3.4.10.ii" aria-label="Copy heading and permalink for Item 3.3.4.10.ii">🔗</a></div>
+</li>
+<li id="item-resonance-problem-solution">
+<div class="para logical" id="item-resonance-problem-solution-1">
+<div class="para">Verify that the function defined by</div>
+<div class="displaymath process-math" id="item-resonance-problem-solution-1-1">
+\begin{equation*}
+y = \lim\limits_{\gamma\to\omega}y_\gamma(x)
+\end{equation*}
+</div>
+<div class="para">is the solution of</div>
+<div class="displaymath process-math" id="item-resonance-problem-solution-1-2">
+\begin{equation*}
+y''+\omega^2 y= 5\cos(\omega x), \; y(0) =0, y'(0)=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#item-resonance-problem-solution-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.10.iii"><a href="#item-resonance-problem-solution" title="Copy heading and permalink for Item 3.3.4.10.iii" aria-label="Copy heading and permalink for Item 3.3.4.10.iii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-4-2-4">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-4-2-4-1">Obtain the solution found in part <a href="sec-3-3.html#item-resonance-problem-solution" class="xref" data-knowl="./knowl/xref/item-resonance-problem-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.3.4.10.iii">Item 3.3.4.10.iii</a> by using the method of undetermined coefficients to find a particular solution.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-4-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.10.iv"><a href="#exercises-nonhomogeneous-DEs-2-4-2-4" title="Copy heading and permalink for Item 3.3.4.10.iv" aria-label="Copy heading and permalink for Item 3.3.4.10.iv">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.10"><a href="#exercises-nonhomogeneous-DEs-2-4" title="Copy heading and permalink for Exercise 3.3.4.10" aria-label="Copy heading and permalink for Exercise 3.3.4.10">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-2-5"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-nonhomogeneous-DEs-2-5-1">Solve the following initial value problems and plot the corresponding solutions using a graphing utility. Describe any differences you observe in the behavior of the two solutions.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-nonhomogeneous-DEs-2-5-2">
+<li id="exercises-nonhomogeneous-DEs-2-5-2-1">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-5-2-1-1">
+<span class="process-math">\(\displaystyle y''+y= \sin (2x), \quad y(0)=1, y'(0)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.11.i"><a href="#exercises-nonhomogeneous-DEs-2-5-2-1" title="Copy heading and permalink for Item 3.3.4.11.i" aria-label="Copy heading and permalink for Item 3.3.4.11.i">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-2-5-2-2">
+<div class="para" id="exercises-nonhomogeneous-DEs-2-5-2-2-1">
+<span class="process-math">\(\displaystyle y''+y= \sin x, \quad y(0)=1, y'(0)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-2-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.11.ii"><a href="#exercises-nonhomogeneous-DEs-2-5-2-2" title="Copy heading and permalink for Item 3.3.4.11.ii" aria-label="Copy heading and permalink for Item 3.3.4.11.ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.11"><a href="#exercises-nonhomogeneous-DEs-2-5" title="Copy heading and permalink for Exercise 3.3.4.11" aria-label="Copy heading and permalink for Exercise 3.3.4.11">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.3.4.9–11: Subsection 3.3.2 Method of Undetermined Coefficients"><a href="#exercises-nonhomogeneous-DEs-2" title="Copy heading and permalink for Exercise Group 3.3.4.9–11: Subsection 3.3.2 Method of Undetermined Coefficients" aria-label="Copy heading and permalink for Exercise Group 3.3.4.9–11: Subsection 3.3.2 Method of Undetermined Coefficients">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercises-nonhomogeneous-DEs-3">
+<h4 class="heading"><span class="title">Subsection 3.3.3 Method of Operator Factorization.</span></h4>
+<div class="introduction" id="exercises-nonhomogeneous-DEs-3-2"><div class="para" id="exercises-nonhomogeneous-DEs-3-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-3-3"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-3-3-1">
+<div class="para">Find a particular solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-operator-method-1.html" id="exercises-nonhomogeneous-DEs-3-3-1-1">
+\begin{equation*}
+y''-9y= e^{3x}
+\end{equation*}
+</div>
+<div class="para">by using the method used in <a href="sec-3-3.html#example-operator-method-1" class="xref" data-knowl="./knowl/xref/example-operator-method-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.14">Example 3.3.14</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.12"><a href="#exercises-nonhomogeneous-DEs-3-3" title="Copy heading and permalink for Exercise 3.3.4.12" aria-label="Copy heading and permalink for Exercise 3.3.4.12">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-3-4"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-3-4-1">
+<div class="para">Find a particular solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-operator-method-2.html" id="exercises-nonhomogeneous-DEs-3-4-1-1">
+\begin{equation*}
+y''-9y= e^{-3x}
+\end{equation*}
+</div>
+<div class="para">by using the method used in <a href="sec-3-3.html#example-operator-method-2" class="xref" data-knowl="./knowl/xref/example-operator-method-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.15">Example 3.3.15</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.13"><a href="#exercises-nonhomogeneous-DEs-3-4" title="Copy heading and permalink for Exercise 3.3.4.13" aria-label="Copy heading and permalink for Exercise 3.3.4.13">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-3-5"><h5 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-nonhomogeneous-DEs-3-5-1">Find a particular solution of each of the following equations by using the method used in <a href="sec-3-3.html#example-shifting-properties" class="xref" data-knowl="./knowl/xref/example-shifting-properties.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.17">Example 3.3.17</a> (the exponential shifting properties).<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-nonhomogeneous-DEs-3-5-2">
+<li id="exercises-nonhomogeneous-DEs-3-5-2-1">
+<div class="para" id="exercises-nonhomogeneous-DEs-3-5-2-1-1">
+<span class="process-math">\(\displaystyle y''-6y'+ 9y= xe^{3x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.14.i"><a href="#exercises-nonhomogeneous-DEs-3-5-2-1" title="Copy heading and permalink for Item 3.3.4.14.i" aria-label="Copy heading and permalink for Item 3.3.4.14.i">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-3-5-2-2">
+<div class="para" id="exercises-nonhomogeneous-DEs-3-5-2-2-1">
+<span class="process-math">\(\displaystyle y''-2y'-3y = 16 e^{5x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.14.ii"><a href="#exercises-nonhomogeneous-DEs-3-5-2-2" title="Copy heading and permalink for Item 3.3.4.14.ii" aria-label="Copy heading and permalink for Item 3.3.4.14.ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.14"><a href="#exercises-nonhomogeneous-DEs-3-5" title="Copy heading and permalink for Exercise 3.3.4.14" aria-label="Copy heading and permalink for Exercise 3.3.4.14">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-3-6"><h5 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-3-6-1">
+<div class="para">Use the exponential shifting properties to show that the general solution of the homogeneous equation</div>
+<div class="displaymath process-math" id="exercises-nonhomogeneous-DEs-3-6-1-1">
+\begin{equation*}
+(D-\lambda)^2y = 0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\lambda\)</span> a real constant, has</div>
+<div class="displaymath process-math" id="exercises-nonhomogeneous-DEs-3-6-1-3">
+\begin{equation*}
+y = (c_1+c_2x)e^{\lambda x},
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.15"><a href="#exercises-nonhomogeneous-DEs-3-6" title="Copy heading and permalink for Exercise 3.3.4.15" aria-label="Copy heading and permalink for Exercise 3.3.4.15">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-3-7"><h5 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-3-7-1">
+<div class="para">Find a particular solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg-operator-method-3.html" id="exercises-nonhomogeneous-DEs-3-7-1-1">
+\begin{equation*}
+y''+(x+1)y'+(x+1)y= e^{-x}, \quad x&gt;0,
+\end{equation*}
+</div>
+<div class="para">by using the method used in <a href="sec-3-3.html#eg-operator-method-3" class="xref" data-knowl="./knowl/xref/eg-operator-method-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.18">Example 3.3.18</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.16"><a href="#exercises-nonhomogeneous-DEs-3-7" title="Copy heading and permalink for Exercise 3.3.4.16" aria-label="Copy heading and permalink for Exercise 3.3.4.16">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-3-8"><h5 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-3-8-1">
+<div class="para">Determine a fundamental set of solutions of</div>
+<div class="displaymath process-math" id="ex-3-3-fundamental-set-of-solutions">
+\begin{equation}
+y''+(x+1)y'+xy=0\tag{3.3.28}
+\end{equation}
+</div>
+<div class="para">by following the steps below.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-nonhomogeneous-DEs-3-8-2">
+<li id="exercises-nonhomogeneous-DEs-3-8-2-1">
+<div class="para logical" id="exercises-nonhomogeneous-DEs-3-8-2-1-1">
+<div class="para">Express <a href="sec-3-3.html#ex-3-3-fundamental-set-of-solutions" class="xref" data-knowl="./knowl/xref/ex-3-3-fundamental-set-of-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.28">(3.3.28)</a> in operator from as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-3-3-fundamental-set-of-solutions.html" id="exercises-nonhomogeneous-DEs-3-8-2-1-1-2">
+\begin{equation*}
+(D+x)(D+1)y=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-8-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.17.i"><a href="#exercises-nonhomogeneous-DEs-3-8-2-1" title="Copy heading and permalink for Item 3.3.4.17.i" aria-label="Copy heading and permalink for Item 3.3.4.17.i">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-3-8-2-2">
+<div class="para" id="exercises-nonhomogeneous-DEs-3-8-2-2-1">Solve <span class="process-math">\((D+1)y=0\)</span> to obtain a nonzero solution <span class="process-math">\(y_1,\)</span> and verify that <span class="process-math">\(y_1\)</span> is indeed a solution of <a href="sec-3-3.html#ex-3-3-fundamental-set-of-solutions" class="xref" data-knowl="./knowl/xref/ex-3-3-fundamental-set-of-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.28">(3.3.28)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-8-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.17.ii"><a href="#exercises-nonhomogeneous-DEs-3-8-2-2" title="Copy heading and permalink for Item 3.3.4.17.ii" aria-label="Copy heading and permalink for Item 3.3.4.17.ii">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-3-8-2-3">
+<div class="para" id="exercises-nonhomogeneous-DEs-3-8-2-3-1">Find a function <span class="process-math">\(y_2\)</span> by using the Liouville reduction formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a> so that <span class="process-math">\(\{y_1, y_2\}\)</span> forms a fundamental set of solutions for <a href="sec-3-3.html#ex-3-3-fundamental-set-of-solutions" class="xref" data-knowl="./knowl/xref/ex-3-3-fundamental-set-of-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.28">(3.3.28)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-8-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.17.iii"><a href="#exercises-nonhomogeneous-DEs-3-8-2-3" title="Copy heading and permalink for Item 3.3.4.17.iii" aria-label="Copy heading and permalink for Item 3.3.4.17.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.17"><a href="#exercises-nonhomogeneous-DEs-3-8" title="Copy heading and permalink for Exercise 3.3.4.17" aria-label="Copy heading and permalink for Exercise 3.3.4.17">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-3-9"><h5 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-3-9-1">
+<div class="para">Let <span class="process-math">\(a_0(x), a_1(x), b_0(x), b_1(x)\)</span> be differentiable functions on an interval <span class="process-math">\(I.\)</span> Prove that</div>
+<div class="displaymath process-math" id="exercises-nonhomogeneous-DEs-3-9-1-3">
+\begin{equation*}
+(a_1 D+a_0)(b_1D+b_0) =(b_1D+b_0)(a_1 D+a_0)
+\end{equation*}
+</div>
+<div class="para">if and only if</div>
+<div class="displaymath process-math" id="exercises-nonhomogeneous-DEs-3-9-1-4">
+\begin{equation*}
+a_1b_1'= a_1'b_1\quad \mbox{ and }\quad a_1b_0'= a_0'b_1.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.18"><a href="#exercises-nonhomogeneous-DEs-3-9" title="Copy heading and permalink for Exercise 3.3.4.18" aria-label="Copy heading and permalink for Exercise 3.3.4.18">🔗</a></div></article><article class="exercise exercise-like" id="exercises-shifting-properties"><h5 class="heading"><span class="codenumber">19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-shifting-properties-1">Let <span class="process-math">\(a_1(x)\)</span> be a continuous function on some interval <span class="process-math">\(I.\)</span> Let <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(g(x)\)</span> be differentiable functions on <span class="process-math">\(I.\)</span> Prove the following general exponential shifting properties.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-shifting-properties-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="exercises-shifting-properties-2">
+<li id="exercises-shifting-properties-2-1">
+<div class="para" id="exercises-shifting-properties-2-1-1">
+<span class="process-math">\(\displaystyle (D+a_1(x))(e^{\alpha (x)} g(x)) = e^{\alpha(x)} (D+\alpha'(x)+a_1(x))
+g(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-shifting-properties-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.19.a"><a href="#exercises-shifting-properties-2-1" title="Copy heading and permalink for Item 3.3.4.19.a" aria-label="Copy heading and permalink for Item 3.3.4.19.a">🔗</a></div>
+</li>
+<li id="exercises-shifting-properties-2-2">
+<div class="para" id="exercises-shifting-properties-2-2-1">
+<span class="process-math">\(\displaystyle \displaystyle\frac{1}{D+a_1(x)}(e^{\alpha (x)} g(x)) = e^{\alpha(x)}
+\frac{1}{D+\alpha'(x)+a_1(x)} g(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-shifting-properties-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.19.b"><a href="#exercises-shifting-properties-2-2" title="Copy heading and permalink for Item 3.3.4.19.b" aria-label="Copy heading and permalink for Item 3.3.4.19.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.4.19"><a href="#exercises-shifting-properties" title="Copy heading and permalink for Exercise 3.3.4.19" aria-label="Copy heading and permalink for Exercise 3.3.4.19">🔗</a></div></article><article class="exercise exercise-like" id="exercises-nonhomogeneous-DEs-3-11"><h5 class="heading"><span class="codenumber">20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-nonhomogeneous-DEs-3-11-1">Use the shifting properties established in <a href="sec-3-3.html#exercises-shifting-properties" class="xref" data-knowl="./knowl/xref/exercises-shifting-properties.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.3.4.19">Exercise 3.3.4.19</a> to find a particular solution of each of the following equations.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-nonhomogeneous-DEs-3-11-2">
+<ol class="lower-alpha lower-alpha-level-1" id="exercises-nonhomogeneous-DEs-3-11-2-1">
+<li id="exercises-nonhomogeneous-DEs-3-11-2-1-1">
+<div class="para" id="exercises-nonhomogeneous-DEs-3-11-2-1-1-1">
+<span class="process-math">\(\displaystyle y''+(x+1)y'+(x+1)y= e^{-x}, \quad x&gt;0,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-11-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.20.a"><a href="#exercises-nonhomogeneous-DEs-3-11-2-1-1" title="Copy heading and permalink for Item 3.3.4.20.a" aria-label="Copy heading and permalink for Item 3.3.4.20.a">🔗</a></div>
+</li>
+<li id="exercises-nonhomogeneous-DEs-3-11-2-1-2">
+<div class="para" id="exercises-nonhomogeneous-DEs-3-11-2-1-2-1">
+<span class="process-math">\(\displaystyle y''+(x+1)y'+xy= e^{-x^2/2}, \quad x&gt;0,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-11-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.4.20.b"><a href="#exercises-nonhomogeneous-DEs-3-11-2-1-2" title="Copy heading and permalink for Item 3.3.4.20.b" aria-label="Copy heading and permalink for Item 3.3.4.20.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-nonhomogeneous-DEs-3-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4.20"><a href="#exercises-nonhomogeneous-DEs-3-11" title="Copy heading and permalink for Exercise 3.3.4.20" aria-label="Copy heading and permalink for Exercise 3.3.4.20">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.3.4.12–20: Subsection 3.3.3 Method of Operator Factorization"><a href="#exercises-nonhomogeneous-DEs-3" title="Copy heading and permalink for Exercise Group 3.3.4.12–20: Subsection 3.3.3 Method of Operator Factorization" aria-label="Copy heading and permalink for Exercise Group 3.3.4.12–20: Subsection 3.3.3 Method of Operator Factorization">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercises 3.3.4"><a href="#exercises-nonhomogeneous-DEs" title="Copy heading and permalink for Exercises 3.3.4" aria-label="Copy heading and permalink for Exercises 3.3.4">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Second Order Nonhomogeneous Linear Differential Equations"><a href="#sec-3-3" title="Copy heading and permalink for Section 3.3: Second Order Nonhomogeneous Linear Differential Equations" aria-label="Copy heading and permalink for Section 3.3: Second Order Nonhomogeneous Linear Differential Equations">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-3-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-3-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
