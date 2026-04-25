@@ -7,8 +7,22 @@
         <ul>
             <li>
                 <p>
-                    Learn common methods for solving second order nonhomogeneous linear differential
+                    Understand the structure of the general solution of second order nonhomogeneous
+                    linear differential equations.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    Learn methods for solving second order nonhomogeneous linear differential
                     equations.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    Apply the methods to solve initial value problems for second order
+                    nonhomogeneous linear differential equations.
                 </p>
             </li>
         </ul>
@@ -197,7 +211,7 @@
                 coefficients. However, the evaluation of the integrals in <xref
                     ref="eq-VOP-integrals" /> can become quite cumbersome even when <m> f(x)</m>
                 involves only elementary functions, such as the ones treated with the method of
-                undetermined coefficients discussed <xref ref="subsec-3-3-2" />. </p>
+                undetermined coefficients discussed <xref ref="subsec-undetermined-coefficients" />. </p>
         </remark>
 
         <p>
@@ -230,21 +244,21 @@
                     </me>
                     Then the integration by parts with the Kronecker method (see <xref
                         ref="kronecker-method" />) gives </p>
+
+                <figure xml:id="kronecker-method">
+                    <caption> Kronecker method for integration by parts </caption>
+                    <image source="images/kronecker" width="90%" />
+                </figure>
                 <!--
-        <figure xml:id="kronecker">
-          <caption> Kronecker method for integration by parts </caption>
-          <image source="images/di_method" width="50%" />
+          <figure xml:id="kronecker-method">
+            <caption>Kronecker method for integration by parts</caption>
+            <image width="60%">
+              <prefigure xmlns="https://prefigure.org" label="slope-field">
+              <xi:include href="prefigure/kronecker.xml" />
+              </prefigure>
+            </image>
           </figure>
           -->
-                <figure xml:id="kronecker-method">
-                    <caption>Kronecker method for integration by parts</caption>
-                    <image width="60%">
-                        <prefigure xmlns="https://prefigure.org" label="slope-field">
-                            <xi:include href="prefigure/kronecker.xml" />
-                        </prefigure>
-                    </image>
-                </figure>
-
                 <p>
                     <me>
                         \int \frac{y_2 f}{W} dx= \int \frac{4x^2 e^{-4x}}{e^{-8x}}\, dx =x^2 e^{4x}
@@ -280,7 +294,7 @@
     </subsection>
 
 
-    <subsection xml:id="subsec-3-3-2">
+    <subsection xml:id="subsec-undetermined-coefficients">
         <title>Method of Undetermined Coefficients</title>
 
         <p> We note that variation of parameters often leads to integrals that can be quite involved
@@ -322,6 +336,7 @@
                         y_p = \frac{1}{8}\sin x
                     </me> is a particular
                     solution. </p>
+
                 <p> To determine the complementary function of the general solution, the auxiliary
                     equation for the associated homogeneous equation <me>
                         y'' - 9y =0
@@ -348,15 +363,6 @@
                             forcing function <m> f(x)</m> is a polynomial, exponential, sine,
                             cosine, or a linear combination of these functions. </p>
                     </li>
-                    <li>
-                        <p> A particular solution of a differential equation is just one member of
-                            the family represented by its general solution, and thus infinitely many
-                            particular solutions exist. In <xref ref="example-udc-1" />, the guess
-                            for <m>y_p</m> was relatively easy to make by observing that the
-                            equation has no first derivative term and its forcing function is <m>\sin
-                            x.</m>
-                        </p>
-                    </li>
 
                     <li>
                         <p> When variation of parameters may involve complicated integrals, the
@@ -367,6 +373,16 @@
                             requires a well-informed guessing for <m>y_p</m>, which makes it
                             challenging to apply even when <m>f(x)</m> is a common function, such as <m>\sec
                             x</m> or <m>\tan x</m>. </p>
+                    </li>
+
+                    <li>
+                        <p> A particular solution of a differential equation is just one member of
+                            the family represented by its general solution, and thus infinitely many
+                            particular solutions exist. In <xref ref="example-udc-1" />, the guess
+                            for <m>y_p</m> was relatively easy to make by observing that the
+                            equation has no first derivative term and its forcing function is <m>\sin
+                            x.</m>
+                        </p>
                     </li>
                 </ol>
             </p>
@@ -540,6 +556,1346 @@
                     where <m> c_1</m> and <m>c_2</m> arbitrary constants. </p>
             </solution>
         </example>
+
+        <p>
+            When the forcing function can be decomposed into a sum of several forcing functions,
+            then the sum of particular solutions with these individual forcing functions yields a
+            particular solution of the original equation.
+            The following theorem addresses this property.
+        </p>
+
+        <theorem xml:id="thm-superposition-particular-solutions">
+            <statement>
+                <p> Let <m>a_0(x), a_1(x), \dots, a_{n-1}(x)</m> and <m>f_i(x), \quad i = 1, \dots,
+                    k,</m> be continuous on an interval <m>I.</m> Suppose <m>y_{p_i},\; i = 1,
+                    \dots, k,</m> is a solution of <men xml:id="eq-nonhomogeneous-particular-1">
+                    y^{(n)}+ a_{n-1}(x)y^{(n-1)}+ \cdots+ + a_1(x) y' + a_0(x) y = f_i(x),
+                    </men>
+                    for each <m>i = 1, \dots, k.</m> Then the function <me>
+                        y_p= \sum_{j=1}^ky_{p_j}(x)
+                    </me> is a solution of <men
+                        xml:id="eq-nonhomogeneous-particular-3">
+                        y^{(n)}+ a_{n-1}(x)y^{(n-1)}+ \cdots + a_1(x) y' + a_0(x) y =
+                    \sum_{j=1}^kf_j(x)
+                    </men>
+                    on <m>I</m>
+                </p>
+            </statement>
+        </theorem>
+
+
+        <proof>
+            <p> Define the linear differential operator <m>L</m> on the class of <m>n</m>-times
+                differentiable functions by <me>
+                    L[y](x) = y^{(n)}+ a_{n-1}(x)y^{(n-1)}+ \cdots+ + a_1(x) y' + a_0(x) y.
+                </me>
+                Since each <m>y_{p_j}</m> satisfies <xref ref="eq-nonhomogeneous-particular-1" />,
+                we have <me>
+                    L[y_{p_j}](x)= f_j(x) \quad \mbox{on } I,\quad j = 1, \dots, k.
+                </me>
+                Then the linearity of the differential operator <m>L</m> implies <me>
+                L\left[\sum_{j=1}^ky_{p_j}\right](x) =\sum_{j=1}^kL[y_{p_j}](x)= \sum_{j=1}^kf_j(x).
+                </me>
+                This shows that the function <me>
+                    y_p= \sum_{j=1}^ky_{p_j}
+                </me> is a solution of <xref
+                    ref="eq-nonhomogeneous-particular-1" /> on <m>I.</m>
+            </p>
+        </proof>
+
+        <example>
+            <statement>
+                <p> Find first a particular solution and then the general solution of <men
+                        xml:id="eq-udc-5">
+                        y''+4y = 4\sin(2x)+8 \sin x+ 2x^2 -4x+ 3 e^x.
+                    </men>
+                </p>
+            </statement>
+
+            <solution>
+                <p> The auxiliary equation of the associated homogeneous equation <me>
+                        y''+4y=0
+                    </me> is <me>
+                        \lambda^2 +4=0
+                    </me> whose complex roots are <m>\pm
+                    2i.</m> Therefore, the complementary function of the general solution of <xref
+                        ref="eq-udc-5" /> is <me>
+                        y_h = c_1\cos x + c_2 \sin x,
+                    </me> where <m>c_1</m>
+                    and <m>c_2</m> are arbitrary constants. </p>
+
+                <p> To find a particular solution of <xref ref="eq-udc-5" />, we split the forcing
+                    term into four simpler terms: <md>
+                        <mrow> &amp;f_1(x)=4\sin(2x), \quad f_2(x)=8\sin x, \\ &amp; f_3(x)=2x^2-4x,
+                    \quad f_4(x)=3e^x.</mrow>
+                    </md> In view of <xref
+                        ref="thm-superposition-particular-solutions" />, we find particular
+                    solutions <m>y_{p_1},y_{p_2},y_{p_3},y_{p_4}</m> and then add them together. </p>
+
+                <p> Since <m>\sin(2x)</m> in <m>f_1(x)= 4\sin(2x)</m> is a solution of the
+                    homogeneous equation, we take <me>
+                        y_{p_1}(x) = x(A\cos(2x) + B\sin(2x)),
+                    </me> and find <m>
+                    A=-1</m>, <m>B=0</m>. Thus, <me>
+                        \boxed{y_{p_1}(x) = -x \cos(2x).}
+                    </me>
+                </p>
+
+                <p> For <m>f_2(x) =8 \sin x,</m> we take <me>
+                        y_{p_2}(x) = C \cos x + D \sin x
+                    </me> and find <m>
+                    C=0</m>, <m>D=\frac{8}{3}.</m> Thus, <me>
+                        \boxed{y_{p_2}(x) = \frac{8}{3} \sin x.}
+                    </me>
+                </p>
+
+                <p> For <m>f_3(x)= 2x^2-4x</m>, we try the quadratic <me>
+                        y_{p_3}(x) = E x^2 + F x + G.
+                    </me> and find <m>
+                    E=\frac12</m>, <m>F=-1</m>, <m>G=-\frac14.</m> Thus, <me>
+                        \boxed{y_{p_3}(x) = \frac12 x^2 - x - \frac14.}
+                    </me>
+                </p>
+
+                <p> For <m>f_4(x)=3 e^x</m>, we take </p>
+
+                <p>
+                    <me>
+                        y_{p_4}(x) = H e^x.
+                    </me> and find <m>H =
+                    \frac{3}{5}.</m> Thus, <me>
+                        \boxed{y_{p_4}(x) = \frac{3}{5} e^x.}
+                    </me>
+                </p>
+
+                <p> By <xref ref="thm-superposition-particular-solutions" />, a particular solution
+                    of <xref ref="eq-udc-5" /> is given by <md>
+                        <mrow>y_p (x)&amp;= y_{p_1}(x) + y_{p_2}(x) + y_{p_3}(x) + y_{p_4}(x) \\
+                    &amp;= -x \cos(2x) + \frac{8}{3} \sin x + \frac12 x^2 - x - \frac14 +
+                    \frac{3}{5} e^x. </mrow>
+                    </md>
+                </p>
+
+                <p> Hence the general solution of <xref ref="eq-udc-5" /> is <md>
+                        <mrow> y(x) &amp;= y_h(x) + y_p(x)\\ &amp;= c_1 \cos x + c_2 \sin x -x
+                    \cos(2x) + \frac{8}{3} \sin x \\ &amp;\qquad+ \frac12 x^2 - x - \frac14 +
+                    \frac{3}{5} e^x, </mrow>
+                    </md> where <m>c_1</m> and <m>c_2</m>
+                    are arbitrary constants. </p>
+            </solution>
+        </example>
+
+        <p>
+            <alert>Some Basic Trial Particular Solutions</alert>
+        </p>
+
+        <p> In principle, the method of undetermined coefficients can always be employed; however,
+            it requires an educated guess for particular trial solution <m>y_p</m>. <xref
+                ref="table-particular-solutions" /> summarizes the basic form of a trial particular
+            solution <m>y_p(x)</m> for a given forcing function <m>f(x)</m> when the forcing
+            function is a polynomial, exponential, sine, cosine, or a linear combination of these
+            functions, provided no term in a trial <m>y_p(x)</m> duplicates any term in the
+            complementary function <m>y_h(x)</m>. If a term in a trial <m>y_p(x)</m> duplicates a
+            term in <m>y_h(x)</m>, then we modify <m>y_p(x)</m> by multiplying it by <m>x^k</m>,
+            where <m>k</m> is the smallest integer such that no term in the modified <m>y_p(x)</m>
+            duplicates a term in <m>y_h(x)</m>. These ideas also apply to higher order linear
+            equations. </p>
+
+        <table xml:id="table-particular-solutions">
+            <title>Basic trial particular solutions</title>
+
+            <tabular>
+                <col halign="left" />
+                <row header="yes" bottom="minor">
+                    <cell>
+                        <m>g(x)</m>
+                    </cell>
+                    <cell>Basic trial particular solution <m>y_p(x)</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>p_n(x)= a_n x^n + \dots + a_0</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>q_n(x)= A_n x^n + \dots + A_0</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>Ce^{\alpha x}</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>Ae^{\alpha x}</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>p_n(x) e^{\alpha x}</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>q_n(x) e^{\alpha x}</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>C \cos(\beta x)</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>A \cos(\beta x) + B \sin(\beta x)</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>C \sin(\beta x)</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>A \cos(\beta x) + B \sin(\beta x)</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>p_n(x) \cos(\beta x)</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>q_n(x) \cos(\beta x) + r_n(x) \sin(\beta x)</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>p_n(x) \sin(\beta x)</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>q_n(x) \cos(\beta x) + r_n(x) \sin(\beta x)</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>Ce^{\alpha x} \cos(\beta x)</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>Ae^{\alpha x} \cos(\beta x) + Be^{\alpha x} \sin(\beta x)</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left">
+                        <m>Ce^{\alpha x} \sin(\beta x)</m>
+                    </cell>
+                    <cell halign="left">
+                        <m>Ae^{\alpha x} \cos(\beta x) + Be^{\alpha x} \sin(\beta x)</m>
+                    </cell>
+                </row>
+
+                <row>
+                    <cell halign="left"></cell>
+                    <cell halign="left"></cell>
+                </row>
+            </tabular>
+        </table>
+
+        <p> In <xref ref="table-particular-solutions" />, the general polynomial <m>p_n(x)</m> is of
+            degree <m>n</m> with known coefficients and <m>q_n(x),</m> <m>r_n(x)</m> are general
+            polynomials of degree <m>n</m> with undetermined coefficients. Also, <m>C</m>, <m>\alpha</m>
+            , <m>\beta</m> are known constants, and <m>A</m> and <m>B</m> are undetermined
+            constants. </p>
     </subsection>
- 
+
+
+    <subsection xml:id="subsec-method-operators">
+        <title>Method of Operator Factorization</title>
+
+        <p> In this subsection, we discuss yet another method for finding particular solutions of a
+            second order nonhomogeneous linear equations of the form <men
+                xml:id="eq-nonhomogeneous-operator-method">
+                y'' + a_1(x) y' + a_0(x) y = f(x),
+            </men> where <m>a_1(x), a_0(x),
+            f(x)</m> are continuous on some interval <m>I</m>. For simplicity, we will restrict our
+            attention to equations with constant coefficients and include only a few examples
+            involving variable coefficients. The method extends naturally to higher-order linear
+            equations, which we will briefly discuss in <xref ref="sec-3-4" />. </p>
+
+        <p> We let <m>D</m> denote the differential operator <m>\frac{d}{dx}</m> defined by <me>
+                Dy = \frac{dy}{dx}.
+            </me> Higher order differential operators are
+            denoted by integer powers of <m>D.</m> For example, <me>
+                D^2y = \frac{d^2y}{dx^2},\quad D^3y = \frac{d^3y}{dx^3},
+            </me> and so
+            forth. The differential operator of order <m>0</m> is the identity operator denoted by <m>
+            D^0</m> and defined by <me>
+                D^0y=y.
+            </me> With these notations, the second order equation <xref
+                ref="eq-nonhomogeneous-operator-method" /> can be written as <me>
+                D^2y + a_1(x) Dy+a_0(x)y= f(x),
+            </me> or more concisely, <me>
+                p(D)y= f(x),
+            </me> where <me>
+                p(D) = D^2 + a_1(x) D+a_0(x)
+            </me> denotes the corresponding second
+            order differential operator. </p>
+
+        <p> To introduce the operator method, we begin by considering the first order linear
+            equation <men xml:id="eq-first-order-linear-operator-method">
+                y'+a_1(x) y = f(x),
+            </men> where <m>a_1(x)</m> and <m>f(x)</m> are
+            continuous on an interval <m>I.</m> The equation in operator notation can be written as <me>
+            \big(D+a_1(x)\big)y = f(x).
+            </me> Formally, a solution may be
+            expressed as <me>
+                y = \frac{1}{D+a_1(x)}f(x).
+            </me> Since a solution of <xref
+                ref="eq-first-order-linear-operator-method" /> is given by <men
+                xml:id="eq-first-order-linear-operator-method-formula-general-solution">
+            \begin{split} y&amp;=\frac{1}{D+a_1(x)}f(x)\\ &amp; = c_1e^{-\int a_1(x)\,dx} +e^{-\int
+            a_1(x)\,dx} \int\left( f(x) \,e^{\int a_1(x)\,dx}\right)\, dx, \end{split}
+            </men>
+            where <m>c_1</m> is an arbitrary constant. A particular solution <m>y_p</m> (with <m>
+            c_1=0</m>) is given by <men xml:id="eq-first-order-linear-operator-method-formula-1">
+            \boxed{y_p= e^{-\int a_1(x)\,dx} \int f(x) \,e^{\int a_1(x)\,dx}\, dx,}
+            </men>
+            In particular, if <m>a_1(x) =-k,</m> a constant, then the formula <xref
+                ref="eq-first-order-linear-operator-method-formula-1" /> takes the form <men
+                xml:id="eq-first-order-linear-operator-method-formula-2">
+                \boxed{y_p =\frac{1}{D-k}f(x)= e^{kx} \int f(x) e^{-kx}\, dx.}
+            </men>
+        </p>
+
+        <p> We next study <xref ref="eq-nonhomogeneous-operator-method" /> in the case where <m>a_0</m>
+            and <m>a_1</m> are constants. When formally substituting <m>D</m> with <m>\lambda</m> in <me>
+            p(D) = D^2 + a_1(x) D+a_0(x),
+            </me> we get <me>
+                p(\lambda) = \lambda^2 +a_1\lambda +a_0,
+            </me> which is the
+            characteristic polynomial for the homogeneous equation <me>
+                y''+a_1y+a_0y=0.
+            </me> If the polynomial <m>p(\lambda)</m> factors as <me>
+            p(\lambda)= (p-\lambda_1)(p-\lambda_2),
+            </me> where <m>\lambda_1,
+            \lambda_2</m> may be real or complex, then the operator <m>p(D)</m> factors
+            correspondingly as <me>
+                p(D) = (D-\lambda_1)(D-\lambda_2).
+            </me> Thus, <m>p(D)</m> can be
+            written a composition of two first order differential operators. Moreover, we find <me>
+            \begin{split} (D-\lambda_1)(D-\lambda_2)y&amp; = (D-\lambda_1)(Dy-\lambda_2y)\\
+            &amp;=D(Dy-\lambda_2y)-\lambda_1(Dy-\lambda_2y)\\ &amp;=D^2y- \lambda_2Dy- \lambda_1Dy+
+            \lambda_1\lambda_2y\\ &amp;=D^2y- (\lambda_1+\lambda_2)Dy+ \lambda_1\lambda_2y.\
+            \end{split}
+            </me>
+            Since <m>\lambda_1+\lambda_2 = \lambda_2+\lambda_1</m> and <m>\lambda_1\lambda_2=
+            \lambda_2\lambda_1,</m> it follows that <me>
+                p(D) =(D-\lambda_1)(D-\lambda_2)y= (D-\lambda_2)(D-\lambda_1)y,
+            </me>
+            and hence the factors commute. A particular solution of <me>
+                p(D)y = f(x)
+            </me> is expressed formally by <me>
+                y_p = \frac{1}{p(D)}f(x) = \frac{1}{D-\lambda_1}\frac{1}{D-\lambda_2} f(x).
+            </me>
+            In this situation, a solution of <me>
+                p(D)y = f(x)
+            </me> can be written formally as <men
+                xml:id="eq-operator-form-formula-for-particular-solutions">
+                \boxed{y = \frac{1}{p(D)}f(x) =\frac{1}{D-\lambda_1}\; \frac{1}{D-\lambda_2} f(x),}
+            </men>
+            and it can be obtained by applying <xref
+                ref="eq-first-order-linear-operator-method-formula-2" /> successively to these two
+            first order operators. </p>
+
+        <p> Thus, the method of operators is based on the following idea: if we can factor the
+            differential operator <m>p(D)</m> into a product of two first order operators, say <m>p(D)
+            = (D - \alpha)(D - \beta),</m> then we can solve the equation <xref
+                ref="eq-nonhomogeneous-operator-method" /> by solving two first order equations in
+            succession. We will illustrate this method with several examples. These techniques
+            extend naturally to higher order linear equations. </p>
+
+        <p>
+            The following example illustrates these techniques.
+        </p>
+        <!--
+      <example xml:id="example-operator-method-1">
+        <statement>
+          <p>
+            Find the general solution of
+            <me>
+              y'' - 4y' + 4y = e^{2x}.
+            </me>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            The auxiliary equation of the associated homogeneous equation
+            <me>
+              y'' - 4y' + 4y = 0
+            </me>
+            is
+            <me>
+              \lambda^2 - 4\lambda + 4 = 0,
+            </me>
+            which has a repeated root <m>\lambda = 2.</m> Therefore, the complementary function of the general
+        solution of the nonhomogeneous equation is
+            <me>
+              y_h = c_1 e^{2x} + c_2 x e^{2x},
+            </me>
+            where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+          </p>
+
+          <p>
+            Next, we find a particular solution by using the method of operators.
+            We can factor the differential operator as
+            <me>
+              D^2 - 4D + 4 = (D - 2)(D - 2).
+            </me>
+            Then the equation can be rewritten as
+            <me>
+              (D - 2)(D - 2) y = e^{2x}.
+            </me>
+            Let <m>u = (D - 2) y.</m> Then we have
+            <me>
+              (D - 2) u = e^{2x}.
+            </me>
+            This is a first order linear equation in <m>u.</m> We can solve it by using an integrating factor.
+            The integrating factor is <m>e^{-2x}.</m> Multiplying both sides of the equation by the integrating
+        factor gives
+            <me>
+              e^{-2x} Du - 2e^{-2x} u = e^{-2x} e^{2x} = 1.
+            </me>
+            This can be rewritten as
+            <me>
+              D(e^{-2x} u) = 1.
+            </me>
+            Integrating both sides with respect to <m>x</m> yields
+            <me>
+              e^{-2x} u = x + C,
+            </me>
+            where <m>C</m> is an arbitrary constant.
+            Therefore,
+            <me>
+              u = e^{2x} (x + C).
+            </me>
+            Next, we solve the equation <m>(D - 2) y = u.</m> This is also a first order linear equation in
+        <m>y.</m> The integrating factor is again <m>e^{-2x}.</m> Multiplying both sides of the
+        equation by the integrating factor gives
+            <me>
+              e^{-2x} Dy - 2e^{-2x} y = e^{-2x} u = x + C.
+            </me>
+            This can be rewritten as
+            <me>
+              D(e^{-2x} y) = x + C.
+            </me>
+            Integrating both sides with respect to <m>x</m> yields
+            <me>
+              e^{-2x} y = \frac{x^2}{2} + Cx + D,
+            </me>
+            where <m>D</m> is an arbitrary constant.
+            Therefore,
+            <me>
+              y = e^{2x} \left( \frac{x^2}{2} + Cx + D \right).
+            </me>
+            Hence a particular solution of the nonhomogeneous equation is
+            <me>
+              y_p = \frac{x^2}{2} e^{2x}.
+            </me>
+            Finally, the general solution of the nonhomogeneous equation is
+            <me>
+              y = y_h + y_p = c_1 e^{2x} + c_2 x e^{2x} + \frac{x^2}{2} e^{2x},
+            </me>
+            where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+          </p>
+        </solution>
+      </example>
+      -->
+        <example xml:id="example-operator-method-1">
+            <statement>
+                <p> Find the general solution of <me>
+                        y'' - 5y' + 6y = 4x e^x
+                    </me>
+                </p>
+            </statement>
+
+            <solution>
+                <p> The equation in the operator form is <me>
+                        p(D)y =4xe^x,
+                    </me> where <me>
+                        p(D)= D^2-5D+6=(D-2)(D-3).
+                    </me> By <xref
+                        ref="eq-operator-form-formula-for-particular-solutions" />, a particular
+                    solution is formally given by <me>
+                        y_p = \frac{1}{D-2}\frac{1}{D-3} 4xe^x.
+                    </me> Using <xref
+                        ref="eq-first-order-linear-operator-method-formula-2" /> and integrating by
+                    parts, we get <me>
+                        \frac{1}{D-3} xe^x = e^{3x}\int 4xe^x e^{-3x}\, dx = 4e^{3x}\int x e^{-2x}\,
+                    dx = -(2x+1)e^x.
+                    </me>
+                    Consequently, again by <xref
+                        ref="eq-first-order-linear-operator-method-formula-2" /> and integrating by
+                    parts, we obtain <me>
+                        \begin{split} y_p&amp; =-\frac{1}{D-2}(2x+1)e^x \\ &amp;= -e^{2x}\int
+                    (2x+1)e^x e^{-2x}\, dx \\ &amp;=e^{2x}\int (2x+1)e^{-x}\, dx \\ &amp;=(2x+3)e^x.
+                    \end{split}
+                    </me>
+                </p>
+
+                <p> Hence the general solution of the nonhomogeneous equation is <me>
+                        y = c_1 e^{2x} + c_2 e^{3x} + (2x+3)e^x,
+                    </me> where <m>
+                    c_1</m> and <m>c_2</m> are arbitrary constants. </p>
+            </solution>
+        </example>
+
+        <p> The formula <xref ref="eq-operator-form-formula-for-particular-solutions" /> can
+            sometimes be more conveniently used using partial fraction decomposition: <men
+                xml:id="eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition">
+            \boxed{\begin{split}y_p &amp;= \frac{1}{D-\lambda_1}\; \frac{1}{D-\lambda_2} f(x)\\
+            &amp;= \left(\frac{A_1}{D-\lambda_1}+ \frac{A_2}{D-\lambda_2}\right)f(x),\end{split}}
+            </men>
+            with the constants <m>A_1</m> and <m>A_2</m> to be evaluated. We can then evaluate the
+            individual terms by using <xref ref="eq-first-order-linear-operator-method-formula-2" />.
+            Let us revisit <xref ref="example-operator-method-1" /> with this technique. </p>
+
+        <example xml:id="example-operator-method-2">
+            <statement>
+                <p> Find a particular solution <m>y_p</m> of <me>
+                        y''-5y'+6y= 4xe^{x}.
+                    </me>
+                </p>
+            </statement>
+
+            <solution>
+                <p> In <xref ref="example-operator-method-1" />, we have <me>
+                        y_p = \frac{1}{D-2}\frac{1}{D-3} 4xe^x.
+                    </me> Suppose <m>
+                    A_1</m> and <m>A_2</m> are constants for which <me>
+                        \frac{1}{D-2}\frac{1}{D-3} = \frac{A_1}{D-2}+\frac{A_2}{D-3}.
+                    </me>
+                    Then we find <m>A_1= -1</m> and <m>A_2= 1.</m> In view of <xref
+                        ref="eq-operator-form-formula-for-particular-solutions-partial-fraction-decomposition" />,
+                    we have <me>
+                        y_p=-\frac{1}{D-2} 4xe^x+ \frac{1}{D-3}4xe^x,
+                    </me>
+                    which, by <xref ref="eq-first-order-linear-operator-method-formula-2" /> and
+                    integration by parts, yields <me>
+                        \begin{split} y_p &amp;= -4e^{2x} \int xe^x e^{-2x}\, dx + 4e^{3x} \int xe^x
+                    e^{-3x}\, dx\\ &amp;= -4e^{2x} \int x e^{-x}\, dx + 4e^{3x} \int x e^{-2x}\,
+                    dx\\ &amp;=e^x(4x+4)+e^x(-2x-1)\\ &amp;=(2x+3)e^x.\end{split}
+                    </me>
+                </p>
+            </solution>
+        </example>
+
+        <p> The partial fraction decomposition method employed in <xref
+                ref="example-operator-method-2" /> works naturally for higher order equations as
+            well. </p>
+
+        <p> The next example shows how we deal with the case when certain factor <m>D-\lambda</m> is
+            repeated. </p>
+
+        <example>
+            <statement>
+                <p> Find a particular solution <m>y_p</m> of <me>
+                        y''-4y'+4y= 4e^{2x}.
+                    </me>
+                </p>
+            </statement>
+
+            <solution>
+                <p> The equation in the operator form is <me>
+                        p(D)y =4e^{2x},
+                    </me> where <me>
+                        p(D)= D^2-4D+4=(D-2)^2.
+                    </me> By <xref
+                        ref="eq-operator-form-formula-for-particular-solutions" />, a particular
+                    solution is formally given by <me>
+                        y_p = \frac{1}{D-2}\frac{1}{D-2} 4e^{2x}.
+                    </me> By <xref
+                        ref="eq-first-order-linear-operator-method-formula-2" />, we have <me>
+                    \frac{1}{D-2} 4e^{2x} = e^{2x}\int4e^{2x}e^{-2x}\, dx=4xe^{2x}.
+                    </me>
+                    Then, by <xref ref="eq-first-order-linear-operator-method-formula-2" />, we
+                    obtain <me>
+                        y_p = \frac{1}{D-2}4xe^{2x} =e^{2x}\int4xe^{2x}e^{-2x}\, dx = e^{2x}\int4x\,
+                    dx = 2x^2e^{2x}.
+                    </me>
+                </p>
+            </solution>
+        </example>
+
+        <p> Whenever <m>f(x)</m> contains a factor of the form <m>e^{\alpha x},</m> a more
+            convenient method exists. To discuss this, suppose <m>f(x) = e^{\alpha x} g(x)</m> for
+            some continuous function <m>g(x).</m> Suppose <me>
+                p(D) = (D-\lambda_1) (D-\lambda_2),
+            </me>
+        <m>\lambda_1</m> and <m>
+            \lambda_2</m> real or complex constants. Then <me>
+                \begin{split} (D-\lambda_2)(e^{\alpha x} g(x)) &amp; = e^{\alpha x} Dg(x)+\alpha
+            e^{\alpha x} g(x)- \lambda_2 e^{\alpha x} g(x)\\ &amp;=e^{\alpha x}
+            (D+\alpha-\lambda_2)g(x).
+                \end{split}
+            </me>
+            and <me>
+                \begin{split} p(D)(e^{\alpha x} g(x))&amp;=(D-\lambda_1)(D-\lambda_2) (e^{\alpha x}
+            g(x))\\ &amp;=(D-\lambda_1)\big(e^{\alpha x} (D+\alpha-\lambda_2)g(x)\big)\\
+            &amp;=e^{\alpha x} (D+\alpha-\lambda_1)(D+\alpha-\lambda_2)g(x)\\ &amp;= e^{\alpha x}
+            p(D+\alpha)g(x).
+                \end{split}
+            </me>
+            Thus, we have <men xml:id="eq-shifting-property-1">
+                p(D)(e^{\alpha x} g(x)) =e^{\alpha x} p(D+\alpha)g(x).
+            </men> We also
+            have a similar property of the inverse operator; namely, <men
+                xml:id="eq-shifting-property-2">
+                \frac{1}{p(D)} e^{\alpha x} g(x) = e^{\alpha x}\frac{1}{p(D+\alpha)}g(x).
+            </men>
+            To see this, using <xref ref="eq-shifting-property-1" />, we have <me>
+            p(D)\left(e^{\alpha x}\frac{1}{p(D+\alpha)}g(x)\right) =e^{\alpha x}p(D+\alpha)
+            \frac{1}{p(D+\alpha)}g(x)= e^{\alpha x}g(x),
+            </me>
+            which yields <xref ref="eq-shifting-property-2" />. </p>
+
+        <p> The formulas <xref ref="eq-shifting-property-1" /> and <xref
+                ref="eq-shifting-property-2" /> are called the <em>
+                <term>exponential shifting properties</term>
+            </em> of <m>p(D)</m> and its
+            inverse operator, respectively. The next example provides an application of the
+            exponential shifting properties. </p>
+
+        <example xml:id="example-shifting-properties">
+            <statement>
+                <p> Find a particular solution of <me>
+                        y'' - 5y' + 6y = 4x e^x
+                    </me> by using the
+                    exponential shifting properties. </p>
+            </statement>
+
+            <solution>
+                <p> We can write <me>
+                        4x e^x = e^x (4x).
+                    </me> By the exponential shifting
+                    property of the inverse operator, we have <me>
+                        y_p = \frac{1}{D^2 - 5D + 6} (4x e^x) = e^x \frac{1}{(D+1)^2 - 5(D+1) + 6}
+                    (4x).
+                    </me>
+                    Since <me>
+                        (D+1)^2 - 5(D+1) + 6 = D^2 - 3D + 2,
+                    </me> we have <me>
+                    y_p = e^x \frac{1}{D^2 - 3D + 2} (4x).
+                    </me> By using
+                    partial fraction decomposition and then applying <xref
+                        ref="eq-first-order-linear-operator-method-formula-2" /> and integration by
+                    parts, we get <me>
+                        \begin{split} y_p&amp;= e^x \left(\frac{A_1}{D-1}+\frac{A_2}{D-2}\right)4x\\
+                    &amp;= e^x\left(-\frac{4}{D-1}+\frac{4}{D-2}\right)x\\
+                    &amp;=e^x\left(-4e^{x}\int xe^{-x}\, dx +4e^{2x}\int xe^{-2x}\, dx\right)\\
+                    &amp;=(2x+3)e^x.\end{split}
+                    </me>
+                </p>
+            </solution>
+        </example>
+
+        <p> When the coefficient functions <m>a_1(x)</m> and <m>a_0(x)</m> are variable, the factors
+            of <m>p(D)</m> generally do not commute, as illustrated in <xref
+                ref="eg-operator-method-3" />. </p>
+        <!--
+      <example>
+        <statement>
+          <p>
+            Find a particular solution of
+            <me>
+              y'' + \frac{2}{x} y' - \frac{2}{x^2} y = 3 x^2 e^x.
+            </me>
+          </p>
+        </statement>
+      </example>
+      -->
+        <example xml:id="eg-operator-method-3">
+            <statement>
+                <p> Find a particular solution of <me>
+                        y''+(x+1)y'+xy=e^{-x^2/2}.
+                    </me>
+                </p>
+            </statement>
+
+            <solution>
+                <p> The equation in the operator form is <men xml:id="eq-operator-method">
+                        p(D)y =e^{-x^2/2},
+                    </men> where <me>
+                        p(D)= D^2+(x+1)D+x.
+                    </me> By inspection, <m>p(D)</m>
+                    may be factored as <m>(D+x)(D+1)</m> or <m>(D+1)(D+x),</m> and so which one is
+                    it? Direct computation shows <me>
+                        \begin{split} (D+x)(D+1)y &amp;= (D+x)(Dy+y)\\ &amp;= D(Dy+y)+x(Dy+y)\\
+                    &amp;= D^2y+Dy+xDy+xy\\ &amp;= (D^2+(x+1)D+x)y\\ &amp;=p(D)y, \end{split}
+                    </me>
+                    and <me>
+                        \begin{split} (D+1)(D+x)y &amp;= (D+1)(Dy+xy)\\ &amp;= D(Dy+xy)+(Dy+xy)\\
+                    &amp;= D^2y+xDy+y+Dy+xy\\ &amp;= (D^2+(x+1)D+(x+1))y\\ &amp;\ne p(D)y.
+                    \end{split}
+                    </me>
+                    Thus, we only have <me>
+                        p(D)y= (D+x)(D+1)y.
+                    </me> Then <xref
+                        ref="eq-operator-method" /> turns into <me>
+                        (D+x)(D+1)y= e^{-\frac{1}{2}x^2}.
+                    </me> Put <m>(D+1)y
+                    =z.</m> Then we have <me>
+                        (D+x)z=e^{-x^2/2},
+                    </me> which is a first order
+                    linear equation in <m>z.</m> In view of <xref
+                        ref="eq-first-order-linear-operator-method-formula-1" />, a particular
+                    solution of this equation is given by <me>
+                        z_p=e^{-x^2/2}\int e^{-x^2/2} e^{x^2/2}\,dx= (x-1) e^{-x^2/2}.
+                    </me>
+                    The constant of integration is chosen so as to simplify the integral below.
+                    Using this <m>z_p</m> for <m>z</m> in <m>(D+1)y =z,</m> we obtain <me>
+                        (D+1)y = (x-1) e^{-x^2/2}.
+                    </me> By <xref
+                        ref="eq-first-order-linear-operator-method-formula-1" />, a particular
+                    solution of this equation is given by <me>
+                        \begin{split} y_p &amp;= e^{-x} \int (x-1)e^x e^{-x^2/2}\, dx\\ &amp; =
+                    e^{-x+\frac{1}{2}} \int (x-1)e^{-\frac{1}{2}(x-1)^2}\, dx\\
+                    &amp;=e^{-x+\frac{1}{2}} \int e^{-t}\,dt\quad \left(\mbox{using } t=
+                    \frac{1}{2}(x-1)^2 \mbox{ so that }(x-1)dx =dt\right)\\
+                    &amp;=-e^{-(x-\frac{1}{2})} e^{-\frac{1}{2}(x-1)^2}\\
+                    &amp;=-e^{-\frac{1}{2}x^2}.
+                        \end{split}
+                    </me>
+                </p>
+            </solution>
+        </example>
+
+        <p> We note that a fundamental set of solutions for the equation in <xref
+                ref="eg-operator-method-3" /> involves an integral that cannot be evaluated in terms
+            of elementary functions. We can construct the general solution by leaving these
+            integrals unevaluated. A sketch of this construction is outlined in <xref
+                ref="exercises-nonhomogeneous-DEs" />. </p>
+
+        <example>
+            <statement>
+                <p> Find the general solution of the Cauchy-Euler equation <me>
+                        x^2y''+4xy'+2y=e^x, \quad x&gt;0,
+                    </me> using the
+                    method of operator factorization. </p>
+            </statement>
+
+            <solution>
+                <p> In the operator notation, the equation reads <me>
+                        (x^2D^2+4xD+2)y = e^x.
+                    </me> By inspection, the
+                    differential operator can be factored as <me>
+                        (x^2D^2+4xD+2)= (xD+1)(xD+2),
+                    </me> and this product
+                    is commutative. For the general conditions under which the product of two
+                    binomial differential operators with variable coefficients commutes, see <xref
+                        ref="exercises-nonhomogeneous-DEs" />. Then the differential equation reads <me>
+                    (xD+1)(xD+2)y =e^x.
+                    </me> Let <m>z=(xD+2)y.</m> Then
+                    the equation in <m>z</m> reads <me>
+                        (xD+1)z=e^x,
+                    </me> which is linear in <m>z</m>, that
+                    is, <me>
+                        \left(D+\frac{1}{x}\right)z=\frac{e^x}{x}.
+                    </me> The
+                    solution of this equation is given formally by <me>
+                        z = \frac{1}{D+\frac{1}{x}}\left(\frac{e^x}{x}\right).
+                    </me>
+                    By <xref ref="eq-first-order-linear-operator-method-formula-general-solution" />,
+                    we obtain </p>
+
+                <p>
+                    <me>
+                        \begin{split} z&amp;=c_1 e^{-\int \frac{1}{x}\,dx}+e^{-\int
+                    \frac{1}{x}\,dx}\int\left(\frac{e^x}{x}e^{\int \frac{1}{x}\,dx}\right)\,dx\\
+                    &amp;=\frac{c_1}{x}+\frac{1}{x}\int e^x\,dx\\ &amp;=\frac{c_1}{x}+\frac{e^x}{x},
+                    \end{split}
+                    </me>
+                    where <m>c_1</m> is an arbitrary constant. Since <m>z=(xD+2)y,</m> we have <me>
+                    (xD+2)y = \frac{c_1}{x}+\frac{e^x}{x},
+                    </me> that is, <me>
+                    \left(D+\frac{2}{x}\right)y = \frac{c_1}{x^2}+\frac{e^x}{x^2},
+                    </me>
+                    the solution of which is given formally by <me>
+                        y = \frac{1}{D+\frac{2}{x}}\left(\frac{c_1}{x^2}+\frac{e^x}{x^2}\right).
+                    </me>
+                    In view of <xref
+                        ref="eq-first-order-linear-operator-method-formula-general-solution" />, the
+                    general solution is given by <me>
+                        \begin{split} y&amp; =
+                    c_2e^{-\int\frac{2}{x}\,dx}+e^{-\int\frac{2}{x}\,dx}\int\left(\left(\frac{c_1}{x^2}+\frac{e^x}{x^2}\right)e^{\int\frac{2}{x}\,dx}\right)\,dx\\
+                    &amp;=\frac{c_2}{x^2}+\frac{1}{x^2}\int (c_1+e^x)\, dx\\
+                    &amp;=\frac{c_2}{x^2}+\frac{1}{x^2}(c_1x+e^x)\\
+                    &amp;=\frac{c_1}{x}+\frac{c_2}{x^2}+\frac{e^x}{x^2}, \end{split}
+                    </me>
+                    where <m>c_2</m> is an arbitrary constant. </p>
+            </solution>
+        </example>
+    </subsection>
+
+    <exercises xml:id="exercises-nonhomogeneous-DEs">
+        <exercisegroup>
+            <title><xref ref="subsec-variation-parameters" /> Variation of Parameters</title>
+            <introduction>
+                <p>
+                    <!-- In the exercises below, apply the method of <em>variation of
+                    parameters</em> to find particular solutions of nonhomogeneous linear equations. -->
+                </p>
+            </introduction>
+
+            <exercise>
+                <p>
+                    Solve the following differential equations using the method of variation of
+                    parameters to find particular solutions.
+                </p>
+
+                <ol marker="i." cols="2">
+                    <li>
+                        <p>
+                            <m>y''+y = 2e^x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''-y =xe^{-2x}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y = \sin x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y = x\sin x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y = \sec x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y = \tan x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y = \sin^2 x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y = \sec x\tan x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y = \sec^2 x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+4y'+4y = e^{-2x}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+3y'+2y = \frac{1}{1+e^{x}}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+3y'+2y = \cos(e^x)</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+4y'+4y = 2\cos(2x)</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+4y'+4y = 2e^{-2x}\cos(2x)</m>
+                        </p>
+                    </li>
+                </ol>
+            </exercise>
+
+            <exercise>
+                <p>
+                    Find the general solution of each differential (Cauchy-Euler) equation below
+                    using the variation of parameters to find particular solutions.
+                </p>
+
+                <ol marker="i." cols="2">
+                    <li>
+                        <p>
+                            <!-- <m>x^2y''+3xy'+y = x^2\ln x, \quad x&gt;0</m> -->
+                            <m>x^2y''+xy'-y = 5</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>x^2 y''+x y'-y=2 x^4</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>x^2 y''-x y'+y=x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>x y''-y'=x</m>
+                        </p>
+                    </li>
+                </ol>
+            </exercise>
+
+            <exercise>
+                <p>
+                    Find the general solution of each differential equation below.
+                    One nontrivial solution to the associated homogeneous equation is provided.
+                </p>
+
+                <ol marker="i." cols="2">
+                    <li>
+                        <p>
+                            <m>x^2 y''+x y'-4 y=x; \quad u(x) = x^2</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>x^2 y''+x y'-4 y=\dfrac{1}{x}+1; \quad u(x) = x^2</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>x^2 y''+x y'+4 y=\dfrac{1}{x^2};\quad u(x) = x^2</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>(x-1)y''-x y'+y=(x-1)^2; \quad u(x) = x,</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>(\tan^2x)y''-(2 \tan x) y'+ \left(\sec ^2x+1\right)y=\sin^2x \, \tan
+                                x; \quad u(x) = \sin x</m>
+                        </p>
+                    </li>
+                </ol>
+            </exercise>
+
+            <exercise xml:id="exercises-nonhomogeneous-DEs-Green-function-1">
+                <p> Show that <m>y_p</m> in <xref ref="eq-particular-final-form" /> may be written
+                    as <me>
+                        y_p(x) = \int_{x_0}^x G(x, t) f(t) \, dt,
+                    </me> where <m>x,
+                    x_0</m> are in <m>I</m> and <me>
+                        G(x, t) = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}=\frac{\begin{vmatrix}
+                    y_1(t)&amp;y_2(t)\\ y_1(x)&amp;y_2(x) \end{vmatrix}}{\begin{vmatrix}
+                    y_1(t)&amp;y_2(t)\\ y'_1(t)&amp;y'_2(t) \end{vmatrix}}
+                    </me>
+                    with <m>W(t) = W(y_1(t), y_2(t))</m>, the Wronskian of <m>y_1</m> and <m>y_2</m>.
+                    The function <m>G(x, t)</m> is called the <term>Green's function</term> for <xref
+                        ref="eq-homogeneous1" />. </p>
+            </exercise>
+
+            <exercise>
+                <p> Use the Green's function derived in <xref
+                        ref="exercises-nonhomogeneous-DEs-Green-function-1" /> to find a particular
+                    solution of <me>
+                        y''+y = \frac{1}{\sin x}, \quad 0&lt;x&lt;\pi.
+                    </me>
+                </p>
+            </exercise>
+
+            <exercise xml:id="exercises-nonhomogeneous-DEs-Green-function-2">
+                <p> Use <xref ref="exercises-nonhomogeneous-DEs-Green-function-1" /> to express a
+                    particular solution <m>y_p(x)</m> of <m>y''+k^2 y = f(x),</m> where <m>k&gt;0</m>
+                    is in the form <me>
+                        y_p(x) = \frac{1}{k}\int_{x_0}^x f(t) \sin(k(x-t))\, dt.
+                    </me>
+                    The integral on the right with <m>x_0=0</m> is called the <em>convolution</em>
+                    of <m>f(x)</m> and <m>\sin (kx),</m> in the context of the Laplace transform
+                    (see <xref ref="def-convolution" /> in <xref ref="ch-5" />). </p>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p> Show that the solution of <xref ref="eq-standard-form" /> with the initial
+                        conditions <m>y(x_0) = 0</m> and <m>y'(x_0) = 0</m> is <me>
+                            y(x) = \int_{x_0}^x G(x, t) f(t) \, dt.
+                        </me>
+                    </p>
+                </statement>
+
+                <hint>
+                    <p> Use the following rule for differentiating under the integral sign: if <me>
+                        F(x) = \int_{x_0}^x g(x, t)\, dt,
+                        </me> then <me>
+                        F'(x) = g(x,x) + \int_{x_0}^x \frac{\partial g}{\partial x}(x, t) \, dt.
+                        </me>
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <p> Use the result in <xref ref="exercises-nonhomogeneous-DEs-Green-function-2" />
+                    to obtain the solution of the differential equation in <xref
+                        ref="eg-variation-parameters" /> satisfying <m>y(0) = 0, y'(0) =0.</m>
+                </p>
+            </exercise>
+
+        </exercisegroup> <!--
+        Method of Undetermined Coefficients -->
+        <exercisegroup>
+            <title>
+                <xref ref="subsec-undetermined-coefficients" /> Method of Undetermined Coefficients</title>
+            <introduction>
+                <p>
+                    <!-- In the exercises below, apply the method of <em>undetermined
+                    coefficients</em> to find particular solutions of nonhomogeneous linear
+                    equations. -->
+                </p>
+            </introduction>
+
+            <exercise>
+                <p>
+                    Find the general solution of each of the following nonhomogeneous linear
+                    differential equations.
+                </p>
+
+                <ol marker="i." cols="1">
+                    <li>
+                        <p>
+                            <m>y''-5y'+4y= 5x+1</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''-y'+2y= x^2+x+1</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''-5y'+4y= 5e^{2x}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+4y= 5\cos x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+4y= 5\sin(2x)</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+4y'+5y = 2e^{-x}\sin x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+4y'+4y = 3e^{2x}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''-4y'+4y = 3xe^{2x}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''- 4y'+5y = 2e^{2x}\sin x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+16y = 2\sin(4x)+3\cos(4x)</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''-5y'+4y= 5e^x+3e^{4x}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+16y = x^3+1+2e^{4x}+ \sin x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''-y'=1+7e^x</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y' =2+\sin x -7e^{-x}</m>
+                        </p>
+                    </li>
+                </ol>
+            </exercise>
+
+            <exercise>
+                <p> Let <m>\omega</m> be a fixed positive constant. Find the solution of the initial
+                    value problem <me>
+                        y''+\omega^2 y= 5\cos(\omega x),\quad y(0)= 0, y'(0)=0
+                    </me>
+                    by following the steps below. </p>
+
+                <ol marker="i.">
+                    <li xml:id="item-nonresonance">
+                        <p> Find the solution of the initial value problem <me>
+                                y''+\omega^2 y= 5\cos(\gamma x),\quad y(0)= 0, y'(0)=0
+                            </me>
+                            for <m>\gamma\ne \omega.</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p> Denote by <m>y_\gamma(x)</m> the solution obtained in <xref
+                                ref="item-nonresonance" />. For each <m>x</m> in <m>(-\infty,
+                            \infty),</m> evaluate the limit <me>
+                            \lim\limits_{\gamma\to\omega}y_\gamma(x).
+                            </me>
+                        </p>
+                    </li>
+
+                    <li xml:id="item-resonance-problem-solution">
+                        <p> Verify that the function defined by <me>
+                                y = \lim\limits_{\gamma\to\omega}y_\gamma(x)
+                            </me>
+                            is the solution of <me>
+                                y''+\omega^2 y= 5\cos(\omega x), \; y(0) =0, y'(0)=0.
+                            </me>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p> Obtain the solution found in part <xref
+                                ref="item-resonance-problem-solution" /> by using the method of
+                            undetermined coefficients to find a particular solution. </p>
+                    </li>
+                </ol>
+            </exercise>
+
+            <exercise>
+                <p>
+                    Solve the following initial value problems and plot the corresponding solutions
+                    using a graphing utility.
+                    Describe any differences you observe in the behavior of the two solutions.
+                </p>
+
+                <ol marker="i.">
+                    <li>
+                        <p>
+                            <m>y''+y= \sin (2x), \quad y(0)=1, y'(0)=0</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''+y= \sin x, \quad y(0)=1, y'(0)=0</m>
+                        </p>
+                    </li>
+                </ol>
+            </exercise>
+
+        </exercisegroup> <!--
+        Method of Operator Factorizaiton -->
+        <exercisegroup>
+            <title>
+                <xref ref="subsec-method-operators" /> Method of Operator Factorization</title>
+            <introduction>
+                <p>
+                    <!-- In the exercises below, apply the method of <em>undetermined
+                    coefficients</em> to find particular solutions of nonhomogeneous linear
+                    equations. -->
+                </p>
+            </introduction>
+
+            <exercise>
+                <p> Find a particular solution of <me>
+                        y''-9y= e^{3x}
+                    </me> by using the method used in <xref
+                        ref="example-operator-method-1" />. </p>
+            </exercise>
+
+            <exercise>
+                <p> Find a particular solution of <me>
+                        y''-9y= e^{-3x}
+                    </me> by using the method used in <xref
+                        ref="example-operator-method-2" />. </p>
+            </exercise>
+
+            <exercise>
+                <p> Find a particular solution of each of the following equations by using the
+                    method used in <xref ref="example-shifting-properties" /> (the exponential
+                    shifting properties). </p>
+
+                <ol marker="i.">
+                    <li>
+                        <p>
+                            <m>y''-6y'+ 9y= xe^{3x}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>y''-2y'-3y = 16 e^{5x}</m>
+                        </p>
+                    </li>
+                </ol>
+            </exercise>
+
+            <exercise>
+                <p> Use the exponential shifting properties to show that the general solution of the
+                    homogeneous equation <me>
+                        (D-\lambda)^2y = 0,
+                    </me> where <m>\lambda</m> a real
+                    constant, has <me>
+                        y = (c_1+c_2x)e^{\lambda x},
+                    </me> with <m>c_1</m> and <m>c_2</m>
+                    arbitrary constants. </p>
+            </exercise>
+
+            <exercise>
+                <p> Find a particular solution of <me>
+                        y''+(x+1)y'+(x+1)y= e^{-x}, \quad x&gt;0,
+                    </me> by using the
+                    method used in <xref ref="eg-operator-method-3" />. </p>
+            </exercise>
+
+            <exercise>
+                <p> Determine a fundamental set of solutions of <men
+                        xml:id="ex-3-3-fundamental-set-of-solutions">
+                        y''+(x+1)y'+xy=0
+                    </men> by following the steps below. </p>
+
+                <ol marker="i.">
+                    <li>
+                        <p> Express <xref ref="ex-3-3-fundamental-set-of-solutions" /> in operator
+                            from as <me>
+                                (D+x)(D+1)y=0.
+                            </me>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p> Solve <m>(D+1)y=0</m> to obtain a nonzero solution <m>y_1,</m> and
+                            verify that <m>y_1</m> is indeed a solution of <xref
+                                ref="ex-3-3-fundamental-set-of-solutions" />. </p>
+                    </li>
+
+                    <li>
+                        <p> Find a function <m>y_2</m> by using the Liouville reduction formula <xref
+                                ref="eq-reduction-of-order-formula" /> so that <m>\{y_1, y_2\}</m>
+                            forms a fundamental set of solutions for <xref
+                                ref="ex-3-3-fundamental-set-of-solutions" />. </p>
+                    </li>
+                </ol>
+            </exercise>
+
+            <exercise>
+                <p> Let <m>a_0(x), a_1(x), b_0(x), b_1(x)</m> be differentiable functions on an
+                    interval <m>I.</m> Prove that <me>
+                        (a_1 D+a_0)(b_1D+b_0) =(b_1D+b_0)(a_1 D+a_0)
+                    </me> if and
+                    only if <me>
+                        a_1b_1'= a_1'b_1\quad \mbox{ and }\quad a_1b_0'= a_0'b_1.
+                    </me>
+                </p>
+            </exercise>
+
+            <exercise xml:id="exercises-shifting-properties">
+                <p> Let <m>a_1(x)</m> be a continuous function on some interval <m>I.</m> Let <m>
+                    \alpha(x)</m> and <m>g(x)</m> be differentiable functions on <m>I.</m> Prove the
+                    following general exponential shifting properties. </p>
+
+                <ol>
+                    <li>
+                        <p>
+                            <m>(D+a_1(x))(e^{\alpha (x)} g(x)) = e^{\alpha(x)} (D+\alpha'(x)+a_1(x))
+                                g(x).</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle\frac{1}{D+a_1(x)}(e^{\alpha (x)} g(x)) = e^{\alpha(x)}
+                                \frac{1}{D+\alpha'(x)+a_1(x)} g(x).</m>
+                        </p>
+                    </li>
+                </ol>
+            </exercise>
+
+            <exercise>
+                <p> Use the shifting properties established in <xref
+                        ref="exercises-shifting-properties" /> to find a particular solution of each
+                    of the following equations. </p>
+
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                <m>y''+(x+1)y'+(x+1)y= e^{-x}, \quad x&gt;0,</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>y''+(x+1)y'+xy= e^{-x^2/2}, \quad x&gt;0,</m>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </exercise>
+        </exercisegroup>
+    </exercises>
 </section>
