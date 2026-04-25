@@ -245,20 +245,20 @@
                     Then the integration by parts with the Kronecker method (see <xref
                         ref="kronecker-method" />) gives </p>
 
-                <figure xml:id="kronecker-method">
+                <!-- <figure xml:id="kronecker-method">
                     <caption> Kronecker method for integration by parts </caption>
                     <image source="images/kronecker" width="90%" />
-                </figure>
-                <!--
+                </figure> -->
+
           <figure xml:id="kronecker-method">
             <caption>Kronecker method for integration by parts</caption>
-            <image width="60%">
+            <image width="70%">
               <prefigure xmlns="https://prefigure.org" label="slope-field">
               <xi:include href="prefigure/kronecker.xml" />
               </prefigure>
             </image>
           </figure>
-          -->
+
                 <p>
                     <me>
                         \int \frac{y_2 f}{W} dx= \int \frac{4x^2 e^{-4x}}{e^{-8x}}\, dx =x^2 e^{4x}
