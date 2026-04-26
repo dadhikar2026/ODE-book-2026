@@ -429,7 +429,7 @@
             <p> A useful formula for the Wronskian of two solutions of a second order linear
               homogeneous equation is derived in <xref ref="sec-3-2" />. Problem <xref
                 ref="ex-sec-second-order-homogeneous-7"
-              /> in Exercises <xref
+              /> in <xref
                 ref="exercises-second-order" /> shows how the Wronskian can be used to determine a
               second linearly independent solution when one solution is known. </p>
           </li>

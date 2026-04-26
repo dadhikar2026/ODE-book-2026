@@ -89,7 +89,7 @@
         0</m> for every <m>x</m> in <m>I.</m>
       </p>
 
-      <p> Suppose that <m>W(y_1, y_2)(x)\ne 0</m> on <m>I.</m> By <xref ref="wronskian-theorem" />, <m>
+      <p> Suppose that <m>W(y_1, y_2)(x)\ne 0</m> on <m>I.</m> By <xref ref="thm-wronskian-nonzero-2" />, <m>
         y_1</m> and <m>y_2</m> are linearly independent on <m>I</m>. Note that <m>y_1</m> and <m>y_2</m>
         need not be solutions <xref ref="homogeneous-linear-second-order-de" /> for this part of the
         theorem to hold. </p>
@@ -265,7 +265,7 @@
           \end{cases}
         </me>
         Since <m>\{y_1, y_2\}</m> is a linearly independent set of solutions, <xref
-          ref="wronskian-theorem" /> implies <m>W(y_1, y_2)(x_0)\ne 0,</m> and therefore, by the
+          ref="thm-wronskian-nonzero-2" /> implies <m>W(y_1, y_2)(x_0)\ne 0,</m> and therefore, by the
         Cramer’s rule, we find the unique values of <m>c_1</m> and <m>c_2</m> given by <me>
           c_1 = \frac{ \begin{vmatrix} a &amp; y_2(x_0) \\ b&amp; y_2'(x_0) \end{vmatrix}}{W(y_1,
         y_2)(x_0)} \mbox{ and } c_2 = \frac{ \begin{vmatrix} y_1(x_0)&amp;a \\ y_1'(x_0)&amp;b
@@ -678,7 +678,7 @@
           \cos x</m> can be extended by the same formula to all of <m>(-\infty, \infty)</m> and <me>
           W(\cos x, \sin x) = 1\ne 0
           </me> for all <m>x</m> in <m>(-\infty,
-          \infty),</m> it follows <xref ref="wronskian-theorem" /> that <m>y_1= \sin x</m> and <m>y_2
+          \infty),</m> it follows <xref ref="thm-wronskian-nonzero-2" /> that <m>y_1= \sin x</m> and <m>y_2
           = \cos x</m> are linearly independent on <m>(-\infty, \infty).</m>
         </p>
       </solution>
@@ -1174,7 +1174,7 @@
           </li>
         </ol> The same steps also apply
         when the known solution <m>y_1</m> satisfies <m>y_1(x) &lt;0</m> for all <m>x</m> in <m>I</m>.
-        For the general case, see (ii) of Remark <xref ref="rem-Abel-formula" />. </p>
+        For the general case, see (ii) of <xref ref="rem-Abel-formula" />. </p>
     </exercise>
   </exercises>
 </section>
