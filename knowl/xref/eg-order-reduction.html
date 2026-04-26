@@ -27,7 +27,7 @@
 <div class="para logical">
 <div class="para">For <span class="process-math">\(y'' + y = 0\text{,}\)</span> we have <span class="process-math">\(a_1 =0.\)</span> Also, the given solution <span class="process-math">\(y_1 = \sin x\)</span> vanishes at the points <span class="process-math">\(x = n\pi,\)</span> <span class="process-math">\(n= 0, \pm 1, \pm 2, \dots.\)</span> Therefore, we restrict <span class="process-math">\(y_1\)</span> to an interval <span class="process-math">\(J\)</span> not containing these points. For example, take <span class="process-math">\(J
 = (0, \pi).\)</span> Applying the formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a>, a second solution <span class="process-math">\(y_2\)</span> is given by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/wronskian-theorem.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-wronskian-nonzero-2.html">
 \begin{equation*}
 \begin{split}y_2(x) &amp;= \sin x \int \frac{1}{\sin^2x}\, dx\\ &amp; = \sin x \int
 \csc^2 x\, dx= -\sin x \cot x\\ &amp; = -\cos x\end{split}
@@ -35,13 +35,13 @@
 </div>
 <div class="para">on <span class="process-math">\(J.\)</span> By scaling, we redefine <span class="process-math">\(y_2 = \cos x\)</span> on <span class="process-math">\(J=(0, \pi).\)</span> Since <span class="process-math">\(y_2=
 \cos x\)</span> can be extended by the same formula to all of <span class="process-math">\((-\infty, \infty)\)</span> and</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/wronskian-theorem.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-wronskian-nonzero-2.html">
 \begin{equation*}
 W(\cos x, \sin x) = 1\ne 0
 \end{equation*}
 </div>
 <div class="para">for all <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,
-\infty),\)</span> it follows <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> that <span class="process-math">\(y_1= \sin x\)</span> and <span class="process-math">\(y_2
+\infty),\)</span> it follows <a href="sec-3-2.html#thm-wronskian-nonzero-2" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">Theorem 3.2.1</a> that <span class="process-math">\(y_1= \sin x\)</span> and <span class="process-math">\(y_2
 = \cos x\)</span> are linearly independent on <span class="process-math">\((-\infty, \infty).\)</span>
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg-order-reduction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

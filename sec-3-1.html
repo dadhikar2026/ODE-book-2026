@@ -179,7 +179,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Higher Order Linear Differential Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsec-something-higher-order" class="internal"><span class="codenumber">3.4.1</span> <span class="title">something</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsec-3-4-1" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Homogeneous Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsec-3-4-2" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Nonhomogeneous Equations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-4.html#exercises-EX34" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Applications</span></a></div>
@@ -635,12 +639,12 @@ c_2 + c_3 + c_3 x =0\tag{3.1.6}
 </h3>
 <div class="para" id="Wronskian-2">The methods used in <a href="sec-3-1.html#ex-test-for-indepedence-1" class="xref" data-knowl="./knowl/xref/ex-test-for-indepedence-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.1.9">Example 3.1.9</a> and <a href="sec-3-1.html#ex-test-for-independence-2" class="xref" data-knowl="./knowl/xref/ex-test-for-independence-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.1.10">Example 3.1.10</a> to test the linear independence of functions can become cumbersome, especially when the functions involved are more complicated than those in the examples. In this book, we will typically need to determine whether a set of solutions of homogeneous linear differential equations is linearly independent. For such sets of solutions, the linear independence of solutions can be determined by using the <dfn class="terminology">Wronskian</dfn>, a determinant involving solutions and their derivatives, introduced in 1812 by the Polish mathematician Józef Wroński.<div class="autopermalink" data-description="Paragraph"><a href="#Wronskian-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="def-3-2-1"><h4 class="heading">
+<article class="definition definition-like" id="def-wronskian-n"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(Wronskian).</span>
 </h4>
-<div class="para logical" id="def-3-2-1-2-1">
+<div class="para logical" id="def-wronskian-n-2-1">
 <div class="para">Let <span class="process-math">\(y_1, y_2, \dots, y_n\)</span> be functions that are <span class="process-math">\(n-1\)</span> times differentiable on an interval <span class="process-math">\(I.\)</span> Their <dfn class="terminology"><em class="emphasis">Wronskian</em></dfn>, denoted by <span class="process-math">\(W(y_1, \dots, y_{n-1})(x)\)</span> (or simply by <span class="process-math">\(W(x)\)</span>), is a function on <span class="process-math">\(I\)</span> defined by</div>
-<div class="displaymath process-math" id="def-3-2-1-2-1-8">
+<div class="displaymath process-math" id="def-wronskian-n-2-1-8">
 \begin{equation*}
 W(y_1,\dots,y_n)(x)
 =
@@ -654,9 +658,9 @@ y_1^{(n-1)}(x) &amp; y_2^{(n-1)}(x) &amp; \cdots &amp; y_n^{(n-1)}(x)
 </div>
 <div class="para">on <span class="process-math">\(I.\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-wronskian-n-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.1.11: (Wronskian)"><a href="#def-3-2-1" title="Copy heading and permalink for Definition 3.1.11: (Wronskian)" aria-label="Copy heading and permalink for Definition 3.1.11: (Wronskian)">🔗</a></div></article><details id="wronskian-calculation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 3.1.11: (Wronskian)"><a href="#def-wronskian-n" title="Copy heading and permalink for Definition 3.1.11: (Wronskian)" aria-label="Copy heading and permalink for Definition 3.1.11: (Wronskian)">🔗</a></div></article><details id="wronskian-calculation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4></summary><article class="example example-like knowl__content"><div class="para" id="wronskian-calculation-1-1">Compute the Wronskian of <span class="process-math">\(y_1=e^x\)</span> and <span class="process-math">\(y_2=xe^{-x}\)</span> on <span class="process-math">\((-\infty, \infty).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#wronskian-calculation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -686,21 +690,21 @@ e^x &amp; e^{-x}-xe^{-x} \\
 </div></details></div>
 <div class="autopermalink" data-description="Example 3.1.12"><a href="#wronskian-calculation" title="Copy heading and permalink for Example 3.1.12" aria-label="Copy heading and permalink for Example 3.1.12">🔗</a></div></article></details><div class="para" id="Wronskian-5">The next theorem provides a Wronskian test for linear independence of differentiable functions.<div class="autopermalink" data-description="Paragraph"><a href="#Wronskian-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="wronskian-theorem"><h4 class="heading">
+<article class="theorem theorem-like" id="thm-wronskian-nonzero-1"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(Wronskian Test for Linear Independence).</span>
 </h4>
-<div class="para logical" id="wronskian-theorem-2-1">
+<div class="para logical" id="thm-wronskian-nonzero-1-2-1">
 <div class="para">Let <span class="process-math">\(y_1, \dots, y_k\)</span> be <span class="process-math">\(k-1\)</span> times differentiable functions on an interval <span class="process-math">\(I\)</span> with</div>
-<div class="displaymath process-math" id="wronskian-theorem-2-1-4">
+<div class="displaymath process-math" id="thm-wronskian-nonzero-1-2-1-4">
 \begin{equation*}
 W(y_1, \dots, y_k)(x)\ne 0 \mbox{ on } I.
 \end{equation*}
 </div>
 <div class="para">Then <span class="process-math">\(y_1, \dots, y_k\)</span> are linearly independent on <span class="process-math">\(I.\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#wronskian-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-wronskian-nonzero-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.1.13: (Wronskian Test for Linear Independence)"><a href="#wronskian-theorem" title="Copy heading and permalink for Theorem 3.1.13: (Wronskian Test for Linear Independence)" aria-label="Copy heading and permalink for Theorem 3.1.13: (Wronskian Test for Linear Independence)">🔗</a></div></article><details id="Wronskian-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="Wronskian-7-1">
+<div class="autopermalink" data-description="Theorem 3.1.13: (Wronskian Test for Linear Independence)"><a href="#thm-wronskian-nonzero-1" title="Copy heading and permalink for Theorem 3.1.13: (Wronskian Test for Linear Independence)" aria-label="Copy heading and permalink for Theorem 3.1.13: (Wronskian Test for Linear Independence)">🔗</a></div></article><details id="Wronskian-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="Wronskian-7-1">
 <div class="para">For simplicity, we treat the case <span class="process-math">\(k=2;\)</span> the general case is analogous. Suppose that <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are differentiable functions on an interval <span class="process-math">\(I\)</span> such that <span class="process-math">\(W(y_1,
 y_2)(x)\ne 0\)</span> on <span class="process-math">\(I.\)</span> Let <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> be constants such that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-wronskian-zero-1.html ./knowl/xref/eq-wronskian-zero-2.html" id="eq-wronskian-zero-1">
@@ -725,17 +729,17 @@ c_1 y_1'(x) + c_2 y_2'(x) = 0\tag{3.1.8}
 <div class="para logical" id="Wronskian-8-1">
 <ol class="decimal" id="Wronskian-8-1-1">
 <li id="Wronskian-8-1-1-1">
-<div class="para" id="Wronskian-8-1-1-1-1">The conclusion of <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> holds even if <span class="process-math">\(W(y_1,\dots,y_k)(x_0)\neq
-0\)</span> at just one point <span class="process-math">\(x_0\)</span> in <span class="process-math">\(I\text{.}\)</span> The case <span class="process-math">\(k=2\)</span> appears as Problem 2(i) in Exercises.<div class="autopermalink" data-description="Paragraph"><a href="#Wronskian-8-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Wronskian-8-1-1-1-1">The conclusion of <a href="sec-3-1.html#thm-wronskian-nonzero-1" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> holds even if <span class="process-math">\(W(y_1,\dots,y_k)(x_0)\neq
+0\)</span> at just one point <span class="process-math">\(x_0\)</span> in <span class="process-math">\(I\text{.}\)</span> The case <span class="process-math">\(k=2\)</span> appears as (i) in <a href="sec-3-1.html#exercises-3-1" class="internal" title="Exercises 3.1.3">Exercises 3.1.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#Wronskian-8-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 1"><a href="#Wronskian-8-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="Wronskian-8-1-1-2">
 <div class="para logical" id="Wronskian-8-1-1-2-1">
-<div class="para">The converse of <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> is not true. For example, take the differentiable functions <span class="process-math">\(y_1= x^2\)</span> and <span class="process-math">\(y_2 = x\lvert x\rvert\)</span> on <span class="process-math">\((-\infty,
+<div class="para">The converse of <a href="sec-3-1.html#thm-wronskian-nonzero-1" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> is not true. For example, take the differentiable functions <span class="process-math">\(y_1= x^2\)</span> and <span class="process-math">\(y_2 = x\lvert x\rvert\)</span> on <span class="process-math">\((-\infty,
 \infty).\)</span> We know from Example that <span class="process-math">\(y_1, y_2\)</span> are linearly independent on <span class="process-math">\((-\infty,
 \infty);\)</span> however, their Wronskian</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/wronskian-theorem.html" id="Wronskian-8-1-1-2-1-7">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-wronskian-nonzero-1.html" id="Wronskian-8-1-1-2-1-7">
 \begin{equation*}
 W(x^2, x\lvert{x}\rvert) = \begin{vmatrix}
 x^2&amp;x\lvert{x}\rvert\\
@@ -750,13 +754,12 @@ x^2&amp;x\lvert{x}\rvert\\
 <div class="autopermalink" data-description="Item 2"><a href="#Wronskian-8-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="Wronskian-8-1-1-3">
-<div class="para" id="Wronskian-8-1-1-3-1">
-<dfn class="terminology">there are items missing here and these will be added later</dfn><div class="autopermalink" data-description="Paragraph"><a href="#Wronskian-8-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Wronskian-8-1-1-3-1">We will see in <a href="sec-3-2.html#thm-wronskian-nonzero-2" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">Theorem 3.2.1</a> for the case <span class="process-math">\(k=2\)</span> and in <a href="sec-3-4.html#thm-wronskian-nonzero-3" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.1">Theorem 3.4.1</a> for the general case that the converse of <a href="sec-3-1.html#thm-wronskian-nonzero-1" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> also holds if <span class="process-math">\(y_1, \dots, y_k\)</span> are solutions of a <span class="process-math">\(k^\text{th}\)</span> order homogeneous linear differential equation.<div class="autopermalink" data-description="Paragraph"><a href="#Wronskian-8-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 3"><a href="#Wronskian-8-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 <li id="Wronskian-8-1-1-4">
-<div class="para" id="Wronskian-8-1-1-4-1">A useful formula for the Wronskian of two solutions of a second order linear homogeneous equation is derived in <a href="sec-3-2.html" class="internal" title="Section 3.2: Second Order Homogeneous Linear Differential Equations">Section 3.2</a>. Problem <a href="sec-3-2.html#ex-sec-second-order-homogeneous-7" class="xref" data-knowl="./knowl/xref/ex-sec-second-order-homogeneous-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.2.3.7">Exercise 3.2.3.7</a> in Exercises <a href="sec-3-2.html#exercises-second-order" class="internal" title="Exercises 3.2.3">Exercises 3.2.3</a> shows how the Wronskian can be used to determine a second linearly independent solution when one solution is known.<div class="autopermalink" data-description="Paragraph"><a href="#Wronskian-8-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Wronskian-8-1-1-4-1">A useful formula for the Wronskian of two solutions of a second order linear homogeneous equation is derived in <a href="sec-3-2.html" class="internal" title="Section 3.2: Second Order Homogeneous Linear Differential Equations">Section 3.2</a>. Problem <a href="sec-3-2.html#ex-sec-second-order-homogeneous-7" class="xref" data-knowl="./knowl/xref/ex-sec-second-order-homogeneous-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.2.3.7">Exercise 3.2.3.7</a> in <a href="sec-3-2.html#exercises-second-order" class="internal" title="Exercises 3.2.3">Exercises 3.2.3</a> shows how the Wronskian can be used to determine a second linearly independent solution when one solution is known.<div class="autopermalink" data-description="Paragraph"><a href="#Wronskian-8-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 4"><a href="#Wronskian-8-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>

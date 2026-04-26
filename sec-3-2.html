@@ -179,7 +179,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Higher Order Linear Differential Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsec-something-higher-order" class="internal"><span class="codenumber">3.4.1</span> <span class="title">something</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsec-3-4-1" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Homogeneous Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsec-3-4-2" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Nonhomogeneous Equations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-4.html#exercises-EX34" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Applications</span></a></div>
@@ -334,10 +338,10 @@ e^{-\int_{x_0}^x a_1(t)\, dt} &gt;0 \quad \mbox{ for all } x \mbox{ in } I,
 </div>
 <div class="para" id="sec-3-2-3-3">The analysis of the Wronskian together with the formula <a href="sec-3-2.html#eq-Abel-formula" class="xref" data-knowl="./knowl/xref/eq-Abel-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> above also hold for higher order homogeneous linear equations (see Section?? Higher Order).<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="wronskian-linearly-independent-theorem"><h3 class="heading">
+<article class="theorem theorem-like" id="thm-wronskian-nonzero-2"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(Criterion for Linearly Indepedent Solutions).</span>
 </h3>
-<div class="para logical" id="wronskian-linearly-independent-theorem-2-1">
+<div class="para logical" id="thm-wronskian-nonzero-2-2-1">
 <div class="para">Two solutions <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> of</div>
 <div class="displaymath process-math" id="homogeneous-linear-second-order-de">
 \begin{equation}
@@ -346,9 +350,9 @@ y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.2}
 </div>
 <div class="para">where <span class="process-math">\(a_1(x)\)</span> and <span class="process-math">\(a_0(x)\)</span> are continuous functions on an interval <span class="process-math">\(I,\)</span> are linearly independent on <span class="process-math">\(I\)</span> if and only if <span class="process-math">\(W(y_1, y_2)(x)\ne 0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I.\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#wronskian-linearly-independent-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-wronskian-nonzero-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)"><a href="#wronskian-linearly-independent-theorem" title="Copy heading and permalink for Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)" aria-label="Copy heading and permalink for Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">🔗</a></div></article><details id="sec-3-2-3-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-3-2-3-5-1">
+<div class="autopermalink" data-description="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)"><a href="#thm-wronskian-nonzero-2" title="Copy heading and permalink for Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)" aria-label="Copy heading and permalink for Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">🔗</a></div></article><details id="sec-3-2-3-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-3-2-3-5-1">
 <div class="para">Let <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> be linearly independent solutions of <a href="sec-3-2.html#homogeneous-linear-second-order-de" class="xref" data-knowl="./knowl/xref/homogeneous-linear-second-order-de.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.2">(3.2.2)</a> on <span class="process-math">\(I\text{.}\)</span> Suppose, for a contradiction, that there is a point <span class="process-math">\(x_0\)</span> in <span class="process-math">\(I\)</span> such that <span class="process-math">\(W(y_1,y_2)(x_0)= 0.\)</span> Let <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> be constants. Then the linear system</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous-linear-second-order-de.html ./knowl/xref/system.html ./knowl/xref/system.html ./knowl/xref/existence-uniqueness-theorem.html" id="system">
 \begin{equation}
@@ -379,7 +383,7 @@ c_1 y_1(x) + c_2 y_2(x) = 0
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-3-2-3-5-2">Suppose that <span class="process-math">\(W(y_1, y_2)(x)\ne 0\)</span> on <span class="process-math">\(I.\)</span> By <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a>, <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are linearly independent on <span class="process-math">\(I\text{.}\)</span> Note that <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> need not be solutions <a href="sec-3-2.html#homogeneous-linear-second-order-de" class="xref" data-knowl="./knowl/xref/homogeneous-linear-second-order-de.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.2">(3.2.2)</a> for this part of the theorem to hold.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-3-2-3-5-2">Suppose that <span class="process-math">\(W(y_1, y_2)(x)\ne 0\)</span> on <span class="process-math">\(I.\)</span> By <a href="sec-3-2.html#thm-wronskian-nonzero-2" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">Theorem 3.2.1</a>, <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are linearly independent on <span class="process-math">\(I\text{.}\)</span> Note that <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> need not be solutions <a href="sec-3-2.html#homogeneous-linear-second-order-de" class="xref" data-knowl="./knowl/xref/homogeneous-linear-second-order-de.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.2">(3.2.2)</a> for this part of the theorem to hold.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-2-3-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Proof 1"><a href="#sec-3-2-3-5" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details></section><section class="subsection" id="subsec-existence-of-fundamental-sets-of-solutions"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Existence of Fundamental Sets of Solutions</span>
@@ -543,21 +547,21 @@ y = c_1 y_1(x) + c_2 y_2(x)\tag{3.2.7}
 <div class="para logical" id="subsec-existence-of-fundamental-sets-of-solutions-9-2">
 <div class="para">To show that every solution of <a href="sec-3-2.html#eq-homogeneous-3" class="xref" data-knowl="./knowl/xref/eq-homogeneous-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.5">(3.2.5)</a> is of this form <a href="sec-3-2.html#eq-homogeneous-general-solution" class="xref" data-knowl="./knowl/xref/eq-homogeneous-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.6">(3.2.6)</a>, let <span class="process-math">\(\phi(x)\)</span> be a solution of <a href="sec-3-2.html#eq-homogeneous-3" class="xref" data-knowl="./knowl/xref/eq-homogeneous-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.5">(3.2.5)</a> on <span class="process-math">\(I\)</span> and <span class="process-math">\(x_0\)</span> be in <span class="process-math">\(I.\)</span> Denote by <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> the constants <span class="process-math">\(\phi(x_0)\)</span> and <span class="process-math">\(\phi'(x_0)\text{,}\)</span> respectively. Then <span class="process-math">\(y =
 \phi(x)\)</span> solves the initial value problem</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/wronskian-theorem.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="eq-homogeneous-ivp-1">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/thm-wronskian-nonzero-2.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="eq-homogeneous-ivp-1">
 \begin{equation}
 y'' + a_1(x)y' + a_0(x)y = 0, \quad y(x_0) = a, y'(x_0) =b.\tag{3.2.8}
 \end{equation}
 </div>
 <div class="para">On the other hand, let <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> be constants to be determined so that <span class="process-math">\(y(x) =
 c_1y_1(x)+ c_2y_2(x)\)</span> satisfies <span class="process-math">\(y(x_0) = a, y'(x_0) = b.\)</span> Then</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/wronskian-theorem.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="subsec-existence-of-fundamental-sets-of-solutions-9-2-18">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/thm-wronskian-nonzero-2.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="subsec-existence-of-fundamental-sets-of-solutions-9-2-18">
 \begin{equation*}
 \begin{cases} c_1y_1(x_0) +c_2y_2(x_0) = a,\\ c_1y'_1(x_0) +c_2y'_2(x_0) = b.\\
 \end{cases}
 \end{equation*}
 </div>
-<div class="para">Since <span class="process-math">\(\{y_1, y_2\}\)</span> is a linearly independent set of solutions, <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> implies <span class="process-math">\(W(y_1, y_2)(x_0)\ne 0,\)</span> and therefore, by the Cramer’s rule, we find the unique values of <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> given by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/wronskian-theorem.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="subsec-existence-of-fundamental-sets-of-solutions-9-2-24">
+<div class="para">Since <span class="process-math">\(\{y_1, y_2\}\)</span> is a linearly independent set of solutions, <a href="sec-3-2.html#thm-wronskian-nonzero-2" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">Theorem 3.2.1</a> implies <span class="process-math">\(W(y_1, y_2)(x_0)\ne 0,\)</span> and therefore, by the Cramer’s rule, we find the unique values of <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-homogeneous-3.html ./knowl/xref/eq-homogeneous-general-solution.html ./knowl/xref/eq-homogeneous-3.html ./knowl/xref/thm-wronskian-nonzero-2.html ./knowl/xref/eq-homogeneous-ivp-1.html ./knowl/xref/existence-uniqueness-theorem.html" id="subsec-existence-of-fundamental-sets-of-solutions-9-2-24">
 \begin{equation*}
 c_1 = \frac{ \begin{vmatrix} a &amp; y_2(x_0) \\ b&amp; y_2'(x_0) \end{vmatrix}}{W(y_1,
 y_2)(x_0)} \mbox{ and } c_2 = \frac{ \begin{vmatrix} y_1(x_0)&amp;a \\ y_1'(x_0)&amp;b
@@ -1050,7 +1054,7 @@ y(x) = (c_1 + c_2 x) e^{-4x},
 <div class="para logical" id="eg-order-reduction-2-1">
 <div class="para">For <span class="process-math">\(y'' + y = 0\text{,}\)</span> we have <span class="process-math">\(a_1 =0.\)</span> Also, the given solution <span class="process-math">\(y_1 = \sin x\)</span> vanishes at the points <span class="process-math">\(x = n\pi,\)</span> <span class="process-math">\(n= 0, \pm 1, \pm 2, \dots.\)</span> Therefore, we restrict <span class="process-math">\(y_1\)</span> to an interval <span class="process-math">\(J\)</span> not containing these points. For example, take <span class="process-math">\(J
 = (0, \pi).\)</span> Applying the formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a>, a second solution <span class="process-math">\(y_2\)</span> is given by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/wronskian-theorem.html" id="eg-order-reduction-2-1-11">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-wronskian-nonzero-2.html" id="eg-order-reduction-2-1-11">
 \begin{equation*}
 \begin{split}y_2(x) &amp;= \sin x \int \frac{1}{\sin^2x}\, dx\\ &amp; = \sin x \int
 \csc^2 x\, dx= -\sin x \cot x\\ &amp; = -\cos x\end{split}
@@ -1058,13 +1062,13 @@ y(x) = (c_1 + c_2 x) e^{-4x},
 </div>
 <div class="para">on <span class="process-math">\(J.\)</span> By scaling, we redefine <span class="process-math">\(y_2 = \cos x\)</span> on <span class="process-math">\(J=(0, \pi).\)</span> Since <span class="process-math">\(y_2=
 \cos x\)</span> can be extended by the same formula to all of <span class="process-math">\((-\infty, \infty)\)</span> and</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/wronskian-theorem.html" id="eg-order-reduction-2-1-17">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-wronskian-nonzero-2.html" id="eg-order-reduction-2-1-17">
 \begin{equation*}
 W(\cos x, \sin x) = 1\ne 0
 \end{equation*}
 </div>
 <div class="para">for all <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,
-\infty),\)</span> it follows <a href="sec-3-1.html#wronskian-theorem" class="xref" data-knowl="./knowl/xref/wronskian-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.13: (Wronskian Test for Linear Independence)">Theorem 3.1.13</a> that <span class="process-math">\(y_1= \sin x\)</span> and <span class="process-math">\(y_2
+\infty),\)</span> it follows <a href="sec-3-2.html#thm-wronskian-nonzero-2" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">Theorem 3.2.1</a> that <span class="process-math">\(y_1= \sin x\)</span> and <span class="process-math">\(y_2
 = \cos x\)</span> are linearly independent on <span class="process-math">\((-\infty, \infty).\)</span>
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg-order-reduction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1273,7 +1277,7 @@ y= c_1 x+c_2 x\ln x,\quad x&gt;0,
 </h3>
 <article class="exercise exercise-like" id="ex-sec-second-order-homogeneous-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="ex-sec-second-order-homogeneous-1-1">
-<div class="para">Verify that the indicated solution set for each differential equation below is linearly independent on the specified interval <span class="process-math">\(I\)</span> by computing Wronskian of the solutions (see <a href="sec-3-2.html#wronskian-linearly-independent-theorem" class="xref" data-knowl="./knowl/xref/wronskian-linearly-independent-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">Theorem 3.2.1</a>).</div>
+<div class="para">Verify that the indicated solution set for each differential equation below is linearly independent on the specified interval <span class="process-math">\(I\)</span> by computing Wronskian of the solutions (see <a href="sec-3-2.html#thm-wronskian-nonzero-2" class="xref" data-knowl="./knowl/xref/thm-wronskian-nonzero-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.1: (Criterion for Linearly Indepedent Solutions)">Theorem 3.2.1</a>).</div>
 <ol class="lower-roman ol-marker-1" id="ex-sec-second-order-homogeneous-1-1-3">
 <li id="ex-sec-second-order-homogeneous-1-1-3-1">
 <div class="para" id="ex-sec-second-order-homogeneous-1-1-3-1-1">
@@ -1582,9 +1586,8 @@ ay'' + by' + cy = 0, \quad a \ne 0,
 <div class="para">Let <span class="process-math">\(y = e^{\lambda x}\)</span> with parameter <span class="process-math">\(\lambda\text{.}\)</span> Show that</div>
 <div class="displaymath process-math" id="part-a-1-3">
 \begin{equation*}
-a\frac{\partial^2}{\partial
-x^2} (e^{\lambda x}) + b\frac{\partial}{\partial x} (e^{\lambda x}) + c (e^{\lambda x}) =
-p(\lambda) e^{\lambda x}.
+a\frac{\partial^2}{\partial x^2} (e^{\lambda x}) + b\frac{\partial}{\partial x} (e^{\lambda
+x}) + c (e^{\lambda x}) = p(\lambda) e^{\lambda x}.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#part-a-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1596,9 +1599,8 @@ p(\lambda) e^{\lambda x}.
 <div class="para">Differentiate both sides of the equation in <a href="sec-3-2.html#part-a" class="xref" data-knowl="./knowl/xref/part-a.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.2.3.6.a">Item 3.2.3.6.a</a> with respect to <span class="process-math">\(\lambda\)</span> to obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/part-a.html" id="ex-sec-second-order-homogeneous-6-1-6-2-1-3">
 \begin{equation*}
-a\frac{\partial^2}{\partial x^2} (x e^{\lambda x}) +
-b\frac{\partial}{\partial x} (x e^{\lambda x}) + c (x e^{\lambda x}) = \big(p'(\lambda) +
-x\, p(\lambda)\big) e^{\lambda x}.
+a\frac{\partial^2}{\partial x^2} (x e^{\lambda x}) + b\frac{\partial}{\partial x} (x
+e^{\lambda x}) + c (x e^{\lambda x}) = \big(p'(\lambda) + x\, p(\lambda)\big) e^{\lambda x}.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-6-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1634,11 +1636,11 @@ y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.22}
 <div class="para">Suppose that <span class="process-math">\(y_2\)</span> is a solution of <a href="sec-3-2.html#eq-second-order-linear_homo-de-3" class="xref" data-knowl="./knowl/xref/eq-second-order-linear_homo-de-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.22">(3.2.22)</a> such that <span class="process-math">\(\{y_1, y_2\}\)</span> is linearly independent on <span class="process-math">\(I.\)</span> Show that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear_homo-de-3.html" id="wronskian-method-1-5">
 \begin{equation*}
-\left(\frac{y_2}{y_1}\right)' = \frac{W(x)}{y_1^2}
-\quad \mbox{on } I,
+\left(\frac{y_2}{y_1}\right)' = \frac{W(x)}{y_1^2} \quad \mbox{on } I,
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(W(x)\)</span> is the Wronskian of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> given by <span class="process-math">\(W(x) =y_1(x)y_2'(x) - y_1'(x)y_2(x).\)</span>
+<div class="para">where <span class="process-math">\(W(x)\)</span> is the Wronskian of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> given by <span class="process-math">\(W(x)
+=y_1(x)y_2'(x) - y_1'(x)y_2(x).\)</span>
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#wronskian-method-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -1649,8 +1651,7 @@ y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.22}
 <div class="para">Using <a href="sec-3-2.html#wronskian-method" class="xref" data-knowl="./knowl/xref/wronskian-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.2.3.7.a">Item 3.2.3.7.a</a>, show that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/wronskian-method.html" id="Abel-2-1-2">
 \begin{equation*}
-y_2 = y_1(x)
-\int\frac{W(x)}{[y_1(x)]^2}\, dx.
+y_2 = y_1(x) \int\frac{W(x)}{[y_1(x)]^2}\, dx.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#Abel-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1662,8 +1663,7 @@ y_2 = y_1(x)
 <div class="para">Obtain Liouville’s formula</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Abel-2.html" id="ex-sec-second-order-homogeneous-7-1-10-3-1-1">
 \begin{equation*}
-y_2 = y_1(x) \int\frac{e^{-\int
-a_1(x)\,dx}}{[y_1(x)]^2}\, dx
+y_2 = y_1(x) \int\frac{e^{-\int a_1(x)\,dx}}{[y_1(x)]^2}\, dx
 \end{equation*}
 </div>
 <div class="para">from part <a href="sec-3-2.html#Abel-2" class="xref" data-knowl="./knowl/xref/Abel-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.2.3.7.b">Item 3.2.3.7.b</a>.</div>
@@ -1672,7 +1672,7 @@ a_1(x)\,dx}}{[y_1(x)]^2}\, dx
 <div class="autopermalink" data-description="Item 3.2.3.7.c"><a href="#ex-sec-second-order-homogeneous-7-1-10-3" title="Copy heading and permalink for Item 3.2.3.7.c" aria-label="Copy heading and permalink for Item 3.2.3.7.c">🔗</a></div>
 </li>
 </ol>
-<div class="para">The same steps also apply when the known solution <span class="process-math">\(y_1\)</span> satisfies <span class="process-math">\(y_1(x) &lt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{.}\)</span> For the general case, see (ii) of Remark <a href="sec-3-2.html#rem-Abel-formula" class="xref" data-knowl="./knowl/xref/rem-Abel-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2">Item 2</a>.</div>
+<div class="para">The same steps also apply when the known solution <span class="process-math">\(y_1\)</span> satisfies <span class="process-math">\(y_1(x) &lt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{.}\)</span> For the general case, see (ii) of <a href="sec-3-2.html#rem-Abel-formula" class="xref" data-knowl="./knowl/xref/rem-Abel-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2">Item 2</a>.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-sec-second-order-homogeneous-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Exercise 3.2.3.7"><a href="#ex-sec-second-order-homogeneous-7" title="Copy heading and permalink for Exercise 3.2.3.7" aria-label="Copy heading and permalink for Exercise 3.2.3.7">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.2.3"><a href="#exercises-second-order" title="Copy heading and permalink for Exercises 3.2.3" aria-label="Copy heading and permalink for Exercises 3.2.3">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: Second Order Homogeneous Linear Differential Equations"><a href="#sec-3-2" title="Copy heading and permalink for Section 3.2: Second Order Homogeneous Linear Differential Equations" aria-label="Copy heading and permalink for Section 3.2: Second Order Homogeneous Linear Differential Equations">🔗</a></div></section></div>
