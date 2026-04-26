@@ -425,21 +425,16 @@
                     </me>
                     Substituting these into <xref ref="eq-udc-2" /> would give <me>
                         -A\sin x-6A\cos x+ 9A\sin x = \sin x,
-                    </me>
-                    i.e., <me>
-                        (8A-1)\sin x -6A\cos x = 0,
-                    </me> which
-                    is not an identity in <m> x</m> for any value of <m>A</m> because <m>\sin x</m>
-                    and <m>\cos
-                        x</m> are linearly independent. Thus, no value of <m>A</m> makes <m>y_p =
-                    A\sin
-                        x</m> a valid particular solution. This occurs because <m>\cos x</m> is
-                    involved in the process. Therefore, we modify our trial function for <m>y_p</m>
-                    and take <me>
-                        y_p = A\sin x + B\cos x
-                    </me> where <m>
-                    A</m> and <m>
-                        B</m> are constants to be determined. Differentiating twice gives <me>
+                    </me> i.e., <me>
+                    (8A-1)\sin x -6A\cos x = 0,
+                    </me> which is not an
+                    identity in <m> x</m> for any value of <m>A</m> because <m>\sin x</m> and <m>\cos
+                    x</m> are linearly independent. Thus, no value of <m>A</m> makes <m>y_p = A\sin
+                    x</m> a valid particular solution. This occurs because <m>\cos x</m> is involved
+                    in the process. Therefore, we modify our trial function for <m>y_p</m> and take <me>
+                    y_p = A\sin x + B\cos x
+                    </me> where <m> A</m> and <m>
+                    B</m> are constants to be determined. Differentiating twice gives <me>
                         y_p' = A\cos x-B\sin x, \quad y_p''= -A\sin x - B\cos x.
                     </me>
                     Substituting these into <xref ref="eq-udc-2" /> gives <me>
@@ -464,14 +459,12 @@
                     equation <me>
                         y'' -6y'+ 9y =0
                     </me> is <me>
-                    \lambda^2 -6\lambda +9 =0,
-                    </me>
-                    which has a repeated root <m>\lambda = 3.</m> Then the complementary function <m>
-                    y_h</m> is given by <me>
-                        y_h = c_1 e^{3x} + c_2 xe^{3x},
-                    </me>
-                    where <m>c_1</m> and <m> c_2</m> are arbitrary constants. Hence the general
-                    solution of <xref
+                        \lambda^2 -6\lambda +9 =0,
+                    </me> which has a repeated
+                    root <m>\lambda = 3.</m> Then the complementary function <m>y_h</m> is given by <me>
+                    y_h = c_1 e^{3x} + c_2 xe^{3x},
+                    </me> where <m>c_1</m>
+                    and <m> c_2</m> are arbitrary constants. Hence the general solution of <xref
                         ref="eq-udc-2" /> is <me>
                         y = y_h(x)+y_p(x) = c_1 e^{3x} + c_2 xe^{3x}+\frac{2}{25}\sin
                     x+\frac{3}{50}\cos x,
@@ -500,13 +493,12 @@
                     associated homogeneous equation <me>
                         y'' -4y'+ 4y =0
                     </me> is <me>
-                    \lambda^2 -4\lambda +4 =0,
-                    </me>
-                    which has a repeated root <m>\lambda = 2.</m> Then the complementary function <m>
-                    y_h</m> is given by <me>
-                        y_h = c_1 e^{2x} + c_2 xe^{2x},
-                    </me>
-                    where <m>c_1</m> and <m> c_2</m> are arbitrary constants. </p>
+                        \lambda^2 -4\lambda +4 =0,
+                    </me> which has a repeated
+                    root <m>\lambda = 2.</m> Then the complementary function <m>y_h</m> is given by <me>
+                    y_h = c_1 e^{2x} + c_2 xe^{2x},
+                    </me> where <m>c_1</m>
+                    and <m> c_2</m> are arbitrary constants. </p>
 
                 <p> Next, we choose a trial solution for the particular solution. Since the
                     right-hand side is <m>e^{2x}</m>, and this term appears in the complementary
@@ -545,12 +537,10 @@
                         y''+y=0
                     </me> is <me>
                         \lambda^2 + 1=0,
-                    </me> whose
-                    complex roots are <me>
-                        \lambda = \pm i.
-                    </me> Therefore, the
-                    complementary function of the general solution of the nonhomogeneous equitation
-                    is <me>
+                    </me> whose complex roots are <me>
+                    \lambda = \pm i.
+                    </me> Therefore, the complementary
+                    function of the general solution of the nonhomogeneous equitation is <me>
                         y_h = c_1 \cos x+ c_2 \sin x,
                     </me>
                     where <m>c_1</m> and <m> c_2</m> arbitrary constants. If <m>y_h</m> was not
@@ -885,10 +875,9 @@
         <p> To introduce the operator method, we begin by considering the first order linear
             equation <men xml:id="eq-first-order-linear-operator-method">
                 y'+a_1(x) y = f(x),
-            </men> where <m>a_1(x)</m> and <m>f(x)</m>
-            are continuous on an interval <m>I.</m> The equation in operator notation can be written
-            as <me>
-                \big(D+a_1(x)\big)y = f(x).
+            </men> where <m>a_1(x)</m> and <m>f(x)</m> are
+            continuous on an interval <m>I.</m> The equation in operator notation can be written as <me>
+            \big(D+a_1(x)\big)y = f(x).
             </me> Formally, a solution may be
             expressed as <me>
                 y = \frac{1}{D+a_1(x)}f(x).
