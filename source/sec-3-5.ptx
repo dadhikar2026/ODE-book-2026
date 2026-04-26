@@ -2,12 +2,12 @@
 
 <section xml:id="sec-3-5" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Applications</title>
+
   <objectives>
     <ul>
       <li>
         <p>
-          Be able to apply methods of solutions from previous sections to some basic problems in
-          applications.
+          Be able to apply methods of solutions from previous sections to some elementary problems in applications.
         </p>
       </li>
     </ul>
@@ -15,23 +15,135 @@
 
   <introduction>
     <p>
-      In this section we will study two commons examples of applications where the solution methods
-      from previous sections can be effectively used.
-</p>
+      In this section we will study three elementary examples of applications where the methods from previous sections can be effectively used.
+    </p>
   </introduction>
-  <subsection xml:id="spring-mass-system">
+
+
+  <subsection xml:id="subsec-spring-mass-system">
     <title>Spring-Mass System</title>
+
     <p>
-      A spring-mass system is a common physical application of second-order linear differential
-      equations.
+      A common example of a second order linear differential equation with constant coefficients arises in modeling the motion of a mass attached to a spring whose other end is fixed to a support.
+      Let us consider a spring suspended vertically from a fixed ceiling (rigid support) with the mass attached to its lower end, as illustrated in <xref ref="fig-spring-mass" />.
     </p>
 
+    <figure xml:id="fig-spring-mass">
+      <caption>A  mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.</caption>
+      <image width="80%">
+        <latex-image>
+          \begin{tikzpicture}[scale=1.1, &gt;=stealth]
+            \tikzset{
+            spring/.style={thick,decorate,decoration={coil,aspect=0.4,segment
+            length=4pt,amplitude=3pt}},
+            mass/.style={draw,fill=pink!60,minimum width=1cm,minimum height=0.7cm},
+            dashedline/.style={dashed,gray},
+            labeltext/.style={font=\small}
+            }
+
+		% (a) Unstretched spring
+
+		\begin{scope}[xshift=0cm]
+			\node[below] at (0,-2.6) {(a)};
+			% Ceiling
+			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+			\node[above] at (0,0.2) {\small Rigid Support};
+			% Spring (natural length l)
+		  \draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-2.2);
+			%\draw[spring, aspect=0.7] (0,0) -- (0,-2.2);
+			\draw[&lt;-&gt;] (0.4,0) -- (0.4,-2.2);
+			\node[right,labeltext] at (0.41,-1) {$\ell$};
+			% Dashed reference line
+			\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+			\node[below,labeltext] at (0,-2.4) {unstretched spring};
+		\end{scope}
+
+		% (b) Equilibrium position
+
+		\begin{scope}[xshift=1.75cm]
+			\node[below] at (0,-4.1) {(b)};
+			% Ceiling
+			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+			%\node[above] at (0,0.2) {\small Rigid Support};
+			% Spring
+			\draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-3.1);
+			%\draw[spring] (0,0) -- (0,-3.1);
+			\node[mass] (m1) at (0,-3.4) {$m$};
+			% Labels
+			\draw[&lt;-&gt;] (0.45,0) -- (0.45,-2.2);
+			\node[right,labeltext] at (0.45,-1) {$\ell$};
+			%\node[right,labeltext] at (0,-2.4) {$s$};
+			\draw[dashedline] (-0.8,-3.1) -- (5,-3.1); %the line corresponding to the origin
+			\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+			% Bracket for s
+			\draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.1);
+			\node[right,labeltext] at (0.45,-2.7) {$s$};
+			\node[below,labeltext] at (0,-3.8) {mass in equilibrium};
+		\end{scope}
+
+		% (c) Motion (displacement x or y)
+
+		\begin{scope}[xshift=4.25cm]
+			\node[below] at (0,-5.5) {(c)};
+			% Ceiling
+			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+			%\node[above] at (0,0.2) {\small Rigid Support};
+			% Spring
+			\draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-4.1);
+			%\draw[spring] (0,0) -- (0,-3);
+			\node[mass] (m2) at (0,-4.4) {$m$};
+			% Labels
+			% Bracket for total extension
+			\draw[&lt;-&gt;] (0.7,0) -- (0.7,-3.1);
+			\node[right,labeltext] at (0.7,-1.5) {$\ell + s$};
+			\draw[&lt;-&gt;] (0.7,-4.1) -- (0.7,-3.1);
+			\node[right,labeltext] at (0.7,-3.6) {$y(t)$};
+			% Dashed lines
+			%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+			\draw[dashedline] (-0.8,-4.1) -- (0.85,-4.1);
+			%\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
+			\node[below,labeltext] at (0,-5.2) {mass in motion};
+			% Thick vertical wall
+			\draw[thick] (-0.4,-4.8) -- (-0.4,0);
+			% Friction hatch marks (diagonal lines)
+			\foreach \y in {-4.8,-4.6,...,-0.2}
+			\draw[thick] (-0.4,\y) -- (-0.5,\y+0.2);
+			% Optional label
+			\node[rotate=90,left] at (-0.8,-1) {wall/friction};
+  		% Example mass block next to wall
+      %\draw[fill=gray!30] (0.5,1) rectangle (1.5,2);
+			% Optional arrow to indicate external force
+			\draw[-&gt;,blue,very thick] (0.35,-4.1) -- (0.35,-3.7) node[right] {};
+			\draw[-&gt;,blue,very thick] (0.35,-4.7) -- (0.35,-5.1) node[right] {$F(t)$};
+		\end{scope}
+			%--------------------------------
+		% (d) Coordinate system
+		%--------------------------------
+		\begin{scope}[xshift=3.5cm]
+			\node[below] at (3.1,-5.5) {(d)};
+			% Bracket for total extension
+			\draw[-&gt;,very thick] (3,0.25) -- (3,-5);
+      % the coordinate axis line
+			\node[right,labeltext] at (3.1,-1.9) {$y&lt;0$};
+			\filldraw[black] (3,-3.1) circle (2pt);
+			\node[right,labeltext] at (3.1,-3.1) {$y=0$\;(origin)};
+			\node[right,labeltext] at (3.1,-4.5) {$y>0$};
+			% Dashed lines
+			\node[below,labeltext] at (3.1,-5.2) {the coordinate axis};
+      \end{scope}
+	  \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
   </subsection>
-  <subsection xml:id="RLC-circuit">
+
+
+  <subsection xml:id="subsec-RLC-circuit">
     <title>Electrical Circuits</title>
+
     <p>
-      An RLC circuit is another common physical application of second-order linear differential
-      equations.
+      An RLC circuit is another common physical application of second-order linear differential equations.
     </p>
 
   </subsection>
