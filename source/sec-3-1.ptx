@@ -324,7 +324,7 @@
       mathematician Józef Wroński. </p>
 
 
-    <definition xml:id="def-3-2-1">
+    <definition xml:id="def-wronskian-n">
       <title>(Wronskian)</title>
       <statement>
         <p> Let <m>y_1, y_2, \dots, y_n</m> be functions that are <m>n-1</m> times differentiable on
@@ -371,7 +371,7 @@
       functions.
     </p>
 
-    <theorem xml:id="wronskian-theorem">
+    <theorem xml:id="thm-wronskian-nonzero-1">
       <title>(Wronskian Test for Linear Independence)</title>
       <statement>
         <p> Let <m>y_1, \dots, y_k</m> be <m>k-1</m> times differentiable functions on an interval <m>
@@ -400,13 +400,13 @@
       <p>
         <ol>
           <li>
-            <p> The conclusion of <xref ref="wronskian-theorem" /> holds even if <m>W(y_1,\dots,y_k)(x_0)\neq
+            <p> The conclusion of <xref ref="thm-wronskian-nonzero-1" /> holds even if <m>W(y_1,\dots,y_k)(x_0)\neq
               0</m> at just one point <m>x_0</m> in <m>I</m>. The case <m>k=2</m> appears as
-              Problem 2(i) in Exercises. </p>
+              (i) in <xref ref="exercises-3-1" />. </p>
           </li>
 
           <li>
-            <p> The converse of <xref ref="wronskian-theorem" /> is not true. For example, take the
+            <p> The converse of <xref ref="thm-wronskian-nonzero-1" /> is not true. For example, take the
               differentiable functions <m>y_1= x^2</m> and <m>y_2 = x\lvert x\rvert</m> on <m>(-\infty,
               \infty).</m> We know from Example that <m>y_1, y_2</m> are linearly independent on <m>(-\infty,
               \infty);</m> however, their Wronskian <me>W(x^2, x\lvert{x}\rvert) = \begin{vmatrix}
@@ -415,19 +415,15 @@
                 \end{vmatrix} =0</me> on <m>(-\infty, \infty).</m>
             </p>
           </li>
+
           <li>
             <p>
-              <term> there are items missing here and these will be added later </term>
-            </p>
-          </li>
-          <!-- <li>
-            <p>
-              We will see in Theorem <xref ref="thm-wronskian-nonzero-2" /> for the case <m>k=2</m> and in
-          Theorem <xref ref="thm-wronskian-nonzero-3" /> for the general case that the converse of
-          Theorem <xref ref="thm-wronskian-nonzero-1" /> also holds if <m>y_1, \dots, y_k</m> are
+              We will see in <xref ref="thm-wronskian-nonzero-2" /> for the case <m>k=2</m> and in
+          <xref ref="thm-wronskian-nonzero-3" /> for the general case that the converse of
+          <xref ref="thm-wronskian-nonzero-1" /> also holds if <m>y_1, \dots, y_k</m> are
           solutions of a <m>k^\text{th}</m> order homogeneous linear differential equation.
             </p>
-    </li> -->
+    </li>
 
           <li>
             <p> A useful formula for the Wronskian of two solutions of a second order linear

@@ -49,7 +49,7 @@
     <p> The analysis of the Wronskian together with the formula <xref ref="eq-Abel-formula" /> above
       also hold for higher order homogeneous linear equations (see Section?? Higher Order). </p>
 
-    <theorem xml:id="wronskian-linearly-independent-theorem">
+    <theorem xml:id="thm-wronskian-nonzero-2">
       <title>(Criterion for Linearly Indepedent Solutions)</title>
 
       <statement>
@@ -686,9 +686,8 @@
 
     <p> Techniques for finding fundamental sets of solutions for homogeneous linear equations with
       variable coefficients are discussed in <xref ref="sec-3-6" />. In this section, we will only
-      discuss the <term>Cauchy–Euler</term> equations of the form <men
-        xml:id="eq-Cauchy-Euler">
-        x^2y''+b xy' +cy =0,\quad x&gt;0,
+      discuss the <term>Cauchy–Euler</term> equations of the form <men xml:id="eq-Cauchy-Euler">
+      x^2y''+b xy' +cy =0,\quad x&gt;0,
       </men> where <m>b</m> and <m>c</m> are real
       constants. The method uses <m>y = x^\lambda</m> as a trial solution, with <m>\lambda</m> to be
       determined from the auxiliary equation <me>
@@ -817,59 +816,69 @@
     <exercise xml:id="ex-sec-second-order-homogeneous-1">
       <p> Verify that the indicated solution set for each differential equation below is linearly
         independent on the specified interval <m>I</m> by computing Wronskian of the solutions (see <xref
-          ref="wronskian-linearly-independent-theorem" />). <ol marker="i.">
+          ref="thm-wronskian-nonzero-2" />). <ol marker="i.">
           <li>
             <p>
               <m>y''=0</m>, <m>\{7,\, x\}, \qquad I=(-\infty,\infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''+y=0</m>, <m>\{\sin x,\, \cos x\}, \qquad I=(-\infty,\infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''+y=0</m>, <m>\{\sin x,\, \sin x+\cos x\}, \qquad I=(-\infty,\infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-4y=0</m>, <m>\{e^{2x},\, e^{-2x}\}, \qquad I=(-\infty,\infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-4y=0</m>, <m>\{e^{2x},\, e^{-2x}\}, \qquad I=(-\infty,\infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-4y'+4y=0</m>, <m>\{e^{2x},\, xe^{2x}\}, \qquad I=(-\infty,\infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-4y'+4y=0</m>, <m>\{e^{2x},\, (x+1)e^{2x}\}, \qquad I=(-\infty,\infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-4y'+13y=0</m>, <m>\{e^{2x}\cos(3x),\, e^{2x}\sin(3x)\}, \qquad
         I=(-\infty,\infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-\frac{2}{x}y'=0</m>, <m>\{1, x^3\}, \qquad I = (0, \infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2 y''+xy'+y = 0,</m>
               <m>\{\cos(\ln x),\, \sin(\ln x)\}, \quad I = (0, \infty)</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2 y''+4xy'+y = 0,</m>
@@ -879,6 +888,7 @@
         </ol>
       </p>
     </exercise>
+
     <exercise xml:id="ex-sec-second-order-homogeneous-2">
       <p> Find the general solution of each differential equation below (see <xref
           ref="thm-general-solution" />). <ol marker="i." cols="2">
@@ -887,36 +897,43 @@
               <m>y''-5y'+6y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''+11y'+30y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>2y''+5y'+3y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-7y'-30y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''+4y'=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''+4y'+13y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-5y'+y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>2y''+5y'+y=0</m>
@@ -925,6 +942,7 @@
         </ol>
       </p>
     </exercise>
+
     <exercise xml:id="ex-sec-second-order-homogeneous-3">
       <p> Find the general solution of each of the following Cauchy-Euler differential equations
         (see <xref ref="eg-Cauchy-Euler" />). <ol marker="i." cols="2">
@@ -933,26 +951,31 @@
               <m>x^2y''+xy'-y = 0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x y''-2y'=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2 y''-x y'-3y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2 y''-2y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2 y''+x y'+y=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2y''+3xy'+5y = 0</m>
@@ -961,35 +984,44 @@
         </ol>
       </p>
     </exercise>
+
     <exercise xml:id="ex-sec-second-order-homogeneous-4">
       <p> Find the solution of each of the following initial value problems: <ol marker="i.">
           <li>
             <p>
               <m>y''-16y =0,\; y(0)= 0, \; y'(1) = 1</m>
             </p>
+
             <p> (Hint: See <xref ref="eg-general-solution-1" /> for the general solution.) </p>
           </li>
+
           <li>
             <p>
               <m>y''-y'-6y = 0, \;y(0)= -1, \; y'(0) = 1</m>
             </p>
+
             <p> (Hint: See <xref ref="eg-general-solution-2" /> for the general solution.) </p>
           </li>
+
           <li>
             <p>
               <m>3y''+2y'+y=0,\; y(0)=1,\; y'(0)=0</m>
             </p>
+
             <p> (Hint: See <xref ref="eg-general-solution-3" /> for the general solution.) </p>
           </li>
+
           <li>
             <p>
               <m>y''+8y'+16y = 0,\; y(1)=1,\; y'(1)=-1</m>
             </p>
+
             <p> (Hint: See <xref ref="eg-general-solution-4" /> for the general solution.) </p>
           </li>
         </ol>
       </p>
     </exercise>
+
     <exercise xml:id="ex-sec-second-order-homogeneous-5">
       <p> Solve the following initial value problems by using the general solutions of the related
         equations obtained in <xref ref="ex-sec-second-order-homogeneous-2" /> and <xref
@@ -999,56 +1031,67 @@
               <m>y''-5y'+6y=0, \quad y(0) = 0, \quad y'(0)=1</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''+11y'+30y=0, \quad y(0) = 0, \quad y'(0)=1</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>2y''+5y'+3y=0, \quad y(0) = 1, \quad y'(0)=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-7y'-30y=0, \quad y(0) = 1, \quad y'(0)=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''+4y'=0, \quad y(0) = 1, \quad y'(0)=1</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''+4y'+13y=0, \quad y(0) = 1, \quad y'(0)=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>y''-5y'+y=0, \quad y(0) = 0, \quad y'(0)=1</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>2y''+5y'+y=0, \quad y(0) = 0, \quad y'(0)=1</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2y''+xy'-y = 0, \quad y(1) = 1, \quad y'(1)=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2 y''+x y'+y=0, \quad y(1) = 1, \quad y'(1)=1</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2 y''-x y'-3y=0, \quad y(1) = 1, \quad y'(1)=0</m>
             </p>
           </li>
+
           <li>
             <p>
               <m>x^2y''+3xy'+5y = 0,\quad y(1) = 1, \quad y'(1)=0</m>
@@ -1057,29 +1100,39 @@
         </ol>
       </p>
     </exercise>
+
     <exercise xml:id="ex-sec-second-order-homogeneous-6">
-      <p> Suppose that the characteristic polynomial <me>p(\lambda) = a\lambda^2 + b\lambda + c</me>
-        of the differential equation <me>ay'' + by' + cy = 0, \quad a \ne 0,</me> where <m>a, b, c</m>
-        are constants, has a repeated root <m>\lambda_0.</m> Then <m>y_1 = e^{\lambda_0 x}</m> is a
+      <p> Suppose that the characteristic polynomial <me>
+          p(\lambda) = a\lambda^2 + b\lambda + c
+        </me> of the differential equation <me>
+        ay'' + by' + cy = 0, \quad a \ne 0,
+        </me> where <m>a, b, c</m> are
+        constants, has a repeated root <m>\lambda_0.</m> Then <m>y_1 = e^{\lambda_0 x}</m> is a
         solution of the differential equation. To find a second linearly independent solution,
-        proceed as follows. <ol marker="a.">
+        proceed as follows. <ol
+          marker="a.">
           <li xml:id="part-a">
-            <p> Let <m>y = e^{\lambda x}</m> with parameter <m>\lambda</m>. Show that <me>a\frac{\partial^2}{\partial
-        x^2} (e^{\lambda x}) + b\frac{\partial}{\partial x} (e^{\lambda x}) + c (e^{\lambda x}) =
-        p(\lambda) e^{\lambda x}.</me>
+            <p> Let <m>y = e^{\lambda x}</m> with parameter <m>\lambda</m>. Show that <me>
+        a\frac{\partial^2}{\partial x^2} (e^{\lambda x}) + b\frac{\partial}{\partial x} (e^{\lambda
+        x}) + c (e^{\lambda x}) = p(\lambda) e^{\lambda x}.
+              </me>
             </p>
           </li>
+
           <li>
             <p> Differentiate both sides of the equation in <xref ref="part-a" /> with respect to <m>
-        \lambda</m> to obtain <me>a\frac{\partial^2}{\partial x^2} (x e^{\lambda x}) +
-        b\frac{\partial}{\partial x} (x e^{\lambda x}) + c (x e^{\lambda x}) = \big(p'(\lambda) +
-                x\, p(\lambda)\big) e^{\lambda x}.</me>
+        \lambda</m> to obtain <me>
+                a\frac{\partial^2}{\partial x^2} (x e^{\lambda x}) + b\frac{\partial}{\partial x} (x
+        e^{\lambda x}) + c (x e^{\lambda x}) = \big(p'(\lambda) + x\, p(\lambda)\big) e^{\lambda x}.
+              </me>
             </p>
           </li>
+
           <li>
             <p> Using <m>p(\lambda_0) = p'(\lambda_0) = 0</m>, conclude that <m>y_2 = x e^{\lambda_0
         x}</m> is also a solution. </p>
           </li>
+
           <li>
             <p> Show that <m>y_1 =e^{\lambda_0 x}</m> and <m>y_2=x e^{\lambda_0 x}</m> are linearly
         independent on <m>(-\infty, \infty)</m>. </p>
@@ -1087,7 +1140,6 @@
         </ol>
       </p>
     </exercise>
-
 
     <exercise xml:id="ex-sec-second-order-homogeneous-7">
       <p> Let <m>y_1(x)</m> be a known solution of <men xml:id="eq-second-order-linear_homo-de-3">
@@ -1099,25 +1151,30 @@
           <li xml:id="wronskian-method">
             <p> Suppose that <m>y_2</m> is a solution of <xref
                 ref="eq-second-order-linear_homo-de-3" /> such that <m>\{y_1, y_2\}</m> is linearly
-        independent on <m>I.</m> Show that <me>\left(\frac{y_2}{y_1}\right)' = \frac{W(x)}{y_1^2}
-        \quad \mbox{on } I,</me> where <m>W(x)</m> is the Wronskian of <m>y_1</m> and <m>y_2</m>
-        given by <m>W(x) =y_1(x)y_2'(x) - y_1'(x)y_2(x).</m>
+        independent on <m>I.</m> Show that <me>
+                \left(\frac{y_2}{y_1}\right)' = \frac{W(x)}{y_1^2} \quad \mbox{on } I,
+              </me>
+        where <m>W(x)</m> is the Wronskian of <m>y_1</m> and <m>y_2</m> given by <m>W(x)
+        =y_1(x)y_2'(x) - y_1'(x)y_2(x).</m>
             </p>
           </li>
-          <li xml:id="Abel-2">
-            <p> Using <xref ref="wronskian-method" />, show that <me>y_2 = y_1(x)
-        \int\frac{W(x)}{[y_1(x)]^2}\, dx.</me>
-            </p>
-          </li>
-          <li>
-            <p> Obtain Liouville’s formula <me>y_2 = y_1(x) \int\frac{e^{-\int
-        a_1(x)\,dx}}{[y_1(x)]^2}\, dx</me> from part <xref ref="Abel-2" />. </p>
-          </li>
-        </ol>
-        The same steps also apply when the known solution <m>y_1</m> satisfies <m>y_1(x) &lt;0</m>
-        for all <m>x</m> in <m>I</m>. For the general case, see (ii) of Remark <xref
-          ref="rem-Abel-formula" />. </p>
-    </exercise>
 
+          <li xml:id="Abel-2">
+            <p> Using <xref ref="wronskian-method" />, show that <me>
+                y_2 = y_1(x) \int\frac{W(x)}{[y_1(x)]^2}\, dx.
+              </me>
+            </p>
+          </li>
+
+          <li>
+            <p> Obtain Liouville’s formula <me>
+                y_2 = y_1(x) \int\frac{e^{-\int a_1(x)\,dx}}{[y_1(x)]^2}\, dx
+              </me>
+        from part <xref ref="Abel-2" />. </p>
+          </li>
+        </ol> The same steps also apply
+        when the known solution <m>y_1</m> satisfies <m>y_1(x) &lt;0</m> for all <m>x</m> in <m>I</m>.
+        For the general case, see (ii) of Remark <xref ref="rem-Abel-formula" />. </p>
+    </exercise>
   </exercises>
 </section>
