@@ -493,10 +493,10 @@
 \begin{tikzpicture}
 \begin{axis}[
   axis lines=middle,
-  axis line style={->},
+  axis line style={-&gt;},
   xlabel={$t$},
   ylabel={$y$},
-  xmin=-1, xmax=15,
+  xmin=-2.5, xmax=15,
   ymin=-0.5, ymax=6,
   samples=200,
   xtick=\empty,
@@ -505,11 +505,13 @@
   legend style={at={(0.5,-0.15)}, anchor=north}
   ]
   \addplot[blue, thick, domain=0:10] {1 + sin(deg(x)) + 0.25*x};
+  \addplot[blue, dashed, domain=-2:0] {1 + sin(deg(x)) + 0.25*x};
   \addlegendentry{$f(t)$}
   \addplot[red, thick, domain=0:1.8] {0};
   \addplot[red, thick, domain=2:12] {1 + sin(deg(x-2)) + 0.25*(x-2)};
   \addlegendentry{$g(t)=\mathcal{U}(t-a)\,f(t-a)$}
   \addplot[only marks, mark=*, red] coordinates {(2,1)};
+  \addplot[only marks, mark=*, red] coordinates {(0.0)};
   \addplot[only marks, mark=*, blue] coordinates {(0.01,1)};
   \addplot[only marks, mark=o, fill=white, red] coordinates {(2,0)};
   \node[below] at (axis cs:2,0) {$a$};
