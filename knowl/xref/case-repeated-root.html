@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h4 class="heading"><span class="title">Case III. <span class="process-math">\(b^2-4ac=0\)</span> (Repeated Root).</span></h4>
+<div class="para logical">
+<div class="para">In this case, the auxiliary equation <a href="sec-3-2.html#eq-auxiliary-equation" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.11">(3.2.11)</a> has a repeated real root</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+\lambda_1 = \lambda_2 = -\frac{b}{2a},
+\end{equation*}
+</div>
+<div class="para">as given in <a href="sec-3-2.html#eq-auxiliary-equation-solutions" class="xref" data-knowl="./knowl/xref/eq-auxiliary-equation-solutions.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.12">(3.2.12)</a>. Consequently, we obtain only a single solution:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-auxiliary-equation.html ./knowl/xref/eq-auxiliary-equation-solutions.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+y_1 = e^{\lambda_1 x} = e^{-\frac{b}{2a}x}.
+\end{equation*}
+</div>
+<div class="para">Since a fundamental set of solutions for <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> requires two linearly independent solutions, we must determine a second solution <span class="process-math">\(y_2\)</span> so that <span class="process-math">\(\{y_1,
+y_2\}\)</span> forms a fundamental set of solutions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#case-repeated-root-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">We next discuss a method known as <dfn class="terminology"><em class="emphasis">reduction of order</em></dfn>, which allows us to find a second linearly independent solution of a second order homogeneous linear differential equation, even when the equation has variable coefficients, as in <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a>, given that one nontrivial solution is already known.<div class="autopermalink" data-description="Paragraph"><a href="#case-repeated-root-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(y_1(x)\)</span> be a known solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/existence-uniqueness-theorem.html">
+\begin{equation}
+y'' + a_1(x)y' + a_0(x)y = 0,\tag{3.2.17}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a_0(x)\)</span> and <span class="process-math">\(a_1(x)\)</span> are continuous functions on an interval <span class="process-math">\(I,\)</span> satisfying either <span class="process-math">\(y_1(x)&gt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\)</span> or <span class="process-math">\(y_1(x) &lt;0\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{.}\)</span> <a href="sec-3-1.html#existence-uniqueness-theorem" class="xref" data-knowl="./knowl/xref/existence-uniqueness-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.3: (Existence and Uniqueness)">Theorem 3.1.3</a> guarantees the existence of such a nonzero solution on <span class="process-math">\(I\)</span> for the initial condition <span class="process-math">\(y(x_0) = y_0 \neq 0.\)</span> We assume <span class="process-math">\(y_1(x) &gt; 0\)</span> on <span class="process-math">\(I\text{;}\)</span> the other case can be treated similarly.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#case-repeated-root-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Our goal is to find a second solution <span class="process-math">\(y_2\)</span> such that <span class="process-math">\(\{y_1, y_2\}\)</span> is linearly independent on <span class="process-math">\(I.\)</span> To this end, let <span class="process-math">\(u(x)\)</span> be a function on <span class="process-math">\(I\)</span> such that <span class="process-math">\(y_2
+(x) = u(x) y_1(x)\)</span> is a solution of <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a>. If we find a non-constant function <span class="process-math">\(u,\)</span> then it will follow that <span class="process-math">\(\{y_1, y_2\}\)</span> is a fundamental set of solutions. Then, suppressing <span class="process-math">\(x\)</span> from the arguments for simplicity, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+\begin{split} y'_2 &amp;= u' y_1 + u y'_1\quad \mbox{ and }\\ y''_2 &amp;= u'' y_1 +2u'
+y'_1+ u y''_1.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Substituting these into <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+u'' y_1 +2u' y'_1+ u y''_1 +a_1u' y_1 + a_1u y'_1 + a_0 u y_1=0.\,
+\end{equation*}
+</div>
+<div class="para">which becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+u'' y_1 +u'\big(2 y'_1+ a_1y_1\big) +u\big( y''_1 + a_1 y'_1+ a_0 y_1\big) =0.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(y_1\)</span> is a solution of <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a>, we have <span class="process-math">\(y''_1
++ a_1 y'_1 +a_0 y_1 = 0,\)</span> and therefore we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+u'' y_1 +u'\Big(2 y'_1 +a_1y_1\Big) =0.
+\end{equation*}
+</div>
+<div class="para">We observe that there is no <span class="process-math">\(u\)</span> in this equation. Let <span class="process-math">\(v = u'.\)</span> Then the equation becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+v' y_1 +v\Big(2 y'_1 +a_1y_1\Big) =0,
+\end{equation*}
+</div>
+<div class="para">which is of the first order. Since <span class="process-math">\(y_1\)</span> never vanishes on <span class="process-math">\(I\text{,}\)</span> we can rewrite the above equation as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation}
+v' +\left(\frac{2 y'_1 +a_1y_1}{y_1}\right) v =0.\tag{3.2.18}
+\end{equation}
+</div>
+<div class="para">A solution of <a href="sec-3-2.html#eq-reduction-or-order" class="xref" data-knowl="./knowl/xref/eq-reduction-or-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.18">(3.2.18)</a> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+v(x) = e^{-\int\left(2\frac{y'_1(x)}{y_1(x)}+a_1(x)\right)dx}=
+e^{-2\ln\lvert{y_1(x)}\rvert} \; e^{-\int a_1(x)\, dx}= \frac{e^{-\int a_1(x)\,
+dx}}{[y_1(x)]^2}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(v(x) = u'(x),\)</span> we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+u(x) = \int \frac{e^{-\int a_1(x)\, dx}}{[y_1(x)]^2}\, dx
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(I,\)</span> and consequently, the solution <span class="process-math">\(y_2(x)\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation}
+\boxed{y_2(x) = y_1(x) \int \frac{e^{-\int a_1(x)\, dx}}{[y_1(x)]^2}\, dx.}\tag{3.2.19}
+\end{equation}
+</div>
+<div class="para">on <span class="process-math">\(I.\)</span><details class="ptx-footnote" aria-live="polite" id="case-repeated-root-5-33"><summary class="ptx-footnote__number" title="Footnote 3.2.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="case-repeated-root-5-33">This formula is due the French mathematician Joseph Liouville</div></details> Thus, <span class="process-math">\(\{y_1,
+y_2\}\)</span> is a fundamental set of solutions for <a href="sec-3-2.html#eq-second-order-linear-homo-de-2" class="xref" data-knowl="./knowl/xref/eq-second-order-linear-homo-de-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.17">(3.2.17)</a> . We now return to finding a second linearly independent solution <span class="process-math">\(y_2\)</span> for <dfn class="terminology">Case III</dfn>. Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+y_1 = e^{\lambda_1 x} = e^{-\frac{b}{2a}x}
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(a_1(x) =
+\frac{b}{a}\)</span> is a constant, the reduction of the order formula <a href="sec-3-2.html#eq-reduction-of-order-formula" class="xref" data-knowl="./knowl/xref/eq-reduction-of-order-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.19">(3.2.19)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation*}
+y_2(x) = e^{-\frac{b}{2a}x} \int \frac{e^{-\int (b/a)\, dx}}{e^{-\frac{b}{a}x}}\, dx =
+e^{-\frac{b}{2a}x} \int 1\, dx = x e^{-\frac{b}{2a}x}
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(I\text{.}\)</span> Since we only need a second solution <span class="process-math">\(y_2\text{,}\)</span> the constants of integration are set to zero for convenience. Thus, <span class="process-math">\(\{y_1, y_2\}\)</span> forms a fundamental set of solutions. By <a href="sec-3-2.html#thm-general-solution" class="xref" data-knowl="./knowl/xref/thm-general-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.5">Theorem 3.2.5</a>, the general solution of <a href="sec-3-2.html#eq-homogeneous-constant-coefficients-1" class="xref" data-knowl="./knowl/xref/eq-homogeneous-constant-coefficients-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.9">(3.2.9)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-or-order.html ./knowl/xref/eq-second-order-linear-homo-de-2.html ./knowl/xref/eq-reduction-of-order-formula.html ./knowl/xref/thm-general-solution.html ./knowl/xref/eq-homogeneous-constant-coefficients-1.html">
+\begin{equation}
+\boxed{ y = c_1 e^{-\frac{b}{2a}x} + c_2 x e^{-\frac{b}{2a}x} = (c_1 + c_2 x)
+e^{-\frac{b}{2a}x},}\tag{3.2.20}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#case-repeated-root-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Case III. b^2-4ac=0 (Repeated Root)"><a href="#case-repeated-root" title="Copy heading and permalink for Paragraphs: Case III. b^2-4ac=0 (Repeated Root)" aria-label="Copy heading and permalink for Paragraphs: Case III. b^2-4ac=0 (Repeated Root)">🔗</a></div></section><span class="incontext"><a class="internal" href="sec-3-2.html#case-repeated-root">in-context</a></span>
+</body>
+</html>
