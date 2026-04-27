@@ -135,10 +135,13 @@
     </p>
 
     <example xml:id="ex-5-2-1">
-      <p> Solve the initial value problem using the Laplace transform: <md>
-          y'-y= 2\cos(3t), \quad y(0) = 1.
-        </md>
-      </p>
+      <statement>
+          <p> Solve the initial value problem using the Laplace transform: <md>
+            y'-y= 2\cos(3t), \quad y(0) = 1.
+          </md>
+        </p>
+      </statement>
+
 
       <answer>
         <p>
@@ -173,10 +176,13 @@
     </example>
 
     <example xml:id="ex-5-2-2">
-      <p> Solve the initial value problem using the Laplace transform: <me>
+      <statement>
+        <p> Solve the initial value problem using the Laplace transform: <me>
           y''-5y'+4y= t, \quad y(0) = 1, y'(0) = 0.
         </me>
       </p>
+      </statement>
+
 
       <answer>
         <p>
@@ -233,10 +239,14 @@
 
     <example xml:id="ex-5-2-3">
       <title>Move this to a later section</title>
-      <p> Solve the initial value problem using the Laplace transform: <me>
+      <statement>
+        <p>
+          Solve the initial value problem using the Laplace transform: <me>
           y'' + 4y' + 5y = e^{-t}, \quad y(0) = 0, \; y'(0) = 2.
         </me>
       </p>
+      </statement>
+     
 
       <solution>
         <p> Applying the Laplace transform to both sides of the equation, we have <me>

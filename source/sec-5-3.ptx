@@ -7,10 +7,10 @@
     The evaluation of Laplace transforms and inverse Laplace transforms can often be carried out efficiently by applying differentiation or integration techniques to certain Laplace transforms.
   </p>
   </introduction>
- 
+
   <!-- SUBSECTION: Derivatives of Laplace Transforms -->
-  
-  
+
+
   <subsection xml:id="subsec-Derivatives-Laplace-Transforms">
     <title>Derivatives of Laplace Transforms</title>
     <p>
@@ -39,9 +39,12 @@
     </p>
 
     <example>
-      <p>
-        Find the Laplace transform <m>\mathcal  {L}\{t\sin(\omega t)\}</m>.
-      </p>
+      <statement>
+        <p>
+          Find the Laplace transform <m>\mathcal  {L}\{t\sin(\omega t)\}</m>.
+        </p>
+      </statement>
+
       <solution>
         <p>
           We have
@@ -54,9 +57,11 @@
     </example>
 
     <example>
-      <p>
-        Find the Laplace transform <m>\mathcal  {L}\{t^2\sin(\omega t)\}</m>.
-      </p>
+      <statement>
+        <p>
+          Find the Laplace transform <m>\mathcal  {L}\{t^2\sin(\omega t)\}</m>.
+        </p>
+      </statement>
       <solution>
         <p>
           We have
@@ -102,16 +107,20 @@
       </p>
 
       <example>
-        <p>
-          Compute <m>\mathcal  {L}\{\sin(\omega t)/t\}</m> for positive values of <m>\omega</m> .
-        </p>
+        <statement>
+          <p>
+            Compute <m>\mathcal  {L}\{\sin(\omega t)/t\}</m> for positive values of <m>\omega</m> .
+          </p>
+        </statement>
 
         <solution>
+          <p>
           We have
           <me>
             \begin{split} \mathcal  {L}\left\{\frac{\sin(\omega t)}{t}\right\}(s) &amp;= \int_s^\infty \frac{\omega}{p^2+\omega^2} dp\\ &amp;= \left[\tan^{-1}\left(\frac{p}{\omega}\right)\right]_s^\infty\\ &amp;= \frac{\pi}{2}-\tan^{-1}\left(\frac{s}{\omega}\right).
             \end{split}
           </me>
+        </p>
 
           <p>
             Note that the improper integral
@@ -150,9 +159,12 @@
       </example>
 
       <example>
-        <p>
-          Compute <m>\mathcal  {L}\left\{\frac{e^t-1}{t}\right\}.</m>
-        </p>
+<statement>
+  <p>
+    Compute <m>\mathcal  {L}\left\{\frac{e^t-1}{t}\right\}.</m>
+  </p>
+</statement>
+
 
         <solution>
           <p>
