@@ -5,7 +5,7 @@
     <ul>
       <li>
         <p>
-          Learn solution techiques for higher order linear differential equations
+          Learn solution techniques for higher order linear differential equations
         </p>
       </li>
     </ul>
@@ -22,7 +22,7 @@
   </introduction>
 
 
-  <subsection xml:id="subsec-3-4-1">
+  <subsection xml:id="subsection-3-4-1">
     <title>Homogeneous Equations</title>
 
     <p> To find the general solution of <xref ref="eq-nonhomogeneous2" />, we first find the general
@@ -186,7 +186,7 @@
   </subsection>
 
 
-  <subsection xml:id="subsec-3-4-2">
+  <subsection xml:id="subsection-3-4-2">
     <title>Nonhomogeneous Equations</title>
 
     <p> To find a particular solution <m>y_p(x)</m> of <xref ref="eq-nonhomogeneous2" /> by using
