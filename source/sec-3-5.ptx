@@ -480,6 +480,330 @@
 				</solution>
 			</example>
 		</paragraphs>
+
+
+		<paragraphs xml:id="free-damped-motion">
+		  <title>II. Free Damped Motion (<m>b&gt;0,\;F(t) =0</m>)</title>
+
+		  <p>
+			When <m>b&gt; 0</m> (with damping) and <m>F(t) = 0</m> (no external forces), the mass-spring system is said to have a <em>free damped motion</em>.
+			The resulting differential equation for the motion of the mass is
+			<me>
+			  my''(t)+by'(t) + k y(t) = 0,
+			</me>
+			which, with <m>2\beta = \frac{b}{m}</m> and <m>w^2 = \frac{k}{m}</m>, becomes
+			<men xml:id="eq-mass-spring10">
+			  \label{} y'' + 2\beta y'+ \omega^2 y = 0,
+			</men>
+			and the differential equation <xref ref="eq-mass-spring10" /> is known as a <em>free damped spring–mass system.</em> Its general solution depends on the relative strengths of the damping and spring forces.
+			When the spring force dominates, the motion is oscillatory with amplitude decaying to zero as <m>t \to \infty</m> and when the damping force dominates, the motion is non-oscillatory.
+			There exists a threshold value of the damping coefficient—called the critical damping—above which no oscillations occurs, and below which the system exhibits damped oscillations whose amplitude decays to zero as <m>t \to \infty</m>.
+			To analyze this, we start with the auxiliary equation for <xref ref="eq-mass-spring10" />; namely,
+			<me>
+			  r^2 + 2\beta r + \omega ^2 =0,
+			</me>
+			with <m>y(t)=e^{rt}</m> is a trial solution.
+			It then follows that
+			<men xml:id="eq-mass-spring11">
+			  r = \frac{-2\beta\pm\sqrt{4\beta^2 - 4 \omega^2}}{2} = -\beta\pm\sqrt{\beta^2 -  \omega^2}.
+			</men>
+		  </p>
+
+		  <p>
+			There are three significantly different cases of a free damped motion.
+		  </p>
+
+		  <p>
+			<ol>
+			  <li>
+				<p>
+				  <term><em>Underdamped Motion</em>:</term> When <m>\beta &lt;\omega,</m> <xref ref="eq-mass-spring11" /> yields
+				  <me>
+					r = - \beta \pm i \sqrt{\omega^2- \beta^2},
+				  </me>
+				  so that the general solution of <xref ref="eq-mass-spring10" /> is
+				  <me>
+					y(t) =  e^{-\beta t}\left(c_1\cos(\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right),
+				  </me>
+				  where <m>c_1</m> and <m>c_2</m> are arbitrary constants are determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are provided.
+				  The displacement <m>y(t)</m> is periodic with the period <m>2\pi/\sqrt{\omega^2- \beta^2}.</m> Moreover, since <m>\beta &gt;0,</m> we observe that
+				  <me>
+					\lim\limits_{t\to\infty} e^{-\beta t}\cos(\sqrt{\omega^2- \beta^2}\; t)=0 \quad \mbox{and} \quad \lim\limits_{t\to\infty}e^{-\beta t}\sin(\sqrt{\omega^2- \beta^2}\; t)=0.
+				  </me>
+				  It then follows that
+				  <me>
+					\lim\limits_{t\to\infty} y(t)=0.
+				  </me>
+				</p>
+
+				<p>
+				  With regard to the velocity of the mass, we find
+				  <me>
+					\begin{split} y'(t) &amp;= -\beta e^{-\beta t}\left(c_1\cos(\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right)\\ &amp; + \sqrt{\omega^2- \beta^2}e^{-\beta t}\left(-c_1\sin (\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right).
+					\end{split}
+				  </me>
+				  Again, we observe that
+				  <me>
+					\lim\limits_{t\to\infty} y'(t)=0.
+				  </me>
+				  Hence, the mass approaches the equilibrium position while oscillating with the circular frequency <m>\sqrt{\omega^2- \beta^2}</m> and the velocity approaches zero as <m>t</m> goes to <m>\infty.</m>
+				</p>
+
+				<p>
+				  Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta &lt; \omega</m> is equivalent to <m>b&lt; 2\sqrt{mk}.</m> We conclude that when the damping force is too weak to counteract a strong spring force, the mass undergoes damped oscillations: the amplitude gradually decreases to zero.
+				  In this case, the mass-spring system is said to be <term><em>underdamped</em></term>.
+				</p>
+			  </li>
+
+			  <li>
+				<p>
+				  <term><em>Overdamped Motion</em>:</term> When <m>\beta &gt;\omega,</m> <xref ref="eq-mass-spring11" /> yields <m>r = - \beta \pm  \sqrt{\beta^2- \omega^2},</m> so that the general solution of <xref ref="eq-mass-spring10" /> is
+				  <me>
+					y(t) =  c_1e^{(-\beta + \sqrt{\beta^2- \omega^2})t}+ c_2e^{(-\beta - \sqrt{\beta^2- \omega^2})t},
+				  </me>
+				  where <m>c_1</m> and <m>c_2</m> are arbitrary constants are determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are provided.
+				  Therefore <m>y(t)</m> is not periodic Moreover, since <m>\beta &gt;0</m> and <m>0&lt;\sqrt{\beta^2- \omega^2} &lt; \beta</m>, it follows that both <m>-\beta + \sqrt{\beta^2- \omega^2}</m> and <m>-\beta - \sqrt{\beta^2- \omega^2}</m> are negative.
+				  Consequently, we have
+				  <me>
+					\lim\limits_{t\to\infty} e^{(-\beta + \sqrt{\beta^2- \omega^2})t}=0 \quad \mbox{and} \quad \lim\limits_{t\to\infty}e^{(-\beta - \sqrt{\beta^2- \omega^2})t}=0.
+				  </me>
+				  It then follows that
+				  <me>
+					\lim\limits_{t\to\infty} y(t)=0.
+				  </me>
+				  We can show that the mass passes through the equilibrium position at most once by setting <m>y(t) = 0</m> and finding the time <m>t</m> at which this happens.
+				</p>
+
+				<p>
+				  Regarding the velocity of the mass, we find
+				  <me>
+					\begin{split} y'(t) &amp;=  c_1 (-\beta + \sqrt{\beta^2- \omega^2})e^{(-\beta + \sqrt{\beta^2- \omega^2})t}\\ &amp;+ c_2(-\beta - \sqrt{\beta^2- \omega^2}) e^{(-\beta - \sqrt{\beta^2- \omega^2})t}, \end{split}
+				  </me>
+				</p>
+
+				<p>
+				  Again, we observe that
+				  <me>
+					\lim\limits_{t\to\infty} y'(t)=0.
+				  </me>
+				  We can also show that the mass reaches an extreme position at most once by setting <m>y'(t) = 0</m> and finding the time <m>t</m> at which this happens.<!-- linebreak -->Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta &gt; \omega</m> is equivalent to <m>b&gt; 2\sqrt{mk}.</m> We conclude that when the spring force is too weak to counteract a strong damping damping force, the mass approaches the equilibrium position with no oscillation and its velocity approaches zero, by changing its sign at most once, as <m>t</m> goes to <m>\infty</m>.
+				  In this case, the mass-spring system is said to be <term><em>overdamped.</em></term>
+				</p>
+			  </li>
+
+			  <li>
+				<p>
+				  <term><em>Critically Damped Motion</em>:</term> When <m>\beta = \omega</m>, <xref ref="eq-mass-spring11" /> yields <m>r = - \beta, -\beta,</m> so that the general solution of <xref ref="eq-mass-spring10" /> is
+				  <me>
+					y(t) = c_1 e^{-\beta t}+ c_2 te^{-\beta t} = (c_1+ c_2t) e^{-\beta t},
+				  </me>
+				  where <m>c_1</m> and <m>c_2</m> are arbitrary constants which can be determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are known.
+				  The velocity of the mass is given by
+				  <me>
+					y'(t) = -\beta (c_1 + tc_2) e^{-\beta t} + c_2 e^{-\beta t} = (c_2 - \beta c_1- \beta c_2 t) e^{-\beta t}.
+				  </me>
+				  Since <m>\beta &gt;0,</m> we find <m>e^{-\beta t}\to 0</m> and <m>t e^{-\beta t}\to 0</m> as <m>t\to\infty.</m> These imply that
+				  <me>
+					\lim\limits_{t\to\infty} y(t) = 0 \qquad \mbox{ and }\qquad \lim\limits_{t\to\infty} y'(t) = 0.
+				  </me>
+				  As note earlier in the case of an overdamped motion, the mass in this case can also pass thorough the equilibrium at most once and can reach an extreme position at most once while its velocity changes its sign.
+				  As <m>t</m> goes to <m>\infty,</m> the mass approaches its equilibrium position and its velocity also tends to zero.
+				</p>
+
+				<p>
+				  Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta = \omega</m> is equivalent to <m>b= 2\sqrt{mk}.</m> It follows from the case of underdamped motion that when the damping coefficient <m>b</m> is even slightly less than <m>2\sqrt{mk},</m> the mass undergoes an oscillatory motion.
+				  The spring-mass system with the smallest damping coefficient <m>b</m> that maintains a nonoscillatory motion is to be <term><em>critically damped</em></term>.
+				</p>
+			  </li>
+			</ol>
+		  </p>
+		</paragraphs>
+
+
+		<paragraphs xml:id="forced-damped-motion">
+		  <title>III. Forced Undamped  Motion (<m>b=0,\;F(t) \ne 0</m>)</title>
+
+		  <p>
+			When <m>b=0</m> (no damping) and <m>F(t) \ne 0</m> (with external force), the spring-mass system is governed by the differential equation
+			<me>
+			  my''(t)  + ky(t) = F(t).
+
+			</me>
+			which, with <m>w^2 = k/m</m> and <m>f(t) = F(t)/m,</m> becomes
+			<men xml:id="eq-mass-spring-undamped-forced-1">
+			   y''(t)  + \omega^2y(t) = f(t).
+			</men>
+		  </p>
+
+		  <p>
+			The nonhomogeneous equation <xref ref="eq-mass-spring-undamped-forced-1" /> can be solved by using the methods of previous sections.
+			The general solution is of the form
+			<men xml:id="eq-mass-spring13">
+			  y(t) = y_h(t) + y_p(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t) +y_p(t),
+			</men>
+			where <m>c_1</m> and <m>c_2</m> are arbitrary constants and <m>y_p(t)</m> is a particular solution of <xref ref="eq-mass-spring-undamped-forced-1" />.
+			Recall that
+			<me>
+			  y_h(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)
+			</me>
+			is the general solution of the simple harmonic oscillator
+			<me>
+			  y''(t)  + \omega^2 y(t)=0,
+			</me>
+			associated with <xref ref="eq-mass-spring-undamped-forced-1" />.
+		  </p>
+
+		  <example xml:id="example-undamped-forced-system">
+			<statement>
+			 <p>
+			A <m>10</m>-kilogram mass attached to the end of a vertically hanging spring causes the spring to stretch <m>39.2</m> centimeters.
+			At time <m>t = 0</m>, the spring-mass system is set into motion by an external force <m>F(t) = 180\sin(10t)</m>, where <m>F(t)</m> is measured in newtons and is positive in the downward direction, and time is measured in seconds.
+			Determine the equation of motion and estimate the maximum excursion of the mass from its equilibrium position.
+			  </p>
+			</statement>
+
+			<solution>
+			 <p>
+			We let <m>y(t)</m> denote the displacement of the mass from the equilibrium position measured positively in the vertically downward direction.
+			 </p>
+
+
+		  <p>
+			We have <m>m = 10~\text{kg}, s = 39.2~\text{cm} = 0.392~\text{m}, F(t) = 180\sin(10t)~\text{N}.</m> For the mass in equilibrium, we have <m>mg = ks</m>, and so
+			<me>
+			  k = \frac{mg}{s} = \frac{10 \times 9.8}{0.392} = 250~\text{N/m}.
+			</me>
+			The natural frequency of the system is
+			<me>
+			  \omega = \sqrt{\frac{k}{m}} = 5 \text{ cycles in $2\pi$ seconds} = 5 \text{ rad/s}
+			</me>
+			The differential equation of motion is therefore
+			<me>
+			  10y'' + 250y' = 180\sin(10t),
+			</me>
+			or equivalently,
+			<men xml:id="eq-mass-spring-150">
+			 y'' + 25y = 18\sin(5t).
+			</men>
+			The general solution of <m>y'' + 25y = 0</m> is
+			<me>
+			  y_h(t) = c_1\cos(5t) + c_2\sin(5t),
+			</me>
+			where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+			We find a particular solution <m>y_p(t)</m> of <xref ref="eq-mass-spring-150" /> by variation of parameters.
+			Let
+			<me>
+			  y_p(t) = A\cos(10t) + B\sin(10t)
+			</me>
+			be a particular solution of <xref ref="eq-mass-spring-150" />, where <m>A</m> and <m>B</m> are to be determined.
+			We find that <m>y''_p(t) = - 100 y_p(t).</m> Substituting <m>y_p</m> for <m>y</m> and <m>y''_p</m> for <m>y''</m> into <xref ref="eq-mass-spring-150" /> yields
+			<me>
+			  - 100 y_p(t)+25y_p(t) = 18 \sin(10t),
+			</me>
+			that is,
+			<me>
+			  -75A \cos(5t) - 75 B\sin(5t) =18 \sin(10t).
+			</me>
+			Equating the coefficients of the like terms, we have <m>-75 A =0</m> and <m>-75 B = 18</m>, that is, <m>A=0</m> and <m>B = -6/25.</m> Thus, we have
+			<me>
+			  y_p(t) = -\frac{6}{25} \sin(5t).
+			</me>
+			The general solution of <xref ref="eq-mass-spring-150" /> is
+			<me>
+			  y(t) = c_1\cos(5t) + c_2\sin(5t) - \frac{6}{25}\sin(10t),
+			</me>
+			where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+			The initial conditions for <m>y(t)</m> are <m>y(0) = 0, y'(0) = 0.</m> Substituting these gives <m>c_1 = 0</m> and <m>5c_2 - \frac{12}{5} = 0</m>, i.e., <m>c_1=0</m> and <m>c_2 = \frac{12}{25}</m> Thus, we have
+			<me>
+			  y(t) = \frac{12}{25}\sin(5t) - \frac{6}{25} \sin(10t).
+			</me>
+			The graph of the solution is shown in <xref ref="fig-undamped-forced-system" />.
+			Using the critical numbers and second derivative test, we can verify that the maximum occurs at <m>t = \frac{2\pi}{15}.</m> The maximum value is
+			<me>
+			  y\left(\frac{2\pi}{15}\right) = \frac{9\sqrt{3}}{25} \approx 0.6235.
+			  </me>
+			  <figure xml:id="fig-undamped-forced-system">
+				<caption>The graph of <m>y(t) = \frac{12}{25} \sin(5t)-\frac{6}{25}\sin(10t)</m></caption>
+				<image source="images/fig-undamped-forced-system" width="70%">
+					<!-- <latex-image> \begin{tikzpicture}[scale=.8] \begin{axis}[ width=10cm, height=7cm, axis lines=middle, xlabel={$t$}, ylabel={$y(t)$}, ylabel style={at={(axis description cs:0, -0.02)}, anchor =north}, samples=300, domain=0:2*pi, xtick={0,pi/15,...,2*pi}, ytick={-0.5,0,0.5}, smooth, thick, y dir=reverse, grid=both, minor tick num=1, ] \addplot[blue, thick] {12/25 * sin(deg(5*x)) - 6/25 * sin(deg(10*x))}; \node[anchor=west, blue] at (axis cs:0.37,.5) {$y(t)=\dfrac{12}{25}\sin(5t)-\dfrac{6}{25}\sin(10t)$}; \end{axis} \end{tikzpicture}
+					</latex-image> -->
+				</image>
+			  </figure>
+		  </p>
+		  </solution>
+		  </example>
+		  <!--</div attr= class="solution">-->
+		  <p>
+			In <xref ref="example-undamped-forced-system" />, the frequency of the external source is <m>\gamma =10</m> which is not equal to or near the natural frequency <m>\omega = 5.</m>
+		  </p>
+
+		  <p>
+			<term>Resonance:</term> An important aspect of analyzing undamped forced spring-mass systems is understanding how large (in absolute values) the values of <m>y_p(t)</m> can become when <m>F(t)</m> is sinusoidal. If the amplitude of <m>y_p(t)</m> grows without bound, the system is said to be in <term><em>resonance</em></term>. In practical applications, resonance may be undesirable because it can lead to excessive energy buildup and potential system failure. Since the system <xref ref="eq-mass-spring-undamped-forced-1" /> is undamped, the only way energy can dissipate from the system is by the nature of the source term <m>F(t).</m> However, it is possible that the energy buildup can happen in the system even when <m>F(t)</m> is sign-changing. The following example demonstrates how resonance occurs.
+		  </p>
+		  <!-- div attr= class="example"-->
+		  <p>
+			With the external force in <xref ref="example-undamped-forced-system" /> replaced with <m>F(t) = 180\sin(5t)</m>, determine the equation of motion, analyze the amplitude of the resulting motion, and verify that the system exhibits resonance.
+		  </p>
+		  <!--</div attr= class="example">--> <!-- div attr= class="solution"-->
+		  <p>
+			Similarly to the solution in <xref ref="example-undamped-forced-system" />, the initial value problem for the current example is
+			<men xml:id="eq-mass-spring-15">
+			y'' + 25y = 18\sin(5t), \quad y(0) =0,\; y'(0) = 0.
+			</men>
+			Recall from <xref ref="example-undamped-forced-system" /> that the natural frequency of the system is <m>\omega  = 10.</m> We note here that the frequency of the external force <m>\gamma =10</m> matches the natural frequency <m>\omega = 10.</m> The general solution of <m>y'' + 25y = 0</m> is
+			<me>
+			  y_h(t) = c_1\cos(5t) + c_2\sin(5t),
+			</me>
+			where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+			We find a particular solution <m>y_p(t)</m> of <xref ref="eq-mass-spring-15" /> by variation of parameters.
+			Let
+			<me>
+			  y_p(t) = u_1(t)\cos(5t) + u_2(t)\sin(5t),
+			</me>
+			where <m>u_1'(t)</m> and <m>u_2'(t)</m> satisfy
+			<me>
+			  \begin{cases} u_1'(t)\cos(5t) + u_2'(t)\sin(5t) = 0, \\[4pt] -5\,u_1'(t)\sin(5t) + 5u_2'(t)\cos(5t) = 18\sin(5t).
+			  \end{cases}
+			</me>
+			Solving this system gives
+			<me>
+			  u_1'(t) = -\frac{18}{5}\sin^2(5t) =-\frac{9}{5}(1-\cos(10t)),
+			</me>
+			and
+			<me>
+			  u_2'(t) = \frac{18}{5}\sin(5t)\cos(5t) =\frac{9}{5}\sin(10t).
+			</me>
+			Integrating yields
+			<me>
+			  u_1(t) = -\frac{9}{5}t + \frac{9}{50} \sin(10t), \qquad u_2(t) = -\frac{9}{50} \cos(10t).
+			</me>
+			Hence,
+			<me>
+			  \begin{aligned} y_p(t) &amp;= u_1\cos(5t) + u_2\sin(5t) \\[2pt] &amp;= -\frac{9}{5}t \cos(5t)  + \frac{9}{50}\sin(10t) \cos(5t) -\frac{9}{50}\cos(10t)\sin(5t)\\[2pt] &amp;=-\frac{9}{5}t \cos(5t)  + \frac{9}{50}\sin(5t).
+			  \\[2pt] \end{aligned}
+			</me>
+			The general solution is
+			<me>
+			  y(t) = c_1\cos(5t) + c_2\sin(5t) - \frac{9}{5}t\cos(10t),
+			</me>
+			<m>c_1</m> and <m>c_2</m> are constants to be determined so that <m>y(0) = 0, y'(0) = 0.</m> Substituting these gives <m>c_1 = 0</m> and <m>5c_2 - \frac{9}{5} = 0</m>, i.e., <m>c_2 = \frac{9}{25}</m> Thus, we have
+			<me>
+			  y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t).
+			</me>
+			It is evident that the amplitude <m>a(t)</m> of <m>y(t)</m> is given by
+			<me>
+			  a(t)=\frac{ 9}{5}\sqrt{t^2+\frac{1}{25}}
+			</me>
+			which shows that <m>\lvert y(t) \rvert</m> grows without bound as <m>t\to\infty.</m> Hence, the system exhibits <term>resonance</term> in this case, where the forcing frequency coincides the natural frequency-illustrating the classical example of resonance in an undamped forced spring-mass system.
+			The plots of the solution <m>y(t)</m> and amplitude <m>a(t)</m> are shown in <xref ref="fig-resonance-1" />.
+			<figure xml:id="fig-resonance-1">
+				<caption>The graph of <m>y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t)</m> and its amplitude <m>a(t) = \frac{9}{5}\sqrt{t^2+\frac{1}{25}}</m></caption>
+				<image source="images/fig-resonance-1" width="90%">
+				</image>
+			  </figure>
+		  </p>
+		</paragraphs>
+		
 	</subsection>
 
 
