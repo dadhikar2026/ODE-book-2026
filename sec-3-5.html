@@ -188,8 +188,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-3-5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Applications</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#spring-mass-system" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Spring-Mass System</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#RLC-circuit" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Electrical Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#subsec-spring-mass-system" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Spring-Mass System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#subsec-RLC-circuit" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Electrical Circuits</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -291,22 +291,325 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <article class="objectives goal-like" id="sec-3-5-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ul class="disc" id="sec-3-5-2-1"><li id="sec-3-5-2-1-1">
-<div class="para" id="sec-3-5-2-1-1-1">Be able to apply methods of solutions from previous sections to some basic problems in applications.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-5-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-3-5-2-1-1-1">Be able to apply methods of solutions from previous sections to some elementary problems in applications.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-5-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-3-5-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li></ul>
-<div class="autopermalink" data-description="Objectives 3.5"><a href="#sec-3-5-2" title="Copy heading and permalink for Objectives 3.5" aria-label="Copy heading and permalink for Objectives 3.5">🔗</a></div></article><section class="introduction" id="sec-3-5-3"><div class="para" id="sec-3-5-3-1">In this section we will study two commons examples of applications where the solution methods from previous sections can be effectively used.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="spring-mass-system"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Objectives 3.5"><a href="#sec-3-5-2" title="Copy heading and permalink for Objectives 3.5" aria-label="Copy heading and permalink for Objectives 3.5">🔗</a></div></article><section class="introduction" id="sec-3-5-3"><div class="para" id="sec-3-5-3-1">In this section we will study three elementary examples of applications where the methods from previous sections can be effectively used.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-spring-mass-system"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spring-Mass System</span>
 </h3>
-<div class="para" id="spring-mass-system-2">A spring-mass system is a common physical application of second-order linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#spring-mass-system-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-spring-mass-system-2">A common example of a second order linear differential equation with constant coefficients arises in modeling the motion of a mass attached to a spring whose other end is fixed to a support. Let us consider a spring suspended vertically from a fixed ceiling (rigid support) with the mass attached to its lower end, as illustrated in <a href="sec-3-5.html#fig-spring-mass" class="xref" data-knowl="./knowl/xref/fig-spring-mass.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.5.1: Spring-Mass System"><a href="#spring-mass-system" title="Copy heading and permalink for Subsection 3.5.1: Spring-Mass System" aria-label="Copy heading and permalink for Subsection 3.5.1: Spring-Mass System">🔗</a></div></section><section class="subsection" id="RLC-circuit"><h3 class="heading hide-type">
+<figure class="figure figure-like" id="fig-spring-mass"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig-spring-mass-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.<div class="autopermalink" data-description="Figure 3.5.1"><a href="#fig-spring-mass" title="Copy heading and permalink for Figure 3.5.1" aria-label="Copy heading and permalink for Figure 3.5.1">🔗</a></div></figcaption></figure><div class="para" id="subsec-spring-mass-system-4">Let <span class="process-math">\(\ell\)</span> denote the natural (unstretched) length of the spring, and let <span class="process-math">\(s\)</span> be the amount by which the spring stretches when the mass <span class="process-math">\(m\)</span> is attached and allowed to hang in equilibrium under gravity. We assume that the motion of the mass is restricted to the vertical line through the point of the equilibrium of the mass. To take this vertical line (see <a href="sec-3-5.html#fig-spring-mass" class="xref" data-knowl="./knowl/xref/fig-spring-mass.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a> (d)) as the coordinate axis, we take the equilibrium point as the origin and assign the vertically downward direction as the positive direction.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-spring-mass-system-5">
+<div class="para">Denote by <span class="process-math">\(y(t)\)</span> the displacement of the mass at time <span class="process-math">\(t\)</span> from its equilibrium position (the origin). In addition to the restoring force <span class="process-math">\(F_{\text{s}}(t)\)</span> of the spring and gravitational force <span class="process-math">\(mg\text{,}\)</span> assume that the mass is acted upon by a damping force <span class="process-math">\(F_{\text{d}}(t)\)</span> as well as an external force <span class="process-math">\(F(t).\)</span> See <a href="sec-3-5.html#fig-spring-mass" class="xref" data-knowl="./knowl/xref/fig-spring-mass.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a> (c) for wall friction as an example of a damping force. Thus, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-spring-mass.html" id="subsec-spring-mass-system-5-8">
+\begin{equation*}
+\text{the net force on the mass} = F_{\text{s}}(t) +mg+ F_{\text{d}}(t) + F(t).
+\end{equation*}
+</div>
+<div class="para">According to Newton’s second law, we then have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-spring-mass.html" id="eq-mass-spring1">
+\begin{equation}
+m y''(t) = F_{\text{s}}(t) + mg+ F_{\text{d}}(t) + F(t).\tag{3.5.1}
+\end{equation}
+</div>
+<div class="para">
+<span class="process-math">\(\bullet\)</span> How do we model the spring force <span class="process-math">\(F_{\text{s}}(t)?\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-spring-mass-system-6">
+<div class="para">Since a spring that is stretched or compressed tends to return to its natural length, the spring force wants to pull the mass toward its equilibrium position. For an ideal spring—one made of a homogeneous material with uniform coiling—Robert Hooke, a 17th-century English physicist, established that the restoring force required to stretch or compress the spring (without damaging it) is directly proportional to the resulting displacement.<details class="ptx-footnote" aria-live="polite" id="subsec-spring-mass-system-6-1"><summary class="ptx-footnote__number" title="Footnote 3.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="subsec-spring-mass-system-6-1">For a spring made up of a heterogeneous material and with nonuniform coiling, the restoring force may be modeled by a nonlinear function of the displacement. For example, <span class="process-math">\(F_{\text{s}}(t) = - k\,\lvert y(t)\rvert^{p-2}y(t)\)</span> with a fixed number <span class="process-math">\(p\)</span> in <span class="process-math">\((1, \infty)\)</span> and <span class="process-math">\(k&gt;0\)</span> a fixed real number.</div></details> This means that</div>
+<div class="displaymath process-math" id="eq-mass-spring2">
+\begin{equation}
+F_{\text{s}}(t) = - k\,(s+y(t)),\tag{3.5.2}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(k\)</span> is a fixed positive constant, called the spring constant which measures the stiffness of the spring. The negative <span class="process-math">\((-)\)</span> means that the restoring force is directed toward the origin.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-spring-mass-system-7">
+<div class="para">One may ask: <em class="emphasis">how do we practically calculate <span class="process-math">\(k\)</span> of a spring?</em> The simplest way to calculate <span class="process-math">\(k\)</span> is to simply suspend the spring from a support with the mass attached to its other end and observe the stretch <span class="process-math">\(s\)</span> the spring experiences for its equilibrium under gravity. Since the mass is at rest, the net force acting on the mass is zero, that is,</div>
+<div class="displaymath process-math" id="subsec-spring-mass-system-7-4">
+\begin{equation*}
+\text{the net force on the mass}=0 = - ks +mg,
+\end{equation*}
+</div>
+<div class="para">which yields</div>
+<div class="displaymath process-math" id="eq-mass-spring3">
+\begin{equation}
+mg = ks,\tag{3.5.3}
+\end{equation}
+</div>
+<div class="para">and so</div>
+<div class="displaymath process-math" id="subsec-spring-mass-system-7-6">
+\begin{equation*}
+k = \frac{mg}{s}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-spring-mass-system-8">
+<span class="process-math">\(\bullet\)</span> How do we model <span class="process-math">\(F_{\text{d}}(t)?\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-spring-mass-system-9">
+<div class="para">It is intuitive that the damping force (or drag) increases as the speed of the mass increases. Hence, the simplest way to model the damping force is to assume that it is directly proportional to the velocity.<details class="ptx-footnote" aria-live="polite" id="subsec-spring-mass-system-9-1"><summary class="ptx-footnote__number" title="Footnote 3.5.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="subsec-spring-mass-system-9-1">For a medium that resists the motion of the mass depending on a power of the speed, the damping force may be modeled by a nonlinear function of the velocity. For example, <span class="process-math">\(F_{\text{s}}(t) = - b\,\lvert
+y'(t)\rvert^{q-2}y'(t)\)</span> with a fixed number <span class="process-math">\(q\)</span> in <span class="process-math">\((1, \infty)\)</span> and <span class="process-math">\(b&gt;0\)</span> a fixed real number.</div></details> This means that</div>
+<div class="displaymath process-math" id="eq-mass-spring4">
+\begin{equation}
+F_{\text{d}}(t)= - b\, y'(t),\tag{3.5.4}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(b\)</span> is the constant of proportionality, called the damping coefficient of the medium offering the resistance to the motion of the mass.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-spring-mass-system-10">Using <a href="sec-3-5.html#eq-mass-spring2" class="xref" data-knowl="./knowl/xref/eq-mass-spring2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.2">(3.5.2)</a> and <a href="sec-3-5.html#eq-mass-spring4" class="xref" data-knowl="./knowl/xref/eq-mass-spring4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.4">(3.5.4)</a> in <a href="sec-3-5.html#eq-mass-spring1" class="xref" data-knowl="./knowl/xref/eq-mass-spring1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.1">(3.5.1)</a>, we obtain<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-spring-mass-system-11">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring3.html" id="subsec-spring-mass-system-11-1">
+\begin{equation*}
+m y''(t) = -ks -k y(t) + mg- b y'(t) + F(t),
+\end{equation*}
+</div>
+<div class="para">which, in view of <a href="sec-3-5.html#eq-mass-spring3" class="xref" data-knowl="./knowl/xref/eq-mass-spring3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.3">(3.5.3)</a>, yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring3.html" id="eq-mass-spring5">
+\begin{equation}
+my''(t) + by'(t) + k y(t) = F(t).\tag{3.5.5}
+\end{equation}
+</div>
+<div class="para">This is a second order linear differential equation with constant coefficient, and it can be solved using the methods from the previous sections. For example, the method of undetermined coefficients or variation of parameters can be used.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-spring-mass-system-12">We now examine several interesting and special cases of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eq:mass-spring5" missing or not unique]</code> before discussing the general form.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="paragraphs" id="free-undamped-motion-b0ft-0"><h4 class="heading"><span class="title">I. Free Undamped Motion (<span class="process-math">\(b=0,\;F(t) =0\)</span>).</span></h4>
+<div class="para logical" id="free-undamped-motion-b0ft-0-2">
+<div class="para">When <span class="process-math">\(b= 0\)</span> (no damping) and <span class="process-math">\(F(t) = 0\)</span> (no external forces), the mass-spring system is said to have a free undamped motion and the system is called a <em class="emphasis">simple harmonic oscillator</em>. The resulting differential equation for the displacement of the mass from its equilibrium position is</div>
+<div class="displaymath process-math" id="free-undamped-motion-b0ft-0-2-4">
+\begin{equation*}
+my''(t) + k y(t) = 0,
+\end{equation*}
+</div>
+<div class="para">which, with <span class="process-math">\(w^2 = k/m\text{,}\)</span> becomes</div>
+<div class="displaymath process-math" id="eq-mass-spring6">
+\begin{equation}
+y''(t) + \omega^2 y(t) = 0,\tag{3.5.6}
+\end{equation}
+</div>
+<div class="para">also referred to as a simple harmonic oscillator. Then the general solution of the simple harmonic oscillator is</div>
+<div class="displaymath process-math" id="eq-mass-spring7">
+\begin{equation}
+y(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t),\tag{3.5.7}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants which can be determined when the initial conditions <span class="process-math">\(y(t_0) = y_0, y'(t_0) = y_1\)</span> are provided.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="free-undamped-motion-b0ft-0-3">
+<div class="para">The displacement <span class="process-math">\(y(t)\)</span> described by <a href="sec-3-5.html#eq-mass-spring7" class="xref" data-knowl="./knowl/xref/eq-mass-spring7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.7">(3.5.7)</a> can interpreted most effectively when it is written in the form of a single sine or cosine function. To express it in the form of a single sine function, we seek to find two constants <span class="process-math">\(A\)</span> and <span class="process-math">\(\phi\)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="eq-mass-spring8">
+\begin{equation}
+y(t) = A \sin(\omega t -\phi).\tag{3.5.8}
+\end{equation}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="eq-mass-spring9">
+\begin{equation}
+y(t) = A \sin(\omega t) \cos(\phi) - A\cos(\omega t) \sin (\phi).\tag{3.5.9}
+\end{equation}
+</div>
+<div class="para">Since the terms in <a href="sec-3-5.html#eq-mass-spring7" class="xref" data-knowl="./knowl/xref/eq-mass-spring7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.7">(3.5.7)</a> and <a href="sec-3-5.html#eq-mass-spring9" class="xref" data-knowl="./knowl/xref/eq-mass-spring9.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.9">(3.5.9)</a> must match, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-3-9">
+\begin{equation*}
+\begin{cases} A\sin(\phi) = -c_1,\\ A\cos(\phi) = c_2.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Squaring and adding these equations gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-3-10">
+\begin{equation*}
+A^2 = c_1^2 + c_2^2.
+\end{equation*}
+</div>
+<div class="para">We take</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-3-11">
+\begin{equation*}
+A =\sqrt{c_1^2 + c_2^2}.
+\end{equation*}
+</div>
+<div class="para">It is possible that <span class="process-math">\(A =0\text{,}\)</span> in which case, we have <span class="process-math">\(y(t) = 0\)</span> for all <span class="process-math">\(t\text{,}\)</span> the trivial solution, and this means that the mass is at rest in the equilibrium position for all <span class="process-math">\(t.\)</span> Therefore the only interesting case is when <span class="process-math">\(A&gt;0.\)</span> If <span class="process-math">\(c_2 \ne 0,\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-3-18">
+\begin{equation*}
+\arctan(\frac{-c_1}{c_2}) \text{ lies in }\left(-\frac{\pi}{2},
+\frac{\pi}{2}\right).
+\end{equation*}
+</div>
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-3-19">
+\begin{equation*}
+\phi = \begin{cases} \arctan(\frac{-c_1}{c_2}) &amp;\text{if } c_2&gt;0,\\[1em]
+\arctan(\frac{-c_1}{c_2})+\pi&amp;\text{if } c_2&lt;0,\\ \frac{\pi}{2}&amp;\text{if
+}c_1&lt;0 \text{ and } c_2=0,\\ -\frac{\pi}{2}&amp;\text{if } c_1&gt;0 \text{ and }
+c_2=0.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Also, note that <a href="sec-3-5.html#eq-mass-spring8" class="xref" data-knowl="./knowl/xref/eq-mass-spring8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.8">(3.5.8)</a> can be written as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-3-21">
+\begin{equation*}
+y(t) = A \cos(\omega t -\phi -\frac{\pi}{2}).
+\end{equation*}
+</div>
+<div class="para">It is now clear from <a href="sec-3-5.html#eq-mass-spring8" class="xref" data-knowl="./knowl/xref/eq-mass-spring8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.8">(3.5.8)</a> that the mass oscillates about the origin with the amplitude <span class="process-math">\(A,\)</span> which is the maximum displacement from the equilibrium position. The time period for one complete oscillation is <span class="process-math">\(T= 2\pi / \omega,\)</span> and therefore the number <span class="process-math">\(\omega\)</span> is the circular frequency of the oscillations, that is, the number of cycles per unit <span class="process-math">\(2\pi\)</span> units of time.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="free-undamped-motion-b0ft-0-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="free-undamped-motion-b0ft-0-4-1-1">A 2-pound mass stretches a spring 6 inches. At time <span class="process-math">\(t = 0\text{,}\)</span> the mass is released from a position 8 inches below equilibrium with an initial upward velocity of <span class="process-math">\(\tfrac{4}{3}\)</span> ft/s.<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="free-undamped-motion-b0ft-0-4-1-2">
+<ol class="lower-roman ol-marker-1" id="free-undamped-motion-b0ft-0-4-1-2-1">
+<li id="item-1">
+<div class="para" id="item-1-1">Find the equation of motion in both the forms <a href="sec-3-5.html#eq-mass-spring7" class="xref" data-knowl="./knowl/xref/eq-mass-spring7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.7">(3.5.7)</a> and <a href="sec-3-5.html#eq-mass-spring8" class="xref" data-knowl="./knowl/xref/eq-mass-spring8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.8">(3.5.8)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#item-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#item-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="free-undamped-motion-b0ft-0-4-1-2-1-2">
+<div class="para" id="free-undamped-motion-b0ft-0-4-1-2-1-2-1">Graph the velocity versus the displacement.<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#free-undamped-motion-b0ft-0-4-1-2-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="free-undamped-motion-b0ft-0-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="free-undamped-motion-b0ft-0-4-2-1">
+<ol class="lower-roman ol-marker-1" id="free-undamped-motion-b0ft-0-4-2-1-1">
+<li id="free-undamped-motion-b0ft-0-4-2-1-1-1">
+<div class="para logical" id="free-undamped-motion-b0ft-0-4-2-1-1-1-1">
+<div class="para">Let <span class="process-math">\(y(t)\)</span> denote in feet the displacement of the mass from the equilibrium position measured positively in the vertically downward direction. We have <span class="process-math">\(mg = 2~\text{lb}, \text{spring
+stretch}, s = 6~\text{in} = 0.5~\text{ft}.\)</span> We have <span class="process-math">\(m =
+\frac{mg}{g} = \frac{2}{32} = \frac{1}{16}~\text{slug},\)</span> and the spring constant <span class="process-math">\(k = \frac{mg}{s} = \frac{2}{0.5} =
+4~\text{lb/ft}.\)</span> The differential equation of motion is</div>
+<div class="displaymath process-math" id="free-undamped-motion-b0ft-0-4-2-1-1-1-1-5">
+\begin{equation*}
+m y'' + k y = 0,
+\end{equation*}
+</div>
+<div class="para">which becomes</div>
+<div class="displaymath process-math" id="free-undamped-motion-b0ft-0-4-2-1-1-1-1-6">
+\begin{equation*}
+\frac{1}{16} y'' + 4y = 0,
+\end{equation*}
+</div>
+<div class="para">and therefore</div>
+<div class="displaymath process-math" id="free-undamped-motion-b0ft-0-4-2-1-1-1-1-7">
+\begin{equation*}
+y'' + 64y = 0
+\end{equation*}
+</div>
+<div class="para">with the initial condition <span class="process-math">\(y(0) = -\tfrac{2}{3}, y'(0) = \tfrac{4}{3}.\)</span> The general solution of the differential equation is</div>
+<div class="displaymath process-math" id="free-undamped-motion-b0ft-0-4-2-1-1-1-1-9">
+\begin{equation*}
+y(t) = c_1 \cos(8t) + c_2 \sin(8t).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="free-undamped-motion-b0ft-0-4-2-1-1-1-2">
+<div class="para">Applying the initial conditions gives</div>
+<div class="displaymath process-math" id="free-undamped-motion-b0ft-0-4-2-1-1-1-2-1">
+\begin{equation*}
+y(0)= -\frac{2}{3} = c_1.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="free-undamped-motion-b0ft-0-4-2-1-1-1-3">
+<div class="para">Also, since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-4-2-1-1-1-3-1">
+\begin{equation*}
+y'(t) = -8c_1 \sin(8t) + 8c_2 \cos(8t)
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(y'(0) =\frac{4}{3},\)</span> we obtain <span class="process-math">\(8c_2 = \frac{4}{3},\)</span> that is, <span class="process-math">\(c_2 = \frac{1}{6}.\)</span> Hence the equation of the motion is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-4-2-1-1-1-3-5">
+\begin{equation*}
+y(t) = -\frac{2}{3} \cos(8t) + \frac{1}{6} \sin(8t),
+\end{equation*}
+</div>
+<div class="para">which is of the form <a href="sec-3-5.html#eq-mass-spring7" class="xref" data-knowl="./knowl/xref/eq-mass-spring7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.7">(3.5.7)</a>. Using the method discussed for <a href="sec-3-5.html#eq-mass-spring8" class="xref" data-knowl="./knowl/xref/eq-mass-spring8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.8">(3.5.8)</a> to find the equation of the motion in the amplitude-phase, we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-4-2-1-1-1-3-8">
+\begin{equation*}
+A= \sqrt{c_1^2+c_2^2}=\sqrt{\frac{4}{9}+\frac{1}{36}}=
+\frac{\sqrt{17}}{6}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-4-2-1-1-1-3-9">
+\begin{equation*}
+\phi = \arctan(\frac{-c_1}{c_2}) = \arctan(\frac{2/3}{1/6})
+=\arctan(4)\approx 1.3258~\text{rad},
+\end{equation*}
+</div>
+<div class="para">and therefore</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-b0ft-0-4-2-1-1-1-3-10">
+\begin{equation*}
+y(t) = \frac{\sqrt{17}}{6} \sin\!\left(8t - \varphi\right)
+\approx \frac{\sqrt{17}}{6} \sin\!\left(8t - 1.3258\right).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-2-1-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="free-undamped-motion-b0ft-0-4-2-1-1-1-4">Its graph is shown in <a href="sec-3-5.html#graph-simple-harmonic-oscillator" class="xref" data-knowl="./knowl/xref/graph-simple-harmonic-oscillator.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-2-1-1-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="graph-simple-harmonic-oscillator"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/graph-simple-harmonic-oscillator-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) \approx \frac{\sqrt{17}}{6}
+\sin\!\left(8t - 1.3258\right)\)</span><div class="autopermalink" data-description="Figure 3.5.3"><a href="#graph-simple-harmonic-oscillator" title="Copy heading and permalink for Figure 3.5.3" aria-label="Copy heading and permalink for Figure 3.5.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item i"><a href="#free-undamped-motion-b0ft-0-4-2-1-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="free-undamped-motion-b0ft-0-4-2-1-1-2">
+<div class="para logical" id="free-undamped-motion-b0ft-0-4-2-1-1-2-1">
+<div class="para">We find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-phase-space-orbit.html" id="free-undamped-motion-b0ft-0-4-2-1-1-2-1-1">
+\begin{equation*}
+y'(t) = 8\frac{\sqrt{17}}{6} \cos\!\left(8t -
+\varphi\right).
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-phase-space-orbit.html" id="free-undamped-motion-b0ft-0-4-2-1-1-2-1-2">
+\begin{equation*}
+\left(\frac{y(t)}{\frac{\sqrt{17}}{6}
+}\right)^2+\left(\frac{y'(t)}{\frac{8\sqrt{17}}{6}}\right)^2 = 1
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(t\text{.}\)</span> This takes the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-phase-space-orbit.html" id="free-undamped-motion-b0ft-0-4-2-1-1-2-1-4">
+\begin{equation*}
+272 (y(t))^2 + 17(y'(t))^2= 272
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(t\)</span> and is an ellipse in the <span class="process-math">\(y'y\)</span>-plane as shown in <a href="sec-3-5.html#fig-phase-space-orbit" class="xref" data-knowl="./knowl/xref/fig-phase-space-orbit.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.4">Figure 3.5.4</a>. The graph is called the orbit of the simple harmonic oscillator and visualizes the oscillatory motion.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-phase-space-orbit"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig-phase-space-orbit-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) \approx \frac{\sqrt{17}}{6}
+\sin\!\left(8t - 1.3258\right)\)</span><div class="autopermalink" data-description="Figure 3.5.4"><a href="#fig-phase-space-orbit" title="Copy heading and permalink for Figure 3.5.4" aria-label="Copy heading and permalink for Figure 3.5.4">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item ii"><a href="#free-undamped-motion-b0ft-0-4-2-1-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-b0ft-0-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.2.1"><a href="#free-undamped-motion-b0ft-0-4-2" title="Copy heading and permalink for Solution 3.5.2.1" aria-label="Copy heading and permalink for Solution 3.5.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.5.2"><a href="#free-undamped-motion-b0ft-0-4" title="Copy heading and permalink for Example 3.5.2" aria-label="Copy heading and permalink for Example 3.5.2">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraphs: I. Free Undamped Motion (b=0,\;F(t) =0)"><a href="#free-undamped-motion-b0ft-0" title="Copy heading and permalink for Paragraphs: I. Free Undamped Motion (b=0,\;F(t) =0)" aria-label="Copy heading and permalink for Paragraphs: I. Free Undamped Motion (b=0,\;F(t) =0)">🔗</a></div></section><div class="autopermalink" data-description="Subsection 3.5.1: Spring-Mass System"><a href="#subsec-spring-mass-system" title="Copy heading and permalink for Subsection 3.5.1: Spring-Mass System" aria-label="Copy heading and permalink for Subsection 3.5.1: Spring-Mass System">🔗</a></div></section><section class="subsection" id="subsec-RLC-circuit"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Electrical Circuits</span>
 </h3>
-<div class="para" id="RLC-circuit-2">An RLC circuit is another common physical application of second-order linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#RLC-circuit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-RLC-circuit-2">An RLC circuit is another common physical application of second-order linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.5.2: Electrical Circuits"><a href="#RLC-circuit" title="Copy heading and permalink for Subsection 3.5.2: Electrical Circuits" aria-label="Copy heading and permalink for Subsection 3.5.2: Electrical Circuits">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Applications"><a href="#sec-3-5" title="Copy heading and permalink for Section 3.5: Applications" aria-label="Copy heading and permalink for Section 3.5: Applications">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Subsection 3.5.2: Electrical Circuits"><a href="#subsec-RLC-circuit" title="Copy heading and permalink for Subsection 3.5.2: Electrical Circuits" aria-label="Copy heading and permalink for Subsection 3.5.2: Electrical Circuits">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Applications"><a href="#sec-3-5" title="Copy heading and permalink for Section 3.5: Applications" aria-label="Copy heading and permalink for Section 3.5: Applications">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-3-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-3-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
