@@ -1,150 +1,497 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-3-5" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Applications</title>
+	<title>Applications</title>
 
-  <objectives>
-    <ul>
-      <li>
-        <p>
-          Be able to apply methods of solutions from previous sections to some elementary problems in applications.
-        </p>
-      </li>
-    </ul>
-  </objectives>
+	<objectives>
+		<ul>
+			<li>
+				<p>
+					Be able to apply methods of solutions from previous sections to some elementary
+					problems in applications.
+				</p>
+			</li>
+		</ul>
+	</objectives>
 
-  <introduction>
-    <p>
-      In this section we will study three elementary examples of applications where the methods from previous sections can be effectively used.
-    </p>
-  </introduction>
-
-
-  <subsection xml:id="subsec-spring-mass-system">
-    <title>Spring-Mass System</title>
-
-    <p>
-      A common example of a second order linear differential equation with constant coefficients arises in modeling the motion of a mass attached to a spring whose other end is fixed to a support.
-      Let us consider a spring suspended vertically from a fixed ceiling (rigid support) with the mass attached to its lower end, as illustrated in <xref ref="fig-spring-mass" />.
-    </p>
-
-    <figure xml:id="fig-spring-mass">
-      <caption>A  mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.</caption>
-      <image width="80%">
-        <latex-image>
-          \begin{tikzpicture}[scale=1.1, &gt;=stealth]
-            \tikzset{
-            spring/.style={thick,decorate,decoration={coil,aspect=0.4,segment
-            length=4pt,amplitude=3pt}},
-            mass/.style={draw,fill=pink!60,minimum width=1cm,minimum height=0.7cm},
-            dashedline/.style={dashed,gray},
-            labeltext/.style={font=\small}
-            }
-
-		% (a) Unstretched spring
-
-		\begin{scope}[xshift=0cm]
-			\node[below] at (0,-2.6) {(a)};
-			% Ceiling
-			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
-			\node[above] at (0,0.2) {\small Rigid Support};
-			% Spring (natural length l)
-		  \draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-2.2);
-			%\draw[spring, aspect=0.7] (0,0) -- (0,-2.2);
-			\draw[&lt;-&gt;] (0.4,0) -- (0.4,-2.2);
-			\node[right,labeltext] at (0.41,-1) {$\ell$};
-			% Dashed reference line
-			\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
-			\node[below,labeltext] at (0,-2.4) {unstretched spring};
-		\end{scope}
-
-		% (b) Equilibrium position
-
-		\begin{scope}[xshift=1.75cm]
-			\node[below] at (0,-4.1) {(b)};
-			% Ceiling
-			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
-			%\node[above] at (0,0.2) {\small Rigid Support};
-			% Spring
-			\draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-3.1);
-			%\draw[spring] (0,0) -- (0,-3.1);
-			\node[mass] (m1) at (0,-3.4) {$m$};
-			% Labels
-			\draw[&lt;-&gt;] (0.45,0) -- (0.45,-2.2);
-			\node[right,labeltext] at (0.45,-1) {$\ell$};
-			%\node[right,labeltext] at (0,-2.4) {$s$};
-			\draw[dashedline] (-0.8,-3.1) -- (5,-3.1); %the line corresponding to the origin
-			\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
-			% Bracket for s
-			\draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.1);
-			\node[right,labeltext] at (0.45,-2.7) {$s$};
-			\node[below,labeltext] at (0,-3.8) {mass in equilibrium};
-		\end{scope}
-
-		% (c) Motion (displacement x or y)
-
-		\begin{scope}[xshift=4.25cm]
-			\node[below] at (0,-5.5) {(c)};
-			% Ceiling
-			\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
-			%\node[above] at (0,0.2) {\small Rigid Support};
-			% Spring
-			\draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate] (0,0) -- (0,-4.1);
-			%\draw[spring] (0,0) -- (0,-3);
-			\node[mass] (m2) at (0,-4.4) {$m$};
-			% Labels
-			% Bracket for total extension
-			\draw[&lt;-&gt;] (0.7,0) -- (0.7,-3.1);
-			\node[right,labeltext] at (0.7,-1.5) {$\ell + s$};
-			\draw[&lt;-&gt;] (0.7,-4.1) -- (0.7,-3.1);
-			\node[right,labeltext] at (0.7,-3.6) {$y(t)$};
-			% Dashed lines
-			%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
-			\draw[dashedline] (-0.8,-4.1) -- (0.85,-4.1);
-			%\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
-			\node[below,labeltext] at (0,-5.2) {mass in motion};
-			% Thick vertical wall
-			\draw[thick] (-0.4,-4.8) -- (-0.4,0);
-			% Friction hatch marks (diagonal lines)
-			\foreach \y in {-4.8,-4.6,...,-0.2}
-			\draw[thick] (-0.4,\y) -- (-0.5,\y+0.2);
-			% Optional label
-			\node[rotate=90,left] at (-0.8,-1) {wall/friction};
-  		% Example mass block next to wall
-      %\draw[fill=gray!30] (0.5,1) rectangle (1.5,2);
-			% Optional arrow to indicate external force
-			\draw[-&gt;,blue,very thick] (0.35,-4.1) -- (0.35,-3.7) node[right] {};
-			\draw[-&gt;,blue,very thick] (0.35,-4.7) -- (0.35,-5.1) node[right] {$F(t)$};
-		\end{scope}
-			%--------------------------------
-		% (d) Coordinate system
-		%--------------------------------
-		\begin{scope}[xshift=3.5cm]
-			\node[below] at (3.1,-5.5) {(d)};
-			% Bracket for total extension
-			\draw[-&gt;,very thick] (3,0.25) -- (3,-5);
-      % the coordinate axis line
-			\node[right,labeltext] at (3.1,-1.9) {$y&lt;0$};
-			\filldraw[black] (3,-3.1) circle (2pt);
-			\node[right,labeltext] at (3.1,-3.1) {$y=0$\;(origin)};
-			\node[right,labeltext] at (3.1,-4.5) {$y>0$};
-			% Dashed lines
-			\node[below,labeltext] at (3.1,-5.2) {the coordinate axis};
-      \end{scope}
-	  \end{tikzpicture}
-        </latex-image>
-      </image>
-    </figure>
-
-  </subsection>
+	<introduction>
+		<p>
+			In this section we will study three elementary examples of applications where the
+			methods from previous sections can be effectively used.
+		</p>
+	</introduction>
 
 
-  <subsection xml:id="subsec-RLC-circuit">
-    <title>Electrical Circuits</title>
+	<subsection xml:id="subsec-spring-mass-system">
+		<title>Spring-Mass System</title>
 
-    <p>
-      An RLC circuit is another common physical application of second-order linear differential equations.
-    </p>
+		<p> A common example of a second order linear differential equation with constant
+			coefficients arises in modeling the motion of a mass attached to a spring whose other
+			end is fixed to a support. Let us consider a spring suspended vertically from a fixed
+			ceiling (rigid support) with the mass attached to its lower end, as illustrated in <xref
+				ref="fig-spring-mass" />. </p>
 
-  </subsection>
+		<figure xml:id="fig-spring-mass">
+			<caption>A mass-spring system showing unstretched, equilibrium, motion, and
+				coordinate-axis.</caption>
+			<image width="70%">
+				<latex-image>
+					\begin{tikzpicture}[scale=1.1, &gt;=stealth]
+					\tikzset{
+					spring/.style={thick,decorate,decoration={coil,aspect=0.4,segment
+					length=4pt,amplitude=3pt}},
+					mass/.style={draw,fill=pink!60,minimum width=1cm,minimum height=0.7cm},
+					dashedline/.style={dashed,gray},
+					labeltext/.style={font=\small}
+					}
+					% (a) Unstretched spring
+					\begin{scope}[xshift=0cm]
+					\node[below] at (0,-2.6) {(a)};
+					% Ceiling
+					\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+					\node[above] at (0,0.2) {\small Rigid Support};
+					% Spring (natural length l)
+					\draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate]
+					(0,0) -- (0,-2.2);
+					%\draw[spring, aspect=0.7] (0,0) -- (0,-2.2);
+					\draw[&lt;-&gt;] (0.4,0) -- (0.4,-2.2);
+					\node[right,labeltext] at (0.41,-1) {$\ell$};
+					% Dashed reference line
+					\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+					\node[below,labeltext] at (0,-2.4) {unstretched spring};
+					\end{scope}
+					% (b) Equilibrium position
+					\begin{scope}[xshift=1.75cm]
+					\node[below] at (0,-4.1) {(b)};
+					% Ceiling
+					\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+					%\node[above] at (0,0.2) {\small Rigid Support};
+					% Spring
+					\draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate]
+					(0,0) -- (0,-3.1);
+					%\draw[spring] (0,0) -- (0,-3.1);
+					\node[mass] (m1) at (0,-3.4) {$m$};
+					% Labels
+					\draw[&lt;-&gt;] (0.45,0) -- (0.45,-2.2);
+					\node[right,labeltext] at (0.45,-1) {$\ell$};
+					%\node[right,labeltext] at (0,-2.4) {$s$};
+					\draw[dashedline] (-0.8,-3.1) -- (5,-3.1); %the line corresponding to the origin
+					\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+					% Bracket for s
+					\draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.1);
+					\node[right,labeltext] at (0.45,-2.7) {$s$};
+					\node[below,labeltext] at (0,-3.8) {mass in equilibrium};
+					\end{scope}
+					% (c) Motion (displacement x or y)
+					\begin{scope}[xshift=4.25cm]
+					\node[below] at (0,-5.5) {(c)};
+					% Ceiling
+					\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+					%\node[above] at (0,0.2) {\small Rigid Support};
+					% Spring
+					\draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate]
+					(0,0) -- (0,-4.1);
+					%\draw[spring] (0,0) -- (0,-3);
+					\node[mass] (m2) at (0,-4.4) {$m$};
+					% Labels
+					% Bracket for total extension
+					\draw[&lt;-&gt;] (0.7,0) -- (0.7,-3.1);
+					\node[right,labeltext] at (0.7,-1.5) {$\ell + s$};
+					\draw[&lt;-&gt;] (0.7,-4.1) -- (0.7,-3.1);
+					\node[right,labeltext] at (0.7,-3.6) {$y(t)$};
+					% Dashed lines
+					%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+					\draw[dashedline] (-0.8,-4.1) -- (0.85,-4.1);
+					%\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
+					\node[below,labeltext] at (0,-5.2) {mass in motion};
+					% Thick vertical wall
+					\draw[thick] (-0.4,-4.8) -- (-0.4,0);
+					% Friction hatch marks (diagonal lines)
+					\foreach \y in {-4.8,-4.6,...,-0.2}
+					\draw[thick] (-0.4,\y) -- (-0.5,\y+0.2);
+					% Optional label
+					\node[rotate=90,left] at (-0.8,-1) {wall/friction};
+					% Example mass block next to wall
+					%\draw[fill=gray!30] (0.5,1) rectangle (1.5,2);
+					% Optional arrow to indicate external force
+					\draw[-&gt;,blue,very thick] (0.35,-4.1) -- (0.35,-3.7) node[right] {};
+					\draw[-&gt;,blue,very thick] (0.35,-4.7) -- (0.35,-5.1) node[right] {$F(t)$};
+					\end{scope}
+					%--------------------------------
+					% (d) Coordinate system
+					%--------------------------------
+					\begin{scope}[xshift=3.5cm]
+					\node[below] at (3.1,-5.5) {(d)};
+					% Bracket for total extension
+					\draw[-&gt;,very thick] (3,0.25) -- (3,-5);
+					% the coordinate axis line
+					\node[right,labeltext] at (3.1,-1.9) {$y&lt;0$};
+					\filldraw[black] (3,-3.1) circle (2pt);
+					\node[right,labeltext] at (3.1,-3.1) {$y=0$\;(origin)};
+					\node[right,labeltext] at (3.1,-4.5) {$y>0$};
+					% Dashed lines
+					\node[below,labeltext] at (3.1,-5.2) {the coordinate axis};
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</figure>
+
+		<p> Let <m>\ell</m> denote the natural (unstretched) length of the spring, and let <m>s</m>
+			be the amount by which the spring stretches when the mass <m>m</m> is attached and
+			allowed to hang in equilibrium under gravity. We assume that the motion of the mass is
+			restricted to the vertical line through the point of the equilibrium of the mass. To
+			take this vertical line (see <xref ref="fig-spring-mass" /> (d)) as the coordinate axis,
+			we take the equilibrium point as the origin and assign the vertically downward direction
+			as the positive direction. </p>
+
+		<p> Denote by <m>y(t)</m> the displacement of the mass at time <m>t</m> from its equilibrium
+			position (the origin). In addition to the restoring force <m>F_{\text{s}}(t)</m> of the
+			spring and gravitational force <m>mg</m>, assume that the mass is acted upon by a
+			damping force <m>F_{\text{d}}(t)</m> as well as an external force <m>F(t).</m> See <xref
+				ref="fig-spring-mass" /> (c) for wall friction as an example of a damping force.
+			Thus, we have <me>
+				\text{the net force on the mass} = F_{\text{s}}(t) +mg+ F_{\text{d}}(t) + F(t).
+			</me>
+			According to Newton's second law, we then have <men xml:id="eq-mass-spring1">
+				m y''(t) = F_{\text{s}}(t) + mg+ F_{\text{d}}(t) + F(t).
+			</men>
+      <m>\bullet</m>
+			How do we model the spring force <m>F_{\text{s}}(t)?</m>
+		</p>
+
+		<p> Since a spring that is stretched or compressed tends to return to its natural length,
+			the spring force wants to pull the mass toward its equilibrium position. For an ideal
+			spring—one made of a homogeneous material with uniform coiling—Robert Hooke, a
+			17th-century English physicist, established that the restoring force required to stretch
+			or compress the spring (without damaging it) is directly proportional to the resulting
+			displacement.<fn> For a spring made up of a heterogeneous material and with nonuniform
+			coiling, the restoring force may be modeled by a nonlinear function of the displacement.
+			For example, <m>F_{\text{s}}(t) = - k\,\lvert y(t)\rvert^{p-2}y(t)</m> with a fixed
+			number <m>p</m> in <m>(1, \infty)</m> and <m>k&gt;0</m> a fixed real number. </fn> This
+			means that <men xml:id="eq-mass-spring2">
+				F_{\text{s}}(t) = - k\,(s+y(t)),
+			</men> where <m>k</m> is a fixed
+			positive constant, called the spring constant which measures the stiffness of the
+			spring. The negative <m>(-)</m> means that the restoring force is directed toward the
+			origin. </p>
+
+		<p> One may ask: <em>how do we practically calculate <m>k</m> of a spring?</em> The simplest
+			way to calculate <m>k</m> is to simply suspend the spring from a support with the mass
+			attached to its other end and observe the stretch <m>s</m> the spring experiences for
+			its equilibrium under gravity. Since the mass is at rest, the net force acting on the
+			mass is zero, that is, <me>
+				\text{the net force on the mass}=0 = - ks +mg,
+			</me> which yields <men
+				xml:id="eq-mass-spring3">
+				mg = ks,
+			</men> and so <me>
+				k = \frac{mg}{s}.
+			</me>
+		</p>
+
+		<p>
+			<m>\bullet</m> How do we model <m>F_{\text{d}}(t)?</m>
+		</p>
+
+		<p> It is intuitive that the damping force (or drag) increases as the speed of the mass
+			increases. Hence, the simplest way to model the damping force is to assume that it is
+			directly proportional to the velocity.<fn> For a medium that resists the motion of the
+			mass depending on a power of the speed, the damping force may be modeled by a nonlinear
+			function of the velocity. For example, <m>F_{\text{s}}(t) = - b\,\lvert
+			y'(t)\rvert^{q-2}y'(t)</m> with a fixed number <m>q</m> in <m>(1, \infty)</m> and <m>
+			b&gt;0</m> a fixed real number. </fn> This means that <men xml:id="eq-mass-spring4">
+			F_{\text{d}}(t)= - b\, y'(t),
+			</men> where <m>b</m> is the constant of
+			proportionality, called the damping coefficient of the medium offering the resistance to
+			the motion of the mass. </p>
+
+		<p> Using <xref ref="eq-mass-spring2" /> and <xref ref="eq-mass-spring4" /> in <xref
+				ref="eq-mass-spring1" />, we obtain </p>
+
+		<p>
+			<me>
+				m y''(t) = -ks -k y(t) + mg- b y'(t) + F(t),
+			</me> which, in view of <xref
+				ref="eq-mass-spring3" />, yields <men xml:id="eq-mass-spring5">
+				my''(t) + by'(t) + k y(t) = F(t).
+			</men> This is a second order linear
+			differential equation with constant coefficient, and it can be solved using the methods
+			from the previous sections. For example, the method of undetermined coefficients or
+			variation of parameters can be used. </p>
+
+		<p> We now examine several interesting and special cases of <xref ref="eq:mass-spring5" />
+			before discussing the general form. </p>
+
+
+		<paragraphs xml:id="free-undamped-motion-b0ft-0">
+			<title>I. Free Undamped Motion (<m>b=0,\;F(t) =0</m>)</title>
+
+			<p> When <m>b= 0</m> (no damping) and <m>F(t) = 0</m> (no external forces), the
+				mass-spring system is said to have a free undamped motion and the system is called a <em>simple
+				harmonic oscillator</em>. The resulting differential equation for the displacement
+				of the mass from its equilibrium position is <me>
+					my''(t) + k y(t) = 0,
+				</me> which, with <m>w^2 = k/m</m>,
+				becomes <men xml:id="eq-mass-spring6">
+					y''(t) + \omega^2 y(t) = 0,
+				</men> also referred to as a simple
+				harmonic oscillator. Then the general solution of the simple harmonic oscillator is <men
+					xml:id="eq-mass-spring7">
+					y(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t),
+				</men> where <m>
+				c_1</m> and <m>c_2</m> are arbitrary constants which can be determined when the
+				initial conditions <m>y(t_0) = y_0, y'(t_0) = y_1</m> are provided. </p>
+
+			<p> The displacement <m>y(t)</m> described by <xref ref="eq-mass-spring7" /> can
+				interpreted most effectively when it is written in the form of a single sine or
+				cosine function. To express it in the form of a single sine function, we seek to
+				find two constants <m>A</m> and <m>\phi</m> so that <men xml:id="eq-mass-spring8">
+				y(t) = A \sin(\omega t -\phi).
+				</men> Then <men
+					xml:id="eq-mass-spring9">
+					y(t) = A \sin(\omega t) \cos(\phi) - A\cos(\omega t) \sin (\phi).
+				</men>
+				Since the terms in <xref ref="eq-mass-spring7" /> and <xref ref="eq-mass-spring9" />
+				must match, we obtain <me>
+					\begin{cases} A\sin(\phi) = -c_1,\\ A\cos(\phi) = c_2.
+					\end{cases}
+				</me>
+				Squaring and adding these equations gives <me>
+					A^2 = c_1^2 + c_2^2.
+				</me> We take <me>
+					A =\sqrt{c_1^2 + c_2^2}.
+				</me> It is possible that <m>A =0</m>,
+				in which case, we have <m>y(t) = 0</m> for all <m>t</m>, the trivial solution, and
+				this means that the mass is at rest in the equilibrium position for all <m>t.</m>
+				Therefore the only interesting case is when <m>A&gt;0.</m> If <m>c_2 \ne 0,</m> then <me>
+				\arctan(\frac{-c_1}{c_2}) \text{ lies in }\left(-\frac{\pi}{2},
+				\frac{\pi}{2}\right).
+				</me>
+				We have <me>
+					\phi = \begin{cases} \arctan(\frac{-c_1}{c_2}) &amp;\text{if } c_2&gt;0,\\[1em]
+				\arctan(\frac{-c_1}{c_2})+\pi&amp;\text{if } c_2&lt;0,\\ \frac{\pi}{2}&amp;\text{if
+				}c_1&lt;0 \text{ and } c_2=0,\\ -\frac{\pi}{2}&amp;\text{if } c_1&gt;0 \text{ and }
+				c_2=0.
+					\end{cases}
+				</me>
+				Also, note that <xref ref="eq-mass-spring8" /> can be written as <me>
+					y(t) = A \cos(\omega t -\phi -\frac{\pi}{2}).
+				</me> It is now
+				clear from <xref ref="eq-mass-spring8" /> that the mass oscillates about the origin
+				with the amplitude <m>A,</m> which is the maximum displacement from the equilibrium
+				position. The time period for one complete oscillation is <m>T= 2\pi / \omega,</m>
+				and therefore the number <m>\omega</m> is the circular frequency of the
+				oscillations, that is, the number of cycles per unit <m>2\pi</m> units of time. </p>
+
+			<example>
+				<statement>
+					<p> A 2-pound mass stretches a spring 6 inches. At time <m>t = 0</m>, the mass
+						is released from a position 8 inches below equilibrium with an initial
+						upward velocity of <m>\tfrac{4}{3}</m> ft/s. </p>
+
+					<p>
+						<ol marker="i.">
+							<li xml:id="item-1">
+								<p> Find the equation of motion in both the forms <xref
+										ref="eq-mass-spring7" /> and <xref ref="eq-mass-spring8" />. </p>
+							</li>
+
+							<li>
+								<p>
+									Graph the velocity versus the displacement.
+								</p>
+							</li>
+						</ol>
+					</p>
+				</statement>
+				<solution>
+					<p>
+						<ol marker="i.">
+							<li>
+								<p> Let <m>y(t)</m> denote in feet the displacement of the mass from
+									the equilibrium position measured positively in the vertically
+									downward direction. We have <m>mg = 2~\text{lb}, \text{spring
+									stretch}, s = 6~\text{in} = 0.5~\text{ft}.</m> We have <m>m =
+									\frac{mg}{g} = \frac{2}{32} = \frac{1}{16}~\text{slug},</m> and
+									the spring constant <m>k = \frac{mg}{s} = \frac{2}{0.5} =
+									4~\text{lb/ft}.</m> The differential equation of motion is <me>
+										m y'' + k y = 0,
+									</me> which
+									becomes <me>
+										\frac{1}{16} y'' + 4y = 0,
+									</me>
+									and therefore <me>
+										y'' + 64y = 0
+									</me> with the
+									initial condition <m>y(0) = -\tfrac{2}{3}, y'(0) = \tfrac{4}{3}.</m>
+									The general solution of the differential equation is <me>
+										y(t) = c_1 \cos(8t) + c_2 \sin(8t).
+									</me>
+								</p>
+
+								<p> Applying the initial conditions gives <me>
+										y(0)= -\frac{2}{3} = c_1.
+									</me>
+								</p>
+
+								<p> Also, since <me>
+										y'(t) = -8c_1 \sin(8t) + 8c_2 \cos(8t)
+									</me>
+									and <m>y'(0) =\frac{4}{3},</m> we obtain <m>8c_2 = \frac{4}{3},</m>
+									that is, <m>c_2 = \frac{1}{6}.</m> Hence the equation of the
+									motion is <me>
+										y(t) = -\frac{2}{3} \cos(8t) + \frac{1}{6} \sin(8t),
+									</me>
+									which is of the form <xref ref="eq-mass-spring7" />. Using the
+									method discussed for <xref ref="eq-mass-spring8" /> to find the
+									equation of the motion in the amplitude-phase, we compute <me>
+										A= \sqrt{c_1^2+c_2^2}=\sqrt{\frac{4}{9}+\frac{1}{36}}=
+									\frac{\sqrt{17}}{6}
+									</me>
+									and <me>
+										\phi = \arctan(\frac{-c_1}{c_2}) = \arctan(\frac{2/3}{1/6})
+									=\arctan(4)\approx 1.3258~\text{rad},
+									</me>
+									and therefore <me>
+										y(t) = \frac{\sqrt{17}}{6} \sin\!\left(8t - \varphi\right)
+									\approx \frac{\sqrt{17}}{6} \sin\!\left(8t - 1.3258\right).
+									</me>
+								</p>
+
+								<p> Its graph is shown in <xref
+										ref="graph-simple-harmonic-oscillator" />. </p>
+
+								<figure xml:id="graph-simple-harmonic-oscillator">
+									<caption>The graph of <m>y(t) \approx \frac{\sqrt{17}}{6}
+										\sin\!\left(8t - 1.3258\right)</m></caption>
+									<image width="70%">
+										<latex-image>
+											\begin{tikzpicture}[scale=.8]
+											\begin{axis}[
+											width=10cm,
+											height=7cm,
+											axis lines=middle,
+											xlabel={$t$},
+											ylabel={$y(t)$},
+											ylabel style={at={(axis description cs:0, -0.02)},
+											anchor =north},
+											samples=300,
+											domain=0:1,
+											xtick={0,0.1,0.2,...,1.0},
+											ytick={-1,-0.5,0,0.5,1},
+											smooth,
+											thick,
+											y dir=reverse,
+											grid=both,
+											minor tick num=1,
+											]
+											\addplot[blue, thick] {sqrt(17)/6 * sin(deg(8*x -
+											1.3258))};
+											\addplot[black, thick, dashed] {sqrt(17)/6 *
+											sin(deg(8*x))};
+											\node[anchor=west, blue] at (axis cs:0.37,.5)
+											{$y(t)=\dfrac{\sqrt{17}}{6}\sin(8t - \varphi)$};
+											\node[anchor=west, black] at (axis cs:0.15,-0.3)
+											{$y(t)=\dfrac{\sqrt{17}}{6}\sin(8t)$};
+											\end{axis}
+											\end{tikzpicture}
+										</latex-image>
+									</image>
+								</figure>
+							</li>
+
+							<li>
+								<p> We find <me>
+										y'(t) = 8\frac{\sqrt{17}}{6} \cos\!\left(8t -
+									\varphi\right).
+									</me>
+									Then <me>
+										\left(\frac{y(t)}{\frac{\sqrt{17}}{6}
+									}\right)^2+\left(\frac{y'(t)}{\frac{8\sqrt{17}}{6}}\right)^2 = 1
+									</me>
+									for all <m>t</m>. This takes the form <me>
+										272 (y(t))^2 + 17(y'(t))^2= 272
+									</me>
+									for all <m>t</m> and is an ellipse in the <m>y'y</m>-plane as
+									shown in <xref ref="fig-phase-space-orbit" />. The graph is
+									called the orbit of the simple harmonic oscillator and
+									visualizes the oscillatory motion. </p>
+
+								<figure xml:id="fig-phase-space-orbit">
+									<caption>The graph of <m>y(t) \approx \frac{\sqrt{17}}{6}
+										\sin\!\left(8t - 1.3258\right)</m></caption>
+									<image width="70%">
+										<latex-image>
+											\begin{tikzpicture}[scale=.8]
+											\begin{axis}[
+											width=12cm,
+											height=8cm,
+											axis lines=middle,
+											xlabel={$y'(t)$},
+											ylabel style={rotate=-90},
+											%ylabel={$y(t)$},
+											%ylabel style={at={(axis description cs:.0, 1)}, anchor
+											=north},
+											grid=none,
+											minor tick num=1,
+											samples=400,
+											domain=0:2*pi,
+											axis equal image, % keeps scaling equal after manual
+											adjustment
+											thick,
+											y dir=reverse, % make y(t) axis point downward
+											x dir=normal,
+											xscale=1,
+											yscale=3,
+											xmin=-6.5, xmax=6.5, % explicit limits prevent huge
+											dimensions
+											ymin=-1.1, ymax=1.1, % scale horizontal axis by 1/8
+											(since y' = 8A cos)
+											]
+											% Parameters: A = sqrt(17)/6, omega = 8, phi = 1.3258
+											\addplot[
+											blue,
+											thick,
+											smooth,
+											postaction={decorate, decoration={markings,
+											mark=between positions 0.05 and 0.95 step 0.1 with
+											{\arrow{stealth};}
+											}}
+											] (
+											{8*sqrt(17)/6 * cos(deg(8*x - 1.3258))}, % x = y'(t)
+											{sqrt(17)/6 * sin(deg(8*x - 1.3258))} % y = y(t)
+											);
+											% Initial point (inside axis limits)
+											\addplot[only marks, mark=*, mark options={fill=red,
+											scale=.7}] coordinates {(4/3,-2/3)};
+											\node[above right, red] at (axis cs:.1,-0.7)
+											{$(y'(0),y(0)) = (4/3, -2/3)$};
+											% Key points (placed within axis limits)
+											\addplot[only marks, mark=o, mark options={fill=black,
+											scale=.7}] coordinates {(0,2/3) (0,-2/3) (16/3+.19,0)
+											(-16/3-.19,0)};
+											\node[right] at (axis cs: 0, 1) {{$y(t)$}};
+											\end{axis}
+											\end{tikzpicture}
+										</latex-image>
+									</image>
+								</figure>
+							</li>
+						</ol>
+					</p>
+				</solution>
+			</example>
+		</paragraphs>
+	</subsection>
+
+
+	<subsection xml:id="subsec-RLC-circuit">
+		<title>Electrical Circuits</title>
+
+		<p>
+			An RLC circuit is another common physical application of second-order linear
+			differential equations.
+		</p>
+	</subsection>
 </section>
