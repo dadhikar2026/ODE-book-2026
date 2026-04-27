@@ -11,7 +11,7 @@
       and obtain the solution of the initial value problem. For these steps, we will need the
       Laplace transform of derivatives. </p>
 
-    <definition xml:id="def-exponential-order-function" alt="exponential order function">
+    <definition xml:id="def-exponential-order-function">
       <statement>
         <p> A function <m>y(t)</m> defined on <m>[0,\infty)</m> is said to be of an exponential
           order as <m>t\to\infty</m> if there exists constants <m>\alpha</m>, <m>M\gt 0</m> and <m>t_0\ge
@@ -67,7 +67,7 @@
       whose proof is omitted.
     </p>
 
-    <theorem xml:id="thm-5-2-1" alt="Laplace transform of derivatives">
+    <theorem xml:id="thm-5-2-1">
       <title>(Laplace transform of derivatives)</title>
 
       <p> Let <m>n\ge 1</m> be a positive integer. If <m>y, y', \ldots, y^{(n-1)}</m> are continuous
@@ -95,11 +95,12 @@
       the initial value problem in <xref ref="eq-5-2-3" /> gives rise to the following algebraic
       equation in the <m>s-</m>domain:
       <men xml:id="eq-5-2-4">
-        <mrow>&amp;a_n\big(s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0)\big)</mrow>
-        <mrow>&amp;+a_{n-1}\big(s^{n-1} Y(s) - s^{n-2}y(0) - s^{n-3}y'(0) - \cdots -
-      y^{(n-2)}(0)\big)</mrow>
-        <mrow>&amp;\vdots</mrow>
-        <mrow>&amp;+a_1\big(sY(s)- y(0)\big) + a_0Y(s)= F(s),</mrow>
+        \begin{split}&amp;a_n\big(s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0)\big)\\
+        &amp;+a_{n-1}\big(s^{n-1} Y(s) - s^{n-2}y(0) - s^{n-3}y'(0) - \cdots -
+      y^{(n-2)}(0)\big)\\
+        &amp;\vdots\\
+       &amp;+a_1\big(sY(s)- y(0)\big) + a_0Y(s)= F(s),
+        \end{split}
       </men> which takes the
       form <men xml:id="eq-5-2-5">
         p(s)Y(s)= q(s) +F(s),
@@ -246,7 +247,7 @@
         </me>
       </p>
       </statement>
-     
+
 
       <solution>
         <p> Applying the Laplace transform to both sides of the equation, we have <me>
@@ -274,8 +275,7 @@
         </p>
       </solution>
     </example>
-  </subsection>
-  <statement>
+
     <p>
       The general principle for solving initial value problems by the Laplace transform method
       remains the same as demonstrated in the previous examples.
@@ -284,7 +284,10 @@
       In the followings sections, we continue exploring additional methods for computing Laplace
       transforms and solve initial value problems that involve more complicated functions.
     </p>
-  </statement>
+  </subsection>
+
+
+
 
 
   <exercises xml:id="exercises-5-2">
