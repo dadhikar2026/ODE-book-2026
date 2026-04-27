@@ -79,8 +79,8 @@
     </proof>
 
     <p> Methods for constructing a fundamental set of solutions for <xref ref="eq-homogeneous2" />
-      vary. When we have means to find a single nonzero solution, the reduction of order (see <xref
-        ref="case-iii-b2-4ac0-repeated-root" /> ) can be employed to obtain additional linearly
+      vary. When we have means to find a single nonzero solution, the reduction of order discussion in <xref
+        ref="sec-3-2" />  can be employed to obtain additional linearly
       independent solutions. This method applies not only to second order homogeneous linear
       equations but also extends to higher order equations, as discussed in the next theorem. </p>
 

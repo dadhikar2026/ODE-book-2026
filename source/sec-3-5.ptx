@@ -220,11 +220,11 @@
 			from the previous sections. For example, the method of undetermined coefficients or
 			variation of parameters can be used. </p>
 
-		<p> We now examine several interesting and special cases of <xref ref="eq:mass-spring5" />
+		<p> We now examine several interesting and special cases of <xref ref="eq-mass-spring5" />
 			before discussing the general form. </p>
 
 
-		<paragraphs xml:id="free-undamped-motion-b0ft-0">
+		<paragraphs xml:id="free-undamped-motion">
 			<title>I. Free Undamped Motion (<m>b=0,\;F(t) =0</m>)</title>
 
 			<p> When <m>b= 0</m> (no damping) and <m>F(t) = 0</m> (no external forces), the
@@ -362,6 +362,7 @@
 								<p> Its graph is shown in <xref
 										ref="graph-simple-harmonic-oscillator" />. </p>
 
+								<p>
 								<figure xml:id="graph-simple-harmonic-oscillator">
 									<caption>The graph of <m>y(t) \approx \frac{\sqrt{17}}{6}
 										\sin\!\left(8t - 1.3258\right)</m></caption>
@@ -399,6 +400,7 @@
 										</latex-image>
 									</image>
 								</figure>
+							</p>
 							</li>
 
 							<li>
@@ -471,7 +473,7 @@
 											\addplot[only marks, mark=o, mark options={fill=black,
 											scale=.7}] coordinates {(0,2/3) (0,-2/3) (16/3+.19,0)
 											(-16/3-.19,0)};
-											\node[right] at (axis cs: 0, 1) {{$y(t)$}};
+										\node[right] at (axis cs: 0, 1) {{$y(t)$}};
 											\end{axis}
 											\end{tikzpicture}
 										</latex-image>

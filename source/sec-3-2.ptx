@@ -424,8 +424,8 @@
     </paragraphs>
 
 
-    <paragraphs xml:id="case-iii-b2-4ac0-repeated-root">
-      <title>Case III. <m>b^2-4ac=0</m> (Repeated Root)</title>
+    <paragraphs xml:id="case-repeated-root">
+      <title >Case III. <m>b^2-4ac=0</m> (Repeated Root)</title>
 
       <p> In this case, the auxiliary equation <xref ref="eq-auxiliary-equation" /> has a repeated
         real root <me>
