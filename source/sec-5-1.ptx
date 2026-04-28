@@ -746,8 +746,8 @@
   <subsection xml:id="subsec-5-1-5">
     <title>Inverse Laplace transform</title>
 
-    <p> As mentioned at the end of Section <xref ref="sec-5-1" />, the forced oscillator (<xref
-        ref="eq-5-1" />) cannot be solved using the methods from previous chapters when <m>f</m> is
+    <p> As mentioned at the end of Section <xref ref="sec-5-1" />, the forced oscillator <xref
+        ref="eq-5-1" /> cannot be solved using the methods from previous chapters when <m>f</m> is
       a Dirac delta function. Even if <m>f</m> is only piecewise continuous, the earlier methods can
       become quite tedious to apply. The Laplace transform method provides a more efficient
       approach, and this method involves taking the Laplace transform of a linear differential

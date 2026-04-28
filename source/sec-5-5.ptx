@@ -61,10 +61,13 @@
         <theorem xml:id="thm-convolution">
             <statement>
                 <p> Let <m>f</m> and <m>g</m> be piecewise continuous functions on <m>[0,\infty)</m>
-                    and of the exponential order <m>\alpha</m> as <m>t\to\infty</m>. Then <me>\mathcal {L}\{(f\ast
-                    g)(t)\}= F(s) \,G(s);</me> or equivalently, <me>\mathcal {L}^{-1}\left\{ F(s)
-                    G(s)\right\} =\mathcal {L}^{-1}\{F(s)\}\ast \mathcal {L}^{-1}\{G(s)\} = (f\ast
-                    g)(t)</me> for <m>
+                    and of the exponential order <m>\alpha</m> as <m>t\to\infty</m>. Then <me>\mathcal
+                    {L}\{(f\ast
+                        g)(t)\}= F(s) \,G(s);</me> or equivalently, <me>\mathcal {L}^{-1}\left\{
+                    F(s)
+                        G(s)\right\} =\mathcal {L}^{-1}\{F(s)\}\ast \mathcal {L}^{-1}\{G(s)\} =
+                    (f\ast
+                        g)(t)</me> for <m>
                         s&gt;\alpha.</m>
                 </p>
             </statement>
@@ -136,15 +139,14 @@
                     ref="IVP-delta1" />. Applying the Laplace transform <m>
 
 
-
-                        athcal{L}</m> to the initial
-                value problem <xref ref="IVP-delta1" /> and using <m>y(0)= y'(0)=0</m> yields <me>(as^2+bs
-                +c)Y_\delta(s)= 1,</me>that is, <me>Y_\delta(s)= \frac{1}{as^2+bs +c}.</me> Then, by
-                taking the inverse Laplace transform, we have <me>y_\delta(t)
+                    athcal{L}</m> to the initial value problem <xref ref="IVP-delta1" /> and using <m>y(0)=
+                y'(0)=0</m> yields <me>(as^2+bs
+                    +c)Y_\delta(s)= 1,</me>that is, <me>Y_\delta(s)= \frac{1}{as^2+bs +c}.</me>
+                Then, by taking the inverse Laplace transform, we have <me>y_\delta(t)
                     = \mathcal{L}^{-1}\left\{\frac{1}{as^2 + bs + c}\right\}.</me> Next, we take the
                 Laplace transform of both sides of the equation in <xref ref="IVP-delta2" /> to get <me>Y(s)
                 = \frac{G(s)}{as^2 + bs + c} = G(s) Y_\delta(s).</me> Finally, by applying the
-                convolution theorem (<xref ref="thm-convolution" />), we conclude that <me>y(t) =
+                convolution theorem <xref ref="thm-convolution" />, we conclude that <me>y(t) =
                 (y_\delta \ast g)(t)</me> solves the initial value problem <xref ref="IVP-delta2" />
                 . </p>
         </proof>
@@ -165,9 +167,10 @@
     <exercises xml:id="exercises-convolution-theorem">
         <exercise xml:id="exercise-5-5-1">
             <p> For the functions <m>f</m> and <m>g</m> on <m>[0, \infty)</m> given below, compute <m>f\ast
-                g</m>, <m>\mathcal{L}\{(f\ast g)(t) \}</m> and verify that <m>\mathcal{L}\{(f\ast g)(t) \}
-                =\mathcal{L}\{f(t)\}\, \mathcal{L}\{g(t)\}.</m> In the following, <m>k</m> and <m>\omega</m> are any
-                real numbers. </p>
+                g</m>, <m>\mathcal{L}\{(f\ast g)(t) \}</m> and verify that <m>\mathcal{L}\{(f\ast
+                g)(t) \}
+                    =\mathcal{L}\{f(t)\}\, \mathcal{L}\{g(t)\}.</m> In the following, <m>k</m> and <m>
+                \omega</m> are any real numbers. </p>
             <ol marker="i.">
                 <li xml:id="exercise-5-5-1-i">
                     <p>
@@ -233,7 +236,7 @@
         </exercise>
 
         <exercise xml:id="exercise-5-5-3">
-            <p> Use the convolution theorem (<xref ref="thm-convolution" />) to find the Laplace
+            <p> Use the convolution theorem <xref ref="thm-convolution" /> to find the Laplace
                 transform of each of the following functions. </p>
             <ol marker="i." cols="2">
                 <li xml:id="exercise-5-5-3-i">
@@ -291,7 +294,7 @@
         </exercise>
 
         <exercise xml:id="exercise-5-5-4">
-            <p> Use the convolution theorem (<xref ref="thm-convolution" />) to find each of the
+            <p> Use the convolution theorem <xref ref="thm-convolution" /> to find each of the
                 following inverse Laplace transforms. </p>
             <ol marker="i." cols="2">
                 <li xml:id="exercise-5-5-4-i">
@@ -404,8 +407,8 @@
         <exercise xml:id="exercise-5-5-8">
             <p> Let <m>f, g</m> be functions with continuous derivatives on the interval <m>[0,
                 \infty)</m> and of exponential order as <m>t\to\infty</m>. Assume further that all
-                the convolutions below are well-defined. Use the convolution theorem (<xref
-                    ref="thm-convolution" />) to prove the following properties. </p>
+                the convolutions below are well-defined. Use the convolution theorem <xref
+                    ref="thm-convolution" /> to prove the following properties. </p>
             <ol marker="i.">
                 <li>
                     <p>
@@ -508,31 +511,30 @@
 
             </ol>
         </exercise>
-    <exercise xml:id="exercise-5-5-11">
-        <p> A 32 lb mass stretches a vertically hanging spring 4 feet to equilibrium. The mass
-            is then pulled down 1 foot and released from rest. Assume no damping or external
-            forces. Let <m>y(t)</m> denote the displacement of the mass from equilibrium at time <m>
-            t,</m> measured positive in the downward direction. (Use <m>g= 32
-            \;\text{ft}/\text{s}^2</m>.) </p>
-        <ol marker ="i.">
-            <li xml:id="exercise-5-5-11-i">
-                <p> Set up an initial value problem for <m>y(t).</m>
-                </p>
-            </li>
-            <li xml:id="exercise-5-5-11-ii">
-                <p>
-                    Determine a Dirac delta function that models the impulsive force on the mass
-                    exerted by striking it with a hammer to stop it at the first time it passes
-                    through equilibrium, keeping it at the equilibrium position thereafter.
-                </p>
-            </li>
-            <li xml:id="exercise-5-5-11-iii">
-                <p>
-                    Repeat <xref ref="exercise-5-5-11-ii" /> to stop the mass at the second time it passes through equilibrium.
-                </p>
-            </li>
-        </ol>
+        <exercise xml:id="exercise-5-5-11">
+            <p> A 32 lb mass stretches a vertically hanging spring 4 feet to equilibrium. The mass
+                is then pulled down 1 foot and released from rest. Assume no damping or external
+                forces. Let <m>y(t)</m> denote the displacement of the mass from equilibrium at time <m>
+                t,</m> measured positive in the downward direction. (Use <m>g= 32
+                \;\text{ft}/\text{s}^2</m>.) </p>
+            <ol marker="i.">
+                <li xml:id="exercise-5-5-11-i">
+                    <p> Set up an initial value problem for <m>y(t).</m>
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-11-ii">
+                    <p>
+                        Determine a Dirac delta function that models the impulsive force on the mass
+                        exerted by striking it with a hammer to stop it at the first time it passes
+                        through equilibrium, keeping it at the equilibrium position thereafter.
+                    </p>
+                </li>
+                <li xml:id="exercise-5-5-11-iii">
+                    <p> Repeat <xref ref="exercise-5-5-11-ii" /> to stop the mass at the second time
+                        it passes through equilibrium. </p>
+                </li>
+            </ol>
 
-    </exercise>
+        </exercise>
     </exercises>
 </section>

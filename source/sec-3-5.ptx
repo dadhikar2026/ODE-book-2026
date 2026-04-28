@@ -171,7 +171,7 @@
 			number <m>p</m> in <m>(1, \infty)</m> and <m>k&gt;0</m> a fixed real number. </fn> This
 			means that <men xml:id="eq-mass-spring2">
 				F_{\text{s}}(t) = - k\,(s+y(t)),
-			</men> where <m>k</m> is a fixed positive
+			</men> where <m>k</m> is a fixed positive 
 			constant, called the spring constant which measures the stiffness of the spring. The
 			negative <m>(-)</m> means that the restoring force is directed toward the origin. </p>
 
@@ -803,7 +803,7 @@
 			  </figure>
 		  </p>
 		</paragraphs>
-		
+
 	</subsection>
 
 

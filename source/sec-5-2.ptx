@@ -75,7 +75,7 @@
         is piecewise continuous on <m>[0, \infty)</m> and of exponential order as <m>t\to\infty,</m>
         then <me>
           \mathcal {L}\{y^{(n)}(t)\} = s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots -
-        y^{(n-1)}(0),
+          y^{(n-1)}(0),
         </me>
         where <m>Y(s) = \mathcal {L}\{y(t)\}</m>. </p>
     </theorem>
@@ -93,26 +93,26 @@
       </men>
       Applying <xref ref="thm-5-2-1" /> in conjunction with the linearity of <m>\mathcal {L}</m>,
       the initial value problem in <xref ref="eq-5-2-3" /> gives rise to the following algebraic
-      equation in the <m>s-</m>domain:
-      <men xml:id="eq-5-2-4">
-        \begin{split}&amp;a_n\big(s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0)\big)\\
+      equation in the <m>s-</m>domain: <men xml:id="eq-5-2-4">
+        \begin{split}&amp;a_n\big(s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots -
+      y^{(n-1)}(0)\big)\\
         &amp;+a_{n-1}\big(s^{n-1} Y(s) - s^{n-2}y(0) - s^{n-3}y'(0) - \cdots -
-      y^{(n-2)}(0)\big)\\
+        y^{(n-2)}(0)\big)\\
         &amp;\vdots\\
-       &amp;+a_1\big(sY(s)- y(0)\big) + a_0Y(s)= F(s),
+        &amp;+a_1\big(sY(s)- y(0)\big) + a_0Y(s)= F(s),
         \end{split}
-      </men> which takes the
-      form <men xml:id="eq-5-2-5">
+      </men>
+      which takes the form <men xml:id="eq-5-2-5">
         p(s)Y(s)= q(s) +F(s),
       </men> where <m>p(s) = a_ns^n+a_{n-1}s^{n-1} + \cdots+
       a_1s+a_0</m> and <m>q(s)</m> is a polynomial in <m>s</m> obtained from all the remaining terms
       on the left side of the equation <xref ref="eq-5-2-5" />. It then follows that <men
         xml:id="eq-5-2-6">
         Y(s)= \frac{q(s)}{p(s)} +\frac{F(s)}{p(s)}.
-      </men> The solution <m>y(t)</m> to the
-      initial value problem (<xref ref="eq-5-2-3" />) is given by <men xml:id="eq-5-2-7">
+      </men> The solution <m>y(t)</m> to
+      the initial value problem <xref ref="eq-5-2-3" /> is given by <men xml:id="eq-5-2-7">
         y(t) = \mathcal {L}^{-1}\{Y(s)\} =\mathcal {L}^{-1}\left\{\frac{q(s)}{p(s)}\right\}
-      +\mathcal {L}^{-1}\left\{\frac{F(s)}{p(s)}\right\}.
+        +\mathcal {L}^{-1}\left\{\frac{F(s)}{p(s)}\right\}.
       </men>
       To find <md>
         \mathcal {L}^{-1}\left\{\frac{q(s)}{p(s)}\right\} \quad\text{and}\quad\mathcal
@@ -137,7 +137,7 @@
 
     <example xml:id="ex-5-2-1">
       <statement>
-          <p> Solve the initial value problem using the Laplace transform: <md>
+        <p> Solve the initial value problem using the Laplace transform: <md>
             y'-y= 2\cos(3t), \quad y(0) = 1.
           </md>
         </p>
@@ -146,16 +146,17 @@
 
       <answer>
         <p>
-          <m>y(t)=\frac{6}{5}e^t-\frac{1}{5}\cos(3t)+\frac{3}{5}\sin(3t)</m> on <m>(-\infty, \infty).</m>
-      </p>
+          <m>y(t)=\frac{6}{5}e^t-\frac{1}{5}\cos(3t)+\frac{3}{5}\sin(3t)</m> on <m>(-\infty,
+          \infty).</m>
+        </p>
       </answer>
 
       <solution>
         <p> Applying the Laplace transform to both sides of the equation, we have <md>
           \begin{aligned} \mathcal {L}\{y'\} - \mathcal {L}\{y\} &amp;= 2\mathcal {L}\{\cos(3t)\} \\
           (sY(s) - y(0)) - Y(s) &amp;= 2\cdot \frac{s}{s^2 + 9} \\ (s-1)Y(s) &amp;= 1 +
-          \frac{2s}{s^2 + 9} \\ Y(s) &amp;= \frac{1}{s-1} + \frac{2s}{(s-1)(s^2 + 9)}.
-            \end{aligned}
+            \frac{2s}{s^2 + 9} \\ Y(s) &amp;= \frac{1}{s-1} + \frac{2s}{(s-1)(s^2 + 9)}.
+          \end{aligned}
           </md>
           To find the inverse Laplace transform of <m>{2s}/{((s-1)(s^2 + 9))}</m>, we use partial
           fraction decomposition to write <md>
@@ -163,7 +164,7 @@
           </md>
           Solving for <m>A, B, C</m>, we have <m>A = 1/5, B = -1/5, C = 9/5.</m> Thus, <md>
           \begin{aligned} Y(s) &amp;= \frac{1}{s-1} + \frac{1/5}{s-1} + \frac{-1/5 s + 9 /5}{s^2 +
-          9} \\ &amp;= \frac{6/5}{s-1} + \frac{-1/5 s + 9/5}{s^2 + 9}.
+            9} \\ &amp;= \frac{6/5}{s-1} + \frac{-1/5 s + 9/5}{s^2 + 9}.
             \end{aligned}
           </md>
           Applying the inverse Laplace transform term by term, we have <md>
@@ -179,9 +180,9 @@
     <example xml:id="ex-5-2-2">
       <statement>
         <p> Solve the initial value problem using the Laplace transform: <me>
-          y''-5y'+4y= t, \quad y(0) = 1, y'(0) = 0.
-        </me>
-      </p>
+            y''-5y'+4y= t, \quad y(0) = 1, y'(0) = 0.
+          </me>
+        </p>
       </statement>
 
 
@@ -191,61 +192,56 @@
       </answer>
 
       <solution>
-<p>
-        Applying the Laplace transform to both sides of the equation, we have <me>
-        \begin{aligned}&amp;\mathcal {L}\{y''\} - 5\mathcal {L}\{y'\} + 4\mathcal {L}\{y\} =
-        \mathcal {L}\{t\} \\ &amp;(s^2 Y(s) - sy(0)-y'(0)) - 5(sY(s) - y(0)) + 4Y(s) = \frac{1}{s^2}
-        \\ &amp;(s^2 - 5s + 4)Y(s) = \frac{1}{s^2} + s - 5 \\ &amp;Y(s) = \frac{1}{s^2(s-1)(s-4)} +
-        \frac{s-5}{(s-1)(s-4)}=\frac{s^3-5s^2+1}{s^2(s-1)(s-4)}.
-          \end{aligned}
-        </me>
-      </p>
-      <p>
-        Decompose into partial fractions:
-
-      <me>
-          \frac{s^3-5s^2+1}{s^2(s-1)(s-4)} =\frac{A}{s}+\frac{B}{s^2}+\frac{C}{s-1}+\frac{D}{s-4}.
-        </me>
-    </p>
-      <p>
-        Solving for the constants gives
-      <me>
-          A=\frac{5}{16},\qquad B=\frac{1}{4},\qquad C=1,\qquad D=-\frac{5}{16}.
-        </me>
-    </p>
-      <p>
-        Hence <me>
+        <p> Applying the Laplace transform to both sides of the equation, we have <me>
+          \begin{aligned}&amp;\mathcal {L}\{y''\} - 5\mathcal {L}\{y'\} + 4\mathcal {L}\{y\} =
+          \mathcal {L}\{t\} \\ &amp;(s^2 Y(s) - sy(0)-y'(0)) - 5(sY(s) - y(0)) + 4Y(s) =
+          \frac{1}{s^2}
+            \\ &amp;(s^2 - 5s + 4)Y(s) = \frac{1}{s^2} + s - 5 \\ &amp;Y(s) =
+          \frac{1}{s^2(s-1)(s-4)} +
+            \frac{s-5}{(s-1)(s-4)}=\frac{s^3-5s^2+1}{s^2(s-1)(s-4)}.
+            \end{aligned}
+          </me>
+        </p>
+        <p> Decompose into partial fractions: <me>
+            \frac{s^3-5s^2+1}{s^2(s-1)(s-4)} =\frac{A}{s}+\frac{B}{s^2}+\frac{C}{s-1}+\frac{D}{s-4}.
+          </me>
+        </p>
+        <p> Solving for the constants gives <me>
+            A=\frac{5}{16},\qquad B=\frac{1}{4},\qquad C=1,\qquad D=-\frac{5}{16}.
+          </me>
+        </p>
+        <p> Hence <me>
             Y(s)=\frac{5}{16s}+\frac{1}{4s^2}+\frac{1}{s-1}-\frac{5}{16(s-4)}.
           </me>
         </p>
-      <p>
-        Now apply the inverse Laplace transform:
+        <p>
+          Now apply the inverse Laplace transform:
         </p>
 
-      <p> Therefore, <md>
-        \begin{aligned} y(t)\amp =\mathcal {L}^{-1}\left\{\frac{5}{16s}\right\}+ \mathcal
-        {L}^{-1}\left\{\frac{1}{4s^2}\right\}\\ \amp +\mathcal {L}^{-1}\left\{\frac{1}{s-1}\right\}
-        -\mathcal {L}^{-1}\left\{\frac{5}{16(s-4)}\right\}\\ \amp
-        =\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t}.
+        <p> Therefore, <md>
+            \begin{aligned} y(t)\amp =\mathcal {L}^{-1}\left\{\frac{5}{16s}\right\}+ \mathcal
+          {L}^{-1}\left\{\frac{1}{4s^2}\right\}\\ \amp +\mathcal
+          {L}^{-1}\left\{\frac{1}{s-1}\right\}
+            -\mathcal {L}^{-1}\left\{\frac{5}{16(s-4)}\right\}\\ \amp
+          =\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t}.
             \end{aligned}
           </md>
-        We can show that <md>
+          We can show that <md>
             y(t)=\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t} \quad \text{ on } (-\infty,
-        \infty)
+            \infty)
           </md>
-        is the solution of the initial value problem on by verifying that it satisfies the
-        differential equation and the initial conditions. </p>
+          is the solution of the initial value problem on by verifying that it satisfies the
+          differential equation and the initial conditions. </p>
       </solution>
     </example>
 
     <example xml:id="ex-5-2-3">
       <title>Move this to a later section</title>
       <statement>
-        <p>
-          Solve the initial value problem using the Laplace transform: <me>
-          y'' + 4y' + 5y = e^{-t}, \quad y(0) = 0, \; y'(0) = 2.
-        </me>
-      </p>
+        <p> Solve the initial value problem using the Laplace transform: <me>
+            y'' + 4y' + 5y = e^{-t}, \quad y(0) = 0, \; y'(0) = 2.
+          </me>
+        </p>
       </statement>
 
 
@@ -285,9 +281,6 @@
       transforms and solve initial value problems that involve more complicated functions.
     </p>
   </subsection>
-
-
-
 
 
   <exercises xml:id="exercises-5-2">
@@ -382,7 +375,7 @@
         <ol marker="i.">
           <li>
             <m>y'+4y = f(t), \quad y(0) = 0,</m> where <m>f(t) =\begin{cases} 1 &amp;\text{ if }
-            0\le t &lt;1\\ -1&amp;\text{ if } t \ge 1 \end{cases}</m>
+              0\le t &lt;1\\ -1&amp;\text{ if } t \ge 1 \end{cases}</m>
           </li>
 
           <li>
