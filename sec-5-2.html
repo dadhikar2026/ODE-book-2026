@@ -286,9 +286,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-5-2"><h2 class="heading hide-type">
+<main class="ptx-main" style="background-image:url('data:image/svg+xml;charset=utf-8,&lt;svg version=&quot;1.1&quot; height=&quot;600&quot; width=&quot;600&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;text x=&quot;50%&quot; y=&quot;50%&quot; text-anchor=&quot;middle&quot; transform=&quot;rotate(-45,300,300)&quot; fill=&quot;rgb(204,204,204)&quot; style=&quot;font-family:sans-serif; font-size:2.5cm;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;DRAFT&lt;/text&gt;&lt;/svg&gt;');background-position:center top;background-repeat:repeat-y;"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-5-2"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applications to Initial Value Problems</span>
 </h2>
+<p class="watermark">Watermark text: DRAFT</p>
 <section class="introduction" id="sec-5-2-2"><div class="para" id="sec-5-2-2-1">As point out earlier in <a href="sec-5-1.html" class="internal" title="Section 5.1: The Laplace Transform">Section 5.1</a>, we will need to convert a linear initial value problem into an algebraic equation using the Laplace transform. After solving the equation in the <span class="process-math">\(s-\)</span>domain for the Laplace transform of the solution function, we then apply the inverse Laplace transform operator <span class="process-math">\(\mathcal {L}^{-1}\)</span> to return to the <span class="process-math">\(t-\)</span>domain and obtain the solution of the initial value problem. For these steps, we will need the Laplace transform of derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-exponential-order-function"><h3 class="heading">
@@ -390,7 +391,8 @@ y_0, \dots, y^{(n-1)}(0)= y_{n-1}.
 <div class="para">Applying <a href="sec-5-2.html#thm-5-2-1" class="internal" title="Theorem 5.2.2: (Laplace transform of derivatives)">Theorem 5.2.2</a> in conjunction with the linearity of <span class="process-math">\(\mathcal {L}\text{,}\)</span> the initial value problem in <a href="sec-5-2.html#eq-5-2-3" class="internal" title="Equation 5.2.3">(5.2.3)</a> gives rise to the following algebraic equation in the <span class="process-math">\(s-\)</span>domain:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/sec-7-2.html" id="eq-5-2-4">
 \begin{equation}
-\begin{split}&amp;a_n\big(s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - y^{(n-1)}(0)\big)\\
+\begin{split}&amp;a_n\big(s^n Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots -
+y^{(n-1)}(0)\big)\\
 &amp;+a_{n-1}\big(s^{n-1} Y(s) - s^{n-2}y(0) - s^{n-3}y'(0) - \cdots -
 y^{(n-2)}(0)\big)\\
 &amp;\vdots\\
@@ -411,7 +413,7 @@ a_1s+a_0\)</span> and <span class="process-math">\(q(s)\)</span> is a polynomial
 Y(s)= \frac{q(s)}{p(s)} +\frac{F(s)}{p(s)}.\tag{5.2.6}
 \end{equation}
 </div>
-<div class="para">The solution <span class="process-math">\(y(t)\)</span> to the initial value problem (<a href="sec-5-2.html#eq-5-2-3" class="internal" title="Equation 5.2.3">(5.2.3)</a>) is given by</div>
+<div class="para">The solution <span class="process-math">\(y(t)\)</span> to the initial value problem <a href="sec-5-2.html#eq-5-2-3" class="internal" title="Equation 5.2.3">(5.2.3)</a> is given by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-5-2-1.html ./knowl/xref/thm-5-2-1.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/eq-5-2-5.html ./knowl/xref/eq-5-2-3.html ./knowl/xref/sec-7-2.html" id="eq-5-2-7">
 \begin{equation}
 y(t) = \mathcal {L}^{-1}\{Y(s)\} =\mathcal {L}^{-1}\left\{\frac{q(s)}{p(s)}\right\}
@@ -446,7 +448,8 @@ y'-y= 2\cos(3t), \quad y(0) = 1.
 <div class="solutions">
 <details id="ex-5-2-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
 <div class="para" id="ex-5-2-1-2-1">
-<span class="process-math">\(y(t)=\frac{6}{5}e^t-\frac{1}{5}\cos(3t)+\frac{3}{5}\sin(3t)\)</span> on <span class="process-math">\((-\infty, \infty).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(y(t)=\frac{6}{5}e^t-\frac{1}{5}\cos(3t)+\frac{3}{5}\sin(3t)\)</span> on <span class="process-math">\((-\infty,
+\infty).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-5-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Answer 5.2.3.1"><a href="#ex-5-2-1-2" title="Copy heading and permalink for Answer 5.2.3.1" aria-label="Copy heading and permalink for Answer 5.2.3.1">🔗</a></div>
 </div></details><details id="ex-5-2-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
@@ -511,8 +514,10 @@ y''-5y'+4y= t, \quad y(0) = 1, y'(0) = 0.
 <div class="displaymath process-math" id="ex-5-2-2-3-1-1">
 \begin{equation*}
 \begin{aligned}&amp;\mathcal {L}\{y''\} - 5\mathcal {L}\{y'\} + 4\mathcal {L}\{y\} =
-\mathcal {L}\{t\} \\ &amp;(s^2 Y(s) - sy(0)-y'(0)) - 5(sY(s) - y(0)) + 4Y(s) = \frac{1}{s^2}
-\\ &amp;(s^2 - 5s + 4)Y(s) = \frac{1}{s^2} + s - 5 \\ &amp;Y(s) = \frac{1}{s^2(s-1)(s-4)} +
+\mathcal {L}\{t\} \\ &amp;(s^2 Y(s) - sy(0)-y'(0)) - 5(sY(s) - y(0)) + 4Y(s) =
+\frac{1}{s^2}
+\\ &amp;(s^2 - 5s + 4)Y(s) = \frac{1}{s^2} + s - 5 \\ &amp;Y(s) =
+\frac{1}{s^2(s-1)(s-4)} +
 \frac{s-5}{(s-1)(s-4)}=\frac{s^3-5s^2+1}{s^2(s-1)(s-4)}.
 \end{aligned}
 \end{equation*}
@@ -553,7 +558,8 @@ Y(s)=\frac{5}{16s}+\frac{1}{4s^2}+\frac{1}{s-1}-\frac{5}{16(s-4)}.
 <div class="displaymath process-math" id="ex-5-2-2-3-6-1">
 \begin{equation*}
 \begin{aligned} y(t)\amp =\mathcal {L}^{-1}\left\{\frac{5}{16s}\right\}+ \mathcal
-{L}^{-1}\left\{\frac{1}{4s^2}\right\}\\ \amp +\mathcal {L}^{-1}\left\{\frac{1}{s-1}\right\}
+{L}^{-1}\left\{\frac{1}{4s^2}\right\}\\ \amp +\mathcal
+{L}^{-1}\left\{\frac{1}{s-1}\right\}
 -\mathcal {L}^{-1}\left\{\frac{5}{16(s-4)}\right\}\\ \amp
 =\frac{5}{16}+\frac{1}{4}t+e^t-\frac{5}{16}e^{4t}.
 \end{aligned}
