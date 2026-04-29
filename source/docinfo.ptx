@@ -36,7 +36,7 @@
   <!-- for those in the next element. -->
   <latex-image-preamble>
     \usepackage[american]{circuitikz}
-       \usepackage{tikz,pgfplots}
+    \usepackage{tikz,pgfplots}
      \usetikzlibrary{positioning,matrix,arrows}
      \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
      \usetikzlibrary{decorations.markings}
@@ -44,7 +44,7 @@
     </latex-image-preamble>
 
 <!-- <latex-preamble>
-    \usepackage{mathrsfs}
+    \usepackage{draftwatermark}
   </latex-preamble> -->
 
 
@@ -61,7 +61,7 @@
     <graph stroke="green"/>
     <point style="diamond" size="5" fill="blue" outline="yes"/>
   </prefigure-preamble>
-  
+
 </docinfo>
 
 

@@ -31,7 +31,7 @@
       <!--<fillin textstyle="underline" mathstyle="shade" />-->
 
     <!-- You can set a watermark: -->
-      <!-- <watermark scale="0.5">DRAFT</watermark> -->
+      <watermark scale="0.5">DRAFT</watermark>
 
     <!-- Mermaid diagram themes -->
       <!-- <mermaid theme="default" /> -->

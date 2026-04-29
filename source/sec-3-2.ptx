@@ -293,7 +293,7 @@
         y''+\frac{b}{a}y'+\frac{c}{a}y =0.
       </men> Because the coefficient functions are
       constants and defined on <m>(-\infty, \infty),</m> the interval <m>I</m> in the existence and
-      uniqueness theorem (<xref ref="existence-uniqueness-theorem" />) for <xref
+      uniqueness  <xref ref="existence-uniqueness-theorem" /> for <xref
         ref="eq-homogeneous-constant-coefficients-1" /> is the entire set of real numbers <m>(-\infty,
       \infty).</m> Consequently, the solutions in any fundamental set are defined on <m>(-\infty,
       \infty).</m>
