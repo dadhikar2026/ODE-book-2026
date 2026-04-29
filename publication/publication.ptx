@@ -219,7 +219,7 @@
   <preamble file="preamble.tex"/>
 </latex> -->
 <!-- css -->
- <publisher>
+ <!-- <publisher>
   <html>
     <css>
       <file>assets/custom.css</file>
@@ -228,7 +228,7 @@
       <file>assets/print.js</file>
     </js>
   </html>
-</publisher>
+</publisher> -->
 
 
   </publication>

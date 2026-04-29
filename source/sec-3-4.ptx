@@ -45,10 +45,10 @@
         ref="thm-existence-fundamental-solution-set" />. In fact, let <m>y_i</m> be the unique
       solution of the initial value problem consisting of the equation <xref ref="eq-homogeneous2" />
       subject to the initial conditions <men xml:id="eq-initial-conditions">
-        y(x_0) =0, \dots, y^{(i-1)}(x_0) =1, \dots, y^{(n-1)}(x_0) =0, \end{equation}
-      </men>
-      where <m>i = 1, \dots, n.</m> It follows that <m>\{y_1, \dots, y_n\}</m> is a fundamental
-      solutions of <xref ref="eq-homogeneous2" /> (see <xref ref="exercise-3-4-4" /> in <xref
+        y(x_0) =0, \dots, y^{(i-1)}(x_0) =1, \dots, y^{(n-1)}(x_0) =0,
+      </men> where <m>i
+      = 1, \dots, n.</m> It follows that <m>\{y_1, \dots, y_n\}</m> is a fundamental solutions of <xref
+        ref="eq-homogeneous2" /> (see <xref ref="exercise-3-4-4" /> in <xref
         ref="exercises-EX34" />). </p>
 
     <p> Let <m>y_1, \dots, y_n</m> be solutions of <xref ref="eq-homogeneous2" />. In <xref
@@ -79,10 +79,11 @@
     </proof>
 
     <p> Methods for constructing a fundamental set of solutions for <xref ref="eq-homogeneous2" />
-      vary. When we have means to find a single nonzero solution, the reduction of order discussion in <xref
-        ref="sec-3-2" />  can be employed to obtain additional linearly
-      independent solutions. This method applies not only to second order homogeneous linear
-      equations but also extends to higher order equations, as discussed in the next theorem. </p>
+      vary. When we have means to find a single nonzero solution, the reduction of order discussion
+      in <xref
+        ref="sec-3-2" /> can be employed to obtain additional linearly independent solutions. This
+      method applies not only to second order homogeneous linear equations but also extends to
+      higher order equations, as discussed in the next theorem. </p>
 
     <theorem xml:id="thm-reduction-of-order-2">
       <statement>
