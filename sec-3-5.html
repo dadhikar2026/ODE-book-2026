@@ -190,15 +190,23 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#subsec-spring-mass-system" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Spring-Mass System</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#subsec-RLC-circuit" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Electrical Circuits</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-5.html#exercises-EX35" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Change of Variables</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#subsec-something-something" class="internal"><span class="codenumber">3.6.1</span> <span class="title">something</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#change-of-the-dependent-variable" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Change of the Dependent Variable</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#subsec-change-of-the-independent-variable" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Change of the Independent Variable</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-6.html#exercises-Ex36" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Method of Series Solutions</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Method of Series Solutions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Power Series Solutions</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-5.html" class="internal"><span class="codenumber">5</span> <span class="title">The Laplace Transform and Applications</span></a></div>
 <ul class="structural toc-item-list">
@@ -301,7 +309,7 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="subsec-spring-mass-system-2">A common example of a second order linear differential equation with constant coefficients arises in modeling the motion of a mass attached to a spring whose other end is fixed to a support. Let us consider a spring suspended vertically from a fixed ceiling (rigid support) with the mass attached to its lower end, as illustrated in <a href="sec-3-5.html#fig-spring-mass" class="xref" data-knowl="./knowl/xref/fig-spring-mass.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig-spring-mass"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig-spring-mass-2.svg" role="img" class="contained"></div>
+<figure class="figure figure-like" id="fig-spring-mass"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/fig-spring-mass-2.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.<div class="autopermalink" data-description="Figure 3.5.1"><a href="#fig-spring-mass" title="Copy heading and permalink for Figure 3.5.1" aria-label="Copy heading and permalink for Figure 3.5.1">🔗</a></div></figcaption></figure><div class="para" id="subsec-spring-mass-system-4">Let <span class="process-math">\(\ell\)</span> denote the natural (unstretched) length of the spring, and let <span class="process-math">\(s\)</span> be the amount by which the spring stretches when the mass <span class="process-math">\(m\)</span> is attached and allowed to hang in equilibrium under gravity. We assume that the motion of the mass is restricted to the vertical line through the point of the equilibrium of the mass. To take this vertical line (see <a href="sec-3-5.html#fig-spring-mass" class="xref" data-knowl="./knowl/xref/fig-spring-mass.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a> (d)) as the coordinate axis, we take the equilibrium point as the origin and assign the vertically downward direction as the positive direction.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-spring-mass-system-5">
@@ -357,8 +365,7 @@ k = \frac{mg}{s}.
 <span class="process-math">\(\bullet\)</span> How do we model <span class="process-math">\(F_{\text{d}}(t)?\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-spring-mass-system-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-spring-mass-system-9">
-<div class="para">It is intuitive that the damping force (or drag) increases as the speed of the mass increases. Hence, the simplest way to model the damping force is to assume that it is directly proportional to the velocity.<details class="ptx-footnote" aria-live="polite" id="subsec-spring-mass-system-9-1"><summary class="ptx-footnote__number" title="Footnote 3.5.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="subsec-spring-mass-system-9-1">For a medium that resists the motion of the mass depending on a power of the speed, the damping force may be modeled by a nonlinear function of the velocity. For example, <span class="process-math">\(F_{\text{s}}(t) = - b\,\lvert
-y'(t)\rvert^{q-2}y'(t)\)</span> with a fixed number <span class="process-math">\(q\)</span> in <span class="process-math">\((1, \infty)\)</span> and <span class="process-math">\(b&gt;0\)</span> a fixed real number.</div></details> This means that</div>
+<div class="para">It is intuitive that the damping force (or drag) increases as the speed of the mass increases. Hence, the simplest way to model the damping force is to assume that it is directly proportional to the velocity.<details class="ptx-footnote" aria-live="polite" id="subsec-spring-mass-system-9-1"><summary class="ptx-footnote__number" title="Footnote 3.5.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="subsec-spring-mass-system-9-1">For a medium that resists the motion of the mass depending on a power of the speed, the damping force may be modeled by a nonlinear function of the velocity. For example, <span class="process-math">\(F_{\text{s}}(t) = - b\,\lvert y'(t)\rvert^{q-2}y'(t)\)</span> with a fixed number <span class="process-math">\(q\)</span> in <span class="process-math">\((1, \infty)\)</span> and <span class="process-math">\(b&gt;0\)</span> a fixed real number.</div></details> This means that</div>
 <div class="displaymath process-math" id="eq-mass-spring4">
 \begin{equation}
 F_{\text{d}}(t)= - b\, y'(t),\tag{3.5.4}
@@ -444,17 +451,13 @@ A =\sqrt{c_1^2 + c_2^2}.
 <div class="para">It is possible that <span class="process-math">\(A =0\text{,}\)</span> in which case, we have <span class="process-math">\(y(t) = 0\)</span> for all <span class="process-math">\(t\text{,}\)</span> the trivial solution, and this means that the mass is at rest in the equilibrium position for all <span class="process-math">\(t.\)</span> Therefore the only interesting case is when <span class="process-math">\(A&gt;0.\)</span> If <span class="process-math">\(c_2 \ne 0,\)</span> then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-3-18">
 \begin{equation*}
-\arctan(\frac{-c_1}{c_2}) \text{ lies in }\left(-\frac{\pi}{2},
-\frac{\pi}{2}\right).
+\arctan(\frac{-c_1}{c_2}) \text{ lies in }\left(-\frac{\pi}{2}, \frac{\pi}{2}\right).
 \end{equation*}
 </div>
 <div class="para">We have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring9.html ./knowl/xref/eq-mass-spring8.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-3-19">
 \begin{equation*}
-\phi = \begin{cases} \arctan(\frac{-c_1}{c_2}) &amp;\text{if } c_2&gt;0,\\[1em]
-\arctan(\frac{-c_1}{c_2})+\pi&amp;\text{if } c_2&lt;0,\\ \frac{\pi}{2}&amp;\text{if
-}c_1&lt;0 \text{ and } c_2=0,\\ -\frac{\pi}{2}&amp;\text{if } c_1&gt;0 \text{ and }
-c_2=0.
+\phi = \begin{cases} \arctan(\frac{-c_1}{c_2}) &amp;\text{if } c_2&gt;0,\\[1em] \arctan(\frac{-c_1}{c_2})+\pi&amp;\text{if } c_2&lt;0,\\ \frac{\pi}{2}&amp;\text{if }c_1&lt;0 \text{ and } c_2=0,\\ -\frac{\pi}{2}&amp;\text{if } c_1&gt;0 \text{ and } c_2=0.
 \end{cases}
 \end{equation*}
 </div>
@@ -490,10 +493,7 @@ y(t) = A \cos(\omega t -\phi -\frac{\pi}{2}).
 <ol class="lower-roman ol-marker-1" id="free-undamped-motion-4-2-1-1">
 <li id="free-undamped-motion-4-2-1-1-1">
 <div class="para logical" id="free-undamped-motion-4-2-1-1-1-1">
-<div class="para">Let <span class="process-math">\(y(t)\)</span> denote in feet the displacement of the mass from the equilibrium position measured positively in the vertically downward direction. We have <span class="process-math">\(mg = 2~\text{lb}, \text{spring
-stretch}, s = 6~\text{in} = 0.5~\text{ft}.\)</span> We have <span class="process-math">\(m =
-\frac{mg}{g} = \frac{2}{32} = \frac{1}{16}~\text{slug},\)</span> and the spring constant <span class="process-math">\(k = \frac{mg}{s} = \frac{2}{0.5} =
-4~\text{lb/ft}.\)</span> The differential equation of motion is</div>
+<div class="para">Let <span class="process-math">\(y(t)\)</span> denote in feet the displacement of the mass from the equilibrium position measured positively in the vertically downward direction. We have <span class="process-math">\(mg = 2~\text{lb}, \text{spring stretch}, s = 6~\text{in} = 0.5~\text{ft}.\)</span> We have <span class="process-math">\(m = \frac{mg}{g} = \frac{2}{32} = \frac{1}{16}~\text{slug},\)</span> and the spring constant <span class="process-math">\(k = \frac{mg}{s} = \frac{2}{0.5} = 4~\text{lb/ft}.\)</span> The differential equation of motion is</div>
 <div class="displaymath process-math" id="free-undamped-motion-4-2-1-1-1-1-5">
 \begin{equation*}
 m y'' + k y = 0,
@@ -544,49 +544,40 @@ y(t) = -\frac{2}{3} \cos(8t) + \frac{1}{6} \sin(8t),
 <div class="para">which is of the form <a href="sec-3-5.html#eq-mass-spring7" class="xref" data-knowl="./knowl/xref/eq-mass-spring7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.7">(3.5.7)</a>. Using the method discussed for <a href="sec-3-5.html#eq-mass-spring8" class="xref" data-knowl="./knowl/xref/eq-mass-spring8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.8">(3.5.8)</a> to find the equation of the motion in the amplitude-phase, we compute</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-4-2-1-1-1-3-8">
 \begin{equation*}
-A= \sqrt{c_1^2+c_2^2}=\sqrt{\frac{4}{9}+\frac{1}{36}}=
-\frac{\sqrt{17}}{6}
+A= \sqrt{c_1^2+c_2^2}=\sqrt{\frac{4}{9}+\frac{1}{36}}= \frac{\sqrt{17}}{6}
 \end{equation*}
 </div>
 <div class="para">and</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-4-2-1-1-1-3-9">
 \begin{equation*}
-\phi = \arctan(\frac{-c_1}{c_2}) = \arctan(\frac{2/3}{1/6})
-=\arctan(4)\approx 1.3258~\text{rad},
+\phi = \arctan(\frac{-c_1}{c_2}) = \arctan(\frac{2/3}{1/6}) =\arctan(4)\approx 1.3258~\text{rad},
 \end{equation*}
 </div>
 <div class="para">and therefore</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring7.html ./knowl/xref/eq-mass-spring8.html" id="free-undamped-motion-4-2-1-1-1-3-10">
 \begin{equation*}
-y(t) = \frac{\sqrt{17}}{6} \sin\!\left(8t - \varphi\right)
-\approx \frac{\sqrt{17}}{6} \sin\!\left(8t - 1.3258\right).
+y(t) = \frac{\sqrt{17}}{6} \sin\!\left(8t - \varphi\right) \approx \frac{\sqrt{17}}{6} \sin\!\left(8t - 1.3258\right).
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-4-2-1-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="free-undamped-motion-4-2-1-1-1-4">Its graph is shown in <a href="sec-3-5.html#graph-simple-harmonic-oscillator" class="xref" data-knowl="./knowl/xref/graph-simple-harmonic-oscillator.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-4-2-1-1-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="free-undamped-motion-4-2-1-1-1-5">
 <figure class="figure figure-like" id="graph-simple-harmonic-oscillator"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/graph-simple-harmonic-oscillator-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) \approx \frac{\sqrt{17}}{6}
-\sin\!\left(8t - 1.3258\right)\)</span><div class="autopermalink" data-description="Figure 3.5.3"><a href="#graph-simple-harmonic-oscillator" title="Copy heading and permalink for Figure 3.5.3" aria-label="Copy heading and permalink for Figure 3.5.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#free-undamped-motion-4-2-1-1-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item i"><a href="#free-undamped-motion-4-2-1-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) \approx \frac{\sqrt{17}}{6} \sin\!\left(8t - 1.3258\right)\)</span><div class="autopermalink" data-description="Figure 3.5.3"><a href="#graph-simple-harmonic-oscillator" title="Copy heading and permalink for Figure 3.5.3" aria-label="Copy heading and permalink for Figure 3.5.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item i"><a href="#free-undamped-motion-4-2-1-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
 </li>
 <li id="free-undamped-motion-4-2-1-1-2">
 <div class="para logical" id="free-undamped-motion-4-2-1-1-2-1">
 <div class="para">We find</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-phase-space-orbit.html" id="free-undamped-motion-4-2-1-1-2-1-1">
 \begin{equation*}
-y'(t) = 8\frac{\sqrt{17}}{6} \cos\!\left(8t -
-\varphi\right).
+y'(t) = 8\frac{\sqrt{17}}{6} \cos\!\left(8t - \varphi\right).
 \end{equation*}
 </div>
 <div class="para">Then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-phase-space-orbit.html" id="free-undamped-motion-4-2-1-1-2-1-2">
 \begin{equation*}
-\left(\frac{y(t)}{\frac{\sqrt{17}}{6}
-}\right)^2+\left(\frac{y'(t)}{\frac{8\sqrt{17}}{6}}\right)^2 = 1
+\left(\frac{y(t)}{\frac{\sqrt{17}}{6} }\right)^2+\left(\frac{y'(t)}{\frac{8\sqrt{17}}{6}}\right)^2 = 1
 \end{equation*}
 </div>
 <div class="para">for all <span class="process-math">\(t\text{.}\)</span> This takes the form</div>
@@ -834,7 +825,7 @@ k = \frac{mg}{s} = \frac{10 \times 9.8}{0.392} = 250~\text{N/m}.
 <div class="para">or equivalently,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring-150.html ./knowl/xref/eq-mass-spring-150.html ./knowl/xref/eq-mass-spring-150.html ./knowl/xref/eq-mass-spring-150.html ./knowl/xref/fig-undamped-forced-system.html" id="eq-mass-spring-150">
 \begin{equation}
-y'' + 25y = 18\sin(5t).\tag{3.5.14}
+y'' + 25y = 18\sin(10t).\tag{3.5.14}
 \end{equation}
 </div>
 <div class="para">The general solution of <span class="process-math">\(y'' + 25y = 0\)</span> is</div>
@@ -896,9 +887,12 @@ y\left(\frac{2\pi}{15}\right) = \frac{9\sqrt{3}}{25} \approx 0.6235.
 <div class="para" id="forced-damped-motion-6">
 <dfn class="terminology">Resonance:</dfn> An important aspect of analyzing undamped forced spring-mass systems is understanding how large (in absolute values) the values of <span class="process-math">\(y_p(t)\)</span> can become when <span class="process-math">\(F(t)\)</span> is sinusoidal. If the amplitude of <span class="process-math">\(y_p(t)\)</span> grows without bound, the system is said to be in <dfn class="terminology"><em class="emphasis">resonance</em></dfn>. In practical applications, resonance may be undesirable because it can lead to excessive energy buildup and potential system failure. Since the system <a href="sec-3-5.html#eq-mass-spring-undamped-forced-1" class="xref" data-knowl="./knowl/xref/eq-mass-spring-undamped-forced-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.12">(3.5.12)</a> is undamped, the only way energy can dissipate from the system is by the nature of the source term <span class="process-math">\(F(t).\)</span> However, it is possible that the energy buildup can happen in the system even when <span class="process-math">\(F(t)\)</span> is sign-changing. The following example demonstrates how resonance occurs.<div class="autopermalink" data-description="Paragraph"><a href="#forced-damped-motion-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="forced-damped-motion-7">With the external force in <a href="sec-3-5.html#example-undamped-forced-system" class="xref" data-knowl="./knowl/xref/example-undamped-forced-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.5">Example 3.5.5</a> replaced with <span class="process-math">\(F(t) = 180\sin(5t)\text{,}\)</span> determine the equation of motion, analyze the amplitude of the resulting motion, and verify that the system exhibits resonance.<div class="autopermalink" data-description="Paragraph"><a href="#forced-damped-motion-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<details id="example-resonance-spring-mass-system-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="example-resonance-spring-mass-system-1-1-1">With the external force in <a href="sec-3-5.html#example-undamped-forced-system" class="xref" data-knowl="./knowl/xref/example-undamped-forced-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.5">Example 3.5.5</a> replaced with <span class="process-math">\(F(t) = 180\sin(5t)\text{,}\)</span> determine the equation of motion, analyze the amplitude of the resulting motion, and verify that the system exhibits resonance.<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-spring-mass-system-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="forced-damped-motion-8">
+<div class="solutions"><details id="example-resonance-spring-mass-system-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-resonance-spring-mass-system-1-2-1">
 <div class="para">Similarly to the solution in <a href="sec-3-5.html#example-undamped-forced-system" class="xref" data-knowl="./knowl/xref/example-undamped-forced-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.5">Example 3.5.5</a>, the initial value problem for the current example is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="eq-mass-spring-15">
 \begin{equation}
@@ -906,79 +900,982 @@ y'' + 25y = 18\sin(5t), \quad y(0) =0,\; y'(0) = 0.\tag{3.5.15}
 \end{equation}
 </div>
 <div class="para">Recall from <a href="sec-3-5.html#example-undamped-forced-system" class="xref" data-knowl="./knowl/xref/example-undamped-forced-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.5">Example 3.5.5</a> that the natural frequency of the system is <span class="process-math">\(\omega  = 10.\)</span> We note here that the frequency of the external force <span class="process-math">\(\gamma =10\)</span> matches the natural frequency <span class="process-math">\(\omega = 10.\)</span> The general solution of <span class="process-math">\(y'' + 25y = 0\)</span> is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-8">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-8">
 \begin{equation*}
 y_h(t) = c_1\cos(5t) + c_2\sin(5t),
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. We find a particular solution <span class="process-math">\(y_p(t)\)</span> of <a href="sec-3-5.html#eq-mass-spring-15" class="xref" data-knowl="./knowl/xref/eq-mass-spring-15.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.15">(3.5.15)</a> by variation of parameters. Let</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-13">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-13">
 \begin{equation*}
 y_p(t) = u_1(t)\cos(5t) + u_2(t)\sin(5t),
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(u_1'(t)\)</span> and <span class="process-math">\(u_2'(t)\)</span> satisfy</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-16">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-16">
 \begin{equation*}
 \begin{cases} u_1'(t)\cos(5t) + u_2'(t)\sin(5t) = 0, \\[4pt] -5\,u_1'(t)\sin(5t) + 5u_2'(t)\cos(5t) = 18\sin(5t).
 \end{cases}
 \end{equation*}
 </div>
 <div class="para">Solving this system gives</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-17">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-17">
 \begin{equation*}
 u_1'(t) = -\frac{18}{5}\sin^2(5t) =-\frac{9}{5}(1-\cos(10t)),
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-18">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-18">
 \begin{equation*}
 u_2'(t) = \frac{18}{5}\sin(5t)\cos(5t) =\frac{9}{5}\sin(10t).
 \end{equation*}
 </div>
 <div class="para">Integrating yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-19">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-19">
 \begin{equation*}
 u_1(t) = -\frac{9}{5}t + \frac{9}{50} \sin(10t), \qquad u_2(t) = -\frac{9}{50} \cos(10t).
 \end{equation*}
 </div>
 <div class="para">Hence,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-20">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-20">
 \begin{equation*}
 \begin{aligned} y_p(t) &amp;= u_1\cos(5t) + u_2\sin(5t) \\[2pt] &amp;= -\frac{9}{5}t \cos(5t)  + \frac{9}{50}\sin(10t) \cos(5t) -\frac{9}{50}\cos(10t)\sin(5t)\\[2pt] &amp;=-\frac{9}{5}t \cos(5t)  + \frac{9}{50}\sin(5t).
 \\[2pt] \end{aligned}
 \end{equation*}
 </div>
 <div class="para">The general solution is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-21">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-21">
 \begin{equation*}
 y(t) = c_1\cos(5t) + c_2\sin(5t) - \frac{9}{5}t\cos(10t),
 \end{equation*}
 </div>
 <div class="para">
 <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are constants to be determined so that <span class="process-math">\(y(0) = 0, y'(0) = 0.\)</span> Substituting these gives <span class="process-math">\(c_1 = 0\)</span> and <span class="process-math">\(5c_2 - \frac{9}{5} = 0\text{,}\)</span> i.e., <span class="process-math">\(c_2 = \frac{9}{25}\)</span> Thus, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-28">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-28">
 \begin{equation*}
 y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t).
 \end{equation*}
 </div>
 <div class="para">It is evident that the amplitude <span class="process-math">\(a(t)\)</span> of <span class="process-math">\(y(t)\)</span> is given by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="forced-damped-motion-8-31">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-undamped-forced-system.html ./knowl/xref/example-undamped-forced-system.html ./knowl/xref/eq-mass-spring-15.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-spring-mass-system-1-2-1-31">
 \begin{equation*}
 a(t)=\frac{ 9}{5}\sqrt{t^2+\frac{1}{25}}
 \end{equation*}
 </div>
-<div class="para">which shows that <span class="process-math">\(\lvert y(t) \rvert\)</span> grows without bound as <span class="process-math">\(t\to\infty.\)</span> Hence, the system exhibits <dfn class="terminology">resonance</dfn> in this case, where the forcing frequency coincides the natural frequency-illustrating the classical example of resonance in an undamped forced spring-mass system. The plots of the solution <span class="process-math">\(y(t)\)</span> and amplitude <span class="process-math">\(a(t)\)</span> are shown in <a href="sec-3-5.html#fig-resonance-1" class="xref" data-knowl="./knowl/xref/fig-resonance-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.7">Figure 3.5.7</a>. <figure class="figure figure-like" id="fig-resonance-1"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/fig-resonance-1.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t)\)</span> and its amplitude <span class="process-math">\(a(t) = \frac{9}{5}\sqrt{t^2+\frac{1}{25}}\)</span><div class="autopermalink" data-description="Figure 3.5.7"><a href="#fig-resonance-1" title="Copy heading and permalink for Figure 3.5.7" aria-label="Copy heading and permalink for Figure 3.5.7">🔗</a></div></figcaption></figure>
+<div class="para">which shows that <span class="process-math">\(\lvert y(t) \rvert\)</span> grows without bound as <span class="process-math">\(t\to\infty.\)</span> Hence, the system exhibits <dfn class="terminology">resonance</dfn> in this case, where the forcing frequency coincides the natural frequency-illustrating the classical example of resonance in an undamped forced spring-mass system. The plots of the solution <span class="process-math">\(y(t)\)</span> and amplitude <span class="process-math">\(a(t)\)</span> are shown in <a href="sec-3-5.html#fig-resonance-1" class="xref" data-knowl="./knowl/xref/fig-resonance-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.8">Figure 3.5.8</a>. <figure class="figure figure-like" id="fig-resonance-1"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/fig-resonance-1.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t)\)</span> and its amplitude <span class="process-math">\(a(t) = \frac{9}{5}\sqrt{t^2+\frac{1}{25}}\)</span><div class="autopermalink" data-description="Figure 3.5.8"><a href="#fig-resonance-1" title="Copy heading and permalink for Figure 3.5.8" aria-label="Copy heading and permalink for Figure 3.5.8">🔗</a></div></figcaption></figure>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#forced-damped-motion-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-spring-mass-system-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: III. Forced Undamped  Motion (b=0,\;F(t) \ne 0)"><a href="#forced-damped-motion" title="Copy heading and permalink for Paragraphs: III. Forced Undamped  Motion (b=0,\;F(t) \ne 0)" aria-label="Copy heading and permalink for Paragraphs: III. Forced Undamped  Motion (b=0,\;F(t) \ne 0)">🔗</a></div></section><div class="autopermalink" data-description="Subsection 3.5.1: Spring-Mass System"><a href="#subsec-spring-mass-system" title="Copy heading and permalink for Subsection 3.5.1: Spring-Mass System" aria-label="Copy heading and permalink for Subsection 3.5.1: Spring-Mass System">🔗</a></div></section><section class="subsection" id="subsec-RLC-circuit"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Solution 3.5.7.1"><a href="#example-resonance-spring-mass-system-1-2" title="Copy heading and permalink for Solution 3.5.7.1" aria-label="Copy heading and permalink for Solution 3.5.7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.5.7"><a href="#example-resonance-spring-mass-system-1" title="Copy heading and permalink for Example 3.5.7" aria-label="Copy heading and permalink for Example 3.5.7">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraphs: III. Forced Undamped  Motion (b=0,\;F(t) \ne 0)"><a href="#forced-damped-motion" title="Copy heading and permalink for Paragraphs: III. Forced Undamped  Motion (b=0,\;F(t) \ne 0)" aria-label="Copy heading and permalink for Paragraphs: III. Forced Undamped  Motion (b=0,\;F(t) \ne 0)">🔗</a></div></section><section class="paragraphs" id="forced-undamped-motion"><h4 class="heading"><span class="title">IV. Forced Damped  Motion (<span class="process-math">\(b&gt;0,\;F(t) \ne 0\)</span>).</span></h4>
+<div class="para logical" id="forced-undamped-motion-2">
+<div class="para">When <span class="process-math">\(b&gt;0\)</span> and <span class="process-math">\(F(t) \ne 0\text{,}\)</span> the spring-mass system is governed by the differential equation <a href="sec-3-5.html#eq-mass-spring16" class="xref" data-knowl="./knowl/xref/eq-mass-spring16.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.16">(3.5.16)</a>; namely,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring18.html ./knowl/xref/eq-mass-spring16.html" id="eq-mass-spring16">
+\begin{equation}
+my''(t) + by'(t) + k y(t) = F(t).\tag{3.5.16}
+\end{equation}
+</div>
+<div class="para">The nonhomogeneous equation <a href="sec-3-5.html#eq-mass-spring16" class="xref" data-knowl="./knowl/xref/eq-mass-spring16.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.16">(3.5.16)</a> can be solved by using the methods of previous sections. The general solution is of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring18.html ./knowl/xref/eq-mass-spring16.html" id="eq-mass-spring17">
+\begin{equation}
+y(t) = y_h(t) + y_p(t),\tag{3.5.17}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(y_h(t)\)</span> is the general solution of the homogeneous equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring18.html ./knowl/xref/eq-mass-spring16.html" id="forced-undamped-motion-2-8">
+\begin{equation*}
+my''(t) + by'(t) + k y(t)=0,
+\end{equation*}
+</div>
+<div class="para">which describes the free damped motion corresponding to <span class="process-math">\(F(t) = 0\)</span> and <span class="process-math">\(y_p(t)\)</span> is a particular solution of <a href="sec-3-5.html#eq-mass-spring16" class="xref" data-knowl="./knowl/xref/eq-mass-spring16.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.16">(3.5.16)</a>. We recall from all three cases (underdamped, critically damped, and overdamped) of a free damped motion that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring18.html ./knowl/xref/eq-mass-spring16.html" id="eq-mass-spring18">
+\begin{equation}
+\lim\limits_{t\to\infty}y_h(t) =0,\tag{3.5.18}
+\end{equation}
+</div>
+<div class="para">and therefore <span class="process-math">\(y_h(t)\)</span> is a <dfn class="terminology"><em class="emphasis">transient term</em></dfn> in <a href="sec-3-5.html#eq-mass-spring17" class="xref" data-knowl="./knowl/xref/eq-mass-spring17.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.17">(3.5.17)</a> and it is either oscillatory or nonoscillatory according as <span class="process-math">\(b&lt;2\sqrt{mk}\)</span> or <span class="process-math">\(b \ge \sqrt{mk}.\)</span> We conclude from <a href="sec-3-5.html#eq-mass-spring17" class="xref" data-knowl="./knowl/xref/eq-mass-spring17.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.17">(3.5.17)</a> and <a href="sec-3-5.html#eq-mass-spring18" class="xref" data-knowl="./knowl/xref/eq-mass-spring18.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.18">(3.5.18)</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring16.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring17.html ./knowl/xref/eq-mass-spring18.html ./knowl/xref/eq-mass-spring16.html" id="forced-undamped-motion-2-20">
+\begin{equation*}
+y(t)\approx  y_p(t)\quad \mbox{ for large } t.
+\end{equation*}
+</div>
+<div class="para">The particular solution <span class="process-math">\(y_p(t)\)</span> is called the <dfn class="terminology"><em class="emphasis">steady-state</em></dfn> solution of <a href="sec-3-5.html#eq-mass-spring16" class="xref" data-knowl="./knowl/xref/eq-mass-spring16.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.16">(3.5.16)</a>. For short times, <span class="process-math">\(y_h(t)\)</span> must be included in the solution <span class="process-math">\(y(t) = y_h(t) + y_p(t),\)</span> which then becomes the <em class="emphasis"><dfn class="terminology">transient solution.</dfn></em>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#forced-undamped-motion-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-resonance-mass-spring-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="example-resonance-mass-spring-2-1-1">For the resonant system in <a href="sec-3-5.html#example-resonance-spring-mass-system-1" class="xref" data-knowl="./knowl/xref/example-resonance-spring-mass-system-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.7">Example 3.5.7</a>, determine the damping coefficient that should be introduced at <span class="process-math">\(t = 3\pi\)</span> so that the system transitions immediately into a simple harmonic oscillator with the amplitude <span class="process-math">\(27\pi/5.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-resonance-mass-spring-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-resonance-mass-spring-2-2-1">
+<div class="para">We recall that the solution of the resonant system in <a href="sec-3-5.html#example-resonance-spring-mass-system-1" class="xref" data-knowl="./knowl/xref/example-resonance-spring-mass-system-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.7">Example 3.5.7</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-resonance-spring-mass-system-1.html" id="eq-resonance-mass-spring-2">
+\begin{equation}
+\begin{cases} y'' +25 y = 18 \sin(5 t),\\ y(0) =0, \quad y'(0) = 0, \end{cases}\tag{3.5.19}
+\end{equation}
+</div>
+<div class="para">is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-resonance-spring-mass-system-1.html" id="example-resonance-mass-spring-2-2-1-3">
+\begin{equation*}
+y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t).
+\end{equation*}
+</div>
+<div class="para">We observe that <span class="process-math">\(y(3\pi) = {27\pi}/{5}\)</span> and <span class="process-math">\(y'(3\pi)=0.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-resonance-mass-spring-2-2-2">
+<div class="para">We now proceed to find the damping coefficient <span class="process-math">\(b&gt;0\)</span> required to turn the resonant system <a href="sec-3-5.html#eq-resonance-mass-spring-2" class="xref" data-knowl="./knowl/xref/eq-resonance-mass-spring-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.19">(3.5.19)</a> into a simple harmonic oscillator starting at <span class="process-math">\(t=3\pi\)</span> with the frequency of oscillation same as the natural frequency of resonant system and the amplitude <span class="process-math">\(27\pi/5.\)</span> We consider the initial value problem</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="eq-resonance-mass-spring-6">
+\begin{equation}
+\ \begin{cases} 10y''+by' +250 y = 180 \sin(5t),\\ y(3\pi)  ={27\pi}/{5}, \quad y'(3\pi)  = 0.
+\end{cases}\tag{3.5.20}
+\end{equation}
+</div>
+<div class="para">It is evident that for small <span class="process-math">\(b&gt;0\)</span> the complementary function should be oscillatory. Suppose then that <span class="process-math">\(b^2&lt; 40000\)</span> and put</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="example-resonance-mass-spring-2-2-2-8">
+\begin{equation*}
+d = \frac{1}{20}\sqrt{10000-b^2}.
+\end{equation*}
+</div>
+<div class="para">Then the general solution of the differential equation in <a href="sec-3-5.html#eq-resonance-mass-spring-6" class="xref" data-knowl="./knowl/xref/eq-resonance-mass-spring-6.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.20">(3.5.20)</a> can be written in the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="example-resonance-mass-spring-2-2-2-10">
+\begin{equation*}
+y(t) =e^{-\frac{b}{20}(t-3\pi)} \Big(c_1 \cos\big(d(t-3\pi)\big)+c_2 \sin\big(d(t-3\pi)\big)\Big)-\frac{36}{b} \cos (5 t)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. The only way this represents the solution to a harmonic oscillator is when its transient term is zero which happens only when <span class="process-math">\(c_1=c_2= 0\)</span> because of the linear independence of <span class="process-math">\(\cos\big(d (t-3\pi)\big)\)</span> and <span class="process-math">\(\sin\big(d (t-3\pi)\big).\)</span> Since <span class="process-math">\(y(3\pi) = 27\pi/5,\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="example-resonance-mass-spring-2-2-2-17">
+\begin{equation*}
+\frac{27\pi}{5}  = c_1 +\frac{36}{b}.
+\end{equation*}
+</div>
+<div class="para">In order that <span class="process-math">\(c_1=0,\)</span> we must have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="example-resonance-mass-spring-2-2-2-19">
+\begin{equation*}
+b= \frac{20}{3\pi}.
+\end{equation*}
+</div>
+<div class="para">The condition <span class="process-math">\(y'(3\pi) = 0\)</span> ensures that <span class="process-math">\(c_2=0\)</span> because</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="example-resonance-mass-spring-2-2-2-22">
+\begin{equation*}
+0 =y'(3\pi)= -\frac{b}{20} c_1 +dc_2,
+\end{equation*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="example-resonance-mass-spring-2-2-2-23">
+\begin{equation*}
+c_2 = \frac{b}{20d} c_1 =0.
+\end{equation*}
+</div>
+<div class="para">Thus, the damped system introduced at <span class="process-math">\(t  = 3\pi\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="eq-resonance-mass-spring-7">
+\begin{equation}
+\begin{cases} 10y''+\frac{20}{3\pi}y' +250 y = 180 \sin(5 t),\\ y(3\pi)  ={27\pi}/{5}, \quad y'(3\pi)  = 0, \end{cases}\tag{3.5.21}
+\end{equation}
+</div>
+<div class="para">with the solution</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="example-resonance-mass-spring-2-2-2-26">
+\begin{equation*}
+z(t) = -\frac{27\pi}{5} \cos (5 t)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(t\ge 3\pi.\)</span> The problem <a href="sec-3-5.html#eq-resonance-mass-spring-7" class="xref" data-knowl="./knowl/xref/eq-resonance-mass-spring-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.21">(3.5.21)</a> is equivalent to the simple harmonic oscillator described by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="eq-resonance-mass-spring-8">
+\begin{equation}
+\begin{cases} y''+25 y = 0,\\ y(3\pi)  ={27\pi}/{5}, \quad y'(3\pi)  = 0.
+\end{cases}\tag{3.5.22}
+\end{equation}
+</div>
+<div class="para">This harmonic oscillator has frequency same as the natural frequency of the resonant system <a href="sec-3-5.html#eq-resonance-mass-spring-2" class="xref" data-knowl="./knowl/xref/eq-resonance-mass-spring-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.19">(3.5.19)</a> and amplitude equal to <span class="process-math">\(27\pi/5.\)</span> The solution of the resonant system for <span class="process-math">\(0\le t\le 3\pi\)</span> and its continuous transition to a damped forced system that exhibits the simple harmonic oscillator <a href="sec-3-5.html#eq-resonance-mass-spring-8" class="xref" data-knowl="./knowl/xref/eq-resonance-mass-spring-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.22">(3.5.22)</a> for <span class="process-math">\(t\ge 3\pi\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-6.html ./knowl/xref/eq-resonance-mass-spring-7.html ./knowl/xref/eq-resonance-mass-spring-2.html ./knowl/xref/eq-resonance-mass-spring-8.html ./knowl/xref/fig-resonance-to-sho.html" id="example-resonance-mass-spring-2-2-2-35">
+\begin{equation*}
+y(t) = \begin{cases} -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t) &amp;\text{ for } 0 \le t\le3\pi\\ \frac{-27\pi }{5}  \cos (5 t) &amp;\text{ for }  t\ge 3\pi.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">The graph of this solution is shown in <a href="sec-3-5.html#fig-resonance-to-sho" class="xref" data-knowl="./knowl/xref/fig-resonance-to-sho.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.10">Figure 3.5.10</a>. <figure class="figure figure-like" id="fig-resonance-to-sho"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/resonance-to-sho.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y=y(t).\)</span><div class="autopermalink" data-description="Figure 3.5.10"><a href="#fig-resonance-to-sho" title="Copy heading and permalink for Figure 3.5.10" aria-label="Copy heading and permalink for Figure 3.5.10">🔗</a></div></figcaption></figure>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.9.1"><a href="#example-resonance-mass-spring-2-2" title="Copy heading and permalink for Solution 3.5.9.1" aria-label="Copy heading and permalink for Solution 3.5.9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.5.9"><a href="#example-resonance-mass-spring-2" title="Copy heading and permalink for Example 3.5.9" aria-label="Copy heading and permalink for Example 3.5.9">🔗</a></div></article></details><div class="para" id="forced-undamped-motion-4">When <span class="process-math">\(b = 0\)</span> and the natural frequency of the system matches that of an external sinusoidal force, as illustrated in <a href="sec-3-5.html#example-resonance-spring-mass-system-1" class="xref" data-knowl="./knowl/xref/example-resonance-spring-mass-system-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.7">Example 3.5.7</a>, the system exhibits resonance. In contrast, we recall that a free damped system approaches its equilibrium as <span class="process-math">\(t \to \infty\text{.}\)</span> In most practical applications, the damping constant <span class="process-math">\(b\)</span> is relatively small. Interestingly, when <span class="process-math">\(b &gt; 0\)</span> but small, although the amplitude of the particular solution <span class="process-math">\(y_p\)</span> is not unbounded as <span class="process-math">\(t\to \infty\text{,}\)</span> the system displays a behavior approaching resonance because the damping is insufficient to suppress large oscillations. Therefore <span class="process-math">\(\gamma = \omega\)</span> should be avoided even for small damping. The following example illustrates this phenomenon.<div class="autopermalink" data-description="Paragraph"><a href="#forced-undamped-motion-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-resonance-mass-spring-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="example-resonance-mass-spring-3-1-1">In the resonant system discussed in <a href="sec-3-5.html#example-resonance-spring-mass-system-1" class="xref" data-knowl="./knowl/xref/example-resonance-spring-mass-system-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.7">Example 3.5.7</a>, suppose that the surrounding medium offers a damping force that is numerically equal to 0.01 times the instantaneous velocity. Find the equation of motion and analyze the danger of having a low value of the damping coefficient.<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-resonance-mass-spring-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-resonance-mass-spring-3-2-1">
+<div class="para">The initial value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-damping-1.html ./knowl/xref/fig-small-damping-0.html ./knowl/xref/fig-resonance-1.html" id="eq-small-damping-1">
+\begin{equation}
+\begin{cases} y''+0.001y' +25 y = 18 \sin(5 t),\\ y(0)  =0, \quad y'(0)  = 0.
+\end{cases}\tag{3.5.23}
+\end{equation}
+</div>
+<div class="para">The auxiliary equation for <span class="process-math">\(y''+0.001y' +25 y=0\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-damping-1.html ./knowl/xref/fig-small-damping-0.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-mass-spring-3-2-1-3">
+\begin{equation*}
+r^2 +0.001 r + 25 =0
+\end{equation*}
+</div>
+<div class="para">with solutions <span class="process-math">\(r = -a\pm ib\text{,}\)</span> where <span class="process-math">\(a = 0.0005\)</span> and <span class="process-math">\(b = \frac{1}{2}\sqrt{100-10^{-6}}.\)</span> Then the general solution of the homogeneous differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-damping-1.html ./knowl/xref/fig-small-damping-0.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-mass-spring-3-2-1-7">
+\begin{equation*}
+y_h(t) = e^{-at}\left(c_1 \cos(bt) + c_2 \sin(bt)\right),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. Let <span class="process-math">\(y_p(t) = A\cos(5t) + B\sin(5t)\)</span> be particular solution of the nonhomogeneous equation in <a href="sec-3-5.html#eq-small-damping-1" class="xref" data-knowl="./knowl/xref/eq-small-damping-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.23">(3.5.23)</a>. Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-damping-1.html ./knowl/xref/fig-small-damping-0.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-mass-spring-3-2-1-12">
+\begin{equation*}
+y'_p(t) = -5A\sin(5t) + 5B\cos(5t)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-damping-1.html ./knowl/xref/fig-small-damping-0.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-mass-spring-3-2-1-13">
+\begin{equation*}
+y''_p(t) = -25A\cos(5t) - 25B\sin(5t) = -25 y_p(t).
+\end{equation*}
+</div>
+<div class="para">Substituting <span class="process-math">\(y_p\)</span> for <span class="process-math">\(y\)</span> in the nonhomogeneous equation yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-damping-1.html ./knowl/xref/fig-small-damping-0.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-mass-spring-3-2-1-16">
+\begin{equation*}
+-25 y_p(t)-0.005A \sin(5t)+0.005B\cos(5t) + 25y_p(t) =18 \sin(5 t),
+\end{equation*}
+</div>
+<div class="para">which gives <span class="process-math">\(A = -3600\)</span> and <span class="process-math">\(B=0.\)</span> Then <span class="process-math">\(y_p(t) = -3600 \cos(5t)\text{,}\)</span> and therefore the general solution of the nonhomogeneous equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-damping-1.html ./knowl/xref/fig-small-damping-0.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-mass-spring-3-2-1-20">
+\begin{equation*}
+y(t) =  e^{-at}\left(c_1 \cos(bt) + c_2 \sin(bt)\right)- 3600 \cos(5t).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(y(0) = 0\text{,}\)</span> we have <span class="process-math">\(0 = c_1 - 3600,\)</span> i.e., <span class="process-math">\(c_1 = 3600.\)</span> Also, since <span class="process-math">\(y'(0) = 0,\)</span> we have <span class="process-math">\(0 = -a c_1 +bc_2,\)</span> which gives <span class="process-math">\(c_2 = ac_1/b = 3600a/b.\)</span> Thus, the solution to the initial value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-damping-1.html ./knowl/xref/fig-small-damping-0.html ./knowl/xref/fig-resonance-1.html" id="example-resonance-mass-spring-3-2-1-27">
+\begin{equation*}
+y(t) = 3600 e^{-at}\left( \cos(bt) + \frac{a}{b} \sin(bt)\right)- 3600 \cos(5t).
+\end{equation*}
+</div>
+<div class="para">The graph of the solution is shown in <a href="sec-3-5.html#fig-small-damping-0" class="xref" data-knowl="./knowl/xref/fig-small-damping-0.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.12">Figure 3.5.12</a> over <span class="process-math">\([0, 20]\)</span> shows that the system appears to have resonance-like behavior as in <a href="sec-3-5.html#fig-resonance-1" class="xref" data-knowl="./knowl/xref/fig-resonance-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.8">Figure 3.5.8</a>. However, it is evident that <span class="process-math">\(y(t) \approx - 3600 \cos(5t)\)</span> for large values of <span class="process-math">\(t\text{.}\)</span> In particular, <span class="process-math">\(y\left(7001\pi\right) \approx 3600.\)</span> <figure class="figure figure-like" id="fig-small-damping-0"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/small-damping.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) = 3600 e^{-at}\left( \cos(bt) + \frac{a}{b} \sin(bt)\right)- 3600 \cos(5t).\)</span><div class="autopermalink" data-description="Figure 3.5.12"><a href="#fig-small-damping-0" title="Copy heading and permalink for Figure 3.5.12" aria-label="Copy heading and permalink for Figure 3.5.12">🔗</a></div></figcaption></figure>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.11.1"><a href="#example-resonance-mass-spring-3-2" title="Copy heading and permalink for Solution 3.5.11.1" aria-label="Copy heading and permalink for Solution 3.5.11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.5.11"><a href="#example-resonance-mass-spring-3" title="Copy heading and permalink for Example 3.5.11" aria-label="Copy heading and permalink for Example 3.5.11">🔗</a></div></article></details><div class="para" id="forced-undamped-motion-6">In the following example, we examine an undamped forced system in which the frequency of the external force is slightly different from the natural frequency.<div class="autopermalink" data-description="Paragraph"><a href="#forced-undamped-motion-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-resonance-mass-spring-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="example-resonance-mass-spring-4-1-1">
+<div class="para">In the setting of the resonant problem in <a href="sec-3-5.html#example-resonance-spring-mass-system-1" class="xref" data-knowl="./knowl/xref/example-resonance-spring-mass-system-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.7">Example 3.5.7</a>, let us take the external force</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-resonance-spring-mass-system-1.html" id="example-resonance-mass-spring-4-1-1-2">
+\begin{equation*}
+F(t) = 180 \cos(5t+2\epsilon t),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\epsilon\)</span> is very small. Find the equation of  motion.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-resonance-mass-spring-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-resonance-mass-spring-4-2-1">
+<div class="para">The initial value problem is</div>
+<div class="displaymath process-math" id="eq-small-change-frequency-2">
+\begin{equation}
+\begin{cases} y'' +25 y = 18 \cos(\gamma t),\\ y(0)  =0, \quad y'(0)  = 0, \end{cases}\tag{3.5.24}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(\gamma =5+2\epsilon\)</span> with <span class="process-math">\(\epsilon\)</span> a small nonzero number. We have thus considered the frequency of the external force close to the natural frequency. The general solution of <span class="process-math">\(y''+25y =0\)</span> is</div>
+<div class="displaymath process-math" id="example-resonance-mass-spring-4-2-1-5">
+\begin{equation*}
+y_h(t) = c_1 \cos(5t) + c_2 \sin(5t),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-resonance-mass-spring-4-2-2">
+<div class="para">Let <span class="process-math">\(y_p(t) = A\cos(\gamma t) + B\sin(\gamma t)\)</span> be a particular solution of the nonhomogeneous equation in <a href="sec-3-5.html#eq-small-change-frequency-2" class="xref" data-knowl="./knowl/xref/eq-small-change-frequency-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.24">(3.5.24)</a>. Substituting <span class="process-math">\(y_p\)</span> for <span class="process-math">\(y\)</span> and <span class="process-math">\(y''_p\)</span> for <span class="process-math">\(y''\)</span> into the nonhomogeneous equation in <a href="sec-3-5.html#eq-small-change-frequency-2" class="xref" data-knowl="./knowl/xref/eq-small-change-frequency-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.24">(3.5.24)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-8">
+\begin{equation*}
+(25-\gamma^2) A \cos(\gamma t) + (25-\gamma^2) B \sin(\gamma t) = 18 \cos(\gamma t).
+\end{equation*}
+</div>
+<div class="para">This gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-9">
+\begin{equation*}
+A = -\frac{18}{\gamma^2 -25} \quad\mbox{and}\quad B=0.
+\end{equation*}
+</div>
+<div class="para">Thus,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-10">
+\begin{equation*}
+y(t) = -\frac{18}{\gamma ^2-25}\cos (\gamma  t),
+\end{equation*}
+</div>
+<div class="para">and therefore the general solution of the nonhomogeneous equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-11">
+\begin{equation*}
+y_p(t)=c_1 \cos ( 5 t )+c_2 \sin (5 t )-\frac{18}{\gamma ^2-25} \cos (\gamma  t).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(y(0) = 0\)</span> and <span class="process-math">\(y'(0) = 0,\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-14">
+\begin{equation*}
+0 = c_1 -\frac{18}{\gamma ^2-25} \quad\mbox{and}\quad 0=5c_2,
+\end{equation*}
+</div>
+<div class="para">that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-15">
+\begin{equation*}
+c_1=\frac{18}{\gamma ^2-25}\quad \mbox{and}\quad c_2=0.
+\end{equation*}
+</div>
+<div class="para">Thus, the solution of the initial value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-16">
+\begin{equation*}
+\begin{split} y(t) &amp;= \frac{18}{\gamma ^2-25} (\cos (5 t)-\cos (\gamma t))\\ &amp;=-\frac{36}{(\gamma+5)(\gamma-5)} \sin\left(\frac12(\gamma-5)t\right)\; \sin\left(\frac12(\gamma+5)t\right)  \\ &amp;=-\frac{9}{(5+\epsilon)\epsilon} \sin(\epsilon t) \sin\left((5+\epsilon)t\right)\\ &amp;= A(t)\sin\left((5+\epsilon)t\right), \end{split}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-17">
+\begin{equation*}
+A(t) = -\frac{9}{(5+\epsilon)\epsilon} \sin(\epsilon t).
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html" id="example-resonance-mass-spring-4-2-2-18">
+\begin{equation*}
+\lvert y(t) \rvert \le \lvert A(t) \rvert
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(t\text{.}\)</span> This means that the graph of <span class="process-math">\(y(t)\)</span> will be enveloped in the graphs of <span class="process-math">\(\pm A(t)\text{,}\)</span> bounding the amplitude of <span class="process-math">\(\sin\left((5+\epsilon)t\right)\)</span> as shown in <a href="sec-3-5.html#fig-beats" class="xref" data-knowl="./knowl/xref/fig-beats.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.14">Figure 3.5.14</a> for <span class="process-math">\(\varepsilon =0.5\text{.}\)</span> <figure class="figure figure-like" id="fig-beats"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/beats.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) = 3600 e^{-at}\left( \cos(bt) + \frac{a}{b} \sin(bt)\right)- 3600 \cos(5t).\)</span><div class="autopermalink" data-description="Figure 3.5.14"><a href="#fig-beats" title="Copy heading and permalink for Figure 3.5.14" aria-label="Copy heading and permalink for Figure 3.5.14">🔗</a></div></figcaption></figure> In music, when both waves are heard simultaneously, the sound pattern is known as <dfn class="terminology"><em class="emphasis">beats</em></dfn> and the sound system is said to behave <dfn class="terminology"><em class="emphasis">near resonance</em></dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-resonance-mass-spring-4-2-3">Using a graphing utility, the reader is suggested to plot <span class="process-math">\(y(t)\)</span> for a smaller value of <span class="process-math">\(\varepsilon\)</span> (e.g., <span class="process-math">\(\varepsilon = 0.02\)</span>) and for a larger value (e.g., <span class="process-math">\(\varepsilon = 5\)</span>) to observe how the motion changes when the frequency of the external force is close to the natural frequency and when it is far from it.<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.13.1"><a href="#example-resonance-mass-spring-4-2" title="Copy heading and permalink for Solution 3.5.13.1" aria-label="Copy heading and permalink for Solution 3.5.13.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.5.13"><a href="#example-resonance-mass-spring-4" title="Copy heading and permalink for Example 3.5.13" aria-label="Copy heading and permalink for Example 3.5.13">🔗</a></div></article></details><div class="para" id="forced-undamped-motion-8">In <a href="sec-3-5.html#example-resonance-mass-spring-4" class="xref" data-knowl="./knowl/xref/example-resonance-mass-spring-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.13">Example 3.5.13</a>, we could have used <span class="process-math">\(F(t) = 180 \sin(5t+2\epsilon t)\)</span> with reference to <a href="sec-3-5.html#example-resonance-spring-mass-system-1" class="xref" data-knowl="./knowl/xref/example-resonance-spring-mass-system-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.7">Example 3.5.7</a>. The choice of the cosine function is only for convenience.<div class="autopermalink" data-description="Paragraph"><a href="#forced-undamped-motion-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: IV. Forced Damped  Motion (b&gt;0,\;F(t) \ne 0)"><a href="#forced-undamped-motion" title="Copy heading and permalink for Paragraphs: IV. Forced Damped  Motion (b&gt;0,\;F(t) \ne 0)" aria-label="Copy heading and permalink for Paragraphs: IV. Forced Damped  Motion (b&gt;0,\;F(t) \ne 0)">🔗</a></div></section><div class="autopermalink" data-description="Subsection 3.5.1: Spring-Mass System"><a href="#subsec-spring-mass-system" title="Copy heading and permalink for Subsection 3.5.1: Spring-Mass System" aria-label="Copy heading and permalink for Subsection 3.5.1: Spring-Mass System">🔗</a></div></section><section class="subsection" id="subsec-RLC-circuit"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Electrical Circuits</span>
 </h3>
-<div class="para" id="subsec-RLC-circuit-2">An RLC circuit is another common physical application of second-order linear differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-RLC-circuit-2">In this subsection, we first study ordinary differential equations as initial value problems in electric circuits that consist of a voltage source of the electromotive force <span class="process-math">\(e(t)\)</span> driving electric charges and producing a current <span class="process-math">\(i(t)\)</span> (e.g., a battery for direct voltage or a generator for alternating voltage), a resistor (e.g., appliances) of resistance <span class="process-math">\(R\text{,}\)</span> and an inductor of inductance <span class="process-math">\(L\)</span> in series as depicted in <a href="sec-3-5.html#fig-LRC-1" class="xref" data-knowl="./knowl/xref/fig-LRC-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.15">Figure 3.5.15</a> or <a href="sec-3-5.html#fig-LRC-2" class="xref" data-knowl="./knowl/xref/fig-LRC-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.16">Figure 3.5.16</a>. We then briefly discuss the analogy between the spring-mass system and the electric circuit.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.5.2: Electrical Circuits"><a href="#subsec-RLC-circuit" title="Copy heading and permalink for Subsection 3.5.2: Electrical Circuits" aria-label="Copy heading and permalink for Subsection 3.5.2: Electrical Circuits">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Applications"><a href="#sec-3-5" title="Copy heading and permalink for Section 3.5: Applications" aria-label="Copy heading and permalink for Section 3.5: Applications">🔗</a></div></section></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;grid-template-columns:44.4444444444444% 44.4444444444444%;column-gap:10%;">
+<div class="sbspanel sbspanel--middle middle" style=""><figure class="figure figure-like" id="fig-LRC-1"><div class="image-box"><img src="generated/latex-image/fig-LRC-1-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Direct voltage source<div class="autopermalink" data-description="Figure 3.5.15"><a href="#fig-LRC-1" title="Copy heading and permalink for Figure 3.5.15" aria-label="Copy heading and permalink for Figure 3.5.15">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--middle middle" style=""><figure class="figure figure-like" id="fig-LRC-2"><div class="image-box"><img src="generated/latex-image/fig-LRC-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Alternating voltage source<div class="autopermalink" data-description="Figure 3.5.16"><a href="#fig-LRC-2" title="Copy heading and permalink for Figure 3.5.16" aria-label="Copy heading and permalink for Figure 3.5.16">🔗</a></div></figcaption></figure></div>
+</div></div>
+<div class="para" id="subsec-RLC-circuit-4">Let <span class="process-math">\(q(t)\)</span> denote the electric charge on the capacitor at time <span class="process-math">\(t\text{.}\)</span> According to Kirchhoff’s second law, <em class="emphasis">the voltage impressed on a closed loop equals the sum of the voltage drops across the components in the loop.</em> The voltage drops across a resistor, inductor and capacitor are modeled as being proportional to <span class="process-math">\(i(t), i'(t), q(t),\)</span> respectively. These voltage drops are modeled as follows:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-RLC-circuit-5">
+<ol class="lower-roman ol-marker-1" id="subsec-RLC-circuit-5-1">
+<li id="subsec-RLC-circuit-5-1-1">
+<div class="para" id="subsec-RLC-circuit-5-1-1-1">the voltage drop across a inductor <span class="process-math">\(= L \;i'(t),\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#subsec-RLC-circuit-5-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="subsec-RLC-circuit-5-1-2">
+<div class="para" id="subsec-RLC-circuit-5-1-2-1">the voltage drop across a resistor <span class="process-math">\(= R \;i(t),\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#subsec-RLC-circuit-5-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li id="subsec-RLC-circuit-5-1-3">
+<div class="para" id="subsec-RLC-circuit-5-1-3-1">the voltage drop across a capacitor <span class="process-math">\(= \displaystyle\frac{1}{C}\; q(t),\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-5-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#subsec-RLC-circuit-5-1-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-RLC-circuit-6">where the constants <span class="process-math">\(L\text{,}\)</span> <span class="process-math">\(R\text{,}\)</span> and <span class="process-math">\(C\)</span> are called the inductance, resistance, and capacitance, respectively, and these quantities are typically measured in henry (h), ohm (<span class="process-math">\(\Omega\)</span>), and farad (f), respectively. The corresponding units for <span class="process-math">\(q\text{,}\)</span> <span class="process-math">\(E\text{,}\)</span> and <span class="process-math">\(I\)</span> are coulomb (C), volt (V), and ampere (A).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-RLC-circuit-7">
+<div class="para">We recall that the current <span class="process-math">\(i(t)\)</span> flowing through the capacitor is given by</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-7-2">
+\begin{equation*}
+i(t) = q'(t),\quad  \text{ so that }\quad  i'(t) = q''(t).
+\end{equation*}
+</div>
+<div class="para">and therefore Kirchhoff’s law yields</div>
+<div class="displaymath process-math" id="eq-LRC">
+\begin{equation}
+Lq''(t)+R  q'(t)+ \frac{1}{C} q(t) = e(t),\tag{3.5.25}
+\end{equation}
+</div>
+<div class="para">which is a second-order linear differential equation in <span class="process-math">\(q(t)\)</span> with constant coefficients.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-RLC-circuit-8">
+<div class="para">For analogy, we can interchange the spring-mass system parameters in</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-mass-spring5.html ./knowl/xref/eq-LRC.html" id="subsec-RLC-circuit-8-1">
+\begin{equation*}
+my''(t)+ by'(t) + k y(t) = F(t)
+\end{equation*}
+</div>
+<div class="para">(see <a href="sec-3-5.html#eq-mass-spring5" class="xref" data-knowl="./knowl/xref/eq-mass-spring5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>) and series <span class="process-math">\(LRC\)</span> circuit parameters in <a href="sec-3-5.html#eq-LRC" class="xref" data-knowl="./knowl/xref/eq-LRC.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.25">(3.5.25)</a> as follows:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="subsec-RLC-circuit-9"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Parameter Analogies<div class="autopermalink" data-description="Table 3.5.17: Parameter Analogies"><a href="#subsec-RLC-circuit-9" title="Copy heading and permalink for Table 3.5.17: Parameter Analogies" aria-label="Copy heading and permalink for Table 3.5.17: Parameter Analogies">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t3 lines">Spring-Mass</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines"></th>
+<th scope="col" class="c m b1 r0 l0 t3 lines">Series <span class="process-math">\(LRC\)</span>
+</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(m\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\longleftrightarrow\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(L\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(b\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\longleftrightarrow\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(R\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(k\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\longleftrightarrow\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle\frac{1}{C}\)</span></td>
+</tr>
+<tr>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\omega =\sqrt{k/m}\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\longleftrightarrow\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\omega =\sqrt{1/LC}\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="subsec-RLC-circuit-10">In addition, the three significantly different cases of the spring-mass system apply to the <span class="process-math">\(LRC\)</span> circuit as follows:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="subsec-RLC-circuit-11"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Parameter Analogies<div class="autopermalink" data-description="Table 3.5.18: Parameter Analogies"><a href="#subsec-RLC-circuit-11" title="Copy heading and permalink for Table 3.5.18: Parameter Analogies" aria-label="Copy heading and permalink for Table 3.5.18: Parameter Analogies">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t3 lines">Damping Type</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines">Spring-Mass</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines">Series <span class="process-math">\(LRC\)</span>
+</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Underdamped</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(b^2&lt; 4mk\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2&lt;\frac{4L}{C}\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Critically damped</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(b^2= 4mk\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2=\frac{4L}{C}\)</span></td>
+</tr>
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Overdamped</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(b^2&gt; 4mk\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2&gt;\frac{4L}{C}\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="subsec-RLC-circuit-12">We now consider the parallel <span class="process-math">\(LRC\)</span> circuit shown in Figure <a href="sec-3-5.html#fig-parallel-LRC" class="xref" data-knowl="./knowl/xref/fig-parallel-LRC.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.19">Figure 3.5.19</a>, where a current source supplies the input current <span class="process-math">\(i(t)\text{.}\)</span> The diagram also shows that the current <span class="process-math">\(i(t)\)</span> splits into three branch currents <span class="process-math">\(i_1(t)\text{,}\)</span> <span class="process-math">\(i_2(t)\text{,}\)</span> and <span class="process-math">\(i_3(t)\)</span> flowing through a capacitor, resister and inductor, respectively. We develop a differential equation for the impressed voltage <span class="process-math">\(e(t)\)</span> across the components produced from the source current <span class="process-math">\(i(t).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-parallel-LRC"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig-parallel-LRC-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Parallel <span class="process-math">\(LRC\)</span> circuit<div class="autopermalink" data-description="Figure 3.5.19"><a href="#fig-parallel-LRC" title="Copy heading and permalink for Figure 3.5.19" aria-label="Copy heading and permalink for Figure 3.5.19">🔗</a></div></figcaption></figure><div class="para logical" id="subsec-RLC-circuit-14">
+<div class="para">By Kirchhoff’s second law which states that <em class="emphasis">the current flowing to a point in a circuit must equal the current flowing away from the point</em>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-LRC-parallel-1.html ./knowl/xref/eq-LRC-parallel-2.html" id="eq-LRC-parallel-1">
+\begin{equation}
+i_1(t) + i_2(t) +i_3(t) = i(t).\tag{3.5.26}
+\end{equation}
+</div>
+<div class="para">Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-LRC-parallel-1.html ./knowl/xref/eq-LRC-parallel-2.html" id="subsec-RLC-circuit-14-3">
+\begin{equation*}
+i_1(t) = C\;e'(t), \quad i_2(t) =  \frac{e(t)}{R},  \quad \text{and } \quad i_3(t) = \frac{1}{L}\int e(t)\, dt,
+\end{equation*}
+</div>
+<div class="para">
+<a href="sec-3-5.html#eq-LRC-parallel-1" class="xref" data-knowl="./knowl/xref/eq-LRC-parallel-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.26">(3.5.26)</a> reduces to</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-LRC-parallel-1.html ./knowl/xref/eq-LRC-parallel-2.html" id="subsec-RLC-circuit-14-5">
+\begin{equation*}
+C\;e'(t)+\frac{e(t)}{R}+\frac{1}{L}\int e(t)\, dt = i(t).
+\end{equation*}
+</div>
+<div class="para">Differentiating with respect to <span class="process-math">\(t\)</span> yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-LRC-parallel-1.html ./knowl/xref/eq-LRC-parallel-2.html" id="eq-LRC-parallel-2">
+\begin{equation}
+C\; e''(t)+\frac{1}{R}\,e'(t)+\frac{1}{L}\,e(t) = i'(t).\tag{3.5.27}
+\end{equation}
+</div>
+<div class="para">For analogy, we can interchange the spring-mass system parameters, series <span class="process-math">\(LRC\)</span> circuit parameters, and parallel <span class="process-math">\(LRC\)</span> circuit parameters in <a href="sec-3-5.html#eq-LRC-parallel-2" class="xref" data-knowl="./knowl/xref/eq-LRC-parallel-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.27">(3.5.27)</a> as follows:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="subsec-RLC-circuit-15"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Parameter analogies<div class="autopermalink" data-description="Table 3.5.20: Parameter analogies"><a href="#subsec-RLC-circuit-15" title="Copy heading and permalink for Table 3.5.20: Parameter analogies" aria-label="Copy heading and permalink for Table 3.5.20: Parameter analogies">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t3 lines">Spring-Mass</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines">Series <span class="process-math">\(LRC\)</span>
+</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines">Parallel <span class="process-math">\(LRC\)</span>
+</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines"></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(m\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(L\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(C\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(b\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(R\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle\frac{1}{R}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(k\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle\frac{1}{C}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle\frac{1}{L}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\omega =\sqrt{k/m}\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\omega =\sqrt{1/LC}\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\omega =\sqrt{1/LC}\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><div class="para" id="subsec-RLC-circuit-16">In addition, the three significantly different cases of the spring-mass system apply to the <span class="process-math">\(LRC\)</span> circuits as follows:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="subsec-RLC-circuit-17"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Damping parameter analogies<div class="autopermalink" data-description="Table 3.5.21: Damping parameter analogies"><a href="#subsec-RLC-circuit-17" title="Copy heading and permalink for Table 3.5.21: Damping parameter analogies" aria-label="Copy heading and permalink for Table 3.5.21: Damping parameter analogies">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t3 lines">Damping Type</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines">Spring-Mass</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines">Series <span class="process-math">\(LRC\)</span>
+</th>
+<th scope="col" class="c m b1 r0 l0 t3 lines">Parallel <span class="process-math">\(LRC\)</span>
+</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Underdamped</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(b^2&lt; 4mk\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2&lt;\frac{4L}{C}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2&gt;\frac{L}{4C}\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Critically damped</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(b^2= 4mk\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2=\frac{4L}{C}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2=\frac{L}{4C}\)</span></td>
+</tr>
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Overdamped</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(b^2&gt; 4mk\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2&gt;\frac{4L}{C}\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\displaystyle R^2&lt;\frac{L}{4C}\)</span></td>
+</tr>
+</table></div></figure><details id="subsec-RLC-circuit-18" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-RLC-circuit-18-1-1">
+<div class="para">Consider a series <span class="process-math">\(LRC\)</span>-circuit with inductance <span class="process-math">\(L=1\,\text{h}\text{,}\)</span> resistance <span class="process-math">\(R=12\,\Omega\text{,}\)</span> and capacitance <span class="process-math">\(C=\dfrac{1}{40}\,\text{f}\text{.}\)</span> The circuit is driven by an external voltage</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-1-1-5">
+\begin{equation*}
+e(t) = 10\sin(2t) \qquad t&gt;0,
+\end{equation*}
+</div>
+<div class="para">measured in volts (V). Let <span class="process-math">\(q(t)\)</span> denote the charge measured in coulombs (C) on the capacitor, and let <span class="process-math">\(i(t)=q'(t)\)</span> be the current measured in amperes (A). Suppose the initial charge and current are</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-1-1-8">
+\begin{equation*}
+q(0)=0, \qquad q'(0)=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="subsec-RLC-circuit-18-1-2">
+<ol class="lower-alpha ol-marker-2" id="subsec-RLC-circuit-18-1-2-1">
+<li id="subsec-RLC-circuit-18-1-2-1-1">
+<div class="para" id="subsec-RLC-circuit-18-1-2-1-1-1">Derive the differential equation satisfied by <span class="process-math">\(q(t)\)</span> and solve it.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#subsec-RLC-circuit-18-1-2-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="subsec-RLC-circuit-18-1-2-1-2">
+<div class="para" id="subsec-RLC-circuit-18-1-2-1-2-1">Find the <em class="emphasis">transient part</em> and <em class="emphasis">steady-state</em> solution.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#subsec-RLC-circuit-18-1-2-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="subsec-RLC-circuit-18-1-2-1-3">
+<div class="para" id="subsec-RLC-circuit-18-1-2-1-3-1">Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#subsec-RLC-circuit-18-1-2-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-RLC-circuit-18-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-RLC-circuit-18-2-1">
+<div class="para">a. For a series <span class="process-math">\(LRC\)</span>–circuit, Kirchhoff’s voltage law gives</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-1-2">
+\begin{equation*}
+Lq''(t) + Rq'(t) + \frac{1}{C}q(t) = e(t).
+\end{equation*}
+</div>
+<div class="para">With <span class="process-math">\(L=1\text{,}\)</span> <span class="process-math">\(R=12\text{,}\)</span> <span class="process-math">\(C=\dfrac{1}{40}\text{,}\)</span> and <span class="process-math">\(e(t)=10\sin(2t)\text{,}\)</span> we obtain the differential equation</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-1-7">
+\begin{equation*}
+q'' + 12q' + 40q = 10\sin(2t).
+\end{equation*}
+</div>
+<div class="para">The corresponding homogeneous equation is</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-1-8">
+\begin{equation*}
+q'' + 12q' + 40q = 0.
+\end{equation*}
+</div>
+<div class="para">The roots of the characteristic equation</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-1-9">
+\begin{equation*}
+\lambda^2 + 12\lambda + 40 = 0
+\end{equation*}
+</div>
+<div class="para">are</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-1-10">
+\begin{equation*}
+\frac{-12 \pm \sqrt{-16}}{2} = -6 \pm 2i.
+\end{equation*}
+</div>
+<div class="para">Thus the general solution of the homogeneous equation is</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-1-11">
+\begin{equation*}
+q_h(t) = e^{-6t}\bigl(c_1\cos(2t) + c_2\sin(2t)\bigr)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-RLC-circuit-18-2-2">
+<div class="para">For a particular solution <span class="process-math">\(q_p(t),\)</span> suppose that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are constants to be determined, so that</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-2-4">
+\begin{equation*}
+q_p(t) = A\cos(2t) + B\sin(2t),
+\end{equation*}
+</div>
+<div class="para">is a particular solution of the nonhomogeneous equation. Then</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-2-5">
+\begin{equation*}
+\begin{split}&amp;q_p'(t) = -2A\sin(2t) + 2B\cos(2t), \text{ and } \\&amp; q_p''(t) = -4A\cos(2t) - 4B\sin(2t).
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Substituting into the equation <span class="process-math">\(q''+12q'+40q=10\sin(2t)\)</span> yields</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-2-7">
+\begin{equation*}
+\begin{split} &amp;(-4A\cos 2t - 4B\sin 2t) + 12(-2A\sin 2t + 2B\cos 2t)\\ &amp;+ 40(A\cos 2t + B\sin 2t) \\ = &amp;\bigl(36A + 24B\bigr)\cos(2t) + \bigl(-24A + 36B\bigr)\sin(2t) = 10\sin(2t).
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Thus we must have</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-2-8">
+\begin{equation*}
+36A + 24B = 0, \qquad -24A + 36B = 10.
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> gives</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-2-11">
+\begin{equation*}
+A= -\frac{5}{39} \mbox{ and } B = \frac{5}{26},
+\end{equation*}
+</div>
+<div class="para">and so</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-2-12">
+\begin{equation*}
+q_p(t) = -\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-RLC-circuit-18-2-3">
+<div class="para">The general solution is</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-3-1">
+\begin{equation*}
+\begin{split} q(t) = q_h(t) + q_p(t) &amp;= e^{-6t}\bigl(c_1\cos(2t) + c_2\sin(2t)\bigr)\\ &amp; -\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t), \end{split}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. Using <span class="process-math">\(q(0)=0\)</span> gives</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-3-5">
+\begin{equation*}
+c_1 - \frac{5}{39} = 0, \quad \mbox{ which implies }\quad c_1 = \frac{5}{39}.
+\end{equation*}
+</div>
+<div class="para">To use <span class="process-math">\(q'(0) = 0,\)</span> we first compute <span class="process-math">\(q'(t)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-3-8">
+\begin{equation*}
+\begin{aligned} q'(t) = &amp; e^{-6t}\Bigl[-6(c_1\cos(2t)\\ &amp;+ c_2\sin(2t)) +(-2c_1\sin(2t) + 2c_2\cos(2t))\Bigr] \\ &amp;+ \frac{10}{39}\sin(2t) + \frac{5}{13}\cos(2t).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Then, using <span class="process-math">\(q'(0)=0\text{,}\)</span> we get</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-3-10">
+\begin{equation*}
+-6c_1 + 2c_2 + \frac{5}{13}=0.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(c_1 = \frac{5}{39},\)</span> we have</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-3-12">
+\begin{equation*}
+-6\cdot\frac{5}{39} + 2c_2 + \frac{5}{13} = 0,
+\end{equation*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-3-13">
+\begin{equation*}
+c_2 = \frac{5}{26}.
+\end{equation*}
+</div>
+<div class="para">Thus, the solution for <span class="process-math">\(q(t)\)</span> is</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-3-15">
+\begin{equation*}
+q(t) = e^{-6t}\!\left(\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t)\right) -\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-RLC-circuit-18-2-4">
+<div class="para">b. The <dfn class="terminology"><em class="emphasis">transient part</em></dfn> of the solution is the part that <em class="emphasis">decays</em> to zero as <span class="process-math">\(t\to\infty\)</span> and depends on the initial conditions. Since</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-4-4">
+\begin{equation*}
+\lim\limits_{t\to\infty} e^{-6t}\!\left(\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t)\right)=0,
+\end{equation*}
+</div>
+<div class="para">the transient part of the solution for <span class="process-math">\(q(t)\)</span> is</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-4-6">
+\begin{equation*}
+e^{-6t}\!\left(\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t)\right)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-RLC-circuit-18-2-5">
+<div class="para">The <dfn class="terminology"><em class="emphasis">steady-state solution</em></dfn> is the part of the solution <span class="process-math">\(q(t)\)</span> that <em class="emphasis">remains</em> after the transient part has decayed to zero. Therefore the steady-state solution for <span class="process-math">\(q(t)\)</span> is given by</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-5-5">
+\begin{equation*}
+\lim_{t\to\infty} q(t) = -\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-RLC-circuit-18-2-6">
+<div class="para">c. The series <span class="process-math">\(LRC\)</span>-circuit is critically damped for</div>
+<div class="displaymath process-math" id="subsec-RLC-circuit-18-2-6-2">
+\begin{equation*}
+R = 2 \sqrt{\frac{L}{C}} =  4\sqrt{10}\; \Omega.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RLC-circuit-18-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.22.1"><a href="#subsec-RLC-circuit-18-2" title="Copy heading and permalink for Solution 3.5.22.1" aria-label="Copy heading and permalink for Solution 3.5.22.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.5.22"><a href="#subsec-RLC-circuit-18" title="Copy heading and permalink for Example 3.5.22" aria-label="Copy heading and permalink for Example 3.5.22">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.5.2: Electrical Circuits"><a href="#subsec-RLC-circuit" title="Copy heading and permalink for Subsection 3.5.2: Electrical Circuits" aria-label="Copy heading and permalink for Subsection 3.5.2: Electrical Circuits">🔗</a></div></section><section class="exercises" id="exercises-EX35"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercises-EX35-1">
+<h4 class="heading"><span class="title">Subsection 3.5.1 Spring-Mass System.</span></h4>
+<div class="introduction" id="exercises-EX35-1-2"><div class="para" id="exercises-EX35-1-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-3-5-1"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-3-5-1-1">An <span class="process-math">\(8\)</span>-kg mass attached to the lower end of a spring that is suspended vertically from a ceiling stretches the spring <span class="process-math">\(5\)</span> cm from its natural length until the mass comes to rest. The mass is then pulled downward causing an additional stretch of <span class="process-math">\(3\)</span> cm of the spring and then it is released. Assume that there is no air resistance and use the acceleration due to gravity <span class="process-math">\(g = 980\)</span> cm/s<span class="process-math">\(^2\text{.}\)</span> Let <span class="process-math">\(y(t)\)</span> be the displacement (in centimeters) of the mass from its equilibrium position measured positive in the downward direction.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-3-5-1-2">
+<ol class="lower-roman ol-marker-1" id="exercise-3-5-1-2-1">
+<li id="item-sho-1">
+<div class="para" id="item-sho-1-1">Determine a differential equation in <span class="process-math">\(y(t)\)</span> with initial conditions that describe the motion of the mass.<div class="autopermalink" data-description="Paragraph"><a href="#item-sho-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.1.i"><a href="#item-sho-1" title="Copy heading and permalink for Item 3.5.3.1.i" aria-label="Copy heading and permalink for Item 3.5.3.1.i">🔗</a></div>
+</li>
+<li id="exercise-3-5-1-2-1-2">
+<div class="para" id="exercise-3-5-1-2-1-2-1">Solve for the initial value problem in <a href="sec-3-5.html#item-sho-1" class="xref" data-knowl="./knowl/xref/item-sho-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.5.3.1.i">Item 3.5.3.1.i</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-3-5-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.1.ii"><a href="#exercise-3-5-1-2-1-2" title="Copy heading and permalink for Item 3.5.3.1.ii" aria-label="Copy heading and permalink for Item 3.5.3.1.ii">🔗</a></div>
+</li>
+<li id="exercise-3-5-1-2-1-3">
+<div class="para" id="exercise-3-5-1-2-1-3-1">Find the amplitude, period and circular frequency of the oscillatory motion.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-3-5-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.1.iii"><a href="#exercise-3-5-1-2-1-3" title="Copy heading and permalink for Item 3.5.3.1.iii" aria-label="Copy heading and permalink for Item 3.5.3.1.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-3-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.3.1"><a href="#exercise-3-5-1" title="Copy heading and permalink for Exercise 3.5.3.1" aria-label="Copy heading and permalink for Exercise 3.5.3.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-EX35-1-4"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-EX35-1-4-1">Suppose a vertical spring with spring constant <span class="process-math">\(8 \ \mathrm{N/m}\)</span> is suspended from a ceiling, and a <span class="process-math">\(2 \ \mathrm{kg}\)</span> mass is attached to its lower end. The mass slides along a vertical wall that exerts a damping force proportional to its velocity, with damping constant <span class="process-math">\(3 \ \mathrm{Ns/m}\text{.}\)</span> Let <span class="process-math">\(y(t)\)</span> denote the displacement (in meters) of the mass from its equilibrium position, where positive values of <span class="process-math">\(y(t)\)</span> correspond to positions below the equilibrium position.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-EX35-1-4-2">
+<ol class="lower-roman ol-marker-1" id="exercises-EX35-1-4-2-1">
+<li id="item-sho-2">
+<div class="para" id="item-sho-2-1">Derive a differential equation governing the motion of the system in terms of <span class="process-math">\(y(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#item-sho-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.2.i"><a href="#item-sho-2" title="Copy heading and permalink for Item 3.5.3.2.i" aria-label="Copy heading and permalink for Item 3.5.3.2.i">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-4-2-1-2">
+<div class="para" id="exercises-EX35-1-4-2-1-2-1">Find the general solution of the differential equation obtained in <a href="sec-3-5.html#item-sho-2" class="xref" data-knowl="./knowl/xref/item-sho-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.5.3.2.i">Item 3.5.3.2.i</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-4-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.2.ii"><a href="#exercises-EX35-1-4-2-1-2" title="Copy heading and permalink for Item 3.5.3.2.ii" aria-label="Copy heading and permalink for Item 3.5.3.2.ii">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-4-2-1-3">
+<div class="para" id="exercises-EX35-1-4-2-1-3-1">Determine whether the system is underdamped, critically damped, or overdamped.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-4-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.2.iii"><a href="#exercises-EX35-1-4-2-1-3" title="Copy heading and permalink for Item 3.5.3.2.iii" aria-label="Copy heading and permalink for Item 3.5.3.2.iii">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-4-2-1-4">
+<div class="para" id="exercises-EX35-1-4-2-1-4-1">If the system is not critically damped, find the value of the damping constant that would make the system critically damped.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-4-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.2.iv"><a href="#exercises-EX35-1-4-2-1-4" title="Copy heading and permalink for Item 3.5.3.2.iv" aria-label="Copy heading and permalink for Item 3.5.3.2.iv">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.3.2"><a href="#exercises-EX35-1-4" title="Copy heading and permalink for Exercise 3.5.3.2" aria-label="Copy heading and permalink for Exercise 3.5.3.2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-EX35-1-5"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-EX35-1-5-1">A <span class="process-math">\(10\)</span>-kg mass suspended from the lower end of a vertically hanging spring stretches the spring <span class="process-math">\(9.8\)</span> centimeters. At time <span class="process-math">\(t = 0\)</span> when the mass is at rest in the equilibrium position, the mass-spring system is acted by the force <span class="process-math">\(F(t) = 360\cos(8t)\text{,}\)</span> measured positive (in newtons) in the downward direction. Suppose that time <span class="process-math">\(t\)</span> is measured in seconds. Let <span class="process-math">\(y(t)\)</span> denote the displacement (in centimeters) of the mass from its equilibrium position, measured positive in the downward direction.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-EX35-1-5-2">
+<ol class="lower-roman ol-marker-1" id="exercises-EX35-1-5-2-1">
+<li id="exercises-EX35-1-5-2-1-1">
+<div class="para" id="exercises-EX35-1-5-2-1-1-1">Determine the spring constant <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-5-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.3.i"><a href="#exercises-EX35-1-5-2-1-1" title="Copy heading and permalink for Item 3.5.3.3.i" aria-label="Copy heading and permalink for Item 3.5.3.3.i">🔗</a></div>
+</li>
+<li id="item-forced-2">
+<div class="para" id="item-forced-2-1">Develop an initial value problem for <span class="process-math">\(y(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#item-forced-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.3.ii"><a href="#item-forced-2" title="Copy heading and permalink for Item 3.5.3.3.ii" aria-label="Copy heading and permalink for Item 3.5.3.3.ii">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-5-2-1-3">
+<div class="para" id="exercises-EX35-1-5-2-1-3-1">Solve the initial value problem developed in <a href="sec-3-5.html#item-forced-2" class="xref" data-knowl="./knowl/xref/item-forced-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.5.3.3.ii">Item 3.5.3.3.ii</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-5-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.3.iii"><a href="#exercises-EX35-1-5-2-1-3" title="Copy heading and permalink for Item 3.5.3.3.iii" aria-label="Copy heading and permalink for Item 3.5.3.3.iii">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-5-2-1-4">
+<div class="para" id="exercises-EX35-1-5-2-1-4-1">Using a graphing utility, plot the solution <span class="process-math">\(y(t)\)</span> and determine whether the motion exhibits a “beat”.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-5-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.3.iv"><a href="#exercises-EX35-1-5-2-1-4" title="Copy heading and permalink for Item 3.5.3.3.iv" aria-label="Copy heading and permalink for Item 3.5.3.3.iv">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-5-2-1-5">
+<div class="para" id="exercises-EX35-1-5-2-1-5-1">Find the maximum positive displacement of the mass from its equilibrium position.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-5-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.3.v"><a href="#exercises-EX35-1-5-2-1-5" title="Copy heading and permalink for Item 3.5.3.3.v" aria-label="Copy heading and permalink for Item 3.5.3.3.v">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.3.3"><a href="#exercises-EX35-1-5" title="Copy heading and permalink for Exercise 3.5.3.3" aria-label="Copy heading and permalink for Exercise 3.5.3.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-EX35-1-6"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-EX35-1-6-1">A 8-pound weight attached to a spring of natural length 7 feet stretches the spring to a total length of 8.6 feet. The entire system is placed in a medium that exerts a damping force numerically equal to 4 times the instantaneous velocity.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-EX35-1-6-2">
+<ol class="lower-roman ol-marker-1" id="exercises-EX35-1-6-2-1">
+<li id="exercises-EX35-1-6-2-1-1">
+<div class="para" id="exercises-EX35-1-6-2-1-1-1">Write down an initial value problem describing the motion.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-6-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.4.i"><a href="#exercises-EX35-1-6-2-1-1" title="Copy heading and permalink for Item 3.5.3.4.i" aria-label="Copy heading and permalink for Item 3.5.3.4.i">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-6-2-1-2">
+<div class="para" id="exercises-EX35-1-6-2-1-2-1">Determine the equation of motion if the mass is released from rest at a point <span class="process-math">\(\tfrac{1}{2}\)</span> ft below the equilibrium position with a downward velocity of 1 ft/s.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-6-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.4.ii"><a href="#exercises-EX35-1-6-2-1-2" title="Copy heading and permalink for Item 3.5.3.4.ii" aria-label="Copy heading and permalink for Item 3.5.3.4.ii">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-6-2-1-3">
+<div class="para" id="exercises-EX35-1-6-2-1-3-1">Express the equation of motion in terms of a single sine function.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-6-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.4.iii"><a href="#exercises-EX35-1-6-2-1-3" title="Copy heading and permalink for Item 3.5.3.4.iii" aria-label="Copy heading and permalink for Item 3.5.3.4.iii">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-6-2-1-4">
+<div class="para" id="exercises-EX35-1-6-2-1-4-1">Find the times at which the mass passes through the equilibrium position moving downward.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-6-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.4.iv"><a href="#exercises-EX35-1-6-2-1-4" title="Copy heading and permalink for Item 3.5.3.4.iv" aria-label="Copy heading and permalink for Item 3.5.3.4.iv">🔗</a></div>
+</li>
+<li id="exercises-EX35-1-6-2-1-5">
+<div class="para" id="exercises-EX35-1-6-2-1-5-1">Plot the equation of motion.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-6-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.4.v"><a href="#exercises-EX35-1-6-2-1-5" title="Copy heading and permalink for Item 3.5.3.4.v" aria-label="Copy heading and permalink for Item 3.5.3.4.v">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-1-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.3.4"><a href="#exercises-EX35-1-6" title="Copy heading and permalink for Exercise 3.5.3.4" aria-label="Copy heading and permalink for Exercise 3.5.3.4">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.5.3.1–4: Subsection 3.5.1 Spring-Mass System"><a href="#exercises-EX35-1" title="Copy heading and permalink for Exercise Group 3.5.3.1–4: Subsection 3.5.1 Spring-Mass System" aria-label="Copy heading and permalink for Exercise Group 3.5.3.1–4: Subsection 3.5.1 Spring-Mass System">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercises-EX35-2">
+<h4 class="heading"><span class="title">Subsection 3.5.2 Electrical Circuits.</span></h4>
+<div class="introduction" id="exercises-EX35-2-2"><div class="para" id="exercises-EX35-2-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercises-EX35-2-3"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercises-EX35-2-3-1">
+<div class="para">A series <span class="process-math">\(LRC\)</span>–circuit contains an inductor with inductance <span class="process-math">\(L=1\,\text{h}\text{,}\)</span> a resistor with resistance <span class="process-math">\(R=10\,\Omega\text{,}\)</span> and a capacitor with capacitance <span class="process-math">\(C=0.02\,\text{f}\text{.}\)</span> The circuit is driven by a constant external voltage <span class="process-math">\(e(t)=5\,\text{V}\text{.}\)</span> Let <span class="process-math">\(q(t)\)</span> denote the charge (in coulombs) on the capacitor, and let <span class="process-math">\(i(t)=q'(t)\)</span> be the current (in amperes). Given the initial conditions <span class="process-math">\(q(0)=4\)</span> C and <span class="process-math">\(i(0)=q'(0)=0\)</span> A,</div>
+<ol class="lower-roman ol-marker-1" id="exercises-EX35-2-3-1-10">
+<li id="exercises-EX35-2-3-1-10-1">
+<div class="para" id="exercises-EX35-2-3-1-10-1-1">determine the charge <span class="process-math">\(q(t)\)</span> for <span class="process-math">\(t&gt;0\text{;}\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-3-1-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.5.i"><a href="#exercises-EX35-2-3-1-10-1" title="Copy heading and permalink for Item 3.5.3.5.i" aria-label="Copy heading and permalink for Item 3.5.3.5.i">🔗</a></div>
+</li>
+<li id="exercises-EX35-2-3-1-10-2">
+<div class="para" id="exercises-EX35-2-3-1-10-2-1">find the transient current and steady-state current.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-3-1-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.5.ii"><a href="#exercises-EX35-2-3-1-10-2" title="Copy heading and permalink for Item 3.5.3.5.ii" aria-label="Copy heading and permalink for Item 3.5.3.5.ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.3.5"><a href="#exercises-EX35-2-3" title="Copy heading and permalink for Exercise 3.5.3.5" aria-label="Copy heading and permalink for Exercise 3.5.3.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-EX35-2-4"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-EX35-2-4-1">Consider a series <span class="process-math">\(LRC\)</span>-circuit with inductance <span class="process-math">\(L=1\ \text{h}\text{,}\)</span> capacitance <span class="process-math">\(C=16\ \text{f}\text{,}\)</span> resistance <span class="process-math">\(R\text{,}\)</span> and no external voltage source. Let <span class="process-math">\(q(t)\)</span> denote the charge (in coulombs) on the capacitor at time <span class="process-math">\(t\)</span> (in seconds).<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-EX35-2-4-2">
+<li id="exercises-EX35-2-4-2-1">
+<div class="para" id="exercises-EX35-2-4-2-1-1">Find <span class="process-math">\(q(t)\)</span> when <span class="process-math">\(R=4\ \Omega\text{,}\)</span> <span class="process-math">\(q(0)=5\)</span> C, and <span class="process-math">\(q'(0)=0\)</span> C/s.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.6.i"><a href="#exercises-EX35-2-4-2-1" title="Copy heading and permalink for Item 3.5.3.6.i" aria-label="Copy heading and permalink for Item 3.5.3.6.i">🔗</a></div>
+</li>
+<li id="exercises-EX35-2-4-2-2">
+<div class="para" id="exercises-EX35-2-4-2-2-1">Find the first time when the charge on the capacitor is equal to zero.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.6.ii"><a href="#exercises-EX35-2-4-2-2" title="Copy heading and permalink for Item 3.5.3.6.ii" aria-label="Copy heading and permalink for Item 3.5.3.6.ii">🔗</a></div>
+</li>
+<li id="exercises-EX35-2-4-2-3">
+<div class="para" id="exercises-EX35-2-4-2-3-1">Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory behavior.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-4-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.6.iii"><a href="#exercises-EX35-2-4-2-3" title="Copy heading and permalink for Item 3.5.3.6.iii" aria-label="Copy heading and permalink for Item 3.5.3.6.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.5.3.6"><a href="#exercises-EX35-2-4" title="Copy heading and permalink for Exercise 3.5.3.6" aria-label="Copy heading and permalink for Exercise 3.5.3.6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-EX35-2-5"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-EX35-2-5-1">Consider a parallel <span class="process-math">\(LRC\)</span>-circuit with inductance <span class="process-math">\(L=\frac{4}{5}\ \text{h}\text{,}\)</span> capacitance <span class="process-math">\(C=\frac{1}{16}\ \text{f}\text{,}\)</span> resistance <span class="process-math">\(R\text{,}\)</span> and a constant external current source. Let <span class="process-math">\(q(t)\)</span> denote the charge (in coulombs) on the capacitor at time <span class="process-math">\(t\)</span> (in seconds).<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-EX35-2-5-2">
+<li id="exercises-EX35-2-5-2-1">
+<div class="para" id="exercises-EX35-2-5-2-1-1">Find <span class="process-math">\(q(t)\)</span> when <span class="process-math">\(R=4\ \Omega\text{,}\)</span> <span class="process-math">\(q(0)=5\)</span> C, and <span class="process-math">\(q'(0)=0\)</span> C/s.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.7.i"><a href="#exercises-EX35-2-5-2-1" title="Copy heading and permalink for Item 3.5.3.7.i" aria-label="Copy heading and permalink for Item 3.5.3.7.i">🔗</a></div>
+</li>
+<li id="exercises-EX35-2-5-2-2">
+<div class="para" id="exercises-EX35-2-5-2-2-1">Find the first time when the charge on the capacitor is equal to zero.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.7.ii"><a href="#exercises-EX35-2-5-2-2" title="Copy heading and permalink for Item 3.5.3.7.ii" aria-label="Copy heading and permalink for Item 3.5.3.7.ii">🔗</a></div>
+</li>
+<li id="exercises-EX35-2-5-2-3">
+<div class="para" id="exercises-EX35-2-5-2-3-1">Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory behavior.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-EX35-2-5-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.3.7.iii"><a href="#exercises-EX35-2-5-2-3" title="Copy heading and permalink for Item 3.5.3.7.iii" aria-label="Copy heading and permalink for Item 3.5.3.7.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.5.3.7"><a href="#exercises-EX35-2-5" title="Copy heading and permalink for Exercise 3.5.3.7" aria-label="Copy heading and permalink for Exercise 3.5.3.7">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.5.3.5–7: Subsection 3.5.2 Electrical Circuits"><a href="#exercises-EX35-2" title="Copy heading and permalink for Exercise Group 3.5.3.5–7: Subsection 3.5.2 Electrical Circuits" aria-label="Copy heading and permalink for Exercise Group 3.5.3.5–7: Subsection 3.5.2 Electrical Circuits">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercises 3.5.3"><a href="#exercises-EX35" title="Copy heading and permalink for Exercises 3.5.3" aria-label="Copy heading and permalink for Exercises 3.5.3">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Applications"><a href="#sec-3-5" title="Copy heading and permalink for Section 3.5: Applications" aria-label="Copy heading and permalink for Section 3.5: Applications">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-3-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-3-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

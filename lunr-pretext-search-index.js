@@ -1051,7 +1051,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.5",
   "title": "Applications",
-  "body": " Applications     Be able to apply methods of solutions from previous sections to some elementary problems in applications.      In this section we will study three elementary examples of applications where the methods from previous sections can be effectively used.    Spring-Mass System  A common example of a second order linear differential equation with constant coefficients arises in modeling the motion of a mass attached to a spring whose other end is fixed to a support. Let us consider a spring suspended vertically from a fixed ceiling (rigid support) with the mass attached to its lower end, as illustrated in .   A mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.      Let denote the natural (unstretched) length of the spring, and let be the amount by which the spring stretches when the mass is attached and allowed to hang in equilibrium under gravity. We assume that the motion of the mass is restricted to the vertical line through the point of the equilibrium of the mass. To take this vertical line (see (d)) as the coordinate axis, we take the equilibrium point as the origin and assign the vertically downward direction as the positive direction.  Denote by the displacement of the mass at time from its equilibrium position (the origin). In addition to the restoring force of the spring and gravitational force , assume that the mass is acted upon by a damping force as well as an external force See (c) for wall friction as an example of a damping force. Thus, we have According to Newton's second law, we then have  How do we model the spring force   Since a spring that is stretched or compressed tends to return to its natural length, the spring force wants to pull the mass toward its equilibrium position. For an ideal spring—one made of a homogeneous material with uniform coiling—Robert Hooke, a 17th-century English physicist, established that the restoring force required to stretch or compress the spring (without damaging it) is directly proportional to the resulting displacement. For a spring made up of a heterogeneous material and with nonuniform coiling, the restoring force may be modeled by a nonlinear function of the displacement. For example, with a fixed number in and a fixed real number. This means that where is a fixed positive constant, called the spring constant which measures the stiffness of the spring. The negative means that the restoring force is directed toward the origin.  One may ask: how do we practically calculate of a spring? The simplest way to calculate is to simply suspend the spring from a support with the mass attached to its other end and observe the stretch the spring experiences for its equilibrium under gravity. Since the mass is at rest, the net force acting on the mass is zero, that is, which yields and so    How do we model   It is intuitive that the damping force (or drag) increases as the speed of the mass increases. Hence, the simplest way to model the damping force is to assume that it is directly proportional to the velocity. For a medium that resists the motion of the mass depending on a power of the speed, the damping force may be modeled by a nonlinear function of the velocity. For example, with a fixed number in and a fixed real number. This means that where is the constant of proportionality, called the damping coefficient of the medium offering the resistance to the motion of the mass.  Using and in , we obtain   which, in view of , yields This is a second order linear differential equation with constant coefficient, and it can be solved using the methods from the previous sections. For example, the method of undetermined coefficients or variation of parameters can be used.  We now examine several interesting and special cases of before discussing the general form.   I. Free Undamped Motion ( )  When (no damping) and (no external forces), the mass-spring system is said to have a free undamped motion and the system is called a simple harmonic oscillator . The resulting differential equation for the displacement of the mass from its equilibrium position is which, with , becomes also referred to as a simple harmonic oscillator. Then the general solution of the simple harmonic oscillator is where and are arbitrary constants which can be determined when the initial conditions are provided.  The displacement described by can interpreted most effectively when it is written in the form of a single sine or cosine function. To express it in the form of a single sine function, we seek to find two constants and so that Then Since the terms in and must match, we obtain Squaring and adding these equations gives We take It is possible that , in which case, we have for all , the trivial solution, and this means that the mass is at rest in the equilibrium position for all Therefore the only interesting case is when If then We have Also, note that can be written as It is now clear from that the mass oscillates about the origin with the amplitude which is the maximum displacement from the equilibrium position. The time period for one complete oscillation is and therefore the number is the circular frequency of the oscillations, that is, the number of cycles per unit units of time.    A 2-pound mass stretches a spring 6 inches. At time , the mass is released from a position 8 inches below equilibrium with an initial upward velocity of ft\/s.     Find the equation of motion in both the forms and .    Graph the velocity versus the displacement.          Let denote in feet the displacement of the mass from the equilibrium position measured positively in the vertically downward direction. We have We have and the spring constant The differential equation of motion is which becomes and therefore with the initial condition The general solution of the differential equation is   Applying the initial conditions gives   Also, since and we obtain that is, Hence the equation of the motion is which is of the form . Using the method discussed for to find the equation of the motion in the amplitude-phase, we compute and and therefore   Its graph is shown in .    The graph of         We find Then for all . This takes the form for all and is an ellipse in the -plane as shown in . The graph is called the orbit of the simple harmonic oscillator and visualizes the oscillatory motion.   The graph of             II. Free Damped Motion ( )  When (with damping) and (no external forces), the mass-spring system is said to have a free damped motion . The resulting differential equation for the motion of the mass is which, with and , becomes and the differential equation is known as a free damped spring–mass system. Its general solution depends on the relative strengths of the damping and spring forces. When the spring force dominates, the motion is oscillatory with amplitude decaying to zero as and when the damping force dominates, the motion is non-oscillatory. There exists a threshold value of the damping coefficient—called the critical damping—above which no oscillations occurs, and below which the system exhibits damped oscillations whose amplitude decays to zero as . To analyze this, we start with the auxiliary equation for ; namely, with is a trial solution. It then follows that   There are three significantly different cases of a free damped motion.      Underdamped Motion : When  yields so that the general solution of is where and are arbitrary constants are determined when the initial conditions are provided. The displacement is periodic with the period Moreover, since we observe that It then follows that   With regard to the velocity of the mass, we find Again, we observe that Hence, the mass approaches the equilibrium position while oscillating with the circular frequency and the velocity approaches zero as goes to   Since and  is equivalent to We conclude that when the damping force is too weak to counteract a strong spring force, the mass undergoes damped oscillations: the amplitude gradually decreases to zero. In this case, the mass-spring system is said to be underdamped .     Overdamped Motion : When  yields so that the general solution of is where and are arbitrary constants are determined when the initial conditions are provided. Therefore is not periodic Moreover, since and , it follows that both and are negative. Consequently, we have It then follows that We can show that the mass passes through the equilibrium position at most once by setting and finding the time at which this happens.  Regarding the velocity of the mass, we find   Again, we observe that We can also show that the mass reaches an extreme position at most once by setting and finding the time at which this happens. Since and  is equivalent to We conclude that when the spring force is too weak to counteract a strong damping damping force, the mass approaches the equilibrium position with no oscillation and its velocity approaches zero, by changing its sign at most once, as goes to . In this case, the mass-spring system is said to be overdamped.      Critically Damped Motion : When , yields so that the general solution of is where and are arbitrary constants which can be determined when the initial conditions are known. The velocity of the mass is given by Since we find and as These imply that As note earlier in the case of an overdamped motion, the mass in this case can also pass thorough the equilibrium at most once and can reach an extreme position at most once while its velocity changes its sign. As goes to the mass approaches its equilibrium position and its velocity also tends to zero.  Since and  is equivalent to It follows from the case of underdamped motion that when the damping coefficient is even slightly less than the mass undergoes an oscillatory motion. The spring-mass system with the smallest damping coefficient that maintains a nonoscillatory motion is to be critically damped .       III. Forced Undamped Motion ( )  When (no damping) and (with external force), the spring-mass system is governed by the differential equation which, with and becomes   The nonhomogeneous equation can be solved by using the methods of previous sections. The general solution is of the form where and are arbitrary constants and is a particular solution of . Recall that is the general solution of the simple harmonic oscillator associated with .    A -kilogram mass attached to the end of a vertically hanging spring causes the spring to stretch centimeters. At time , the spring-mass system is set into motion by an external force , where is measured in newtons and is positive in the downward direction, and time is measured in seconds. Determine the equation of motion and estimate the maximum excursion of the mass from its equilibrium position.    We let denote the displacement of the mass from the equilibrium position measured positively in the vertically downward direction.  We have For the mass in equilibrium, we have , and so The natural frequency of the system is The differential equation of motion is therefore or equivalently, The general solution of is where and are arbitrary constants. We find a particular solution of by variation of parameters. Let be a particular solution of , where and are to be determined. We find that Substituting for and for into yields that is, Equating the coefficients of the like terms, we have and , that is, and Thus, we have The general solution of is where and are arbitrary constants. The initial conditions for are Substituting these gives and , i.e., and Thus, we have The graph of the solution is shown in . Using the critical numbers and second derivative test, we can verify that the maximum occurs at The maximum value is   The graph of          In , the frequency of the external source is which is not equal to or near the natural frequency    Resonance: An important aspect of analyzing undamped forced spring-mass systems is understanding how large (in absolute values) the values of can become when is sinusoidal. If the amplitude of grows without bound, the system is said to be in resonance . In practical applications, resonance may be undesirable because it can lead to excessive energy buildup and potential system failure. Since the system is undamped, the only way energy can dissipate from the system is by the nature of the source term However, it is possible that the energy buildup can happen in the system even when is sign-changing. The following example demonstrates how resonance occurs.   With the external force in replaced with , determine the equation of motion, analyze the amplitude of the resulting motion, and verify that the system exhibits resonance.    Similarly to the solution in , the initial value problem for the current example is Recall from that the natural frequency of the system is We note here that the frequency of the external force matches the natural frequency The general solution of is where and are arbitrary constants. We find a particular solution of by variation of parameters. Let where and satisfy Solving this system gives and Integrating yields Hence, The general solution is  and are constants to be determined so that Substituting these gives and , i.e., Thus, we have It is evident that the amplitude of is given by which shows that grows without bound as Hence, the system exhibits resonance in this case, where the forcing frequency coincides the natural frequency-illustrating the classical example of resonance in an undamped forced spring-mass system. The plots of the solution and amplitude are shown in .  The graph of and its amplitude         Electrical Circuits  An RLC circuit is another common physical application of second-order linear differential equations.   "
+  "body": " Applications     Be able to apply methods of solutions from previous sections to some elementary problems in applications.      In this section we will study three elementary examples of applications where the methods from previous sections can be effectively used.    Spring-Mass System  A common example of a second order linear differential equation with constant coefficients arises in modeling the motion of a mass attached to a spring whose other end is fixed to a support. Let us consider a spring suspended vertically from a fixed ceiling (rigid support) with the mass attached to its lower end, as illustrated in .    A mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.      Let denote the natural (unstretched) length of the spring, and let be the amount by which the spring stretches when the mass is attached and allowed to hang in equilibrium under gravity. We assume that the motion of the mass is restricted to the vertical line through the point of the equilibrium of the mass. To take this vertical line (see (d)) as the coordinate axis, we take the equilibrium point as the origin and assign the vertically downward direction as the positive direction.  Denote by the displacement of the mass at time from its equilibrium position (the origin). In addition to the restoring force of the spring and gravitational force , assume that the mass is acted upon by a damping force as well as an external force See (c) for wall friction as an example of a damping force. Thus, we have According to Newton's second law, we then have  How do we model the spring force   Since a spring that is stretched or compressed tends to return to its natural length, the spring force wants to pull the mass toward its equilibrium position. For an ideal spring—one made of a homogeneous material with uniform coiling—Robert Hooke, a 17th-century English physicist, established that the restoring force required to stretch or compress the spring (without damaging it) is directly proportional to the resulting displacement. For a spring made up of a heterogeneous material and with nonuniform coiling, the restoring force may be modeled by a nonlinear function of the displacement. For example, with a fixed number in and a fixed real number. This means that where is a fixed positive constant, called the spring constant which measures the stiffness of the spring. The negative means that the restoring force is directed toward the origin.  One may ask: how do we practically calculate of a spring? The simplest way to calculate is to simply suspend the spring from a support with the mass attached to its other end and observe the stretch the spring experiences for its equilibrium under gravity. Since the mass is at rest, the net force acting on the mass is zero, that is, which yields and so    How do we model   It is intuitive that the damping force (or drag) increases as the speed of the mass increases. Hence, the simplest way to model the damping force is to assume that it is directly proportional to the velocity. For a medium that resists the motion of the mass depending on a power of the speed, the damping force may be modeled by a nonlinear function of the velocity. For example, with a fixed number in and a fixed real number. This means that where is the constant of proportionality, called the damping coefficient of the medium offering the resistance to the motion of the mass.  Using and in , we obtain   which, in view of , yields This is a second order linear differential equation with constant coefficient, and it can be solved using the methods from the previous sections. For example, the method of undetermined coefficients or variation of parameters can be used.  We now examine several interesting and special cases of before discussing the general form.   I. Free Undamped Motion ( )  When (no damping) and (no external forces), the mass-spring system is said to have a free undamped motion and the system is called a simple harmonic oscillator . The resulting differential equation for the displacement of the mass from its equilibrium position is which, with , becomes also referred to as a simple harmonic oscillator. Then the general solution of the simple harmonic oscillator is where and are arbitrary constants which can be determined when the initial conditions are provided.  The displacement described by can interpreted most effectively when it is written in the form of a single sine or cosine function. To express it in the form of a single sine function, we seek to find two constants and so that Then Since the terms in and must match, we obtain Squaring and adding these equations gives We take It is possible that , in which case, we have for all , the trivial solution, and this means that the mass is at rest in the equilibrium position for all Therefore the only interesting case is when If then We have Also, note that can be written as It is now clear from that the mass oscillates about the origin with the amplitude which is the maximum displacement from the equilibrium position. The time period for one complete oscillation is and therefore the number is the circular frequency of the oscillations, that is, the number of cycles per unit units of time.    A 2-pound mass stretches a spring 6 inches. At time , the mass is released from a position 8 inches below equilibrium with an initial upward velocity of ft\/s.     Find the equation of motion in both the forms and .    Graph the velocity versus the displacement.          Let denote in feet the displacement of the mass from the equilibrium position measured positively in the vertically downward direction. We have We have and the spring constant The differential equation of motion is which becomes and therefore with the initial condition The general solution of the differential equation is   Applying the initial conditions gives   Also, since and we obtain that is, Hence the equation of the motion is which is of the form . Using the method discussed for to find the equation of the motion in the amplitude-phase, we compute and and therefore   Its graph is shown in .   The graph of         We find Then for all . This takes the form for all and is an ellipse in the -plane as shown in . The graph is called the orbit of the simple harmonic oscillator and visualizes the oscillatory motion.   The graph of             II. Free Damped Motion ( )  When (with damping) and (no external forces), the mass-spring system is said to have a free damped motion . The resulting differential equation for the motion of the mass is which, with and , becomes and the differential equation is known as a free damped spring–mass system. Its general solution depends on the relative strengths of the damping and spring forces. When the spring force dominates, the motion is oscillatory with amplitude decaying to zero as and when the damping force dominates, the motion is non-oscillatory. There exists a threshold value of the damping coefficient—called the critical damping—above which no oscillations occurs, and below which the system exhibits damped oscillations whose amplitude decays to zero as . To analyze this, we start with the auxiliary equation for ; namely, with is a trial solution. It then follows that   There are three significantly different cases of a free damped motion.      Underdamped Motion : When  yields so that the general solution of is where and are arbitrary constants are determined when the initial conditions are provided. The displacement is periodic with the period Moreover, since we observe that It then follows that   With regard to the velocity of the mass, we find Again, we observe that Hence, the mass approaches the equilibrium position while oscillating with the circular frequency and the velocity approaches zero as goes to   Since and  is equivalent to We conclude that when the damping force is too weak to counteract a strong spring force, the mass undergoes damped oscillations: the amplitude gradually decreases to zero. In this case, the mass-spring system is said to be underdamped .     Overdamped Motion : When  yields so that the general solution of is where and are arbitrary constants are determined when the initial conditions are provided. Therefore is not periodic Moreover, since and , it follows that both and are negative. Consequently, we have It then follows that We can show that the mass passes through the equilibrium position at most once by setting and finding the time at which this happens.  Regarding the velocity of the mass, we find   Again, we observe that We can also show that the mass reaches an extreme position at most once by setting and finding the time at which this happens. Since and  is equivalent to We conclude that when the spring force is too weak to counteract a strong damping damping force, the mass approaches the equilibrium position with no oscillation and its velocity approaches zero, by changing its sign at most once, as goes to . In this case, the mass-spring system is said to be overdamped.      Critically Damped Motion : When , yields so that the general solution of is where and are arbitrary constants which can be determined when the initial conditions are known. The velocity of the mass is given by Since we find and as These imply that As note earlier in the case of an overdamped motion, the mass in this case can also pass thorough the equilibrium at most once and can reach an extreme position at most once while its velocity changes its sign. As goes to the mass approaches its equilibrium position and its velocity also tends to zero.  Since and  is equivalent to It follows from the case of underdamped motion that when the damping coefficient is even slightly less than the mass undergoes an oscillatory motion. The spring-mass system with the smallest damping coefficient that maintains a nonoscillatory motion is to be critically damped .       III. Forced Undamped Motion ( )  When (no damping) and (with external force), the spring-mass system is governed by the differential equation which, with and becomes   The nonhomogeneous equation can be solved by using the methods of previous sections. The general solution is of the form where and are arbitrary constants and is a particular solution of . Recall that is the general solution of the simple harmonic oscillator associated with .    A -kilogram mass attached to the end of a vertically hanging spring causes the spring to stretch centimeters. At time , the spring-mass system is set into motion by an external force , where is measured in newtons and is positive in the downward direction, and time is measured in seconds. Determine the equation of motion and estimate the maximum excursion of the mass from its equilibrium position.    We let denote the displacement of the mass from the equilibrium position measured positively in the vertically downward direction.  We have For the mass in equilibrium, we have , and so The natural frequency of the system is The differential equation of motion is therefore or equivalently, The general solution of is where and are arbitrary constants. We find a particular solution of by variation of parameters. Let be a particular solution of , where and are to be determined. We find that Substituting for and for into yields that is, Equating the coefficients of the like terms, we have and , that is, and Thus, we have The general solution of is where and are arbitrary constants. The initial conditions for are Substituting these gives and , i.e., and Thus, we have The graph of the solution is shown in . Using the critical numbers and second derivative test, we can verify that the maximum occurs at The maximum value is   The graph of         In , the frequency of the external source is which is not equal to or near the natural frequency    Resonance: An important aspect of analyzing undamped forced spring-mass systems is understanding how large (in absolute values) the values of can become when is sinusoidal. If the amplitude of grows without bound, the system is said to be in resonance . In practical applications, resonance may be undesirable because it can lead to excessive energy buildup and potential system failure. Since the system is undamped, the only way energy can dissipate from the system is by the nature of the source term However, it is possible that the energy buildup can happen in the system even when is sign-changing. The following example demonstrates how resonance occurs.     With the external force in replaced with , determine the equation of motion, analyze the amplitude of the resulting motion, and verify that the system exhibits resonance.    Similarly to the solution in , the initial value problem for the current example is Recall from that the natural frequency of the system is We note here that the frequency of the external force matches the natural frequency The general solution of is where and are arbitrary constants. We find a particular solution of by variation of parameters. Let where and satisfy Solving this system gives and Integrating yields Hence, The general solution is  and are constants to be determined so that Substituting these gives and , i.e., Thus, we have It is evident that the amplitude of is given by which shows that grows without bound as Hence, the system exhibits resonance in this case, where the forcing frequency coincides the natural frequency-illustrating the classical example of resonance in an undamped forced spring-mass system. The plots of the solution and amplitude are shown in .  The graph of and its amplitude          IV. Forced Damped Motion ( )  When and , the spring-mass system is governed by the differential equation ; namely, The nonhomogeneous equation can be solved by using the methods of previous sections. The general solution is of the form where is the general solution of the homogeneous equation which describes the free damped motion corresponding to and is a particular solution of . We recall from all three cases (underdamped, critically damped, and overdamped) of a free damped motion that and therefore is a transient term in and it is either oscillatory or nonoscillatory according as or We conclude from and that The particular solution is called the steady-state solution of . For short times, must be included in the solution which then becomes the transient solution.     For the resonant system in , determine the damping coefficient that should be introduced at so that the system transitions immediately into a simple harmonic oscillator with the amplitude     We recall that the solution of the resonant system in  is We observe that and   We now proceed to find the damping coefficient required to turn the resonant system into a simple harmonic oscillator starting at with the frequency of oscillation same as the natural frequency of resonant system and the amplitude We consider the initial value problem It is evident that for small the complementary function should be oscillatory. Suppose then that and put Then the general solution of the differential equation in can be written in the form where and are arbitrary constants. The only way this represents the solution to a harmonic oscillator is when its transient term is zero which happens only when because of the linear independence of and Since we have In order that we must have The condition ensures that because which gives Thus, the damped system introduced at is with the solution for all The problem is equivalent to the simple harmonic oscillator described by This harmonic oscillator has frequency same as the natural frequency of the resonant system and amplitude equal to The solution of the resonant system for and its continuous transition to a damped forced system that exhibits the simple harmonic oscillator for is The graph of this solution is shown in .  The graph of        When and the natural frequency of the system matches that of an external sinusoidal force, as illustrated in , the system exhibits resonance. In contrast, we recall that a free damped system approaches its equilibrium as . In most practical applications, the damping constant is relatively small. Interestingly, when but small, although the amplitude of the particular solution is not unbounded as , the system displays a behavior approaching resonance because the damping is insufficient to suppress large oscillations. Therefore should be avoided even for small damping. The following example illustrates this phenomenon.    In the resonant system discussed in , suppose that the surrounding medium offers a damping force that is numerically equal to 0.01 times the instantaneous velocity. Find the equation of motion and analyze the danger of having a low value of the damping coefficient.    The initial value problem is The auxiliary equation for is with solutions , where and Then the general solution of the homogeneous differential equation where and are arbitrary constants. Let be particular solution of the nonhomogeneous equation in . Then and Substituting for in the nonhomogeneous equation yields which gives and Then , and therefore the general solution of the nonhomogeneous equation is Since , we have i.e., Also, since we have which gives Thus, the solution to the initial value problem is The graph of the solution is shown in over shows that the system appears to have resonance-like behavior as in . However, it is evident that for large values of . In particular,   The graph of        In the following example, we examine an undamped forced system in which the frequency of the external force is slightly different from the natural frequency.    In the setting of the resonant problem in , let us take the external force where is very small. Find the equation of motion.    The initial value problem is where with a small nonzero number. We have thus considered the frequency of the external force close to the natural frequency. The general solution of is where and are arbitrary constants.  Let be a particular solution of the nonhomogeneous equation in . Substituting for and for into the nonhomogeneous equation in gives This gives Thus, and therefore the general solution of the nonhomogeneous equation is Since and we have that is, Thus, the solution of the initial value problem is where We observe that for all . This means that the graph of will be enveloped in the graphs of , bounding the amplitude of as shown in for .  The graph of    In music, when both waves are heard simultaneously, the sound pattern is known as beats and the sound system is said to behave near resonance .  Using a graphing utility, the reader is suggested to plot for a smaller value of (e.g., ) and for a larger value (e.g., ) to observe how the motion changes when the frequency of the external force is close to the natural frequency and when it is far from it.    In , we could have used with reference to . The choice of the cosine function is only for convenience.     Electrical Circuits  In this subsection, we first study ordinary differential equations as initial value problems in electric circuits that consist of a voltage source of the electromotive force driving electric charges and producing a current (e.g., a battery for direct voltage or a generator for alternating voltage), a resistor (e.g., appliances) of resistance , and an inductor of inductance in series as depicted in or . We then briefly discuss the analogy between the spring-mass system and the electric circuit.    Direct voltage source       Alternating voltage source       Let denote the electric charge on the capacitor at time . According to Kirchhoff’s second law, the voltage impressed on a closed loop equals the sum of the voltage drops across the components in the loop. The voltage drops across a resistor, inductor and capacitor are modeled as being proportional to respectively. These voltage drops are modeled as follows:     the voltage drop across a inductor     the voltage drop across a resistor     the voltage drop across a capacitor      where the constants , , and are called the inductance, resistance, and capacitance, respectively, and these quantities are typically measured in henry (h), ohm ( ), and farad (f), respectively. The corresponding units for , , and are coulomb (C), volt (V), and ampere (A).  We recall that the current flowing through the capacitor is given by and therefore Kirchhoff's law yields which is a second-order linear differential equation in with constant coefficients.  For analogy, we can interchange the spring-mass system parameters in (see ) and series circuit parameters in as follows:   Parameter Analogies    Spring-Mass   Series                         In addition, the three significantly different cases of the spring-mass system apply to the circuit as follows:   Parameter Analogies    Damping Type  Spring-Mass  Series         Underdamped      Critically damped      Overdamped       We now consider the parallel circuit shown in Figure , where a current source supplies the input current . The diagram also shows that the current splits into three branch currents , , and flowing through a capacitor, resister and inductor, respectively. We develop a differential equation for the impressed voltage across the components produced from the source current    Parallel circuit      By Kirchhoff’s second law which states that the current flowing to a point in a circuit must equal the current flowing away from the point , we have Since  reduces to Differentiating with respect to yields For analogy, we can interchange the spring-mass system parameters, series circuit parameters, and parallel circuit parameters in as follows:   Parameter analogies    Spring-Mass  Series  Parallel                              In addition, the three significantly different cases of the spring-mass system apply to the circuits as follows:   Damping parameter analogies    Damping Type  Spring-Mass  Series  Parallel          Underdamped       Critically damped       Overdamped          Consider a series -circuit with inductance , resistance , and capacitance . The circuit is driven by an external voltage measured in volts (V). Let denote the charge measured in coulombs (C) on the capacitor, and let be the current measured in amperes (A). Suppose the initial charge and current are      Derive the differential equation satisfied by and solve it.    Find the transient part and steady-state solution.    Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory.       a. For a series –circuit, Kirchhoff’s voltage law gives With , , , and , we obtain the differential equation The corresponding homogeneous equation is The roots of the characteristic equation are Thus the general solution of the homogeneous equation is where and are arbitrary constants.  For a particular solution suppose that and are constants to be determined, so that is a particular solution of the nonhomogeneous equation. Then Substituting into the equation yields Thus we must have Solving for and gives and so   The general solution is where and are arbitrary constants. Using gives To use we first compute : Then, using , we get Since we have which gives Thus, the solution for is   b. The transient part of the solution is the part that decays to zero as and depends on the initial conditions. Since the transient part of the solution for is   The steady-state solution is the part of the solution that remains after the transient part has decayed to zero. Therefore the steady-state solution for is given by   c. The series -circuit is critically damped for          Spring-Mass System        An -kg mass attached to the lower end of a spring that is suspended vertically from a ceiling stretches the spring cm from its natural length until the mass comes to rest. The mass is then pulled downward causing an additional stretch of cm of the spring and then it is released. Assume that there is no air resistance and use the acceleration due to gravity cm\/s . Let be the displacement (in centimeters) of the mass from its equilibrium position measured positive in the downward direction.     Determine a differential equation in with initial conditions that describe the motion of the mass.    Solve for the initial value problem in .    Find the amplitude, period and circular frequency of the oscillatory motion.       Suppose a vertical spring with spring constant is suspended from a ceiling, and a mass is attached to its lower end. The mass slides along a vertical wall that exerts a damping force proportional to its velocity, with damping constant . Let denote the displacement (in meters) of the mass from its equilibrium position, where positive values of correspond to positions below the equilibrium position.     Derive a differential equation governing the motion of the system in terms of .    Find the general solution of the differential equation obtained in .    Determine whether the system is underdamped, critically damped, or overdamped.    If the system is not critically damped, find the value of the damping constant that would make the system critically damped.       A -kg mass suspended from the lower end of a vertically hanging spring stretches the spring centimeters. At time when the mass is at rest in the equilibrium position, the mass-spring system is acted by the force , measured positive (in newtons) in the downward direction. Suppose that time is measured in seconds. Let denote the displacement (in centimeters) of the mass from its equilibrium position, measured positive in the downward direction.     Determine the spring constant .    Develop an initial value problem for .    Solve the initial value problem developed in .    Using a graphing utility, plot the solution and determine whether the motion exhibits a beat .    Find the maximum positive displacement of the mass from its equilibrium position.       A 8-pound weight attached to a spring of natural length 7 feet stretches the spring to a total length of 8.6 feet. The entire system is placed in a medium that exerts a damping force numerically equal to 4 times the instantaneous velocity.     Write down an initial value problem describing the motion.    Determine the equation of motion if the mass is released from rest at a point ft below the equilibrium position with a downward velocity of 1 ft\/s.    Express the equation of motion in terms of a single sine function.    Find the times at which the mass passes through the equilibrium position moving downward.    Plot the equation of motion.          Electrical Circuits        A series –circuit contains an inductor with inductance , a resistor with resistance , and a capacitor with capacitance . The circuit is driven by a constant external voltage . Let denote the charge (in coulombs) on the capacitor, and let be the current (in amperes). Given the initial conditions C and  A,   determine the charge for ; and    find the transient current and steady-state current.       Consider a series -circuit with inductance , capacitance , resistance , and no external voltage source. Let denote the charge (in coulombs) on the capacitor at time (in seconds).    Find when , C, and C\/s.    Find the first time when the charge on the capacitor is equal to zero.    Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory behavior.      Consider a parallel -circuit with inductance , capacitance , resistance , and a constant external current source. Let denote the charge (in coulombs) on the capacitor at time (in seconds).    Find when , C, and C\/s.    Find the first time when the charge on the capacitor is equal to zero.    Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory behavior.       "
 },
 {
   "id": "sec-3-5-2",
@@ -1078,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.5.2",
   "title": "",
-  "body": "  A 2-pound mass stretches a spring 6 inches. At time , the mass is released from a position 8 inches below equilibrium with an initial upward velocity of ft\/s.     Find the equation of motion in both the forms and .    Graph the velocity versus the displacement.          Let denote in feet the displacement of the mass from the equilibrium position measured positively in the vertically downward direction. We have We have and the spring constant The differential equation of motion is which becomes and therefore with the initial condition The general solution of the differential equation is   Applying the initial conditions gives   Also, since and we obtain that is, Hence the equation of the motion is which is of the form . Using the method discussed for to find the equation of the motion in the amplitude-phase, we compute and and therefore   Its graph is shown in .    The graph of         We find Then for all . This takes the form for all and is an ellipse in the -plane as shown in . The graph is called the orbit of the simple harmonic oscillator and visualizes the oscillatory motion.   The graph of          "
+  "body": "  A 2-pound mass stretches a spring 6 inches. At time , the mass is released from a position 8 inches below equilibrium with an initial upward velocity of ft\/s.     Find the equation of motion in both the forms and .    Graph the velocity versus the displacement.          Let denote in feet the displacement of the mass from the equilibrium position measured positively in the vertically downward direction. We have We have and the spring constant The differential equation of motion is which becomes and therefore with the initial condition The general solution of the differential equation is   Applying the initial conditions gives   Also, since and we obtain that is, Hence the equation of the motion is which is of the form . Using the method discussed for to find the equation of the motion in the amplitude-phase, we compute and and therefore   Its graph is shown in .   The graph of         We find Then for all . This takes the form for all and is an ellipse in the -plane as shown in . The graph is called the orbit of the simple harmonic oscillator and visualizes the oscillatory motion.   The graph of          "
 },
 {
   "id": "free-damped-motion-4",
@@ -1096,7 +1096,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.5.5",
   "title": "",
-  "body": "  A -kilogram mass attached to the end of a vertically hanging spring causes the spring to stretch centimeters. At time , the spring-mass system is set into motion by an external force , where is measured in newtons and is positive in the downward direction, and time is measured in seconds. Determine the equation of motion and estimate the maximum excursion of the mass from its equilibrium position.    We let denote the displacement of the mass from the equilibrium position measured positively in the vertically downward direction.  We have For the mass in equilibrium, we have , and so The natural frequency of the system is The differential equation of motion is therefore or equivalently, The general solution of is where and are arbitrary constants. We find a particular solution of by variation of parameters. Let be a particular solution of , where and are to be determined. We find that Substituting for and for into yields that is, Equating the coefficients of the like terms, we have and , that is, and Thus, we have The general solution of is where and are arbitrary constants. The initial conditions for are Substituting these gives and , i.e., and Thus, we have The graph of the solution is shown in . Using the critical numbers and second derivative test, we can verify that the maximum occurs at The maximum value is   The graph of        "
+  "body": "  A -kilogram mass attached to the end of a vertically hanging spring causes the spring to stretch centimeters. At time , the spring-mass system is set into motion by an external force , where is measured in newtons and is positive in the downward direction, and time is measured in seconds. Determine the equation of motion and estimate the maximum excursion of the mass from its equilibrium position.    We let denote the displacement of the mass from the equilibrium position measured positively in the vertically downward direction.  We have For the mass in equilibrium, we have , and so The natural frequency of the system is The differential equation of motion is therefore or equivalently, The general solution of is where and are arbitrary constants. We find a particular solution of by variation of parameters. Let be a particular solution of , where and are to be determined. We find that Substituting for and for into yields that is, Equating the coefficients of the like terms, we have and , that is, and Thus, we have The general solution of is where and are arbitrary constants. The initial conditions for are Substituting these gives and , i.e., and Thus, we have The graph of the solution is shown in . Using the critical numbers and second derivative test, we can verify that the maximum occurs at The maximum value is   The graph of       "
 },
 {
   "id": "forced-damped-motion-6",
@@ -1108,13 +1108,184 @@ var ptx_lunr_docs = [
   "body": "Resonance: resonance "
 },
 {
-  "id": "forced-damped-motion-8",
+  "id": "example-resonance-spring-mass-system-1",
   "level": "2",
-  "url": "sec-3-5.html#forced-damped-motion-8",
+  "url": "sec-3-5.html#example-resonance-spring-mass-system-1",
+  "type": "Example",
+  "number": "3.5.7",
+  "title": "",
+  "body": "  With the external force in replaced with , determine the equation of motion, analyze the amplitude of the resulting motion, and verify that the system exhibits resonance.    Similarly to the solution in , the initial value problem for the current example is Recall from that the natural frequency of the system is We note here that the frequency of the external force matches the natural frequency The general solution of is where and are arbitrary constants. We find a particular solution of by variation of parameters. Let where and satisfy Solving this system gives and Integrating yields Hence, The general solution is  and are constants to be determined so that Substituting these gives and , i.e., Thus, we have It is evident that the amplitude of is given by which shows that grows without bound as Hence, the system exhibits resonance in this case, where the forcing frequency coincides the natural frequency-illustrating the classical example of resonance in an undamped forced spring-mass system. The plots of the solution and amplitude are shown in .  The graph of and its amplitude       "
+},
+{
+  "id": "forced-undamped-motion-2",
+  "level": "2",
+  "url": "sec-3-5.html#forced-undamped-motion-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "resonance "
+  "body": "transient term steady-state transient solution. "
+},
+{
+  "id": "example-resonance-mass-spring-2",
+  "level": "2",
+  "url": "sec-3-5.html#example-resonance-mass-spring-2",
+  "type": "Example",
+  "number": "3.5.9",
+  "title": "",
+  "body": "  For the resonant system in , determine the damping coefficient that should be introduced at so that the system transitions immediately into a simple harmonic oscillator with the amplitude     We recall that the solution of the resonant system in  is We observe that and   We now proceed to find the damping coefficient required to turn the resonant system into a simple harmonic oscillator starting at with the frequency of oscillation same as the natural frequency of resonant system and the amplitude We consider the initial value problem It is evident that for small the complementary function should be oscillatory. Suppose then that and put Then the general solution of the differential equation in can be written in the form where and are arbitrary constants. The only way this represents the solution to a harmonic oscillator is when its transient term is zero which happens only when because of the linear independence of and Since we have In order that we must have The condition ensures that because which gives Thus, the damped system introduced at is with the solution for all The problem is equivalent to the simple harmonic oscillator described by This harmonic oscillator has frequency same as the natural frequency of the resonant system and amplitude equal to The solution of the resonant system for and its continuous transition to a damped forced system that exhibits the simple harmonic oscillator for is The graph of this solution is shown in .  The graph of       "
+},
+{
+  "id": "example-resonance-mass-spring-3",
+  "level": "2",
+  "url": "sec-3-5.html#example-resonance-mass-spring-3",
+  "type": "Example",
+  "number": "3.5.11",
+  "title": "",
+  "body": "  In the resonant system discussed in , suppose that the surrounding medium offers a damping force that is numerically equal to 0.01 times the instantaneous velocity. Find the equation of motion and analyze the danger of having a low value of the damping coefficient.    The initial value problem is The auxiliary equation for is with solutions , where and Then the general solution of the homogeneous differential equation where and are arbitrary constants. Let be particular solution of the nonhomogeneous equation in . Then and Substituting for in the nonhomogeneous equation yields which gives and Then , and therefore the general solution of the nonhomogeneous equation is Since , we have i.e., Also, since we have which gives Thus, the solution to the initial value problem is The graph of the solution is shown in over shows that the system appears to have resonance-like behavior as in . However, it is evident that for large values of . In particular,   The graph of       "
+},
+{
+  "id": "example-resonance-mass-spring-4",
+  "level": "2",
+  "url": "sec-3-5.html#example-resonance-mass-spring-4",
+  "type": "Example",
+  "number": "3.5.13",
+  "title": "",
+  "body": "  In the setting of the resonant problem in , let us take the external force where is very small. Find the equation of motion.    The initial value problem is where with a small nonzero number. We have thus considered the frequency of the external force close to the natural frequency. The general solution of is where and are arbitrary constants.  Let be a particular solution of the nonhomogeneous equation in . Substituting for and for into the nonhomogeneous equation in gives This gives Thus, and therefore the general solution of the nonhomogeneous equation is Since and we have that is, Thus, the solution of the initial value problem is where We observe that for all . This means that the graph of will be enveloped in the graphs of , bounding the amplitude of as shown in for .  The graph of    In music, when both waves are heard simultaneously, the sound pattern is known as beats and the sound system is said to behave near resonance .  Using a graphing utility, the reader is suggested to plot for a smaller value of (e.g., ) and for a larger value (e.g., ) to observe how the motion changes when the frequency of the external force is close to the natural frequency and when it is far from it.   "
+},
+{
+  "id": "fig-LRC-1",
+  "level": "2",
+  "url": "sec-3-5.html#fig-LRC-1",
+  "type": "Figure",
+  "number": "3.5.15",
+  "title": "",
+  "body": " Direct voltage source     "
+},
+{
+  "id": "fig-LRC-2",
+  "level": "2",
+  "url": "sec-3-5.html#fig-LRC-2",
+  "type": "Figure",
+  "number": "3.5.16",
+  "title": "",
+  "body": " Alternating voltage source     "
+},
+{
+  "id": "subsec-RLC-circuit-9",
+  "level": "2",
+  "url": "sec-3-5.html#subsec-RLC-circuit-9",
+  "type": "Table",
+  "number": "3.5.17",
+  "title": "Parameter Analogies",
+  "body": " Parameter Analogies    Spring-Mass   Series                        "
+},
+{
+  "id": "subsec-RLC-circuit-11",
+  "level": "2",
+  "url": "sec-3-5.html#subsec-RLC-circuit-11",
+  "type": "Table",
+  "number": "3.5.18",
+  "title": "Parameter Analogies",
+  "body": " Parameter Analogies    Damping Type  Spring-Mass  Series         Underdamped      Critically damped      Overdamped      "
+},
+{
+  "id": "fig-parallel-LRC",
+  "level": "2",
+  "url": "sec-3-5.html#fig-parallel-LRC",
+  "type": "Figure",
+  "number": "3.5.19",
+  "title": "",
+  "body": " Parallel circuit     "
+},
+{
+  "id": "subsec-RLC-circuit-15",
+  "level": "2",
+  "url": "sec-3-5.html#subsec-RLC-circuit-15",
+  "type": "Table",
+  "number": "3.5.20",
+  "title": "Parameter analogies",
+  "body": " Parameter analogies    Spring-Mass  Series  Parallel                             "
+},
+{
+  "id": "subsec-RLC-circuit-17",
+  "level": "2",
+  "url": "sec-3-5.html#subsec-RLC-circuit-17",
+  "type": "Table",
+  "number": "3.5.21",
+  "title": "Damping parameter analogies",
+  "body": " Damping parameter analogies    Damping Type  Spring-Mass  Series  Parallel          Underdamped       Critically damped       Overdamped       "
+},
+{
+  "id": "subsec-RLC-circuit-18",
+  "level": "2",
+  "url": "sec-3-5.html#subsec-RLC-circuit-18",
+  "type": "Example",
+  "number": "3.5.22",
+  "title": "",
+  "body": "  Consider a series -circuit with inductance , resistance , and capacitance . The circuit is driven by an external voltage measured in volts (V). Let denote the charge measured in coulombs (C) on the capacitor, and let be the current measured in amperes (A). Suppose the initial charge and current are      Derive the differential equation satisfied by and solve it.    Find the transient part and steady-state solution.    Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory.       a. For a series –circuit, Kirchhoff’s voltage law gives With , , , and , we obtain the differential equation The corresponding homogeneous equation is The roots of the characteristic equation are Thus the general solution of the homogeneous equation is where and are arbitrary constants.  For a particular solution suppose that and are constants to be determined, so that is a particular solution of the nonhomogeneous equation. Then Substituting into the equation yields Thus we must have Solving for and gives and so   The general solution is where and are arbitrary constants. Using gives To use we first compute : Then, using , we get Since we have which gives Thus, the solution for is   b. The transient part of the solution is the part that decays to zero as and depends on the initial conditions. Since the transient part of the solution for is   The steady-state solution is the part of the solution that remains after the transient part has decayed to zero. Therefore the steady-state solution for is given by   c. The series -circuit is critically damped for    "
+},
+{
+  "id": "exercise-3-5-1",
+  "level": "2",
+  "url": "sec-3-5.html#exercise-3-5-1",
+  "type": "Exercise",
+  "number": "3.5.3.1",
+  "title": "",
+  "body": " An -kg mass attached to the lower end of a spring that is suspended vertically from a ceiling stretches the spring cm from its natural length until the mass comes to rest. The mass is then pulled downward causing an additional stretch of cm of the spring and then it is released. Assume that there is no air resistance and use the acceleration due to gravity cm\/s . Let be the displacement (in centimeters) of the mass from its equilibrium position measured positive in the downward direction.     Determine a differential equation in with initial conditions that describe the motion of the mass.    Solve for the initial value problem in .    Find the amplitude, period and circular frequency of the oscillatory motion.     "
+},
+{
+  "id": "exercises-EX35-1-4",
+  "level": "2",
+  "url": "sec-3-5.html#exercises-EX35-1-4",
+  "type": "Exercise",
+  "number": "3.5.3.2",
+  "title": "",
+  "body": " Suppose a vertical spring with spring constant is suspended from a ceiling, and a mass is attached to its lower end. The mass slides along a vertical wall that exerts a damping force proportional to its velocity, with damping constant . Let denote the displacement (in meters) of the mass from its equilibrium position, where positive values of correspond to positions below the equilibrium position.     Derive a differential equation governing the motion of the system in terms of .    Find the general solution of the differential equation obtained in .    Determine whether the system is underdamped, critically damped, or overdamped.    If the system is not critically damped, find the value of the damping constant that would make the system critically damped.     "
+},
+{
+  "id": "exercises-EX35-1-5",
+  "level": "2",
+  "url": "sec-3-5.html#exercises-EX35-1-5",
+  "type": "Exercise",
+  "number": "3.5.3.3",
+  "title": "",
+  "body": " A -kg mass suspended from the lower end of a vertically hanging spring stretches the spring centimeters. At time when the mass is at rest in the equilibrium position, the mass-spring system is acted by the force , measured positive (in newtons) in the downward direction. Suppose that time is measured in seconds. Let denote the displacement (in centimeters) of the mass from its equilibrium position, measured positive in the downward direction.     Determine the spring constant .    Develop an initial value problem for .    Solve the initial value problem developed in .    Using a graphing utility, plot the solution and determine whether the motion exhibits a beat .    Find the maximum positive displacement of the mass from its equilibrium position.     "
+},
+{
+  "id": "exercises-EX35-1-6",
+  "level": "2",
+  "url": "sec-3-5.html#exercises-EX35-1-6",
+  "type": "Exercise",
+  "number": "3.5.3.4",
+  "title": "",
+  "body": " A 8-pound weight attached to a spring of natural length 7 feet stretches the spring to a total length of 8.6 feet. The entire system is placed in a medium that exerts a damping force numerically equal to 4 times the instantaneous velocity.     Write down an initial value problem describing the motion.    Determine the equation of motion if the mass is released from rest at a point ft below the equilibrium position with a downward velocity of 1 ft\/s.    Express the equation of motion in terms of a single sine function.    Find the times at which the mass passes through the equilibrium position moving downward.    Plot the equation of motion.     "
+},
+{
+  "id": "exercises-EX35-2-3",
+  "level": "2",
+  "url": "sec-3-5.html#exercises-EX35-2-3",
+  "type": "Exercise",
+  "number": "3.5.3.5",
+  "title": "",
+  "body": " A series –circuit contains an inductor with inductance , a resistor with resistance , and a capacitor with capacitance . The circuit is driven by a constant external voltage . Let denote the charge (in coulombs) on the capacitor, and let be the current (in amperes). Given the initial conditions C and  A,   determine the charge for ; and    find the transient current and steady-state current.     "
+},
+{
+  "id": "exercises-EX35-2-4",
+  "level": "2",
+  "url": "sec-3-5.html#exercises-EX35-2-4",
+  "type": "Exercise",
+  "number": "3.5.3.6",
+  "title": "",
+  "body": " Consider a series -circuit with inductance , capacitance , resistance , and no external voltage source. Let denote the charge (in coulombs) on the capacitor at time (in seconds).    Find when , C, and C\/s.    Find the first time when the charge on the capacitor is equal to zero.    Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory behavior.    "
+},
+{
+  "id": "exercises-EX35-2-5",
+  "level": "2",
+  "url": "sec-3-5.html#exercises-EX35-2-5",
+  "type": "Exercise",
+  "number": "3.5.3.7",
+  "title": "",
+  "body": " Consider a parallel -circuit with inductance , capacitance , resistance , and a constant external current source. Let denote the charge (in coulombs) on the capacitor at time (in seconds).    Find when , C, and C\/s.    Find the first time when the charge on the capacitor is equal to zero.    Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory behavior.    "
 },
 {
   "id": "sec-3-6",
@@ -1123,7 +1294,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.6",
   "title": "Change of Variables",
-  "body": " Change of Variables     Understand the change of variables techniques.      Something about forced oscillations and resonance goes here yes.    something  soemthing   "
+  "body": " Change of Variables     Understand the change of variables techniques.      We begin this section by exploring how a change of the dependent variable can be used to reduce a second order linear differential equation to a form can be solved using methods developed earlier. We then examine how a change of the independent variable can be used to develop solution techniques applicable to a variety of differential equations.    Change of the Dependent Variable  Let be a function to be chosen later and let be a function such that is a solution of on some interval where are continuous. Upon differentiation, we get Substituting these into the differential equation, we get Our goal is to find by choosing in a way that simplifies . A choice of can be made so that it satisfies one of the following two conditions:   Condition A:  i.e., is a solution of  Condition B:  and is differentiable.  Suppose first that satisfies Condition A . Then becomes which, being a linear equation in can be solved first for and then for Thus, we have obtained a particular solution of .  To find the general solution of , we need one another solution  , such that and are linearly independent. Let for some function such that satisfies . Running the same calculation as above with in place of but with we get which solves for a nonzero function Consequently, the general solution to is given by where and are arbitrary constants.  Let us work through an example to show how the above procedure works.    Find the general solution of using the fact that is a solution to the associate homogeneous equation.    First, we note that and . We compute and satisfying and , respectively. Using , we get which gives The integrating factor is Then which yields so that Integrating yields where and are arbitrary constants. We simply take so that Moreover, it is clear that solves for all and . Since we only need one nonzero function we can simply take Therefore Hence the general solution of the given nonhomogeneous equation is where and are arbitrary constants.    Suppose now that satisfies Condition B . Then and so Moreover, Then Substituting these into gives where   The differential equation is said to be the normal form of . The coefficient of in is called the invariant of and is denoted by That is, We observe that turns into a differential equation with constant coefficients if and only if is constant. Consequently, can be readily solved in this case. When is a constant function, is the general solution of if and only if is the general solution of .  We discuss some examples below to show how the above procedure works.    Find the general solution of the differential equation by using its normal form.    Comparing the differential equation with , we have So the invariant of the differential equation is With the change of variable with the normal form of the equation is Upon integration, we get Therefore the general solution is which is the same result we would have obtained by the method of undermined coefficients.    The above procedure is particularly helpful for solving linear equations with variable coefficients, as the following examples illustrate.    Find the general solution of where is a positive constant, by using its normal form.    Comparing the given equation with , we have So the invariant of the differential equation is Since we take With the change of variable the differential equation is transformed into its normal form whose general solution, by the method of undetermined coefficients or variation of parameters, is where and are arbitrary constants. Hence the general solution of the given differential equation is where and are arbitrary constants.      Change of the Independent Variable  By changing the independent variable in the equation from to via a one-to-one function which is differentiable with the differentiable inverse we may be able to transform into a differential equation which may be solved using the methods that are previously discussed. To see how such a change of the independent variable works, we note and compute, by the chain rule, the derivatives and Substituting these into gives where The substitution is beneficial only if it transforms into an equation solvable by a known method.  To illustrate the effectiveness of changing the independent variable, we present two examples. The first involves a second order Cauchy-Euler equation, and the second is the Legendre equation of order Here, the term order refers to something different from the order of the differential equation itself. This distinction in the use of the same terminology is important to keep in mind.    Find the general solution of the Cauchy-Euler equation by solving the transformed equation that is obtained from the change of variable     Using in and , we find and Substituting these into gives The general solution of this equation is where and are arbitrary constants. Since it follows that the general solution of is where and are arbitrary constants.     Legendre Equation   Transform the Legendre equation  of order (a real number) using the change of variable     Using in and , we find and Substituting these into gives which simplifies to Using gives the standard form of the Legendre equation         Since the invariant of is not a constant, the transformed equation in by the change of dependent variable with does not have constant coefficients. Likewise, the invariant of for the change of variable with is which is not a constant, and therefore the transformed equation in does not have constant coefficients. A standard approach for solving the Legendre equation is the method of power series solutions, which will be discussed in .    The Legendre equation lies in an important class known as Sturm-Liouville problems , which are parameter dependent problems of the form  being a parameter (called an eigenvalue) and known functions of In fact, can be written as which is of the form with   and A detailed discussion of Sturm-Liouville problems, however, lies beyond the scope of this book.      We now discuss a useful change of dependent variable for the equation given by It is clear that Using this change of variable in , we get where The above equation can be rewritten as The equation can be readily solved when The arguments made above make sense only for those in for which these considerations are meaningful.     Find the general solution of each differential equation below. A solution to the associated homogeneous equation is provided.                               Using the techniques discussed in the this section, find the general solution of each differential equation below.                     Find the general solution of by using its normal form.    Find the normal form of each differential equation below.      being a constant      being a constant      being a constant      Find the general solution of each equation below by using the change of variable that results in .                     "
 },
 {
   "id": "sec-3-6-2",
@@ -1135,13 +1306,157 @@ var ptx_lunr_docs = [
   "body": "   Understand the change of variables techniques.    "
 },
 {
-  "id": "ch-4",
+  "id": "change-of-the-dependent-variable-3",
+  "level": "2",
+  "url": "sec-3-6.html#change-of-the-dependent-variable-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Condition A: Condition B: "
+},
+{
+  "id": "change-of-the-dependent-variable-4",
+  "level": "2",
+  "url": "sec-3-6.html#change-of-the-dependent-variable-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Condition A "
+},
+{
+  "id": "change-of-the-dependent-variable-7",
+  "level": "2",
+  "url": "sec-3-6.html#change-of-the-dependent-variable-7",
+  "type": "Example",
+  "number": "3.6.1",
+  "title": "",
+  "body": "  Find the general solution of using the fact that is a solution to the associate homogeneous equation.    First, we note that and . We compute and satisfying and , respectively. Using , we get which gives The integrating factor is Then which yields so that Integrating yields where and are arbitrary constants. We simply take so that Moreover, it is clear that solves for all and . Since we only need one nonzero function we can simply take Therefore Hence the general solution of the given nonhomogeneous equation is where and are arbitrary constants.   "
+},
+{
+  "id": "change-of-the-dependent-variable-8",
+  "level": "2",
+  "url": "sec-3-6.html#change-of-the-dependent-variable-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Condition B "
+},
+{
+  "id": "change-of-the-dependent-variable-9",
+  "level": "2",
+  "url": "sec-3-6.html#change-of-the-dependent-variable-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "normal form invariant "
+},
+{
+  "id": "change-of-the-dependent-variable-11",
+  "level": "2",
+  "url": "sec-3-6.html#change-of-the-dependent-variable-11",
+  "type": "Example",
+  "number": "3.6.2",
+  "title": "",
+  "body": "  Find the general solution of the differential equation by using its normal form.    Comparing the differential equation with , we have So the invariant of the differential equation is With the change of variable with the normal form of the equation is Upon integration, we get Therefore the general solution is which is the same result we would have obtained by the method of undermined coefficients.   "
+},
+{
+  "id": "change-of-the-dependent-variable-13",
+  "level": "2",
+  "url": "sec-3-6.html#change-of-the-dependent-variable-13",
+  "type": "Example",
+  "number": "3.6.3",
+  "title": "",
+  "body": "  Find the general solution of where is a positive constant, by using its normal form.    Comparing the given equation with , we have So the invariant of the differential equation is Since we take With the change of variable the differential equation is transformed into its normal form whose general solution, by the method of undetermined coefficients or variation of parameters, is where and are arbitrary constants. Hence the general solution of the given differential equation is where and are arbitrary constants.   "
+},
+{
+  "id": "subsec-change-of-the-independent-variable-3",
+  "level": "2",
+  "url": "sec-3-6.html#subsec-change-of-the-independent-variable-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Cauchy-Euler Legendre equation of order "
+},
+{
+  "id": "subsec-change-of-the-independent-variable-4",
+  "level": "2",
+  "url": "sec-3-6.html#subsec-change-of-the-independent-variable-4",
+  "type": "Example",
+  "number": "3.6.4",
+  "title": "",
+  "body": "  Find the general solution of the Cauchy-Euler equation by solving the transformed equation that is obtained from the change of variable     Using in and , we find and Substituting these into gives The general solution of this equation is where and are arbitrary constants. Since it follows that the general solution of is where and are arbitrary constants.   "
+},
+{
+  "id": "subsec-change-of-the-independent-variable-5",
+  "level": "2",
+  "url": "sec-3-6.html#subsec-change-of-the-independent-variable-5",
+  "type": "Example",
+  "number": "3.6.5",
+  "title": "Legendre Equation.",
+  "body": " Legendre Equation   Transform the Legendre equation  of order (a real number) using the change of variable     Using in and , we find and Substituting these into gives which simplifies to Using gives the standard form of the Legendre equation    "
+},
+{
+  "id": "subsec-change-of-the-independent-variable-6",
+  "level": "2",
+  "url": "sec-3-6.html#subsec-change-of-the-independent-variable-6",
+  "type": "Remark",
+  "number": "3.6.6",
+  "title": "",
+  "body": "    Since the invariant of is not a constant, the transformed equation in by the change of dependent variable with does not have constant coefficients. Likewise, the invariant of for the change of variable with is which is not a constant, and therefore the transformed equation in does not have constant coefficients. A standard approach for solving the Legendre equation is the method of power series solutions, which will be discussed in .    The Legendre equation lies in an important class known as Sturm-Liouville problems , which are parameter dependent problems of the form  being a parameter (called an eigenvalue) and known functions of In fact, can be written as which is of the form with   and A detailed discussion of Sturm-Liouville problems, however, lies beyond the scope of this book.     "
+},
+{
+  "id": "exercises-Ex36-1",
+  "level": "2",
+  "url": "sec-3-6.html#exercises-Ex36-1",
+  "type": "Exercise",
+  "number": "3.6.3.1",
+  "title": "",
+  "body": " Find the general solution of each differential equation below. A solution to the associated homogeneous equation is provided.                             "
+},
+{
+  "id": "exercises-Ex36-2",
+  "level": "2",
+  "url": "sec-3-6.html#exercises-Ex36-2",
+  "type": "Exercise",
+  "number": "3.6.3.2",
+  "title": "",
+  "body": " Using the techniques discussed in the this section, find the general solution of each differential equation below.                   "
+},
+{
+  "id": "exercises-Ex36-3",
+  "level": "2",
+  "url": "sec-3-6.html#exercises-Ex36-3",
+  "type": "Exercise",
+  "number": "3.6.3.3",
+  "title": "",
+  "body": " Find the general solution of by using its normal form.  "
+},
+{
+  "id": "exercises-Ex36-4",
+  "level": "2",
+  "url": "sec-3-6.html#exercises-Ex36-4",
+  "type": "Exercise",
+  "number": "3.6.3.4",
+  "title": "",
+  "body": " Find the normal form of each differential equation below.      being a constant      being a constant      being a constant    "
+},
+{
+  "id": "exercises-Ex36-5",
+  "level": "2",
+  "url": "sec-3-6.html#exercises-Ex36-5",
+  "type": "Exercise",
+  "number": "3.6.3.5",
+  "title": "",
+  "body": " Find the general solution of each equation below by using the change of variable that results in .                   "
+},
+{
+  "id": "sec-4-1",
   "level": "1",
-  "url": "ch-4.html",
-  "type": "Chapter",
-  "number": "4",
-  "title": "Method of Series Solutions",
-  "body": " Method of Series Solutions   Intro goes here.     "
+  "url": "sec-4-1.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Power Series Solutions",
+  "body": " Power Series Solutions  Text of section. Testing  "
 },
 {
   "id": "sec-5-1",

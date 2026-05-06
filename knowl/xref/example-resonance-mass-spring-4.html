@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para logical">
+<div class="para">In the setting of the resonant problem in <a href="sec-3-5.html#example-resonance-spring-mass-system-1" class="xref" data-knowl="./knowl/xref/example-resonance-spring-mass-system-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.7">Example 3.5.7</a>, let us take the external force</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-resonance-spring-mass-system-1.html">
+\begin{equation*}
+F(t) = 180 \cos(5t+2\epsilon t),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\epsilon\)</span> is very small. Find the equation of  motion.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The initial value problem is</div>
+<div class="displaymath process-math">
+\begin{equation}
+\begin{cases} y'' +25 y = 18 \cos(\gamma t),\\ y(0)  =0, \quad y'(0)  = 0, \end{cases}\tag{3.5.24}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(\gamma =5+2\epsilon\)</span> with <span class="process-math">\(\epsilon\)</span> a small nonzero number. We have thus considered the frequency of the external force close to the natural frequency. The general solution of <span class="process-math">\(y''+25y =0\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_h(t) = c_1 \cos(5t) + c_2 \sin(5t),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(y_p(t) = A\cos(\gamma t) + B\sin(\gamma t)\)</span> be a particular solution of the nonhomogeneous equation in <a href="sec-3-5.html#eq-small-change-frequency-2" class="xref" data-knowl="./knowl/xref/eq-small-change-frequency-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.24">(3.5.24)</a>. Substituting <span class="process-math">\(y_p\)</span> for <span class="process-math">\(y\)</span> and <span class="process-math">\(y''_p\)</span> for <span class="process-math">\(y''\)</span> into the nonhomogeneous equation in <a href="sec-3-5.html#eq-small-change-frequency-2" class="xref" data-knowl="./knowl/xref/eq-small-change-frequency-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.24">(3.5.24)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+(25-\gamma^2) A \cos(\gamma t) + (25-\gamma^2) B \sin(\gamma t) = 18 \cos(\gamma t).
+\end{equation*}
+</div>
+<div class="para">This gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+A = -\frac{18}{\gamma^2 -25} \quad\mbox{and}\quad B=0.
+\end{equation*}
+</div>
+<div class="para">Thus,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+y(t) = -\frac{18}{\gamma ^2-25}\cos (\gamma  t),
+\end{equation*}
+</div>
+<div class="para">and therefore the general solution of the nonhomogeneous equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+y_p(t)=c_1 \cos ( 5 t )+c_2 \sin (5 t )-\frac{18}{\gamma ^2-25} \cos (\gamma  t).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(y(0) = 0\)</span> and <span class="process-math">\(y'(0) = 0,\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+0 = c_1 -\frac{18}{\gamma ^2-25} \quad\mbox{and}\quad 0=5c_2,
+\end{equation*}
+</div>
+<div class="para">that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+c_1=\frac{18}{\gamma ^2-25}\quad \mbox{and}\quad c_2=0.
+\end{equation*}
+</div>
+<div class="para">Thus, the solution of the initial value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+\begin{split} y(t) &amp;= \frac{18}{\gamma ^2-25} (\cos (5 t)-\cos (\gamma t))\\ &amp;=-\frac{36}{(\gamma+5)(\gamma-5)} \sin\left(\frac12(\gamma-5)t\right)\; \sin\left(\frac12(\gamma+5)t\right)  \\ &amp;=-\frac{9}{(5+\epsilon)\epsilon} \sin(\epsilon t) \sin\left((5+\epsilon)t\right)\\ &amp;= A(t)\sin\left((5+\epsilon)t\right), \end{split}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+A(t) = -\frac{9}{(5+\epsilon)\epsilon} \sin(\epsilon t).
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/eq-small-change-frequency-2.html ./knowl/xref/fig-beats.html">
+\begin{equation*}
+\lvert y(t) \rvert \le \lvert A(t) \rvert
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(t\text{.}\)</span> This means that the graph of <span class="process-math">\(y(t)\)</span> will be enveloped in the graphs of <span class="process-math">\(\pm A(t)\text{,}\)</span> bounding the amplitude of <span class="process-math">\(\sin\left((5+\epsilon)t\right)\)</span> as shown in <a href="sec-3-5.html#fig-beats" class="xref" data-knowl="./knowl/xref/fig-beats.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.14">Figure 3.5.14</a> for <span class="process-math">\(\varepsilon =0.5\text{.}\)</span> <figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/beats.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y(t) = 3600 e^{-at}\left( \cos(bt) + \frac{a}{b} \sin(bt)\right)- 3600 \cos(5t).\)</span><div class="autopermalink" data-description="Figure 3.5.14"><a href="#fig-beats" title="Copy heading and permalink for Figure 3.5.14" aria-label="Copy heading and permalink for Figure 3.5.14">🔗</a></div></figcaption></figure> In music, when both waves are heard simultaneously, the sound pattern is known as <dfn class="terminology"><em class="emphasis">beats</em></dfn> and the sound system is said to behave <dfn class="terminology"><em class="emphasis">near resonance</em></dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Using a graphing utility, the reader is suggested to plot <span class="process-math">\(y(t)\)</span> for a smaller value of <span class="process-math">\(\varepsilon\)</span> (e.g., <span class="process-math">\(\varepsilon = 0.02\)</span>) and for a larger value (e.g., <span class="process-math">\(\varepsilon = 5\)</span>) to observe how the motion changes when the frequency of the external force is close to the natural frequency and when it is far from it.<div class="autopermalink" data-description="Paragraph"><a href="#example-resonance-mass-spring-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.13.1"><a href="#example-resonance-mass-spring-4-2" title="Copy heading and permalink for Solution 3.5.13.1" aria-label="Copy heading and permalink for Solution 3.5.13.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.5.13"><a href="#example-resonance-mass-spring-4" title="Copy heading and permalink for Example 3.5.13" aria-label="Copy heading and permalink for Example 3.5.13">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-3-5.html#example-resonance-mass-spring-4">in-context</a></span>
+</body>
+</html>

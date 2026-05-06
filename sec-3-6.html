@@ -190,15 +190,23 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#subsec-spring-mass-system" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Spring-Mass System</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#subsec-RLC-circuit" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Electrical Circuits</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-5.html#exercises-EX35" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-3-6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Change of Variables</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#subsec-something-something" class="internal"><span class="codenumber">3.6.1</span> <span class="title">something</span></a></div></li></ul>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#change-of-the-dependent-variable" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Change of the Dependent Variable</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#subsec-change-of-the-independent-variable" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Change of the Independent Variable</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-6.html#exercises-Ex36" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Method of Series Solutions</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Method of Series Solutions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Power Series Solutions</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-5.html" class="internal"><span class="codenumber">5</span> <span class="title">The Laplace Transform and Applications</span></a></div>
 <ul class="structural toc-item-list">
@@ -295,13 +303,644 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-3-6-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li></ul>
-<div class="autopermalink" data-description="Objectives 3.6"><a href="#sec-3-6-2" title="Copy heading and permalink for Objectives 3.6" aria-label="Copy heading and permalink for Objectives 3.6">🔗</a></div></article><section class="introduction" id="sec-3-6-3"><div class="para" id="sec-3-6-3-1">Something about forced oscillations and resonance goes here yes.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="subsec-something-something"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">something</span>
+<div class="autopermalink" data-description="Objectives 3.6"><a href="#sec-3-6-2" title="Copy heading and permalink for Objectives 3.6" aria-label="Copy heading and permalink for Objectives 3.6">🔗</a></div></article><section class="introduction" id="sec-3-6-3"><div class="para" id="sec-3-6-3-1">We begin this section by exploring how a change of the dependent variable can be used to reduce a second order linear differential equation to a form can be solved using methods developed earlier. We then examine how a change of the independent variable can be used to develop solution techniques applicable to a variety of differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-3-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="change-of-the-dependent-variable"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Change of the Dependent Variable</span>
 </h3>
-<div class="para" id="subsec-something-something-2">soemthing<div class="autopermalink" data-description="Paragraph"><a href="#subsec-something-something-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="change-of-the-dependent-variable-2">
+<div class="para">Let <span class="process-math">\(u(x)\)</span> be a function to be chosen later and let <span class="process-math">\(w(x)\)</span> be a function such that <span class="process-math">\(y(x) = u(x) w(x)\)</span> is a solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2.html" id="eq-3-6-1">
+\begin{equation}
+y''+ a_1(x) y' + a_0(x)y = f(x)\tag{3.6.1}
+\end{equation}
 </div>
-<div class="autopermalink" data-description="Subsection 3.6.1: something"><a href="#subsec-something-something" title="Copy heading and permalink for Subsection 3.6.1: something" aria-label="Copy heading and permalink for Subsection 3.6.1: something">🔗</a></div></section><div class="autopermalink" data-description="Section 3.6: Change of Variables"><a href="#sec-3-6" title="Copy heading and permalink for Section 3.6: Change of Variables" aria-label="Copy heading and permalink for Section 3.6: Change of Variables">🔗</a></div></section></div>
+<div class="para">on some interval <span class="process-math">\(I,\)</span> where <span class="process-math">\(a_1, a_0, f\)</span> are continuous. Upon differentiation, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2.html" id="change-of-the-dependent-variable-2-7">
+\begin{equation*}
+\begin{split} y' &amp;= u'w+uw'\\ y''&amp;=u''w+2u'w'+uw''.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Substituting these into the differential equation, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2.html" id="eq-3-6-2">
+\begin{equation}
+(u''+a_1u'+a_0u)w + (2u'+a_1u)w'+ uw'' = f.\tag{3.6.2}
+\end{equation}
+</div>
+<div class="para">Our goal is to find <span class="process-math">\(w\)</span> by choosing <span class="process-math">\(u\)</span> in a way that simplifies <a href="sec-3-6.html#eq-3-6-2" class="xref" data-knowl="./knowl/xref/eq-3-6-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.2">(3.6.2)</a>. A choice of <span class="process-math">\(u\)</span> can be made so that it satisfies one of the following two conditions:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="change-of-the-dependent-variable-3">
+<div class="para">
+<dfn class="terminology">Condition A:</dfn> <span class="process-math">\(u''+ a_1 u' + a_0u=0,\)</span> i.e., <span class="process-math">\(u\)</span> is a solution of</div>
+<div class="displaymath process-math" id="eq-3-6-3">
+\begin{equation}
+y''+ a_1(x) y' + a_0(x)y = 0.\tag{3.6.3}
+\end{equation}
+</div>
+<div class="para">
+<dfn class="terminology">Condition B:</dfn> <span class="process-math">\(2u'+a_1(x)u=0\)</span> and <span class="process-math">\(a_1\)</span> is differentiable.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="change-of-the-dependent-variable-4">
+<div class="para">Suppose first that <span class="process-math">\(u\)</span> satisfies <dfn class="terminology">Condition A</dfn>. Then <a href="sec-3-6.html#eq-3-6-2" class="xref" data-knowl="./knowl/xref/eq-3-6-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.2">(3.6.2)</a> becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2.html ./knowl/xref/eq-3-6-1.html" id="eq-3-6-4">
+\begin{equation}
+(2u'+a_1u)w'+ uw'' = f,\tag{3.6.4}
+\end{equation}
+</div>
+<div class="para">which, being a linear equation in <span class="process-math">\(w',\)</span> can be solved first for <span class="process-math">\(w'\)</span> and then for <span class="process-math">\(w.\)</span> Thus, we have obtained a particular solution <span class="process-math">\(y_p(x) = u(x) w(x)\)</span> of <a href="sec-3-6.html#eq-3-6-1" class="xref" data-knowl="./knowl/xref/eq-3-6-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.1">(3.6.1)</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="change-of-the-dependent-variable-5">
+<div class="para">To find the general solution of <a href="sec-3-6.html#eq-3-6-1" class="xref" data-knowl="./knowl/xref/eq-3-6-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.1">(3.6.1)</a>, we need one another solution <span class="process-math">\(v(x)\)</span> <a href="sec-3-6.html#eq-3-6-3" class="xref" data-knowl="./knowl/xref/eq-3-6-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.3">(3.6.3)</a>, such that <span class="process-math">\(u(x)\)</span> and <span class="process-math">\(v(x)\)</span> are linearly independent. Let <span class="process-math">\(v(x) = u(x) z(x)\)</span> for some function <span class="process-math">\(z(x)\)</span> such that <span class="process-math">\(v\)</span> satisfies <a href="sec-3-6.html#eq-3-6-3" class="xref" data-knowl="./knowl/xref/eq-3-6-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.3">(3.6.3)</a>. Running the same calculation as above with <span class="process-math">\(z\)</span> in place of <span class="process-math">\(w,\)</span> but with <span class="process-math">\(f=0,\)</span> we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html ./knowl/xref/eq-3-6-3.html ./knowl/xref/eq-3-6-3.html ./knowl/xref/eq-3-6-1.html" id="eq-3-6-5">
+\begin{equation}
+(2u'+a_1u)z'+ uz'' = 0,\tag{3.6.5}
+\end{equation}
+</div>
+<div class="para">which solves for a nonzero function <span class="process-math">\(z(x).\)</span> Consequently, the general solution to <a href="sec-3-6.html#eq-3-6-1" class="xref" data-knowl="./knowl/xref/eq-3-6-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.1">(3.6.1)</a> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html ./knowl/xref/eq-3-6-3.html ./knowl/xref/eq-3-6-3.html ./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-5-16">
+\begin{equation*}
+\begin{split} y &amp;= c_1u(x)+ c_2v(x) + u(x)w(x)\\ &amp;=c_1u(x)+ c_2u(x) z(x) + u(x)w(x)\\ &amp;= u(x) (c_1 + c_2 z(x) + w(x)), \end{split}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="change-of-the-dependent-variable-6">Let us work through an example to show how the above procedure works.<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="change-of-the-dependent-variable-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="change-of-the-dependent-variable-7-1-1">
+<div class="para">Find the general solution of</div>
+<div class="displaymath process-math" id="change-of-the-dependent-variable-7-1-1-1">
+\begin{equation*}
+(x-1)y''-x y'+y =1
+\end{equation*}
+</div>
+<div class="para">using the fact that <span class="process-math">\(u(x) = e^x\)</span> is a solution to the associate homogeneous equation.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="change-of-the-dependent-variable-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="change-of-the-dependent-variable-7-2-1">
+<div class="para">First, we note that <span class="process-math">\(a_1(x) = -\frac{x}{x-1}\)</span> and <span class="process-math">\(f(x) = \frac{1}{x-1}\text{.}\)</span> We compute <span class="process-math">\(w\)</span> and <span class="process-math">\(z\)</span> satisfying <a href="sec-3-6.html#eq-3-6-4" class="xref" data-knowl="./knowl/xref/eq-3-6-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.4">(3.6.4)</a> and <a href="sec-3-6.html#eq-3-6-5" class="xref" data-knowl="./knowl/xref/eq-3-6-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.5">(3.6.5)</a>, respectively. Using <a href="sec-3-6.html#eq-3-6-4" class="xref" data-knowl="./knowl/xref/eq-3-6-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.4">(3.6.4)</a>, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html ./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html" id="change-of-the-dependent-variable-7-2-1-8">
+\begin{equation*}
+\left(2e^x-\frac{x}{x-1} e^x\right)w' + e^x w'' = \frac{1}{x-1}
+\end{equation*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html ./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html" id="change-of-the-dependent-variable-7-2-1-9">
+\begin{equation*}
+w''+\left(1-\frac{1}{x-1}\right)w' = \frac{e^{-x}}{x-1}.
+\end{equation*}
+</div>
+<div class="para">The integrating factor is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html ./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html" id="change-of-the-dependent-variable-7-2-1-10">
+\begin{equation*}
+\frac{e^x}{x-1}.
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html ./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html" id="change-of-the-dependent-variable-7-2-1-11">
+\begin{equation*}
+\left(\frac{e^x}{x-1} w'\right)'= \frac{1}{(x-1)^2},
+\end{equation*}
+</div>
+<div class="para">which yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html ./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html" id="change-of-the-dependent-variable-7-2-1-12">
+\begin{equation*}
+\frac{e^x}{x-1} w' = -\frac{1}{x-1}+A,
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html ./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html" id="change-of-the-dependent-variable-7-2-1-13">
+\begin{equation*}
+w' = -e^{-x} +A (x-1)e^{-x}.
+\end{equation*}
+</div>
+<div class="para">Integrating yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html ./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html" id="change-of-the-dependent-variable-7-2-1-14">
+\begin{equation*}
+w = e^{-x} -Axe^{-x} + B,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are arbitrary constants. We simply take <span class="process-math">\(w(x) = e^{-x},\)</span> so that <span class="process-math">\(y_p(x) = u(x)w(x) = e^x e^{-x} = 1.\)</span> Moreover, it is clear that <span class="process-math">\(z(x)=-Axe^{-x} + B\)</span> solves <a href="sec-3-6.html#eq-3-6-5" class="xref" data-knowl="./knowl/xref/eq-3-6-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.5">(3.6.5)</a> for all <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Since we only need one nonzero function <span class="process-math">\(z(x),\)</span> we can simply take <span class="process-math">\(z(x) = xe^{-x}.\)</span> Therefore <span class="process-math">\(v(x) = e^x z(x) = x.\)</span> Hence the general solution of the given nonhomogeneous equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html ./knowl/xref/eq-3-6-4.html ./knowl/xref/eq-3-6-5.html" id="change-of-the-dependent-variable-7-2-1-26">
+\begin{equation*}
+y = c_1e^x + c_2 x +1,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.6.1.1"><a href="#change-of-the-dependent-variable-7-2" title="Copy heading and permalink for Solution 3.6.1.1" aria-label="Copy heading and permalink for Solution 3.6.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.6.1"><a href="#change-of-the-dependent-variable-7" title="Copy heading and permalink for Example 3.6.1" aria-label="Copy heading and permalink for Example 3.6.1">🔗</a></div></article></details><div class="para logical" id="change-of-the-dependent-variable-8">
+<div class="para">Suppose now that <span class="process-math">\(u\)</span> satisfies <dfn class="terminology">Condition B</dfn>. Then <span class="process-math">\(2u'+a_1(x)u=0\)</span> and so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2.html" id="change-of-the-dependent-variable-8-4">
+\begin{equation*}
+u' = -\frac{a_1}{2}u\quad \text{ so that }\quad  u(x) = e^{-\frac{1}{2}\int a_1(x) \,dx}.
+\end{equation*}
+</div>
+<div class="para">Moreover,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2.html" id="eq-3-6-6">
+\begin{equation}
+2u''= - a_1 u' - a'_1 u =\left(\frac{a_1^2}{2}-a'_1\right)u.\tag{3.6.6}
+\end{equation}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2.html" id="change-of-the-dependent-variable-8-6">
+\begin{equation*}
+\begin{split} u''+a_1 u'+a_0 u &amp;=\left(\frac{a_1^2}{4}-\frac{1}{2}a'_1\right)u - \frac{a_1^2}{2}u +a_0u\\ &amp;=\left(a_0-\frac{a_1^2}{4}-\frac{a'_1}{2}\right)u.
+\end{split}
+\end{equation*}
+</div>
+<div class="para">Substituting these into <a href="sec-3-6.html#eq-3-6-2" class="xref" data-knowl="./knowl/xref/eq-3-6-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.2">(3.6.2)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2.html" id="eq-3-6-7">
+\begin{equation}
+w''+\left(a_0-\frac{a_1^2}{4}-\frac{a'_1}{2}\right)w = g(x),\tag{3.6.7}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(g(x) = \frac{f(x)}{u(x)}.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="change-of-the-dependent-variable-9">
+<div class="para">The differential equation <a href="sec-3-6.html#eq-3-6-7" class="xref" data-knowl="./knowl/xref/eq-3-6-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.7">(3.6.7)</a> is said to be the <dfn class="terminology"><em class="emphasis">normal form</em></dfn> of <a href="sec-3-6.html#eq-3-6-1" class="xref" data-knowl="./knowl/xref/eq-3-6-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.1">(3.6.1)</a>. The coefficient of <span class="process-math">\(w\)</span> in <a href="sec-3-6.html#eq-3-6-7" class="xref" data-knowl="./knowl/xref/eq-3-6-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.7">(3.6.7)</a> is called the <dfn class="terminology"><em class="emphasis">invariant</em></dfn> of <a href="sec-3-6.html#eq-3-6-1" class="xref" data-knowl="./knowl/xref/eq-3-6-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.1">(3.6.1)</a> and is denoted by <span class="process-math">\(I_y(x).\)</span> That is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-7.html ./knowl/xref/eq-3-6-1.html ./knowl/xref/eq-3-6-7.html ./knowl/xref/eq-3-6-1.html ./knowl/xref/eq-3-6-7.html ./knowl/xref/eq-3-6-7.html ./knowl/xref/eq-3-6-1.html ./knowl/xref/eq-3-6-7.html" id="change-of-the-dependent-variable-9-9">
+\begin{equation*}
+I_y(x) = a_0(x)-\frac{a_1^2(x)}{4}-\frac{a'_1(x)}{2}.
+\end{equation*}
+</div>
+<div class="para">We observe that <a href="sec-3-6.html#eq-3-6-7" class="xref" data-knowl="./knowl/xref/eq-3-6-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.7">(3.6.7)</a> turns into a differential equation with constant coefficients if and only if <span class="process-math">\(I_y(x)\)</span> is constant. Consequently, <a href="sec-3-6.html#eq-3-6-7" class="xref" data-knowl="./knowl/xref/eq-3-6-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.7">(3.6.7)</a> can be readily solved in this case. When <span class="process-math">\(I_w(x)\)</span> is a constant function,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-7.html ./knowl/xref/eq-3-6-1.html ./knowl/xref/eq-3-6-7.html ./knowl/xref/eq-3-6-1.html ./knowl/xref/eq-3-6-7.html ./knowl/xref/eq-3-6-7.html ./knowl/xref/eq-3-6-1.html ./knowl/xref/eq-3-6-7.html" id="change-of-the-dependent-variable-9-14">
+\begin{equation*}
+y = u(x) w(x)= w(x)\;e^{-\frac{1}{2}\int a_1(x)\, dx}
+\end{equation*}
+</div>
+<div class="para">is the general solution of <a href="sec-3-6.html#eq-3-6-1" class="xref" data-knowl="./knowl/xref/eq-3-6-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.1">(3.6.1)</a> if and only if <span class="process-math">\(w\)</span> is the general solution of <a href="sec-3-6.html#eq-3-6-7" class="xref" data-knowl="./knowl/xref/eq-3-6-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.7">(3.6.7)</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="change-of-the-dependent-variable-10">We discuss some examples below to show how the above procedure works.<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="change-of-the-dependent-variable-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="change-of-the-dependent-variable-11-1-1">
+<div class="para">Find the general solution of the differential equation</div>
+<div class="displaymath process-math" id="change-of-the-dependent-variable-11-1-1-1">
+\begin{equation*}
+y''+4y'+4y = \sin x
+\end{equation*}
+</div>
+<div class="para">by using its normal form.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="change-of-the-dependent-variable-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="change-of-the-dependent-variable-11-2-1">
+<div class="para">Comparing the differential equation with <a href="sec-3-6.html#eq-3-6-1" class="xref" data-knowl="./knowl/xref/eq-3-6-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.1">(3.6.1)</a>, we have <span class="process-math">\(a_0= a_1=4.\)</span> So the invariant of the differential equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-11-2-1-3">
+\begin{equation*}
+I_y(x) = 4-\frac{4^2}{4}-0 = 0.
+\end{equation*}
+</div>
+<div class="para">With the change of variable <span class="process-math">\(y = u(x) w(x)\)</span> with <span class="process-math">\(u(x) = e^{-\frac{1}{2}\int 4\,dx} = e^{-2x},\)</span> the normal form of the equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-11-2-1-6">
+\begin{equation*}
+w''(x) = \frac{\sin x}{u(x)}=  e^{2x}\sin x.
+\end{equation*}
+</div>
+<div class="para">Upon integration, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-11-2-1-7">
+\begin{equation*}
+w(x) = c_1+c_2 x-\frac{1}{25} e^{2 x} (4 \cos x-3 \sin x).
+\end{equation*}
+</div>
+<div class="para">Therefore the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-11-2-1-8">
+\begin{equation*}
+y = e^{-2x}w(x) = c_1e^{-2x}+c_2 x e^{-2x}-\frac{1}{25} (4 \cos x-3 \sin x),
+\end{equation*}
+</div>
+<div class="para">which is the same result we would have obtained by the method of undermined coefficients.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.6.2.1"><a href="#change-of-the-dependent-variable-11-2" title="Copy heading and permalink for Solution 3.6.2.1" aria-label="Copy heading and permalink for Solution 3.6.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.6.2"><a href="#change-of-the-dependent-variable-11" title="Copy heading and permalink for Example 3.6.2" aria-label="Copy heading and permalink for Example 3.6.2">🔗</a></div></article></details><div class="para" id="change-of-the-dependent-variable-12">The above procedure is particularly helpful for solving linear equations with variable coefficients, as the following examples illustrate.<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="change-of-the-dependent-variable-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="change-of-the-dependent-variable-13-1-1">
+<div class="para">Find the general solution of</div>
+<div class="displaymath process-math" id="change-of-the-dependent-variable-13-1-1-1">
+\begin{equation*}
+x^2y'' -2xy' + (k^2x^2+2)y = x^3\sin x,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(k\ne 1\)</span> is a positive constant, by using its normal form.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="change-of-the-dependent-variable-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="change-of-the-dependent-variable-13-2-1">
+<div class="para">Comparing the given equation with <a href="sec-3-6.html#eq-3-6-1" class="xref" data-knowl="./knowl/xref/eq-3-6-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.1">(3.6.1)</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-13-2-1-2">
+\begin{equation*}
+a_0(x) = k^2+\frac{2}{x^2} \quad \text{ and } a_1(x) = - \frac{2}{x}.
+\end{equation*}
+</div>
+<div class="para">So the invariant of the differential equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-13-2-1-3">
+\begin{equation*}
+I_y(x) = a_0(x)-\frac{a_1^2(x)}{4}-\frac{a'_1(x)}{2} =k^2+\frac{2}{x^2}-\frac{1}{x^2}- \frac{1}{x^2} = k^2.
+\end{equation*}
+</div>
+<div class="para">Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-13-2-1-4">
+\begin{equation*}
+u(x) = e^{-\frac{1}{2}\int \left(-\frac{2}{x}\right)\, dx} = e^{\ln\lvert x\rvert} = \lvert x\rvert,
+\end{equation*}
+</div>
+<div class="para">we take <span class="process-math">\(u(x) = x.\)</span> With the change of variable <span class="process-math">\(y = u(x) w(x),\)</span> the differential equation is transformed into its normal form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-13-2-1-7">
+\begin{equation*}
+w'' + k^2 w = \frac{x\sin x}{x}  = \sin x,
+\end{equation*}
+</div>
+<div class="para">whose general solution, by the method of undetermined coefficients or variation of parameters, is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-13-2-1-8">
+\begin{equation*}
+w=c_1 \cos (k x)+c_2 \sin (k x)+\frac{\sin x}{k^2-1},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. Hence the general solution of the given differential equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-1.html" id="change-of-the-dependent-variable-13-2-1-11">
+\begin{equation*}
+y = x w(x) = c_1 x \cos (k x)+c_2 x \sin (k x)+\frac{x\sin x}{k^2-1},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#change-of-the-dependent-variable-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.6.3.1"><a href="#change-of-the-dependent-variable-13-2" title="Copy heading and permalink for Solution 3.6.3.1" aria-label="Copy heading and permalink for Solution 3.6.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.6.3"><a href="#change-of-the-dependent-variable-13" title="Copy heading and permalink for Example 3.6.3" aria-label="Copy heading and permalink for Example 3.6.3">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.6.1: Change of the Dependent Variable"><a href="#change-of-the-dependent-variable" title="Copy heading and permalink for Subsection 3.6.1: Change of the Dependent Variable" aria-label="Copy heading and permalink for Subsection 3.6.1: Change of the Dependent Variable">🔗</a></div></section><section class="subsection" id="subsec-change-of-the-independent-variable"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Change of the Independent Variable</span>
+</h3>
+<div class="para logical" id="subsec-change-of-the-independent-variable-2">
+<div class="para">By changing the independent variable in the equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-11.html" id="eq-3-6-2-8">
+\begin{equation}
+y''+ a_1(x) y' + a_0(x)y = f(x)\tag{3.6.8}
+\end{equation}
+</div>
+<div class="para">from <span class="process-math">\(x\)</span> to <span class="process-math">\(t\)</span> via a one-to-one function <span class="process-math">\(t= h(x)\)</span> which is differentiable with the differentiable inverse <span class="process-math">\(x= h^{-1}(t),\)</span> we may be able to transform <a href="sec-3-6.html#eq-3-6-2-8" class="xref" data-knowl="./knowl/xref/eq-3-6-2-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.8">(3.6.8)</a> into a differential equation which may be solved using the methods that are previously discussed. To see how such a change of the independent variable works, we note</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-11.html" id="subsec-change-of-the-independent-variable-2-7">
+\begin{equation*}
+\frac{dt}{dx} = h'(x)
+\end{equation*}
+</div>
+<div class="para">and compute, by the chain rule, the derivatives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-11.html" id="eq-3-6-2-9">
+\begin{equation}
+\frac{dy}{dx} = \frac{dy}{dt}\frac{dt}{dx} = \frac{dy}{dt}h'(x)\tag{3.6.9}
+\end{equation}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-11.html" id="eq-3-6-2-10">
+\begin{equation}
+\frac{d^2y}{dx^2} = \frac{d}{dt}\left(\frac{dy}{dt}h'(x)\right)\frac{dt}{dx}   =\frac{d^2y}{dt^2} \left(h'(x)\right)^2+ h''(x) \frac{dy}{dt}.\tag{3.6.10}
+\end{equation}
+</div>
+<div class="para">Substituting these into <a href="sec-3-6.html#eq-3-6-2-8" class="xref" data-knowl="./knowl/xref/eq-3-6-2-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.8">(3.6.8)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-8.html ./knowl/xref/eq-3-6-2-11.html" id="eq-3-6-2-11">
+\begin{equation}
+\frac{d^2y}{dt^2} \left(h'(x)\right)^2+ \left(h''(x) +a_1(x) h'(x)\right)\frac{dy}{dt}+ a_0(x)y= f(x),\tag{3.6.11}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(x = h^{-1}(t).\)</span> The substitution <span class="process-math">\(t = h(x)\)</span> is beneficial only if it transforms <a href="sec-3-6.html#eq-3-6-2-11" class="xref" data-knowl="./knowl/xref/eq-3-6-2-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.11">(3.6.11)</a> into an equation solvable by a known method.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-change-of-the-independent-variable-3">To illustrate the effectiveness of changing the independent variable, we present two examples. The first involves a second order <dfn class="terminology">Cauchy-Euler</dfn> equation, and the second is the <dfn class="terminology">Legendre equation of order <span class="process-math">\(n.\)</span></dfn> Here, the term <em class="emphasis">order</em> refers to something different from the order of the differential equation itself. This distinction in the use of the same terminology is important to keep in mind.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-change-of-the-independent-variable-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-change-of-the-independent-variable-4-1-1">
+<div class="para">Find the general solution of the Cauchy-Euler equation</div>
+<div class="displaymath process-math" id="eq-3-6-2-12">
+\begin{equation}
+x^2 y''+3xy'+y = x\tag{3.6.12}
+\end{equation}
+</div>
+<div class="para">by solving the transformed equation that is obtained from the change of variable <span class="process-math">\(t= \ln x.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-change-of-the-independent-variable-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-change-of-the-independent-variable-4-2-1">
+<div class="para">Using <span class="process-math">\(t = h(x) = \ln x\)</span> in <a href="sec-3-6.html#eq-3-6-2-9" class="xref" data-knowl="./knowl/xref/eq-3-6-2-9.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.9">(3.6.9)</a> and <a href="sec-3-6.html#eq-3-6-2-10" class="xref" data-knowl="./knowl/xref/eq-3-6-2-10.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.10">(3.6.10)</a>, we find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-12.html" id="subsec-change-of-the-independent-variable-4-2-1-4">
+\begin{equation*}
+\frac{dy}{dx} = \frac{dy}{dt}h'(x) =\frac{1}{x}\frac{dy}{dt}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-12.html" id="subsec-change-of-the-independent-variable-4-2-1-5">
+\begin{equation*}
+\frac{d^2y}{dx^2}  =\frac{d^2y}{dt^2} \left(h'(x)\right)^2+ h''(x) \frac{dy}{dt} = \frac{1}{x^2} \left(\frac{d^2y}{dt^2}-\frac{dy}{dt} \right).
+\end{equation*}
+</div>
+<div class="para">Substituting these into <a href="sec-3-6.html#eq-3-6-2-12" class="xref" data-knowl="./knowl/xref/eq-3-6-2-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.12">(3.6.12)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-12.html" id="subsec-change-of-the-independent-variable-4-2-1-7">
+\begin{equation*}
+\frac{d^2y}{dt^2}+2\frac{dy}{dt}+  y= e^t.
+\end{equation*}
+</div>
+<div class="para">The general solution of this equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-12.html" id="subsec-change-of-the-independent-variable-4-2-1-8">
+\begin{equation*}
+y= c_1 e^{-t} + c_2 t e^{-t} + \frac{1}{4} e^t,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants. Since <span class="process-math">\(t=\ln x,\)</span> it follows that the general solution of <a href="sec-3-6.html#eq-3-6-2-12" class="xref" data-knowl="./knowl/xref/eq-3-6-2-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.12">(3.6.12)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-12.html" id="subsec-change-of-the-independent-variable-4-2-1-13">
+\begin{equation*}
+y= \frac{c_1}{x} + \frac{c_2 e^x}{x} + \frac{x}{4},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are arbitrary constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.6.4.1"><a href="#subsec-change-of-the-independent-variable-4-2" title="Copy heading and permalink for Solution 3.6.4.1" aria-label="Copy heading and permalink for Solution 3.6.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.6.4"><a href="#subsec-change-of-the-independent-variable-4" title="Copy heading and permalink for Example 3.6.4" aria-label="Copy heading and permalink for Example 3.6.4">🔗</a></div></article></details><details id="subsec-change-of-the-independent-variable-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Legendre Equation.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-change-of-the-independent-variable-5-2-1">
+<div class="para">Transform the Legendre equation </div>
+<div class="displaymath process-math" id="eq-3-6-2-13">
+\begin{equation}
+y''+ (\cot x) \;y' +n(n+1)y=0\tag{3.6.13}
+\end{equation}
+</div>
+<div class="para">of order <span class="process-math">\(n\)</span> (a real number) using the change of variable <span class="process-math">\(t = \cos x.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-change-of-the-independent-variable-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-change-of-the-independent-variable-5-3-1">
+<div class="para">Using <span class="process-math">\(t = h(x) = \cos x\)</span> in <a href="sec-3-6.html#eq-3-6-2-9" class="xref" data-knowl="./knowl/xref/eq-3-6-2-9.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.9">(3.6.9)</a> and <a href="sec-3-6.html#eq-3-6-2-10" class="xref" data-knowl="./knowl/xref/eq-3-6-2-10.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.10">(3.6.10)</a>, we find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-13.html" id="subsec-change-of-the-independent-variable-5-3-1-4">
+\begin{equation*}
+\frac{dy}{dx} = \frac{dy}{dt}h'(x) =-\sin x\frac{dy}{dt}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-13.html" id="subsec-change-of-the-independent-variable-5-3-1-5">
+\begin{equation*}
+\frac{d^2y}{dx^2}  =\left(h'(x)\right)^2\frac{d^2y}{dt^2} + h''(x) \frac{dy}{dt} = \sin^2x \frac{d^2y}{dt^2} -\cos x\frac{dy}{dt} .
+\end{equation*}
+</div>
+<div class="para">Substituting these into <a href="sec-3-6.html#eq-3-6-2-13" class="xref" data-knowl="./knowl/xref/eq-3-6-2-13.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.13">(3.6.13)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-13.html" id="subsec-change-of-the-independent-variable-5-3-1-7">
+\begin{equation*}
+\sin^2 x\frac{d^2y}{dt^2}-\cos x\frac{dy}{dt} +\cot x (-\sin x)\frac{dy}{dt}+  n (n+1)y= 0,
+\end{equation*}
+</div>
+<div class="para">which simplifies to</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-13.html" id="subsec-change-of-the-independent-variable-5-3-1-8">
+\begin{equation*}
+\sin^2 x\frac{d^2y}{dt^2}-2\cos x\frac{dy}{dt} +n (n+1)y= 0.
+\end{equation*}
+</div>
+<div class="para">Using <span class="process-math">\(t= \cos x\)</span> gives the standard form of the Legendre equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-9.html ./knowl/xref/eq-3-6-2-10.html ./knowl/xref/eq-3-6-2-13.html" id="eq-3-6-2-140">
+\begin{equation}
+(1-t^2)\frac{d^2y}{dt^2}- 2t\frac{dy}{dt}+ n(n+1)y = 0.\tag{3.6.14}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.6.5.1"><a href="#subsec-change-of-the-independent-variable-5-3" title="Copy heading and permalink for Solution 3.6.5.1" aria-label="Copy heading and permalink for Solution 3.6.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.6.5: Legendre Equation"><a href="#subsec-change-of-the-independent-variable-5" title="Copy heading and permalink for Example 3.6.5: Legendre Equation" aria-label="Copy heading and permalink for Example 3.6.5: Legendre Equation">🔗</a></div></article></details><article class="remark remark-like" id="subsec-change-of-the-independent-variable-6"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="subsec-change-of-the-independent-variable-6-1">
+<ol class="lower-roman ol-marker-1" id="subsec-change-of-the-independent-variable-6-1-1">
+<li id="subsec-change-of-the-independent-variable-6-1-1-1">
+<div class="para logical" id="subsec-change-of-the-independent-variable-6-1-1-1-1">
+<div class="para">Since the invariant</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-13.html ./knowl/xref/sec-4-1.html" id="subsec-change-of-the-independent-variable-6-1-1-1-1-1">
+\begin{equation*}
+I_y(t) =\frac{n(n+1)}{1-t^2} - \frac{1}{4}\left(\frac{-2t}{1-t^2}\right)^2 - \frac{1}{2}\left(\frac{-2t}{1-t^2}\right) =\frac{n(n+1)}{1-t^2}+\frac{1}{(1-t^2)^2}
+\end{equation*}
+</div>
+<div class="para">of <a href="sec-3-6.html#eq-3-6-2-12" class="xref" data-knowl="./knowl/xref/eq-3-6-2-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.12">(3.6.12)</a> is not a constant, the transformed equation in <span class="process-math">\(w\)</span> by the change of dependent variable <span class="process-math">\(y(t) = u(t)w(t)\)</span> with</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-13.html ./knowl/xref/sec-4-1.html" id="subsec-change-of-the-independent-variable-6-1-1-1-1-5">
+\begin{equation*}
+u(t) = e^{ -\frac{1}{2}\int \left(\frac{-2t}{1-t^2}\right)\, dt}
+\end{equation*}
+</div>
+<div class="para">does not have constant coefficients. Likewise, the invariant <span class="process-math">\(I_y(x)\)</span> of <a href="sec-3-6.html#eq-3-6-2-13" class="xref" data-knowl="./knowl/xref/eq-3-6-2-13.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.13">(3.6.13)</a> for the change of variable <span class="process-math">\(y(x) = u(x) w(x)\)</span> with</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-13.html ./knowl/xref/sec-4-1.html" id="subsec-change-of-the-independent-variable-6-1-1-1-1-9">
+\begin{equation*}
+u(x) = e^{ -\frac{1}{2}\int \cot x\, dx}
+\end{equation*}
+</div>
+<div class="para">is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-12.html ./knowl/xref/eq-3-6-2-13.html ./knowl/xref/sec-4-1.html" id="subsec-change-of-the-independent-variable-6-1-1-1-1-10">
+\begin{equation*}
+I_y(x) =n(n+1) - \frac{1}{4}\cot^2x + \frac{1}{2}\csc x\cot x
+\end{equation*}
+</div>
+<div class="para">which is not a constant, and therefore the transformed equation in <span class="process-math">\(w\)</span> does not have constant coefficients. A standard approach for solving the Legendre equation is the method of power series solutions, which will be discussed in <a href="sec-4-1.html" class="internal" title="Section 4.1: Power Series Solutions">Section 4.1</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-6-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#subsec-change-of-the-independent-variable-6-1-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="subsec-change-of-the-independent-variable-6-1-1-2">
+<div class="para logical" id="subsec-change-of-the-independent-variable-6-1-1-2-1">
+<div class="para">The Legendre equation <a href="sec-3-6.html#eq-3-6-2-13" class="xref" data-knowl="./knowl/xref/eq-3-6-2-13.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.13">(3.6.13)</a> lies in an important class known as <dfn class="terminology">Sturm-Liouville problems</dfn>, which are parameter dependent problems of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-13.html ./knowl/xref/eq-3-6-2-13.html ./knowl/xref/eq-Sturm-Liouville.html" id="eq-Sturm-Liouville">
+\begin{equation}
+\big( a_1(x)\, y'\big)'+ \big( \lambda\, w(x) - a_0(x) \big) y = 0,\tag{3.6.15}
+\end{equation}
+</div>
+<div class="para">
+<span class="process-math">\(\lambda\)</span> being a parameter (called an eigenvalue) and <span class="process-math">\(p, q, r\)</span> known functions of <span class="process-math">\(x.\)</span> In fact, <a href="sec-3-6.html#eq-3-6-2-13" class="xref" data-knowl="./knowl/xref/eq-3-6-2-13.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.13">(3.6.13)</a> can be written as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-13.html ./knowl/xref/eq-3-6-2-13.html ./knowl/xref/eq-Sturm-Liouville.html" id="subsec-change-of-the-independent-variable-6-1-1-2-1-8">
+\begin{equation*}
+\big((1-x^2)y'\big)'+n(n+1)y=0,
+\end{equation*}
+</div>
+<div class="para">which is of the form <a href="sec-3-6.html#eq-Sturm-Liouville" class="xref" data-knowl="./knowl/xref/eq-Sturm-Liouville.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.15">(3.6.15)</a> with <span class="process-math">\(a_1(x)= 1-x^2,\)</span> <span class="process-math">\(w(x) =1,\)</span> <span class="process-math">\(a_0(x)= 0,\)</span> and <span class="process-math">\(\lambda = n(n+1).\)</span> A detailed discussion of Sturm-Liouville problems, however, lies beyond the scope of this book.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-6-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#subsec-change-of-the-independent-variable-6-1-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.6.6"><a href="#subsec-change-of-the-independent-variable-6" title="Copy heading and permalink for Remark 3.6.6" aria-label="Copy heading and permalink for Remark 3.6.6">🔗</a></div></article><div class="para logical" id="subsec-change-of-the-independent-variable-7">
+<div class="para">We now discuss a useful change of dependent variable for the equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-11.html ./knowl/xref/eq-3-6-2-14.html ./knowl/xref/eq-3-6-2-80.html" id="eq-3-6-2-80">
+\begin{equation}
+y''+ a_1(x) y' + a_0(x)y = f(x)\tag{3.6.16}
+\end{equation}
+</div>
+<div class="para">given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-11.html ./knowl/xref/eq-3-6-2-14.html ./knowl/xref/eq-3-6-2-80.html" id="subsec-change-of-the-independent-variable-7-2">
+\begin{equation*}
+t = h(x) = \int\sqrt{a_0(x)}\, dx.
+\end{equation*}
+</div>
+<div class="para">It is clear that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-11.html ./knowl/xref/eq-3-6-2-14.html ./knowl/xref/eq-3-6-2-80.html" id="subsec-change-of-the-independent-variable-7-3">
+\begin{equation*}
+h'(x) = \sqrt{a_0(x)} \quad \text{ and }\quad h''(x) = \frac{a'_0(x)}{2\sqrt{a_0(x)}}.
+\end{equation*}
+</div>
+<div class="para">Using this change of variable in <a href="sec-3-6.html#eq-3-6-2-11" class="xref" data-knowl="./knowl/xref/eq-3-6-2-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.11">(3.6.11)</a>, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-11.html ./knowl/xref/eq-3-6-2-14.html ./knowl/xref/eq-3-6-2-80.html" id="subsec-change-of-the-independent-variable-7-5">
+\begin{equation*}
+a_0(x)\frac{d^2y}{dt^2}+\left(\frac{a'_0(x)+2 a_0(x) a_1(x)}{2\sqrt{a_0(x)}}\right)\frac{dy}{dt} + a_0(x) y=0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x= h^{-1}(t).\)</span> The above equation can be rewritten as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-11.html ./knowl/xref/eq-3-6-2-14.html ./knowl/xref/eq-3-6-2-80.html" id="eq-3-6-2-14">
+\begin{equation}
+\frac{d^2y}{dt^2}+\left(\frac{a'_0(x)+2 a_0(x) a_1(x)}{2{\big(a_0(x)\big)}^{3/2}}\right)\frac{dy}{dt}  +  y=0.\tag{3.6.17}
+\end{equation}
+</div>
+<div class="para">The equation <a href="sec-3-6.html#eq-3-6-2-14" class="xref" data-knowl="./knowl/xref/eq-3-6-2-14.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.17">(3.6.17)</a> can be readily solved when</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3-6-2-11.html ./knowl/xref/eq-3-6-2-14.html ./knowl/xref/eq-3-6-2-80.html" id="subsec-change-of-the-independent-variable-7-9">
+\begin{equation*}
+\frac{a'_0(x)+2 a_0(x) a_1(x)}{2\big(a_0(x)\big)^{3/2}} =\text{ a constant}.
+\end{equation*}
+</div>
+<div class="para">The arguments made above make sense only for those <span class="process-math">\(a_0(x)\)</span> in <a href="sec-3-6.html#eq-3-6-2-80" class="xref" data-knowl="./knowl/xref/eq-3-6-2-80.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.16">(3.6.16)</a> for which these considerations are meaningful.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-change-of-the-independent-variable-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.6.2: Change of the Independent Variable"><a href="#subsec-change-of-the-independent-variable" title="Copy heading and permalink for Subsection 3.6.2: Change of the Independent Variable" aria-label="Copy heading and permalink for Subsection 3.6.2: Change of the Independent Variable">🔗</a></div></section><section class="exercises" id="exercises-Ex36"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercises-Ex36-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-Ex36-1-1">Find the general solution of each differential equation below. A solution to the associated homogeneous equation is provided.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-Ex36-1-2">
+<li id="exercises-Ex36-1-2-1">
+<div class="para" id="exercises-Ex36-1-2-1-1">
+<span class="process-math">\(\displaystyle x^2 y''+x y'-4 y=x; \quad u(x) = x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.1.i"><a href="#exercises-Ex36-1-2-1" title="Copy heading and permalink for Item 3.6.3.1.i" aria-label="Copy heading and permalink for Item 3.6.3.1.i">🔗</a></div>
+</li>
+<li id="exercises-Ex36-1-2-2">
+<div class="para" id="exercises-Ex36-1-2-2-1">
+<span class="process-math">\(\displaystyle x^3 y''+x^2 y'-4 x y=1+x; \quad u(x) = x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.1.ii"><a href="#exercises-Ex36-1-2-2" title="Copy heading and permalink for Item 3.6.3.1.ii" aria-label="Copy heading and permalink for Item 3.6.3.1.ii">🔗</a></div>
+</li>
+<li id="exercises-Ex36-1-2-3">
+<div class="para" id="exercises-Ex36-1-2-3-1">
+<span class="process-math">\(\displaystyle x^4 y''+x^3 y'-4 x^2 y=1;\quad u(x) = x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.1.iii"><a href="#exercises-Ex36-1-2-3" title="Copy heading and permalink for Item 3.6.3.1.iii" aria-label="Copy heading and permalink for Item 3.6.3.1.iii">🔗</a></div>
+</li>
+<li id="exercises-Ex36-1-2-4">
+<div class="para" id="exercises-Ex36-1-2-4-1">
+<span class="process-math">\(\displaystyle (x^2-1)y''-x y'+y=1; \quad u(x) = x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.1.iv"><a href="#exercises-Ex36-1-2-4" title="Copy heading and permalink for Item 3.6.3.1.iv" aria-label="Copy heading and permalink for Item 3.6.3.1.iv">🔗</a></div>
+</li>
+<li id="exercises-Ex36-1-2-5">
+<div class="para" id="exercises-Ex36-1-2-5-1">
+<span class="process-math">\(\displaystyle (\tan^2x)y''-(2 \tan x) y'+ \left(\sec ^2x+1\right)y=\sin^2x \, \tan x; \quad u(x) = \sin x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.1.v"><a href="#exercises-Ex36-1-2-5" title="Copy heading and permalink for Item 3.6.3.1.v" aria-label="Copy heading and permalink for Item 3.6.3.1.v">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.6.3.1"><a href="#exercises-Ex36-1" title="Copy heading and permalink for Exercise 3.6.3.1" aria-label="Copy heading and permalink for Exercise 3.6.3.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-Ex36-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-Ex36-2-1">Using the techniques discussed in the this section, find the general solution of each differential equation below.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-Ex36-2-2">
+<li id="exercises-Ex36-2-2-1">
+<div class="para" id="exercises-Ex36-2-2-1-1">
+<span class="process-math">\(\displaystyle y''+6y'+9y = e^{-3x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.2.i"><a href="#exercises-Ex36-2-2-1" title="Copy heading and permalink for Item 3.6.3.2.i" aria-label="Copy heading and permalink for Item 3.6.3.2.i">🔗</a></div>
+</li>
+<li id="exercises-Ex36-2-2-2">
+<div class="para" id="exercises-Ex36-2-2-2-1">
+<span class="process-math">\(\displaystyle y''+6y'+9y = xe^{-3x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.2.ii"><a href="#exercises-Ex36-2-2-2" title="Copy heading and permalink for Item 3.6.3.2.ii" aria-label="Copy heading and permalink for Item 3.6.3.2.ii">🔗</a></div>
+</li>
+<li id="exercises-Ex36-2-2-3">
+<div class="para" id="exercises-Ex36-2-2-3-1">
+<span class="process-math">\(\displaystyle y''+6 y'+9 y=x^2 e^{-3x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.2.iii"><a href="#exercises-Ex36-2-2-3" title="Copy heading and permalink for Item 3.6.3.2.iii" aria-label="Copy heading and permalink for Item 3.6.3.2.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.6.3.2"><a href="#exercises-Ex36-2" title="Copy heading and permalink for Exercise 3.6.3.2" aria-label="Copy heading and permalink for Exercise 3.6.3.2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-Ex36-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="exercises-Ex36-3-1">
+<div class="para">Find the general solution of</div>
+<div class="displaymath process-math" id="exercises-Ex36-3-1-1">
+\begin{equation*}
+xy''-2(x-1)y'+2(x-1)y =e^x
+\end{equation*}
+</div>
+<div class="para">by using its normal form.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.6.3.3"><a href="#exercises-Ex36-3" title="Copy heading and permalink for Exercise 3.6.3.3" aria-label="Copy heading and permalink for Exercise 3.6.3.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-Ex36-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-Ex36-4-1">Find the normal form of each differential equation below.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-Ex36-4-2">
+<li id="exercises-Ex36-4-2-1">
+<div class="para" id="exercises-Ex36-4-2-1-1">
+<span class="process-math">\(y''-2xy'+2ny=0,\)</span> <span class="process-math">\(n\)</span> being a constant<div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.4.i"><a href="#exercises-Ex36-4-2-1" title="Copy heading and permalink for Item 3.6.3.4.i" aria-label="Copy heading and permalink for Item 3.6.3.4.i">🔗</a></div>
+</li>
+<li id="exercises-Ex36-4-2-2">
+<div class="para" id="exercises-Ex36-4-2-2-1">
+<span class="process-math">\(xy''+(1-c)y'+y=0,\)</span> <span class="process-math">\(c\)</span> being a constant<div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.4.ii"><a href="#exercises-Ex36-4-2-2" title="Copy heading and permalink for Item 3.6.3.4.ii" aria-label="Copy heading and permalink for Item 3.6.3.4.ii">🔗</a></div>
+</li>
+<li id="exercises-Ex36-4-2-3">
+<div class="para" id="exercises-Ex36-4-2-3-1">
+<span class="process-math">\(y''+xy'+(x^2-n^2)y=0,\)</span> <span class="process-math">\(n\)</span> being a constant<div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-4-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.4.iii"><a href="#exercises-Ex36-4-2-3" title="Copy heading and permalink for Item 3.6.3.4.iii" aria-label="Copy heading and permalink for Item 3.6.3.4.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.6.3.4"><a href="#exercises-Ex36-4" title="Copy heading and permalink for Exercise 3.6.3.4" aria-label="Copy heading and permalink for Exercise 3.6.3.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-Ex36-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-Ex36-5-1">Find the general solution of each equation below by using the change of variable <span class="process-math">\(t= h(x) = \int \sqrt{a_0(x)}\, dx\)</span> that results in <a href="sec-3-6.html#eq-3-6-2-11" class="xref" data-knowl="./knowl/xref/eq-3-6-2-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.11">(3.6.11)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="exercises-Ex36-5-2">
+<li id="exercises-Ex36-5-2-1">
+<div class="para" id="exercises-Ex36-5-2-1-1">
+<span class="process-math">\(\displaystyle y''+ (\tan x) y'+(\cos^2x)y =0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.5.i"><a href="#exercises-Ex36-5-2-1" title="Copy heading and permalink for Item 3.6.3.5.i" aria-label="Copy heading and permalink for Item 3.6.3.5.i">🔗</a></div>
+</li>
+<li id="exercises-Ex36-5-2-2">
+<div class="para" id="exercises-Ex36-5-2-2-1">
+<span class="process-math">\(\displaystyle x^4y''+x^2(2x-3)y'+2u =0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.5.ii"><a href="#exercises-Ex36-5-2-2" title="Copy heading and permalink for Item 3.6.3.5.ii" aria-label="Copy heading and permalink for Item 3.6.3.5.ii">🔗</a></div>
+</li>
+<li id="exercises-Ex36-5-2-3">
+<div class="para" id="exercises-Ex36-5-2-3-1">
+<span class="process-math">\(\displaystyle 2xy''+(5x^2-2)y'+2x^3y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-Ex36-5-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.6.3.5.iii"><a href="#exercises-Ex36-5-2-3" title="Copy heading and permalink for Item 3.6.3.5.iii" aria-label="Copy heading and permalink for Item 3.6.3.5.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.6.3.5"><a href="#exercises-Ex36-5" title="Copy heading and permalink for Exercise 3.6.3.5" aria-label="Copy heading and permalink for Exercise 3.6.3.5">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.6.3"><a href="#exercises-Ex36" title="Copy heading and permalink for Exercises 3.6.3" aria-label="Copy heading and permalink for Exercises 3.6.3">🔗</a></div></section><div class="autopermalink" data-description="Section 3.6: Change of Variables"><a href="#sec-3-6" title="Copy heading and permalink for Section 3.6: Change of Variables" aria-label="Copy heading and permalink for Section 3.6: Change of Variables">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-3-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
