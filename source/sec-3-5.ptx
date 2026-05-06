@@ -1,428 +1,410 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-3-5" xmlns:xi="http://www.w3.org/2001/XInclude">
-	<title>Applications</title>
+  <title>Applications</title>
 
-	<objectives>
-		<ul>
-			<li>
-				<p>
-					Be able to apply methods of solutions from previous sections to some elementary
-					problems in applications.
-				</p>
-			</li>
-		</ul>
-	</objectives>
+  <objectives>
+    <ul>
+      <li>
+        <p>
+          Be able to apply methods of solutions from previous sections to some elementary problems in applications.
+        </p>
+      </li>
+    </ul>
+  </objectives>
 
-	<introduction>
-		<p>
-			In this section we will study three elementary examples of applications where the
-			methods from previous sections can be effectively used.
-		</p>
-	</introduction>
+  <introduction>
+    <p>
+      In this section we will study three elementary examples of applications where the methods from previous sections can be effectively used.
+    </p>
+  </introduction>
 
 
-	<subsection xml:id="subsec-spring-mass-system">
-		<title>Spring-Mass System</title>
+  <subsection xml:id="subsec-spring-mass-system">
+    <title>Spring-Mass System</title>
 
-		<p> A common example of a second order linear differential equation with constant
-			coefficients arises in modeling the motion of a mass attached to a spring whose other
-			end is fixed to a support. Let us consider a spring suspended vertically from a fixed
-			ceiling (rigid support) with the mass attached to its lower end, as illustrated in <xref
-				ref="fig-spring-mass" />. </p>
+    <p>
+      A common example of a second order linear differential equation with constant coefficients arises in modeling the motion of a mass attached to a spring whose other end is fixed to a support.
+      Let us consider a spring suspended vertically from a fixed ceiling (rigid support) with the mass attached to its lower end, as illustrated in <xref ref="fig-spring-mass" />.
+    </p>
+    <!--
+    <figure xml:id="fig-spring">
+      <caption></caption>
+      <image source="images/fig-spring-mass-1">
+        <shortdescription>
+          (for accessibility)
+        </shortdescription>
+      </image>
+    </figure>
+    -->
+    <figure xml:id="fig-spring-mass">
+      <caption>A mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.</caption>
+      <image source="images/spring-mass-2" width="90%">
+        <latex-image>
+\begin{tikzpicture}[scale=1.1, &gt;=stealth]
+  \tikzset{
+  spring/.style={thick,decorate,decoration={coil,aspect=0.4,segment
+  length=4pt,amplitude=3pt}},
+  mass/.style={draw,fill=pink!60,minimum width=1cm,minimum height=0.7cm},
+  dashedline/.style={dashed,gray},
+  labeltext/.style={font=\small}
+  }
+  % (a) Unstretched spring
+  \begin{scope}[xshift=0cm]
+  \node[below] at (0,-2.6) {(a)};
+  % Ceiling
+  \draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+  \node[above] at (0,0.2) {\small Rigid Support};
+  % Spring (natural length l)
+  \draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate]
+  (0,0)--(0,-2.2);
+  %\draw[spring, aspect=0.7] (0,0) -- (0,-2.2);
+  \draw[&lt;-&gt;] (0.4,0) -- (0.4,-2.2);
+  \node[right,labeltext] at (0.41,-1) {$\ell$};
+  % Dashed reference line
+  \draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+  \node[below,labeltext] at (0,-2.4) {unstretched spring};
+  \end{scope}
+  % (b) Equilibrium position
+  \begin{scope}[xshift=1.75cm]
+  \node[below] at (0,-4.1) {(b)};
+  % Ceiling
+  \draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+  %\node[above] at (0,0.2) {\small Rigid Support};
+  % Spring
+  \draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate]
+  (0,0) -- (0,-3.1);
+  %\draw[spring] (0,0) -- (0,-3.1);
+  \node[mass] (m1) at (0,-3.4) {$m$};
+  % Labels
+  \draw[&lt;-&gt;] (0.45,0) -- (0.45,-2.2);
+  \node[right,labeltext] at (0.45,-1) {$\ell$};
+  %\node[right,labeltext] at (0,-2.4) {$s$};
+  \draw[dashedline] (-0.8,-3.1) -- (5,-3.1); %the line corresponding to the origin
+  \draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+  % Bracket for s
+  \draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.1);
+  \node[right,labeltext] at (0.45,-2.7) {$s$};
+  \node[below,labeltext] at (0,-3.8) {mass in equilibrium};
+  \end{scope}
+  % (c) Motion (displacement x or y)
+  \begin{scope}[xshift=4.25cm]
+  \node[below] at (0,-5.5) {(c)};
+  % Ceiling
+  \draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
+  %\node[above] at (0,0.2) {\small Rigid Support};
+  % Spring
+  \draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate]
+  (0,0) -- (0,-4.1);
+  %\draw[spring] (0,0) -- (0,-3);
+  \node[mass] (m2) at (0,-4.4) {$m$};
+  % Labels
+  % Bracket for total extension
+  \draw[&lt;-&gt;] (0.7,0) -- (0.7,-3.1);
+  \node[right,labeltext] at (0.7,-1.5) {$\ell + s$};
+  \draw[&lt;-&gt;] (0.7,-4.1) -- (0.7,-3.1);
+  \node[right,labeltext] at (0.7,-3.6) {$y(t)$};
+  % Dashed lines
+  %\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
+  \draw[dashedline] (-0.8,-4.1) -- (0.85,-4.1);
+  %\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
+  \node[below,labeltext] at (0,-5.2) {mass in motion};
+  % Thick vertical wall
+  \draw[thick] (-0.4,-4.8) -- (-0.4,0);
+  % Friction hatch marks (diagonal lines)
+  \foreach \y in {-4.8,-4.6,...,-0.2}
+  \draw[thick] (-0.4,\y) -- (-0.5,\y+0.2);
+  % Optional label
+  \node[rotate=90,left] at (-0.8,-1) {wall/friction};
+  % Example mass block next to wall
+  %\draw[fill=gray!30] (0.5,1) rectangle (1.5,2);
+  % Optional arrow to indicate external force
+  \draw[-&gt;,blue,very thick] (0.35,-4.1) -- (0.35,-3.7) node[right] {};
+  \draw[-&gt;,blue,very thick] (0.35,-4.7) -- (0.35,-5.1) node[right] {$F(t)$};
+  \end{scope}
+  %--------------------------------
+  % (d) Coordinate system
+  %--------------------------------
+  \begin{scope}[xshift=3.5cm]
+  \node[below] at (3.1,-5.5) {(d)};
+  % Bracket for total extension
+  \draw[-&gt;,very thick] (3,0.25) -- (3,-5);
+  % the coordinate axis line
+  \node[right,labeltext] at (3.1,-1.9) {$y&lt;0$};
+  \filldraw[black] (3,-3.1) circle (2pt);
+  \node[right,labeltext] at (3.1,-3.1) {$y=0$\;(origin)};
+  \node[right,labeltext] at (3.1,-4.5) {$y>0$};
+  % Dashed lines
+  \node[below,labeltext] at (3.1,-5.2) {the coordinate axis};
+  \end{scope}
+  \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
 
-		<figure xml:id="fig-spring-mass">
-			<caption>A mass-spring system showing unstretched, equilibrium, motion, and
-				coordinate-axis.</caption>
-			<image width="70%">
-				<latex-image>
-					\begin{tikzpicture}[scale=1.1, &gt;=stealth]
-					\tikzset{
-					spring/.style={thick,decorate,decoration={coil,aspect=0.4,segment
-					length=4pt,amplitude=3pt}},
-					mass/.style={draw,fill=pink!60,minimum width=1cm,minimum height=0.7cm},
-					dashedline/.style={dashed,gray},
-					labeltext/.style={font=\small}
-					}
-					% (a) Unstretched spring
-					\begin{scope}[xshift=0cm]
-					\node[below] at (0,-2.6) {(a)};
-					% Ceiling
-					\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
-					\node[above] at (0,0.2) {\small Rigid Support};
-					% Spring (natural length l)
-					\draw[decoration={aspect=0.4, segment length=2mm, amplitude=3mm,coil},decorate]
-					(0,0) -- (0,-2.2);
-					%\draw[spring, aspect=0.7] (0,0) -- (0,-2.2);
-					\draw[&lt;-&gt;] (0.4,0) -- (0.4,-2.2);
-					\node[right,labeltext] at (0.41,-1) {$\ell$};
-					% Dashed reference line
-					\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
-					\node[below,labeltext] at (0,-2.4) {unstretched spring};
-					\end{scope}
-					% (b) Equilibrium position
-					\begin{scope}[xshift=1.75cm]
-					\node[below] at (0,-4.1) {(b)};
-					% Ceiling
-					\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
-					%\node[above] at (0,0.2) {\small Rigid Support};
-					% Spring
-					\draw[decoration={aspect=0.4, segment length=3mm, amplitude=3mm,coil},decorate]
-					(0,0) -- (0,-3.1);
-					%\draw[spring] (0,0) -- (0,-3.1);
-					\node[mass] (m1) at (0,-3.4) {$m$};
-					% Labels
-					\draw[&lt;-&gt;] (0.45,0) -- (0.45,-2.2);
-					\node[right,labeltext] at (0.45,-1) {$\ell$};
-					%\node[right,labeltext] at (0,-2.4) {$s$};
-					\draw[dashedline] (-0.8,-3.1) -- (5,-3.1); %the line corresponding to the origin
-					\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
-					% Bracket for s
-					\draw[&lt;-&gt;] (0.45,-2.2) -- (0.45,-3.1);
-					\node[right,labeltext] at (0.45,-2.7) {$s$};
-					\node[below,labeltext] at (0,-3.8) {mass in equilibrium};
-					\end{scope}
-					% (c) Motion (displacement x or y)
-					\begin{scope}[xshift=4.25cm]
-					\node[below] at (0,-5.5) {(c)};
-					% Ceiling
-					\draw[thick,fill=gray!40] (-0.8,0) rectangle (0.8,0.2);
-					%\node[above] at (0,0.2) {\small Rigid Support};
-					% Spring
-					\draw[decoration={aspect=0.4, segment length=4mm, amplitude=3mm,coil},decorate]
-					(0,0) -- (0,-4.1);
-					%\draw[spring] (0,0) -- (0,-3);
-					\node[mass] (m2) at (0,-4.4) {$m$};
-					% Labels
-					% Bracket for total extension
-					\draw[&lt;-&gt;] (0.7,0) -- (0.7,-3.1);
-					\node[right,labeltext] at (0.7,-1.5) {$\ell + s$};
-					\draw[&lt;-&gt;] (0.7,-4.1) -- (0.7,-3.1);
-					\node[right,labeltext] at (0.7,-3.6) {$y(t)$};
-					% Dashed lines
-					%\draw[dashedline] (-0.8,-2.2) -- (0.8,-2.2);
-					\draw[dashedline] (-0.8,-4.1) -- (0.85,-4.1);
-					%\draw[dashedline] (-0.8,-4.7) -- (0.8,-4.7);
-					\node[below,labeltext] at (0,-5.2) {mass in motion};
-					% Thick vertical wall
-					\draw[thick] (-0.4,-4.8) -- (-0.4,0);
-					% Friction hatch marks (diagonal lines)
-					\foreach \y in {-4.8,-4.6,...,-0.2}
-					\draw[thick] (-0.4,\y) -- (-0.5,\y+0.2);
-					% Optional label
-					\node[rotate=90,left] at (-0.8,-1) {wall/friction};
-					% Example mass block next to wall
-					%\draw[fill=gray!30] (0.5,1) rectangle (1.5,2);
-					% Optional arrow to indicate external force
-					\draw[-&gt;,blue,very thick] (0.35,-4.1) -- (0.35,-3.7) node[right] {};
-					\draw[-&gt;,blue,very thick] (0.35,-4.7) -- (0.35,-5.1) node[right] {$F(t)$};
-					\end{scope}
-					%--------------------------------
-					% (d) Coordinate system
-					%--------------------------------
-					\begin{scope}[xshift=3.5cm]
-					\node[below] at (3.1,-5.5) {(d)};
-					% Bracket for total extension
-					\draw[-&gt;,very thick] (3,0.25) -- (3,-5);
-					% the coordinate axis line
-					\node[right,labeltext] at (3.1,-1.9) {$y&lt;0$};
-					\filldraw[black] (3,-3.1) circle (2pt);
-					\node[right,labeltext] at (3.1,-3.1) {$y=0$\;(origin)};
-					\node[right,labeltext] at (3.1,-4.5) {$y>0$};
-					% Dashed lines
-					\node[below,labeltext] at (3.1,-5.2) {the coordinate axis};
-					\end{scope}
-					\end{tikzpicture}
-				</latex-image>
-			</image>
-		</figure>
+    <p>
+      Let <m>\ell</m> denote the natural (unstretched) length of the spring, and let <m>s</m> be the amount by which the spring stretches when the mass <m>m</m> is attached and allowed to hang in equilibrium under gravity.
+      We assume that the motion of the mass is restricted to the vertical line through the point of the equilibrium of the mass.
+      To take this vertical line (see <xref ref="fig-spring-mass" /> (d)) as the coordinate axis, we take the equilibrium point as the origin and assign the vertically downward direction as the positive direction.
+    </p>
 
-		<p> Let <m>\ell</m> denote the natural (unstretched) length of the spring, and let <m>s</m>
-			be the amount by which the spring stretches when the mass <m>m</m> is attached and
-			allowed to hang in equilibrium under gravity. We assume that the motion of the mass is
-			restricted to the vertical line through the point of the equilibrium of the mass. To
-			take this vertical line (see <xref ref="fig-spring-mass" /> (d)) as the coordinate axis,
-			we take the equilibrium point as the origin and assign the vertically downward direction
-			as the positive direction. </p>
+    <p>
+      Denote by <m>y(t)</m> the displacement of the mass at time <m>t</m> from its equilibrium position (the origin).
+      In addition to the restoring force <m>F_{\text{s}}(t)</m> of the spring and gravitational force <m>mg</m>, assume that the mass is acted upon by a damping force <m>F_{\text{d}}(t)</m> as well as an external force <m>F(t).</m> See <xref ref="fig-spring-mass" /> (c) for wall friction as an example of a damping force.
+      Thus, we have
+      <me>
+        \text{the net force on the mass} = F_{\text{s}}(t) +mg+ F_{\text{d}}(t) + F(t).
+      </me>
+      According to Newton's second law, we then have
+      <men xml:id="eq-mass-spring1">
+        m y''(t) = F_{\text{s}}(t) + mg+ F_{\text{d}}(t) + F(t).
+      </men>
+      <m>\bullet</m> How do we model the spring force <m>F_{\text{s}}(t)?</m>
+    </p>
 
-		<p> Denote by <m>y(t)</m> the displacement of the mass at time <m>t</m> from its equilibrium
-			position (the origin). In addition to the restoring force <m>F_{\text{s}}(t)</m> of the
-			spring and gravitational force <m>mg</m>, assume that the mass is acted upon by a
-			damping force <m>F_{\text{d}}(t)</m> as well as an external force <m>F(t).</m> See <xref
-				ref="fig-spring-mass" /> (c) for wall friction as an example of a damping force.
-			Thus, we have <me>
-				\text{the net force on the mass} = F_{\text{s}}(t) +mg+ F_{\text{d}}(t) + F(t).
-			</me>
-			According to Newton's second law, we then have <men xml:id="eq-mass-spring1">
-				m y''(t) = F_{\text{s}}(t) + mg+ F_{\text{d}}(t) + F(t).
-			</men>
-      <m>\bullet</m>
-			How do we model the spring force <m>F_{\text{s}}(t)?</m>
-		</p>
+    <p>
+      Since a spring that is stretched or compressed tends to return to its natural length, the spring force wants to pull the mass toward its equilibrium position.
+      For an ideal spring—one made of a homogeneous material with uniform coiling—Robert Hooke, a 17th-century English physicist, established that the restoring force required to stretch or compress the spring (without damaging it) is directly proportional to the resulting displacement.<fn> For a spring made up of a heterogeneous material and with nonuniform coiling, the restoring force may be modeled by a nonlinear function of the displacement.
+      For example, <m>F_{\text{s}}(t) = - k\,\lvert y(t)\rvert^{p-2}y(t)</m> with a fixed number <m>p</m> in <m>(1, \infty)</m> and <m>k&gt;0</m> a fixed real number.
+      </fn> This means that
+      <men xml:id="eq-mass-spring2">
+        F_{\text{s}}(t) = - k\,(s+y(t)),
+      </men>
+      where <m>k</m> is a fixed positive constant, called the spring constant which measures the stiffness of the spring.
+      The negative <m>(-)</m> means that the restoring force is directed toward the origin.
+    </p>
 
-		<p> Since a spring that is stretched or compressed tends to return to its natural length,
-			the spring force wants to pull the mass toward its equilibrium position. For an ideal
-			spring—one made of a homogeneous material with uniform coiling—Robert Hooke, a
-			17th-century English physicist, established that the restoring force required to stretch
-			or compress the spring (without damaging it) is directly proportional to the resulting
-			displacement.<fn> For a spring made up of a heterogeneous material and with nonuniform
-			coiling, the restoring force may be modeled by a nonlinear function of the displacement.
-			For example, <m>F_{\text{s}}(t) = - k\,\lvert y(t)\rvert^{p-2}y(t)</m> with a fixed
-			number <m>p</m> in <m>(1, \infty)</m> and <m>k&gt;0</m> a fixed real number. </fn> This
-			means that <men xml:id="eq-mass-spring2">
-				F_{\text{s}}(t) = - k\,(s+y(t)),
-			</men> where <m>k</m> is a fixed positive 
-			constant, called the spring constant which measures the stiffness of the spring. The
-			negative <m>(-)</m> means that the restoring force is directed toward the origin. </p>
+    <p>
+      One may ask: <em>how do we practically calculate <m>k</m> of a spring?</em> The simplest way to calculate <m>k</m> is to simply suspend the spring from a support with the mass attached to its other end and observe the stretch <m>s</m> the spring experiences for its equilibrium under gravity.
+      Since the mass is at rest, the net force acting on the mass is zero, that is,
+      <me>
+        \text{the net force on the mass}=0 = - ks +mg,
+      </me>
+      which yields
+      <men xml:id="eq-mass-spring3">
+        mg = ks,
+      </men>
+      and so
+      <me>
+        k = \frac{mg}{s}.
+      </me>
+    </p>
 
-		<p> One may ask: <em>how do we practically calculate <m>k</m> of a spring?</em> The simplest
-			way to calculate <m>k</m> is to simply suspend the spring from a support with the mass
-			attached to its other end and observe the stretch <m>s</m> the spring experiences for
-			its equilibrium under gravity. Since the mass is at rest, the net force acting on the
-			mass is zero, that is, <me>
-				\text{the net force on the mass}=0 = - ks +mg,
-			</me> which yields <men
-				xml:id="eq-mass-spring3">
-				mg = ks,
-			</men> and so <me>
-				k = \frac{mg}{s}.
-			</me>
-		</p>
+    <p>
+      <m>\bullet</m> How do we model <m>F_{\text{d}}(t)?</m>
+    </p>
 
-		<p>
-			<m>\bullet</m> How do we model <m>F_{\text{d}}(t)?</m>
-		</p>
+    <p>
+      It is intuitive that the damping force (or drag) increases as the speed of the mass increases.
+      Hence, the simplest way to model the damping force is to assume that it is directly proportional to the velocity.<fn> For a medium that resists the motion of the mass depending on a power of the speed, the damping force may be modeled by a nonlinear function of the velocity.
+      For example, <m>F_{\text{s}}(t) = - b\,\lvert y'(t)\rvert^{q-2}y'(t)</m> with a fixed number <m>q</m> in <m>(1, \infty)</m> and <m> b&gt;0</m> a fixed real number.
+      </fn> This means that
+      <men xml:id="eq-mass-spring4">
+        F_{\text{d}}(t)= - b\, y'(t),
+      </men>
+      where <m>b</m> is the constant of proportionality, called the damping coefficient of the medium offering the resistance to the motion of the mass.
+    </p>
 
-		<p> It is intuitive that the damping force (or drag) increases as the speed of the mass
-			increases. Hence, the simplest way to model the damping force is to assume that it is
-			directly proportional to the velocity.<fn> For a medium that resists the motion of the
-			mass depending on a power of the speed, the damping force may be modeled by a nonlinear
-			function of the velocity. For example, <m>F_{\text{s}}(t) = - b\,\lvert
-			y'(t)\rvert^{q-2}y'(t)</m> with a fixed number <m>q</m> in <m>(1, \infty)</m> and <m>
-			b&gt;0</m> a fixed real number. </fn> This means that <men xml:id="eq-mass-spring4">
-			F_{\text{d}}(t)= - b\, y'(t),
-			</men> where <m>b</m> is the constant of
-			proportionality, called the damping coefficient of the medium offering the resistance to
-			the motion of the mass. </p>
+    <p>
+      Using <xref ref="eq-mass-spring2" /> and <xref ref="eq-mass-spring4" /> in <xref ref="eq-mass-spring1" />, we obtain
+    </p>
 
-		<p> Using <xref ref="eq-mass-spring2" /> and <xref ref="eq-mass-spring4" /> in <xref
-				ref="eq-mass-spring1" />, we obtain </p>
+    <p>
+      <me>
+        m y''(t) = -ks -k y(t) + mg- b y'(t) + F(t),
+      </me>
+      which, in view of <xref ref="eq-mass-spring3" />, yields
+      <men xml:id="eq-mass-spring5">
+        my''(t) + by'(t) + k y(t) = F(t).
+      </men>
+      This is a second order linear differential equation with constant coefficient, and it can be solved using the methods from the previous sections.
+      For example, the method of undetermined coefficients or variation of parameters can be used.
+    </p>
 
-		<p>
-			<me>
-				m y''(t) = -ks -k y(t) + mg- b y'(t) + F(t),
-			</me> which, in view of <xref
-				ref="eq-mass-spring3" />, yields <men xml:id="eq-mass-spring5">
-				my''(t) + by'(t) + k y(t) = F(t).
-			</men> This is a second order linear
-			differential equation with constant coefficient, and it can be solved using the methods
-			from the previous sections. For example, the method of undetermined coefficients or
-			variation of parameters can be used. </p>
-
-		<p> We now examine several interesting and special cases of <xref ref="eq-mass-spring5" />
-			before discussing the general form. </p>
+    <p>
+      We now examine several interesting and special cases of <xref ref="eq-mass-spring5" /> before discussing the general form.
+    </p>
 
 
-		<paragraphs xml:id="free-undamped-motion">
-			<title>I. Free Undamped Motion (<m>b=0,\;F(t) =0</m>)</title>
+    <paragraphs xml:id="free-undamped-motion">
+      <title>I. Free Undamped Motion (<m>b=0,\;F(t) =0</m>)</title>
 
-			<p> When <m>b= 0</m> (no damping) and <m>F(t) = 0</m> (no external forces), the
-				mass-spring system is said to have a free undamped motion and the system is called a <em>simple
-				harmonic oscillator</em>. The resulting differential equation for the displacement
-				of the mass from its equilibrium position is <me>
-					my''(t) + k y(t) = 0,
-				</me> which, with <m>w^2 = k/m</m>, becomes <men
-					xml:id="eq-mass-spring6">
-					y''(t) + \omega^2 y(t) = 0,
-				</men> also referred to as a simple harmonic
-				oscillator. Then the general solution of the simple harmonic oscillator is <men
-					xml:id="eq-mass-spring7">
-					y(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t),
-				</men> where <m>
-					c_1</m> and <m>c_2</m> are arbitrary constants which can be determined when the
-				initial conditions <m>y(t_0) = y_0, y'(t_0) = y_1</m> are provided. </p>
+      <p>
+        When <m>b= 0</m> (no damping) and <m>F(t) = 0</m> (no external forces), the mass-spring system is said to have a free undamped motion and the system is called a <em>simple harmonic oscillator</em>.
+        The resulting differential equation for the displacement of the mass from its equilibrium position is
+        <me>
+          my''(t) + k y(t) = 0,
+        </me>
+        which, with <m>w^2 = k/m</m>, becomes
+        <men xml:id="eq-mass-spring6">
+          y''(t) + \omega^2 y(t) = 0,
+        </men>
+        also referred to as a simple harmonic oscillator.
+        Then the general solution of the simple harmonic oscillator is
+        <men xml:id="eq-mass-spring7">
+          y(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t),
+        </men>
+        where <m> c_1</m> and <m>c_2</m> are arbitrary constants which can be determined when the initial conditions <m>y(t_0) = y_0, y'(t_0) = y_1</m> are provided.
+      </p>
 
-			<p> The displacement <m>y(t)</m> described by <xref ref="eq-mass-spring7" /> can
-				interpreted most effectively when it is written in the form of a single sine or
-				cosine function. To express it in the form of a single sine function, we seek to
-				find two constants <m>A</m> and <m>\phi</m> so that <men xml:id="eq-mass-spring8">
-				y(t) = A \sin(\omega t -\phi).
-				</men> Then <men
-					xml:id="eq-mass-spring9">
-					y(t) = A \sin(\omega t) \cos(\phi) - A\cos(\omega t) \sin (\phi).
-				</men>
-				Since the terms in <xref ref="eq-mass-spring7" /> and <xref ref="eq-mass-spring9" />
-				must match, we obtain <me>
-					\begin{cases} A\sin(\phi) = -c_1,\\ A\cos(\phi) = c_2.
-					\end{cases}
-				</me>
-				Squaring and adding these equations gives <me>
-					A^2 = c_1^2 + c_2^2.
-				</me> We take <me>
-					A =\sqrt{c_1^2 + c_2^2}.
-				</me> It is possible that <m>A =0</m>, in which
-				case, we have <m>y(t) = 0</m> for all <m>t</m>, the trivial solution, and this means
-				that the mass is at rest in the equilibrium position for all <m>t.</m> Therefore the
-				only interesting case is when <m>A&gt;0.</m> If <m>c_2 \ne 0,</m> then <me>
-				\arctan(\frac{-c_1}{c_2}) \text{ lies in }\left(-\frac{\pi}{2},
-					\frac{\pi}{2}\right).
-				</me>
-				We have <me>
-					\phi = \begin{cases} \arctan(\frac{-c_1}{c_2}) &amp;\text{if } c_2&gt;0,\\[1em]
-				\arctan(\frac{-c_1}{c_2})+\pi&amp;\text{if } c_2&lt;0,\\ \frac{\pi}{2}&amp;\text{if
-				}c_1&lt;0 \text{ and } c_2=0,\\ -\frac{\pi}{2}&amp;\text{if } c_1&gt;0 \text{ and }
-				c_2=0.
-					\end{cases}
-				</me>
-				Also, note that <xref ref="eq-mass-spring8" /> can be written as <me>
-					y(t) = A \cos(\omega t -\phi -\frac{\pi}{2}).
-				</me> It is now clear from <xref
-					ref="eq-mass-spring8" /> that the mass oscillates about the origin with the
-				amplitude <m>A,</m> which is the maximum displacement from the equilibrium position.
-				The time period for one complete oscillation is <m>T= 2\pi / \omega,</m> and
-				therefore the number <m>\omega</m> is the circular frequency of the oscillations,
-				that is, the number of cycles per unit <m>2\pi</m> units of time. </p>
+      <p>
+        The displacement <m>y(t)</m> described by <xref ref="eq-mass-spring7" /> can interpreted most effectively when it is written in the form of a single sine or cosine function.
+        To express it in the form of a single sine function, we seek to find two constants <m>A</m> and <m>\phi</m> so that
+        <men xml:id="eq-mass-spring8">
+          y(t) = A \sin(\omega t -\phi).
+        </men>
+        Then
+        <men xml:id="eq-mass-spring9">
+          y(t) = A \sin(\omega t) \cos(\phi) - A\cos(\omega t) \sin (\phi).
+        </men>
+        Since the terms in <xref ref="eq-mass-spring7" /> and <xref ref="eq-mass-spring9" /> must match, we obtain
+        <me>
+          \begin{cases} A\sin(\phi) = -c_1,\\ A\cos(\phi) = c_2.
+          \end{cases}
+        </me>
+        Squaring and adding these equations gives
+        <me>
+          A^2 = c_1^2 + c_2^2.
+        </me>
+        We take
+        <me>
+          A =\sqrt{c_1^2 + c_2^2}.
+        </me>
+        It is possible that <m>A =0</m>, in which case, we have <m>y(t) = 0</m> for all <m>t</m>, the trivial solution, and this means that the mass is at rest in the equilibrium position for all <m>t.</m> Therefore the only interesting case is when <m>A&gt;0.</m> If <m>c_2 \ne 0,</m> then
+        <me>
+          \arctan(\frac{-c_1}{c_2}) \text{ lies in }\left(-\frac{\pi}{2}, \frac{\pi}{2}\right).
+        </me>
+        We have
+        <me>
+          \phi = \begin{cases} \arctan(\frac{-c_1}{c_2}) &amp;\text{if } c_2&gt;0,\\[1em] \arctan(\frac{-c_1}{c_2})+\pi&amp;\text{if } c_2&lt;0,\\ \frac{\pi}{2}&amp;\text{if }c_1&lt;0 \text{ and } c_2=0,\\ -\frac{\pi}{2}&amp;\text{if } c_1&gt;0 \text{ and } c_2=0.
+          \end{cases}
+        </me>
+        Also, note that <xref ref="eq-mass-spring8" /> can be written as
+        <me>
+          y(t) = A \cos(\omega t -\phi -\frac{\pi}{2}).
+        </me>
+        It is now clear from <xref ref="eq-mass-spring8" /> that the mass oscillates about the origin with the amplitude <m>A,</m> which is the maximum displacement from the equilibrium position.
+        The time period for one complete oscillation is <m>T= 2\pi / \omega,</m> and therefore the number <m>\omega</m> is the circular frequency of the oscillations, that is, the number of cycles per unit <m>2\pi</m> units of time.
+      </p>
 
-			<example>
-				<statement>
-					<p> A 2-pound mass stretches a spring 6 inches. At time <m>t = 0</m>, the mass
-						is released from a position 8 inches below equilibrium with an initial
-						upward velocity of <m>\tfrac{4}{3}</m> ft/s. </p>
+      <example>
+        <statement>
+          <p>
+            A 2-pound mass stretches a spring 6 inches.
+            At time <m>t = 0</m>, the mass is released from a position 8 inches below equilibrium with an initial upward velocity of <m>\tfrac{4}{3}</m> ft/s.
+          </p>
 
-					<p>
-						<ol marker="i.">
-							<li xml:id="item-1">
-								<p> Find the equation of motion in both the forms <xref
-										ref="eq-mass-spring7" /> and <xref ref="eq-mass-spring8" />. </p>
-							</li>
+          <p>
+            <ol marker="i.">
+              <li xml:id="item-1">
+                <p>
+                  Find the equation of motion in both the forms <xref ref="eq-mass-spring7" /> and <xref ref="eq-mass-spring8" />.
+                </p>
+              </li>
 
-							<li>
-								<p>
-									Graph the velocity versus the displacement.
-								</p>
-							</li>
-						</ol>
-					</p>
-				</statement>
-				<solution>
-					<p>
-						<ol marker="i.">
-							<li>
-								<p> Let <m>y(t)</m> denote in feet the displacement of the mass from
-									the equilibrium position measured positively in the vertically
-									downward direction. We have <m>mg = 2~\text{lb}, \text{spring
-									stretch}, s = 6~\text{in} = 0.5~\text{ft}.</m> We have <m>m =
-									\frac{mg}{g} = \frac{2}{32} = \frac{1}{16}~\text{slug},</m> and
-									the spring constant <m>k = \frac{mg}{s} = \frac{2}{0.5} =
-									4~\text{lb/ft}.</m> The differential equation of motion is <me>
-										m y'' + k y = 0,
-									</me> which becomes <me>
-									\frac{1}{16} y'' + 4y = 0,
-									</me> and
-									therefore <me>
-										y'' + 64y = 0
-									</me> with the initial
-									condition <m>y(0) = -\tfrac{2}{3}, y'(0) = \tfrac{4}{3}.</m> The
-									general solution of the differential equation is <me>
-										y(t) = c_1 \cos(8t) + c_2 \sin(8t).
-									</me>
-								</p>
+              <li>
+                <p>
+                  Graph the velocity versus the displacement.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
 
-								<p> Applying the initial conditions gives <me>
-										y(0)= -\frac{2}{3} = c_1.
-									</me>
-								</p>
+        <solution>
+          <p>
+            <ol marker="i.">
+              <li>
+                <p>
+                  Let <m>y(t)</m> denote in feet the displacement of the mass from the equilibrium position measured positively in the vertically downward direction.
+                  We have <m>mg = 2~\text{lb}, \text{spring stretch}, s = 6~\text{in} = 0.5~\text{ft}.</m> We have <m>m = \frac{mg}{g} = \frac{2}{32} = \frac{1}{16}~\text{slug},</m> and the spring constant <m>k = \frac{mg}{s} = \frac{2}{0.5} = 4~\text{lb/ft}.</m> The differential equation of motion is
+                  <me>
+                    m y'' + k y = 0,
+                  </me>
+                  which becomes
+                  <me>
+                    \frac{1}{16} y'' + 4y = 0,
+                  </me>
+                  and therefore
+                  <me>
+                    y'' + 64y = 0
+                  </me>
+                  with the initial condition <m>y(0) = -\tfrac{2}{3}, y'(0) = \tfrac{4}{3}.</m> The general solution of the differential equation is
+                  <me>
+                    y(t) = c_1 \cos(8t) + c_2 \sin(8t).
+                  </me>
+                </p>
 
-								<p> Also, since <me>
-										y'(t) = -8c_1 \sin(8t) + 8c_2 \cos(8t)
-									</me>
-									and <m>y'(0) =\frac{4}{3},</m> we obtain <m>8c_2 = \frac{4}{3},</m>
-									that is, <m>c_2 = \frac{1}{6}.</m> Hence the equation of the
-									motion is <me>
-										y(t) = -\frac{2}{3} \cos(8t) + \frac{1}{6} \sin(8t),
-									</me>
-									which is of the form <xref ref="eq-mass-spring7" />. Using the
-									method discussed for <xref ref="eq-mass-spring8" /> to find the
-									equation of the motion in the amplitude-phase, we compute <me>
-										A= \sqrt{c_1^2+c_2^2}=\sqrt{\frac{4}{9}+\frac{1}{36}}=
-									\frac{\sqrt{17}}{6}
-									</me>
-									and <me>
-										\phi = \arctan(\frac{-c_1}{c_2}) = \arctan(\frac{2/3}{1/6})
-									=\arctan(4)\approx 1.3258~\text{rad},
-									</me>
-									and therefore <me>
-										y(t) = \frac{\sqrt{17}}{6} \sin\!\left(8t - \varphi\right)
-									\approx \frac{\sqrt{17}}{6} \sin\!\left(8t - 1.3258\right).
-									</me>
-								</p>
+                <p>
+                  Applying the initial conditions gives
+                  <me>
+                    y(0)= -\frac{2}{3} = c_1.
+                  </me>
+                </p>
 
-								<p> Its graph is shown in <xref
-										ref="graph-simple-harmonic-oscillator" />. </p>
+                <p>
+                  Also, since
+                  <me>
+                    y'(t) = -8c_1 \sin(8t) + 8c_2 \cos(8t)
+                  </me>
+                  and <m>y'(0) =\frac{4}{3},</m> we obtain <m>8c_2 = \frac{4}{3},</m> that is, <m>c_2 = \frac{1}{6}.</m> Hence the equation of the motion is
+                  <me>
+                    y(t) = -\frac{2}{3} \cos(8t) + \frac{1}{6} \sin(8t),
+                  </me>
+                  which is of the form <xref ref="eq-mass-spring7" />.
+                  Using the method discussed for <xref ref="eq-mass-spring8" /> to find the equation of the motion in the amplitude-phase, we compute
+                  <me>
+                    A= \sqrt{c_1^2+c_2^2}=\sqrt{\frac{4}{9}+\frac{1}{36}}= \frac{\sqrt{17}}{6}
+                  </me>
+                  and
+                  <me>
+                    \phi = \arctan(\frac{-c_1}{c_2}) = \arctan(\frac{2/3}{1/6}) =\arctan(4)\approx 1.3258~\text{rad},
+                  </me>
+                  and therefore
+                  <me>
+                    y(t) = \frac{\sqrt{17}}{6} \sin\!\left(8t - \varphi\right) \approx \frac{\sqrt{17}}{6} \sin\!\left(8t - 1.3258\right).
+                  </me>
+                </p>
 
-								<p>
-									<figure xml:id="graph-simple-harmonic-oscillator">
-										<caption>The graph of <m>y(t) \approx \frac{\sqrt{17}}{6}
-											\sin\!\left(8t - 1.3258\right)</m></caption>
-										<image width="70%">
-											<latex-image>
-												\begin{tikzpicture}[scale=.8]
-												\begin{axis}[
-												width=10cm,
-												height=7cm,
-												axis lines=middle,
-												xlabel={$t$},
-												ylabel={$y(t)$},
-												ylabel style={at={(axis description cs:0, -0.02)},
-												anchor =north},
-												samples=300,
-												domain=0:1,
-												xtick={0,0.1,0.2,...,1.0},
-												ytick={-1,-0.5,0,0.5,1},
-												smooth,
-												thick,
-												y dir=reverse,
-												grid=both,
-												minor tick num=1,
-												]
-												\addplot[blue, thick] {sqrt(17)/6 * sin(deg(8*x -
-												1.3258))};
-												\addplot[black, thick, dashed] {sqrt(17)/6 *
-												sin(deg(8*x))};
-												\node[anchor=west, blue] at (axis cs:0.37,.5)
-												{$y(t)=\dfrac{\sqrt{17}}{6}\sin(8t - \varphi)$};
-												\node[anchor=west, black] at (axis cs:0.15,-0.3)
-												{$y(t)=\dfrac{\sqrt{17}}{6}\sin(8t)$};
-												\end{axis}
-												\end{tikzpicture}
-											</latex-image>
-										</image>
-									</figure>
-								</p>
-							</li>
+                <p>
+                  Its graph is shown in <xref ref="graph-simple-harmonic-oscillator" />.
+                </p>
 
-							<li>
-								<p> We find <me>
-										y'(t) = 8\frac{\sqrt{17}}{6} \cos\!\left(8t -
-										\varphi\right).
-									</me>
-									Then <me>
-										\left(\frac{y(t)}{\frac{\sqrt{17}}{6}
-									}\right)^2+\left(\frac{y'(t)}{\frac{8\sqrt{17}}{6}}\right)^2 = 1
-									</me>
-									for all <m>t</m>. This takes the form <me>
-										272 (y(t))^2 + 17(y'(t))^2= 272
-									</me> for
-									all <m>t</m> and is an ellipse in the <m>y'y</m>-plane as shown
-									in <xref ref="fig-phase-space-orbit" />. The graph is called the
-									orbit of the simple harmonic oscillator and visualizes the
-									oscillatory motion. </p>
+                <figure xml:id="graph-simple-harmonic-oscillator">
+                  <caption>The graph of <m>y(t) \approx \frac{\sqrt{17}}{6} \sin\!\left(8t - 1.3258\right)</m></caption>
+                  <!-- <image source ="images/spring_mass-2" width="70%">  -->
+                  <image  width="70%">
+                    <latex-image>
+                      \begin{tikzpicture}[scale=.8]
+                      \begin{axis}[ width=10cm, height=7cm, axis lines=middle, xlabel={$t$}, ylabel={$y(t)$}, ylabel style={at={(axis description cs:0, -0.02)}, anchor =north}, samples=300, domain=0:1, xtick={0,0.1,0.2,...,1.0}, ytick={-1,-0.5,0,0.5,1}, smooth, thick, y dir=reverse, grid=both, minor tick num=1, ] \addplot[blue, thick] {sqrt(17)/6 * sin(deg(8*x - 1.3258))}; \addplot[black, thick, dashed] {sqrt(17)/6 * sin(deg(8*x))}; \node[anchor=west, blue] at (axis cs:0.37,.5) {$y(t)=\dfrac{\sqrt{17}}{6}\sin(8t - \varphi)$}; \node[anchor=west, black] at (axis cs:0.15,-0.3) {$y(t)=\dfrac{\sqrt{17}}{6}\sin(8t)$}; \end{axis} \end{tikzpicture} </latex-image>
+                  </image>
+                </figure>
+              </li>
 
-								<figure xml:id="fig-phase-space-orbit">
-									<caption>The graph of <m>y(t) \approx \frac{\sqrt{17}}{6}
+              <li>
+                <p>
+                  We find
+                  <me>
+                    y'(t) = 8\frac{\sqrt{17}}{6} \cos\!\left(8t - \varphi\right).
+                  </me>
+                  Then
+                  <me>
+                    \left(\frac{y(t)}{\frac{\sqrt{17}}{6} }\right)^2+\left(\frac{y'(t)}{\frac{8\sqrt{17}}{6}}\right)^2 = 1
+                  </me>
+                  for all <m>t</m>.
+                  This takes the form
+                  <me>
+                    272 (y(t))^2 + 17(y'(t))^2= 272
+                  </me>
+                  for all <m>t</m> and is an ellipse in the <m>y'y</m>-plane as shown in <xref ref="fig-phase-space-orbit" />.
+                  The graph is called the orbit of the simple harmonic oscillator and visualizes the oscillatory motion.
+                </p>
+
+                <figure xml:id="fig-phase-space-orbit">
+                  <caption>The graph of <m>y(t) \approx \frac{\sqrt{17}}{6}
 										\sin\!\left(8t - 1.3258\right)</m></caption>
-									<image width="100%">
-			<latex-image>
+                  <image width="100%">
+                    <latex-image>
 				\begin{tikzpicture}[scale=.6]
 				\begin{axis}[
 					width=12cm,
@@ -471,348 +453,1346 @@
                 \node[right]  at (axis cs: 5.5, -0.2)  {{$y'(t)$}};
 				\end{axis}
 			\end{tikzpicture}
-			</latex-image>
-									</image>
-								</figure>
-							</li>
-						</ol>
-					</p>
-				</solution>
-			</example>
-		</paragraphs>
+                    </latex-image>
+                  </image>
+                </figure>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </example>
+    </paragraphs>
 
 
-		<paragraphs xml:id="free-damped-motion">
-		  <title>II. Free Damped Motion (<m>b&gt;0,\;F(t) =0</m>)</title>
+    <paragraphs xml:id="free-damped-motion">
+      <title>II. Free Damped Motion (<m>b&gt;0,\;F(t) =0</m>)</title>
 
-		  <p>
-			When <m>b&gt; 0</m> (with damping) and <m>F(t) = 0</m> (no external forces), the mass-spring system is said to have a <em>free damped motion</em>.
-			The resulting differential equation for the motion of the mass is
-			<me>
-			  my''(t)+by'(t) + k y(t) = 0,
-			</me>
-			which, with <m>2\beta = \frac{b}{m}</m> and <m>w^2 = \frac{k}{m}</m>, becomes
-			<men xml:id="eq-mass-spring10">
-			  \label{} y'' + 2\beta y'+ \omega^2 y = 0,
-			</men>
-			and the differential equation <xref ref="eq-mass-spring10" /> is known as a <em>free damped spring–mass system.</em> Its general solution depends on the relative strengths of the damping and spring forces.
-			When the spring force dominates, the motion is oscillatory with amplitude decaying to zero as <m>t \to \infty</m> and when the damping force dominates, the motion is non-oscillatory.
-			There exists a threshold value of the damping coefficient—called the critical damping—above which no oscillations occurs, and below which the system exhibits damped oscillations whose amplitude decays to zero as <m>t \to \infty</m>.
-			To analyze this, we start with the auxiliary equation for <xref ref="eq-mass-spring10" />; namely,
-			<me>
-			  r^2 + 2\beta r + \omega ^2 =0,
-			</me>
-			with <m>y(t)=e^{rt}</m> is a trial solution.
-			It then follows that
-			<men xml:id="eq-mass-spring11">
-			  r = \frac{-2\beta\pm\sqrt{4\beta^2 - 4 \omega^2}}{2} = -\beta\pm\sqrt{\beta^2 -  \omega^2}.
-			</men>
-		  </p>
+      <p>
+        When <m>b&gt; 0</m> (with damping) and <m>F(t) = 0</m> (no external forces), the mass-spring system is said to have a <em>free damped motion</em>.
+        The resulting differential equation for the motion of the mass is
+        <me>
+          my''(t)+by'(t) + k y(t) = 0,
+        </me>
+        which, with <m>2\beta = \frac{b}{m}</m> and <m>w^2 = \frac{k}{m}</m>, becomes
+        <men xml:id="eq-mass-spring10">
+          \label{} y'' + 2\beta y'+ \omega^2 y = 0,
+        </men>
+        and the differential equation <xref ref="eq-mass-spring10" /> is known as a <em>free damped spring–mass system.</em> Its general solution depends on the relative strengths of the damping and spring forces.
+        When the spring force dominates, the motion is oscillatory with amplitude decaying to zero as <m>t \to \infty</m> and when the damping force dominates, the motion is non-oscillatory.
+        There exists a threshold value of the damping coefficient—called the critical damping—above which no oscillations occurs, and below which the system exhibits damped oscillations whose amplitude decays to zero as <m>t \to \infty</m>.
+        To analyze this, we start with the auxiliary equation for <xref ref="eq-mass-spring10" />; namely,
+        <me>
+          r^2 + 2\beta r + \omega ^2 =0,
+        </me>
+        with <m>y(t)=e^{rt}</m> is a trial solution.
+        It then follows that
+        <men xml:id="eq-mass-spring11">
+          r = \frac{-2\beta\pm\sqrt{4\beta^2 - 4 \omega^2}}{2} = -\beta\pm\sqrt{\beta^2 -  \omega^2}.
+        </men>
+      </p>
 
-		  <p>
-			There are three significantly different cases of a free damped motion.
-		  </p>
+      <p>
+        There are three significantly different cases of a free damped motion.
+      </p>
 
-		  <p>
-			<ol>
-			  <li>
-				<p>
-				  <term><em>Underdamped Motion</em>:</term> When <m>\beta &lt;\omega,</m> <xref ref="eq-mass-spring11" /> yields
-				  <me>
-					r = - \beta \pm i \sqrt{\omega^2- \beta^2},
-				  </me>
-				  so that the general solution of <xref ref="eq-mass-spring10" /> is
-				  <me>
-					y(t) =  e^{-\beta t}\left(c_1\cos(\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right),
-				  </me>
-				  where <m>c_1</m> and <m>c_2</m> are arbitrary constants are determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are provided.
-				  The displacement <m>y(t)</m> is periodic with the period <m>2\pi/\sqrt{\omega^2- \beta^2}.</m> Moreover, since <m>\beta &gt;0,</m> we observe that
-				  <me>
-					\lim\limits_{t\to\infty} e^{-\beta t}\cos(\sqrt{\omega^2- \beta^2}\; t)=0 \quad \mbox{and} \quad \lim\limits_{t\to\infty}e^{-\beta t}\sin(\sqrt{\omega^2- \beta^2}\; t)=0.
-				  </me>
-				  It then follows that
-				  <me>
-					\lim\limits_{t\to\infty} y(t)=0.
-				  </me>
-				</p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <term><em>Underdamped Motion</em>:</term> When <m>\beta &lt;\omega,</m> <xref ref="eq-mass-spring11" /> yields
+              <me>
+                r = - \beta \pm i \sqrt{\omega^2- \beta^2},
+              </me>
+              so that the general solution of <xref ref="eq-mass-spring10" /> is
+              <me>
+                y(t) =  e^{-\beta t}\left(c_1\cos(\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right),
+              </me>
+              where <m>c_1</m> and <m>c_2</m> are arbitrary constants are determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are provided.
+              The displacement <m>y(t)</m> is periodic with the period <m>2\pi/\sqrt{\omega^2- \beta^2}.</m> Moreover, since <m>\beta &gt;0,</m> we observe that
+              <me>
+                \lim\limits_{t\to\infty} e^{-\beta t}\cos(\sqrt{\omega^2- \beta^2}\; t)=0 \quad \mbox{and} \quad \lim\limits_{t\to\infty}e^{-\beta t}\sin(\sqrt{\omega^2- \beta^2}\; t)=0.
+              </me>
+              It then follows that
+              <me>
+                \lim\limits_{t\to\infty} y(t)=0.
+              </me>
+            </p>
 
-				<p>
-				  With regard to the velocity of the mass, we find
-				  <me>
-					\begin{split} y'(t) &amp;= -\beta e^{-\beta t}\left(c_1\cos(\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right)\\ &amp; + \sqrt{\omega^2- \beta^2}e^{-\beta t}\left(-c_1\sin (\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right).
-					\end{split}
-				  </me>
-				  Again, we observe that
-				  <me>
-					\lim\limits_{t\to\infty} y'(t)=0.
-				  </me>
-				  Hence, the mass approaches the equilibrium position while oscillating with the circular frequency <m>\sqrt{\omega^2- \beta^2}</m> and the velocity approaches zero as <m>t</m> goes to <m>\infty.</m>
-				</p>
+            <p>
+              With regard to the velocity of the mass, we find
+              <me>
+                \begin{split} y'(t) &amp;= -\beta e^{-\beta t}\left(c_1\cos(\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right)\\ &amp; + \sqrt{\omega^2- \beta^2}e^{-\beta t}\left(-c_1\sin (\sqrt{\omega^2- \beta^2}\; t)+ c_2 \sin(\sqrt{\omega^2- \beta^2}\; t)\right).
+                \end{split}
+              </me>
+              Again, we observe that
+              <me>
+                \lim\limits_{t\to\infty} y'(t)=0.
+              </me>
+              Hence, the mass approaches the equilibrium position while oscillating with the circular frequency <m>\sqrt{\omega^2- \beta^2}</m> and the velocity approaches zero as <m>t</m> goes to <m>\infty.</m>
+            </p>
 
-				<p>
-				  Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta &lt; \omega</m> is equivalent to <m>b&lt; 2\sqrt{mk}.</m> We conclude that when the damping force is too weak to counteract a strong spring force, the mass undergoes damped oscillations: the amplitude gradually decreases to zero.
-				  In this case, the mass-spring system is said to be <term><em>underdamped</em></term>.
-				</p>
-			  </li>
+            <p>
+              Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta &lt; \omega</m> is equivalent to <m>b&lt; 2\sqrt{mk}.</m> We conclude that when the damping force is too weak to counteract a strong spring force, the mass undergoes damped oscillations: the amplitude gradually decreases to zero.
+              In this case, the mass-spring system is said to be <term><em>underdamped</em></term>.
+            </p>
+          </li>
 
-			  <li>
-				<p>
-				  <term><em>Overdamped Motion</em>:</term> When <m>\beta &gt;\omega,</m> <xref ref="eq-mass-spring11" /> yields <m>r = - \beta \pm  \sqrt{\beta^2- \omega^2},</m> so that the general solution of <xref ref="eq-mass-spring10" /> is
-				  <me>
-					y(t) =  c_1e^{(-\beta + \sqrt{\beta^2- \omega^2})t}+ c_2e^{(-\beta - \sqrt{\beta^2- \omega^2})t},
-				  </me>
-				  where <m>c_1</m> and <m>c_2</m> are arbitrary constants are determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are provided.
-				  Therefore <m>y(t)</m> is not periodic Moreover, since <m>\beta &gt;0</m> and <m>0&lt;\sqrt{\beta^2- \omega^2} &lt; \beta</m>, it follows that both <m>-\beta + \sqrt{\beta^2- \omega^2}</m> and <m>-\beta - \sqrt{\beta^2- \omega^2}</m> are negative.
-				  Consequently, we have
-				  <me>
-					\lim\limits_{t\to\infty} e^{(-\beta + \sqrt{\beta^2- \omega^2})t}=0 \quad \mbox{and} \quad \lim\limits_{t\to\infty}e^{(-\beta - \sqrt{\beta^2- \omega^2})t}=0.
-				  </me>
-				  It then follows that
-				  <me>
-					\lim\limits_{t\to\infty} y(t)=0.
-				  </me>
-				  We can show that the mass passes through the equilibrium position at most once by setting <m>y(t) = 0</m> and finding the time <m>t</m> at which this happens.
-				</p>
+          <li>
+            <p>
+              <term><em>Overdamped Motion</em>:</term> When <m>\beta &gt;\omega,</m> <xref ref="eq-mass-spring11" /> yields <m>r = - \beta \pm  \sqrt{\beta^2- \omega^2},</m> so that the general solution of <xref ref="eq-mass-spring10" /> is
+              <me>
+                y(t) =  c_1e^{(-\beta + \sqrt{\beta^2- \omega^2})t}+ c_2e^{(-\beta - \sqrt{\beta^2- \omega^2})t},
+              </me>
+              where <m>c_1</m> and <m>c_2</m> are arbitrary constants are determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are provided.
+              Therefore <m>y(t)</m> is not periodic Moreover, since <m>\beta &gt;0</m> and <m>0&lt;\sqrt{\beta^2- \omega^2} &lt; \beta</m>, it follows that both <m>-\beta + \sqrt{\beta^2- \omega^2}</m> and <m>-\beta - \sqrt{\beta^2- \omega^2}</m> are negative.
+              Consequently, we have
+              <me>
+                \lim\limits_{t\to\infty} e^{(-\beta + \sqrt{\beta^2- \omega^2})t}=0 \quad \mbox{and} \quad \lim\limits_{t\to\infty}e^{(-\beta - \sqrt{\beta^2- \omega^2})t}=0.
+              </me>
+              It then follows that
+              <me>
+                \lim\limits_{t\to\infty} y(t)=0.
+              </me>
+              We can show that the mass passes through the equilibrium position at most once by setting <m>y(t) = 0</m> and finding the time <m>t</m> at which this happens.
+            </p>
 
-				<p>
-				  Regarding the velocity of the mass, we find
-				  <me>
-					\begin{split} y'(t) &amp;=  c_1 (-\beta + \sqrt{\beta^2- \omega^2})e^{(-\beta + \sqrt{\beta^2- \omega^2})t}\\ &amp;+ c_2(-\beta - \sqrt{\beta^2- \omega^2}) e^{(-\beta - \sqrt{\beta^2- \omega^2})t}, \end{split}
-				  </me>
-				</p>
+            <p>
+              Regarding the velocity of the mass, we find
+              <me>
+                \begin{split} y'(t) &amp;=  c_1 (-\beta + \sqrt{\beta^2- \omega^2})e^{(-\beta + \sqrt{\beta^2- \omega^2})t}\\ &amp;+ c_2(-\beta - \sqrt{\beta^2- \omega^2}) e^{(-\beta - \sqrt{\beta^2- \omega^2})t}, \end{split}
+              </me>
+            </p>
 
-				<p>
-				  Again, we observe that
-				  <me>
-					\lim\limits_{t\to\infty} y'(t)=0.
-				  </me>
-				  We can also show that the mass reaches an extreme position at most once by setting <m>y'(t) = 0</m> and finding the time <m>t</m> at which this happens.<!-- linebreak -->Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta &gt; \omega</m> is equivalent to <m>b&gt; 2\sqrt{mk}.</m> We conclude that when the spring force is too weak to counteract a strong damping damping force, the mass approaches the equilibrium position with no oscillation and its velocity approaches zero, by changing its sign at most once, as <m>t</m> goes to <m>\infty</m>.
-				  In this case, the mass-spring system is said to be <term><em>overdamped.</em></term>
-				</p>
-			  </li>
+            <p>
+              Again, we observe that
+              <me>
+                \lim\limits_{t\to\infty} y'(t)=0.
+              </me>
+              We can also show that the mass reaches an extreme position at most once by setting <m>y'(t) = 0</m> and finding the time <m>t</m> at which this happens.<!-- linebreak -->Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta &gt; \omega</m> is equivalent to <m>b&gt; 2\sqrt{mk}.</m> We conclude that when the spring force is too weak to counteract a strong damping damping force, the mass approaches the equilibrium position with no oscillation and its velocity approaches zero, by changing its sign at most once, as <m>t</m> goes to <m>\infty</m>.
+              In this case, the mass-spring system is said to be <term><em>overdamped.</em></term>
+            </p>
+          </li>
 
-			  <li>
-				<p>
-				  <term><em>Critically Damped Motion</em>:</term> When <m>\beta = \omega</m>, <xref ref="eq-mass-spring11" /> yields <m>r = - \beta, -\beta,</m> so that the general solution of <xref ref="eq-mass-spring10" /> is
-				  <me>
-					y(t) = c_1 e^{-\beta t}+ c_2 te^{-\beta t} = (c_1+ c_2t) e^{-\beta t},
-				  </me>
-				  where <m>c_1</m> and <m>c_2</m> are arbitrary constants which can be determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are known.
-				  The velocity of the mass is given by
-				  <me>
-					y'(t) = -\beta (c_1 + tc_2) e^{-\beta t} + c_2 e^{-\beta t} = (c_2 - \beta c_1- \beta c_2 t) e^{-\beta t}.
-				  </me>
-				  Since <m>\beta &gt;0,</m> we find <m>e^{-\beta t}\to 0</m> and <m>t e^{-\beta t}\to 0</m> as <m>t\to\infty.</m> These imply that
-				  <me>
-					\lim\limits_{t\to\infty} y(t) = 0 \qquad \mbox{ and }\qquad \lim\limits_{t\to\infty} y'(t) = 0.
-				  </me>
-				  As note earlier in the case of an overdamped motion, the mass in this case can also pass thorough the equilibrium at most once and can reach an extreme position at most once while its velocity changes its sign.
-				  As <m>t</m> goes to <m>\infty,</m> the mass approaches its equilibrium position and its velocity also tends to zero.
-				</p>
+          <li>
+            <p>
+              <term><em>Critically Damped Motion</em>:</term> When <m>\beta = \omega</m>, <xref ref="eq-mass-spring11" /> yields <m>r = - \beta, -\beta,</m> so that the general solution of <xref ref="eq-mass-spring10" /> is
+              <me>
+                y(t) = c_1 e^{-\beta t}+ c_2 te^{-\beta t} = (c_1+ c_2t) e^{-\beta t},
+              </me>
+              where <m>c_1</m> and <m>c_2</m> are arbitrary constants which can be determined when the initial conditions <m>y(t_0) = y_0,  y'(t_0) = y_1</m> are known.
+              The velocity of the mass is given by
+              <me>
+                y'(t) = -\beta (c_1 + tc_2) e^{-\beta t} + c_2 e^{-\beta t} = (c_2 - \beta c_1- \beta c_2 t) e^{-\beta t}.
+              </me>
+              Since <m>\beta &gt;0,</m> we find <m>e^{-\beta t}\to 0</m> and <m>t e^{-\beta t}\to 0</m> as <m>t\to\infty.</m> These imply that
+              <me>
+                \lim\limits_{t\to\infty} y(t) = 0 \qquad \mbox{ and }\qquad \lim\limits_{t\to\infty} y'(t) = 0.
+              </me>
+              As note earlier in the case of an overdamped motion, the mass in this case can also pass thorough the equilibrium at most once and can reach an extreme position at most once while its velocity changes its sign.
+              As <m>t</m> goes to <m>\infty,</m> the mass approaches its equilibrium position and its velocity also tends to zero.
+            </p>
 
-				<p>
-				  Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta = \omega</m> is equivalent to <m>b= 2\sqrt{mk}.</m> It follows from the case of underdamped motion that when the damping coefficient <m>b</m> is even slightly less than <m>2\sqrt{mk},</m> the mass undergoes an oscillatory motion.
-				  The spring-mass system with the smallest damping coefficient <m>b</m> that maintains a nonoscillatory motion is to be <term><em>critically damped</em></term>.
-				</p>
-			  </li>
-			</ol>
-		  </p>
-		</paragraphs>
-
-
-		<paragraphs xml:id="forced-damped-motion">
-		  <title>III. Forced Undamped  Motion (<m>b=0,\;F(t) \ne 0</m>)</title>
-
-		  <p>
-			When <m>b=0</m> (no damping) and <m>F(t) \ne 0</m> (with external force), the spring-mass system is governed by the differential equation
-			<me>
-			  my''(t)  + ky(t) = F(t).
-
-			</me>
-			which, with <m>w^2 = k/m</m> and <m>f(t) = F(t)/m,</m> becomes
-			<men xml:id="eq-mass-spring-undamped-forced-1">
-			   y''(t)  + \omega^2y(t) = f(t).
-			</men>
-		  </p>
-
-		  <p>
-			The nonhomogeneous equation <xref ref="eq-mass-spring-undamped-forced-1" /> can be solved by using the methods of previous sections.
-			The general solution is of the form
-			<men xml:id="eq-mass-spring13">
-			  y(t) = y_h(t) + y_p(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t) +y_p(t),
-			</men>
-			where <m>c_1</m> and <m>c_2</m> are arbitrary constants and <m>y_p(t)</m> is a particular solution of <xref ref="eq-mass-spring-undamped-forced-1" />.
-			Recall that
-			<me>
-			  y_h(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)
-			</me>
-			is the general solution of the simple harmonic oscillator
-			<me>
-			  y''(t)  + \omega^2 y(t)=0,
-			</me>
-			associated with <xref ref="eq-mass-spring-undamped-forced-1" />.
-		  </p>
-
-		  <example xml:id="example-undamped-forced-system">
-			<statement>
-			 <p>
-			A <m>10</m>-kilogram mass attached to the end of a vertically hanging spring causes the spring to stretch <m>39.2</m> centimeters.
-			At time <m>t = 0</m>, the spring-mass system is set into motion by an external force <m>F(t) = 180\sin(10t)</m>, where <m>F(t)</m> is measured in newtons and is positive in the downward direction, and time is measured in seconds.
-			Determine the equation of motion and estimate the maximum excursion of the mass from its equilibrium position.
-			  </p>
-			</statement>
-
-			<solution>
-			 <p>
-			We let <m>y(t)</m> denote the displacement of the mass from the equilibrium position measured positively in the vertically downward direction.
-			 </p>
+            <p>
+              Since <m>\beta = b/(2m)</m> and <m>\omega^2 = k/m,</m> <m>\beta = \omega</m> is equivalent to <m>b= 2\sqrt{mk}.</m> It follows from the case of underdamped motion that when the damping coefficient <m>b</m> is even slightly less than <m>2\sqrt{mk},</m> the mass undergoes an oscillatory motion.
+              The spring-mass system with the smallest damping coefficient <m>b</m> that maintains a nonoscillatory motion is to be <term><em>critically damped</em></term>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </paragraphs>
 
 
-		  <p>
-			We have <m>m = 10~\text{kg}, s = 39.2~\text{cm} = 0.392~\text{m}, F(t) = 180\sin(10t)~\text{N}.</m> For the mass in equilibrium, we have <m>mg = ks</m>, and so
-			<me>
-			  k = \frac{mg}{s} = \frac{10 \times 9.8}{0.392} = 250~\text{N/m}.
-			</me>
-			The natural frequency of the system is
-			<me>
-			  \omega = \sqrt{\frac{k}{m}} = 5 \text{ cycles in $2\pi$ seconds} = 5 \text{ rad/s}
-			</me>
-			The differential equation of motion is therefore
-			<me>
-			  10y'' + 250y' = 180\sin(10t),
-			</me>
-			or equivalently,
-			<men xml:id="eq-mass-spring-150">
-			 y'' + 25y = 18\sin(5t).
-			</men>
-			The general solution of <m>y'' + 25y = 0</m> is
-			<me>
-			  y_h(t) = c_1\cos(5t) + c_2\sin(5t),
-			</me>
-			where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
-			We find a particular solution <m>y_p(t)</m> of <xref ref="eq-mass-spring-150" /> by variation of parameters.
-			Let
-			<me>
-			  y_p(t) = A\cos(10t) + B\sin(10t)
-			</me>
-			be a particular solution of <xref ref="eq-mass-spring-150" />, where <m>A</m> and <m>B</m> are to be determined.
-			We find that <m>y''_p(t) = - 100 y_p(t).</m> Substituting <m>y_p</m> for <m>y</m> and <m>y''_p</m> for <m>y''</m> into <xref ref="eq-mass-spring-150" /> yields
-			<me>
-			  - 100 y_p(t)+25y_p(t) = 18 \sin(10t),
-			</me>
-			that is,
-			<me>
-			  -75A \cos(5t) - 75 B\sin(5t) =18 \sin(10t).
-			</me>
-			Equating the coefficients of the like terms, we have <m>-75 A =0</m> and <m>-75 B = 18</m>, that is, <m>A=0</m> and <m>B = -6/25.</m> Thus, we have
-			<me>
-			  y_p(t) = -\frac{6}{25} \sin(5t).
-			</me>
-			The general solution of <xref ref="eq-mass-spring-150" /> is
-			<me>
-			  y(t) = c_1\cos(5t) + c_2\sin(5t) - \frac{6}{25}\sin(10t),
-			</me>
-			where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
-			The initial conditions for <m>y(t)</m> are <m>y(0) = 0, y'(0) = 0.</m> Substituting these gives <m>c_1 = 0</m> and <m>5c_2 - \frac{12}{5} = 0</m>, i.e., <m>c_1=0</m> and <m>c_2 = \frac{12}{25}</m> Thus, we have
-			<me>
-			  y(t) = \frac{12}{25}\sin(5t) - \frac{6}{25} \sin(10t).
-			</me>
-			The graph of the solution is shown in <xref ref="fig-undamped-forced-system" />.
-			Using the critical numbers and second derivative test, we can verify that the maximum occurs at <m>t = \frac{2\pi}{15}.</m> The maximum value is
-			<me>
-			  y\left(\frac{2\pi}{15}\right) = \frac{9\sqrt{3}}{25} \approx 0.6235.
-			  </me>
-			  <figure xml:id="fig-undamped-forced-system">
-				<caption>The graph of <m>y(t) = \frac{12}{25} \sin(5t)-\frac{6}{25}\sin(10t)</m></caption>
-				<image source="images/fig-undamped-forced-system" width="70%">
-					<!-- <latex-image> \begin{tikzpicture}[scale=.8] \begin{axis}[ width=10cm, height=7cm, axis lines=middle, xlabel={$t$}, ylabel={$y(t)$}, ylabel style={at={(axis description cs:0, -0.02)}, anchor =north}, samples=300, domain=0:2*pi, xtick={0,pi/15,...,2*pi}, ytick={-0.5,0,0.5}, smooth, thick, y dir=reverse, grid=both, minor tick num=1, ] \addplot[blue, thick] {12/25 * sin(deg(5*x)) - 6/25 * sin(deg(10*x))}; \node[anchor=west, blue] at (axis cs:0.37,.5) {$y(t)=\dfrac{12}{25}\sin(5t)-\dfrac{6}{25}\sin(10t)$}; \end{axis} \end{tikzpicture}
-					</latex-image> -->
-				</image>
-			  </figure>
-		  </p>
-		  </solution>
-		  </example>
-		  <!--</div attr= class="solution">-->
-		  <p>
-			In <xref ref="example-undamped-forced-system" />, the frequency of the external source is <m>\gamma =10</m> which is not equal to or near the natural frequency <m>\omega = 5.</m>
-		  </p>
+    <paragraphs xml:id="forced-damped-motion">
+      <title>III. Forced Undamped  Motion (<m>b=0,\;F(t) \ne 0</m>)</title>
 
-		  <p>
-			<term>Resonance:</term> An important aspect of analyzing undamped forced spring-mass systems is understanding how large (in absolute values) the values of <m>y_p(t)</m> can become when <m>F(t)</m> is sinusoidal. If the amplitude of <m>y_p(t)</m> grows without bound, the system is said to be in <term><em>resonance</em></term>. In practical applications, resonance may be undesirable because it can lead to excessive energy buildup and potential system failure. Since the system <xref ref="eq-mass-spring-undamped-forced-1" /> is undamped, the only way energy can dissipate from the system is by the nature of the source term <m>F(t).</m> However, it is possible that the energy buildup can happen in the system even when <m>F(t)</m> is sign-changing. The following example demonstrates how resonance occurs.
-		  </p>
-		  <!-- div attr= class="example"-->
-		  <p>
-			With the external force in <xref ref="example-undamped-forced-system" /> replaced with <m>F(t) = 180\sin(5t)</m>, determine the equation of motion, analyze the amplitude of the resulting motion, and verify that the system exhibits resonance.
-		  </p>
-		  <!--</div attr= class="example">--> <!-- div attr= class="solution"-->
-		  <p>
-			Similarly to the solution in <xref ref="example-undamped-forced-system" />, the initial value problem for the current example is
-			<men xml:id="eq-mass-spring-15">
-			y'' + 25y = 18\sin(5t), \quad y(0) =0,\; y'(0) = 0.
-			</men>
-			Recall from <xref ref="example-undamped-forced-system" /> that the natural frequency of the system is <m>\omega  = 10.</m> We note here that the frequency of the external force <m>\gamma =10</m> matches the natural frequency <m>\omega = 10.</m> The general solution of <m>y'' + 25y = 0</m> is
-			<me>
-			  y_h(t) = c_1\cos(5t) + c_2\sin(5t),
-			</me>
-			where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
-			We find a particular solution <m>y_p(t)</m> of <xref ref="eq-mass-spring-15" /> by variation of parameters.
-			Let
-			<me>
-			  y_p(t) = u_1(t)\cos(5t) + u_2(t)\sin(5t),
-			</me>
-			where <m>u_1'(t)</m> and <m>u_2'(t)</m> satisfy
-			<me>
-			  \begin{cases} u_1'(t)\cos(5t) + u_2'(t)\sin(5t) = 0, \\[4pt] -5\,u_1'(t)\sin(5t) + 5u_2'(t)\cos(5t) = 18\sin(5t).
-			  \end{cases}
-			</me>
-			Solving this system gives
-			<me>
-			  u_1'(t) = -\frac{18}{5}\sin^2(5t) =-\frac{9}{5}(1-\cos(10t)),
-			</me>
-			and
-			<me>
-			  u_2'(t) = \frac{18}{5}\sin(5t)\cos(5t) =\frac{9}{5}\sin(10t).
-			</me>
-			Integrating yields
-			<me>
-			  u_1(t) = -\frac{9}{5}t + \frac{9}{50} \sin(10t), \qquad u_2(t) = -\frac{9}{50} \cos(10t).
-			</me>
-			Hence,
-			<me>
-			  \begin{aligned} y_p(t) &amp;= u_1\cos(5t) + u_2\sin(5t) \\[2pt] &amp;= -\frac{9}{5}t \cos(5t)  + \frac{9}{50}\sin(10t) \cos(5t) -\frac{9}{50}\cos(10t)\sin(5t)\\[2pt] &amp;=-\frac{9}{5}t \cos(5t)  + \frac{9}{50}\sin(5t).
-			  \\[2pt] \end{aligned}
-			</me>
-			The general solution is
-			<me>
-			  y(t) = c_1\cos(5t) + c_2\sin(5t) - \frac{9}{5}t\cos(10t),
-			</me>
-			<m>c_1</m> and <m>c_2</m> are constants to be determined so that <m>y(0) = 0, y'(0) = 0.</m> Substituting these gives <m>c_1 = 0</m> and <m>5c_2 - \frac{9}{5} = 0</m>, i.e., <m>c_2 = \frac{9}{25}</m> Thus, we have
-			<me>
-			  y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t).
-			</me>
-			It is evident that the amplitude <m>a(t)</m> of <m>y(t)</m> is given by
-			<me>
-			  a(t)=\frac{ 9}{5}\sqrt{t^2+\frac{1}{25}}
-			</me>
-			which shows that <m>\lvert y(t) \rvert</m> grows without bound as <m>t\to\infty.</m> Hence, the system exhibits <term>resonance</term> in this case, where the forcing frequency coincides the natural frequency-illustrating the classical example of resonance in an undamped forced spring-mass system.
-			The plots of the solution <m>y(t)</m> and amplitude <m>a(t)</m> are shown in <xref ref="fig-resonance-1" />.
-			<figure xml:id="fig-resonance-1">
-				<caption>The graph of <m>y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t)</m> and its amplitude <m>a(t) = \frac{9}{5}\sqrt{t^2+\frac{1}{25}}</m></caption>
-				<image source="images/fig-resonance-1" width="90%">
-				</image>
-			  </figure>
-		  </p>
-		</paragraphs>
+      <p>
+        When <m>b=0</m> (no damping) and <m>F(t) \ne 0</m> (with external force), the spring-mass system is governed by the differential equation
+        <me>
+          my''(t)  + ky(t) = F(t).
+        </me>
+        which, with <m>w^2 = k/m</m> and <m>f(t) = F(t)/m,</m> becomes
+        <men xml:id="eq-mass-spring-undamped-forced-1">
+          y''(t)  + \omega^2y(t) = f(t).
+        </men>
+      </p>
 
-	</subsection>
+      <p>
+        The nonhomogeneous equation <xref ref="eq-mass-spring-undamped-forced-1" /> can be solved by using the methods of previous sections.
+        The general solution is of the form
+        <men xml:id="eq-mass-spring13">
+          y(t) = y_h(t) + y_p(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t) +y_p(t),
+        </men>
+        where <m>c_1</m> and <m>c_2</m> are arbitrary constants and <m>y_p(t)</m> is a particular solution of <xref ref="eq-mass-spring-undamped-forced-1" />.
+        Recall that
+        <me>
+          y_h(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)
+        </me>
+        is the general solution of the simple harmonic oscillator
+        <me>
+          y''(t)  + \omega^2 y(t)=0,
+        </me>
+        associated with <xref ref="eq-mass-spring-undamped-forced-1" />.
+      </p>
+
+      <example xml:id="example-undamped-forced-system">
+        <statement>
+          <p>
+            A <m>10</m>-kilogram mass attached to the end of a vertically hanging spring causes the spring to stretch <m>39.2</m> centimeters.
+            At time <m>t = 0</m>, the spring-mass system is set into motion by an external force <m>F(t) = 180\sin(10t)</m>, where <m>F(t)</m> is measured in newtons and is positive in the downward direction, and time is measured in seconds.
+            Determine the equation of motion and estimate the maximum excursion of the mass from its equilibrium position.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            We let <m>y(t)</m> denote the displacement of the mass from the equilibrium position measured positively in the vertically downward direction.
+          </p>
+
+          <p>
+            We have <m>m = 10~\text{kg}, s = 39.2~\text{cm} = 0.392~\text{m}, F(t) = 180\sin(10t)~\text{N}.</m> For the mass in equilibrium, we have <m>mg = ks</m>, and so
+            <me>
+              k = \frac{mg}{s} = \frac{10 \times 9.8}{0.392} = 250~\text{N/m}.
+            </me>
+            The natural frequency of the system is
+            <me>
+              \omega = \sqrt{\frac{k}{m}} = 5 \text{ cycles in $2\pi$ seconds} = 5 \text{ rad/s}
+            </me>
+            The differential equation of motion is therefore
+            <me>
+              10y'' + 250y' = 180\sin(10t),
+            </me>
+            or equivalently,
+            <men xml:id="eq-mass-spring-150">
+              y'' + 25y = 18\sin(10t).
+            </men>
+            The general solution of <m>y'' + 25y = 0</m> is
+            <me>
+              y_h(t) = c_1\cos(5t) + c_2\sin(5t),
+            </me>
+            where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+            We find a particular solution <m>y_p(t)</m> of <xref ref="eq-mass-spring-150" /> by variation of parameters.
+            Let
+            <me>
+              y_p(t) = A\cos(10t) + B\sin(10t)
+            </me>
+            be a particular solution of <xref ref="eq-mass-spring-150" />, where <m>A</m> and <m>B</m> are to be determined.
+            We find that <m>y''_p(t) = - 100 y_p(t).</m> Substituting <m>y_p</m> for <m>y</m> and <m>y''_p</m> for <m>y''</m> into <xref ref="eq-mass-spring-150" /> yields
+            <me>
+              - 100 y_p(t)+25y_p(t) = 18 \sin(10t),
+            </me>
+            that is,
+            <me>
+              -75A \cos(5t) - 75 B\sin(5t) =18 \sin(10t).
+            </me>
+            Equating the coefficients of the like terms, we have <m>-75 A =0</m> and <m>-75 B = 18</m>, that is, <m>A=0</m> and <m>B = -6/25.</m> Thus, we have
+            <me>
+              y_p(t) = -\frac{6}{25} \sin(5t).
+            </me>
+            The general solution of <xref ref="eq-mass-spring-150" /> is
+            <me>
+              y(t) = c_1\cos(5t) + c_2\sin(5t) - \frac{6}{25}\sin(10t),
+            </me>
+            where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+            The initial conditions for <m>y(t)</m> are <m>y(0) = 0, y'(0) = 0.</m> Substituting these gives <m>c_1 = 0</m> and <m>5c_2 - \frac{12}{5} = 0</m>, i.e., <m>c_1=0</m> and <m>c_2 = \frac{12}{25}</m> Thus, we have
+            <me>
+              y(t) = \frac{12}{25}\sin(5t) - \frac{6}{25} \sin(10t).
+            </me>
+            The graph of the solution is shown in <xref ref="fig-undamped-forced-system" />.
+            Using the critical numbers and second derivative test, we can verify that the maximum occurs at <m>t = \frac{2\pi}{15}.</m> The maximum value is
+            <me>
+              y\left(\frac{2\pi}{15}\right) = \frac{9\sqrt{3}}{25} \approx 0.6235.
+            </me>
+
+            <figure xml:id="fig-undamped-forced-system">
+              <caption>The graph of <m>y(t) = \frac{12}{25} \sin(5t)-\frac{6}{25}\sin(10t)</m></caption>
+              <image source="images/fig-undamped-forced-system" width="70%"/> <!--
+                <image  width="70%">
+                  <latex-image> \begin{tikzpicture}[scale=.8] \begin{axis}[width=10cm, height=7cm, axis lines=middle, xlabel={$t$}, ylabel={$y(t)$}, ylabel style={at={(axis description cs:0, -0.02)}, anchor =north}, samples=300, domain=0:11*pi/15, xtick={0,pi/15,...,11*pi/15}, ytick={-0.5,0,0.5}, smooth, thick, y dir=reverse, grid=both, minor tick num=1, ] \addplot[blue, thick] {12/25 * sin(deg(5*x)) - 6/25 * sin(deg(10*x))}; \node[anchor=west, blue] at (axis cs:0.37,.5) {$y(t)=\dfrac{12}{25}\sin(5t)-\dfrac{6}{25}\sin(10t)$}; \end{axis} \end{tikzpicture}
+                  </latex-image>
+                </image>
+                -->
+              </figure>
+            </p>
+          </solution>
+        </example>
+        <!--</div attr= class="solution">-->
+        <p>
+          In <xref ref="example-undamped-forced-system" />, the frequency of the external source is <m>\gamma =10</m> which is not equal to or near the natural frequency <m>\omega = 5.</m>
+        </p>
+
+        <p>
+          <term>Resonance:</term> An important aspect of analyzing undamped forced spring-mass systems is understanding how large (in absolute values) the values of <m>y_p(t)</m> can become when <m>F(t)</m> is sinusoidal. If the amplitude of <m>y_p(t)</m> grows without bound, the system is said to be in <term><em>resonance</em></term>. In practical applications, resonance may be undesirable because it can lead to excessive energy buildup and potential system failure. Since the system <xref ref="eq-mass-spring-undamped-forced-1" /> is undamped, the only way energy can dissipate from the system is by the nature of the source term <m>F(t).</m> However, it is possible that the energy buildup can happen in the system even when <m>F(t)</m> is sign-changing. The following example demonstrates how resonance occurs.
+        </p>
+        <!-- div attr= class="example"-->
+        <example xml:id="example-resonance-spring-mass-system-1">
+          <statement>
+            <p>
+              With the external force in <xref ref="example-undamped-forced-system" /> replaced with <m>F(t) = 180\sin(5t)</m>, determine the equation of motion, analyze the amplitude of the resulting motion, and verify that the system exhibits resonance.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Similarly to the solution in <xref ref="example-undamped-forced-system" />, the initial value problem for the current example is
+              <men xml:id="eq-mass-spring-15">
+                y'' + 25y = 18\sin(5t), \quad y(0) =0,\; y'(0) = 0.
+              </men>
+              Recall from <xref ref="example-undamped-forced-system" /> that the natural frequency of the system is <m>\omega  = 10.</m> We note here that the frequency of the external force <m>\gamma =10</m> matches the natural frequency <m>\omega = 10.</m> The general solution of <m>y'' + 25y = 0</m> is
+              <me>
+                y_h(t) = c_1\cos(5t) + c_2\sin(5t),
+              </me>
+              where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+              We find a particular solution <m>y_p(t)</m> of <xref ref="eq-mass-spring-15" /> by variation of parameters.
+              Let
+              <me>
+                y_p(t) = u_1(t)\cos(5t) + u_2(t)\sin(5t),
+              </me>
+              where <m>u_1'(t)</m> and <m>u_2'(t)</m> satisfy
+              <me>
+                \begin{cases} u_1'(t)\cos(5t) + u_2'(t)\sin(5t) = 0, \\[4pt] -5\,u_1'(t)\sin(5t) + 5u_2'(t)\cos(5t) = 18\sin(5t).
+                \end{cases}
+              </me>
+              Solving this system gives
+              <me>
+                u_1'(t) = -\frac{18}{5}\sin^2(5t) =-\frac{9}{5}(1-\cos(10t)),
+              </me>
+              and
+              <me>
+                u_2'(t) = \frac{18}{5}\sin(5t)\cos(5t) =\frac{9}{5}\sin(10t).
+              </me>
+              Integrating yields
+              <me>
+                u_1(t) = -\frac{9}{5}t + \frac{9}{50} \sin(10t), \qquad u_2(t) = -\frac{9}{50} \cos(10t).
+              </me>
+              Hence,
+              <me>
+                \begin{aligned} y_p(t) &amp;= u_1\cos(5t) + u_2\sin(5t) \\[2pt] &amp;= -\frac{9}{5}t \cos(5t)  + \frac{9}{50}\sin(10t) \cos(5t) -\frac{9}{50}\cos(10t)\sin(5t)\\[2pt] &amp;=-\frac{9}{5}t \cos(5t)  + \frac{9}{50}\sin(5t).
+                \\[2pt] \end{aligned}
+              </me>
+              The general solution is
+              <me>
+                y(t) = c_1\cos(5t) + c_2\sin(5t) - \frac{9}{5}t\cos(10t),
+              </me>
+              <m>c_1</m> and <m>c_2</m> are constants to be determined so that <m>y(0) = 0, y'(0) = 0.</m> Substituting these gives <m>c_1 = 0</m> and <m>5c_2 - \frac{9}{5} = 0</m>, i.e., <m>c_2 = \frac{9}{25}</m> Thus, we have
+              <me>
+                y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t).
+              </me>
+              It is evident that the amplitude <m>a(t)</m> of <m>y(t)</m> is given by
+              <me>
+                a(t)=\frac{ 9}{5}\sqrt{t^2+\frac{1}{25}}
+              </me>
+              which shows that <m>\lvert y(t) \rvert</m> grows without bound as <m>t\to\infty.</m> Hence, the system exhibits <term>resonance</term> in this case, where the forcing frequency coincides the natural frequency-illustrating the classical example of resonance in an undamped forced spring-mass system.
+              The plots of the solution <m>y(t)</m> and amplitude <m>a(t)</m> are shown in <xref ref="fig-resonance-1" />.
+              <figure xml:id="fig-resonance-1">
+                <caption>The graph of <m>y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t)</m> and its amplitude <m>a(t) = \frac{9}{5}\sqrt{t^2+\frac{1}{25}}</m></caption>
+                <image source="images/fig-resonance-1" width="90%">
+                </image>
+              </figure>
+            </p>
+          </solution>
+        </example>
+      </paragraphs>
 
 
-	<subsection xml:id="subsec-RLC-circuit">
-		<title>Electrical Circuits</title>
+      <paragraphs xml:id="forced-undamped-motion">
+        <title>IV. Forced Damped  Motion (<m>b&gt;0,\;F(t) \ne 0</m>)</title>
 
-		<p>
-			An RLC circuit is another common physical application of second-order linear
-			differential equations.
-		</p>
-	</subsection>
-</section>
+        <p>
+          When <m>b&gt;0</m> and <m>F(t) \ne 0</m>, the spring-mass system is governed by the differential equation <xref ref="eq-mass-spring16" />; namely,
+          <men xml:id="eq-mass-spring16">
+            my''(t) + by'(t) + k y(t) = F(t).
+          </men>
+          The nonhomogeneous equation <xref ref="eq-mass-spring16" /> can be solved by using the methods of previous sections.
+          The general solution is of the form
+          <men xml:id="eq-mass-spring17">
+            y(t) = y_h(t) + y_p(t),
+          </men>
+          where <m>y_h(t)</m> is the general solution of the homogeneous equation
+          <me>
+            my''(t) + by'(t) + k y(t)=0,
+          </me>
+          which describes the free damped motion corresponding to <m>F(t) = 0</m> and <m>y_p(t)</m> is a particular solution of <xref ref="eq-mass-spring16" />.
+          We recall from all three cases (underdamped, critically damped, and overdamped) of a free damped motion that
+          <men xml:id="eq-mass-spring18">
+            \lim\limits_{t\to\infty}y_h(t) =0,
+          </men>
+          and therefore <m>y_h(t)</m> is a <term><em>transient term</em></term> in <xref ref="eq-mass-spring17" /> and it is either oscillatory or nonoscillatory according as <m>b&lt;2\sqrt{mk}</m> or <m>b \ge \sqrt{mk}.</m> We conclude from <xref ref="eq-mass-spring17" /> and <xref ref="eq-mass-spring18" /> that
+          <me>
+            y(t)\approx  y_p(t)\quad \mbox{ for large } t.
+          </me>
+          The particular solution <m>y_p(t)</m> is called the <term><em>steady-state</em></term> solution of <xref ref="eq-mass-spring16" />.
+          For short times, <m>y_h(t)</m> must be included in the solution <m>y(t) = y_h(t) + y_p(t),</m> which then becomes the <em><term>transient solution.</term></em>
+        </p>
+
+        <example xml:id="example-resonance-mass-spring-2">
+          <statement>
+            <p>
+              For the resonant system in <xref ref="example-resonance-spring-mass-system-1" />, determine the damping coefficient that should be introduced at <m>t = 3\pi</m> so that the system transitions immediately into a simple harmonic oscillator with the amplitude <m>27\pi/5.</m>
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              We recall that the solution of the resonant system in <xref ref="example-resonance-spring-mass-system-1" />
+              <men xml:id="eq-resonance-mass-spring-2">
+                \begin{cases} y'' +25 y = 18 \sin(5 t),\\ y(0) =0, \quad y'(0) = 0, \end{cases}
+              </men>
+              is
+              <me>
+                y(t) = -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t).
+              </me>
+              We observe that <m>y(3\pi) = {27\pi}/{5}</m> and <m>y'(3\pi)=0.</m>
+            </p>
+
+            <p>
+              We now proceed to find the damping coefficient <m>b&gt;0</m> required to turn the resonant system <xref ref="eq-resonance-mass-spring-2" /> into a simple harmonic oscillator starting at <m>t=3\pi</m> with the frequency of oscillation same as the natural frequency of resonant system and the amplitude <m>27\pi/5.</m> We consider the initial value problem
+              <men xml:id="eq-resonance-mass-spring-6">
+                \ \begin{cases} 10y''+by' +250 y = 180 \sin(5t),\\ y(3\pi)  ={27\pi}/{5}, \quad y'(3\pi)  = 0.
+                \end{cases}
+              </men>
+              It is evident that for small <m>b&gt;0</m> the complementary function should be oscillatory.
+              Suppose then that <m>b^2&lt; 40000</m> and put
+              <me>
+                d = \frac{1}{20}\sqrt{10000-b^2}.
+              </me>
+              Then the general solution of the differential equation in <xref ref="eq-resonance-mass-spring-6" /> can be written in the form
+              <me>
+                y(t) =e^{-\frac{b}{20}(t-3\pi)} \Big(c_1 \cos\big(d(t-3\pi)\big)+c_2 \sin\big(d(t-3\pi)\big)\Big)-\frac{36}{b} \cos (5 t)
+              </me>
+              where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+              The only way this represents the solution to a harmonic oscillator is when its transient term is zero which happens only when <m>c_1=c_2= 0</m> because of the linear independence of <m>\cos\big(d (t-3\pi)\big)</m> and <m>\sin\big(d (t-3\pi)\big).</m> Since <m>y(3\pi) = 27\pi/5,</m> we have
+              <me>
+                \frac{27\pi}{5}  = c_1 +\frac{36}{b}.
+              </me>
+              In order that <m>c_1=0,</m> we must have
+              <me>
+                b= \frac{20}{3\pi}.
+              </me>
+              The condition <m>y'(3\pi) = 0</m> ensures that <m>c_2=0</m> because
+              <me>
+                0 =y'(3\pi)= -\frac{b}{20} c_1 +dc_2,
+              </me>
+              which gives
+              <me>
+                c_2 = \frac{b}{20d} c_1 =0.
+              </me>
+              Thus, the damped system introduced at <m>t  = 3\pi</m> is
+              <men xml:id="eq-resonance-mass-spring-7">
+                \begin{cases} 10y''+\frac{20}{3\pi}y' +250 y = 180 \sin(5 t),\\ y(3\pi)  ={27\pi}/{5}, \quad y'(3\pi)  = 0, \end{cases}
+              </men>
+              with the solution
+              <me>
+                z(t) = -\frac{27\pi}{5} \cos (5 t)
+              </me>
+              for all <m>t\ge 3\pi.</m> The problem <xref ref="eq-resonance-mass-spring-7" /> is equivalent to the simple harmonic oscillator described by
+              <men xml:id="eq-resonance-mass-spring-8">
+                \begin{cases} y''+25 y = 0,\\ y(3\pi)  ={27\pi}/{5}, \quad y'(3\pi)  = 0.
+                \end{cases}
+              </men>
+              This harmonic oscillator has frequency same as the natural frequency of the resonant system <xref ref="eq-resonance-mass-spring-2" /> and amplitude equal to <m>27\pi/5.</m> The solution of the resonant system for <m>0\le t\le 3\pi</m> and its continuous transition to a damped forced system that exhibits the simple harmonic oscillator <xref ref="eq-resonance-mass-spring-8" /> for <m>t\ge 3\pi</m> is
+              <me>
+                y(t) = \begin{cases} -\frac{9}{5}t\cos(5t) + \frac{9}{25}\sin(5t) &amp;\text{ for } 0 \le t\le3\pi\\ \frac{-27\pi }{5}  \cos (5 t) &amp;\text{ for }  t\ge 3\pi.
+                \end{cases}
+              </me>
+              The graph of this solution is shown in <xref ref="fig-resonance-to-sho" />.
+              <figure xml:id="fig-resonance-to-sho">
+                <caption>The graph of <m>y=y(t).</m> </caption>
+                <image source="images/resonance-to-sho" width="60%"/>
+                </figure>
+              </p>
+            </solution>
+          </example>
+
+          <p>
+            When <m>b = 0</m> and the natural frequency of the system matches that of an external sinusoidal force, as illustrated in <xref ref="example-resonance-spring-mass-system-1" />, the system exhibits resonance.
+            In contrast, we recall that a free damped system approaches its equilibrium as <m>t \to \infty</m>.
+            In most practical applications, the damping constant <m>b</m> is relatively small.
+            Interestingly, when <m>b &gt; 0</m> but small, although the amplitude of the particular solution <m>y_p</m> is not unbounded as <m>t\to \infty</m>, the system displays a behavior approaching resonance because the damping is insufficient to suppress large oscillations.
+            Therefore <m>\gamma = \omega</m> should be avoided even for small damping.
+            The following example illustrates this phenomenon.
+          </p>
+
+          <example xml:id="example-resonance-mass-spring-3">
+            <statement>
+              <p>
+                In the resonant system discussed in <xref ref="example-resonance-spring-mass-system-1" />, suppose that the surrounding medium offers a damping force that is numerically equal to 0.01 times the instantaneous velocity.
+                Find the equation of motion and analyze the danger of having a low value of the damping coefficient.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                The initial value problem is
+                <men xml:id="eq-small-damping-1">
+                  \begin{cases} y''+0.001y' +25 y = 18 \sin(5 t),\\ y(0)  =0, \quad y'(0)  = 0.
+                  \end{cases}
+                </men>
+                The auxiliary equation for <m>y''+0.001y' +25 y=0</m> is
+                <me>
+                  r^2 +0.001 r + 25 =0
+                </me>
+                with solutions <m>r = -a\pm ib</m>, where <m>a = 0.0005</m> and <m>b = \frac{1}{2}\sqrt{100-10^{-6}}.</m> Then the general solution of the homogeneous differential equation
+                <me>
+                  y_h(t) = e^{-at}\left(c_1 \cos(bt) + c_2 \sin(bt)\right),
+                </me>
+                where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+                Let <m>y_p(t) = A\cos(5t) + B\sin(5t)</m> be particular solution of the nonhomogeneous equation in <xref ref="eq-small-damping-1" />.
+                Then
+                <me>
+                  y'_p(t) = -5A\sin(5t) + 5B\cos(5t)
+                </me>
+                and
+                <me>
+                  y''_p(t) = -25A\cos(5t) - 25B\sin(5t) = -25 y_p(t).
+                </me>
+                Substituting <m>y_p</m> for <m>y</m> in the nonhomogeneous equation yields
+                <me>
+                  -25 y_p(t)-0.005A \sin(5t)+0.005B\cos(5t) + 25y_p(t) =18 \sin(5 t),
+                </me>
+                which gives <m>A = -3600</m> and <m>B=0.</m> Then <m>y_p(t) = -3600 \cos(5t)</m>, and therefore the general solution of the nonhomogeneous equation is
+                <me>
+                  y(t) =  e^{-at}\left(c_1 \cos(bt) + c_2 \sin(bt)\right)- 3600 \cos(5t).
+                </me>
+                Since <m>y(0) = 0</m>, we have <m>0 = c_1 - 3600,</m> i.e., <m>c_1 = 3600.</m> Also, since <m>y'(0) = 0,</m> we have <m>0 = -a c_1 +bc_2,</m> which gives <m>c_2 = ac_1/b = 3600a/b.</m> Thus, the solution to the initial value problem is
+                <me>
+                  y(t) = 3600 e^{-at}\left( \cos(bt) + \frac{a}{b} \sin(bt)\right)- 3600 \cos(5t).
+                </me>
+                The graph of the solution is shown in <xref ref="fig-small-damping-0" /> over <m>[0, 20]</m> shows that the system appears to have resonance-like behavior as in <xref ref="fig-resonance-1" />.
+                However, it is evident that <m>y(t) \approx - 3600 \cos(5t)</m> for large values of <m>t</m>.
+                In particular, <m>y\left(7001\pi\right) \approx 3600.</m>
+                <figure xml:id="fig-small-damping-0">
+                  <caption>The graph of <m>y(t) = 3600 e^{-at}\left( \cos(bt) + \frac{a}{b} \sin(bt)\right)- 3600 \cos(5t).</m> </caption>
+                  <image source="images/small-damping" width="60%"/>
+                  </figure>
+                </p>
+              </solution>
+            </example>
+
+            <p>
+              In the following example, we examine an undamped forced system in which the frequency of the external force is slightly different from the natural frequency.
+            </p>
+
+            <example xml:id="example-resonance-mass-spring-4">
+              <statement>
+                <p>
+                  In the setting of the resonant problem in <xref ref="example-resonance-spring-mass-system-1" />, let us take the external force
+                  <me>
+                    F(t) = 180 \cos(5t+2\epsilon t),
+                  </me>
+                  where <m>\epsilon</m> is very small.
+                  Find the equation of  motion.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  The initial value problem is
+                  <men xml:id="eq-small-change-frequency-2">
+                    \begin{cases} y'' +25 y = 18 \cos(\gamma t),\\ y(0)  =0, \quad y'(0)  = 0, \end{cases}
+                  </men>
+                  where <m>\gamma =5+2\epsilon</m> with <m>\epsilon</m> a small nonzero number.
+                  We have thus considered the frequency of the external force close to the natural frequency.
+                  The general solution of <m>y''+25y =0</m> is
+                  <me>
+                    y_h(t) = c_1 \cos(5t) + c_2 \sin(5t),
+                  </me>
+                  where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+                </p>
+
+                <p>
+                  Let <m>y_p(t) = A\cos(\gamma t) + B\sin(\gamma t)</m> be a particular solution of the nonhomogeneous equation in <xref ref="eq-small-change-frequency-2" />.
+                  Substituting <m>y_p</m> for <m>y</m> and <m>y''_p</m> for <m>y''</m> into the nonhomogeneous equation in <xref ref="eq-small-change-frequency-2" /> gives
+                  <me>
+                    (25-\gamma^2) A \cos(\gamma t) + (25-\gamma^2) B \sin(\gamma t) = 18 \cos(\gamma t).
+                  </me>
+                  This gives
+                  <me>
+                    A = -\frac{18}{\gamma^2 -25} \quad\mbox{and}\quad B=0.
+                  </me>
+                  Thus,
+                  <me>
+                    y(t) = -\frac{18}{\gamma ^2-25}\cos (\gamma  t),
+                  </me>
+                  and therefore the general solution of the nonhomogeneous equation is
+                  <me>
+                    y_p(t)=c_1 \cos ( 5 t )+c_2 \sin (5 t )-\frac{18}{\gamma ^2-25} \cos (\gamma  t).
+                  </me>
+                  Since <m>y(0) = 0</m> and <m>y'(0) = 0,</m> we have
+                  <me>
+                    0 = c_1 -\frac{18}{\gamma ^2-25} \quad\mbox{and}\quad 0=5c_2,
+                  </me>
+                  that is,
+                  <me>
+                    c_1=\frac{18}{\gamma ^2-25}\quad \mbox{and}\quad c_2=0.
+                  </me>
+                  Thus, the solution of the initial value problem is
+                  <me>
+                    \begin{split} y(t) &amp;= \frac{18}{\gamma ^2-25} (\cos (5 t)-\cos (\gamma t))\\ &amp;=-\frac{36}{(\gamma+5)(\gamma-5)} \sin\left(\frac12(\gamma-5)t\right)\; \sin\left(\frac12(\gamma+5)t\right)  \\ &amp;=-\frac{9}{(5+\epsilon)\epsilon} \sin(\epsilon t) \sin\left((5+\epsilon)t\right)\\ &amp;= A(t)\sin\left((5+\epsilon)t\right), \end{split}
+                  </me>
+                  where
+                  <me>
+                    A(t) = -\frac{9}{(5+\epsilon)\epsilon} \sin(\epsilon t).
+                  </me>
+                  We observe that
+                  <me>
+                    \lvert y(t) \rvert \le \lvert A(t) \rvert
+                  </me>
+                  for all <m>t</m>.
+                  This means that the graph of <m>y(t)</m> will be enveloped in the graphs of <m>\pm A(t)</m>, bounding the amplitude of <m>\sin\left((5+\epsilon)t\right)</m> as shown in <xref ref="fig-beats" /> for <m>\varepsilon =0.5</m>.
+                  <figure xml:id="fig-beats">
+                    <caption>The graph of <m>y(t) = 3600 e^{-at}\left( \cos(bt) + \frac{a}{b} \sin(bt)\right)- 3600 \cos(5t).</m> </caption>
+                    <image source="images/beats" width="80%"/>
+                    </figure>
+                    In music, when both waves are heard simultaneously, the sound pattern is known as <term><em>beats</em></term> and the sound system is said to behave <term><em>near resonance</em></term>.
+                  </p>
+
+                  <p>
+                    Using a graphing utility, the reader is suggested to plot <m>y(t)</m> for a smaller value of <m>\varepsilon</m> (e.g., <m>\varepsilon = 0.02</m>) and for a larger value (e.g., <m>\varepsilon = 5</m>) to observe how the motion changes when the frequency of the external force is close to the natural frequency and when it is far from it.
+                  </p>
+                </solution>
+              </example>
+
+              <p>
+                In <xref ref="example-resonance-mass-spring-4" />, we could have used <m>F(t) = 180 \sin(5t+2\epsilon t)</m> with reference to <xref ref="example-resonance-spring-mass-system-1" />.
+                The choice of the cosine function is only for convenience.
+              </p>
+            </paragraphs>
+          </subsection>
+
+
+          <subsection xml:id="subsec-RLC-circuit">
+            <title>Electrical Circuits</title>
+
+            <p>
+              In this subsection, we first study ordinary differential equations as initial value problems in electric circuits that consist of a voltage source of the electromotive force <m>e(t)</m> driving electric charges and producing a current <m>i(t)</m> (e.g., a battery for direct voltage or a generator for alternating voltage), a resistor (e.g., appliances) of resistance <m>R</m>, and an inductor of inductance <m>L</m> in series as depicted in <xref ref="fig-LRC-1" /> or <xref ref="fig-LRC-2" />.
+              We then briefly discuss the analogy between the spring-mass system and the electric circuit.
+            </p>
+
+            <sidebyside widths="40% 40%" valign="middle">
+              <figure xml:id="fig-LRC-1">
+                <caption>Direct voltage source</caption>
+                <image  width="50%">
+                  <latex-image>
+                 \begin{circuitikz}[scale=.5]
+                    \draw
+                    (0,0) to[battery2, invert,  v_&lt;=$e(t)$,i&gt;_=${}$] ++(0,4) %voltage can be replaced with V
+                    to[cute inductor, l=$L$, i&gt;_=${}$] (4,4)
+                    to[american resistor, i_=${}$, l=$R$] (8,4)
+                    to[capacitor, l_=$C$, i_=$i(t)$] (8,0) %capacitor can be replaced with C
+                    -- (0,0);
+                  \end{circuitikz}
+                  </latex-image>
+                </image>
+              </figure>
+
+              <figure xml:id="fig-LRC-2">
+                <caption>Alternating voltage source</caption>
+                <image  width="50%">
+                  <latex-image>
+                        \begin{circuitikz}[scale=.5]
+                      \draw
+                      (0,0) to[sV, invert,  l_=$e(t)$] ++(0,4)
+                        to[cute inductor, l=$L$] (4,4)
+                      to[R,  l=$R$] (8,4)
+                      to[C, l_=$C$] (8,0)
+                      -- (0,0);
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </figure>
+            </sidebyside>
+
+            <p>
+              Let <m>q(t)</m> denote the electric charge on the capacitor at time <m>t</m>.
+              According to Kirchhoff’s second law, <em>the voltage impressed on a closed loop equals the sum of the voltage drops across the components in the loop.</em> The voltage drops across a resistor, inductor and capacitor are modeled as being proportional to <m>i(t), i'(t), q(t),</m> respectively.
+              These voltage drops are modeled as follows:
+            </p>
+
+            <p>
+              <ol marker="i.">
+                <li>
+                  <p>
+                    the voltage drop across a inductor <m>= L \;i'(t),</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    the voltage drop across a resistor <m>= R \;i(t),</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    the voltage drop across a capacitor <m>= \displaystyle\frac{1}{C}\; q(t),</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+
+            <p>
+              where the constants <m>L</m>, <m>R</m>, and <m>C</m> are called the inductance, resistance, and capacitance, respectively, and these quantities are typically measured in henry (h), ohm (<m>\Omega</m>), and farad (f), respectively.
+              The corresponding units for <m>q</m>, <m>E</m>, and <m>I</m> are coulomb (C), volt (V), and ampere (A).
+            </p>
+
+            <p>
+              We recall that the current <m>i(t)</m> flowing through the capacitor is given by
+              <me>
+                i(t) = q'(t),\quad  \text{ so that }\quad  i'(t) = q''(t).
+              </me>
+              and therefore Kirchhoff's law yields
+              <men xml:id="eq-LRC">
+                Lq''(t)+R  q'(t)+ \frac{1}{C} q(t) = e(t),
+              </men>
+              which is a second-order linear differential equation in <m>q(t)</m> with constant coefficients.
+            </p>
+
+            <p>
+              For analogy, we can interchange the spring-mass system parameters in
+              <me>
+                my''(t)+ by'(t) + k y(t) = F(t)
+              </me>
+              (see <xref ref="eq-mass-spring5" />) and series <m>LRC</m> circuit parameters in <xref ref="eq-LRC" /> as follows:
+            </p>
+
+            <table>
+              <title>Parameter Analogies</title>
+
+              <tabular top ="major">
+                <row header="yes"  bottom="minor">
+                  <cell halign="center">Spring-Mass</cell>
+                  <cell halign="center"></cell>
+                  <cell halign="center">Series <m>LRC</m></cell>
+                </row>
+
+                <row class="odd">
+                  <cell halign="center"><m>m</m></cell>
+                  <cell halign="center"><m>\longleftrightarrow</m></cell>
+                  <cell halign="center"><m>L</m></cell>
+                </row>
+
+                <row class="even">
+                  <cell halign="center"><m>b</m></cell>
+                  <cell halign="center"><m>\longleftrightarrow</m></cell>
+                  <cell halign="center"><m>R</m></cell>
+                </row>
+
+                <row class="odd">
+                  <cell halign="center"><m>k</m></cell>
+                  <cell halign="center"><m>\longleftrightarrow</m></cell>
+                  <cell halign="center"><m>\displaystyle\frac{1}{C}</m></cell>
+                </row>
+
+                <row class="even" bottom="major">
+                  <cell halign="center"><m>\omega =\sqrt{k/m}</m></cell>
+                  <cell halign="center"><m>\longleftrightarrow</m></cell>
+                  <cell halign="center"><m>\omega =\sqrt{1/LC}</m></cell>
+                </row>
+              </tabular>
+            </table>
+
+            <p>
+              In addition, the three significantly different cases of the spring-mass system apply to the <m>LRC</m> circuit as follows:
+            </p>
+
+            <table>
+              <title>Parameter Analogies</title>
+
+              <tabular top ="major">
+                <row header="yes" bottom="minor">
+                  <cell halign="center">Damping Type</cell>
+                  <cell halign="center">Spring-Mass</cell>
+                  <cell halign="center">Series <m>LRC</m></cell>
+                </row>
+
+                <row class="odd">
+                  <cell halign="center"></cell>
+                  <cell halign="center"></cell>
+                  <cell halign="center"></cell>
+                </row>
+
+                <row class="even">
+                  <cell halign="center">Underdamped</cell>
+                  <cell halign="center"><m>b^2&lt; 4mk</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2&lt;\frac{4L}{C}</m></cell>
+                </row>
+
+                <row class="odd">
+                  <cell halign="center">Critically damped</cell>
+                  <cell halign="center"><m>b^2= 4mk</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2=\frac{4L}{C}</m></cell>
+                </row>
+
+                <row class="even" bottom="major">
+                  <cell halign="center">Overdamped</cell>
+                  <cell halign="center"><m>b^2&gt; 4mk</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2&gt;\frac{4L}{C}</m></cell>
+                </row>
+              </tabular>
+            </table>
+
+            <p>
+              We now consider the parallel <m>LRC</m> circuit shown in Figure <xref ref="fig-parallel-LRC" />, where a current source supplies the input current <m>i(t)</m>.
+              The diagram also shows that the current <m>i(t)</m> splits into three branch currents <m>i_1(t)</m>, <m>i_2(t)</m>, and <m>i_3(t)</m> flowing through a capacitor, resister and inductor, respectively.
+              We develop a differential equation for the impressed voltage <m>e(t)</m> across the components produced from the source current <m>i(t).</m>
+            </p>
+
+            <figure xml:id="fig-parallel-LRC">
+              <caption>Parallel <m>LRC</m> circuit</caption>
+              <image width="70%">
+                <latex-image>
+              \begin{circuitikz}[american]
+              % Current source from bottom to top
+              \draw
+              (0,0) to[I={$i(t)$}] (0,4)
+              to[short] (2.5,4); % top horizontal wire
+              \node[circle, fill=white, inner sep=1pt, label=above left: Current source] at (-0.4,1.75) {};
+              % Split point at (2,4), three parallel branches
+              \draw
+              (2,4)
+              to[short] (2.5,4)
+              to[short] (3,4) % upward for labeling if needed
+              (3,4.01) -- (3,3.5); % central node
+              \node[circle, fill=black, inner sep=1pt, label=above right:] at (3,3.5) {};
+              % Resistor branch (left)
+              \draw
+              (3.5,3.5) -- (1.5,3.5)
+              to[C=$C$, i&gt;_=${i_1(t)}$] (1.5,1)
+              -- (1.5,0.5); % back to bottom of source
+              % Capacitor branch (middle)
+              \draw
+              (3,3.5) to[R=$R$, i&gt;_=${i_2(t)}$] (3,0.5)
+              -- (3,0.5);
+              % Inductor branch (right)
+              \draw
+              (3.5,3.5) -- (4.5,3.5)
+              to[cute inductor, l=$L$, i&gt;_=${i_3(t)}$] (4.5,0.5)
+              -- (4.5,0.5);
+              % Merge point at (0,4), three parallel branches
+              \node[circle, fill=black, inner sep=1pt, label=above right:] at (3,0.5) {};
+              \draw
+              (4.5,0.5)
+              to[short] (1.5,0.5)
+              to[short] (3,0.5)
+              to[short] (3,0)
+              -- (0,0); % central node
+            \end{circuitikz}
+                </latex-image>
+              </image>
+            </figure>
+
+            <p>
+              By Kirchhoff’s second law which states that <em>the current flowing to a point in a circuit must equal the current flowing away from the point</em>, we have
+              <men xml:id="eq-LRC-parallel-1">
+                i_1(t) + i_2(t) +i_3(t) = i(t).
+              </men>
+              Since
+              <me>
+                i_1(t) = C\;e'(t), \quad i_2(t) =  \frac{e(t)}{R},  \quad \text{and } \quad i_3(t) = \frac{1}{L}\int e(t)\, dt,
+              </me>
+              <xref ref="eq-LRC-parallel-1" /> reduces to
+              <me>
+                C\;e'(t)+\frac{e(t)}{R}+\frac{1}{L}\int e(t)\, dt = i(t).
+              </me>
+              Differentiating with respect to <m>t</m> yields
+              <men xml:id="eq-LRC-parallel-2">
+                C\; e''(t)+\frac{1}{R}\,e'(t)+\frac{1}{L}\,e(t) = i'(t).
+              </men>
+              For analogy, we can interchange the spring-mass system parameters, series <m>LRC</m> circuit parameters, and parallel <m>LRC</m> circuit parameters in <xref ref="eq-LRC-parallel-2" /> as follows:
+            </p>
+
+            <table>
+              <title>Parameter analogies</title>
+
+              <tabular top="major">
+                <row header="yes" bottom="minor">
+                  <cell halign="center">Spring-Mass</cell>
+                  <cell halign="center">Series <m>LRC</m></cell>
+                  <cell halign="center">Parallel <m>LRC</m></cell>
+                  <cell halign="center"></cell>
+                </row>
+
+                <row class="odd">
+                  <cell halign="center"><m>m</m></cell>
+                  <cell halign="center"><m>L</m></cell>
+                  <cell halign="center"><m>C</m></cell>
+                  <cell halign="center"></cell>
+                </row>
+
+                <row class="even">
+                  <cell halign="center"><m>b</m></cell>
+                  <cell halign="center"><m>R</m></cell>
+                  <cell halign="center"><m>\displaystyle\frac{1}{R}</m></cell>
+                  <cell haillon="center"></cell>
+                </row>
+
+                <row class="odd">
+                  <cell halign="center"><m>k</m></cell>
+                  <cell halign="center"><m>\displaystyle\frac{1}{C}</m></cell>
+                  <cell halign="center"><m>\displaystyle\frac{1}{L}</m></cell>
+                  <cell halign="center"></cell>
+                </row>
+
+                <row class="even" bottom="major">
+                  <cell halign="center"><m>\omega =\sqrt{k/m}</m></cell>
+                  <cell halign="center"><m>\omega =\sqrt{1/LC}</m></cell>
+                  <cell halign="center"><m>\omega =\sqrt{1/LC}</m></cell>
+                  <cell halign="center"></cell>
+                </row>
+              </tabular>
+            </table>
+
+            <p>
+              In addition, the three significantly different cases of the spring-mass system apply to the <m>LRC</m> circuits as follows:
+            </p>
+
+            <table>
+              <title>Damping parameter analogies</title>
+
+              <tabular top="major">
+                <row header="yes" bottom="minor">
+                  <cell halign="center">Damping Type</cell>
+                  <cell halign="center">Spring-Mass</cell>
+                  <cell halign="center">Series <m>LRC</m></cell>
+                  <cell halign="center">Parallel <m>LRC</m></cell>
+                </row>
+
+                <row class="odd">
+                  <cell halign="center"></cell>
+                  <cell halign="center"></cell>
+                  <cell halign="center"></cell>
+                  <cell halign="center"></cell>
+                </row>
+
+                <row class="even">
+                  <cell halign="center">Underdamped</cell>
+                  <cell halign="center"><m>b^2&lt; 4mk</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2&lt;\frac{4L}{C}</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2&gt;\frac{L}{4C}</m></cell>
+                </row>
+
+                <row class="odd">
+                  <cell halign="center">Critically damped</cell>
+                  <cell halign="center"><m>b^2= 4mk</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2=\frac{4L}{C}</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2=\frac{L}{4C}</m></cell>
+                </row>
+
+                <row class="even" bottom="major">
+                  <cell halign="center">Overdamped</cell>
+                  <cell halign="center"><m>b^2&gt; 4mk</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2&gt;\frac{4L}{C}</m></cell>
+                  <cell halign="center"><m>\displaystyle R^2&lt;\frac{L}{4C}</m></cell>
+                </row>
+              </tabular>
+            </table>
+
+            <example>
+              <statement>
+                <p>
+                  Consider a series <m>LRC</m>-circuit with inductance <m>L=1\,\text{h}</m>, resistance <m>R=12\,\Omega</m>, and capacitance <m>C=\dfrac{1}{40}\,\text{f}</m>.
+                  The circuit is driven by an external voltage
+                  <me>
+                    e(t) = 10\sin(2t) \qquad t&gt;0,
+                  </me>
+                  measured in volts (V).
+                  Let <m>q(t)</m> denote the charge measured in coulombs (C) on the capacitor, and let <m>i(t)=q'(t)</m> be the current measured in amperes (A).
+                  Suppose the initial charge and current are
+                  <me>
+                    q(0)=0, \qquad q'(0)=0.
+                  </me>
+                </p>
+
+                <p>
+                  <ol marker="a.">
+                    <li>
+                      <p>
+                        Derive the differential equation satisfied by <m>q(t)</m> and solve it.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Find the <em>transient part</em> and <em>steady-state</em> solution.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  a.
+                  For a series <m>LRC</m>–circuit, Kirchhoff’s voltage law gives
+                  <me>
+                    Lq''(t) + Rq'(t) + \frac{1}{C}q(t) = e(t).
+                  </me>
+                  With <m>L=1</m>, <m>R=12</m>, <m>C=\dfrac{1}{40}</m>, and <m>e(t)=10\sin(2t)</m>, we obtain the differential equation
+                  <me>
+                    q'' + 12q' + 40q = 10\sin(2t).
+                  </me>
+                  The corresponding homogeneous equation is
+                  <me>
+                    q'' + 12q' + 40q = 0.
+                  </me>
+                  The roots of the characteristic equation
+                  <me>
+                    \lambda^2 + 12\lambda + 40 = 0
+                  </me>
+                  are
+                  <me>
+                    \frac{-12 \pm \sqrt{-16}}{2} = -6 \pm 2i.
+                  </me>
+                  Thus the general solution of the homogeneous equation is
+                  <me>
+                    q_h(t) = e^{-6t}\bigl(c_1\cos(2t) + c_2\sin(2t)\bigr)
+                  </me>
+                  where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+                </p>
+
+                <p>
+                  For a particular solution <m>q_p(t),</m> suppose that <m>A</m> and <m>B</m> are constants to be determined, so that
+                  <me>
+                    q_p(t) = A\cos(2t) + B\sin(2t),
+                  </me>
+                  is a particular solution of the nonhomogeneous equation.
+                  Then
+                  <me>
+                    \begin{split}&amp;q_p'(t) = -2A\sin(2t) + 2B\cos(2t), \text{ and } \\&amp; q_p''(t) = -4A\cos(2t) - 4B\sin(2t).
+                    \end{split}
+                  </me>
+                  Substituting into the equation <m>q''+12q'+40q=10\sin(2t)</m> yields
+                  <me>
+                    \begin{split} &amp;(-4A\cos 2t - 4B\sin 2t) + 12(-2A\sin 2t + 2B\cos 2t)\\ &amp;+ 40(A\cos 2t + B\sin 2t) \\ = &amp;\bigl(36A + 24B\bigr)\cos(2t) + \bigl(-24A + 36B\bigr)\sin(2t) = 10\sin(2t).
+                    \end{split}
+                  </me>
+                  Thus we must have
+                  <me>
+                    36A + 24B = 0, \qquad -24A + 36B = 10.
+                  </me>
+                  Solving for <m>A</m> and <m>B</m> gives
+                  <me>
+                    A= -\frac{5}{39} \mbox{ and } B = \frac{5}{26},
+                  </me>
+                  and so
+                  <me>
+                    q_p(t) = -\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t).
+                  </me>
+                </p>
+
+                <p>
+                  The general solution is
+                  <me>
+                    \begin{split} q(t) = q_h(t) + q_p(t) &amp;= e^{-6t}\bigl(c_1\cos(2t) + c_2\sin(2t)\bigr)\\ &amp; -\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t), \end{split}
+                  </me>
+                  where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+                  Using <m>q(0)=0</m> gives
+                  <me>
+                    c_1 - \frac{5}{39} = 0, \quad \mbox{ which implies }\quad c_1 = \frac{5}{39}.
+                  </me>
+                  To use <m>q'(0) = 0,</m> we first compute <m>q'(t)</m>:
+                  <me>
+                    \begin{aligned} q'(t) = &amp; e^{-6t}\Bigl[-6(c_1\cos(2t)\\ &amp;+ c_2\sin(2t)) +(-2c_1\sin(2t) + 2c_2\cos(2t))\Bigr] \\ &amp;+ \frac{10}{39}\sin(2t) + \frac{5}{13}\cos(2t).
+                    \end{aligned}
+                  </me>
+                  Then, using <m>q'(0)=0</m>, we get
+                  <me>
+                    -6c_1 + 2c_2 + \frac{5}{13}=0.
+                  </me>
+                  Since <m>c_1 = \frac{5}{39},</m> we have
+                  <me>
+                    -6\cdot\frac{5}{39} + 2c_2 + \frac{5}{13} = 0,
+                  </me>
+                  which gives
+                  <me>
+                    c_2 = \frac{5}{26}.
+                  </me>
+                  Thus, the solution for <m>q(t)</m> is
+                  <me>
+                    q(t) = e^{-6t}\!\left(\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t)\right) -\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t).
+                  </me>
+                </p>
+
+                <p>
+                  b.
+                  The <term><em>transient part</em></term> of the solution is the part that <em>decays</em> to zero as <m>t\to\infty</m> and depends on the initial conditions.
+                  Since
+                  <me>
+                    \lim\limits_{t\to\infty} e^{-6t}\!\left(\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t)\right)=0,
+                  </me>
+                  the transient part of the solution for <m>q(t)</m> is
+                  <me>
+                    e^{-6t}\!\left(\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t)\right)
+                  </me>
+                </p>
+
+                <p>
+                  The <term><em>steady-state solution</em></term> is the part of the solution <m>q(t)</m> that <em>remains</em> after the transient part has decayed to zero.
+                  Therefore the steady-state solution for <m>q(t)</m> is given by
+                  <me>
+                    \lim_{t\to\infty} q(t) = -\frac{5}{39}\cos(2t) + \frac{5}{26}\sin(2t).
+                  </me>
+                </p>
+
+                <p>
+                  c.
+                  The series <m>LRC</m>-circuit is critically damped for
+                  <me>
+                    R = 2 \sqrt{\frac{L}{C}} =  4\sqrt{10}\; \Omega.
+                  </me>
+                </p>
+              </solution>
+            </example>
+          </subsection>
+
+          <exercises xml:id="exercises-EX35"> <exercisegroup> <!-- Spring-Mass System -->
+          <title> <xref ref="subsec-spring-mass-system" />
+
+          Spring-Mass System</title>
+          <introduction>
+            <p>
+              <!-- In the exercises below, apply the method of <em>variation of parameters</em> to find particular solutions of nonhomogeneous linear equations. -->
+            </p>
+          </introduction>
+
+          <exercise xml:id="exercise-3-5-1">
+            <p>
+              An <m>8</m>-kg mass attached to the lower end of a spring that is suspended vertically from a ceiling stretches the spring <m>5</m> cm from its natural length until the mass comes to rest.
+              The mass is then pulled downward causing an additional stretch of <m>3</m> cm of the spring and then it is released.
+              Assume that there is no air resistance and use the acceleration due to gravity <m>g = 980</m> cm/s<m>^2</m>.
+              Let <m>y(t)</m> be the displacement (in centimeters) of the mass from its equilibrium position measured positive in the downward direction.
+            </p>
+
+            <p>
+              <ol marker="i.">
+                <li xml:id="item-sho-1">
+                  <p>
+                    Determine a differential equation in <m>y(t)</m> with initial conditions that describe the motion of the mass.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Solve for the initial value problem in <xref ref="item-sho-1" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Find the amplitude, period and circular frequency of the oscillatory motion.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+
+          <exercise>
+            <p>
+              Suppose a vertical spring with spring constant <m>8 \ \mathrm{N/m}</m> is suspended from a ceiling, and a <m>2 \ \mathrm{kg}</m> mass is attached to its lower end.
+              The mass slides along a vertical wall that exerts a damping force proportional to its velocity, with damping constant <m>3 \ \mathrm{Ns/m}</m>.
+              Let <m>y(t)</m> denote the displacement (in meters) of the mass from its equilibrium position, where positive values of <m>y(t)</m> correspond to positions below the equilibrium position.
+            </p>
+
+            <p>
+              <ol marker="i.">
+                <li xml:id="item-sho-2">
+                  <p>
+                    Derive a differential equation governing the motion of the system in terms of <m>y(t)</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Find the general solution of the differential equation obtained in <xref ref="item-sho-2" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Determine whether the system is underdamped, critically damped, or overdamped.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    If the system is not critically damped, find the value of the damping constant that would make the system critically damped.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+
+          <exercise>
+            <p>
+              A <m>10</m>-kg mass suspended from the lower end of a vertically hanging spring stretches the spring <m>9.8</m> centimeters.
+              At time <m>t = 0</m> when the mass is at rest in the equilibrium position, the mass-spring system is acted by the force <m>F(t) = 360\cos(8t)</m>, measured positive (in newtons) in the downward direction.
+              Suppose that time <m>t</m> is measured in seconds.
+              Let <m>y(t)</m> denote the displacement (in centimeters) of the mass from its equilibrium position, measured positive in the downward direction.
+            </p>
+
+            <p>
+              <ol marker="i.">
+                <li>
+                  <p>
+                    Determine the spring constant <m>k</m>.
+                  </p>
+                </li>
+
+                <li xml:id="item-forced-2">
+                  <p>
+                    Develop an initial value problem for <m>y(t)</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Solve the initial value problem developed in <xref ref="item-forced-2" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Using a graphing utility, plot the solution <m>y(t)</m> and determine whether the motion exhibits a <q>beat</q>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Find the maximum positive displacement of the mass from its equilibrium position.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+
+          <exercise>
+            <p>
+              A 8-pound weight attached to a spring of natural length 7 feet stretches the spring to a total length of 8.6 feet.
+              The entire system is placed in a medium that exerts a damping force numerically equal to 4 times the instantaneous velocity.
+            </p>
+
+            <p>
+              <ol marker="i.">
+                <li>
+                  <p>
+                    Write down an initial value problem describing the motion.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Determine the equation of motion if the mass is released from rest at a point <m>\tfrac{1}{2}</m> ft below the equilibrium position with a downward velocity of 1 ft/s.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Express the equation of motion in terms of a single sine function.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Find the times at which the mass passes through the equilibrium position moving downward.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Plot the equation of motion.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+
+          </exercisegroup> <exercisegroup> <!-- Electrical Circuits-->
+          <title> <xref ref="subsec-RLC-circuit" />
+
+          Electrical Circuits</title>
+          <introduction>
+            <p>
+              <!-- In the exercises below, apply the method of <em>variation of parameters</em> to find particular solutions of nonhomogeneous linear equations. -->
+            </p>
+          </introduction>
+
+          <exercise>
+            <p>
+              A series <m>LRC</m>–circuit contains an inductor with inductance <m>L=1\,\text{h}</m>, a resistor with resistance <m>R=10\,\Omega</m>, and a capacitor with capacitance <m>C=0.02\,\text{f}</m>.
+              The circuit is driven by a constant external voltage <m>e(t)=5\,\text{V}</m>.
+              Let <m>q(t)</m> denote the charge (in coulombs) on the capacitor, and let <m>i(t)=q'(t)</m> be the current (in amperes).
+              Given the initial conditions <m>q(0)=4</m> C and <m>i(0)=q'(0)=0</m> A,
+              <ol marker="i.">
+                <li>
+                  <p>
+                    determine the charge <m>q(t)</m> for <m>t&gt;0</m>; and
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    find the transient current and steady-state current.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+
+          <exercise>
+            <p>
+              Consider a series <m>LRC</m>-circuit with inductance <m>L=1\ \text{h}</m>, capacitance <m>C=16\ \text{f}</m>, resistance <m>R</m>, and no external voltage source.
+              Let <m>q(t)</m> denote the charge (in coulombs) on the capacitor at time <m>t</m> (in seconds).
+            </p>
+
+            <ol marker="i.">
+              <li>
+                <p>
+                  Find <m>q(t)</m> when <m>R=4\ \Omega</m>, <m>q(0)=5</m> C, and <m>q'(0)=0</m> C/s.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find the first time when the charge on the capacitor is equal to zero.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory behavior.
+                </p>
+              </li>
+            </ol>
+          </exercise>
+
+          <exercise>
+            <p>
+              Consider a parallel <m>LRC</m>-circuit with inductance <m>L=\frac{4}{5}\ \text{h}</m>, capacitance <m>C=\frac{1}{16}\ \text{f}</m>, resistance <m>R</m>, and a constant external current source.
+              Let <m>q(t)</m> denote the charge (in coulombs) on the capacitor at time <m>t</m> (in seconds).
+            </p>
+            <ol marker="i.">
+              <li>
+                <p>
+                  Find <m>q(t)</m> when <m>R=4\ \Omega</m>, <m>q(0)=5</m> C, and <m>q'(0)=0</m> C/s.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the first time when the charge on the capacitor is equal to zero.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the critical resistance at which the charge on the capacitor changes from oscillatory to nonoscillatory behavior.
+                </p>
+              </li>
+            </ol>
+          </exercise>
+          </exercisegroup> </exercises>
+        </section>

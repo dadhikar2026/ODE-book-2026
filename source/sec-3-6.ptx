@@ -13,16 +13,560 @@
 
   <introduction>
     <p>
-      Something about forced oscillations and resonance goes here yes.
+      We begin this section by exploring how a change of the dependent variable can be used to reduce a second order linear differential equation to a form can be solved using methods developed earlier.
+      We then examine how a change of the independent variable can be used to develop solution techniques applicable to a variety of differential equations.
     </p>
   </introduction>
 
 
-  <subsection xml:id="subsec-something-something">
-    <title>something</title>
+  <subsection xml:id="change-of-the-dependent-variable">
+    <title>Change of the Dependent Variable</title>
 
     <p>
-      soemthing
+      Let <m>u(x)</m> be a function to be chosen later and let <m>w(x)</m> be a function such that <m>y(x) = u(x) w(x)</m> is a solution of
+      <men xml:id="eq-3-6-1">
+        y''+ a_1(x) y' + a_0(x)y = f(x)
+      </men>
+      on some interval <m>I,</m> where <m>a_1, a_0, f</m> are continuous.
+      Upon differentiation, we get
+      <me>
+        \begin{split} y' &amp;= u'w+uw'\\ y''&amp;=u''w+2u'w'+uw''.
+        \end{split}
+      </me>
+      Substituting these into the differential equation, we get
+      <men xml:id="eq-3-6-2">
+        (u''+a_1u'+a_0u)w + (2u'+a_1u)w'+ uw'' = f.
+      </men>
+      Our goal is to find <m>w</m> by choosing <m>u</m> in a way that simplifies <xref ref="eq-3-6-2" />.
+      A choice of <m>u</m> can be made so that it satisfies one of the following two conditions:
+    </p>
+
+    <p>
+      <term>Condition A:</term> <m>u''+ a_1 u' + a_0u=0,</m> i.e., <m>u</m> is a solution of
+      <men xml:id="eq-3-6-3">
+        y''+ a_1(x) y' + a_0(x)y = 0.
+      </men>
+      <term>Condition B:</term> <m>2u'+a_1(x)u=0</m> and <m>a_1</m> is differentiable.
+    </p>
+
+    <p>
+      Suppose first that <m>u</m> satisfies <term>Condition A</term>.
+      Then <xref ref="eq-3-6-2" /> becomes
+      <men xml:id="eq-3-6-4">
+        (2u'+a_1u)w'+ uw'' = f,
+      </men>
+      which, being a linear equation in <m>w',</m> can be solved first for <m>w'</m> and then for <m>w.</m> Thus, we have obtained a particular solution <m>y_p(x) = u(x) w(x)</m> of <xref ref="eq-3-6-1" />.
+    </p>
+
+    <p>
+      To find the general solution of <xref ref="eq-3-6-1" />, we need one another solution <m>v(x)</m> <xref ref="eq-3-6-3" />, such that <m>u(x)</m> and <m>v(x)</m> are linearly independent.
+      Let <m>v(x) = u(x) z(x)</m> for some function <m>z(x)</m> such that <m>v</m> satisfies <xref ref="eq-3-6-3" />.
+      Running the same calculation as above with <m>z</m> in place of <m>w,</m> but with <m>f=0,</m> we get
+      <men xml:id="eq-3-6-5">
+        (2u'+a_1u)z'+ uz'' = 0,
+      </men>
+      which solves for a nonzero function <m>z(x).</m> Consequently, the general solution to <xref ref="eq-3-6-1" /> is given by
+      <me>
+        \begin{split} y &amp;= c_1u(x)+ c_2v(x) + u(x)w(x)\\ &amp;=c_1u(x)+ c_2u(x) z(x) + u(x)w(x)\\ &amp;= u(x) (c_1 + c_2 z(x) + w(x)), \end{split}
+      </me>
+      where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+    </p>
+
+    <p>
+      Let us work through an example to show how the above procedure works.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find the general solution of
+          <me>
+            (x-1)y''-x y'+y =1
+          </me>
+          using the fact that <m>u(x) = e^x</m> is a solution to the associate homogeneous equation.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          First, we note that <m>a_1(x) = -\frac{x}{x-1}</m> and <m>f(x) = \frac{1}{x-1}</m>.
+          We compute <m>w</m> and <m>z</m> satisfying <xref ref="eq-3-6-4" /> and <xref ref="eq-3-6-5" />, respectively.
+          Using <xref ref="eq-3-6-4" />, we get
+          <me>
+            \left(2e^x-\frac{x}{x-1} e^x\right)w' + e^x w'' = \frac{1}{x-1}
+          </me>
+          which gives
+          <me>
+            w''+\left(1-\frac{1}{x-1}\right)w' = \frac{e^{-x}}{x-1}.
+          </me>
+          The integrating factor is
+          <me>
+            \frac{e^x}{x-1}.
+          </me>
+          Then
+          <me>
+            \left(\frac{e^x}{x-1} w'\right)'= \frac{1}{(x-1)^2},
+          </me>
+          which yields
+          <me>
+            \frac{e^x}{x-1} w' = -\frac{1}{x-1}+A,
+          </me>
+          so that
+          <me>
+            w' = -e^{-x} +A (x-1)e^{-x}.
+          </me>
+          Integrating yields
+          <me>
+            w = e^{-x} -Axe^{-x} + B,
+          </me>
+          where <m>A</m> and <m>B</m> are arbitrary constants.
+          We simply take <m>w(x) = e^{-x},</m> so that <m>y_p(x) = u(x)w(x) = e^x e^{-x} = 1.</m> Moreover, it is clear that <m>z(x)=-Axe^{-x} + B</m> solves <xref ref="eq-3-6-5" /> for all <m>A</m> and <m>B</m>.
+          Since we only need one nonzero function <m>z(x),</m> we can simply take <m>z(x) = xe^{-x}.</m> Therefore <m>v(x) = e^x z(x) = x.</m> Hence the general solution of the given nonhomogeneous equation is
+          <me>
+            y = c_1e^x + c_2 x +1,
+          </me>
+          where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      Suppose now that <m>u</m> satisfies <term>Condition B</term>.
+      Then <m>2u'+a_1(x)u=0</m> and so
+      <me>
+        u' = -\frac{a_1}{2}u\quad \text{ so that }\quad  u(x) = e^{-\frac{1}{2}\int a_1(x) \,dx}.
+      </me>
+      Moreover,
+      <men xml:id="eq-3-6-6">
+        2u''= - a_1 u' - a'_1 u =\left(\frac{a_1^2}{2}-a'_1\right)u.
+      </men>
+      Then
+      <me>
+        \begin{split} u''+a_1 u'+a_0 u &amp;=\left(\frac{a_1^2}{4}-\frac{1}{2}a'_1\right)u - \frac{a_1^2}{2}u +a_0u\\ &amp;=\left(a_0-\frac{a_1^2}{4}-\frac{a'_1}{2}\right)u.
+        \end{split}
+      </me>
+      Substituting these into <xref ref="eq-3-6-2" /> gives
+      <men xml:id="eq-3-6-7">
+        w''+\left(a_0-\frac{a_1^2}{4}-\frac{a'_1}{2}\right)w = g(x),
+      </men>
+      where <m>g(x) = \frac{f(x)}{u(x)}.</m>
+    </p>
+
+    <p>
+      The differential equation <xref ref="eq-3-6-7" /> is said to be the <term><em>normal form</em></term> of <xref ref="eq-3-6-1" />.
+      The coefficient of <m>w</m> in <xref ref="eq-3-6-7" /> is called the <term><em>invariant</em></term> of <xref ref="eq-3-6-1" /> and is denoted by <m>I_y(x).</m> That is,
+      <me>
+        I_y(x) = a_0(x)-\frac{a_1^2(x)}{4}-\frac{a'_1(x)}{2}.
+      </me>
+      We observe that <xref ref="eq-3-6-7" /> turns into a differential equation with constant coefficients if and only if <m>I_y(x)</m> is constant.
+      Consequently, <xref ref="eq-3-6-7" /> can be readily solved in this case.
+      When <m>I_w(x)</m> is a constant function,
+      <me>
+        y = u(x) w(x)= w(x)\;e^{-\frac{1}{2}\int a_1(x)\, dx}
+      </me>
+      is the general solution of <xref ref="eq-3-6-1" /> if and only if <m>w</m> is the general solution of <xref ref="eq-3-6-7" />.
+    </p>
+
+    <p>
+      We discuss some examples below to show how the above procedure works.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find the general solution of the differential equation
+          <me>
+            y''+4y'+4y = \sin x
+          </me>
+          by using its normal form.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Comparing the differential equation with <xref ref="eq-3-6-1" />, we have <m>a_0= a_1=4.</m> So the invariant of the differential equation is
+          <me>
+            I_y(x) = 4-\frac{4^2}{4}-0 = 0.
+          </me>
+          With the change of variable <m>y = u(x) w(x)</m> with <m>u(x) = e^{-\frac{1}{2}\int 4\,dx} = e^{-2x},</m> the normal form of the equation is
+          <me>
+            w''(x) = \frac{\sin x}{u(x)}=  e^{2x}\sin x.
+          </me>
+          Upon integration, we get
+          <me>
+            w(x) = c_1+c_2 x-\frac{1}{25} e^{2 x} (4 \cos x-3 \sin x).
+          </me>
+          Therefore the general solution is
+          <me>
+            y = e^{-2x}w(x) = c_1e^{-2x}+c_2 x e^{-2x}-\frac{1}{25} (4 \cos x-3 \sin x),
+          </me>
+          which is the same result we would have obtained by the method of undermined coefficients.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      The above procedure is particularly helpful for solving linear equations with variable coefficients, as the following examples illustrate.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find the general solution of
+          <me>
+            x^2y'' -2xy' + (k^2x^2+2)y = x^3\sin x,
+          </me>
+          where <m>k\ne 1</m> is a positive constant, by using its normal form.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Comparing the given equation with <xref ref="eq-3-6-1" />, we have
+          <me>
+            a_0(x) = k^2+\frac{2}{x^2} \quad \text{ and } a_1(x) = - \frac{2}{x}.
+          </me>
+          So the invariant of the differential equation is
+          <me>
+            I_y(x) = a_0(x)-\frac{a_1^2(x)}{4}-\frac{a'_1(x)}{2} =k^2+\frac{2}{x^2}-\frac{1}{x^2}- \frac{1}{x^2} = k^2.
+          </me>
+          Since
+          <me>
+            u(x) = e^{-\frac{1}{2}\int \left(-\frac{2}{x}\right)\, dx} = e^{\ln\lvert x\rvert} = \lvert x\rvert,
+          </me>
+          we take <m>u(x) = x.</m> With the change of variable <m>y = u(x) w(x),</m> the differential equation is transformed into its normal form
+          <me>
+            w'' + k^2 w = \frac{x\sin x}{x}  = \sin x,
+          </me>
+          whose general solution, by the method of undetermined coefficients or variation of parameters, is
+          <me>
+            w=c_1 \cos (k x)+c_2 \sin (k x)+\frac{\sin x}{k^2-1},
+          </me>
+          where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+          Hence the general solution of the given differential equation is
+          <me>
+            y = x w(x) = c_1 x \cos (k x)+c_2 x \sin (k x)+\frac{x\sin x}{k^2-1},
+          </me>
+          where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+
+  <subsection xml:id="subsec-change-of-the-independent-variable">
+    <title>Change of the Independent Variable</title>
+
+    <p>
+      By changing the independent variable in the equation
+      <men xml:id="eq-3-6-2-8">
+        y''+ a_1(x) y' + a_0(x)y = f(x)
+      </men>
+      from <m>x</m> to <m>t</m> via a one-to-one function <m>t= h(x)</m> which is differentiable with the differentiable inverse <m>x= h^{-1}(t),</m> we may be able to transform <xref ref="eq-3-6-2-8" /> into a differential equation which may be solved using the methods that are previously discussed.
+      To see how such a change of the independent variable works, we note
+      <me>
+        \frac{dt}{dx} = h'(x)
+      </me>
+      and compute, by the chain rule, the derivatives
+      <men xml:id="eq-3-6-2-9">
+        \frac{dy}{dx} = \frac{dy}{dt}\frac{dt}{dx} = \frac{dy}{dt}h'(x)
+      </men>
+      and
+      <men xml:id="eq-3-6-2-10">
+        \frac{d^2y}{dx^2} = \frac{d}{dt}\left(\frac{dy}{dt}h'(x)\right)\frac{dt}{dx}   =\frac{d^2y}{dt^2} \left(h'(x)\right)^2+ h''(x) \frac{dy}{dt}.
+      </men>
+      Substituting these into <xref ref="eq-3-6-2-8" /> gives
+      <men xml:id="eq-3-6-2-11">
+        \frac{d^2y}{dt^2} \left(h'(x)\right)^2+ \left(h''(x) +a_1(x) h'(x)\right)\frac{dy}{dt}+ a_0(x)y= f(x),
+      </men>
+      where <m>x = h^{-1}(t).</m> The substitution <m>t = h(x)</m> is beneficial only if it transforms <xref ref="eq-3-6-2-11" /> into an equation solvable by a known method.
+    </p>
+
+    <p>
+      To illustrate the effectiveness of changing the independent variable, we present two examples.
+      The first involves a second order <term>Cauchy-Euler</term> equation, and the second is the <term>Legendre equation of order <m>n.</m></term> Here, the term <em>order</em> refers to something different from the order of the differential equation itself.
+      This distinction in the use of the same terminology is important to keep in mind.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find the general solution of the Cauchy-Euler equation
+          <men xml:id="eq-3-6-2-12">
+            x^2 y''+3xy'+y = x
+          </men>
+          by solving the transformed equation that is obtained from the change of variable <m>t= \ln x.</m>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Using <m>t = h(x) = \ln x</m> in <xref ref="eq-3-6-2-9" /> and <xref ref="eq-3-6-2-10" />, we find
+          <me>
+            \frac{dy}{dx} = \frac{dy}{dt}h'(x) =\frac{1}{x}\frac{dy}{dt}
+          </me>
+          and
+          <me>
+            \frac{d^2y}{dx^2}  =\frac{d^2y}{dt^2} \left(h'(x)\right)^2+ h''(x) \frac{dy}{dt} = \frac{1}{x^2} \left(\frac{d^2y}{dt^2}-\frac{dy}{dt} \right).
+          </me>
+          Substituting these into <xref ref="eq-3-6-2-12" /> gives
+          <me>
+            \frac{d^2y}{dt^2}+2\frac{dy}{dt}+  y= e^t.
+          </me>
+          The general solution of this equation is
+          <me>
+            y= c_1 e^{-t} + c_2 t e^{-t} + \frac{1}{4} e^t,
+          </me>
+          where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+          Since <m>t=\ln x,</m> it follows that the general solution of <xref ref="eq-3-6-2-12" /> is
+          <me>
+            y= \frac{c_1}{x} + \frac{c_2 e^x}{x} + \frac{x}{4},
+          </me>
+          where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+        </p>
+      </solution>
+    </example>
+
+    <example>
+      <title>Legendre Equation</title>
+
+      <statement>
+        <p>
+          Transform the Legendre equation
+          <!-- (1-x^2)y''-2xy'+n(n+1)y = 0, -->
+          <men xml:id="eq-3-6-2-13">
+            y''+ (\cot x) \;y' +n(n+1)y=0
+          </men>
+          of order <m>n</m> (a real number) using the change of variable <m>t = \cos x.</m>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Using <m>t = h(x) = \cos x</m> in <xref ref="eq-3-6-2-9" /> and <xref ref="eq-3-6-2-10" />, we find
+          <me>
+            \frac{dy}{dx} = \frac{dy}{dt}h'(x) =-\sin x\frac{dy}{dt}
+          </me>
+          and
+          <me>
+            \frac{d^2y}{dx^2}  =\left(h'(x)\right)^2\frac{d^2y}{dt^2} + h''(x) \frac{dy}{dt} = \sin^2x \frac{d^2y}{dt^2} -\cos x\frac{dy}{dt} .
+          </me>
+          Substituting these into <xref ref="eq-3-6-2-13" /> gives
+          <me>
+            \sin^2 x\frac{d^2y}{dt^2}-\cos x\frac{dy}{dt} +\cot x (-\sin x)\frac{dy}{dt}+  n (n+1)y= 0,
+          </me>
+          which simplifies to
+          <me>
+            \sin^2 x\frac{d^2y}{dt^2}-2\cos x\frac{dy}{dt} +n (n+1)y= 0.
+          </me>
+          Using <m>t= \cos x</m> gives the standard form of the Legendre equation
+          <men xml:id="eq-3-6-2-140">
+            (1-t^2)\frac{d^2y}{dt^2}- 2t\frac{dy}{dt}+ n(n+1)y = 0.
+          </men>
+        </p>
+      </solution>
+    </example>
+
+    <remark>
+      <p>
+        <ol marker="i.">
+          <li>
+            <p>
+              Since the invariant
+              <me>
+                I_y(t) =\frac{n(n+1)}{1-t^2} - \frac{1}{4}\left(\frac{-2t}{1-t^2}\right)^2 - \frac{1}{2}\left(\frac{-2t}{1-t^2}\right) =\frac{n(n+1)}{1-t^2}+\frac{1}{(1-t^2)^2}
+              </me>
+              of <xref ref="eq-3-6-2-12" /> is not a constant, the transformed equation in <m>w</m> by the change of dependent variable <m>y(t) = u(t)w(t)</m> with
+              <me>
+                u(t) = e^{ -\frac{1}{2}\int \left(\frac{-2t}{1-t^2}\right)\, dt}
+              </me>
+              does not have constant coefficients.
+              Likewise, the invariant <m>I_y(x)</m> of <xref ref="eq-3-6-2-13" /> for the change of variable <m>y(x) = u(x) w(x)</m> with
+              <me>
+                u(x) = e^{ -\frac{1}{2}\int \cot x\, dx}
+              </me>
+              is
+              <me>
+                I_y(x) =n(n+1) - \frac{1}{4}\cot^2x + \frac{1}{2}\csc x\cot x
+              </me>
+              which is not a constant, and therefore the transformed equation in <m>w</m> does not have constant coefficients.
+              A standard approach for solving the Legendre equation is the method of power series solutions, which will be discussed in <xref ref="sec-4-1" />.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The Legendre equation <xref ref="eq-3-6-2-13" /> lies in an important class known as <term>Sturm-Liouville problems</term>, which are parameter dependent problems of the form
+              <men xml:id="eq-Sturm-Liouville">
+                \big( a_1(x)\, y'\big)'+ \big( \lambda\, w(x) - a_0(x) \big) y = 0,
+              </men>
+              <m>\lambda</m> being a parameter (called an eigenvalue) and <m>p, q, r</m> known functions of <m>x.</m> In fact, <xref ref="eq-3-6-2-13" /> can be written as
+              <me>
+                \big((1-x^2)y'\big)'+n(n+1)y=0,
+              </me>
+              which is of the form <xref ref="eq-Sturm-Liouville" /> with <m>a_1(x)= 1-x^2,</m> <m>w(x) =1,</m> <m>a_0(x)= 0,</m> and <m>\lambda = n(n+1).</m> A detailed discussion of Sturm-Liouville problems, however, lies beyond the scope of this book.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </remark>
+
+    <p>
+      We now discuss a useful change of dependent variable for the equation
+      <men xml:id="eq-3-6-2-80">
+        y''+ a_1(x) y' + a_0(x)y = f(x)
+      </men>
+      given by
+      <me>
+        t = h(x) = \int\sqrt{a_0(x)}\, dx.
+      </me>
+      It is clear that
+      <me>
+        h'(x) = \sqrt{a_0(x)} \quad \text{ and }\quad h''(x) = \frac{a'_0(x)}{2\sqrt{a_0(x)}}.
+      </me>
+      Using this change of variable in <xref ref="eq-3-6-2-11" />, we get
+      <me>
+        a_0(x)\frac{d^2y}{dt^2}+\left(\frac{a'_0(x)+2 a_0(x) a_1(x)}{2\sqrt{a_0(x)}}\right)\frac{dy}{dt} + a_0(x) y=0,
+      </me>
+      where <m>x= h^{-1}(t).</m> The above equation can be rewritten as
+      <men xml:id="eq-3-6-2-14">
+        \frac{d^2y}{dt^2}+\left(\frac{a'_0(x)+2 a_0(x) a_1(x)}{2{\big(a_0(x)\big)}^{3/2}}\right)\frac{dy}{dt}  +  y=0.
+      </men>
+      The equation <xref ref="eq-3-6-2-14" /> can be readily solved when
+      <me>
+        \frac{a'_0(x)+2 a_0(x) a_1(x)}{2\big(a_0(x)\big)^{3/2}} =\text{ a constant}.
+      </me>
+      The arguments made above make sense only for those <m>a_0(x)</m> in <xref ref="eq-3-6-2-80" /> for which these considerations are meaningful.
     </p>
   </subsection>
+
+  <exercises xml:id="exercises-Ex36">
+  <exercise>
+    <p>
+      Find the general solution of each differential equation below.
+      A solution to the associated homogeneous equation is provided.
+    </p>
+
+    <ol marker="i.">
+      <li>
+        <p>
+          <m>x^2 y''+x y'-4 y=x; \quad u(x) = x^2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>x^3 y''+x^2 y'-4 x y=1+x; \quad u(x) = x^2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>x^4 y''+x^3 y'-4 x^2 y=1;\quad u(x) = x^2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(x^2-1)y''-x y'+y=1; \quad u(x) = x</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(\tan^2x)y''-(2 \tan x) y'+ \left(\sec ^2x+1\right)y=\sin^2x \, \tan x; \quad u(x) = \sin x</m>
+        </p>
+      </li>
+    </ol>
+  </exercise>
+
+  <exercise>
+    <p>
+      Using the techniques discussed in the this section, find the general solution of each differential equation below.
+    </p>
+
+    <ol marker="i.">
+      <li>
+        <p>
+          <m>y''+6y'+9y = e^{-3x}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y''+6y'+9y = xe^{-3x}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y''+6 y'+9 y=x^2 e^{-3x}</m>
+        </p>
+      </li>
+    </ol>
+  </exercise>
+
+  <exercise>
+    <p>
+      Find the general solution of
+      <me>
+        xy''-2(x-1)y'+2(x-1)y =e^x
+      </me>
+      by using its normal form.
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Find the normal form of each differential equation below.
+    </p>
+
+    <ol marker="i.">
+      <li>
+        <p>
+          <m>y''-2xy'+2ny=0,</m> <m>n</m> being a constant
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>xy''+(1-c)y'+y=0,</m> <m>c</m> being a constant
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y''+xy'+(x^2-n^2)y=0,</m> <m>n</m> being a constant
+        </p>
+      </li>
+    </ol>
+  </exercise>
+
+  <exercise>
+    <p>
+    Find the general solution of each equation below by using the change of variable <m>t= h(x) = \int \sqrt{a_0(x)}\, dx</m> that results in <xref ref="eq-3-6-2-11" />.
+  </p>
+  <ol marker="i.">
+    <li>
+      <p>
+        <m>y''+ (\tan x) y'+(\cos^2x)y =0</m>
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <m>x^4y''+x^2(2x-3)y'+2u =0</m>
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <m>2xy''+(5x^2-2)y'+2x^3y=0</m>
+      </p>
+    </li>
+  </ol>
+</exercise>
+
+
+</exercises>
 </section>
