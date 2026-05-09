@@ -98,7 +98,7 @@
         \lim\limits_{\varepsilon\to 0} \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, dt =1.
       </men>
       Furthermore, if <m>g</m> is continuous from right at <m>t=a</m>, then <men xml:id="eq-5-4">
-      \lim\limits_{\varepsilon\to 0} \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, g(t) =
+      \lim\limits_{\varepsilon\to 0} \int_{-\infty}^\infty d_{a, \varepsilon}(t) \, g(t)\, dt =
       \lim\limits_{\varepsilon\to 0}\frac{1}{\varepsilon} \int_a^{a+\varepsilon} g(t) \, dt =
       \lim\limits_{\varepsilon\to 0} g(a+\varepsilon) = g(a)
       </men>
