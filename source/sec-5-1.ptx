@@ -4,7 +4,7 @@
   <title>The Laplace Transform</title>
 
   <introduction>
-    <p> Consider aa forced oscillator discussed in  <xref ref="sec-3-5" /> and described by  <men xml:id="eq-5-1">
+    <p> Consider a forced oscillator discussed in  <xref ref="sec-3-5" /> and described by  <men xml:id="eq-5-1">
         y''(t) + \omega^2 y(t) = f(t), \quad y(0) = 0,\; y'(0)= 0,
       </men> where <m>
       f(t)</m> is an impulsive force. At <m>t =0,</m> the mass is at rest at its equilibrium
