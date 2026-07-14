@@ -20,67 +20,23 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Elementary Ordinary Differential Equations">
-<meta property="book:author" content="Dhruba R. Adhikari">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:title" content="Elementary Ordinary Differential Equations: Methods and Applications">
+<meta property="og:title" content="Elementary Ordinary Differential Equations: Methods and Applications">
+<meta property="book:title" content="Elementary Ordinary Differential Equations: Methods and Applications">
+<meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.44"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -99,38 +55,67 @@ eBookConfig.readings = null;
 eBookConfig.activities = null;
 eBookConfig.downloadsEnabled = false;
 eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
+eBookConfig.enableScratchAC = true;
+eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.11';
+eBookConfig.runestone_version = '8.1.13';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.8b6d53d5a91823a0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.2901d6466316ff22.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Elementary Ordinary Differential Equations</span> <span class="subtitle">Methods and Applications</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="my-great-book.html"><span class="title">Elementary Ordinary Differential Equations</span> <span class="subtitle">Methods and Applications</span></a></div>
 <p class="byline">Dhruba R. Adhikari</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-6.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button type="button" id="ptx-calculator-toggle" class="ptx-calculator-toggle button" title="Calculator"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calculator</span></button><dialog id="ptx-calculator-container" class="ptx-dialog ptx-calculator-container" aria-label="Calculator"><div id="ptx-geogebra-calculator" class="ptx-geogebra-calculator"></div>
+<script id="ptx-geogebra-calculator-params">
+let ggbParams = {
+    "appName": "graphing"
+};
+</script></dialog><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-5-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-5-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button onclick="runestoneComponents.popupScratchAC()" class="activecode-toggle button" title="Scratch ActiveCode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf097;</span><span class="name">Scratch ActiveCode</span></button></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle}
 \newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
@@ -145,16 +130,16 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction and Preliminaries</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-2.html" class="internal"><span class="codenumber">2</span> <span class="title">First Order Differential Equations</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Second and Higher Order Linear Differential Equations and Applications</span></a></div>
-<ul class="structural toc-item-list">
+<div class="toc-title-box"><a href="ch-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Second and Higher ODEs and Applications</span></a></div>
+<ul id="ptx-toc-group-ch-3" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-3-1" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-1.html#linear-independence" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Linear Independence</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-1.html#Wronskian" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Wronskian</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-1.html#exercises-3-1" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Exercises</span></a></div></li>
@@ -162,7 +147,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Second Order Homogeneous Linear Differential Equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-3-2" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-2.html#subsec-existence-of-fundamental-sets-of-solutions" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Existence of Fundamental Sets of Solutions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-2.html#subsec-construction-fundamental-solutions" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Constructing Fundamental Sets of Solutions</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-2.html#exercises-second-order" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
@@ -170,7 +155,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Second Order Nonhomogeneous Linear Differential Equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-3-3" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-variation-parameters" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Variation of Parameters</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-undetermined-coefficients" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Method of Undetermined Coefficients</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-3.html#subsec-method-operators" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Method of Operator Factorization</span></a></div></li>
@@ -179,7 +164,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Higher Order Linear Differential Equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-3-4" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsection-3-4-1" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Homogeneous Equations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-4.html#subsection-3-4-2" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Nonhomogeneous Equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-4.html#exercises-EX34" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
@@ -187,7 +172,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Applications</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-3-5" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#subsec-spring-mass-system" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Spring-Mass System</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-5.html#subsec-RLC-circuit" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Electrical Circuits</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-5.html#exercises-EX35" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Exercises</span></a></div></li>
@@ -195,7 +180,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-3-6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Change of Variables</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-3-6" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#change-of-the-dependent-variable" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Change of the Dependent Variable</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3-6.html#subsec-change-of-the-independent-variable" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Change of the Independent Variable</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3-6.html#exercises-Ex36" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Exercises</span></a></div></li>
@@ -205,14 +190,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Method of Series Solutions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Power Series Solutions</span></a></div></li></ul>
+<ul id="ptx-toc-group-ch-4" class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Power Series Solutions</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-5.html" class="internal"><span class="codenumber">5</span> <span class="title">The Laplace Transform and Applications</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-5">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Laplace Transform</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-5-1" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-1.html#subsec-5-1-4" class="internal"><span class="codenumber">5.1.1</span> <span class="title">When does the Laplace transform exist?</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-1.html#subsec-5-1-5" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Inverse Laplace transform</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-1.html#exercises-5-1" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
@@ -220,14 +205,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Applications to Initial Value Problems</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-5-2" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-2.html#subsec-Laplace-Transform-of-Derivatives" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Laplace Transforms of Derivatives</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-2.html#exercises-5-2" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-5-3.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Derivatives and Integrals of Laplace Transforms</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-5-3" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-3.html#subsec-Derivatives-Laplace-Transforms" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Derivatives of Laplace Transforms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-3.html#subsec-Integrals-Laplace-Transforms" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Integrals of Laplace Transforms</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-3.html#exercises-" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Exercises</span></a></div></li>
@@ -235,14 +220,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-5-4.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Laplace Transforms of Periodic Functions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-5-4" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-4.html#subsec-5-4-1" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Periodic Functions</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-4.html#exercises-sec-5-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-5-5.html" class="internal"><span class="codenumber">5.5</span> <span class="title">A Convolution Theorem and its Applications</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-5-5" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-5.html#theorem-convolution" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Convolution Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-5.html#subsec-application-convolution" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Application of the Convolution Theorem to Initial Value Problems</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-5-5.html#exercises-convolution-theorem" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Exercises</span></a></div></li>
@@ -250,7 +235,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-5-6.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Systems of Linear Differential Equations</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list active" id="ptx-toc-group-sec-5-6">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-laplace-transform-method" class="internal"><span class="codenumber">5.6.1</span> <span class="title">The Laplace Transform Method</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-radioactive" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Radioactive Decay Series</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-5-6.html#subsec-Mixing-Tanks" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Mixing Tanks</span></a></div></li>
@@ -262,42 +247,55 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-7.html" class="internal"><span class="codenumber">6</span> <span class="title">Appendix</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-7-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Differentiation Under the Integral</span></a></div></li>
+<div class="toc-title-box"><a href="ch-6.html" class="internal"><span class="codenumber">6</span> <span class="title">Supplementary Topics</span></a></div>
+<ul id="ptx-toc-group-ch-6" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Differentiation Under the Integral</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-7-2.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Partial Fraction Decomposition</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Linear Factors <span class="process-math">\(x-a\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Repeated Linear Factors <span class="process-math">\((x-a)^{n}\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Irreducible Quadratic Factors <span class="process-math">\(x^{2}+bx+c\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-6" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Repeated Irreducible Quadratic Factors</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-7" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Mixed Factors</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-7-2.html#sec-7-2-8" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Exercises</span></a></div></li>
+<div class="toc-title-box"><a href="sec-6-2.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Partial Fraction Decomposition</span></a></div>
+<ul id="ptx-toc-group-sec-6-2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-6-2.html#sec-6-2-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Linear Factors <span class="process-math">\(x-a\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-6-2.html#sec-6-2-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Repeated Linear Factors <span class="process-math">\((x-a)^{n}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-6-2.html#sec-6-2-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Irreducible Quadratic Factors <span class="process-math">\(x^{2}+bx+c\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-6-2.html#sec-6-2-6" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Repeated Irreducible Quadratic Factors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-6-2.html#sec-6-2-7" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Mixed Factors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-6-2.html#sec-6-2-8" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-7-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Formulas</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-3.html#laplace-formulas" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Common Laplace Transforms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-7-3.html#sec-7-3-3" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Derivatives</span></a></div></li>
+<div class="toc-title-box"><a href="sec-6-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Formulas</span></a></div>
+<ul id="ptx-toc-group-sec-6-3" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-6-3.html#laplace-formulas" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Common Laplace Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-6-3.html#sec-6-3-3" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Derivatives</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ws-3-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Worksheets</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ws-3-1" class="structural toc-item-list">
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">WS-1</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">WS-2</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Appendices</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D</span> <span class="title">List of Theorems</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-5-6"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-5-6">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Systems of Linear Differential Equations</span>
-</h2>
-<section class="introduction" id="sec-5-6-2"><div class="para" id="sec-5-6-2-1">This chapter focuses on the applications of the Laplace transform to solve systems of linear ordinary differential equations. Using the Laplace transform, we convert a system of differential equations into a system of algebraic equations involving Laplace transforms of the unknown functions (dependent variables), solve this algebraic system for the Laplace transforms , and then apply the inverse Laplace transform to recover the functions from their Laplace transforms. These functions then become solutions of the differential equations in the system.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h1>
+<section class="introduction" id="sec-5-6-2">
+<div class="para" id="sec-5-6-2-1">This chapter focuses on the applications of the Laplace transform to solve systems of linear ordinary differential equations. Using the Laplace transform, we convert a system of differential equations into a system of algebraic equations involving Laplace transforms of the unknown functions (dependent variables), solve this algebraic system for the Laplace transforms , and then apply the inverse Laplace transform to recover the functions from their Laplace transforms. These functions then become solutions of the differential equations in the system.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-5-6-2-2">
 <div class="para">To fix the ideas, we consider below a first-order linear system of ordinary differential equations in the three variables <span class="process-math">\(x(t), y(t), z(t)\text{:}\)</span>
@@ -315,32 +313,34 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="disc" id="sec-5-6-2-2-3">
 <li id="sec-5-6-2-2-3-1">
 <div class="para" id="sec-5-6-2-2-3-1-1">
-<span class="process-math">\(x(t), y(t), z(t)\)</span> are unknown functions of time <span class="process-math">\(t\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(x(t), y(t), z(t)\)</span> are unknown functions of time <span class="process-math">\(t\text{,}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-5-6-2-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-5-6-2-2-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-5-6-2-2-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="sec-5-6-2-2-3-2">
-<div class="para" id="sec-5-6-2-2-3-2-1">the coefficients <span class="process-math">\(a_{ij}\)</span> are fixed real numbers, and<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-5-6-2-2-3-2-1">the coefficients <span class="process-math">\(a_{ij}\)</span> are fixed real numbers, and<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-5-6-2-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-5-6-2-2-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-5-6-2-2-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="sec-5-6-2-2-3-3">
 <div class="para" id="sec-5-6-2-2-3-3-1">
-<span class="process-math">\(f_i(t)\)</span> are given functions of <span class="process-math">\(t\text{,}\)</span> possibly zero.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(f_i(t)\)</span> are given functions of <span class="process-math">\(t\text{,}\)</span> possibly zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-5-6-2-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-5-6-2-2-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-5-6-2-2-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-5-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-5-6-2-3">The system <a href="sec-5-6.html#linear-system" class="xref" data-knowl="./knowl/xref/linear-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.1">(5.6.1)</a> is said to be <dfn class="terminology"><em class="emphasis">decoupled</em></dfn> if <span class="process-math">\(a_{ij}= 0\)</span> for all <span class="process-math">\(i, j\)</span> with <span class="process-math">\(i\ne
+<div class="para" id="sec-5-6-2-3">The system <a href="sec-5-6.html#linear-system" class="internal" title="Equation 5.6.1">(5.6.1)</a> is said to be <dfn class="terminology"><em class="emphasis">decoupled</em></dfn> if <span class="process-math">\(a_{ij}= 0\)</span> for all <span class="process-math">\(i, j\)</span> with <span class="process-math">\(i\ne
 j\)</span> and <dfn class="terminology"><em class="emphasis">coupled</em></dfn> if for each <span class="process-math">\(i = 1, 2, 3\)</span> there is <span class="process-math">\(j =
-1, 2,3\)</span> with <span class="process-math">\(i\ne j\)</span> and <span class="process-math">\(a_{ij}\ne 0.\)</span> The linear system <a href="sec-5-6.html#linear-system" class="xref" data-knowl="./knowl/xref/linear-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.1">(5.6.1)</a> is said to be <dfn class="terminology"><em class="emphasis">partially decoupled</em></dfn> if it has a structure that allows solving one or more of the equations in isolation, and then using those solutions to simplify or solve the remaining equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-5-6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="subsec-laplace-transform-method"><h3 class="heading hide-type">
+1, 2,3\)</span> with <span class="process-math">\(i\ne j\)</span> and <span class="process-math">\(a_{ij}\ne 0.\)</span> The linear system <a href="sec-5-6.html#linear-system" class="internal" title="Equation 5.6.1">(5.6.1)</a> is said to be <dfn class="terminology"><em class="emphasis">partially decoupled</em></dfn> if it has a structure that allows solving one or more of the equations in isolation, and then using those solutions to simplify or solve the remaining equations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-5-6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsec-laplace-transform-method">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Laplace Transform Method</span>
-</h3>
+</h2>
 <div class="para logical" id="subsec-laplace-transform-method-2">
-<div class="para">To solve the linear system <a href="sec-5-6.html#linear-system" class="xref" data-knowl="./knowl/xref/linear-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.1">(5.6.1)</a> with the initial conditions</div>
+<div class="para">To solve the linear system <a href="sec-5-6.html#linear-system" class="internal" title="Equation 5.6.1">(5.6.1)</a> with the initial conditions</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linear-system.html" id="subsec-laplace-transform-method-2-2">
 \begin{equation*}
 x(0)
@@ -349,7 +349,7 @@ z(0) = z_0,
 \end{equation*}
 </div>
 <div class="para">we apply the Laplace transform <span class="process-math">\(\mathcal{L}\)</span> to each equation. The system is then transformed into</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laplace-transform-method-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-laplace-transform-method-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-laplace-transform-method-3">
 <div class="displaymath process-math" id="subsec-laplace-transform-method-3-1">
@@ -364,15 +364,18 @@ sZ(s) - z_0 = a_{31}X(s) + a_{32}Y(s) + a_{33}Z(s) + F_3(s),
 <div class="para">where <span class="process-math">\(X(s), Y(s), Z(s)\)</span> are the Laplace transforms of <span class="process-math">\(x(t), y(t), z(t)\text{,}\)</span> and <span class="process-math">\(F_i(s)
 = \mathcal{L}\{f_i(t)\}, i =1, 2, 3\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laplace-transform-method-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-laplace-transform-method-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-laplace-transform-method-4">We solve the above system for <span class="process-math">\(X(s), Y(s), Z(s)\)</span> using algebraic techniques, such as Cramer’s rule, Gaussian elimination, etc. and then apply the inverse Laplace transform to obtain solutions <span class="process-math">\(x(t), y(t), z(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-laplace-transform-method-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-laplace-transform-method-4">We solve the above system for <span class="process-math">\(X(s), Y(s), Z(s)\)</span> using algebraic techniques, such as Cramer’s rule, Gaussian elimination, etc. and then apply the inverse Laplace transform to obtain solutions <span class="process-math">\(x(t), y(t), z(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-laplace-transform-method-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-laplace-transform-method-5">We proceed to discuss four main examples; namely, radioactive decay series, mixing solutions, coupled spring-mass systems, and electrical circuits.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laplace-transform-method-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-laplace-transform-method-5">We proceed to discuss four main examples; namely, radioactive decay series, mixing solutions, coupled spring-mass systems, and electrical circuits.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-laplace-transform-method-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 5.6.1: The Laplace Transform Method"><a href="#subsec-laplace-transform-method" title="Copy heading and permalink for Subsection 5.6.1: The Laplace Transform Method" aria-label="Copy heading and permalink for Subsection 5.6.1: The Laplace Transform Method">🔗</a></div></section><section class="subsection" id="subsec-radioactive"><h3 class="heading hide-type">
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.6.1: The Laplace Transform Method"><a tabindex="-1" href="#subsec-laplace-transform-method" title="Copy heading and permalink for Subsection 5.6.1: The Laplace Transform Method" aria-label="Copy heading and permalink for Subsection 5.6.1: The Laplace Transform Method">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-radioactive">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radioactive Decay Series</span>
-</h3>
+</h2>
 <div class="para logical" id="subsec-radioactive-2">
 <div class="para">Consider a three-stage radioactive decay series of a radioactive element represented in a schematic diagram below:</div>
 <div class="displaymath process-math" id="subsec-radioactive-2-1">
@@ -381,30 +384,30 @@ X \longrightarrow Y \longrightarrow Z
 \end{equation*}
 </div>
 <div class="para">where</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-radioactive-3">
 <ul class="disc" id="subsec-radioactive-3-1">
 <li id="subsec-radioactive-3-1-1">
 <div class="para" id="subsec-radioactive-3-1-1-1">
-<span class="process-math">\(X\)</span> is a parent radioactive isotope,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(X\)</span> is a parent radioactive isotope,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#subsec-radioactive-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-radioactive-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="subsec-radioactive-3-1-2">
 <div class="para" id="subsec-radioactive-3-1-2-1">
-<span class="process-math">\(Y\)</span> is a radioactive daughter element, and<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(Y\)</span> is a radioactive daughter element, and<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#subsec-radioactive-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-radioactive-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="subsec-radioactive-3-1-3">
 <div class="para" id="subsec-radioactive-3-1-3-1">
-<span class="process-math">\(Z\)</span> is a stable (non-decaying) end element.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(Z\)</span> is a stable (non-decaying) end element.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#subsec-radioactive-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-radioactive-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-radioactive-4">
 <div class="para">Let</div>
@@ -435,17 +438,17 @@ b &amp;=\ \text{the decay constant of } Y.
 x(0) = x_0, \quad y(0) = 0, \quad z(0) = 0.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-radioactive-5">
-<div class="para">The linear system <a href="sec-5-6.html#decay-system" class="xref" data-knowl="./knowl/xref/decay-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.2">(5.6.2)</a> describes how the parent isotope <span class="process-math">\(X\)</span> decays into <span class="process-math">\(Y\text{,}\)</span> which in turn decays into a stable isotope <span class="process-math">\(Z\text{.}\)</span> We can adopt this scheme to model real-world decay chains such as</div>
+<div class="para">The linear system <a href="sec-5-6.html#decay-system" class="internal" title="Equation 5.6.2">(5.6.2)</a> describes how the parent isotope <span class="process-math">\(X\)</span> decays into <span class="process-math">\(Y\text{,}\)</span> which in turn decays into a stable isotope <span class="process-math">\(Z\text{.}\)</span> We can adopt this scheme to model real-world decay chains such as</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/decay-system.html ./knowl/xref/decay-system.html ./knowl/xref/decay-system.html" id="subsec-radioactive-5-5">
 \begin{equation*}
 \text{Uranium-238} \rightarrow
 \text{Thorium-234}\rightarrow\cdots \rightarrow \text{Lead-206}.
 \end{equation*}
 </div>
-<div class="para">The linear system <a href="sec-5-6.html#decay-system" class="xref" data-knowl="./knowl/xref/decay-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.2">(5.6.2)</a> is an example of a <dfn class="terminology"><em class="emphasis">partially decoupled</em></dfn> system. We observe that the solutions of the differential equation in the system <a href="sec-5-6.html#decay-system" class="xref" data-knowl="./knowl/xref/decay-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.2">(5.6.2)</a> can be obtained in a sequence of steps: first solve the first equation for <span class="process-math">\(x(t)\text{,}\)</span> substitute this <span class="process-math">\(x(t)\)</span> into the second equation to find <span class="process-math">\(y(t)\)</span> using the integrating factor method, and then substitute <span class="process-math">\(y(t)\)</span> into the third equation to solve for <span class="process-math">\(z(t)\text{.}\)</span> Details are omitted, but the solutions can be found to be</div>
+<div class="para">The linear system <a href="sec-5-6.html#decay-system" class="internal" title="Equation 5.6.2">(5.6.2)</a> is an example of a <dfn class="terminology"><em class="emphasis">partially decoupled</em></dfn> system. We observe that the solutions of the differential equation in the system <a href="sec-5-6.html#decay-system" class="internal" title="Equation 5.6.2">(5.6.2)</a> can be obtained in a sequence of steps: first solve the first equation for <span class="process-math">\(x(t)\text{,}\)</span> substitute this <span class="process-math">\(x(t)\)</span> into the second equation to find <span class="process-math">\(y(t)\)</span> using the integrating factor method, and then substitute <span class="process-math">\(y(t)\)</span> into the third equation to solve for <span class="process-math">\(z(t)\text{.}\)</span> Details are omitted, but the solutions can be found to be</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/decay-system.html ./knowl/xref/decay-system.html ./knowl/xref/decay-system.html" id="subsec-radioactive-5-14">
 \begin{equation*}
 \begin{cases}
@@ -456,7 +459,7 @@ z(t) &amp;= x_0 \left[ 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right].
 \end{equation*}
 </div>
 <div class="para">Let us obtain these solutions by using the Laplace transform method.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-radioactive-6">
 <div class="para">
@@ -481,7 +484,7 @@ X(s)
 \end{equation*}
 </div>
 <div class="para">Similarly,</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-radioactive-7">
 <div class="displaymath process-math" id="subsec-radioactive-7-1">
@@ -515,7 +518,7 @@ x_0}{(s + a)(s + b)}.
 Z(s) = \frac{b}{s} Y(s) = \frac{a b x_0}{s(s + a)(s + b)}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-radioactive-8">
 <div class="para">
@@ -561,7 +564,7 @@ z(t) \amp= \int_0^t b y(\tau) \, d\tau\\
 \end{equation*}
 </div>
 <div class="para">Thus, the solutions are given by</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-radioactive-9">
 <div class="displaymath process-math" id="subsec-radioactive-9-1">
@@ -574,15 +577,20 @@ z(t) &amp;= x_0 \left[\ds 1 + \frac{a e^{-b t} - b e^{-a t}}{b - a} \right],
 \end{equation*}
 </div>
 <div class="para">as expected.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-radioactive-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-radioactive-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 5.6.2: Radioactive Decay Series"><a href="#subsec-radioactive" title="Copy heading and permalink for Subsection 5.6.2: Radioactive Decay Series" aria-label="Copy heading and permalink for Subsection 5.6.2: Radioactive Decay Series">🔗</a></div></section><section class="subsection" id="subsec-Mixing-Tanks"><h3 class="heading hide-type">
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.6.2: Radioactive Decay Series"><a tabindex="-1" href="#subsec-radioactive" title="Copy heading and permalink for Subsection 5.6.2: Radioactive Decay Series" aria-label="Copy heading and permalink for Subsection 5.6.2: Radioactive Decay Series">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-Mixing-Tanks">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mixing Tanks</span>
-</h3>
-<div class="para" id="subsec-Mixing-Tanks-2">Consider two connected mixing tanks as shown in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Mixing-Tanks-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h2>
+<div class="para" id="subsec-Mixing-Tanks-2">Consider two connected mixing tanks as shown in the figure below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Mixing-Tanks-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="mixing-tanks"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/mixing-tanks-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Two connected mixing tanks.<div class="autopermalink" data-description="Figure 5.6.1"><a href="#mixing-tanks" title="Copy heading and permalink for Figure 5.6.1" aria-label="Copy heading and permalink for Figure 5.6.1">🔗</a></div></figcaption></figure><div class="para logical" id="subsec-Mixing-Tanks-4">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Two connected mixing tanks.<div class="autopermalink" aria-hidden="true" data-description="Figure 5.6.1"><a tabindex="-1" href="#mixing-tanks" title="Copy heading and permalink for Figure 5.6.1" aria-label="Copy heading and permalink for Figure 5.6.1">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="subsec-Mixing-Tanks-4">
 <div class="displaymath process-math" id="subsec-Mixing-Tanks-4-1">
 \begin{equation*}
 \displaystyle\begin{cases}
@@ -595,7 +603,7 @@ c+\frac{k_2y(t)}{V_2+t(k_1-k_2-r_{\text{out}})}-\frac{k_1x(t)}{V_1
 \end{equation*}
 </div>
 <div class="para">When <span class="process-math">\(r_{\text{in}} = k_1-k_2 = r_{\text{out}},\)</span> the system becomes</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Mixing-Tanks-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Mixing-Tanks-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Mixing-Tanks-5">
 <div class="displaymath process-math" id="subsec-Mixing-Tanks-5-1">
@@ -607,15 +615,20 @@ c+\frac{k_2y(t)}{V_2+t(k_1-k_2-r_{\text{out}})}-\frac{k_1x(t)}{V_1
 \end{cases}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Mixing-Tanks-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Mixing-Tanks-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 5.6.3: Mixing Tanks"><a href="#subsec-Mixing-Tanks" title="Copy heading and permalink for Subsection 5.6.3: Mixing Tanks" aria-label="Copy heading and permalink for Subsection 5.6.3: Mixing Tanks">🔗</a></div></section><section class="subsection" id="subsec-Coupled-Spring-Mass-Systems"><h3 class="heading hide-type">
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.6.3: Mixing Tanks"><a tabindex="-1" href="#subsec-Mixing-Tanks" title="Copy heading and permalink for Subsection 5.6.3: Mixing Tanks" aria-label="Copy heading and permalink for Subsection 5.6.3: Mixing Tanks">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-Coupled-Spring-Mass-Systems">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Coupled Spring-Mass Systems</span>
-</h3>
-<div class="para" id="subsec-Coupled-Spring-Mass-Systems-2">Suppose that two masses <span class="process-math">\(m_1\)</span> and <span class="process-math">\(m_2\)</span> are connected to two springs <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> hanging vertically from a rigid support to form a coupled spring-mass system as shown in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h2>
+<div class="para" id="subsec-Coupled-Spring-Mass-Systems-2">Suppose that two masses <span class="process-math">\(m_1\)</span> and <span class="process-math">\(m_2\)</span> are connected to two springs <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> hanging vertically from a rigid support to form a coupled spring-mass system as shown in the figure below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-coupled-mass-spring"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/fig-coupled-mass-spring-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A coupled mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.<div class="autopermalink" data-description="Figure 5.6.2"><a href="#fig-coupled-mass-spring" title="Copy heading and permalink for Figure 5.6.2" aria-label="Copy heading and permalink for Figure 5.6.2">🔗</a></div></figcaption></figure><div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-4">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A coupled mass-spring system showing unstretched, equilibrium, motion, and coordinate-axis.<div class="autopermalink" aria-hidden="true" data-description="Figure 5.6.2"><a tabindex="-1" href="#fig-coupled-mass-spring" title="Copy heading and permalink for Figure 5.6.2" aria-label="Copy heading and permalink for Figure 5.6.2">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-4">
 <div class="para">Let <span class="process-math">\(k_1\)</span> and <span class="process-math">\(k_2\)</span> be the constants of proportionality in Hooke’s law for the springs <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> respectively. When both masses <span class="process-math">\(m_1\)</span> and <span class="process-math">\(m_2\)</span> are in equilibrium, we have</div>
 <div class="displaymath process-math" id="spring-mass-0">
 \begin{equation}
@@ -632,9 +645,9 @@ m_2g &amp;=k_2s_2.
 \end{equation}
 </div>
 <div class="para">which reflects the intuition that the presence of the spring <span class="process-math">\(B\)</span> could be thought of considering the mass <span class="process-math">\(m_1+m_2\)</span> in place of <span class="process-math">\(m_1\)</span> and removing the spring <span class="process-math">\(B\)</span> entirely. We recall that the stretch <span class="process-math">\(s_1\)</span> of the spring <span class="process-math">\(A\)</span> depends on both masses <span class="process-math">\(m_1\)</span> and <span class="process-math">\(m_2\text{,}\)</span> while the stretch <span class="process-math">\(s_2\)</span> of the spring <span class="process-math">\(B\)</span> depends only on the mass <span class="process-math">\(m_2\)</span> when the spring constants are computed using the gravitational force.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-Coupled-Spring-Mass-Systems-5">Let <span class="process-math">\(x_1(t)\)</span> and <span class="process-math">\(x_2(t)\)</span> denote the vertical displacements of the masses from their equilibrium positions at time <span class="process-math">\(t\text{.}\)</span> We take the positive direction of the displacements to be vertically downward. When the masses are in motion, the spring <span class="process-math">\(B\)</span> is subject to both a stretch and a compression, so that its net stretch of the spring <span class="process-math">\(B\)</span> is given by <span class="process-math">\(s_2+(x_2(t)-x_1(t))\)</span> when the stretch of the spring <span class="process-math">\(A\)</span> is <span class="process-math">\(s_1+x_1(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-Coupled-Spring-Mass-Systems-5">Let <span class="process-math">\(x_1(t)\)</span> and <span class="process-math">\(x_2(t)\)</span> denote the vertical displacements of the masses from their equilibrium positions at time <span class="process-math">\(t\text{.}\)</span> We take the positive direction of the displacements to be vertically downward. When the masses are in motion, the spring <span class="process-math">\(B\)</span> is subject to both a stretch and a compression, so that its net stretch of the spring <span class="process-math">\(B\)</span> is given by <span class="process-math">\(s_2+(x_2(t)-x_1(t))\)</span> when the stretch of the spring <span class="process-math">\(A\)</span> is <span class="process-math">\(s_1+x_1(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-6">
 <div class="para">The restoring force of the spring <span class="process-math">\(A\)</span> acting on the mass <span class="process-math">\(m_1\)</span> at time <span class="process-math">\(t\)</span> is <span class="process-math">\(-k_1 (s_1+x_1(t))\text{,}\)</span> and the restoring force of the spring <span class="process-math">\(B\)</span> acting on the mass <span class="process-math">\(m_2\)</span> at time <span class="process-math">\(t\)</span> is <span class="process-math">\(-k_2(s_2+x_2(t)-x_1(t))\text{.}\)</span> In addition to the restoring force of the spring <span class="process-math">\(A\text{,}\)</span> the mass <span class="process-math">\(m_1\)</span> also experiences the force of <span class="process-math">\(k_2(s_2+x_2(t)-
@@ -656,7 +669,7 @@ m_2 x''_2 &amp;= m_2g-k_2 (s_2+x_2-x_1)-b_2x'_2+F_2(t)\\
 \end{split}
 \end{equation*}
 </div>
-<div class="para">Using <a href="sec-5-6.html#spring-mass-0" class="xref" data-knowl="./knowl/xref/spring-mass-0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.3">(5.6.3)</a>, we obtain</div>
+<div class="para">Using <a href="sec-5-6.html#spring-mass-0" class="internal" title="Equation 5.6.3">(5.6.3)</a>, we obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spring-mass-0.html" id="spring-mass-2">
 \begin{equation}
 \begin{cases}
@@ -667,15 +680,17 @@ m_2 x''_2+b_2x'_2 + k_2 x_2- k_2 x_1 =F_2(t).
 </div>
 <div class="para">The above system of second-order coupled linear differential equations describes the motion of the two masses in the coupled spring-mass system, which, together with the initial conditions <span class="process-math">\(x_1(t_0) = a,
 x'_1(t_0) = b\text{,}\)</span> <span class="process-math">\(x_2(t_0) = c, x'_2(t_0) = d,\)</span> forms an initial value problem.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-Coupled-Spring-Mass-Systems-7">In the next example, we solve the initial value problem <a href="sec-5-6.html#spring-mass-2" class="xref" data-knowl="./knowl/xref/spring-mass-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.5">(5.6.5)</a> for <span class="process-math">\(m_1=m_2=1,
+<div class="para" id="subsec-Coupled-Spring-Mass-Systems-7">In the next example, we solve the initial value problem <a href="sec-5-6.html#spring-mass-2" class="internal" title="Equation 5.6.5">(5.6.5)</a> for <span class="process-math">\(m_1=m_2=1,
 k_1=3, k_2=2\text{,}\)</span> <span class="process-math">\(b_1=b_2=0\text{,}\)</span> <span class="process-math">\(F_1(t)=F_2(t)=0\text{,}\)</span> and <span class="process-math">\(x_1(0)=0, x'_1(0)=-1,
-x_2(0)=0, x'_2(0)=1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+x_2(0)=0, x'_2(0)=1.\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="subsec-Coupled-Spring-Mass-Systems-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="subsec-Coupled-Spring-Mass-Systems-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-8-1">
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-8-1">
 <div class="para">Solve the second-order coupled system of linear differential equations with initial conditions</div>
 <div class="displaymath process-math" id="spring-mass-3">
 \begin{equation}
@@ -687,9 +702,9 @@ x_2(0) = 0, \quad x_2'(0) = 1.
 \end{cases}\tag{5.6.6}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-Coupled-Spring-Mass-Systems-8-2">Taking the Laplace transform yields<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-Coupled-Spring-Mass-Systems-8-2">Taking the Laplace transform yields<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-8-3">
 <div class="displaymath process-math" id="subsec-Coupled-Spring-Mass-Systems-8-3-1">
@@ -710,7 +725,7 @@ s^2 X_2(s) - s x_2(0) - x_2'(0) = 2 X_1(s) - 2 X_2(s).
 \end{equation*}
 </div>
 <div class="para">Solving for <span class="process-math">\(X_1(s)\)</span> and <span class="process-math">\(X_2(s)\)</span> gives</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-8-4">
 <div class="displaymath process-math" id="subsec-Coupled-Spring-Mass-Systems-8-4-1">
@@ -720,7 +735,7 @@ X_2(s) = \frac{s^2 + 3}{(s^2 + 1)(s^2 + 6)}.
 \end{equation*}
 </div>
 <div class="para">Partial fraction decomposition of <span class="process-math">\(X_1(s)\)</span> and <span class="process-math">\(X_2(s)\)</span> are</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Coupled-Spring-Mass-Systems-8-5">
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spring-mass-3.html" id="subsec-Coupled-Spring-Mass-Systems-8-5-1">
@@ -738,43 +753,52 @@ x_2(t) &amp;= \frac{2}{5} \sin t + \frac{3}{5 \sqrt{6}} \sin(\sqrt{6} t),
 \end{cases}
 \end{equation*}
 </div>
-<div class="para">which render the solutions of the given initial value problem <a href="sec-5-6.html#spring-mass-3" class="xref" data-knowl="./knowl/xref/spring-mass-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.6">(5.6.6)</a>.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Coupled-Spring-Mass-Systems-8-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">which render the solutions of the given initial value problem <a href="sec-5-6.html#spring-mass-3" class="internal" title="Equation 5.6.6">(5.6.6)</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-8-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-coupled-spring-mass"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
-<img src="external/images/spring_mass.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig-coupled-spring-mass-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-coupled-spring-mass-2-description"><div class="para" id="fig-coupled-spring-mass-2-1-1">The graph of <span class="process-math">\(x_1(t)\)</span> is shown in blue, and the graph of <span class="process-math">\(x_2(t)\)</span> is shown in red.<div class="autopermalink" data-description="Paragraph"><a href="#fig-coupled-spring-mass-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+<img src="external/images/spring_mass.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig-coupled-spring-mass-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-coupled-spring-mass-2-description">
+<div class="para" id="fig-coupled-spring-mass-2-1-1">The graph of <span class="process-math">\(x_1(t)\)</span> is shown in blue, and the graph of <span class="process-math">\(x_2(t)\)</span> is shown in red.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fig-coupled-spring-mass-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of the solutions <span class="process-math">\(x_1(t)\)</span> and <span class="process-math">\(x_2(t)\)</span><div class="autopermalink" data-description="Figure 5.6.4"><a href="#fig-coupled-spring-mass" title="Copy heading and permalink for Figure 5.6.4" aria-label="Copy heading and permalink for Figure 5.6.4">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 5.6.3"><a href="#subsec-Coupled-Spring-Mass-Systems-8" title="Copy heading and permalink for Example 5.6.3" aria-label="Copy heading and permalink for Example 5.6.3">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 5.6.4: Coupled Spring-Mass Systems"><a href="#subsec-Coupled-Spring-Mass-Systems" title="Copy heading and permalink for Subsection 5.6.4: Coupled Spring-Mass Systems" aria-label="Copy heading and permalink for Subsection 5.6.4: Coupled Spring-Mass Systems">🔗</a></div></section><section class="subsection" id="subsec-Electrical-Network-Systems"><h3 class="heading hide-type">
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of the solutions <span class="process-math">\(x_1(t)\)</span> and <span class="process-math">\(x_2(t)\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.6.4"><a tabindex="-1" href="#fig-coupled-spring-mass" title="Copy heading and permalink for Figure 5.6.4" aria-label="Copy heading and permalink for Figure 5.6.4">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Example 5.6.3"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems-8" title="Copy heading and permalink for Example 5.6.3" aria-label="Copy heading and permalink for Example 5.6.3">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 5.6.4: Coupled Spring-Mass Systems"><a tabindex="-1" href="#subsec-Coupled-Spring-Mass-Systems" title="Copy heading and permalink for Subsection 5.6.4: Coupled Spring-Mass Systems" aria-label="Copy heading and permalink for Subsection 5.6.4: Coupled Spring-Mass Systems">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-Electrical-Network-Systems">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Electrical Network Systems</span>
-</h3>
-<div class="para" id="subsec-Electrical-Network-Systems-2">We discussed series and parallel <span class="process-math">\(LRC\)</span> circuits in <a href="ch-3.html" class="internal" title="Chapter 3: Second and Higher Order Linear Differential Equations and Applications">Chapter 3</a>. In <a href="sec-5-6.html#fig-lrc-circuit" class="xref" data-knowl="./knowl/xref/fig-lrc-circuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.6.5">Figure 5.6.5</a> below, we have an <span class="process-math">\(LRC\)</span> circuit with a voltage source <span class="process-math">\(e(t)\text{.}\)</span> We develop a system of linear differential equations to find the charge <span class="process-math">\(q_1(t)\)</span> on the capacitor and currents <span class="process-math">\(i(t)\)</span> and <span class="process-math">\(i_2(t)\)</span> flowing through the resistor and inductor, respectively. Let <span class="process-math">\(i_1(t)\)</span> be the current flowing through the capacitor.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h2>
+<div class="para" id="subsec-Electrical-Network-Systems-2">We discussed series and parallel <span class="process-math">\(LRC\)</span> circuits in <a href="ch-3.html" class="internal" title="Chapter 3: Second and Higher Order Linear Differential Equations and Applications">Chapter 3</a>. In <a href="sec-5-6.html#fig-lrc-circuit" class="internal" title="Figure 5.6.5">Figure 5.6.5</a> below, we have an <span class="process-math">\(LRC\)</span> circuit with a voltage source <span class="process-math">\(e(t)\text{.}\)</span> We develop a system of linear differential equations to find the charge <span class="process-math">\(q_1(t)\)</span> on the capacitor and currents <span class="process-math">\(i(t)\)</span> and <span class="process-math">\(i_2(t)\)</span> flowing through the resistor and inductor, respectively. Let <span class="process-math">\(i_1(t)\)</span> be the current flowing through the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-lrc-circuit"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig-lrc-circuit-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An LRC circuit with a voltage source.<div class="autopermalink" data-description="Figure 5.6.5"><a href="#fig-lrc-circuit" title="Copy heading and permalink for Figure 5.6.5" aria-label="Copy heading and permalink for Figure 5.6.5">🔗</a></div></figcaption></figure><div class="para" id="subsec-Electrical-Network-Systems-4">We observe that the circuit contains three distinct closed loops:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An LRC circuit with a voltage source.<div class="autopermalink" aria-hidden="true" data-description="Figure 5.6.5"><a tabindex="-1" href="#fig-lrc-circuit" title="Copy heading and permalink for Figure 5.6.5" aria-label="Copy heading and permalink for Figure 5.6.5">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="subsec-Electrical-Network-Systems-4">We observe that the circuit contains three distinct closed loops:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Electrical-Network-Systems-5">
 <ul class="disc" id="subsec-Electrical-Network-Systems-5-1">
 <li id="subsec-Electrical-Network-Systems-5-1-1">
 <div class="para" id="subsec-Electrical-Network-Systems-5-1-1-1">
-<dfn class="terminology">Loop 1</dfn>: consisting of the battery, resistor, and capacitor;<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<dfn class="terminology">Loop 1</dfn>: consisting of the battery, resistor, and capacitor;<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#subsec-Electrical-Network-Systems-5-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-5-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="subsec-Electrical-Network-Systems-5-1-2">
 <div class="para" id="subsec-Electrical-Network-Systems-5-1-2-1">
-<dfn class="terminology">Loop 2</dfn>: consisting of the battery, resistor, and inductor; and<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<dfn class="terminology">Loop 2</dfn>: consisting of the battery, resistor, and inductor; and<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#subsec-Electrical-Network-Systems-5-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-5-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="subsec-Electrical-Network-Systems-5-1-3">
 <div class="para" id="subsec-Electrical-Network-Systems-5-1-3-1">
-<dfn class="terminology">Loop 3</dfn>: formed by the capacitor and inductor alone.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-5-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<dfn class="terminology">Loop 3</dfn>: formed by the capacitor and inductor alone.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-5-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#subsec-Electrical-Network-Systems-5-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-5-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Electrical-Network-Systems-6">
 <div class="para">The system of corresponding equations for the loops are:</div>
@@ -788,7 +812,7 @@ x_2(t) &amp;= \frac{2}{5} \sin t + \frac{3}{5 \sqrt{6}} \sin(\sqrt{6} t),
 \end{equation*}
 </div>
 <div class="para">We observe that each equation in the system can be obtained from the remaining two. For example, the equation for Loop 2 can be obtained by adding the equations for Loop 1 and Loop 3. For the discussion that follows, we omit the equation for Loop 2.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Electrical-Network-Systems-7">
 <div class="para">Furthermore, by Kirchhoff’s second law, the current split at the junction A is given by</div>
@@ -816,36 +840,39 @@ A)}
 \end{cases}\tag{5.6.7}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-Electrical-Network-Systems-8">
-<div class="para">We now proceed to solve the system <a href="sec-5-6.html#LRC-system" class="xref" data-knowl="./knowl/xref/LRC-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.7">(5.6.7)</a>. Differentiating the third equation in <a href="sec-5-6.html#LRC-system" class="xref" data-knowl="./knowl/xref/LRC-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.7">(5.6.7)</a> with respect to <span class="process-math">\(t\)</span> yields</div>
+<div class="para">We now proceed to solve the system <a href="sec-5-6.html#LRC-system" class="internal" title="Equation 5.6.7">(5.6.7)</a>. Differentiating the third equation in <a href="sec-5-6.html#LRC-system" class="internal" title="Equation 5.6.7">(5.6.7)</a> with respect to <span class="process-math">\(t\)</span> yields</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system-1.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html" id="LRC-system-1">
 \begin{equation}
 i'(t) = q''_1(t) + i'_2(t).\tag{5.6.8}
 \end{equation}
 </div>
-<div class="para">Solving for <span class="process-math">\(i'_2(t)\)</span> from the second equation in <a href="sec-5-6.html#LRC-system" class="xref" data-knowl="./knowl/xref/LRC-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.7">(5.6.7)</a> and substituting it into <a href="sec-5-6.html#LRC-system-1" class="xref" data-knowl="./knowl/xref/LRC-system-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.8">(5.6.8)</a> gives</div>
+<div class="para">Solving for <span class="process-math">\(i'_2(t)\)</span> from the second equation in <a href="sec-5-6.html#LRC-system" class="internal" title="Equation 5.6.7">(5.6.7)</a> and substituting it into <a href="sec-5-6.html#LRC-system-1" class="internal" title="Equation 5.6.8">(5.6.8)</a> gives</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system-1.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html" id="subsec-Electrical-Network-Systems-8-8">
 \begin{equation*}
 i'(t) = q''_1(t) + \frac{1}{LC}q_1(t).
 \end{equation*}
 </div>
-<div class="para">Substituting this expression for <span class="process-math">\(i'(t)\)</span> into the equation obtained by differentiating the first equation in <a href="sec-5-6.html#LRC-system" class="xref" data-knowl="./knowl/xref/LRC-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.7">(5.6.7)</a> with respect to <span class="process-math">\(t\text{,}\)</span> we get</div>
+<div class="para">Substituting this expression for <span class="process-math">\(i'(t)\)</span> into the equation obtained by differentiating the first equation in <a href="sec-5-6.html#LRC-system" class="internal" title="Equation 5.6.7">(5.6.7)</a> with respect to <span class="process-math">\(t\text{,}\)</span> we get</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system-1.html ./knowl/xref/LRC-system.html ./knowl/xref/LRC-system.html" id="LRC-system-2">
 \begin{equation}
 LRC q''_1(t) +Lq'_1(t)+ Rq_1(t) = LCe'(t),\tag{5.6.9}
 \end{equation}
 </div>
-<div class="para">which can be solved for <span class="process-math">\(q_1(t).\)</span> Once <span class="process-math">\(q_1(t)\)</span> is determined, we find <span class="process-math">\(i_1(t)\)</span> by using <span class="process-math">\(i_1(t)= q_1'(t).\)</span> We then find <span class="process-math">\(i(t)\)</span> from the first equation in <a href="sec-5-6.html#LRC-system" class="xref" data-knowl="./knowl/xref/LRC-system.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.7">(5.6.7)</a> by using <span class="process-math">\(q_1(t)\)</span> there. Finally, we find <span class="process-math">\(i_2(t)
+<div class="para">which can be solved for <span class="process-math">\(q_1(t).\)</span> Once <span class="process-math">\(q_1(t)\)</span> is determined, we find <span class="process-math">\(i_1(t)\)</span> by using <span class="process-math">\(i_1(t)= q_1'(t).\)</span> We then find <span class="process-math">\(i(t)\)</span> from the first equation in <a href="sec-5-6.html#LRC-system" class="internal" title="Equation 5.6.7">(5.6.7)</a> by using <span class="process-math">\(q_1(t)\)</span> there. Finally, we find <span class="process-math">\(i_2(t)
 = i(t) - i_1(t).\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Electrical-Network-Systems-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-Electrical-Network-Systems-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 5.6.5: Electrical Network Systems"><a href="#subsec-Electrical-Network-Systems" title="Copy heading and permalink for Subsection 5.6.5: Electrical Network Systems" aria-label="Copy heading and permalink for Subsection 5.6.5: Electrical Network Systems">🔗</a></div></section><section class="exercises" id="exercises-linear-systems"><h3 class="heading hide-type">
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.6.5: Electrical Network Systems"><a tabindex="-1" href="#subsec-Electrical-Network-Systems" title="Copy heading and permalink for Subsection 5.6.5: Electrical Network Systems" aria-label="Copy heading and permalink for Subsection 5.6.5: Electrical Network Systems">🔗</a></div>
+</section>
+<section class="exercises" id="exercises-linear-systems">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="exercises-linear-systems-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="exercises-linear-systems-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="exercises-linear-systems-1-1">
 <div class="para">Solve the initial value problem</div>
 <div class="displaymath process-math" id="exercises-linear-systems-1-1-1">
@@ -859,11 +886,15 @@ x_2(0) = 0, \quad x_2'(0) = 1.
 \end{equation*}
 </div>
 <div class="para">by using the Laplace transform.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-linear-systems-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-linear-systems-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 5.6.6.1"><a href="#exercises-linear-systems-1" title="Copy heading and permalink for Exercise 5.6.6.1" aria-label="Copy heading and permalink for Exercise 5.6.6.1">🔗</a></div></article><div class="autopermalink" data-description="Exercises 5.6.6"><a href="#exercises-linear-systems" title="Copy heading and permalink for Exercises 5.6.6" aria-label="Copy heading and permalink for Exercises 5.6.6">🔗</a></div></section><div class="autopermalink" data-description="Section 5.6: Systems of Linear Differential Equations"><a href="#sec-5-6" title="Copy heading and permalink for Section 5.6: Systems of Linear Differential Equations" aria-label="Copy heading and permalink for Section 5.6: Systems of Linear Differential Equations">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.6.1"><a tabindex="-1" href="#exercises-linear-systems-1" title="Copy heading and permalink for Exercise 5.6.6.1" aria-label="Copy heading and permalink for Exercise 5.6.6.1">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 5.6.6"><a tabindex="-1" href="#exercises-linear-systems" title="Copy heading and permalink for Exercises 5.6.6" aria-label="Copy heading and permalink for Exercises 5.6.6">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 5.6: Systems of Linear Differential Equations"><a tabindex="-1" href="#sec-5-6" title="Copy heading and permalink for Section 5.6: Systems of Linear Differential Equations" aria-label="Copy heading and permalink for Section 5.6: Systems of Linear Differential Equations">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-5-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-5-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
