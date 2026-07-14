@@ -13,7 +13,7 @@
       nature is commonly modeled by using an idealized mathematical object, called the <term>
         <em>Dirac delta</em> <idx>Dirac delta function</idx>
       </term> <q>function</q> denoted by <m>\delta (t-a),</m> which is
-      characterized by the following properties: 
+      characterized by the following properties:
       <ol marker="i.">
         <li>
           <p>
@@ -154,7 +154,7 @@
       <title>(Laplace transform)</title>
 <idx>Laplace transform</idx>
       <statement>
-        <p> Let <m>f:[0, \infty)\to\mathbb R</m> be a function. The <term>Laplace transform</term> 
+        <p> Let <m>f:[0, \infty)\to\mathbb R</m> be a function. The <term>Laplace transform</term>
           of <m>f</m> is a function <m>F(s)</m>, denoted commonly by <m>\mathcal {L}\{f(t)\}</m>,
           defined by <me>
             F(s):=\int_0^\infty f(t)\, e^{-st} \, dt
@@ -168,7 +168,7 @@
       (usually involving frequency when <m>s</m> is a complex number). This action of the
       transformation is depicted in the figure below. </p>
 
-    <!-- <figure>
+    <figure>
       <caption>The Laplace transform <m>\mathcal {L}</m> as an operator mapping <m>f(t)</m> to <m>
         F(s)</m>.</caption>
       <image width="90%">
@@ -178,14 +178,14 @@
           \node at (4,1.5) {$\mathcal{L}$};
           \node at (1.9,1.75) {$f(t)$};
           \node at (6.1,1.75) {$F(s)$};
-          \draw[-&gt;] (0.8,1.5) - (3,1.5);
-          \draw[-&gt;] (5,1.5) - (7.2,1.5);
+          \draw[-&gt;] (0.8,1.5) -- (3,1.5);
+          \draw[-&gt;] (5,1.5) --(7.2,1.5);
           \end{tikzpicture}
         </latex-image>
       </image>
-    </figure>  -->
+    </figure>
 
-    <image width="60%">
+    <!-- <image width="60%">
       <caption>The Laplace transform <m>\mathcal {L}</m> as an operator mapping <m>f(t)</m> to
     <m>F(s)</m>.</caption>
       <prefigure xmlns="https://prefigure.org" label="laplace-operator">
@@ -206,7 +206,7 @@
       </coordinates>
       </diagram>
       </prefigure>
-    </image> 
+    </image> -->
 
     <p> The variable <m>s</m> in the definition of the Laplace transform can, in general, be a
       complex variable; however, in the current chapter, we will restrict <m>s</m> to a real
@@ -420,18 +420,18 @@
     <figure xml:id="unit-step-function">
       <caption>The graph of <m>\mathcal {U}(t-2)</m></caption>
       <image width="70%">
-        <latex-image> 
-        \begin{tikzpicture}   <!-- % Axes --> 
+        <latex-image>
+        \begin{tikzpicture}   <!-- % Axes -->
         \draw[-&gt;] (-2,0) -- (5.5,0) node[right] {$t$};
-          \draw[-&gt;] (0,-1.5) -- (0,4.2) node[above] {$y$}; 
+          \draw[-&gt;] (0,-1.5) -- (0,4.2) node[above] {$y$};
           %<!--First
-          piece: f(t)=0 on [0,2)--> 
+          piece: f(t)=0 on [0,2)-->
           \draw[thick, blue, -&gt;] (2,0) --
           (-1,0); \fill[white] (2,0) circle (2pt); \draw[blue, thick] (2,0) circle (2pt);
-          \node[below] at (2,-0.01) {$2$};   
+          \node[below] at (2,-0.01) {$2$};
           <!-- % Second piece: line starting at (2,3), continuing right --> \
           draw[thick, blue, -&gt;] (2,3) -- (5.5,3); \fill[blue]
-          (2,3) circle (2pt); 
+          (2,3) circle (2pt);
           \end{tikzpicture}
         </latex-image>
       </image>
@@ -530,7 +530,7 @@
           \addplot[only marks, mark=*, blue] coordinates {(0.01,1)};
           \addplot[only marks, mark=o, fill=white, red] coordinates {(2,0)};
           \node[below] at (axis cs:2,0) {$a$};
-          
+
           \end{axis}
           \end{tikzpicture}
         </latex-image>
