@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-6" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Supplementary Topics</title>
+
+  <introduction>
+    <p> Intro goes here yes. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-6-1.ptx" />
+  <xi:include href="sec-6-2.ptx" />
+  <xi:include href="sec-6-3.ptx" />
+  <!--<xi:include href="sec-6-4.ptx" /> -->
+
+</chapter>

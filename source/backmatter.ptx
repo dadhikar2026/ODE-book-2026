@@ -6,18 +6,25 @@
 <!-- solutions in the next. Then there is an appendix -->
 <!-- with all notation generated, and finally the index. -->
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
-  <title>Backmatter</title>
+  <title>Appendices</title>
 
-  <!-- <solutions divisional="hint"> <title>Selected Hints</title> </solutions> -->
+  <solutions divisional="hint"> <title>Selected Hints</title> </solutions>
 
-  <!-- <solutions divisional="solution"> <title>Selected Solutions</title> </solutions> -->
+  <solutions divisional="solution"> <title>Selected Solutions</title> </solutions>
 
-  <!-- <appendix> <title>List of Symbols</title> <notation-list/> </appendix> -->
+  <appendix> <title>List of Symbols</title> <notation-list/> </appendix>
+   <appendix>
+    <title>List of Theorems</title>
+    <idx>theorems, list of</idx>
+    <list-of elements="theorem" divisions="chapter"/>
+</appendix>
 
-  <!-- <index> <title>Index</title> <index-list/> </index> -->
+  <index> <title>Index</title> <index-list/> </index>
 
   <colophon>
-    <p> This book was authored in <pretext />. </p>
+    <p> This book is authored in <pretext />. </p>
   </colophon>
+
+
 </backmatter>
 

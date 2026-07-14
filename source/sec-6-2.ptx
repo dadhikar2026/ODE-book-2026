@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-7-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-6-2" xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <title>Partial Fraction Decomposition</title>
 
@@ -29,8 +29,7 @@
     = x+2.</m>
   </p>
 
-  <p> After performing polynomial division, the term <m>q(x)</m> is already a polynomial and
-    requires no decomposition. The term <m>\dfrac{r(x)}{Q(x)}</m> is a proper rational function and
+  <p> After performing polynomial division, the term <m>q(x)</m> is already a polynomial and requires no decomposition. The term <m>\dfrac{r(x)}{Q(x)}</m> is a proper rational function and
     the only part of <m>R(x)</m> that is usually decomposed into partial fractions. Therefore, in
     what follows, we assume that <m>R(x)</m> itself is proper. The method of partial fraction
     decomposition then depends entirely on the factorization of the denominator <m>Q(x)</m>. We now

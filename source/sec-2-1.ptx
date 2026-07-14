@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-2-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Introduction</title>
+
+  <objectives>
+    <ul>
+      <li> Understand basics of first-order  differential equations</li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p> This section introduces the concept of the first-order  differential equations and their applications. We will explore the general form of these equations, discuss their properties, and provide examples to illustrate their use in various contexts. </p>
+  </introduction>
+  <subsection xml:id="subsec-General-Form-First-Order-Equations">
+    <title>General Form of First-Order Equations</title>
+    <p> The general form of a first-order differential equation is given by: </p>
+    <md>
+      \frac{dy}{dx} = f(x, y)
+    </md>
+    <p> where <m>f(x, y)</m> is a function of two variables. </p>
+  </subsection>
+
+</section>

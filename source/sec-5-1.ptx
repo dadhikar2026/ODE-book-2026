@@ -11,11 +11,9 @@
       position. At time <m>t = a</m>, the mass experiences a sharp, brief downward impact, such as a
       hammer strike, modeled by an the impulsive force <m>f(t) .</m> An impulsive force of this
       nature is commonly modeled by using an idealized mathematical object, called the <term>
-        <em>Dirac delta</em>
+        <em>Dirac delta</em> <idx>Dirac delta function</idx>
       </term> <q>function</q> denoted by <m>\delta (t-a),</m> which is
-      characterized by the following properties: </p>
-
-    <p>
+      characterized by the following properties: 
       <ol marker="i.">
         <li>
           <p>
@@ -154,9 +152,9 @@
 
     <definition xml:id="def-5-1">
       <title>(Laplace transform)</title>
-
+<idx>Laplace transform</idx>
       <statement>
-        <p> Let <m>f:[0, \infty)\to\mathbb R</m> be a function. The <term>Laplace transform</term>
+        <p> Let <m>f:[0, \infty)\to\mathbb R</m> be a function. The <term>Laplace transform</term> 
           of <m>f</m> is a function <m>F(s)</m>, denoted commonly by <m>\mathcal {L}\{f(t)\}</m>,
           defined by <me>
             F(s):=\int_0^\infty f(t)\, e^{-st} \, dt
@@ -165,13 +163,12 @@
       </statement>
     </definition>
 
-    <p> The symbol <m>\mathcal {L}</m> represents a transformation that maps an input function <m>f</m>
+    <p> The symbol <m>\mathcal {L}</m> represents a transformation  that maps an input function <m>f</m>
       of the variable <m>t</m> (usually time) to an output function <m>F</m> of the variable <m>s</m>
       (usually involving frequency when <m>s</m> is a complex number). This action of the
       transformation is depicted in the figure below. </p>
-    <figure>
 
-
+    <!-- <figure>
       <caption>The Laplace transform <m>\mathcal {L}</m> as an operator mapping <m>f(t)</m> to <m>
         F(s)</m>.</caption>
       <image width="90%">
@@ -179,18 +176,16 @@
           \begin{tikzpicture}[&gt;=stealth, line width=0.8pt]
           \draw (3,1) rectangle (5,2);
           \node at (4,1.5) {$\mathcal{L}$};
-
           \node at (1.9,1.75) {$f(t)$};
           \node at (6.1,1.75) {$F(s)$};
-
-          \draw[-&gt;] (0.8,1.5) -- (3,1.5);
-          \draw[-&gt;] (5,1.5) -- (7.2,1.5);
+          \draw[-&gt;] (0.8,1.5) - (3,1.5);
+          \draw[-&gt;] (5,1.5) - (7.2,1.5);
           \end{tikzpicture}
         </latex-image>
       </image>
-    </figure>
+    </figure>  -->
 
-    <!-- <image width="60%">
+    <image width="60%">
       <caption>The Laplace transform <m>\mathcal {L}</m> as an operator mapping <m>f(t)</m> to
     <m>F(s)</m>.</caption>
       <prefigure xmlns="https://prefigure.org" label="laplace-operator">
@@ -206,13 +201,12 @@
       <label anchor="(6.1,1.5)" alignment="s" offset="(0,25)">
       <m>F(s)</m>
       </label>
-
       <line endpoints="((0.8,1.5),(2.9,1.5))" arrows="1" />
       <line endpoints="((5,1.5),(7.2,1.5))" arrows="1" />
       </coordinates>
       </diagram>
       </prefigure>
-    </image> -->
+    </image> 
 
     <p> The variable <m>s</m> in the definition of the Laplace transform can, in general, be a
       complex variable; however, in the current chapter, we will restrict <m>s</m> to a real
@@ -408,9 +402,9 @@
     </example>
 
     <p> A simple but useful example of a discontinuous function is the <term>
-        <em>unit step function</em>
+        <em>unit step function</em> <idx>unit step function</idx>
       </term> <m>\mathcal {U}</m>, also known as the <term>
-        <em>Heaviside</em>
+        <em>Heaviside</em> <idx>Heaviside  function</idx>
       </term> function (named in honor of the English mathematician,
       engineer, and physicist Oliver Heaviside (1850–1925)). It is defined on <m>(-\infty, \infty)</m>
       by <me>
@@ -426,18 +420,25 @@
     <figure xml:id="unit-step-function">
       <caption>The graph of <m>\mathcal {U}(t-2)</m></caption>
       <image width="70%">
-        <latex-image> \begin{tikzpicture}   <!-- % Axes --> \draw[-&gt;] (-2,0) -- (5.5,0) node[right] {$t$};
-          \draw[-&gt;] (0,-1.5) -- (0,4.2) node[above] {$y$}; %<!--First
-          piece: f(t)=0 on [0,2)--> \draw[thick, blue, -&gt;] (2,0) --
+        <latex-image> 
+        \begin{tikzpicture}   <!-- % Axes --> 
+        \draw[-&gt;] (-2,0) -- (5.5,0) node[right] {$t$};
+          \draw[-&gt;] (0,-1.5) -- (0,4.2) node[above] {$y$}; 
+          %<!--First
+          piece: f(t)=0 on [0,2)--> 
+          \draw[thick, blue, -&gt;] (2,0) --
           (-1,0); \fill[white] (2,0) circle (2pt); \draw[blue, thick] (2,0) circle (2pt);
-          \node[below] at (2,-0.01) {$2$};   <!-- % Second piece: line starting at (2,3), continuing right --> \draw[thick, blue, -&gt;] (2,3) -- (5.5,3); \fill[blue]
-          (2,3) circle (2pt); \end{tikzpicture} </latex-image>
+          \node[below] at (2,-0.01) {$2$};   
+          <!-- % Second piece: line starting at (2,3), continuing right --> \
+          draw[thick, blue, -&gt;] (2,3) -- (5.5,3); \fill[blue]
+          (2,3) circle (2pt); 
+          \end{tikzpicture}
+        </latex-image>
       </image>
     </figure>
 
 
     <!--
-
     <figure xml:id="fig-sage-cubic">
       <caption>The unit step function <m>\mathcal {U}(t-2).</m></caption>
       <image xml:id="sageplot-cubic" width="50%">
@@ -529,7 +530,7 @@
           \addplot[only marks, mark=*, blue] coordinates {(0.01,1)};
           \addplot[only marks, mark=o, fill=white, red] coordinates {(2,0)};
           \node[below] at (axis cs:2,0) {$a$};
-
+          
           \end{axis}
           \end{tikzpicture}
         </latex-image>

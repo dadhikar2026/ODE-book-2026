@@ -14,12 +14,14 @@
   <title>Periodic Functions</title>
 <definition xml:id="def-">
   <statement>
-      <p>  A function <m>f</m> is said to be <em>periodic</em> on <m>(-\infty, \infty)</m> if there exists a number <m>T&gt;0,</m> called a <em>period</em> of <m>f,</m> such that
-      <me>
+      <p>  A function <m>f</m> is said to be <em>periodic</em> on <m>(-\infty, \infty)</m> if there exists a number <m>T&gt;0</m>  such that
+      <md>
         f(t) = f(t+T)\quad\text{ for all } t\in (-\infty, \infty).
-      </me>
+      </md>
+      The smallest positive number <m>T</m> for which this property holds is called the <em>fundamental period</em> (or simply the <em>period</em>) of <m>f</m>.
     </p>
   </statement>
+  
 </definition>
  <p>
       Graphically, a periodic function <m>f</m> repeats the portion of its graph restricted to <m>[0, T]</m> across subsequent intervals of the same length <m>T</m>.
@@ -27,13 +29,12 @@
 
     <p>
       A piecewise continuous periodic function <m>f(t)</m> with a period <m>T</m> has the following property:
-      <me>
+      <md>
         f(t) = f(t+T)  = f(t+2T) = \cdots = f(t+nT)
-      </me>
+      </md>
       for all positive integers <m>n.</m> This property is visualized in
       <xref ref="fig-piecewise-periodic-1" /> below.
  </p>
- <p>
       <figure xml:id="fig-piecewise-periodic-1">
         <caption>The graph of <m>f(t)</m>.</caption>
         <image>
@@ -75,17 +76,20 @@
           </latex-image>
         </image>
       </figure>
-    </p>
     <p>
       To compute <m>\mathcal{L}\{f(t)\},</m> we express it as an infinite series of integrals as follows:
-      <me>
-        \begin{split} \mathcal{L}\{f(t)\}&amp; =\int_0^\infty f(t) e^{-st}\, dt\\ &amp;= \int_0^T f(t) e^{-st}\, dt+ \int_T^{2T} f(t) e^{-st}\, dt+ \int_{2T}^{3T} f(t) e^{-st}\, dt +\dots\\ &amp;=\int_0^T f(t) e^{-st}\, dt + \int_0^T f(t+T) e^{-s(t+T)}\, dt\\ &amp; \quad + \int_0^T f(t+2T) e^{-s(t+2T)}\, dt+ \dots+ \int_0^T f(t+nT) e^{-s(t+nT)}\, dt+\cdots\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\Big(1+e^{-sT}+ e^{-2sT} + \dots+ e^{-nsT}+\cdots \Big)\\ &amp;=\int_0^T f(t) e^{-st}\, dt\;\; \sum_{n=0}^\infty e^{-nsT}.
-        \end{split}
-      </me>
+      <md>
+        <mrow>\mathcal{L}\{f(t)\} \amp =\int_0^\infty f(t) e^{-st}\, dt</mrow>
+        <mrow>\amp= \int_0^T f(t) e^{-st}\, dt+ \int_T^{2T} f(t) e^{-st}\, dt+ \int_{2T}^{3T} f(t) e^{-st}\, dt +\dots</mrow>
+        <mrow>\amp=\int_0^T f(t) e^{-st}\, dt + \int_0^T f(t+T) e^{-s(t+T)}\, dt</mrow>
+        <mrow>\amp \quad + \int_0^T f(t+2T) e^{-s(t+2T)}\, dt+ \dots+ \int_0^T f(t+nT) e^{-s(t+nT)}\, dt+\cdots</mrow>
+        <mrow>\amp=\int_0^T f(t) e^{-st}\, dt\;\Big(1+e^{-sT}+ e^{-2sT} + \dots+ e^{-nsT}+\cdots \Big)</mrow>
+        <mrow>\amp=\int_0^T f(t) e^{-st}\, dt\;\; \sum_{n=0}^\infty e^{-nsT}.</mrow>
+      </md>
       Since the geometric series <m>\displaystyle \sum_{n=0}^\infty e^{-nsT}</m> converges for <m>s&gt;0</m> to <m>\displaystyle \frac{1}{1- e^{-sT}},</m> we obtain
-      <men xml:id="Laplace-periodic-function">
+      <md xml:id="Laplace-periodic-function" number="yes">
         \boxed{\mathcal{L}\{f(t)\} = \frac{1}{1- e^{-sT}}\int_0^T f(t) e^{-st}\, dt.}
-      </men>
+      </md>
     </p>
 
   <example>
@@ -95,17 +99,17 @@
      </example>
      <p>
       Using <xref ref="Laplace-periodic-function" /> with <m>T= 2\pi/\omega</m>, we obtain
-      <me>
+      <md>
         \mathcal{L}\{\sin(\omega t)\} = \frac{1}{1- e^{-2\pi s/\omega}}\int_0^{2\pi/\omega} \sin(\omega t) e^{-st}\, dt.
-      </me>
+      </md>
       We compute
-      <me>
+      <md>
         \int_0^{2\pi/\omega} \sin(\omega t) e^{-st}\, dt=\frac{\omega}{s^2+\omega^2}\left( 1- e^{-2\pi s/\omega}\right).
-      </me>
+      </md>
       Hence
-      <me>
+      <md>
         \mathcal{L}\{\sin(\omega t)\} =\frac{\omega}{s^2+\omega^2},
-      </me>
+      </md>
       as expected.
     </p>
 
@@ -121,15 +125,16 @@
   <example>
     <p>
       Consider the initial value problem <m>y'+ y = f(t), \; y(0) = 0,</m> where <m>f(t)</m> is given by
-      <me>
+      <md>
         f(t) = \begin{cases} 1 &amp;\text{if } 0\le  t\le 1,\\ 0 &amp;\text{if } 1&lt; t &lt; 2, \end{cases}
-      </me>
+      </md>
       and <m>f(t) = f(t+2)</m> for all <m>t</m> in <m>(-\infty, \infty).</m>
     </p>
     </example>
     <p>
       The graph of <m>f</m> on <m>[0, \infty)</m> is shown below.
-      <figure xml:id="fig-piecewise-periodic-2">
+    </p>
+    <figure xml:id="fig-piecewise-periodic-2">
         <caption>The graph of <m>f(t)</m>.</caption>
         <image>
           <latex-image>
@@ -166,41 +171,43 @@
           </latex-image>
         </image>
       </figure>
-    </p>
   <p>
     Then
-    <me>
-      \begin{split} F(s) &amp;= \frac{1}{1-e^{-2s}}\int_0^2 f(t) e^{-st}\, dt\\ &amp;= \frac{1}{1-e^{-2s}}\int_0^1 e^{-st}\, dt\\ &amp;  = \frac{1}{1-e^{-2s}}\left(\frac{e^{-s}-1}{-s}\right)\\ &amp;= \frac{1}{s(1+e^{-s})}.
-      \end{split}
-    </me>
+    <md>
+      <mrow>F(s) \amp= \frac{1}{1-e^{-2s}}\int_0^2 f(t) e^{-st}\, dt</mrow>
+      <mrow>\amp= \frac{1}{1-e^{-2s}}\int_0^1 e^{-st}\, dt</mrow>
+      <mrow>\amp= \frac{1}{1-e^{-2s}}\left(\frac{e^{-s}-1}{-s}\right)</mrow>
+      <mrow>\amp= \frac{1}{s(1+e^{-s})}.</mrow>
+    </md>
     Taking the Laplace transform of the differential equation <m> y' + y = f(t) </m>, we get
-    <me>
+    <md>
       sY(s) - y(0) + Y(s) = F(s).
-    </me>
+    </md>
     With <m>y(0) = 0,</m> we have
-    <me>
+    <md>
       Y(s) = \frac{1}{s(s+1)(1+e^{-s})}.
-    </me>
+    </md>
     Since
-    <me>
+    <md>
       \displaystyle \frac{1}{s(s+1)} = \frac{1}{s}- \frac{1}{s+1}
-    </me>
+    </md>
     and
-    <me>
+    <md>
       \displaystyle\frac{1}{1+e^{-s}} = \sum_{n=0}^\infty (-1)^ne^{-ns},
-    </me>
+    </md>
     it follows that
-    <me>
+    <md>
       Y(s) = \left(\frac{1}{s}- \frac{1}{s+1}\right)\sum_{n=0}^\infty (-1)^ne^{-ns}.
-    </me>
+    </md>
     In view of the shifting on the <m>t-</m>axis property discussed in
      <xref ref="ex-shifting-on-t-axis" />, the solution <m>y(t)</m> of the initial value problem is
-    <men xml:id="solution-piecewise-periodic">
+    <md xml:id="solution-piecewise-periodic" number="yes">
       y(t)  =  \sum_{n=0}^{\infty}(-1)^n \mathcal{U}(t-n)\; (1- e^{-(t-n)}).
-    </men>
+    </md>
     The graph of this solution is in <xref ref="fig-piecewise-periodic-3" /> below.
     The solution <m>y(t)</m> is a piecewise continuous periodic function with period 2,
      and it converges to the periodic function <m>f(t)</m> as <m>t\to\infty.</m>
+  </p>
 
      <figure xml:id="fig-piecewise-periodic-3">
       <caption>The graph of <m>y(t)</m>.</caption>
@@ -267,7 +274,6 @@
  </latex-image>
       </image>
     </figure> -->
-  </p>
   </subsection>
 
 <exercises xml:id="exercises-sec-5-4">

@@ -3,6 +3,8 @@
 # This file was automatically generated with PreTeXt 2.38.0.
 # If you modify this file, PreTeXt will no longer automatically update it.
 
+set -euo pipefail
+
 # Detect architecture and download appropriate Pandoc version
 if uname -m | grep -q "aarch64\|arm64"; then
     # ARM architecture
@@ -12,13 +14,13 @@ else
     wget https://github.com/jgm/pandoc/releases/download/3.8.3/pandoc-3.8.3-1-amd64.deb -O pandoc.deb
 fi
 
-# wait for 60 second and then double check that no other script is using apt-get:
-sleep 60
-while fuser /var/lib/dpkg/lock >/dev/null 2>&1; do
-    echo "Waiting for apt-get to be free..."
-    sleep 15
+# Wait until package manager locks are free (common during container startup).
+while fuser /var/lib/dpkg/lock >/dev/null 2>&1 || fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do
+    echo "Waiting for apt/dpkg locks to be released..."
+    sleep 5
 done
-# Install pandoc
-apt-get install -y --no-install-recommends ./pandoc.deb 
+
+# Install pandoc from the downloaded package.
+apt-get install -y --no-install-recommends ./pandoc.deb
 
 rm pandoc.deb

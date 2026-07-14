@@ -131,7 +131,7 @@
     formatted="yes" />-->
   </latex>
 
-  <html>
+  <html embed-button="yes">
     <!-- A possible attribute for the html tag above is @short-answer-responses, with values either
     "always" or "graded".  As in: -->
     <!--<html
@@ -193,8 +193,8 @@
     <!-- Embedded calculators.  For math, this could be geogebra-classic, geogebra-graphing,
     geogebra-geometry, and geogebra-3d.  For ActiveCode, you can specify a language (python,
     javascript, etc).  -->
-    <!--<calculator
-    model="geogebra-classic" activecode="python" />-->
+    <calculator
+    model="geogebra-graphing" activecode="python" />
 
     <!-- Set the base URL of where the online version is hosted to have links in other formats -->
     <!-- <baseurl href="https://changetomywebsite.org"/> -->
@@ -247,31 +247,10 @@
   <!-- @course, @coursepassword, @user, and @userpassword can also be set. -->
   <!-- You can also set how tasks are revealed for webwork problems using the @task-reveal attribute
   on the above-->
-  <!--
-<latex>
-  <preamble file="preamble.tex"/>
-</latex> -->
-  <!-- css -->
-  <!-- <publisher>
-  <html>
-    <css>
-      <file>assets/custom.css</file>
-    </css>
-    <js>
-      <file>assets/print.js</file>
-    </js>
-  </html>
-</publisher> -->
+ 
 
-  <latex>
-    <page-modifiers>
-      <!-- Formats headers globally to use LaTeX Small Caps (\textsc) -->
-      <latex-preamble>
-        \usepackage{fancyhdr}
-        \fancyhead[CO,CE]{\textsc{\leftmark}}
-      </latex-preamble>
-    </page-modifiers>
-  </latex>
+
+
 
 
 </publication>
