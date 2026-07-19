@@ -12,7 +12,7 @@
       </xsl:call-template>
       <span class="name">Home</span>
     </a>
-    <a class="pdf-button button" href="../print/main.pdf" title="PDF">
+    <a class="pdf-button button" href="../main.pdf" title="PDF">
       <xsl:call-template name="insert-symbol">
         <xsl:with-param name="name" select="'picture_as_pdf'"/>
       </xsl:call-template>
